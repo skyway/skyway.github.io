@@ -1,0 +1,16 @@
+title:
+  ja: 'サイトタイトル'
+  en: 'Site title'
+rootdir:
+  ja: ./
+  en: ../
+homedir:
+  ja: ./
+  en: en/
+
+# Build settings
+markdown: kramdown
+theme: minima
+gems: [autoprefixer-rails, jekyll-assets]
+sass:
+    sass_dir: _sass
