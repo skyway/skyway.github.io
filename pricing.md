@@ -121,23 +121,23 @@ lang: ja
 <tbody align="right">
     <tr>
         <th scope="row">1:1 Audio Call<br><small>40Kbps</small></th>
-        <td>277,777 hours<br>11,574 days</td>
-        <td>¥0.0024/min<br>¥0.144/hour</td>
+        <td>138,888 hours<br>5,787 days</td>
+        <td>¥0.0048/min<br>¥0.288/hour</td>
     </tr>
     <tr>
         <th scope="row">1:1 SD Video Call<br><small>500Kbps</small></th>
-        <td>22,222 hours<br>925 days</td>
-        <td>¥0.03/min<br>¥1.8/hour</td>
+        <td>11,111 hours<br>462 days</td>
+        <td>¥0.06/min<br>¥3.6/hour</td>
     </tr>
     <tr>
         <th scope="row">1:1 HD Video Call<br><small>1.5Mbps</small></th>
-        <td>7407 hours<br>308 days</td>
-        <td>¥0.09/min<br>¥5.4/hour</td>
+        <td>3703 hours<br>154 days</td>
+        <td>¥0.18/min<br>¥10.8/hour</td>
     </tr>
     <tr>
         <th scope="row">4 Party SD Video Conference<br><small>1.5Mbps</small></th>
         <td>3703 hours<br>154 days</td>
-        <td>0.09/min<br>¥5.4/hour</td>
+        <td>0.18/min<br>¥10.8/hour</td>
     </tr>
 </tbody>
 </table>
