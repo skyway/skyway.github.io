@@ -81,31 +81,33 @@ SkyWayは無料で利用可能です！
 
 ## Use Case △
 
-<div class="row main-content-row">
-    <div class="col-sm-12 paper-style-div">
-        <h2>ユースケース</h2>
-        <div class="divider"></div>
-		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset-1">
-				<div class="row">
-					<div class="col-sm-3 highlight">
-						<img src="http://via.placeholder.com/200x150">
-						<h3>Web会議</h3>
-					</div>
-					<div class="col-sm-3 highlight">
-						<img src="http://via.placeholder.com/200x150">
-						<h3>サポート</h3>
-					</div>
-					<div class="col-sm-3 highlight">
-						<img src="http://via.placeholder.com/200x150">
-						<h3>遠隔医療</h3>
-					</div>
-					<div class="col-sm-3 highlight">
-						<img src="http://via.placeholder.com/200x150">
-						<h3>IoT</h3>
-					</div>
-				</div>
-			</div>
+<div class="card-group">
+	<div class="card">
+		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<div class="card-block">
+			<h4 class="card-title">Web会議</h4>
+			<p class="card-text">このテキストはサンプルです。</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<div class="card-block">
+			<h4 class="card-title">サポート</h4>
+			<p class="card-text">このテキストはサンプルです。</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<div class="card-block">
+			<h4 class="card-title">遠隔医療</h4>
+			<p class="card-text">このテキストはサンプルです。</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<div class="card-block">
+			<h4 class="card-title">IoT</h4>
+			<p class="card-text">このテキストはサンプルです。</p>
 		</div>
 	</div>
 </div>
