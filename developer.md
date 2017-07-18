@@ -9,9 +9,9 @@ lang: ja
 # Main Message
 ## Get Started
 ## SDKs
-- JavaScript SDK
-- iOS SDK
-- Android SDK
+- [JavaScript SDK](js-sdk.md)
+- [iOS SDK](ios-sdk.md)
+- [Android SDK](android-sdk.md)
 - IoT SDK
 
 ## Features 
