@@ -40,7 +40,7 @@ lang: ja
                 <a href="./ios-sdk.html" class="list-group-item active">
                 iOS SDK
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">Tutorial</a>
+                <a href="ios-sdk.html" class="list-group-item list-group-item-action">Tutorial</a>
                 <a href="#" class="list-group-item list-group-item-action">SDK DL</a>
                 <a href="#" class="list-group-item list-group-item-action">API Rererence</a>
                 <a href="#" class="list-group-item list-group-item-action">Sample Code</a>
