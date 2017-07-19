@@ -12,11 +12,11 @@ lang: ja
   - ![150x150 dummy image]({{ site.rootdir[page.lang] }}images/150x150.png)
  -->
 
-# リアルタイムにつながるアプリを作ろう
-## 通信会社が提供する簡単で強力なWebRTCプラットフォーム
-
-![500x300 dummy image](http://via.placeholder.com/500x300?text=Main+Image)
-
+<div class="jumbotron">
+  <img src="http://via.placeholder.com/500x200?text=Main+Image">
+  <h1>リアルタイムにつながるアプリを作ろう</h1>
+  <p class="lead">通信会社が提供する簡単で強力なWebRTCプラットフォーム</p>
+</div>
 
 ## info
 
