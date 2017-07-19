@@ -4,11 +4,11 @@ title: Developer
 lang: ja
 ---
 
-開発者むけのページやで
-
-# リアルタイムコミュニケーションの民主化を進め、世界中の開発者とともにイノベーションを起こす。
-
-## リアルタイムにつながるアプリを作ろう
+<div class="jumbotron">
+  <img src="http://via.placeholder.com/500x200?text=Main+Image">
+  <h1>リアルタイムにつながるアプリを作ろう</h1>
+  <p class="lead">リアルタイムコミュニケーションの民主化を進め、世界中の開発者とともにイノベーションを起こす。</p>
+</div>
 
 ## Get Started
 
