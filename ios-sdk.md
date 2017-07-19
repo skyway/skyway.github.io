@@ -4,10 +4,7 @@ title: iOS SDK
 lang: ja
 ---
 
-<div class="jumbotron">
-  <h1 class="display-3">iOS SDK</h1>
-  <p class="lead">楽しい楽しいiOS SDK</p>
-</div>
+# iOS SDK
 
 ## チュートリアル
 
