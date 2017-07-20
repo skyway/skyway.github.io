@@ -21,7 +21,7 @@ Enterprise Cloud WebRTC Platform（以下、ECLWebRTC）をご利用頂くため
 
 ### （本規約の公表）
 
-第3条 当社は、当社のWebページ（ [http://www.ntt.com/tariff/comm/](http://www.ntt.com/tariff/comm/) ）その他当社が別に定める方法により、本規約を公表します。
+第3条 当社は、当社のWebページ（ [http://www.ntt.com/tariff/comm/](http://www.ntt.com/tariff/comm/){:target="_blank"} ）その他当社が別に定める方法により、本規約を公表します。
 
 ### （用語の定義）
 
