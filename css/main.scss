@@ -5,10 +5,10 @@
 @import 'custom'; // variables for bootstrap
 @import 'bootstrap';
 
-$footer-height: 60px;
-
 /* Sticky Footer
 ------------------------------------------------ */
+$footer-height: 60px;
+
 html {
   position: relative;
   min-height: 100%;
@@ -29,4 +29,13 @@ body {
   line-height: $footer-height;
   position: absolute;
   width: 100%;
+}
+
+/* Content
+------------------------------------------------ */
+
+#main {
+  table {
+    @extend .table;
+  }
 }
