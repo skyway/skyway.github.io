@@ -49,7 +49,7 @@ options.domain = "localhost";
 ```
 
 Objective-C
-```obj-c
+```objc
 //APIキー、ドメインを設定
 SKWPeerOption* option = [[SKWPeerOption alloc] init];
 option.key = @"";
@@ -75,13 +75,13 @@ _peer = new Peer(context, options);
 ```
 
 Objective-C
-```obj-c
+```objc
 // Peerオブジェクトのインスタンスを生成
 _peer = [[SKWPeer alloc] initWithOptions:option];
 ```
 
 Swift
-```
+```swift
 // Peerオブジェクトのインスタンスを生成
 _peer = SKWPeer.init(options: option);
 ```
@@ -109,7 +109,7 @@ _peer.on(Peer.PeerEventEnum.ERROR, new OnCallback() {
 ```
 
 Objective-C
-```obj-c
+```objc
 //コールバックを登録（ERROR)
     [_peer on:SKW_PEER_EVENT_ERROR callback:^(NSObject* obj)
      {
@@ -152,7 +152,7 @@ _peer.on(Peer.PeerEventEnum.OPEN, new OnCallback() {
 ```
 
 Objective-C
-```obj-c
+```objc
 // コールバックを登録(OPEN)
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj)
   {
@@ -194,7 +194,7 @@ canvas.addSrc(_msLocal, 0);
 ```
 
 Objective-C
-```obj-c
+```objc
 //メディアを取得
 [SKWNavigator initialize:_peer];
 SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
@@ -240,7 +240,7 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback(){
 ```
 
 Objective-C
-```obj-c
+```objc
 //コールバックを登録（CALL)
 [_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj)
  {
@@ -297,7 +297,7 @@ private void setMediaCallback(MediaConnection media){
 ```
 
 Objective-C
-```obj-c
+```objc
 - (void)setMediaCallbacks:(SKWMediaConnection *)media
 {
     // コールバックを登録（Stream）
@@ -408,7 +408,7 @@ private void getPeerList(){
 ```
 
 Objective-C
-```obj-c
+```objc
 //接続相手を選択する
 - (void)getPeerList
 {
@@ -491,7 +491,7 @@ private void close(){
 ```
 
 Objective-C
-```obj-c
+```objc
 - (void)call:(NSString *)strDestId
 {
     SKWCallOption *option = [[SKWCallOption alloc]init];
@@ -583,7 +583,7 @@ btnAction.setOnClickListener(new View.OnClickListener(){
 ```
 
 Objective-C
-```obj-c
+```objc
 略
 UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 [btnCall setTag:TAG_WEBRTC_ACTION];
@@ -660,7 +660,7 @@ private void updateUI() {
 ```
 
 Objective-C
-```obj-c
+```objc
 -(void)updateUI{
     dispatch_async(dispatch_get_main_queue(), ^{
         

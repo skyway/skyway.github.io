@@ -137,7 +137,7 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
 
 今回のハンズオンのHTMLには既に記載済みですが、以下の通りScript要素でSDKをインポートします。
 
-```HTML
+```html
 <script type="text/javascript" src="https://cdn.skyway.io/skyway.js"></script>
 ```
 
@@ -632,7 +632,7 @@ const　call = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
 
 - `index.html`を修正して下さい
 
-```HTML
+```html
 <div class="myControllerContainer">
     <p>Your id: <span id="my-id">...</span></p>
     <form id="make-call">
@@ -650,12 +650,12 @@ const　call = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
 
 - CallからJoin roomへ変更します
 
-```HTML
+```html
         <input type="text" placeholder="Join room..." id="join-room">
         <button type="submit">Join</button>
 ```
 
-```HTML
+```html
         <p>Currently in room <span id="room-id">...</span></p>
         <button>Leave</button>
 ```
