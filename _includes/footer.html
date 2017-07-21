@@ -1,9 +1,5 @@
-<footer class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <span class="text-muted">&copy; {{ site.title[page.lang] | escape }}</span>
-      </div>
-    </div>
-  </div>
-</footer>
+{% if page.lang %}
+{% include {{page.lang}}/footer.html %}
+{% else %}
+{% include jp/footer.html %}
+{% endif %}
