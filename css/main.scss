@@ -8,7 +8,7 @@
 
 /* Sticky Footer
 ------------------------------------------------ */
-$footer-height: 60px;
+$footer-height: 200px;
 
 html {
   position: relative;
@@ -24,12 +24,23 @@ body {
 }
 
 .site-footer {
+  padding-top: 20px;
   background-color: $gray-lightest;
   bottom: 0;
   height: $footer-height;
-  line-height: $footer-height;
   position: absolute;
   width: 100%;
+  color: $white;
+  a {
+    color: $white;
+
+    @include hover-focus {
+      color: $white;
+    }
+    &.active {
+      color: $white;
+    }
+  }
 }
 
 /* Content
