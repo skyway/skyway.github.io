@@ -142,6 +142,8 @@ lang: ja
 ## Migration △
 このテキストはサンプルです。
 
+[migration.md](./migration.html)
+
 ## FAQ
 このテキストはサンプルです。
 
