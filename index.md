@@ -142,3 +142,28 @@ SkyWayは無料で利用可能です！
 </div>
 
 [その他のユースケースはこちら](https://skyway.github.io/usecase/)
+
+<!-- Modal -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var search = location.search;
+  var STRING_OF_MODAL = 'origin=skyway';
+  if (search && search.split('?')[1].split('&').indexOf(STRING_OF_MODAL) !== -1) {
+    $('#migration').modal();
+    history.replaceState(null, null, location.href.replace(search, ''));
+  }
+});
+</script>
+
+<div class="modal fade bd-example-modal-lg" id="migration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h5 class="modal-title">Modal title</h5>
+        <p>Modal body text goes here.</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
