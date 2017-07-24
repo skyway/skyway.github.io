@@ -13,9 +13,16 @@ lang: ja
  -->
 
 <div class="jumbotron">
-  <img src="http://via.placeholder.com/500x200?text=Main+Image">
   <h1>リアルタイムにつながるアプリを作ろう</h1>
   <p class="lead">通信会社が提供する簡単で強力なWebRTCプラットフォーム</p>
+  <div class="row">
+    <div class="col-6">
+      <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
+    </div>
+    <div class="col-6">
+      <img src="{{ site.rootdir[page.lang] }}images/index_mobile_top.png" class="img-fluid">
+    </div>
+  </div>
 </div>
 
 ## info
