@@ -15,7 +15,7 @@ lang: ja
 <!-- 案1 わかりやすい -->
 <div class="jumbotron">
   <h1>アプリ、Webサイト、デバイスにビデオ通話を追加できる</h1>
-  <p class="lead">リアルタイムコミュニケーションでイノベーションに挑戦する開発者のためのプラットフォーム</p>
+  <p class="lead">ECLWebRTC (旧称SkyWay) は、リアルタイムコミュニケーションでイノベーションに挑戦する開発者のためのプラットフォームです</p>
   <div class="row">
     <div class="col-6">
       <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
@@ -29,7 +29,7 @@ lang: ja
 <!-- 案2 ビジョン推し -->
 <div class="jumbotron">
   <h1 class="h2">リアルタイムコミュニケーションでイノベーションに挑戦しよう</h1>
-  <p class="lead">アプリ、Webサイトやデバイスにビデオ通話を追加できる開発者のためのプラットフォーム</p>
+  <p class="lead">ECLWebRTC (旧称SkyWay) は、アプリ、Webサイトやデバイスにビデオ通話を追加できる開発者のためのプラットフォームです</p>
   <div class="row">
     <div class="col-6">
       <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
