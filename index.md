@@ -40,7 +40,14 @@ lang: ja
   </div>
 </div>
 
-## info
+<div class="card">
+  <div class="card-block">
+    <div class="d-flex w-100 justify-content-between">
+      <a href="https://connpass.com" target="_blank">2017年9月29日にECLWebRTC Meetup #0を開催します。LT発表および参加申し込み受付中です。</a>
+      <small class="text-muted"><a href="https://support.skyway.io/">すべてのお知らせを見る</a></small>
+    </div>
+  </div>
+</div>
 
 ## What's ECLWebRTC
 ### Message
