@@ -8,7 +8,7 @@ lang: ja
 
 SkyWayは2018.03.31をもってサービス提供を終了します。
 
-現在、SkyWayをご利用の方は、機能やサービスがより充実した（[参考:](SkyWayとECLWebRTCの機能比較)）ECLWebRTC Community Edition/Enterprise Editionへのマイグレーション作業をお願いします。
+現在、SkyWayをご利用の方は、機能やサービスがより充実した（ 参考: [SkyWayとECLWebRTCの機能比較](https://support.skyway.io/hc/ja){:target="_blank"} ) ECLWebRTC Community Edition/Enterprise Editionへのマイグレーション作業をお願いします。
 
 このページではマイグレーションに必要な情報を提供します。
 
@@ -68,8 +68,8 @@ Community Editionには利用制限が有ります（詳しくは[参考]）。�
 
 サポート、SLAが必要ない場合は、まずはCommunity Editionへのマイグレーションをおすすめいたします。
 
-## 参考：SkyWayとECLWebRTCの機能比較
-
+※SkyWayとECLWebRTCの機能比較はHTMLコメントで↓
+<!--
 ||SkyWay|ECLWebRTC Community Edition|ECLWebRTC Enterprise Edition|
 |提供機能|シグナリング<BR>TURN<BR>SFU|シグナリング<BR>TURN<BR>SFU|シグナリング<BR>TURN<BR>SFU|
 |提供SDK|JavaScript<BR>iOS<BR>Android<BR>IoT|JavScript<BR>iOS<BR>Android<BR>IoT|JavScript<BR>iOS<BR>Android<BR>IoT|
@@ -80,5 +80,4 @@ Community Editionには利用制限が有ります（詳しくは[参考]）。�
 |利用制限|無し|月間のシグナリング回数、TURN/SFU利用回数に制限有り|有り|
 |SLA|無し|無し|有り|
 |サポート|コミュニティベース|コミュニティベース|コミュニティベース<BR>チケットサポート|
-
-
+-->
