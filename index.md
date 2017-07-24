@@ -13,8 +13,8 @@ lang: ja
  -->
 
 <div class="jumbotron">
-  <h1>リアルタイムにつながるアプリを作ろう</h1>
-  <p class="lead">通信会社が提供する簡単で強力なWebRTCプラットフォーム</p>
+  <h1>アプリ、Webサイト、デバイスにビデオ通話を追加できる</h1>
+  <p class="lead">リアルタイムコミュニケーションでイノベーションに挑戦する開発者のためのプラットフォーム</p>
   <div class="row">
     <div class="col-6">
       <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
