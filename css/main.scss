@@ -50,6 +50,17 @@ body {
     @extend .table;
   }
 }
+
+// Typography
+
+#main > h2:not(:first-child) {
+  margin-top: 3rem;
+}
+
+#main > h3:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
 .jumbotron {
   span {
     @extend .text-nowrap;
