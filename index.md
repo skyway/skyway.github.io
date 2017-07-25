@@ -73,58 +73,65 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
   </div>
 </div>
 
-## Pricing
+## 価格
+
 SkyWayは無料で利用可能です！
 
 - [pricing.md](pricing.md)
 
 
 
-## Demo △
-- [SkyWay Conf](https://conf2.skyway.io/)
+## デモ
 
 <div class="media">
-	<img class="d-flex mr-3" src="http://via.placeholder.com/250x150" alt="SkyWay Conf">
+	<img class="d-flex mr-3" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
 	<div class="media-body">
-		<h5 class="mt-0">SkyWay Conf</h5>
-		これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。
+		<h5 class="mt-0">SkyWay Conference</h5>
+		<p>インストールなし、会員登録なし、ログインなしで利用できる、多人数通話に対応したWeb会議です。
+		ブラウザでURLにアクセスするだけで参加できます。
+		画面共有にも対応しています。</p>
+		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
 	</div>
 </div>
 
-## Use Case △
+## 事例紹介
 
 <div class="card-group">
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">Web会議</h4>
 			<p class="card-text">このテキストはサンプルです。</p>
+  		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">サポート</h4>
 			<p class="card-text">このテキストはサンプルです。</p>
+  		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">遠隔医療</h4>
 			<p class="card-text">このテキストはサンプルです。</p>
+  		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">IoT</h4>
 			<p class="card-text">このテキストはサンプルです。</p>
+  		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 </div>
 
-[その他のユースケースはこちら](https://skyway.github.io/usecase/)
+[その他の事例はこちら](https://skyway.github.io/usecase/)
 
 <!-- Modal -->
 
