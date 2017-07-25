@@ -50,3 +50,8 @@ body {
     @extend .table;
   }
 }
+.jumbotron {
+  span {
+    @extend .text-nowrap;
+  }
+}

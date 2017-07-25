@@ -13,9 +13,8 @@ lang: ja
  -->
 
 <div class="jumbotron">
-<div class="jumbotron">
-  <h1 class="h2">リアルタイムコミュニケーションでイノベーションに挑戦しよう</h1>
-  <p class="lead">ECLWebRTC (旧称SkyWay) は、アプリ、WebサイトやIoTデバイスにビデオ通話を追加できる開発者のためのプラットフォームです</p>
+  <h1 class="display-4"><span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span></h1>
+  <p class="lead"><span>ECLWebRTC</span><wbr><span>(旧称SkyWay)は、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span></p>
   <div class="row">
     <div class="col-6">
       <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
