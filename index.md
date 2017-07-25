@@ -42,37 +42,33 @@ lang: ja
 ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
 自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 
-<div class="row">
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">アプリ開発に集中</h3>
-        <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
-      </div>
+<div class="card-deck">
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-code fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>アプリ開発</span><wbr><span>に</span><wbr><span>集中</span></h3>
+      <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">マルチプラットフォーム</h3>
-        <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>マルチ</span><wbr><span>プラット</span><wbr><span>フォーム</span></h3>
+      <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">サポートとSLAで安心</h3>
-        <p class="card-text">テクニカルサポートとSLAがあるから、安心して商用サービスを開発・運用できる</p>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
+      <p class="card-text">商用サービスや大規模サービスを安心して開発・運用できる</p>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">無料ですぐに試せる</h3>
-        <p class="card-text">無料のCommunity Editionですぐに開発を始められ、小規模なサービスにも利用できる</p>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
+      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
     </div>
   </div>
 </div>

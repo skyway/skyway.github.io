@@ -61,8 +61,6 @@ body {
   margin-top: 1.5rem;
 }
 
-.jumbotron {
-  span {
+.jumbotron span, .card span {
     @extend .text-nowrap;
-  }
 }
