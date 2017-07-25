@@ -74,7 +74,7 @@ ECLWebRTCのサーバAPIとSDKを利用することで、サーバを構築・�
 	</div>
 </div>
 
-### Pricing
+## Pricing
 SkyWayは無料で利用可能です！
 
 - [pricing.md](pricing.md)
