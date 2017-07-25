@@ -38,40 +38,42 @@ lang: ja
 
 ビデオ会議やコンタクトセンター、遠隔作業支援、オンライン教育、ライブ配信など、さまざまな機会において、オンラインでのリアルタイムコミュニケーションのニーズが高まっています。
 ビデオ/音声通話、データ通信といったリアルタイムコミュニケーションの標準技術である「WebRTC」が登場し、リアルタイムコミュニケーションがより実現しやすくなってきました。
+
 ECLWebRTCのサーバAPIとSDKを利用することで、サーバを構築・運用することなく、自社のサービスの開発・提供に専念して、イノベーションを目指すことができます。
 
-### Value
-<div class="row main-content-row">
-    <div class="col-sm-12 paper-style-div">
-        <h2>SkyWayを使うメリット</h2>
-        <div class="divider"></div>
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<div class="row">
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-video-camera"></i>
-						<h3>マルチメディア通信</h3>
-						WebRTCの音声・映像・データ通信を利用可能
-					</div>
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-paper-plane"></i>
-						<h3>アプリ開発に集中</h3>
-						サーバサイド不要、JavaScript、iOSとAndroidのSDK提供
-					</div>
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-lock"></i>
-						<h3>セキュア</h3>
-						ビデオ通話、データ通信、シグナリングは全て暗号化
-					</div>
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-cogs"></i>
-						<h3>豊富な拡張機能</h3>
-						TURN、音声認識、多人数接続、画面共有などの機能を提供
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">アプリ開発に集中</h3>
+        <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">マルチプラットフォーム</h3>
+        <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">サポートとSLAで安心</h3>
+        <p class="card-text">テクニカルサポートとSLAがあるから、安心して商用サービスを開発・運用できる</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">無料ですぐに試せる</h3>
+        <p class="card-text">無料のCommunity Editionですぐに開発を始められ、小規模なサービスにも利用できる</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 ## Pricing
