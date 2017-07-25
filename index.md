@@ -12,21 +12,7 @@ lang: ja
   - ![150x150 dummy image]({{ site.rootdir[page.lang] }}images/150x150.png)
  -->
 
-<!-- 案1 わかりやすい -->
 <div class="jumbotron">
-  <h1>アプリ、Webサイト、IoTデバイスにビデオ通話を追加できる</h1>
-  <p class="lead">ECLWebRTC (旧称SkyWay) は、リアルタイムコミュニケーションでイノベーションに挑戦する開発者のためのプラットフォームです</p>
-  <div class="row">
-    <div class="col-6">
-      <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
-    </div>
-    <div class="col-6">
-      <img src="{{ site.rootdir[page.lang] }}images/index_mobile_top.png" class="img-fluid">
-    </div>
-  </div>
-</div>
-
-<!-- 案2 ビジョン推し -->
 <div class="jumbotron">
   <h1 class="h2">リアルタイムコミュニケーションでイノベーションに挑戦しよう</h1>
   <p class="lead">ECLWebRTC (旧称SkyWay) は、アプリ、WebサイトやIoTデバイスにビデオ通話を追加できる開発者のためのプラットフォームです</p>
