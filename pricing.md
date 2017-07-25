@@ -8,9 +8,21 @@ lang: ja
   <h1 class="display-4">あなたのイノベーションを始めよう</h1>
   <p class="lead">ECLWebRTCは、無料で利用できるCommunity Editionを用意しています。</p>
   <p class="lead">
-    <a class="btn btn-success btn-lg" href="#" role="button">無料で新規登録</a>
+    <a class="btn btn-primary btn-lg" href="#" role="button">無料で新規登録</a>
   </p>
 </div>
+
+
+## 料金
+
+オンラインでの新規登録で、すぐに利用可能です。  
+世界中の開発者とともにあなたのイノベーションを始めましょう。  
+Community Editionは一切、料金がかかりません。
+
+### 基本料金
+
+初期費用なしで利用できます。  
+STUNの利用や通話、通信の回数、room機能利用回数に制限はありません。
 
 <table class="table table-sm">
 <thead>
@@ -22,67 +34,25 @@ lang: ja
     </tr>
 </thead>
 <tbody align="right">
-    <tr class="table-info">
+    <tr>
+        <th scope="row">Initial fee</th>
+        <td align="left"></td>
+        <td>¥0</td>
+        <td>¥0</td>
+    </tr>
+    <tr>
         <th scope="row">Base fee</th>
-        <td>monthly</td>
+        <td align="left"></td>
         <td>¥0</td>
-        <td>¥100,000</td>
+        <td>¥100,000/月</td>
     </tr>
-    <tr class="table-info">
+    <tr>
         <th scope="row">STUN</th>
-        <td>unlimited</td>
-        <td>¥0</td>
-        <td>¥0</td>
-    </tr>
-    <tr class="table-info">
-        <th scope="row">Signaling</th>
-        <td></td>
+        <td align="left"></td>
         <td>¥0</td>
         <td>¥0</td>
     </tr>
     <tr>
-        <th scope="row"></th>
-        <td>500,000+ 回/月</td>
-        <td>limited</td>
-        <td>¥0</td>
-    </tr>
-    <tr>
-        <th scope="row"></th>
-        <td>1,000,000+ 回/月</td>
-        <td>limited</td>
-        <td>¥100,000</td>
-    </tr>
-    <tr>
-        <th scope="row"></th>
-        <td>10,000,000+ 回/月</td>
-        <td>limited</td>
-        <td>contact us</td>
-    </tr>
-    <tr class="table-info">
-        <th scope="row">TURN</th>
-        <td align="left">Bandwidth Usage</td>
-        <td>¥0/GB</td>
-        <td>¥40/GB</td>
-    </tr>
-    <tr>
-        <th scope="row"></th>
-        <td>500+ GB/月</td>
-        <td>limited</td>
-        <td>¥40/GB</td>
-    </tr>
-    <tr class="table-info">
-        <th scope="row">SFU</th>
-        <td align="left">Bandwidth Usage</td>
-        <td>¥0/GB</td>
-        <td>¥40/GB</td>
-    </tr>
-    <tr>
-        <th scope="row"></th>
-        <td>500+ GB/月</td>
-        <td>limited</td>
-        <td>¥40/GB</td>
-    </tr>
-    <tr class="table-info">
         <th scope="row">Support</th>
         <td align="left">Channels</td>
         <td>Knowledge Base, Community</td>
@@ -92,7 +62,7 @@ lang: ja
         <th scope="row"></th>
         <td align="left">hours</td>
         <td></td>
-        <td>24365</td>
+        <td>24/7</td>
     </tr>
     <tr>
         <th scope="row"></th>
@@ -103,13 +73,102 @@ lang: ja
 </tbody>
 </table>
 
+### 接続回数
 
+Signalingサーバとの月間接続回数に応じた制限や料金が発生します。  
+1回の接続あたりの接続時間やcallする回数に制限はありません。
 
-## Pricing Sample △
+<small class="text-muted">Signaling: 端末間で通信を行う際に、Signalingサーバを介してお互いのIPアドレスやコーデックなど情報の交換を行います。</small>
 
-料金モデル。4人web会議だったら1時間何円。無料で何時間分みたいなやつ
+<table class="table table-sm">
+<thead>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Community Edition</th>
+        <th>Enterprise Edition</th>
+    </tr>
+</thead>
+<tbody align="right">
+    <tr>
+        <th scope="row">Signaling</th>
+        <td align="left">〜499,999</td>
+        <td>¥0</td>
+        <td>¥0</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td align="left">500,000〜999,999</td>
+        <td>limited</td>
+        <td>¥0</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td align="left">1,000,000〜9,999,999</td>
+        <td></td>
+        <td>¥100,000</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td align="left">10,000,000+</td>
+        <td></td>
+        <td>contact us</td>
+    </tr>
+</tbody>
+</table>
 
-以下は、p2p, TURN(10%)の場合
+### サーバ通信料
+
+TURNサーバ及びSFUサーバとの月間通信量に応じた制限や料金が発生します。  
+1回の接続あたりの接続時間やcall回数に制限はありません。
+
+<small class="text-muted">TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。</small><br>
+<small class="text-muted">SFU: 映像の送信をSFUサーバが代行することで、端末のCPUやネットワーク負荷を抑え、多人数での通話や配信を実現します。</small><br>
+<small class="text-muted">サーバ通信量は、サーバへのIN/OUTの通信の合計です。</small>
+
+<table class="table table-sm">
+<thead>
+    <tr>
+        <th></th>
+        <th></th>
+        <th>Community Edition</th>
+        <th>Enterprise Edition</th>
+    </tr>
+</thead>
+<tbody align="right">
+    <tr>
+        <th scope="row">TURN</th>
+        <td align="left">〜499GB</td>
+        <td>¥0</td>
+        <td>¥40/GB</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td align="left">500GB〜</td>
+        <td>limited</td>
+        <td>¥40/GB</td>
+    </tr>
+    <tr>
+        <th scope="row">SFU</th>
+        <td align="left">〜499GB</td>
+        <td>¥0</td>
+        <td>¥40/GB</td>
+    </tr>
+    <tr>
+        <th scope="row"></th>
+        <td align="left">500GB〜</td>
+        <td>limited</td>
+        <td>¥40/GB</td>
+    </tr>
+</tbody>
+</table>
+
+## 参考価格
+
+Peer to PeerによりWeb会議を実施した場合の送信者1人あたりの参考価格です。
+
+<small class="text-muted">TURN利用率は一般的な10%にて試算しています。</small><br>
+<small class="text-muted">法人向けサービスの場合は20%のため2倍に、スマホ向けアプリの場合は1%のため0.1倍になります</small>
 
 <table class="table table-sm">
 <thead>
@@ -143,8 +202,31 @@ lang: ja
 </tbody>
 </table>
 
-## Pricing Calculator △
-- Knowledge Center
+## 料金に関して
+より詳細な情報を希望される場合は[こちら]()  
+料金シミュレーターは[こちら]()
 
-## sign up
+## あなたのイノベーションを始めよう
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Community Edition</h3>
+        <p class="card-text">個人開発者、スタートアップ向け<br>新規サービスの創造により新しい体験と価値を提供しよう</p>
+        <a href="#" class="btn btn-primary">無料で新規登録</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Enterprise Edition</h3>
+        <p class="card-text">大規模サービス向け<br>価値を広い世界へ拡げ、社会的変化を起こそう</p>
+        <a href="#" class="btn btn-outline-primary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
