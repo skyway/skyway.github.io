@@ -4,12 +4,13 @@ title: 料金
 lang: ja
 ---
 
-料金
-
-# Pricing
-
-無料で利用することができます。
-
+<div class="jumbotron">
+  <h1 class="display-4">あなたのイノベーションを始めよう</h1>
+  <p class="lead">ECLWebRTCは、無料で利用できるCommunity Editionを用意しています。</p>
+  <p class="lead">
+    <a class="btn btn-success btn-lg" href="#" role="button">無料で新規登録</a>
+  </p>
+</div>
 
 <table class="table table-sm">
 <thead>
@@ -22,16 +23,16 @@ lang: ja
 </thead>
 <tbody align="right">
     <tr class="table-info">
-        <th scope="row">base fee</th>
+        <th scope="row">Base fee</th>
         <td>monthly</td>
         <td>¥0</td>
         <td>¥100,000</td>
     </tr>
     <tr class="table-info">
         <th scope="row">STUN</th>
-        <td></td>
         <td>unlimited</td>
-        <td>unlimited</td>
+        <td>¥0</td>
+        <td>¥0</td>
     </tr>
     <tr class="table-info">
         <th scope="row">Signaling</th>
