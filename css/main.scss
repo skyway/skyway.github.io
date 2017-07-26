@@ -6,8 +6,8 @@
 @import 'bootstrap';
 @import 'rouge'; // syntax highlight by rouge
 
-/* Sticky Footer
------------------------------------------------- */
+// Sticky Footer
+
 $footer-height: 220px;
 
 html {
@@ -43,11 +43,26 @@ body {
   }
 }
 
-/* Content
------------------------------------------------- */
+// Content
 
 #main {
   table {
     @extend .table;
+  }
+}
+
+// Typography
+
+#main > h2:not(:first-child) {
+  margin-top: 3rem;
+}
+
+#main > h3:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.jumbotron {
+  span {
+    @extend .text-nowrap;
   }
 }

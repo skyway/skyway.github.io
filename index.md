@@ -13,55 +13,70 @@ lang: ja
  -->
 
 <div class="jumbotron">
-  <img src="http://via.placeholder.com/500x200?text=Main+Image">
-  <h1>リアルタイムにつながるアプリを作ろう</h1>
-  <p class="lead">通信会社が提供する簡単で強力なWebRTCプラットフォーム</p>
+  <h1 class="display-4"><span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span></h1>
+  <p class="lead"><span>ECLWebRTC</span><wbr><span>(旧称SkyWay)は、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span></p>
+  <div class="row">
+    <div class="col-6">
+      <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
+    </div>
+    <div class="col-6">
+      <img src="{{ site.rootdir[page.lang] }}images/index_mobile_top.png" class="img-fluid">
+    </div>
+  </div>
 </div>
 
-## info
-
-## What's ECLWebRTC
-### Message
-これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。
-
-これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。  
-これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。
-
-### Value
-<div class="row main-content-row">
-    <div class="col-sm-12 paper-style-div">
-        <h2>SkyWayを使うメリット</h2>
-        <div class="divider"></div>
-		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset-1">
-				<div class="row">
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-video-camera"></i>
-						<h3>マルチメディア通信</h3>
-						WebRTCの音声・映像・データ通信を利用可能
-					</div>
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-paper-plane"></i>
-						<h3>アプリ開発に集中</h3>
-						サーバサイド不要、JavaScript、iOSとAndroidのSDK提供
-					</div>
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-lock"></i>
-						<h3>セキュア</h3>
-						ビデオ通話、データ通信、シグナリングは全て暗号化
-					</div>
-					<div class="col-sm-3 highlight">
-						<i class="fa fa-cogs"></i>
-						<h3>豊富な拡張機能</h3>
-						TURN、音声認識、多人数接続、画面共有などの機能を提供
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="card">
+  <div class="card-block">
+    <div class="d-flex w-100 justify-content-between">
+      <a href="https://connpass.com" target="_blank">2017年9月29日にECLWebRTC Meetup #0を開催します。LT発表および参加申し込み受付中です。</a>
+      <small class="text-muted"><a href="https://support.skyway.io/">すべてのお知らせを見る</a></small>
+    </div>
+  </div>
 </div>
 
-### Pricing
+## ECLWebRTCとは
+
+ビデオ会議やコンタクトセンター、遠隔作業支援、オンライン教育、ライブ配信など、さまざまな機会において、オンラインでのリアルタイムコミュニケーションのニーズが高まっています。
+ビデオ/音声通話、データ通信といったリアルタイムコミュニケーションの標準技術である「WebRTC」が登場し、リアルタイムコミュニケーションがより実現しやすくなってきました。
+
+ECLWebRTCのサーバAPIとSDKを利用することで、サーバを構築・運用することなく、自社のサービスの開発・提供に専念して、イノベーションを目指すことができます。
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">アプリ開発に集中</h3>
+        <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">マルチプラットフォーム</h3>
+        <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">サポートとSLAで安心</h3>
+        <p class="card-text">テクニカルサポートとSLAがあるから、安心して商用サービスを開発・運用できる</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">無料ですぐに試せる</h3>
+        <p class="card-text">無料のCommunity Editionですぐに開発を始められ、小規模なサービスにも利用できる</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Pricing
 SkyWayは無料で利用可能です！
 
 - [pricing.md](pricing.md)
@@ -113,3 +128,28 @@ SkyWayは無料で利用可能です！
 </div>
 
 [その他のユースケースはこちら](https://skyway.github.io/usecase/)
+
+<!-- Modal -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var search = location.search;
+  var STRING_OF_MODAL = 'origin=skyway';
+  if (search && search.split('?')[1].split('&').indexOf(STRING_OF_MODAL) !== -1) {
+    $('#migration').modal();
+    history.replaceState(null, null, location.href.replace(search, ''));
+  }
+});
+</script>
+
+<div class="modal fade bd-example-modal-lg" id="migration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h5 class="modal-title">Modal title</h5>
+        <p>Modal body text goes here.</p>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
