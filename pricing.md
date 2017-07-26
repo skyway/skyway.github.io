@@ -22,61 +22,34 @@ Community Editionは一切、料金がかかりません。
 ### 基本料金
 
 初期費用なしで利用できます。  
-STUNの利用や通話、通信の回数、room機能利用回数に制限はありません。
+
+<small class="text-muted">STUNの利用や通話の回数、room機能利用回数に制限はありません。</small>
 
 <table class="table table-sm">
-<thead>
-	<tr>
-		<th></th>
-		<th></th>
-		<th>Community Edition</th>
-		<th>Enterprise Edition</th>
-	</tr>
-</thead>
-<tbody align="right">
-	<tr>
-		<th scope="row">初期費用</th>
-		<td align="left"></td>
-		<td>¥0</td>
-		<td>¥0</td>
-	</tr>
-	<tr>
-		<th scope="row">基本料金</th>
-		<td align="left"></td>
-		<td>¥0</td>
-		<td>¥100,000/月</td>
-	</tr>
-	<tr>
-		<th scope="row">APIKey発行</th>
-		<td align="left"></td>
-		<td>¥0</td>
-		<td>¥0</td>
-	</tr>
-	<tr>
-		<th scope="row">STUN</th>
-		<td align="left"></td>
-		<td>¥0</td>
-		<td>¥0</td>
-	</tr>
-	<tr>
-		<th scope="row">サポート</th>
-		<td align="left">窓口</td>
-		<td>Knowledge Base, Community</td>
-		<td>チケット</td>
-	</tr>
-	<tr>
-		<th scope="row"></th>
-		<td align="left">対応時間</td>
-		<td></td>
-		<td>24時間365日</td>
-	</tr>
-	<tr>
-		<th scope="row"></th>
-		<td align="left">SLA</td>
-		<td></td>
-		<td>99.99%</td>
-	</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Community Edition</th>
+      <th>Enterprise Edition</th>
+    </tr>
+  </thead>
+    <tbody align="right">
+      <tr>
+        <th scope="row">基本料金</th>
+        <td>初期費用、月額費用とも¥0</td>
+        <td>初期費用¥0、月額費用¥100,000</td>
+      </tr>
+      <tr>
+        <th scope="row">サポート</th>
+        <td>FAQ、Technical Forum</td>
+        <td>チケット（24時間365日）</td>
+      </tr>
+      <tr>
+        <th scope="row">SLA</th>
+        <td>なし</td>
+        <td>稼働率99.99%保証</td>
+    </tr>
+  </tbody>
 </table>
 
 ### 接続回数
@@ -98,30 +71,31 @@ STUNの利用や通話、通信の回数、room機能利用回数に制限はあ
 <tbody align="right">
 	<tr>
 		<th scope="row">シグナリング<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="シグナリング: 端末間で通信を行う際に、シグナリングサーバを介してお互いのIPアドレスやコーデックなど情報の交換を行います。">i</span></th>
-		<td align="left">〜499,999</td>
+		<td align="left">〜500,000</td>
 		<td>¥0</td>
 		<td>¥0</td>
 	</tr>
 	<tr>
 		<th scope="row"></th>
-		<td align="left">500,000〜999,999</td>
-		<td>limited</td>
+		<td align="left">500,001〜1,000,000</td>
+		<td>制限</td>
 		<td>¥0</td>
 	</tr>
 	<tr>
 		<th scope="row"></th>
-		<td align="left">1,000,000〜9,999,999</td>
+		<td align="left">1,000,001〜10,000,000</td>
 		<td></td>
 		<td>¥100,000</td>
 	</tr>
 	<tr>
 		<th scope="row"></th>
-		<td align="left">10,000,000+</td>
+		<td align="left">10,000,001+</td>
 		<td></td>
 		<td>contact us</td>
 	</tr>
 </tbody>
 </table>
+
 
 ### サーバ通信料
 
@@ -142,30 +116,31 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた制限や料金�
 <tbody align="right">
 	<tr>
 		<th scope="row">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
-		<td align="left">〜499GB</td>
+		<td align="left">〜500GB</td>
 		<td>¥0</td>
 		<td>¥40/GB</td>
 	</tr>
 	<tr>
 		<th scope="row"></th>
-		<td align="left">500GB〜</td>
-		<td>limited</td>
+		<td align="left">501GB〜</td>
+		<td>制限</td>
 		<td>¥40/GB</td>
 	</tr>
 	<tr>
 		<th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: 映像の送信をSFUサーバが代行することで、端末のCPUやネットワーク負荷を抑え、多人数での通話や配信を実現します。">i</span></th>
-		<td align="left">〜499GB</td>
+		<td align="left">〜500GB</td>
 		<td>¥0</td>
 		<td>¥40/GB</td>
 	</tr>
 	<tr>
 		<th scope="row"></th>
-		<td align="left">500GB〜</td>
-		<td>limited</td>
+		<td align="left">501GB〜</td>
+		<td>制限</td>
 		<td>¥40/GB</td>
 	</tr>
 </tbody>
 </table>
+
 
 #### エンドユーザ別利用モデル
 
