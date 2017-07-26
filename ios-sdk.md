@@ -8,17 +8,18 @@ lang: ja
 
 ## チュートリアル
 
-### 1.1. 作るもの
+iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
+現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-<!-- https://github.com/skyway/webrtc-handson-native/wiki より -->
+<figure class="figure">
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayがシグナリングをして、端末間がビデオチャットで繋がる">
+  <figcaption class="figure-caption">SkyWayがシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+</figure>
 
-iOS/Android SDKの基本機能を利用して、シンプルなビデオチャットとテキストチャットのアプリを作成することで、SkyWay SDKの使い方について理解を深めます。
-
-作成するアプリは、現在サーバに接続されている相手の一覧から、チャットしたい相手を選んで1対1のビデオチャット、またはテキストチャットを行います。
-
-![SkyWayがシグナリングをして、端末間がビデオチャットで繋がる](https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png)
-
-![ビデオチャットのスクリーンショット](https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png)
+<figure class="figure">
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
+  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+</figure>
 
 ### 1.2. 開発前の準備
 
