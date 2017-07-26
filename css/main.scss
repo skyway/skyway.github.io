@@ -51,6 +51,10 @@ body {
   }
 }
 
+.card-group {
+  margin-bottom: $spacer; // .table と同じ
+}
+
 // Typography
 
 #main > h2:not(:first-child) {
