@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Policy
+title: 利用規約
 lang: ja
 ---
 
 # 利用規約
-Enterprise Cloud WebRTC Platform（以下、ECLWebRTC）をご利用頂くためには利用規約に同意して頂く必要がございます。
+Enterprise Cloud WebRTC Platform Community Edition（以下、ECLWebRTC）をご利用頂くためには本利用規約に同意して頂く必要がございます。
 
 ## 第1章 総則
 
@@ -21,7 +21,7 @@ Enterprise Cloud WebRTC Platform（以下、ECLWebRTC）をご利用頂くため
 
 ### （本規約の公表）
 
-第3条 当社は、当社のWebページ（ [http://www.ntt.com/tariff/comm/](http://www.ntt.com/tariff/comm/){:target="_blank"} ）その他当社が別に定める方法により、本規約を公表します。
+第3条 当社は、当社のWebページ（ [http://webrtc.ecl.ntt.com](http://webrtc.ecl.ntt.com/){:target="_blank"} ）その他当社が別に定める方法により、本規約を公表します。
 
 ### （用語の定義）
 
@@ -32,12 +32,11 @@ Enterprise Cloud WebRTC Platform（以下、ECLWebRTC）をご利用頂くため
 |1 ECLWebRTC|WebRTCの機能を簡易に利用するためのシグナリング機能、セッション管理機能（契約者のサービス（本サービスを利用して契約者が提供するサービスを言います。）を利用するユーザ数等を収集可能にする機能を言います。）等を提供するサービ|
 |2 APIキー|本サービスを提供する際に、当社が契約者に付与する識別符号|
 
-
 ## 第2章 契約
 
 ### （契約の単位）
 
-第5条 当社は1のAPIキー毎に1の本サービスに係る契約を締結します。
+第5条 当社は1アカウントごとに1の本サービスに係る契約を締結します。
 
 ### （本サービスの契約申込）
 
