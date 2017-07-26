@@ -75,7 +75,54 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 
 ## 価格
 
-> [pricing.md](pricing.md)から流用する
+オンラインでの新規登録で、すぐに利用可能です。
+世界中の開発者とともにあなたのイノベーションを始めましょう。    
+Community Editionは一切、料金がかかりません。
+Enterprise Editionは商用サービスや大規模サービスに安心してご利用いただけます。
+
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Community Edition</th>
+      <th>Enterprise Edition</th>
+    </tr>
+  </thead>
+    <tbody align="right">
+      <tr>
+        <th scope="row">基本料金</th>
+        <td>初期費用、月額費用とも¥0</td>
+        <td>初期費用¥0、月額費用¥100,000</td>
+      </tr>
+      <tr>
+        <th scope="row">シグナリング料金</th>
+        <td>499,999回までに制限</td>
+        <td>999,999回まで¥0<br>1,000,000回以上は¥100,000</td>
+      </tr>
+      <tr>
+        <th scope="row">TURN通信料金</th>
+        <td>499GBまでに制限</td>
+        <td>¥40/GB</td>
+      </tr>
+      <tr>
+        <th scope="row">SFU通信料金</th>
+        <td>499GBまでに制限</td>
+        <td>¥40/GB</td>
+      </tr>
+      <tr>
+        <th scope="row">サポート</th>
+        <td>FAQ、Technical Forum</td>
+        <td>ビジネスポータルよりサポートセンターに問い合わせ可</td>
+      </tr>
+      <tr>
+        <th scope="row">SLA</th>
+        <td>なし</td>
+        <td>稼働率99.99%保証</td>
+    </tr>
+  </tbody>
+</table>
+
+詳細は[価格](pricing.md)をご覧ください。SLAについての詳細は[サービス説明書](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html)をご覧ください。
 
 ## デモ
 
@@ -97,9 +144,9 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">Web会議</h4>
-			<p class="card-text">WebRTCによって、Web会議がより手軽になりました。
-			アプリやプラグインのインストール、会員登録やログインが不要で、URLを共有するだけで会議ができるタイプのサービスも登場しました。
-			1対1の打ち合わせ、各自が自分のスマホやPCで参加する会議、会議室同士をつなぐ会議など、様々な形態に対応できます。</p>
+			<p class="card-text">アプリやプラグインのインストールが不要なので、従来のサービスより手軽に利用できます。
+			会員登録やログインが不要で、URLを共有するだけで参加できるサービスも登場しました。
+			資料や画面を共有することも可能です。</p>
   		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">事例を見る</a></p>
 		</div>
 	</div>
@@ -107,11 +154,9 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">サポート</h4>
-			<p class="card-text">ユーザは、アプリやWebサイトの中で、サポートを受けたり、商品説明を受けたりできます。
-      従来のように、わざわざ電話をかけたり、LINE、Skype等のアプリに切り替える必要はありません。
-      本人確認などの手間も不要になります。
-      オペレーターが資料や画面を共有したり、ユーザのカメラを使って周囲の状況を確認したりしながらサポートすることも可能です。
-      生命保険、損害保険、自動車販売、金融機関の優良顧客専用窓口などでも活用されています。</p>
+			<p class="card-text">電話をかけたり、別アプリに切り替えたりせずに通話できるので、アプリやWebサイト内でサポートが完結します。
+      ログイン情報を引き継げるので、本人確認の手間も不要です。
+      資料や画面を共有したり、カメラを使って状況を確認することも可能です。</p>
   		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/support/" role="button">事例を見る</a></p>
 		</div>
 	</div>
@@ -119,7 +164,8 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">遠隔医療</h4>
-			<p class="card-text">WebRTCは、医療やヘルスケアにも活用されています。</p>
+			<p class="card-text">WebRTCは、遠隔診療やヘルスケア相談にも活用されています。
+			日本では、厚労省が2015年に遠隔診療を実質解禁したことがきっかけとなり、市場が成長しています。</p>
   		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/healthcare/" role="button">事例を見る</a></p>
 		</div>
 	</div>
@@ -127,7 +173,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">IoT</h4>
-			<p class="card-text">ブラウザやアプリだけでなく、組み込み機器やIoTデバイスでも利用可能です。
+			<p class="card-text">WebRTCは組み込み機器やIoTデバイスでも利用可能です。
 			コミュニケーションデバイスやデジタルサイネージなどでも活用されています。</p>
   		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/iot/" role="button">事例を見る</a></p>
 		</div>
