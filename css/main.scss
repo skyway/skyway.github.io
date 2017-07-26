@@ -51,6 +51,10 @@ body {
   }
 }
 
+.card-group {
+  margin-bottom: $spacer; // .table と同じ
+}
+
 // Typography
 
 #main > h2:not(:first-child) {
@@ -61,8 +65,6 @@ body {
   margin-top: 1.5rem;
 }
 
-.jumbotron {
-  span {
+.jumbotron span, .card span {
     @extend .text-nowrap;
-  }
 }

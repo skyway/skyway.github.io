@@ -37,99 +37,154 @@ lang: ja
 ## ECLWebRTCとは
 
 ビデオ会議やコンタクトセンター、遠隔作業支援、オンライン教育、ライブ配信など、さまざまな機会において、オンラインでのリアルタイムコミュニケーションのニーズが高まっています。
-ビデオ/音声通話、データ通信といったリアルタイムコミュニケーションの標準技術である「WebRTC」が登場し、リアルタイムコミュニケーションがより実現しやすくなってきました。
+ビデオ・音声通話、データ通信といったリアルタイムコミュニケーションの標準技術である「WebRTC」が登場し、リアルタイムコミュニケーションがより実現しやすくなってきました。
 
-ECLWebRTCのサーバAPIとSDKを利用することで、サーバを構築・運用することなく、自社のサービスの開発・提供に専念して、イノベーションを目指すことができます。
+ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
+自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 
-<div class="row">
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">アプリ開発に集中</h3>
-        <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
-      </div>
+<div class="card-deck">
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-code fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>アプリ開発</span><wbr><span>に</span><wbr><span>集中</span></h3>
+      <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">マルチプラットフォーム</h3>
-        <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>マルチ</span><wbr><span>プラット</span><wbr><span>フォーム</span></h3>
+      <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">サポートとSLAで安心</h3>
-        <p class="card-text">テクニカルサポートとSLAがあるから、安心して商用サービスを開発・運用できる</p>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
+      <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
     </div>
   </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">無料ですぐに試せる</h3>
-        <p class="card-text">無料のCommunity Editionですぐに開発を始められ、小規模なサービスにも利用できる</p>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
+      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
     </div>
   </div>
 </div>
 
-## Pricing
-SkyWayは無料で利用可能です！
+## 価格
 
-- [pricing.md](pricing.md)
+オンラインでの新規登録で、すぐに利用可能です。
+世界中の開発者とともにあなたのイノベーションを始めましょう。    
+Community Editionは一切、料金がかかりません。
+Enterprise Editionは商用サービスや大規模サービスに安心してご利用いただけます。
 
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Community Edition</th>
+      <th>Enterprise Edition</th>
+    </tr>
+  </thead>
+    <tbody align="right">
+      <tr>
+        <th scope="row">基本料金</th>
+        <td>初期費用、月額費用とも¥0</td>
+        <td>初期費用¥0、月額費用¥100,000</td>
+      </tr>
+      <tr>
+        <th scope="row">シグナリング料金</th>
+        <td>499,999回までに制限</td>
+        <td>999,999回まで¥0<br>1,000,000回以上は¥100,000</td>
+      </tr>
+      <tr>
+        <th scope="row">TURN通信料金</th>
+        <td>499GBまでに制限</td>
+        <td>¥40/GB</td>
+      </tr>
+      <tr>
+        <th scope="row">SFU通信料金</th>
+        <td>499GBまでに制限</td>
+        <td>¥40/GB</td>
+      </tr>
+      <tr>
+        <th scope="row">サポート</th>
+        <td>FAQ、Technical Forum</td>
+        <td>ビジネスポータルよりサポートセンターに問い合わせ可</td>
+      </tr>
+      <tr>
+        <th scope="row">SLA</th>
+        <td>なし</td>
+        <td>稼働率99.99%保証</td>
+    </tr>
+  </tbody>
+</table>
 
+詳細は[価格](pricing.md)をご覧ください。SLAについての詳細は[サービス説明書](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html)をご覧ください。
 
-## Demo △
-- [SkyWay Conf](https://conf2.skyway.io/)
+## デモ
 
 <div class="media">
-	<img class="d-flex mr-3" src="http://via.placeholder.com/250x150" alt="SkyWay Conf">
+	<img class="d-flex mr-3" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
 	<div class="media-body">
-		<h5 class="mt-0">SkyWay Conf</h5>
-		これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。これはサンプルです。
+		<h5 class="mt-0">SkyWay Conference</h5>
+		<p>インストールなし、会員登録なし、ログインなしで利用できる、多人数通話に対応したWeb会議です。
+		ブラウザでURLにアクセスするだけで参加できます。
+		画面共有にも対応しています。</p>
+		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
 	</div>
 </div>
 
-## Use Case △
+## 事例紹介
 
 <div class="card-group">
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">Web会議</h4>
-			<p class="card-text">このテキストはサンプルです。</p>
+			<p class="card-text">アプリやプラグインのインストールが不要なので、従来のサービスより手軽に利用できます。
+			会員登録やログインが不要で、URLを共有するだけで参加できるサービスも登場しました。
+			資料や画面を共有することも可能です。</p>
+  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">サポート</h4>
-			<p class="card-text">このテキストはサンプルです。</p>
+			<p class="card-text">電話をかけたり、別アプリに切り替えたりせずに通話できるので、アプリやWebサイト内でサポートが完結します。
+      ログイン情報を引き継げるので、本人確認の手間も不要です。
+      資料や画面を共有したり、カメラを使って状況を確認することも可能です。</p>
+  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/support/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">遠隔医療</h4>
-			<p class="card-text">このテキストはサンプルです。</p>
+			<p class="card-text">WebRTCは、遠隔診療やヘルスケア相談にも活用されています。
+			日本では、厚労省が2015年に遠隔診療を実質解禁したことがきっかけとなり、市場が成長しています。</p>
+  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/healthcare/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 	<div class="card">
-		<img class="card-img-top" src="http://via.placeholder.com/200x150" alt="Card image cap">
+		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap">
 		<div class="card-block">
 			<h4 class="card-title">IoT</h4>
-			<p class="card-text">このテキストはサンプルです。</p>
+			<p class="card-text">WebRTCは組み込み機器やIoTデバイスでも利用可能です。
+			コミュニケーションデバイスやデジタルサイネージなどでも活用されています。</p>
+  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/iot/" role="button">事例を見る</a></p>
 		</div>
 	</div>
 </div>
 
-[その他のユースケースはこちら](https://skyway.github.io/usecase/)
+[その他の事例はこちら](https://skyway.github.io/usecase/)
 
 <!-- Modal -->
+
+[migrationのモーダルを表示](./?origin=skyway)
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -146,9 +201,13 @@ document.addEventListener('DOMContentLoaded', function() {
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-body">
-        <h5 class="modal-title">Modal title</h5>
-        <p>Modal body text goes here.</p>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <img class="img-fluid" src="http://via.placeholder.com/800x400?text=SkyWay-became-ECLWebRTC" alt="SkyWay-became-ECLWebRTC">
+        <p>SkyWayを発展させた後継サービス「ECLWebRTC」の提供を開始しました。SkyWayは2018年3月31日に提供を終了します。<br>
+        SkyWayをご利用の方は、ECLWebRTCへの移行をお願いします。</p>
+        <p>
+          <a class="btn btn-primary" href="migration.html" role="button">移行方法を確認する</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+        </p>
       </div>
     </div>
   </div>
