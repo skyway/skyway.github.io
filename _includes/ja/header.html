@@ -48,21 +48,32 @@
           </li>
           {% endif %}
 
-
         </ul>
         <ul class="nav navbar-nav mr-0">
           <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuSignup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              新規登録
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSignup">
+              <a class="dropdown-item" href="#">Community Edition</a>
+              <a class="dropdown-item" href="#">Enterprise Edition</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuDashboard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ダッシュボード
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuDashboard">
+              <a class="dropdown-item" href="#">Community Edition</a>
+              <a class="dropdown-item" href="#">Enterprise Edition</a>
+              <a class="dropdown-item" href="#">SkyWay</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
             {% include lang.html %}
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Signup</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
 </header>
