@@ -22,33 +22,22 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
   <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
 </figure>
 
-### 1.2. 開発前の準備
+### 開発前の準備
 
-#### SkyWayの開発者登録
-* 新規の方はこちらから
-https://skyway.io/ds/registration
-* 登録済みの方はこちらから
-https://skyway.io/ds/
+ECLWebRTCへの開発者登録がまだの方は、まず、[新規登録](signup.md)から開発者登録をしてください。
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリを作成して、APIキーを取得してください。
+利用可能ドメインは `localhost` としてください。
 
-#### APIキーの払い出しとドメイン登録
-* SkyWayのダッシュボードから払い出して下さい
-  - 利用可能ドメインに **localhost** を登録
+### サーバへ接続
 
-### 2.1. サーバへ接続
+ECLWebRTCのシグナリングサーバに接続します。
 
-#### APIキー、ドメインの設定
-* app/src/main/java/io/skyway/testpeerjava/ を選択
-* MediaActivity.javaを開く
-* APIキーを各自 https://skyway.io/ds から取得したものを設定
-* 利用可能ドメインは localhost に設定
+まず初めに、シグナリングサーバに接続する際の引数で、APIキーと利用可能ドメインを指定します。
+app/src/main/java/io/skyway/testpeerjava/ を選択。
+MediaActivity.javaを開く。
+APIキーを各自 https://skyway.io/ds から取得したものを設定。
+利用可能ドメインは localhost に設定。
 
-java
-```java
-// APIキー、ドメインを設定
-PeerOption options = new PeerOption();
-options.key = "XXXXXXXXXXXXXXXXXXXXX"; // 各自で取得したAPIキーを設定
-options.domain = "localhost";
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -71,15 +60,10 @@ option.key = ""
 option.domain = ""
 ```
 
-#### Peerオブジェクトの生成
-* Peerクラスは、SkyWayが提供するシグナリングのためのクラス
-* Peerオブジェクトを生成し、シグナリングサーバに接続する
+Peerオブジェクトの生成します。
+Peerクラスは、SkyWayが提供するシグナリングのためのクラス。
+Peerオブジェクトを生成し、シグナリングサーバに接続する。
 
-java
-```java
-// Peerオブジェクトのインスタンスを生成
-_peer = new Peer(context, options);
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -98,27 +82,16 @@ _peer = [[SKWPeer alloc] initWithOptions:option];
 _peer = SKWPeer.init(options: option);
 ```
 
-### 2.2. 接続成功・失敗
+### 接続成功・失敗時の処理
 
-#### 接続エラー時の処理
-* エラー発生時のコールバック処理を、OnCallback()に記述する
-* Peer.on()で上記のコールバックを登録する
-  - 第一引数にイベント種別を登録（ERROR,OPENなど）
-* エラーが起きたらコンソールログを出力する
-  - APIキーが間違っている
-  - ドメインが登録されていない　など
+エラー発生時のコールバック処理を、OnCallback()に記述する。
+Peer.on()で上記のコールバックを登録する。
+第一引数にイベント種別を登録（ERROR,OPENなど）。
+エラーが起きたらコンソールログを出力する。
+APIキーが間違っている。
+ドメインが登録されていない　など。
 
-java
-```java
-// コールバックを登録(ERROR)
-_peer.on(Peer.PeerEventEnum.ERROR, new OnCallback() {
-  @Override
-  public void onCallback(Object object) {
-    PeerError error = (PeerError) object;
-    Log.d(TAG, "[On/Error]" + error);
-  }
-});
-```
+
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -143,30 +116,11 @@ _peer.on(Peer.PeerEventEnum.ERROR, new OnCallback() {
         print("\(error)")
     })
 ```
-#### 接続成功時の処理
-* 成功時のコールバックを登録
-  - 自分のピアIDがコールバックの引数に渡されてくる
-* 自分のピアIDを画面に表示する
 
-Java
-```java
-// コールバックを登録(OPEN)
-_peer.on(Peer.PeerEventEnum.OPEN, new OnCallback() {
-  @Override
-  public void onCallback(Object object) {
-    _id = (String) object;
-    _handler.post(new Runnable() {
-      @Override
-      public void run() {
-        // 自分のIDを表示
-        TextView tv = (TextView) findViewById(R.id.tvOwnId);
-        tv.setText("ID【" + _id + "】");
-        tv.invalidate();
-      }
-    });
-  }
-});
-```
+成功時のコールバックを登録。
+自分のピアIDがコールバックの引数に渡されてくる。
+自分のピアIDを画面に表示する。
+
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -197,26 +151,15 @@ _peer.on(Peer.PeerEventEnum.OPEN, new OnCallback() {
     })
 ```
 
-### 2.3. メディアの取得
+### カメラ映像、マイク音声の取得
 
-#### 自分のカメラの映像を取得して表示
-* Navigator.getUserMediaで、カメラの映像が取得できる
-* Canvasにセットする
+自分のカメラの映像を取得して表示。
+Navigator.getUserMediaで、カメラの映像が取得できる。
+Canvasにセットする。
 
-Java
-```java
-// メディアを取得
-Navigator.initialize(_peer);
-MediaConstraints constraints = new MediaConstraints();
-_msLocal = Navigator.getUserMedia(constraints);
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
-
-// 映像を表示する為のUI
-Canvas canvas = (Canvas) findViewById(R.id.svSecondary);
-canvas.addSrc(_msLocal, 0);
-```
 
 ```objc
 //メディアを取得
@@ -244,27 +187,12 @@ let localVideoView:SKWVideo = self.view.viewWithTag(ViewTag.TAG_LOCAL_VIDEO.hash
 localVideoView.addSrc(_msLocal, track: 0)
 ```
 
-### 2.4. 相手から着信
+### 着信時の処理
 
-#### 相手からのビデオ通話着信時の処理
-* シグナリングサーバ経由でビデオ通話着信があった場合の処理
-  - 相手に自分のメディア情報を回答
-  - 相手とのP2Pコネクションで発生するイベントのコールバックを登録
+シグナリングサーバ経由でビデオ通話着信があった場合の処理。
+相手に自分のメディア情報を回答。
+相手とのP2Pコネクションで発生するイベントのコールバックを登録。
   
-Java
-```java
-// コールバックを登録(CALL)
-_peer.on(Peer.PeerEventEnum.CALL, new OnCallback(){
-  @Override
-  public void onCallback(Object object){
-    _media = (MediaConnection) object;
-    _media.answer(_msLocal);
-    setMediaCallback(_media);
-    _bEstablished = true;
-    updateUI();
-  }
-});
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -295,38 +223,10 @@ _peer?.on(SKWPeerEventEnum.PEER_EVENT_CALL, callback: { (obj:NSObject!) -> Void 
 })
 ```
 
-#### P2Pコネクションのコールバック処理
-* 映像を受信した場合(STREAM)、映像をUIに表示
-* コネクションが切断された場合、映像を削除
+P2Pコネクションのコールバック処理。
+映像を受信した場合(STREAM)、映像をUIに表示。
+コネクションが切断された場合、映像を削除。
 
-
-Java
-```java
-private void setMediaCallback(MediaConnection media){
-  // コールバックを登録(STREAM)
-  media.on(MediaConnection.MediaEventEnum.STREAM, new OnCallback() {
-    @Override
-    public void onCallback(Object object) {
-      _msRemote = (MediaStream) object;
-      Canvas canvas = (Canvas) findViewById(R.id.svPrimary);
-      canvas.addSrc(_msRemote, 0);
-    }
-  });
-
-  // コールバックを登録(CLOSE)
-  media.on(MediaConnection.MediaEventEnum.CLOSE, new OnCallback() {
-    @Override
-    public void onCallback(Object object) {
-      Canvas canvas = (Canvas) findViewById(R.id.svPrimary);
-      canvas.removeSrc(_msRemote, 0);
-      _msRemote = null;
-      _media = null;
-      _bEstablished = false;
-      updateUI();
-    }
-  });
-}
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -404,45 +304,11 @@ func setMediaCallbacks(media:SKWMediaConnection){
 }
 ```
 
-### 2.5. 相手へ発信
+### 発信する
 
-#### 相手へビデオ通話をかける
-##### サーバに接続しているピアの一覧を取得する
+相手へビデオ通話をかける。
+サーバに接続しているピアの一覧を取得する。
 
-Java
-```java
-// 接続相手を選択する
-private void getPeerList(){
-  if ((null == _peer) || (null == _id) || (0 == _id.length())){
-    return;
-  }
-
-  _listPeerIds.clear();
-
-  _peer.listAllPeers(new OnCallback() {
-    @Override
-    public void onCallback(Object object) {
-      JSONArray peers = (JSONArray) object;
-      for (int i = 0; peers.length() > i; i++) {
-        String strValue = "";
-        try {
-          strValue = peers.getString(i);
-        } catch (Exception e) {
-          e.printStackTrace();
-        }
-
-        if (0 != _id.compareToIgnoreCase(strValue)) {
-          _listPeerIds.add(strValue);
-        }
-      }
-
-      if ((null != _listPeerIds) && (0 < _listPeerIds.size())) {
-        showPeerListDialog();
-      }
-    }
-  });
-}
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -504,36 +370,11 @@ func getPeerList(){
     }
 ```
 
-##### 通話したい相手を選んで、ビデオ通話発信する
+通話したい相手を選んで、ビデオ通話発信する。
 
-Java
-```java
-// ビデオ通話をかける
-private void call(String strPeerId){
-  CallOption option = new CallOption();
-  _media = _peer.call(strPeerId, _msLocal, option);
-
-  if (null != _media){
-    setMediaCallback(_media);
-    _bEstablished = true;
-  }
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
-
-  updateUI();
-}
-
-// ビデオ通話を終了する
-private void close(){
-  if (_bEstablished) {
-    _bEstablished = false;
-    if (null != _media) {
-      _media.close();
-    }
-  }
-}
-```
 
 ```objc
 - (void)call:(NSString *)strDestId
@@ -605,29 +446,10 @@ func closeChat(){
 }
 ```
 
-### 2.6. UIのセットアップ
+### UIのセットアップ
 
+UIの初期化。
 
-#### UIの初期化
-java
-```java
-// アクションボタン
-Button btnAction = (Button) findViewById(R.id.btnAction);
-btnAction.setEnabled(true);
-btnAction.setOnClickListener(new View.OnClickListener(){
-  @Override
-  public void onClick(View v){
-    v.setEnabled(false);
-    if (!_bEstablished){
-      getPeerList();
-    }
-    else{
-      close();
-    }
-    v.setEnabled(true);
-  }
-});
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -680,36 +502,8 @@ UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 }
 ```
 
-#### UIの更新
+UIの更新。
 
-java
-```java
-// UIを更新する
-private void updateUI() {
-  _handler.post(new Runnable() {
-    @Override
-    public void run() {
-      Button btnAction = (Button) findViewById(R.id.btnAction);
-      if (null != btnAction) {
-        if (false == _bEstablished) {
-          btnAction.setText("Call");
-        } else {
-          btnAction.setText("Hang up");
-        }
-      }
-
-      TextView tvOwnId = (TextView) findViewById(R.id.tvOwnId);
-      if (null != tvOwnId) {
-        if (null == _id) {
-          tvOwnId.setText("");
-        } else {
-          tvOwnId.setText(_id);
-        }
-      }
-    }
-  });
-}
-```
 {:refdef: .lang}
 *Objective-C*
 {: refdef}
@@ -767,6 +561,8 @@ func updateUI(){
     }
 }
 ```
+
+これで完成です。
 
 ## SDKのダウンロード
 
