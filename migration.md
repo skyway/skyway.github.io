@@ -17,7 +17,7 @@ lang: ja
           <li>APIKey発行</li>
           <li>SDK差し替え</li>
         </ol>
-        <a href="#toCommunity" class="btn btn-outline-primary">Community Editionへ移行</a>
+        <a href="#toCommunity" class="btn btn-primary">Community Editionへ移行</a>
       </div>
     </div>
   </div>
@@ -29,7 +29,7 @@ lang: ja
           <li>Enteprise Cloud申込</li>
           <li>Community Editionからの移行</li>
         </ol>
-        <a href="#toEnterprise" class="btn btn-outline-primary">Enteprise Editionへ移行</a>
+        <a href="#toEnterprise" class="btn btn-primary">Enteprise Editionへ移行</a>
       </div>
     </div>
   </div>
@@ -73,10 +73,12 @@ SDKのAPIに一部差分があるため、以下のドキュメントを参考�
 
 [新規登録ページ](./singup.html)よりEnterprise Editionへの新規申込をお願いします。
 
+<a href="#" class="btn btn-primary">Enterprise Edition申込</a>
+
 ### 2. Community Editionからの移行
 
 Community EditionからEnterprise EditionへAPIKeyを引継ぐ機能は、近日中に提供予定です。<br>
-それまでは、Enterprise Editionのダッシュボード画面にて、APIKeyを新規発行し、差し替えをお願いします。
+提供開始まではEnterprise Editionのダッシュボード画面にてAPIKeyを新規発行し、差し替えをお願いします。
 
 #### Enterprise editionへの移行タイミングについて
 
