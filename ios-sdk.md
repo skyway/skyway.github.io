@@ -573,14 +573,10 @@ func updateUI(){
 
 ## SDKのダウンロード
 
-[developer.md](developer.md)を参考にして追記する。
-
 [ZIPでダウンロード](#){: .btn .btn-primary}
 [GitHubでクローン](#){: .btn .btn-secondary}
 
 ## APIリファレンス
-
-[developer.md](developer.md)を参考にして追記する。
 
 [APIリファレンスを見る](#){: .btn .btn-primary}
 
