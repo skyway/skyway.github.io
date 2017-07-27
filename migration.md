@@ -6,78 +6,81 @@ lang: ja
 
 # マイグレーション
 
-SkyWayは2018.03.31をもってサービス提供を終了します。
 
-現在、SkyWayをご利用の方は、機能やサービスがより充実した（ 参考: [SkyWayとECLWebRTCの機能比較](https://support.skyway.io/hc/ja){:target="_blank"} ) ECLWebRTC Community Edition/Enterprise Editionへのマイグレーション作業をお願いします。
+<div class="row d-flex justify-content-center align-items-center">
+  <div class="col-5">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title"><span>SkyWayを</span><wbr><span>ご利用中の方</span></h3>
+        <ol>
+          <li>ECLWebRTC新規登録</li>
+          <li>APIKey発行</li>
+          <li>SDK差し替え</li>
+        </ol>
+        <a href="#toCommunity" class="btn btn-outline-primary">Community Editionへ移行</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-5">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title"><span>Enterprise Edition</span><wbr><span>への移行を希望される方</span></h3>
+        <ol>
+          <li>Enteprise Cloud申込</li>
+          <li>Community Editionからの移行</li>
+        </ol>
+        <a href="#toEnterprise" class="btn btn-outline-primary">Enteprise Editionへ移行</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-このページではマイグレーションに必要な情報を提供します。
-
-## マイグレーション手順
+<h2 id="toCommunity">SkyWayからECLWebRTCへの移行について</h2>
+SkyWayは2018年3月31日をもって提供を終了します。<br>
+SkyWayをご利用の方は、SkyWayを発展させた後継サービス「ECLWebRTC」への移行をお願いします。<br>
+（参考: [SkyWayとECLWebRTCの機能比較](https://support.skyway.io/hc/ja){:target="_blank"})
 
 以下の手順に沿ってマイグレーションを実施して下さい。
 
-### 1. SDKのアップデート
+### 1. ECLWebRTC新規登録
 
-ECLWebRTCでは新しいSDKを利用しますので、アップデートが必要です。
+[新規登録ページ](./singup.html)よりECLWebRTCの新規登録をお願いします。<br>
+Community Editionは無料でご利用いただけます。詳細は[料金ページ]()をご確認ください。<br>
+[Enterprise Editionにお申込み]()いただいた場合も、以下の手順は同じです。
 
-尚、SDKにはAPIに一部差分があります。アップデート後は以下のドキュメントを参考にプログラムの修正をお願いします。
+<a href="#" class="btn btn-primary">無料で新規登録</a>
 
-[SkyWay SDK 次期バージョン API 差分](https://github.com/nttcom/skyway-sdk-migration-docs)
+### 2. APIKey発行
 
-#### JavaScript SDK
+SkyWayで利用中のAPIキーはECLWebRTCではご利用いただけません。<br>
+ダッシュボードにて新規APIKeyを発行し、次の[3. SDKの差し替え]()時に、APIKeyの変更をお願いします。
 
-##### peer.jsをご利用の場合
+### 3. SDK差し替え
 
-- アップデート方法を説明
+ECLWebRTCでは新しいSDKを提供しています。<br>
+SDKのAPIに一部差分があるため、以下のドキュメントを参考にプログラムの修正をお願いします。
 
-##### skyway.jsをご利用の場合
+[SDK差分と移行方法について](https://github.com/nttcom/skyway-sdk-migration-docs)
 
-- アップデート方法を説明
+<div class="alert alert-info" role="alert">
+  SkyWayのSDKとECLWebRTCのSDKは相互接続できません<br>
+  ECLWebRTCのSDKは、ECLWebRTC Community EditionまたはEnterprise Editionで発行したAPIKeyのみご利用いただけます。
+</div>
 
-#### Android SDK
+<h2 id="toEnterprise">Community EditionからEnterprise Editionへの切り替えについて</h2>
 
-- アップデート方法を説明
+### 1. Enterprise Editionへの申込
 
-#### iOS SDK
+[新規登録ページ](./singup.html)よりEnterprise Editionへの新規申込をお願いします。
 
-- アップデート方法を説明
+### 2. Community Editionからの移行
 
-### 2. APIキーの発行と差し替え
+Community EditionからEnterprise EditionへAPIKeyを引継ぐ機能は、近日中に提供予定です。<br>
+それまでは、Enterprise Editionのダッシュボード画面にて、APIKeyを新規発行し、差し替えをお願いします。
 
-SkyWayで利用中のAPIキーはECLWebRTCでは利用できません。
+#### Enterprise editionへの移行タイミングについて
 
-[Sing up](./singup.html)ページからECLWebRTCの会員登録を行い、APIキーの発行と差し替えをお願いします。
+Community Editionのダッシュボードにて月間の利用量を確認できる機能を、近日中に提供予定です。<br>
+SkyWayをご利用いただいていた方の中で、利用制限に達している方には個別連絡を実施しております。
+サポート、SLAが必要ない場合は、まずはCommunity Editionの利用をご検討ください。
 
-## マイグレーション時の注意点
-
-- SkyWayのSDKとECLWebRTCのSDKは相互接続できません
-
-- ECLWebRTCのSDKはECLWebRTC Community Edition / Enterprise Editionで発行したAPIキーのみ利用可能です
-
-## Community EditionからEnterprise Editionへ切り替えについて
-
-### APIキーの新規発行が必要
-
-Community EditionからEnterprise Editionへ切り替える場合は、APIキーの新規発行が必要となります。
-
-Enterprise Editionのポータル画面から新たにAPIキーの発行し、差し替えをお願いします。
-
-### 切り替えのタイミング
-
-Community Editionには利用制限が有ります（詳しくは[参考]）。利用制限に達しそうなお客さまには個別にご連絡いたします。
-
-サポート、SLAが必要ない場合は、まずはCommunity Editionへのマイグレーションをおすすめいたします。
-
-※SkyWayとECLWebRTCの機能比較はHTMLコメントで↓
-<!--
-||SkyWay|ECLWebRTC Community Edition|ECLWebRTC Enterprise Edition|
-|提供機能|シグナリング<BR>TURN<BR>SFU|シグナリング<BR>TURN<BR>SFU|シグナリング<BR>TURN<BR>SFU|
-|提供SDK|JavaScript<BR>iOS<BR>Android<BR>IoT|JavScript<BR>iOS<BR>Android<BR>IoT|JavScript<BR>iOS<BR>Android<BR>IoT|
-|APIキー認証機能|無し|有り|有り|
-|Room管理機能|JacaScript SDKのみ提供<BR>Multiparty Libraryを提供|有り|有り|
-|IE/Safari Plugin提供|有り|無し（Safari/Edgeへの正式対応を予定）|無し（Safari/Edgeへの正式対応を予定）|
-|画面共有|ScreenShare Libraryを提供|JavaScript SDKに同梱|JavaScript SDKに同梱|
-|利用制限|無し|月間のシグナリング回数、TURN/SFU利用回数に制限有り|有り|
-|SLA|無し|無し|有り|
-|サポート|コミュニティベース|コミュニティベース|コミュニティベース<BR>チケットサポート|
--->
