@@ -1,25 +1,22 @@
 ---
 layout: default
-title: Support
+title: サポート
 lang: ja
 ---
 
 # サポート
 
-## すべての開発者の方へ
+## ECLWebRTCをご利用中の方へ
 
-開発者同士の議論や情報交換、質問のためにTechnical Forumを提供しています。
-
-FAQで解決できない問題が生じた場合は、Technical Forumをご利用ください。
-
-（メモ：Technical Forumは以前のSkyWayのTechnical Forumとかぶる、Zendesk上はCommunityとなっているため、文言は要検討）
+開発に役立つコミュニティサポートやチケットサポートを提供しています。  
 
 <div class="row">
   <div class="col-sm-4 h-100">
     <div class="card h-100">
       <div class="card-block">
         <h3 class="card-title">FAQ</h3>
-        <p class="card-text">先生はゴーシュのかっこすきらで光輝がき野ねずみたます。そしていきなり同じたたという外ますた。</p>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">よくある質問や開発ノウハウをFAQとして公開しています<BR>困った場合はまず検索してみて下さい</p>
         <a href="#" class="btn btn-primary">FAQを確認</a>
       </div>
     </div>
@@ -28,30 +25,48 @@ FAQで解決できない問題が生じた場合は、Technical Forumをご利�
     <div class="card h-100">
       <div class="card-block">
         <h3 class="card-title">Technical Forum</h3>
-        <p class="card-text">先生はゴーシュのかっこすきらで光輝がき野ねずみたます。そしていきなり同じたたという外ますた。</p>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">FAQだけでは解決できない事がある場合<BR>開発者同士の議論や情報交換にご活用下さい</p>
         <a href="#" class="btn btn-primary">Technical Forumに参加</a>
       </div>
     </div>
   </div>
+    <div class="col-sm-4 h-100">
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">チケットサポート</h3>
+          <p class="card-text"><small class="text-muted">Enterprise Edition 限定</small></p>
+          <p class="card-text">ダッシュボードよりチケットを利用して開発に関する問い合わせが可能です<BR>詳しい利用方法は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html" target="_blank">「チケットシステムのご利用方法」</a>をご覧下さい</p>
+          <a href="#" class="btn btn-primary">ダッシュボードにログイン</a>
+        </div>
+      </div>
+    </div>
 </div>
 
-## Enterprise Edition契約者の方へxxxx
 
-ポータルに用意されたチケット機能を利用して、サポートセンターへ問合せが可能です。
+## Enterprise Editionのご利用を検討中の方へ
 
-本機能により、Enterprise Cloud 2.0における各種お問い合わせと故障申告の作成・更新・参照が可能です。
-
-また、添付ファイルを追加することも可能ですので、スクリーンショットやログファイルがある場合は、チケットに添付いただけます。
+Community EditionからEnterprise Editionへの移行や、新規利用に関する問い合わせはこちらをご利用下さい。
 
 <div class="row">
-  <div class="col-sm-4 h-100">
+  <div class="col-sm-6 h-100">
     <div class="card h-100">
       <div class="card-block">
-        <h3 class="card-title">Enterprise Edition</h3>
-        <p class="card-text">先生はゴーシュのかっこすきらで光輝がき野ねずみたます。そしていきなり同じたたという外ますた。</p>
-        <a href="#" class="btn btn-primary">ビジネスポータルにログイン</a>
+        <h3 class="card-title">契約に関するお問い合わせ</h3>
+        <p class="card-text">Webフォームまたは、お電話でお受けしています<BR>技術的な問い合わせはご遠慮ください</p>
+        <a href="#" class="btn btn-primary">資料請求・お問い合わせフォーム</a>
+        <a href="tel:0120106107"><img src="https://ecl.ntt.com/wp-content/uploads/2016/06/freedial.png"></a><br>
+        <small class="text-muted">※受付時間：9:30〜17:00（土日祝日を除く）</small>
       </div>
     </div>
   </div>
-</div>  
-
+  <div class="col-sm-6 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">技術的なお問い合わせ</h3>
+        <p class="card-text">Webフォームでお受けしています<BR>契約済みの方はチケットサポートをご利用下さい<BR>内容によりお答えできない場合もあります</p>
+        <a href="#" class="btn btn-primary">お問い合わせフォーム</a>
+      </div>
+    </div>
+  </div>
+</div>
