@@ -86,36 +86,45 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
       <th class="text-right">Enterprise Edition</th>
     </tr>
   </thead>
-    <tbody align="right">
-      <tr>
-        <th scope="row">基本料金</th>
-        <td>初期費用、月額費用とも¥0</td>
-        <td>初期費用¥0、月額費用¥100,000</td>
-      </tr>
-      <tr>
-        <th scope="row">シグナリング料金</th>
-        <td>499,999回までに制限</td>
-        <td>999,999回まで¥0<br>1,000,000回以上は¥100,000</td>
-      </tr>
-      <tr>
-        <th scope="row">TURN通信料金</th>
-        <td>499GBまでに制限</td>
-        <td>¥40/GB</td>
-      </tr>
-      <tr>
-        <th scope="row">SFU通信料金</th>
-        <td>499GBまでに制限</td>
-        <td>¥40/GB</td>
-      </tr>
-      <tr>
-        <th scope="row">サポート</th>
-        <td>FAQ、Technical Forum</td>
-        <td>ビジネスポータルよりサポートセンターに問い合わせ可</td>
-      </tr>
-      <tr>
-        <th scope="row">SLA</th>
-        <td>なし</td>
-        <td>稼働率99.99%保証</td>
+  <tbody align="right">
+    <tr>
+      <th scope="row">初期費用</th>
+      <td><span class="lead">¥0</span></td>
+      <td><span class="lead">¥0</span></td>
+    </tr>
+    <tr>
+      <th scope="row">月額基本料金</th>
+      <td><span class="lead">¥0</span></td>
+      <td><span class="lead">¥100,000</span></td>
+    </tr>
+    <tr>
+      <th scope="row">シグナリング料金</th>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">回数の上限あり</small></td>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">1,000,001回以上は追加料金</small></td>
+    </tr>
+    <tr>
+      <th scope="row">TURN通信料金</th>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">転送量の上限あり</small></td>
+      <td><span class="lead">¥40/GB</span></td>
+    </tr>
+    <tr>
+      <th scope="row">SFU通信料金</th>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">転送量の上限あり</small></td>
+      <td><span class="lead">¥40/GB</span></td>
+    </tr>
+    <tr>
+      <th scope="row">サポート</th>
+      <td>FAQ、Technical Forum</td>
+      <td>サポートセンターに問い合わせ可</td>
+    </tr>
+    <tr>
+      <th scope="row">SLA</th>
+      <td>なし</td>
+      <td>あり</td>
     </tr>
   </tbody>
 </table>
