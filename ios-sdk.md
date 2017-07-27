@@ -580,6 +580,40 @@ func updateUI(){
 
 [APIリファレンスを見る](#){: .btn .btn-primary}
 
+## サンプルコード
+
+サンプルコードを公開しています。
+
+<div class="card-deck">
+  <div class="card">
+    <div class="card-block">
+      <h5 class="card-title">1:1</h5>
+      <p class="card-text">
+        <a href="#" class="card-link">ビデオチャット</a>
+        <a href="#" class="card-link">テキストチャット</a>
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <h5 class="card-title">ルームAPIのフルメッシュモード</h5>
+      <p class="card-text">
+        <a href="#" class="card-link">ビデオチャット</a>
+        <a href="#" class="card-link">テキストチャット</a>
+      </p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <h5 class="card-title">ルームAPIのSFUモード</h5>
+      <p class="card-text">
+        <a href="#" class="card-link">ビデオチャット</a>
+        <a href="#" class="card-link">テキストチャット</a>
+      </p>
+    </div>
+  </div>
+</div>
+
 ## FAQ
 
 よくある質問や開発ノウハウをFAQとして公開しています。
