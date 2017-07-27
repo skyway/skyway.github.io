@@ -59,24 +59,22 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
   </div>
   <div class="card">
     <div class="card-block">
-      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
-      <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
+      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
+      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
     </div>
   </div>
   <div class="card">
     <div class="card-block">
-      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
-      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
+      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
+      <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
     </div>
   </div>
 </div>
 
 ## 価格
 
-オンラインでの新規登録で、すぐに利用可能です。
-世界中の開発者とともにあなたのイノベーションを始めましょう。    
 Community Editionは一切、料金がかかりません。
 Enterprise Editionは商用サービスや大規模サービスに安心してご利用いただけます。
 
@@ -84,45 +82,54 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   <thead>
     <tr>
       <th></th>
-      <th>Community Edition</th>
-      <th>Enterprise Edition</th>
+      <th class="text-right">Community Edition</th>
+      <th class="text-right">Enterprise Edition</th>
     </tr>
   </thead>
-    <tbody align="right">
-      <tr>
-        <th scope="row">基本料金</th>
-        <td>初期費用、月額費用とも¥0</td>
-        <td>初期費用¥0、月額費用¥100,000</td>
-      </tr>
-      <tr>
-        <th scope="row">シグナリング料金</th>
-        <td>499,999回までに制限</td>
-        <td>999,999回まで¥0<br>1,000,000回以上は¥100,000</td>
-      </tr>
-      <tr>
-        <th scope="row">TURN通信料金</th>
-        <td>499GBまでに制限</td>
-        <td>¥40/GB</td>
-      </tr>
-      <tr>
-        <th scope="row">SFU通信料金</th>
-        <td>499GBまでに制限</td>
-        <td>¥40/GB</td>
-      </tr>
-      <tr>
-        <th scope="row">サポート</th>
-        <td>FAQ、Technical Forum</td>
-        <td>ビジネスポータルよりサポートセンターに問い合わせ可</td>
-      </tr>
-      <tr>
-        <th scope="row">SLA</th>
-        <td>なし</td>
-        <td>稼働率99.99%保証</td>
+  <tbody align="right">
+    <tr>
+      <th scope="row">初期費用</th>
+      <td><span class="lead">¥0</span></td>
+      <td><span class="lead">¥0</span></td>
+    </tr>
+    <tr>
+      <th scope="row">月額基本料金</th>
+      <td><span class="lead">¥0</span></td>
+      <td><span class="lead">¥100,000</span></td>
+    </tr>
+    <tr>
+      <th scope="row">シグナリング料金</th>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">回数の上限あり</small></td>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">1,000,001回以上は追加料金</small></td>
+    </tr>
+    <tr>
+      <th scope="row">TURN通信料金</th>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">転送量の上限あり</small></td>
+      <td><span class="lead">¥40/GB</span></td>
+    </tr>
+    <tr>
+      <th scope="row">SFU通信料金</th>
+      <td><span class="lead">¥0</span><br>
+        <small class="text-muted">転送量の上限あり</small></td>
+      <td><span class="lead">¥40/GB</span></td>
+    </tr>
+    <tr>
+      <th scope="row">サポート</th>
+      <td>FAQ、Technical Forum</td>
+      <td>サポートセンターに問い合わせ可</td>
+    </tr>
+    <tr>
+      <th scope="row">SLA</th>
+      <td>なし</td>
+      <td>あり</td>
     </tr>
   </tbody>
 </table>
 
-詳細は[価格](pricing.md)をご覧ください。SLAについての詳細は[サービス説明書](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html)をご覧ください。
+料金の詳細は[価格](pricing.md)をご覧ください。SLAの詳細は[サービス説明書](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html)をご覧ください。
 
 ## デモ
 
