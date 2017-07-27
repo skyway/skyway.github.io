@@ -573,22 +573,26 @@ func updateUI(){
 
 ## SDKのダウンロード
 
-<a class="btn btn-primary" href="#" role="button">GitHub</a>
-<a class="btn btn-primary" href="#" role="button">ZIPでダウンロード</a>
+[developer.md](developer.md)を参考にして追記する。
+
+[ZIPでダウンロード](#){: .btn .btn-primary}
+[GitHubでクローン](#){: .btn .btn-secondary}
 
 ## APIリファレンス
 
-<a class="btn btn-primary" href="#" role="button">APIリファレンスを見る</a>
+[developer.md](developer.md)を参考にして追記する。
+
+[APIリファレンスを見る](#){: .btn .btn-primary}
 
 ## FAQ
 
-このテキストはサンプルです。
+よくある質問や開発ノウハウをFAQとして公開しています。
+困った場合はまず検索してみてください。
 
-<a class="btn btn-primary" href="https://support.skyway.io/hc/ja/sections/207320308-iOS-SDK" role="button">FAQを見る</a>
+[FAQを確認](https://support.skyway.io/hc/ja/sections/207320308-iOS-SDK){: .btn .btn-primary}
 
 ## Technical Forum
 
-このテキストはサンプルです。
-開発者同士の議論や情報交換、質問のためにコミュニティを提供しています。
+FAQだけでは解決できない事がある場合、開発者同士の議論や情報交換にご活用ください。
 
-<a class="btn btn-primary" href="https://support.skyway.io/hc/ja/community/topics/201688347-iOS-SDK" role="button">Technical Forumを見る</a>
+[Technical Forumに参加](https://support.skyway.io/hc/ja/community/topics/201688347-iOS-SDK){: .btn .btn-primary}
