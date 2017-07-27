@@ -82,8 +82,8 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   <thead>
     <tr>
       <th></th>
-      <th>Community Edition</th>
-      <th>Enterprise Edition</th>
+      <th class="text-right">Community Edition</th>
+      <th class="text-right">Enterprise Edition</th>
     </tr>
   </thead>
     <tbody align="right">
