@@ -33,7 +33,7 @@ lang: ja
         <h3 class="card-title">SkyWay</h3>
         <p class="card-text">節は百科文章を紛争引き文字ますあっ以下、信頼するれ事典で決議法慎重の推奨国内をしれてはするで。</p>
         <p><a href="#" class="btn btn-secondary">ダッシュボードにログイン</a></p>
-        <p>&nbsp;</p>
+        <p><a href="./migration.html">2018年3月31日に終了します</a></p>
       </div>
     </div>
   </div>
