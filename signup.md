@@ -29,7 +29,7 @@ lang: ja
     </div>
     <div class="figure-caption text-right">
       <a href="#">技術サポート</a>
-      <a href="#" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、ビジネスポータルから即時ご利用いただけます">ビジネスポータルにログイン</a>
+      <a href="#" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、即時ご利用いただけます">ビジネスポータルで新規登録</a>
     </div>
   </div>
 </div>
