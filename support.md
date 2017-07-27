@@ -55,7 +55,7 @@ Community EditionからEnterprise Editionへの移行や、新規利用に関す
         <h3 class="card-title">契約に関するお問い合わせ</h3>
         <p class="card-text">Webフォームまたは、お電話でお受けしています<BR>技術的な問い合わせはご遠慮ください</p>
         <a href="#" class="btn btn-primary">資料請求・お問い合わせフォーム</a>
-        <a href="tel:0120106107"><img src="https://ecl.ntt.com/wp-content/uploads/2016/06/freedial.png"></a><br>
+        <a href="tel:0120106107"><img src="{{ site.rootdir[page.lang] }}images/freedial.png"></a><br>
         <small class="text-muted">※受付時間：9:30〜17:00（土日祝日を除く）</small>
       </div>
     </div>
