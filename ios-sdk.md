@@ -49,8 +49,10 @@ PeerOption options = new PeerOption();
 options.key = "XXXXXXXXXXXXXXXXXXXXX"; // 各自で取得したAPIキーを設定
 options.domain = "localhost";
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 //APIキー、ドメインを設定
 SKWPeerOption* option = [[SKWPeerOption alloc] init];
@@ -58,7 +60,10 @@ option.key = @"";
 option.domain = @"";
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 //APIキー、ドメインを設定
 let option: SKWPeerOption = SKWPeerOption.init();
@@ -75,14 +80,19 @@ java
 // Peerオブジェクトのインスタンスを生成
 _peer = new Peer(context, options);
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 // Peerオブジェクトのインスタンスを生成
 _peer = [[SKWPeer alloc] initWithOptions:option];
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 // Peerオブジェクトのインスタンスを生成
 _peer = SKWPeer.init(options: option);
@@ -109,8 +119,10 @@ _peer.on(Peer.PeerEventEnum.ERROR, new OnCallback() {
   }
 });
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 //コールバックを登録（ERROR)
     [_peer on:SKW_PEER_EVENT_ERROR callback:^(NSObject* obj)
@@ -120,7 +132,10 @@ Objective-C
      }];
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 //コールバックを登録（ERROR)
     _peer?.on(SKWPeerEventEnum.PEER_EVENT_ERROR,callback:{ (obj: NSObject!) -> Void in
@@ -152,8 +167,10 @@ _peer.on(Peer.PeerEventEnum.OPEN, new OnCallback() {
   }
 });
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 // コールバックを登録(OPEN)
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj)
@@ -166,7 +183,10 @@ Objective-C
 }];
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 // コールバックを登録(OPEN)
     _peer?.on(SKWPeerEventEnum.PEER_EVENT_OPEN,callback:{ (obj: NSObject!) -> Void in
@@ -189,13 +209,15 @@ Java
 Navigator.initialize(_peer);
 MediaConstraints constraints = new MediaConstraints();
 _msLocal = Navigator.getUserMedia(constraints);
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
 // 映像を表示する為のUI
 Canvas canvas = (Canvas) findViewById(R.id.svSecondary);
 canvas.addSrc(_msLocal, 0);
 ```
 
-Objective-C
 ```objc
 //メディアを取得
 [SKWNavigator initialize:_peer];
@@ -207,7 +229,10 @@ SKWVideo* localVideoView = [self.view viewWithTag:TAG_LOCAL_VIDEO];
 [localVideoView addSrc:_msLocal track:0];
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 //メディアを取得
 SKWNavigator.initialize(_peer);
@@ -240,8 +265,10 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback(){
   }
 });
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 //コールバックを登録（CALL)
 [_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj)
@@ -254,7 +281,10 @@ Objective-C
  }];
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 //コールバックを登録（CALL)
 _peer?.on(SKWPeerEventEnum.PEER_EVENT_CALL, callback: { (obj:NSObject!) -> Void in
@@ -297,8 +327,10 @@ private void setMediaCallback(MediaConnection media){
   });
 }
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 - (void)setMediaCallbacks:(SKWMediaConnection *)media
 {
@@ -337,7 +369,10 @@ Objective-C
 }
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 func setMediaCallbacks(media:SKWMediaConnection){
     
@@ -408,8 +443,10 @@ private void getPeerList(){
   });
 }
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 //接続相手を選択する
 - (void)getPeerList
@@ -440,7 +477,10 @@ Objective-C
 }
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 func getPeerList(){
         if (_peer == nil) || (_id == nil) || (_id?.characters.count == 0) {
@@ -477,6 +517,9 @@ private void call(String strPeerId){
     setMediaCallback(_media);
     _bEstablished = true;
   }
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
   updateUI();
 }
@@ -492,7 +535,6 @@ private void close(){
 }
 ```
 
-Objective-C
 ```objc
 - (void)call:(NSString *)strDestId
 {
@@ -532,7 +574,10 @@ Objective-C
 }
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```
 //ビデオ通話を開始する
 func call(strDestId: String) {
@@ -583,8 +628,10 @@ btnAction.setOnClickListener(new View.OnClickListener(){
   }
 });
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 略
 UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -617,7 +664,10 @@ UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 }
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 //ボタンはstoryboardで設定
 
@@ -660,8 +710,10 @@ private void updateUI() {
   });
 }
 ```
+{:refdef: .lang}
+*Objective-C*
+{: refdef}
 
-Objective-C
 ```objc
 -(void)updateUI{
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -691,7 +743,10 @@ Objective-C
 }
 ```
 
-Swift
+{:refdef: .lang}
+*Swift*
+{: refdef}
+
 ```swift
 func updateUI(){
     dispatch_async(dispatch_get_main_queue()) { () -> Void in
