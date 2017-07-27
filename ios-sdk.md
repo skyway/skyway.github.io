@@ -566,18 +566,21 @@ func updateUI(){
 
 ## SDKのダウンロード
 
-<a class="btn btn-primary" href="#" role="button">ダウンロード</a>
+<a class="btn btn-primary" href="#" role="button">GitHub</a>
+<a class="btn btn-primary" href="#" role="button">ZIPでダウンロード</a>
 
 ## APIリファレンス
 
 <a class="btn btn-primary" href="#" role="button">APIリファレンスを見る</a>
 
 ## FAQ
+
 このテキストはサンプルです。
 
 <a class="btn btn-primary" href="https://support.skyway.io/hc/ja/sections/207320308-iOS-SDK" role="button">FAQを見る</a>
 
 ## Technical Forum
+
 このテキストはサンプルです。
 開発者同士の議論や情報交換、質問のためにコミュニティを提供しています。
 
