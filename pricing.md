@@ -273,7 +273,7 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
   <div class="card">
     <div class="card-block">
     <h3 class="card-title">Enterprise Edition</h3>
-    <p class="card-text">大規模サービス向け<br>価値を広い世界へ拡げ、社会的変化を起こそう</p>
+    <p class="card-text">大規模サービス向け<br>スケーラビリティと安定性を手に入れ、価値を世界に届けよう</p>
     <a href="#" class="btn btn-outline-primary">Contact Us</a>
     </div>
   </div>
