@@ -59,16 +59,16 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
   </div>
   <div class="card">
     <div class="card-block">
-      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
-      <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
+      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
+      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
     </div>
   </div>
   <div class="card">
     <div class="card-block">
-      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
-      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
+      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
+      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
+      <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
     </div>
   </div>
 </div>
