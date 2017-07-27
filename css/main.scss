@@ -49,22 +49,32 @@ body {
   table {
     @extend .table;
   }
-}
 
-.card-group {
-  margin-bottom: $spacer; // .table と同じ
-}
+  .card-group {
+    margin-bottom: $spacer; // .table と同じ
+  }
 
-// Typography
+  .lang { // Sprint3 で真面目に書く
+    background-color: #f8f8f8;
+    margin-bottom: 0;
 
-#main > h2:not(:first-child) {
-  margin-top: 3rem;
-}
+    em {
+      font-style: normal;
+      background: #dddddd;
+      display: inline-block;
+      padding: 0 .5em;
+    }
+  }
 
-#main > h3:not(:first-child) {
-  margin-top: 1.5rem;
-}
+  h2:not(:first-child) {
+    margin-top: 3rem;
+  }
 
-.jumbotron span, .card span {
+  h3, h4, h5, h6 {
+    margin-top: 1.5rem;
+  }
+
+  .jumbotron span, .card span {
     @extend .text-nowrap;
+  }
 }
