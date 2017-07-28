@@ -11,7 +11,7 @@ lang: ja
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Community Edition</h3>
-        <p class="card-text">私も今朝しかるにそうした享有論ってのの後を尊ぶただ。もっと時間に関係学はおもにこのお尋ねだんまで。</p>
+        <p class="card-text">個人開発者、スタートアップ向け</p>
         <p><a href="#" class="btn btn-primary">ダッシュボードにログイン</a></p>
         <p><a href="#">新規登録</a></p>
       </div>
@@ -21,7 +21,7 @@ lang: ja
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Enterprise Edition</h3>
-        <p class="card-text">先生はゴーシュのかっこすきらで光輝がき野ねずみたます。そしていきなり同じたたという外ますた。</p>
+        <p class="card-text">大規模サービス向け</p>
         <p><a href="#" class="btn btn-secondary">ビジネスポータルにログイン</a></p>
         <p><a href="#">新規登録</a></p>
       </div>

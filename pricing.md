@@ -29,8 +29,8 @@ Community Editionは一切、料金がかかりません。
   <thead>
     <tr>
       <th></th>
-      <th>Community Edition</th>
-      <th>Enterprise Edition</th>
+      <th class="text-right">Community Edition</th>
+      <th class="text-right">Enterprise Edition</th>
     </tr>
   </thead>
     <tbody align="right">
@@ -64,8 +64,8 @@ Community Editionは一切、料金がかかりません。
   <tr>
     <th></th>
     <th>接続回数</th>
-    <th>Community Edition</th>
-    <th>Enterprise Edition</th>
+    <th class="text-right">Community Edition</th>
+    <th class="text-right">Enterprise Edition</th>
   </tr>
 </thead>
 <tbody align="right">
@@ -109,8 +109,8 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
   <tr>
     <th></th>
     <th>通信量</th>
-    <th>Community Edition</th>
-    <th>Enterprise Edition</th>
+    <th class="text-right">Community Edition</th>
+    <th class="text-right">Enterprise Edition</th>
   </tr>
 </thead>
 <tbody align="right">
@@ -261,24 +261,21 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
 
 <div class="row">
   <div class="col-sm-6">
-    <div class="card">
-      <div class="card-block">
-        <h3 class="card-title">Community Edition</h3>
-        <p class="card-text">個人開発者、スタートアップ向け<br>新規サービスの創造により新しい体験と価値を提供しよう</p>
-        <a href="#" class="btn btn-primary">無料で新規登録</a>
-      </div>
+  <div class="card">
+    <div class="card-block">
+      <h3 class="card-title">Community Edition</h3>
+      <p class="card-text">個人開発者、スタートアップ向け<br>新規サービスの創造により新しい体験と価値を提供しよう</p>
+      <a href="#" class="btn btn-primary">無料で新規登録</a>
     </div>
+  </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Enterprise Edition</h3>
         <p class="card-text">大規模サービス向け<br>スケーラビリティと安定性を手に入れ、価値を世界に届けよう</p>
-        <a href="#" class="btn btn-outline-primary">問合せ</a>
+        <a href="./contactus.html" class="btn btn-outline-primary">お問い合わせ</a>
       </div>
-    </div>
-    <div class="figure-caption text-right">
-      <a href="#" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、即時ご利用いただけます">ビジネスポータルで新規登録</a>
     </div>
   </div>
 </div>
