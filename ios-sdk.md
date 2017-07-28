@@ -1,12 +1,16 @@
 ---
-layout: default
+layout: rightnav
 title: iOS SDK
 lang: ja
 ---
 
+- TOC
+{:toc}
+
 # iOS SDK
 
 ## チュートリアル
+{: #tutorial }
 
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
@@ -45,9 +49,8 @@ MediaActivity.javaを開く。
 APIキーを各自 https://skyway.io/ds から取得したものを設定。
 利用可能ドメインは localhost に設定。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //APIキー、ドメインを設定
@@ -56,9 +59,8 @@ option.key = @"";
 option.domain = @"";
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //APIキー、ドメインを設定
@@ -71,18 +73,16 @@ Peerオブジェクトの生成します。
 Peerクラスは、SkyWayが提供するシグナリングのためのクラス。
 Peerオブジェクトを生成し、シグナリングサーバに接続する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 // Peerオブジェクトのインスタンスを生成
 _peer = [[SKWPeer alloc] initWithOptions:option];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 // Peerオブジェクトのインスタンスを生成
@@ -99,9 +99,8 @@ APIキーが間違っている。
 ドメインが登録されていない　など。
 
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //コールバックを登録（ERROR)
@@ -112,9 +111,8 @@ APIキーが間違っている。
      }];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //コールバックを登録（ERROR)
@@ -128,9 +126,8 @@ APIキーが間違っている。
 自分のピアIDがコールバックの引数に渡されてくる。
 自分のピアIDを画面に表示する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 // コールバックを登録(OPEN)
@@ -144,9 +141,8 @@ APIキーが間違っている。
 }];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 // コールバックを登録(OPEN)
@@ -164,9 +160,8 @@ APIキーが間違っている。
 Navigator.getUserMediaで、カメラの映像が取得できる。
 Canvasにセットする。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //メディアを取得
@@ -179,9 +174,8 @@ SKWVideo* localVideoView = [self.view viewWithTag:TAG_LOCAL_VIDEO];
 [localVideoView addSrc:_msLocal track:0];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //メディアを取得
@@ -200,9 +194,8 @@ localVideoView.addSrc(_msLocal, track: 0)
 相手に自分のメディア情報を回答。
 相手とのP2Pコネクションで発生するイベントのコールバックを登録。
   
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //コールバックを登録（CALL)
@@ -216,9 +209,8 @@ localVideoView.addSrc(_msLocal, track: 0)
  }];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //コールバックを登録（CALL)
@@ -234,9 +226,8 @@ P2Pコネクションのコールバック処理。
 映像を受信した場合(STREAM)、映像をUIに表示。
 コネクションが切断された場合、映像を削除。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 - (void)setMediaCallbacks:(SKWMediaConnection *)media
@@ -276,9 +267,8 @@ P2Pコネクションのコールバック処理。
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 func setMediaCallbacks(media:SKWMediaConnection){
@@ -316,9 +306,8 @@ func setMediaCallbacks(media:SKWMediaConnection){
 相手へビデオ通話をかける。
 サーバに接続しているピアの一覧を取得する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //接続相手を選択する
@@ -350,9 +339,8 @@ func setMediaCallbacks(media:SKWMediaConnection){
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 func getPeerList(){
@@ -379,9 +367,8 @@ func getPeerList(){
 
 通話したい相手を選んで、ビデオ通話発信する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 - (void)call:(NSString *)strDestId
@@ -422,9 +409,8 @@ func getPeerList(){
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```
 //ビデオ通話を開始する
@@ -457,9 +443,8 @@ func closeChat(){
 
 UIの初期化。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 略
@@ -493,9 +478,8 @@ UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //ボタンはstoryboardで設定
@@ -511,9 +495,8 @@ UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 
 UIの更新。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 -(void)updateUI{
@@ -544,9 +527,8 @@ UIの更新。
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 func updateUI(){
@@ -581,48 +563,62 @@ func updateUI(){
 [APIリファレンスを見る](#){: .btn .btn-primary}
 
 ## サンプルコード
+{: #sample-code }
 
 サンプルコードを公開しています。
 
-<div class="card-deck">
-  <div class="card">
-    <div class="card-block">
-      <h5 class="card-title">1:1</h5>
-      <p class="card-text">
-        <a href="#" class="card-link">ビデオチャット</a>
-        <a href="#" class="card-link">テキストチャット</a>
-      </p>
+<table class="table w-75">
+  <tbody align="right">
+    <tr>
+      <th scope="row">1対1、P2P</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+    <tr>
+      <th scope="row">多人数、P2P</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+    <tr>
+      <th scope="row">多人数、SFU</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+  </tbody>
+</table>
+
+## サポート
+{: #support }
+
+<div class="row">
+  <div class="col-sm-4 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">FAQ</h3>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">よくある質問や開発ノウハウをFAQとして公開しています<BR>困った場合はまず検索してみて下さい</p>
+        <a href="#" class="btn btn-primary">FAQを確認</a>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-block">
-      <h5 class="card-title">ルームAPIのフルメッシュモード</h5>
-      <p class="card-text">
-        <a href="#" class="card-link">ビデオチャット</a>
-        <a href="#" class="card-link">テキストチャット</a>
-      </p>
+  <div class="col-sm-4 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">Technical Forum</h3>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">FAQだけでは解決できない事がある場合<BR>開発者同士の議論や情報交換にご活用下さい</p>
+        <a href="#" class="btn btn-primary">Technical Forumに参加</a>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-block">
-      <h5 class="card-title">ルームAPIのSFUモード</h5>
-      <p class="card-text">
-        <a href="#" class="card-link">ビデオチャット</a>
-        <a href="#" class="card-link">テキストチャット</a>
-      </p>
+    <div class="col-sm-4 h-100">
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">チケットサポート</h3>
+          <p class="card-text"><small class="text-muted">Enterprise Edition 限定</small></p>
+          <p class="card-text">ダッシュボードよりチケットを利用して開発に関する問い合わせが可能です<BR>詳しい利用方法は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html" target="_blank">「チケットシステムのご利用方法」</a>をご覧下さい</p>
+          <a href="#" class="btn btn-primary">ダッシュボードにログイン</a>
+        </div>
+      </div>
     </div>
-  </div>
 </div>
-
-## FAQ
-
-よくある質問や開発ノウハウをFAQとして公開しています。
-困った場合はまず検索してみてください。
-
-[FAQを確認](https://support.skyway.io/hc/ja/sections/207320308-iOS-SDK){: .btn .btn-primary}
-
-## Technical Forum
-
-FAQだけでは解決できない事がある場合、開発者同士の議論や情報交換にご活用ください。
-
-[Technical Forumに参加](https://support.skyway.io/hc/ja/community/topics/201688347-iOS-SDK){: .btn .btn-primary}
