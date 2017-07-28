@@ -87,14 +87,20 @@ body {
 
 #rightnav-wrapper {
   position: relative;
-}
 
-#rightnav {
-  position: fixed;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
-  left: auto;
+  #rightnav {
+    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+    left: auto;
+
+    .nav-link.active {
+      border-left: .4em solid $blue;
+      padding: 0 1em 0 .6em;
+      margin: .5em 0;
+    }
+  }
 }
 
 // Footer
