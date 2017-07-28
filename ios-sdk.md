@@ -567,35 +567,25 @@ func updateUI(){
 
 サンプルコードを公開しています。
 
-<div class="card-deck">
-  <div class="card">
-    <div class="card-block">
-      <h5 class="card-title">1:1</h5>
-      <p class="card-text">
-        <a href="#" class="card-link">ビデオチャット</a>
-        <a href="#" class="card-link">テキストチャット</a>
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h5 class="card-title">ルームAPIのフルメッシュモード</h5>
-      <p class="card-text">
-        <a href="#" class="card-link">ビデオチャット</a>
-        <a href="#" class="card-link">テキストチャット</a>
-      </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-block">
-      <h5 class="card-title">ルームAPIのSFUモード</h5>
-      <p class="card-text">
-        <a href="#" class="card-link">ビデオチャット</a>
-        <a href="#" class="card-link">テキストチャット</a>
-      </p>
-    </div>
-  </div>
-</div>
+<table class="table w-75">
+  <tbody align="right">
+    <tr>
+      <th scope="row">1対1、P2P</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+    <tr>
+      <th scope="row">多人数、P2P</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+    <tr>
+      <th scope="row">多人数、SFU</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## FAQ
 
