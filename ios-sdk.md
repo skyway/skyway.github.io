@@ -49,9 +49,8 @@ MediaActivity.javaを開く。
 APIキーを各自 https://skyway.io/ds から取得したものを設定。
 利用可能ドメインは localhost に設定。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //APIキー、ドメインを設定
@@ -60,9 +59,8 @@ option.key = @"";
 option.domain = @"";
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //APIキー、ドメインを設定
@@ -75,18 +73,16 @@ Peerオブジェクトの生成します。
 Peerクラスは、SkyWayが提供するシグナリングのためのクラス。
 Peerオブジェクトを生成し、シグナリングサーバに接続する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 // Peerオブジェクトのインスタンスを生成
 _peer = [[SKWPeer alloc] initWithOptions:option];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 // Peerオブジェクトのインスタンスを生成
@@ -103,9 +99,8 @@ APIキーが間違っている。
 ドメインが登録されていない　など。
 
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //コールバックを登録（ERROR)
@@ -116,9 +111,8 @@ APIキーが間違っている。
      }];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //コールバックを登録（ERROR)
@@ -132,9 +126,8 @@ APIキーが間違っている。
 自分のピアIDがコールバックの引数に渡されてくる。
 自分のピアIDを画面に表示する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 // コールバックを登録(OPEN)
@@ -148,9 +141,8 @@ APIキーが間違っている。
 }];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 // コールバックを登録(OPEN)
@@ -168,9 +160,8 @@ APIキーが間違っている。
 Navigator.getUserMediaで、カメラの映像が取得できる。
 Canvasにセットする。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //メディアを取得
@@ -183,9 +174,8 @@ SKWVideo* localVideoView = [self.view viewWithTag:TAG_LOCAL_VIDEO];
 [localVideoView addSrc:_msLocal track:0];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //メディアを取得
@@ -204,9 +194,8 @@ localVideoView.addSrc(_msLocal, track: 0)
 相手に自分のメディア情報を回答。
 相手とのP2Pコネクションで発生するイベントのコールバックを登録。
   
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //コールバックを登録（CALL)
@@ -220,9 +209,8 @@ localVideoView.addSrc(_msLocal, track: 0)
  }];
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //コールバックを登録（CALL)
@@ -238,9 +226,8 @@ P2Pコネクションのコールバック処理。
 映像を受信した場合(STREAM)、映像をUIに表示。
 コネクションが切断された場合、映像を削除。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 - (void)setMediaCallbacks:(SKWMediaConnection *)media
@@ -280,9 +267,8 @@ P2Pコネクションのコールバック処理。
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 func setMediaCallbacks(media:SKWMediaConnection){
@@ -320,9 +306,8 @@ func setMediaCallbacks(media:SKWMediaConnection){
 相手へビデオ通話をかける。
 サーバに接続しているピアの一覧を取得する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 //接続相手を選択する
@@ -354,9 +339,8 @@ func setMediaCallbacks(media:SKWMediaConnection){
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 func getPeerList(){
@@ -383,9 +367,8 @@ func getPeerList(){
 
 通話したい相手を選んで、ビデオ通話発信する。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 - (void)call:(NSString *)strDestId
@@ -426,9 +409,8 @@ func getPeerList(){
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```
 //ビデオ通話を開始する
@@ -461,9 +443,8 @@ func closeChat(){
 
 UIの初期化。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 略
@@ -497,9 +478,8 @@ UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 //ボタンはstoryboardで設定
@@ -515,9 +495,8 @@ UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 
 UIの更新。
 
-{:refdef: .lang}
 *Objective-C*
-{: refdef}
+{: .lang}
 
 ```objc
 -(void)updateUI{
@@ -548,9 +527,8 @@ UIの更新。
 }
 ```
 
-{:refdef: .lang}
 *Swift*
-{: refdef}
+{: .lang}
 
 ```swift
 func updateUI(){
