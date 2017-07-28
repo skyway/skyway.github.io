@@ -54,14 +54,29 @@
 
         </ul>
         <ul class="nav navbar-nav mr-0">
-          <li class="nav-item dropdown">
-            {% include lang.html %}
+
+          {% if page.title == 'Sign Up' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="signup.html">Sign up</a>
           </li>
+          {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="signup.html">Signup</a>
+            <a class="nav-link" href="signup.html">Sign up</a>
           </li>
+          {% endif %}
+
+          {% if page.title == 'Dashboard' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          {% else %}
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
+          </li>
+          {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.rootdir[page.lang] }}{{ site.homedir['ja'] }}{{ page.path | remove_first: 'en/' | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">日本語</a>
           </li>
         </ul>
       </div>

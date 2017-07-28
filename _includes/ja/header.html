@@ -50,27 +50,29 @@
 
         </ul>
         <ul class="nav navbar-nav mr-0">
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuSignup" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              新規登録
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuSignup">
-              <a class="dropdown-item" href="signup.html">Community Edition</a>
-              <a class="dropdown-item" href="signup.html">Enterprise Edition</a>
-            </div>
+
+          {% if page.title == '新規登録' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="signup.html">新規登録</a>
           </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuDashboard" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ダッシュボード
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuDashboard">
-              <a class="dropdown-item" href="login.html">Community Edition</a>
-              <a class="dropdown-item" href="login.html">Enterprise Edition</a>
-              <a class="dropdown-item" href="login.html">SkyWay</a>
-            </div>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">新規登録</a>
           </li>
-          <li class="nav-item dropdown">
-            {% include lang.html %}
+          {% endif %}
+
+          {% if page.title == 'ダッシュボード' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">ダッシュボード</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">ダッシュボード</a>
+          </li>
+          {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.rootdir[page.lang] }}{{ site.homedir['en'] }}{{ page.path | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">English</a>
           </li>
         </ul>
       </div>
