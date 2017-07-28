@@ -20,16 +20,12 @@ lang: ja
   </div>
   </div>
   <div class="col-sm-6">
-    <div class="card figure">
+    <div class="card">
       <div class="card-block">
         <h3 class="card-title">Enterprise Edition</h3>
         <p class="card-text">大規模サービス向け<br>スケーラビリティと安定性を手に入れ、価値を世界に届けよう</p>
-        <a href="#" class="btn btn-outline-primary">契約に関する問合せ</a>
+        <a href="./contactus.html" class="btn btn-outline-primary">お問い合わせ</a>
       </div>
-    </div>
-    <div class="figure-caption text-right">
-      <a href="#">技術サポート</a>
-      <a href="#" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、即時ご利用いただけます">ビジネスポータルで新規登録</a>
     </div>
   </div>
 </div>
