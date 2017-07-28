@@ -587,15 +587,38 @@ func updateUI(){
   </tbody>
 </table>
 
-## FAQ
+## サポート
+{: #support }
 
-よくある質問や開発ノウハウをFAQとして公開しています。
-困った場合はまず検索してみてください。
-
-[FAQを確認](https://support.skyway.io/hc/ja/sections/207320308-iOS-SDK){: .btn .btn-primary}
-
-## Technical Forum
-
-FAQだけでは解決できない事がある場合、開発者同士の議論や情報交換にご活用ください。
-
-[Technical Forumに参加](https://support.skyway.io/hc/ja/community/topics/201688347-iOS-SDK){: .btn .btn-primary}
+<div class="row">
+  <div class="col-sm-4 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">FAQ</h3>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">よくある質問や開発ノウハウをFAQとして公開しています<BR>困った場合はまず検索してみて下さい</p>
+        <a href="#" class="btn btn-primary">FAQを確認</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">Technical Forum</h3>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">FAQだけでは解決できない事がある場合<BR>開発者同士の議論や情報交換にご活用下さい</p>
+        <a href="#" class="btn btn-primary">Technical Forumに参加</a>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-4 h-100">
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">チケットサポート</h3>
+          <p class="card-text"><small class="text-muted">Enterprise Edition 限定</small></p>
+          <p class="card-text">ダッシュボードよりチケットを利用して開発に関する問い合わせが可能です<BR>詳しい利用方法は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html" target="_blank">「チケットシステムのご利用方法」</a>をご覧下さい</p>
+          <a href="#" class="btn btn-primary">ダッシュボードにログイン</a>
+        </div>
+      </div>
+    </div>
+</div>
