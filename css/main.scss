@@ -8,7 +8,7 @@
 
 // Sticky Footer
 
-$footer-height: 220px;
+$footer-height: 500px;
 
 html {
   position: relative;
@@ -76,5 +76,13 @@ body {
 
   .jumbotron span, .card span {
     @extend .text-nowrap;
+  }
+}
+
+// Footer
+
+footer {
+  hr {
+    border-top: 1px solid rgba($white, .2);
   }
 }
