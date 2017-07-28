@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Developer
+title: デベロッパー
 lang: ja
 ---
 
 <div class="jumbotron">
-  <img src="http://via.placeholder.com/500x200?text=Main+Image">
-  <h1>リアルタイムにつながるアプリを作ろう</h1>
-  <p class="lead">リアルタイムコミュニケーションの民主化を進め、世界中の開発者とともにイノベーションを起こす。</p>
+  <h1 class="display-4">あなたのアイディアを形にしよう</h1>
+  <p class="lead">マルチプラットフォームに対応するSDKや実践的なチュートリアル、豊富なサンプルコードを用意、あなたのアイディアをすぐに形にできます</p>
+  <p class="lead">
+  </p>
 </div>
 
 ## Get Started
@@ -20,52 +21,54 @@ lang: ja
 ~/my-awesome-site $ jekyll serve
 ```
 
-## SDKs
+## SDK
+
+Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDKを用意しています。
 
 <div class="container">
     <div class="row">
         <div class="col">
             <div class="list-group">
                 <a href="./js-sdk.html" class="list-group-item active">
-                JavaScript SDK
+               <i class="fa fa-television fa-fw fa-3x" aria-hidden="true"></i> JavaScript SDK
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">Tutorial</a>
-                <a href="#" class="list-group-item list-group-item-action">SDK DL</a>
-                <a href="#" class="list-group-item list-group-item-action">API Rererence</a>
-                <a href="#" class="list-group-item list-group-item-action">Sample Code</a>
+                <a href="#" class="list-group-item list-group-item-action">チュートリアル</a>
+                <a href="#" class="list-group-item list-group-item-action">SDKダウンロード</a>
+                <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+                <a href="#" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
         <div class="col">
             <div class="list-group">
                 <a href="./ios-sdk.html" class="list-group-item active">
-                iOS SDK
+                <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i> iOS SDK
                 </a>
-                <a href="ios-sdk.html" class="list-group-item list-group-item-action">Tutorial</a>
-                <a href="#" class="list-group-item list-group-item-action">SDK DL</a>
-                <a href="#" class="list-group-item list-group-item-action">API Rererence</a>
-                <a href="#" class="list-group-item list-group-item-action">Sample Code</a>
+                <a href="ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+                <a href="#" class="list-group-item list-group-item-action">SDKダウンロード</a>
+                <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+                <a href="#" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
         <div class="col">
             <div class="list-group">
                 <a href="./android-sdk.html" class="list-group-item active">
-                Android SDK
+                <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i> Android SDK
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">Tutorial</a>
-                <a href="#" class="list-group-item list-group-item-action">SDK DL</a>
-                <a href="#" class="list-group-item list-group-item-action">API Rererence</a>
-                <a href="#" class="list-group-item list-group-item-action">Sample Code</a>
+                <a href="#" class="list-group-item list-group-item-action">チュートリアル</a>
+                <a href="#" class="list-group-item list-group-item-action">SDKダウンロード</a>
+                <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+                <a href="#" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
         <div class="col">
             <div class="list-group">
-                <a href="#" class="list-group-item active">
-                IoT SDK
+                <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="list-group-item active">
+                  <i class="fa fa-microchip fa-fw fa-3x" aria-hidden="true"></i> IoT SDK β version
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">Tutorial</a>
-                <a href="#" class="list-group-item list-group-item-action">SDK DL</a>
-                <a href="#" class="list-group-item list-group-item-action">API Rererence</a>
-                <a href="#" class="list-group-item list-group-item-action">Sample Code</a>
+                <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_install.md" target="_blank" class="list-group-item list-group-item-action">インストール</a>
+                <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_use_sample_app.md" target="_blank" class="list-group-item list-group-item-action">利用手順</a>
+                <a href="https://github.com/nttcom/skyway-iot-sdk/tree/master/docs/apiref" target="_blank" class="list-group-item list-group-item-action">APIリファレンス</a>
+                <a href="https://github.com/nttcom/skyway-siru-sample" target="_blank" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
     </div>
@@ -73,33 +76,33 @@ lang: ja
 
 
 
-## Features 
+## すべての機能 
 
 <div class="row">
     <div class="col-sm-4">
         <div class="card">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
-                <h3 class="card-title">Peer to Peer</h3>
-                <p class="card-text">media channelもdata channelも使えるよ</p>
+                <h3 class="card-title">Media & Data</h3>
+                <p class="card-text">提供するSDKではメディアチャンネル・データチャンネルを利用可能</p>
             </div>
         </div>
     </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+            <div class="card-block">
+                <h3 class="card-title">シグナリング</h3>
+                <p class="card-text">IPアドレスやコーデック等の情報を相手と交換する為のサーバ、多人数通話に便利なRoom管理機能を備える</p>
+            </div>
+        </div>
+    </div>    
     <div class="col-sm-4">
         <div class="card">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">STUN</h3>
-                <p class="card-text">無料で提供中。Public IPアドレスとポート番号の確認</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="card">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
-            <div class="card-block">
-                <h3 class="card-title">Signaling</h3>
-                <p class="card-text">IPアドレスの交換やコーデック等の通信パラメータの合意</p>
+                <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<BR></p>
             </div>
         </div>
     </div>
@@ -110,9 +113,19 @@ lang: ja
         <div class="card">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
+                <h3 class="card-title">認証</h3>
+                <p class="card-text">APIキーの不正利用を防止するための認証機能を提供</p>
+                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-primary">利用方法(Github)</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+            <div class="card-block">
                 <h3 class="card-title">TURN</h3>
-                <p class="card-text">このテキストはサンプルです。</p>
-                <a href="#" class="btn btn-primary">料金</a>
+                <p class="card-text">Peer to Peerで通信が確立できない環境にメディアを中継するサーバを提供</p>
+                <a href="./pricing.html#サーバ通信料" class="btn btn-primary">料金</a>
             </div>
         </div>
     </div>
@@ -121,19 +134,22 @@ lang: ja
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">SFU</h3>
-                <p class="card-text">このテキストはサンプルです。</p>
+                <p class="card-text">多人数通話や配信を実現する、映像・音声送信を代行するメディアサーバを提供</p>
                 <a href="#" class="btn btn-primary">料金</a>
                 <a href="#" class="btn btn-primary">説明</a>
             </div>
         </div>
     </div>
+</div>
+<br>
+<div class="row">
     <div class="col-sm-4">
         <div class="card">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
-                <h3 class="card-title">認証</h3>
-                <p class="card-text">このテキストはサンプルです。</p>
-                <a href="#" class="btn btn-primary">sample code</a>
+                <h3 class="card-title">画面共有</h3>
+                <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
+                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-primary">利用方法(Github)</a>
             </div>
         </div>
     </div>
