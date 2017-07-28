@@ -79,6 +79,24 @@ body {
   }
 }
 
+// right nav
+
+#markdown-toc {
+  display: none;
+}
+
+#rightnav-wrapper {
+  position: relative;
+}
+
+#rightnav {
+  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  left: auto;
+}
+
 // Footer
 
 footer {
