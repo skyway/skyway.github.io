@@ -1,64 +1,51 @@
 ---
-layout: default
+layout: rightnav
 title: JavaScript SDK
 lang: ja
 ---
 
+- TOC
+{:toc}
+
 # JavaScript SDK
 
 ## チュートリアル
+{: #tutorial }
 
-<!-- http://qiita.com/yusuke84/items/54dce88f9e896903e64f より -->
+JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
+通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
+[完成したアプリのデモ](tbd)を試すことができます。
 
-### 作るもの
+<figure class="figure">
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
+  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+</figure>
 
-本編で作成する最終的なアプリのデモをお見せします。
+<figure class="figure">
+  <img src="http://via.placeholder.com/250x350" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
+  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+</figure>
 
-- https://skyway.github.io/skyway-handson-js/
+### 開発前の準備
 
-### STEP0 SkyWayの開発者登録をしてみよう
+ECLWebRTCへの開発者登録がまだの方は、まず、[新規登録](signup.md)から開発者登録をしてください。
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリを作成して、APIキーを取得してください。
+利用可能ドメインは `localhost` としてください。
 
-- https://skyway.io/ds/registration
+### プロジェクトの作成
 
-<img src="https://qiita-image-store.s3.amazonaws.com/0/6651/32f83db9-9e96-52bd-1450-cdb34f78b93f.png" class="img-fluid" alt="開発者登録の画面">
+ベースとなる写経用のプロジェクトをGitHubからクローン云々。
+localのWebサーバのこととか。
 
-#### 登録に必要な情報を入力
+### カメラ映像、マイク音声の取得
 
-|項目|内容|
-|:--|:--|
-|名前|フルネームでお願いします|
-|メールアドレス|連絡の取れるアドレスを入れて下さい<BR>メールアドレスがID代わりになります|
-|パスワード|パスワードを設定して下さい|
-|SkyWayを利用するドメイン|許可するドメインを設定して下さい<BR>詳しくは次ページ|
+getUserMediaというAPIを利用。
+Promiseによる非同期処理を行うAPI
 
-#### 登録完了後ダッシュボードへログイン
-
-- アプリ開発時にここで発行されたAPIキーを設定する
-
-<img src="https://qiita-image-store.s3.amazonaws.com/0/6651/d9eacfae-cfee-5a0d-da9b-61c0afcce153.png" class="img-fluid" alt="skywaydashboard.png">
-
-#### 「SkyWayを利用するドメイン」について
-
-- SkyWayのAPIキーにはドメイン認証がかかっています
-  - JavaScript SDKの場合は、SkyWayを利用したWebアプリをホスティングするWebサイトのドメイン名を設定
-  - iOS / Android SDK同士の場合は、任意の文字列を設定
-  - `skyway.js`を利用する場合、利用可能ドメインの指定にワイルドカード（Ex: *.xxx.co.jp）が利用できます。
-- ハンズオン用のAPIキーには *localhost* を設定
-
-#### SkyWayのあれこれ
-
-- APIキーは1アカウント最大20個まで発行可能
-- ドメインについては複数登録可能、自由に変更可能
-- TURNサーバを利用する場合は事前申請が必要
-  - https://skyway.io/ds/turnrequest
-
-### STEP1 ブラウザでカメラ、マイクを利用してみよう
-
-- getUserMediaというAPIを利用
-  - Promiseによる非同期処理を行うAPI
+*JavaScript*
+{: .lang}
 
 ```js
-
 navigator.mediaDevices.getUserMedia({video: true, audio: true})
     .then(function (stream) { // success
     }).catch(function (error) { // error
@@ -67,9 +54,11 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
 
 ```
 
-#### getUserMediaに必要な処理を追加する
+getUserMediaに必要な処理を追加する
+`script.js`に追記して下さい
 
-- `script.js`に追記して下さい
+*JavaScript*
+{: .lang}
 
 ```js
     let localStream = null;
@@ -84,43 +73,41 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
         });
 ```
 
-#### 実装する際のポイント1
-
-- VideoとAudioの選択
+実装する際のポイント1
+VideoとAudioの選択
 
 `{video: true, audio: true}`
 
-- キャプチャサイズの設定（一例/後ほど利用します）
+キャプチャサイズの設定（一例/後ほど利用します）
 
 `{ audio: true, video: { width: 640, height: 480 } }`
 
-- フレームレートの設定（一例/Chrome限定）
+フレームレートの設定（一例/Chrome限定）
 
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
-#### 実装する際のポイント2
+実装する際のポイント2
+srcObject
+Chrome M52 , Firefox 42（Prefixが削除）で対応済み
+Stream Objectを直接設定可能
+VIDEO、AUDIO Elementで利用可能
 
-- srcObject
-  - Chrome M52 , Firefox 42（Prefixが削除）で対応済み
-  - Stream Objectを直接設定可能
-  - VIDEO、AUDIO Elementで利用可能
+使用する上の注意点
+許可を求めるダイアログが出てくる
+複数のカメラやマイクが接続されている場合は、適切なものを選択する必要あり
 
-#### 使用する上の注意点
+<figure class="figure">
+  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
+  <figcaption class="figure-caption">Chromeのダイアログ</figcaption>
+</figure>
 
-- 許可を求めるダイアログが出てくる
-  - 複数のカメラやマイクが接続されている場合は、適切なものを選択する必要あり
+<figure class="figure">
+  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
+  <figcaption class="figure-caption">Firefoxのダイアログ</figcaption>
+</figure>
 
-Chrome
-
-<img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png" class="img-fluid" alt="Chromeのダイアログ">
-
-Firefox
-
-<img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png" class="img-fluid" alt="Firefoxのダイアログ">
-
-#### 使用する上の注意点
-
-- ホスティング先に注意
+使用する上の注意点
+ホスティング先に注意
 
 |スキーマ\ブラウザ|Chrome|Firefox|
 |:--|:--:|:--:|
@@ -129,21 +116,22 @@ Firefox
 |file://index.html|x|◯|
 |https://domain.jp|◯|◯|
 
-### STEP2 1:1のビデオチャットを実装してみよう
-
-SkyWayを利用して1:1のビデオチャットを実現してみます。
-
-#### SkyWayのSDKを利用する
+### サーバへ接続
 
 今回のハンズオンのHTMLには既に記載済みですが、以下の通りScript要素でSDKをインポートします。
+
+*HTML*
+{: .lang}
 
 ```html
 <script type="text/javascript" src="https://cdn.skyway.io/skyway.js"></script>
 ```
 
-#### Peerオブジェクトを作成する
+Peerオブジェクトを作成する
+`script.js`に追記して下さい
 
-- `script.js`に追記して下さい
+*JavaScript*
+{: .lang}
 
 ```js
     let localStream = null;
@@ -160,44 +148,17 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
     });
 ```
 
-#### 実装する際のポイント
+### 接続成功・失敗時の処理
 
-- ダッシュボードで払い出したAPIキーを設定する
-- デバッグレベル（console log）で表示する情報を規定する
-- 下記以外のオプションパラメータについては[APIマニュアル](http://nttcom.github.io/skyway/docs/#peer)を参照
-  - peer.jsを基本的には踏襲しています
+PeerオブジェクトのEventListenerを追加する
+`script.js`に追記して下さい
 
-```js
-    peer = new Peer({
-        key: 'apikey',
-        debug: 3
-    });
-```
+Openイベント
+SkyWayのシグナリングサーバと接続し、利用する準備が整ったら発火します
+今回は、PeerIDと呼ばれるクライアント識別用のIDをシグナリングサーバで発行し、その情報をUIに表示する処理を行っています
 
-#### PeerオブジェクトのEventListenerを追加する
-
-- `script.js`に追記して下さい
-
-```js
-    peer.on('open', function(){
-        $('#my-id').text(peer.id);
-    });
-
-    peer.on('call', function(call){
-        call.answer(localStream);
-        setupCallEventHandlers(call);
-    });
-
-    peer.on('error', function(err){
-        alert(err.message);
-    });
-```
-
-#### 実装する際のポイント（１）
-
-- Openイベント
-  - SkyWayのシグナリングサーバと接続し、利用する準備が整ったら発火します
-  - 今回は、PeerIDと呼ばれるクライアント識別用のIDをシグナリングサーバで発行し、その情報をUIに表示する処理を行っています
+*JavaScript*
+{: .lang}
 
 ```js
     peer.on('open', function(){
@@ -205,14 +166,15 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
     });
 ```
 
-#### 実装する際のポイント（２）
+Callイベント
+相手から接続要求がきた場合に発火します
+相手との接続を管理するためのCallオブジェクトが取得できるため、それを利用して必要な処理を行います
+Answerメソッドを実行し、接続要求に応答します。この時に、自分自身のlocalStreamをセットすると、相手に映像・音声を送信することができるようになります
+Callオブジェクトを利用したEventListenerをセットします
+setupCallEventHandlers()の中身については後ほど説明
 
-- Callイベント
-  - 相手から接続要求がきた場合に発火します
-  - 相手との接続を管理するためのCallオブジェクトが取得できるため、それを利用して必要な処理を行います
-      - Answerメソッドを実行し、接続要求に応答します。この時に、自分自身のlocalStreamをセットすると、相手に映像・音声を送信することができるようになります
-      - Callオブジェクトを利用したEventListenerをセットします
-          - setupCallEventHandlers()の中身については後ほど説明
+*JavaScript*
+{: .lang}
 
 ```js
     peer.on('call', function(call){
@@ -221,10 +183,11 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
     });
 ```
 
-#### 実装する際のポイント（３）
+Errorイベント
+何らかのエラーが発生した場合に発火します
 
-- Errorイベント
-  - 何らかのエラーが発生した場合に発火します
+*JavaScript*
+{: .lang}
 
 ```js
     peer.on('error', function(err){
@@ -232,29 +195,15 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
     });
 ```
 
-#### 発信、切断処理の為の処理を追加する
+### 発信処理
 
-- `script.js`に追記して下さい
+`peer.call`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します
+PeerIDは電話番号のようなもので、何らかの方法で入手する必要があります
+Callオブジェクトが返ってくるため、必要なEventListenerをセットします
+setupCallEventHandlers()の中身については後ほど説明
 
-```js
-    $('#make-call').submit(function(e){
-        e.preventDefault();
-        const call = peer.call($('#peer-id').val(), localStream);
-        setupCallEventHandlers(call);
-    });
-
-    $('#end-call').click(function(){
-        existingCall.close();
-    });
-```
-
-#### 実装する際のポイント（１）
-
-- 発信処理
-  - `peer.call`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します
-      - PeerIDは電話番号のようなもので、何らかの方法で入手する必要があります
-  - Callオブジェクトが返ってくるため、必要なEventListenerをセットします
-      - setupCallEventHandlers()の中身については後ほど説明
+*JavaScript*
+{: .lang}
 
 ```js
     $('#make-call').submit(function(e){
@@ -264,12 +213,13 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
     });
 ```
 
-#### 実装する際のポイント（２）
+切断処理
+Callオブジェクトのclose()メソッドを実行します
+先程生成したCallオブジェクトは`existingCall`として保持しておきます
+オブジェクト保持はsetupCallEventHandlers()の中で実行します
 
-- 切断処理
-  - Callオブジェクトのclose()メソッドを実行します
-  - 先程生成したCallオブジェクトは`existingCall`として保持しておきます
-      - オブジェクト保持はsetupCallEventHandlers()の中で実行します
+*JavaScript*
+{: .lang}
 
 ```js
     $('#end-call').click(function(){
@@ -277,36 +227,13 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
     });
 ```
 
-#### CallオブジェクトのEventListenerを追加する
+### 着信処理
 
-- `script.js`に追記して下さい
+今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先する
+アプリの仕様次第
 
-```js
-    function setupCallEventHandlers(call){
-        if (existingCall) {
-            existingCall.close();
-        };
-
-        existingCall = call;
-
-        call.on('stream', function(stream){
-            addVideo(call,stream);
-            setupEndCallUI();
-            $('#connected-peer-id').text(call.remoteId);
-        });
-
-        call.on('close', function(){
-            removeVideo(call.peer);
-            setupMakeCallUI();
-        });
-
-    }
-```
-
-#### 実装する際のポイント（１）
-
-- 今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先する
-  - アプリの仕様次第
+*JavaScript*
+{: .lang}
 
 ```js
         if (existingCall) {
@@ -316,14 +243,15 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
         existingCall = call;
 ```
 
-#### 実装する際のポイント（２）
+Streamイベント
+相手の映像・音声を受信した際に発火します
+取得したStreamオブジェクトをVIDEO要素にセットします
+addVideo()の中身については後ほど説明
+UI関連の処理を実施します
+切断用のボタンを表示
 
-- Streamイベント
-  - 相手の映像・音声を受信した際に発火します
-  - 取得したStreamオブジェクトをVIDEO要素にセットします
-      - addVideo()の中身については後ほど説明
-  - UI関連の処理を実施します
-      - 切断用のボタンを表示
+*JavaScript*
+{: .lang}
 
 ```js
         call.on('stream', function(stream){
@@ -333,16 +261,17 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
         });
 ```
 
-#### 実装する際のポイント（３）
+Closeイベント
+Callオブジェクトのclose()メソッドが実行され切断処理が完了したら発火します
+close()メソッドを実行した側、実行された側それぞれで発火します
+切断時にVIDEO要素を削除します
+`call.peer`で切断先のPeerIDを取得できます
+removeVideo()の中身については後ほど説明
+UI関連の処理を実施します
+接続用のボタン、PeerIDを入力するInputボックスを用意
 
-- Closeイベント
-  - Callオブジェクトのclose()メソッドが実行され切断処理が完了したら発火します
-  - close()メソッドを実行した側、実行された側それぞれで発火します
-  - 切断時にVIDEO要素を削除します
-      - `call.peer`で切断先のPeerIDを取得できます
-      - removeVideo()の中身については後ほど説明
-  - UI関連の処理を実施します
-      - 接続用のボタン、PeerIDを入力するInputボックスを用意
+*JavaScript*
+{: .lang}
 
 ```js
         call.on('close', function(){
@@ -351,37 +280,13 @@ SkyWayを利用して1:1のビデオチャットを実現してみます。
         });
 ```
 
-#### 必要な関数を準備する
+### UIのセットアップ
 
-- `script.js`に追記して下さい
+VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます
+削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
 
-```js
-    function addVideo(call,stream){
-        const videoDom = $('<video autoplay>');
-        videoDom.attr('id',call.peer);
-        videoDom.get(0).srcObject = stream;
-        $('.remoteVideosContainer').append(videoDom);
-    }
-
-    function removeVideo(peerId){
-        $('#'+peerId).remove();
-    }
-
-    function setupMakeCallUI(){
-        $('#make-call').show();
-        $('#end-call').hide();
-    }
-    
-    function setupEndCallUI() {
-        $('#make-call').hide();
-        $('#end-call').show();
-    }
-```
-
-#### 実装する際のポイント（１）
-
-- VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます
-  - 削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
+*JavaScript*
+{: .lang}
 
 ```js
 function addVideo(call,stream){
@@ -392,9 +297,10 @@ function addVideo(call,stream){
     }
 ```
 
-#### 実装する際のポイント（２）
+切断された（した）相手のVIDEO要素をPeerIDを元に削除します
 
-- 切断された（した）相手のVIDEO要素をPeerIDを元に削除します
+*JavaScript*
+{: .lang}
 
 ```js
     function removeVideo(peerId){
@@ -402,9 +308,10 @@ function addVideo(call,stream){
     }
 ```
 
-#### 実装する際のポイント（３）
+UI関連処理を実装します
 
-- UI関連処理を実装します
+*JavaScript*
+{: .lang}
 
 ```js
     function setupMakeCallUI(){
@@ -418,270 +325,80 @@ function addVideo(call,stream){
     }
 ```
 
-#### 1:1のビデオチャットを試してみる
+### 動作確認
 
-1. ２つのブラウザタブでアプリを開く
-2. 片方の`Your id`を片方のInputボックスにコピペしてCallボックスをクリックする
- 
-### STEP3 SkyWayのroom機能を利用して複数人によるビデオチャットを実装してみよう
-
-- WebRTCは1:1の通信をP2Pでやることを前提に作られていますが、それを応用することで複数人で通信することが可能になります
-- SkyWayではroom機能を提供し、より直感的に複数人によるビデオチャット等を実現できるようになっています
-- STEP2で作成したコードを修正します
-
-#### getUserMediaのキャプチャサイズを変更する
-
-- `script.js`を修正して下さい
-
-```js
-    let constraints = {
-        video: {},
-        audio: true
-    };
-    constraints.video.width = 320;
-    constraints.video.height = 240;
-
-    navigator.mediaDevices.getUserMedia(constraints)
-        .then(function (stream) { // success
-            $('#myStream').get(0).srcObject = stream;
-            localStream = stream;
-        }).catch(function (error) { // error
-        console.error('mediaDevice.getUserMedia() error:', error);
-        return;
-    });
-```
-
-#### 実装する際のポイント（１）
-
-- 640x480に制限する
-  - 複数人のビデオチャットの場合、ブラウザに掛かる負荷が増えます。メディアのキャプチャサイズを制限し負荷を減らすことが出来ます
-
-```js
-    let constraints = {
-        video: {},
-        audio: true
-    };
-    constraints.video.width = 640;
-    constraints.video.height = 480;
-
-    navigator.mediaDevices.getUserMedia(constraints)
-     :
-     :
-```
-
-#### 発信処理をRoomへの参加処理に変更する
-
-- `script.js`を修正して下さい
-
-```js
-    $('#make-call').submit(function(e){
-        e.preventDefault();
-        let roomName = $('#join-room').val();
-        if (!roomName) {
-            return;
-        }
-        const　call = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
-        setupCallEventHandlers(call);
-    });
-```
-
-#### 実装する際のポイント（１）
-
-- 接続先のPeerIDの代わりに参加するRoom名を入力してもらい、そのRoom名を引数に指定し、`peer.joinRoom`メソッドを実行する
-  - modeは`sfu`と`mesh`から選択可能
-
-```js
-let roomName = $('#join-room').val();
-if (!roomName) {
-  return;
-}
-const　call = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
-```
-
-#### 実装する際のポイント（２）
-
-- SFUとMeshの違い
-  - SFUはサーバに対して自分自身のメディアストリームを送信する
-  - Meshは参加者全員に対してメディアストリームを送信する
-  - 受信はどちらとも参加者分だけ行う
-  - SFUの方が端末の負荷が軽い
-
-<img width="819" alt="sfu_mesh.png" src="https://qiita-image-store.s3.amazonaws.com/0/6651/ae36eaf0-a33b-5b2c-9c6e-e7f9de3afb90.png">
-
-#### CallオブジェクトのEventListenerにRoom機能を実現するためのイベントを追加する
-
-- `script.js`を修正して下さい
-
-```js
-    function setupCallEventHandlers(call){
-        if (existingCall) {
-            existingCall.close();
-        };
-
-        existingCall = call;
-        setupEndCallUI();
-        $('#room-id').text(call.name);
-
-        call.on('stream', function(stream){
-            addVideo(stream);
-        });
-
-        call.on('peerLeave', function(peerId){
-            removeVideo(peerId);
-        });
-
-        call.on('close', function(){
-            removeAllRemoteVideos();
-            setupMakeCallUI();
-        });
-
-    }
-```
-
-#### 実装する際のポイント（１）
-
-- 1:1の時はStreamイベント内部にあった処理を外に出す
-  - Room機能を利用する場合はRoomに参加した時点で通信開始となるため
-
-```js
-        setupEndCallUI();
-        $('#room-id').text(call.name);
-```
-
-#### 実装する際のポイント（２）
-
-- Room機能を利用するとStreamオブジェクトにPeerIDが格納されるため、addVideoの第一引数に指定したCallオブジェクトは省略できます
-    - addVideo()の中身については後ほど
-
-```js
-        call.on('stream', function(stream){
-            addVideo(stream);
-        });
-```
-
-#### 実装する際のポイント（３）
-
-- peerLeaveイベント
-  - Roomから参加者が抜けたら発火します
-  - 抜けた参加者のPeerIDを取得できるため、そのIDを利用して対応するVIDEO要素を削除します
-
-```js
-        call.on('peerLeave', function(peerId){
-            removeVideo(peerId);
-        });
-```
-
-#### 実装する際のポイント（４）
-
-- Closeイベント
-  - close()メソッドを実行し、自分自身がRoomから抜けた場合に発火します
-  - 複数参加者がいる場合があるため、全てのVIDEO要素を削除します
-      - removeAllRemoteVideos()の中身については後ほど
-
-```js
-        call.on('close', function(){
-            removeAllRemoteVideos();
-            setupMakeCallUI();
-        });
-```
-
-#### addVideoを修正しremoveAllRemoteVideosを追加する
-
-- `script.js`を修正して下さい
-
-```js
-    function addVideo(stream){
-        const videoDom = $('<video autoplay>');
-        videoDom.attr('id',stream.peerId);
-        videoDom.get(0).srcObject = stream;
-        $('.remoteVideosContainer').append(videoDom);
-    }
-
-   :
-   :
-
-    function removeAllRemoteVideos(){
-        $('.remoteVideosContainer').empty();
-    }
-```
-
-#### 実装する際のポイント（１）
-
-- stream.peerIdでPeerIDが取得できます
-
-```js
-    function addVideo(stream){
-        const videoDom = $('<video autoplay>');
-        videoDom.attr('id',stream.peerId);
-        videoDom.get(0).srcObject = stream;
-        $('.remoteVideosContainer').append(videoDom);
-    }
-```
-
-#### 実装する際のポイント（２）
-
-- JQueryの機能を使いVIDEO要素全てを削除します
-
-```js
-    function removeAllRemoteVideos(){
-        $('.remoteVideosContainer').empty();
-    }
-```
-
-#### UI上の文言を修正する
-
-- `index.html`を修正して下さい
-
-```html
-<div class="myControllerContainer">
-    <p>Your id: <span id="my-id">...</span></p>
-    <form id="make-call">
-        <input type="text" placeholder="Join room..." id="join-room">
-        <button type="submit">Join</button>
-    </form>
-    <div id="end-call">
-        <p>Currently in room <span id="room-id">...</span></p>
-        <button>Leave</button>
-    </div>
-</div>
-```
-
-#### 実装する際のポイント（１）
-
-- CallからJoin roomへ変更します
-
-```html
-        <input type="text" placeholder="Join room..." id="join-room">
-        <button type="submit">Join</button>
-```
-
-```html
-        <p>Currently in room <span id="room-id">...</span></p>
-        <button>Leave</button>
-```
-
-#### 複数人によるビデオチャットを試してみる
-
-1. 3つのブラウザタブでアプリを開く
-2. 任意のRoom名（半角英数）を決めて、全アプリでそのRoomに参加する
-
+2つのブラウザタブでアプリを開く
+片方の`Your id`を片方のInputボックスにコピペしてCallボックスをクリックする
 
 ## SDKのダウンロード
 
-<a class="btn btn-primary" href="#" role="button">ダウンロード</a>
+[ZIPでダウンロード](#){: .btn .btn-primary}
+[GitHubでクローン](#){: .btn .btn-secondary}
 
 ## APIリファレンス
 
-<a class="btn btn-primary" href="#" role="button">APIリファレンスを見る</a>
+[APIリファレンスを見る](#){: .btn .btn-primary}
 
-## FAQ
-このテキストはサンプルです。
+## サンプルコード
+{: #sample-code }
 
-<a class="btn btn-primary" href="https://support.skyway.io/hc/ja/sections/207320288-JavaScript-SDK" role="button">FAQを見る</a>
+サンプルコードを公開しています。
 
-## Technical Forum
-このテキストはサンプルです。
-開発者同士の議論や情報交換、質問のためにコミュニティを提供しています。
+<table class="table">
+  <tbody align="right">
+    <tr>
+      <th scope="row">1対1、P2P</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+    <tr>
+      <th scope="row">多人数、P2P</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">1:多のビデオ配信</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+    <tr>
+      <th scope="row">多人数、SFU</th>
+      <td><a href="#" class="card-link">ビデオチャット</a></td>
+      <td><a href="#" class="card-link">1:多のビデオ配信</a></td>
+      <td><a href="#" class="card-link">テキストチャット</a></td>
+    </tr>
+  </tbody>
+</table>
 
-<a class="btn btn-primary" href="https://support.skyway.io/hc/ja/community/topics/201676907-JavaScript-SDK" role="button">Technical Forumを見る</a>
+## サポート
+{: #support }
 
+<div class="row">
+  <div class="col-sm-4 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">FAQ</h3>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">よくある質問や開発ノウハウをFAQとして公開しています<BR>困った場合はまず検索してみて下さい</p>
+        <a href="#" class="btn btn-primary">FAQを確認</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 h-100">
+    <div class="card h-100">
+      <div class="card-block">
+        <h3 class="card-title">Technical Forum</h3>
+        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
+        <p class="card-text">FAQだけでは解決できない事がある場合<BR>開発者同士の議論や情報交換にご活用下さい</p>
+        <a href="#" class="btn btn-primary">Technical Forumに参加</a>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-4 h-100">
+      <div class="card h-100">
+        <div class="card-block">
+          <h3 class="card-title">チケットサポート</h3>
+          <p class="card-text"><small class="text-muted">Enterprise Edition 限定</small></p>
+          <p class="card-text">ダッシュボードよりチケットを利用して開発に関する問い合わせが可能です<BR>詳しい利用方法は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html" target="_blank">「チケットシステムのご利用方法」</a>をご覧下さい</p>
+          <a href="#" class="btn btn-primary">ダッシュボードにログイン</a>
+        </div>
+      </div>
+    </div>
+</div>
