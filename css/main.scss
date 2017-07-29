@@ -25,12 +25,10 @@ body {
 
 .site-footer {
   padding-top: 20px;
-  background-color: $gray-lightest;
   bottom: 0;
   height: $footer-height;
   position: absolute;
   width: 100%;
-  color: $white;
   a {
     color: $white;
 
@@ -105,8 +103,23 @@ body {
 
 // Footer
 
-footer {
+.site-footer {
+  $footer-color: rgba($white,.8);
+  color: $footer-color;
+
+  a {
+    color: $footer-color;
+
+    &:active,
+    &:hover {
+      color: darken($footer-color, 15%);
+    }
+  }
+
   hr {
     border-top: 1px solid rgba($white, .2);
+  }
+  .list-unstyled > .list-unstyled {
+    padding-left: 1em;
   }
 }
