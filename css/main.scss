@@ -8,15 +8,10 @@
 
 // Sticky Footer
 
-$footer-height: 500px;
 
 html {
   position: relative;
   min-height: 100%;
-}
-
-body {
-  margin-bottom: $footer-height + 40px;
 }
 
 .navbar {
@@ -26,8 +21,6 @@ body {
 .site-footer {
   padding-top: 20px;
   bottom: 0;
-  height: $footer-height;
-  position: absolute;
   width: 100%;
   a {
     color: $white;
