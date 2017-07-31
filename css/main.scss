@@ -68,6 +68,23 @@ html {
   .jumbotron span, .card span {
     @extend .text-nowrap;
   }
+
+  .nav-tabs {
+    .nav-item {
+      .nav-link.active {
+        color: #ffffff;
+        background: #004386;
+        border-color: #004386;
+      }
+      .nav-link {
+        border-color: #004386;
+      }
+    }
+  }
+  .tab-content {
+    background: #f8f8f8;
+  }
+
 }
 
 // right nav

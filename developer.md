@@ -13,13 +13,27 @@ lang: ja
 
 ## Get Started
 
-適当なコード
+ECLWebRTCを利用すればアプリケーションの開発を簡単に始めることが出来ます。 
+
+### STEP1
+
+[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
+
+### STEP2
+
+次のコマンドを入力して、JavaScript SDKを利用したビデオチャットアプリを動かしてみましょう。
+
 ```sh
 ~ $ gem install jekyll
 ~ $ jekyll new my-awesome-site
 ~ $ cd my-awesome-site
 ~/my-awesome-site $ jekyll serve
 ```
+
+### STEP3
+
+上手く動いたら、STEP2のサンプルコードのAPIキーをSTEP1で発行したものと置き換えます。  
+チュートリアルやAPIリファレンスを参考に、本格的な開発を始めましょう。
 
 ## SDK
 
@@ -32,10 +46,10 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <a href="./js-sdk.html" class="list-group-item active">
                <i class="fa fa-television fa-fw fa-3x" aria-hidden="true"></i> JavaScript SDK
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">チュートリアル</a>
+                <a href="/js-sdk.html#sdkのダウンロード" class="list-group-item list-group-item-action">チュートリアル</a>
                 <a href="#" class="list-group-item list-group-item-action">SDKダウンロード</a>
                 <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="#" class="list-group-item list-group-item-action">サンプルコード</a>
+                <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
         <div class="col">
@@ -44,9 +58,9 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i> iOS SDK
                 </a>
                 <a href="ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-                <a href="#" class="list-group-item list-group-item-action">SDKダウンロード</a>
+                <a href="ios-sdk.html#sdkのダウンロード" class="list-group-item list-group-item-action">SDKダウンロード</a>
                 <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="#" class="list-group-item list-group-item-action">サンプルコード</a>
+                <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
         <div class="col">
@@ -54,10 +68,10 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <a href="./android-sdk.html" class="list-group-item active">
                 <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i> Android SDK
                 </a>
-                <a href="#" class="list-group-item list-group-item-action">チュートリアル</a>
-                <a href="#" class="list-group-item list-group-item-action">SDKダウンロード</a>
+                <a href="./android-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+                <a href="/android-sdk.html#sdkのダウンロード" class="list-group-item list-group-item-action">SDKダウンロード</a>
                 <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="#" class="list-group-item list-group-item-action">サンプルコード</a>
+                <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
             </div>
         </div>
         <div class="col">
@@ -136,7 +150,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">多人数通話や配信を実現する、映像・音声送信を代行するメディアサーバを提供</p>
                 <a href="#" class="btn btn-primary">料金</a>
-                <a href="#" class="btn btn-primary">説明</a>
+                <a href="./sfu.html" class="btn btn-primary">SFUの説明</a>
             </div>
         </div>
     </div>
@@ -155,24 +169,50 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
 </div>
 
-## Migration △
-このテキストはサンプルです。
+## ドキュメント
 
-[migration.md](./migration.html)
+開発に役立つドキュメントを公開しています。
 
-## FAQ
-このテキストはサンプルです。
+<div class="list-group">
+  <a href="./migration.html" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h3 class="mb-1"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>SkyWayからECLWebRTCへの移行方法</h3>
+      <small>2017年09月05日 公開</small>
+    </div>
+    <p class="mb-1">SkyWayは2018年3月31日をもってサービスを終了します。<br>ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。<br>Community EditionからEnterprise Editionへの移行方法も合わせてご確認いただけます。</p>
+  </a>
+  <a href="http://webrtc-security.github.io/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h3 class="mb-1"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>WebRTCセキュリティレポート</h3>
+      <small>2015年7月28日 公開</small>
+    </div>
+    <p class="mb-1">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。<br>Community EditionからEnterprise Editionへの移行方法も合わせてご確認いただけます。</p>
+  </a>
+</div>
 
-[FAQ](https://support.skyway.io/hc/ja/categories/204565748)
+## サポート
 
-## Technical Forum
-このテキストはサンプルです。
-開発者同士の議論や情報交換、質問のためにコミュニティを提供しています。
+開発に役立つコミュニティサポートやチケットサポートを提供しています。
 
-[Technical Forum](https://support.skyway.io/hc/ja/community/topics)
+{% include support-cards.html %}
 
-## Info
-- maintenance
-- 障害情報
+## メンテナンス・障害情報
 
-## Security
+メンテナンス、障害情報を公開しています。  
+各情報の通知をRSSで受け取りたい方は、 [メンテナンス及び障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#maintenance" target="_blank" role="tab">メンテナンス情報</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#failure" target="_blank" role="tab">障害情報</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="maintenance" role="tabpanel"> 
+  </div>
+  <div class="tab-pane" id="failure" role="tabpanel">
+  </div>
+</div>
