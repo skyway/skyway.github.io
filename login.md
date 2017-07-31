@@ -7,7 +7,7 @@ lang: ja
 # ログイン
 
 <div class="row">
-  <div class="col-sm-4">
+  <div class="col-lg-4">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Community Edition</h3>
@@ -17,23 +17,23 @@ lang: ja
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-lg-4">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">Enterprise Edition</h3>
         <p class="card-text">大規模サービス向け</p>
-        <p><a href="#" class="btn btn-secondary">ビジネスポータルにログイン</a></p>
-        <p><a href="#">新規登録</a></p>
+        <p><a href="https://b-portal.ntt.com/icp_auth/i0001/default/MailaddressInputDisplay.action" class="btn btn-secondary">ビジネスポータルにログイン</a></p>
+        <p><a href="./contactus.html">新規登録</a> / <a href="https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/index.html">利用方法</a></p>
       </div>
     </div>
   </div>
-  <div class="col-sm-4">
+  <div class="col-lg-4">
     <div class="card">
       <div class="card-block">
         <h3 class="card-title">SkyWay</h3>
-        <p class="card-text">節は百科文章を紛争引き文字ますあっ以下、信頼するれ事典で決議法慎重の推奨国内をしれてはするで。</p>
+        <p class="card-text">2018年3月31日をもってサービスを終了します。<a href="./migration.html">ECLWebRTCへの移行</a>をお願いします</p>
         <p><a href="#" class="btn btn-secondary">ダッシュボードにログイン</a></p>
-        <p><a href="./migration.html">2018年3月31日に終了します</a></p>
+        <p></p>
       </div>
     </div>
   </div>

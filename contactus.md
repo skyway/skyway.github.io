@@ -20,14 +20,14 @@ Community EditionからEnterprise Editionへの移行や、新規利用に関す
       </div>
     </div>
     <div class="figure-caption text-right">
-      <a href="https://b-portal.ntt.com/icp_auth/i0001/default/MailaddressInputDisplay.action" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、即時ご利用いただけます">ビジネスポータルで新規登録</a>
+      <a href="https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/bporder.html" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、即時ご利用いただけます">ビジネスポータルで新規登録</a>
     </div>
   </div>
   <div class="col-sm-6 h-100">
     <div class="card h-100">
       <div class="card-block">
         <h3 class="card-title">問合せ（サービス仕様）</h3>
-        <p class="card-text">Webフォームでお受けしています<br><small class="text-muted">契約済みの方は<a href="https://b-portal.ntt.com/icp_auth/i0001/default/MailaddressInputDisplay.action">チケットサポート</a>をご利用下さい<br>内容によりお答えできない場合もあります</small></p>
+        <p class="card-text">Webフォームでお受けしています<br><small class="text-muted">契約済みの方は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html">チケットサポート</a>をご利用下さい<br>内容によりお答えできない場合もあります</small></p>
         <a href="" class="btn btn-primary">お問い合わせフォーム</a>
       </div>
     </div>
