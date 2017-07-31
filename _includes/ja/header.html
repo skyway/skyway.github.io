@@ -1,19 +1,19 @@
 <header class="site-header" role="banner">
-  <nav class="navbar navbar-inverse navbar-toggleable-md bg-primary">
+  <nav class="navbar navbar-inverse navbar-toggleable-sm bg-primary">
     <div class="container">
       <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-toggler">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a class="site-title navbar-brand" href="./"><img src="{{ site.rootdir[page.lang] }}/images/logo-white.png" width="223" height="33" alt="{{ site.title[page.lang] | escape }}"></a>
       <div id="main-nav-items" class="collapse navbar-collapse">
-        <a class="site-title navbar-brand" href="./"><img src="{{ site.rootdir[page.lang] }}/images/logo-white.png" width="223" height="33" alt="{{ site.title[page.lang] | escape }}"></a>
         <ul class="nav navbar-nav mr-auto">
 
           {% if page.title == 'ホーム' %}
-          <li class="nav-item active">
+          <li class="nav-item active hidden-md-down">
             <a class="nav-link" href="./">ホーム <span class="sr-only">(current)</span></a>
           </li>
           {% else %}
-          <li class="nav-item">
+          <li class="nav-item hidden-md-down">
             <a class="nav-link" href="./">ホーム</a>
           </li>
           {% endif %}
@@ -61,13 +61,13 @@
           </li>
           {% endif %}
 
-          {% if page.title == 'ダッシュボード' %}
+          {% if page.title == 'ログイン' %}
           <li class="nav-item active">
-            <a class="nav-link" href="login.html">ダッシュボード</a>
+              <a class="nav-link" href="login.html">ログイン</a> 
           </li>
           {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="login.html">ダッシュボード</a>
+              <a class="nav-link" href="login.html">ログイン</a> 
           </li>
           {% endif %}
 
