@@ -6,16 +6,92 @@
 @import 'bootstrap';
 @import 'rouge'; // syntax highlight by rouge
 
+$color-base:#004386;
+
+header {
+  // window width (-575px)
+  @include media-breakpoint-up(xs) {
+    .navbar-collapse {
+      padding-top: 4px;
+    }
+  }
+
+  // window width (768-991px)
+  @include media-breakpoint-up(md) {
+    .navbar-collapse {
+      padding-top: 0px;
+    }
+  }
+
+  .navbar-toggler-right {
+    right: -1rem;
+  }
+}
+
+// jumbotron
+.jumbotron {
+  // window width (-575px)
+  @include media-breakpoint-up(xs) {
+    margin-top: 20px;
+    padding: 1rem 1rem;
+
+    .navbar-collapse {
+      padding-top: 4px;
+    }
+    .display-4 {
+      font-size: 1.5rem;
+    }
+    .lead {
+      font-size: 1.0rem;
+    }
+  }
+
+  // window width (576-767px)
+  @include media-breakpoint-up(sm) {
+    margin-top: 30px;
+    padding: 2rem 2rem;
+
+    .display-4 {
+      font-size: 2.0rem;
+    }
+    .lead {
+      font-size: 1.0rem;
+    }
+  }
+
+  // window width (768-991px)
+  @include media-breakpoint-up(md) {
+    margin-top: 40px;
+    padding: 4rem 2rem;
+    .display-4 {
+      font-size: 2.5rem;
+    }
+    .lead {
+      font-size: 1.25rem;
+    }
+  }
+
+  // window width (992-1199px)
+  @include media-breakpoint-up(lg) {
+    .display-4 {
+      font-size: 3.0rem;
+    }
+    .lead {
+      font-size: 1.5rem;
+    }
+  }
+
+  // window width (1200px-)
+  @include media-breakpoint-up(xl) {
+
+  }
+
+}
+
 // Sticky Footer
-
-
 html {
   position: relative;
   min-height: 100%;
-}
-
-.navbar {
-  margin-bottom: 40px;
 }
 
 .site-footer {
@@ -39,6 +115,44 @@ html {
 #main {
   table {
     @extend .table;
+  }
+  .row {
+    .col-6 {
+      padding: 6px;
+    }
+    .card {
+      // border: 0px;
+    }
+
+    // window width (-575px)
+    @include media-breakpoint-up(xs) {
+      i {
+        font-size: 3em;
+        margin-bottom: 5px;
+        color: $color-base;
+      }
+      .card-title {font-size: 1.25rem;}
+    }
+
+    // window width (576-767px)
+    @include media-breakpoint-up(sm) {
+
+    }
+
+    // window width (768-991px)
+    @include media-breakpoint-up(md) {
+      .card-title {font-size: 1.5rem;}
+    }
+
+    // window width (992-1199px)
+    @include media-breakpoint-up(lg) {
+
+    }
+
+    // window width (1200px-)
+    @include media-breakpoint-up(xl) {
+
+    }
   }
 
   .card-group {
@@ -73,11 +187,11 @@ html {
     .nav-item {
       .nav-link.active {
         color: #ffffff;
-        background: #004386;
-        border-color: #004386;
+        background: $color-base;
+        border-color: $color-base;
       }
       .nav-link {
-        border-color: #004386;
+        border-color: $color-base;
       }
     }
   }

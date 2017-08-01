@@ -42,33 +42,43 @@ lang: ja
 ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
 自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 
-<div class="card-deck">
-  <div class="card">
-    <div class="card-block">
-      <i class="fa fa-code fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>アプリ開発</span><wbr><span>に</span><wbr><span>集中</span></h3>
-      <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
+
+
+<div class="row">
+  <div class="col-6 col-sm-6 col-lg-3">
+    <div class="card h-100">
+      <div class="card-block">
+        <div class="text-center"><i class="fa fa-code fa-5x " aria-hidden="true"></i></div>
+        <h3 class="card-title"><span>アプリ開発</span><wbr><span>に</span><wbr><span>集中</span></h3>
+        <p class="card-text">WebRTCに必要なサーバの構築・運用が不要だから、アプリの開発・提供に専念できる</p>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-block">
-      <i class="fa fa-mobile fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>マルチ</span><wbr><span>プラット</span><wbr><span>フォーム</span></h3>
-      <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
+  <div class="col-6 col-sm-6 col-lg-3">
+    <div class="card h-100">
+      <div class="card-block">
+        <div class="text-center"><i class="fa fa-mobile fa-5x" aria-hidden="true"></i></div>
+        <h3 class="card-title"><span>マルチ</span><wbr><span>プラット</span><wbr><span>フォーム</span></h3>
+        <p class="card-text">4つのSDKで、Webブラウザ、iOS、Android、IoTデバイスをカバーできる</p>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-block">
-      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
-      <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
+  <div class="col-6 col-sm-6 col-lg-3">
+    <div class="card h-100">
+      <div class="card-block">
+        <div class="text-center"><i class="fa fa-users fa-5x" aria-hidden="true"></i></div>
+        <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
+        <p class="card-text">無料のCommunity Editionで今すぐ開発を始め、小規模サービスを作れる</p>
+      </div>
     </div>
   </div>
-  <div class="card">
-    <div class="card-block">
-      <i class="fa fa-comments-o fa-5x" aria-hidden="true"></i>
-      <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
-      <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
+  <div class="col-6 col-sm-6 col-lg-3">
+    <div class="card h-100">
+      <div class="card-block">
+        <div class="text-center"><i class="fa fa-comments-o fa-5x" aria-hidden="true"></i></div>
+        <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
+        <p class="card-text">Enterprise Editionで商用サービスや大規模サービスを安心して開発・運用できる</p>
+      </div>
     </div>
   </div>
 </div>
@@ -122,59 +132,76 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 
 ## デモ
 
-<div class="media">
-	<img class="d-flex mr-3" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
-	<div class="media-body">
+<div class="row">
+  <div class="col-12 col-sm-6">
+    <img class="img-fluid" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
+  </div>
+  <div class="col-12 col-sm-6">
 		<h5 class="mt-0">SkyWay Conference</h5>
 		<p>インストールなし、会員登録なし、ログインなしで利用できる、多人数通話に対応したWeb会議です。
 		ブラウザでURLにアクセスするだけで参加できます。
 		画面共有にも対応しています。</p>
 		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
-	</div>
+  </div>
 </div>
 
 ## 事例紹介
 
-<div class="card-group">
-	<div class="card">
-		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap">
-		<div class="card-block">
-			<h4 class="card-title">Web会議</h4>
-			<p class="card-text">アプリやプラグインのインストールが不要なので、従来のサービスより手軽に利用できます。
-			会員登録やログインが不要で、URLを共有するだけで参加できるサービスも登場しました。
-			資料や画面を共有することも可能です。</p>
-  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">事例を見る</a></p>
-		</div>
-	</div>
-	<div class="card">
-		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap">
-		<div class="card-block">
-			<h4 class="card-title">サポート</h4>
-			<p class="card-text">電話をかけたり、別アプリに切り替えたりせずに通話できるので、アプリやWebサイト内でサポートが完結します。
-      ログイン情報を引き継げるので、本人確認の手間も不要です。
-      資料や画面を共有したり、カメラを使って状況を確認することも可能です。</p>
-  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/support/" role="button">事例を見る</a></p>
-		</div>
-	</div>
-	<div class="card">
-		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap">
-		<div class="card-block">
-			<h4 class="card-title">遠隔医療</h4>
-			<p class="card-text">WebRTCは、遠隔診療やヘルスケア相談にも活用されています。
-			日本では、厚労省が2015年に遠隔診療を実質解禁したことがきっかけとなり、市場が成長しています。</p>
-  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/healthcare/" role="button">事例を見る</a></p>
-		</div>
-	</div>
-	<div class="card">
-		<img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap">
-		<div class="card-block">
-			<h4 class="card-title">IoT</h4>
-			<p class="card-text">WebRTCは組み込み機器やIoTデバイスでも利用可能です。
-			コミュニケーションデバイスやデジタルサイネージなどでも活用されています。</p>
-  		<p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/iot/" role="button">事例を見る</a></p>
-		</div>
-	</div>
+
+<div class="row">
+  <div class="col-6 col-md-3">
+    <div class="card h-100">
+      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap"></a>
+      <div class="card-block">
+        <h3 class="card-title">Web会議</h3>
+        <p class="card-text">アプリやプラグインのインストールが不要なので、従来のサービスより手軽に利用できます。<br>
+        <font class="hidden-md-down">
+        会員登録やログインが不要で、URLを共有するだけで参加できるサービスも登場しました。
+        資料や画面を共有することも可能です。
+        </font>
+        </p>
+        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">事例を見る</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card h-100">
+      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap"></a>
+      <div class="card-block">
+        <h3 class="card-title">サポート</h3>
+        <p class="card-text">電話をかけたり、別アプリに切り替えたりせずに通話できるので、アプリやWebサイト内でサポートが完結します。<br>
+        <font class="hidden-md-down">
+        ログイン情報を引き継げるので、本人確認の手間も不要です。
+        資料や画面を共有したり、カメラを使って状況を確認することも可能です。</font></p>
+        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/support/" role="button">事例を見る</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card h-100">
+      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap"></a>
+      <div class="card-block">
+        <h3 class="card-title">遠隔医療</h3>
+        <p class="card-text">WebRTCは、遠隔診療やヘルスケア相談にも活用されています。<br>
+        <font class="hidden-md-down">
+        日本では、厚労省が2015年に遠隔診療を実質解禁したことがきっかけとなり、市場が成長しています。</font></p>
+        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/healthcare/" role="button">事例を見る</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-6 col-md-3">
+    <div class="card h-100">
+      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap"></a>
+      <div class="card-block">
+        <h3 class="card-title">IoT</h3>
+        <p class="card-text">WebRTCは組み込み機器やIoTデバイスでも利用可能です。
+        コミュニケーションデバイスやデジタルサイネージなどでも活用されています。</p>
+        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/iot/" role="button">事例を見る</a></p>
+      </div>
+    </div>
+  </div>
 </div>
+
 
 [その他の事例はこちら](https://skyway.github.io/usecase/)
 
