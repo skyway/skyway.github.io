@@ -7,6 +7,20 @@
 @import 'rouge'; // syntax highlight by rouge
 
 $color-base:#004386;
+$footer-height-md: 360px;
+$footer-height-xs: 600px;
+
+body {
+  // window width (-575px)
+  @include media-breakpoint-up(xs) {
+    margin-bottom: $footer-height-xs + 40px;
+  }
+
+  // window width (768-991px)
+  @include media-breakpoint-up(md) {
+    margin-bottom: $footer-height-md + 40px;
+  }
+}
 
 header {
   // window width (-575px)
@@ -98,6 +112,7 @@ html {
   padding-top: 20px;
   bottom: 0;
   width: 100%;
+  position: absolute;
   a {
     color: $white;
 
@@ -108,6 +123,17 @@ html {
       color: $white;
     }
   }
+
+  // window width (-575px)
+  @include media-breakpoint-up(xs) {
+    height: $footer-height-xs;
+  }
+
+  // window width (768-991px)
+  @include media-breakpoint-up(md) {
+    height: $footer-height-md;
+  }
+
 }
 
 // Content
