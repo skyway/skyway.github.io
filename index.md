@@ -132,7 +132,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 
 ## デモ
 
-<div class="row">
+<div id="demos-div" class="row">
   <div class="col-12 col-sm-6">
     <img class="img-fluid" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
   </div>
