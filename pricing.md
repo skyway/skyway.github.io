@@ -145,18 +145,16 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
 #### 利用モデル
 各ケースでのCommunity EditionのTURN利用制限までの通話時間とEnterpsise Editionの料金の目安です。
 
-
-
-
 <div id="accordion" role="tablist" aria-multiselectable="true">
   <div class="card">
-    <div class="card-header" role="tab" id="headingOne">
-      <h5 class="mb-0">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <div class="card-header" role="tab" id="headingOne">
+        <h5 class="mb-0">
           Community Edition
-        </a>
-      </h5>
-    </div>
+          <i class="fa fa-chevron-up pull-right" aria-hidden="true"></i>
+        </h5>
+      </div>
+    </a>
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-block">
         TURN利用上限までにどの程度通話できるかの目安です。<br>
@@ -201,13 +199,14 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
     </div>
   </div>
   <div class="card">
-    <div class="card-header" role="tab" id="headingTwo">
-      <h5 class="mb-0">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      <div class="card-header" role="tab" id="headingTwo">
+        <h5 class="mb-0">
           Enterprise Edition
-        </a>
-      </h5>
-    </div>
+          <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+        </h5>
+      </div>
+    </a>
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="card-block">
         TURN利用時の料金目安です。<br>
