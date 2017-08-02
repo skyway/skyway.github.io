@@ -44,7 +44,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 
 
 
-<div class="row">
+<div id="about-div" class="row">
   <div class="col-6 col-sm-6 col-lg-3">
     <div class="card h-100">
       <div class="card-block">
