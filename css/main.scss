@@ -7,6 +7,20 @@
 @import 'rouge'; // syntax highlight by rouge
 
 $color-base:#004386;
+$footer-height-md: 355px;
+$footer-height-xs: 656px;
+
+body {
+  // window width (-575px)
+  @include media-breakpoint-up(xs) {
+    margin-bottom: $footer-height-xs + 40px;
+  }
+
+  // window width (768-991px)
+  @include media-breakpoint-up(md) {
+    margin-bottom: $footer-height-md + 40px;
+  }
+}
 
 header {
   // window width (-575px)
@@ -27,6 +41,83 @@ header {
     right: -1rem;
   }
 }
+
+
+// Sticky Footer
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.site-footer {
+  $footer-color: rgba($white,.8);
+  color: $footer-color;
+  padding-top: 20px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  a {
+    color: $footer-color;
+
+    &:active,
+    &:hover {
+      color: darken($footer-color, 15%);
+    }
+  }
+
+  hr {
+    border-top: 1px solid rgba($white, .2);
+  }
+  .list-unstyled > .list-unstyled {
+    padding-left: 1em;
+  }
+
+  .logos-div {
+    height: 40px;
+  }
+
+  #nttcom-logo {
+    width: auto;
+    max-height: 40px;
+  }
+
+  #ecl-logo {
+    width: auto;
+    max-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  // window width (-575px)
+  @include media-breakpoint-up(xs) {
+    height: $footer-height-xs;
+    .links-div {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      div {
+        padding: 0 2px;
+        width: 100%;
+      }
+    }
+    #copyright-text {
+      font-size: 0.8rem;
+    }
+  }
+  // window width (768-991px)
+  @include media-breakpoint-up(md) {
+    height: $footer-height-md;
+    .links-div {
+      div {
+        padding: 3px 2px;
+        width: auto;
+      }
+    }
+    #copyright-text {
+      font-size: 1.0rem;
+    }
+  }
+}
+
 
 // jumbotron
 .jumbotron {
@@ -86,28 +177,6 @@ header {
 
   }
 
-}
-
-// Sticky Footer
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-.site-footer {
-  padding-top: 20px;
-  bottom: 0;
-  width: 100%;
-  a {
-    color: $white;
-
-    @include hover-focus {
-      color: $white;
-    }
-    &.active {
-      color: $white;
-    }
-  }
 }
 
 // Content
@@ -225,25 +294,3 @@ html {
   }
 }
 
-// Footer
-
-.site-footer {
-  $footer-color: rgba($white,.8);
-  color: $footer-color;
-
-  a {
-    color: $footer-color;
-
-    &:active,
-    &:hover {
-      color: darken($footer-color, 15%);
-    }
-  }
-
-  hr {
-    border-top: 1px solid rgba($white, .2);
-  }
-  .list-unstyled > .list-unstyled {
-    padding-left: 1em;
-  }
-}
