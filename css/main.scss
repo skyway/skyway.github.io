@@ -187,7 +187,7 @@ html {
     @extend .table;
   }
   .row {
-    .col-6, .col-12 {
+    .col-6, .col-sm-6, .col-12 {
       padding: 6px;
     }
 
@@ -199,22 +199,6 @@ html {
       .col-6, .col-12 {
         padding: 2px;
       }
-    }
-  }
-  .row-3 {
-    .col-sm-6 {
-      padding: 6px;
-    }
-
-    @include media-breakpoint-down(xs) {
-      .card-block {
-        padding: 0.5rem;
-      }
-    } 
-
-    .card-subtitle {
-      margin-bottom: 1rem;
-      font-size: 80%;
     }
   }
 
@@ -266,6 +250,7 @@ html {
     background: #f8f8f8;
   }
 
+  // index.html系
   #about-div {
     // window width (-575px)
     @include media-breakpoint-up(xs) {
@@ -286,6 +271,26 @@ html {
   #demos-div {
     img {
       margin-bottom: 1rem;
+    }
+  }
+
+  // support.html
+  #support-div {
+    @extend .row;
+
+    .card-subtitle {
+      margin-bottom: 1rem;
+      font-size: 80%;
+    }
+  }
+
+  // login.html
+  #login-div {
+    @extend .row;
+    @include media-breakpoint-down(xs) {
+      .card-block {
+        padding: 1rem;
+      }
     }
   }
 
