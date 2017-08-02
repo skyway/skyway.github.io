@@ -178,12 +178,6 @@ html {
       font-size: 1.5rem;
     }
   }
-
-  // window width (1200px-)
-  @include media-breakpoint-up(xl) {
-
-  }
-
 }
 
 // Content
@@ -193,47 +187,31 @@ html {
     @extend .table;
   }
   .row {
-    .col-6 {
+    .col-6, .col-12 {
       padding: 6px;
     }
-    .card {
-      // border: 0px;
-    }
 
-    // window width (-575px)
-    @include media-breakpoint-up(xs) {
-      i {
-        font-size: 3em;
-        margin-bottom: 5px;
-        color: $color-base;
+    @include media-breakpoint-down(xs) {
+      padding: 0 1rem;
+      .card-block {
+        padding: 0.5rem;
       }
-      .card-title {font-size: 1.25rem;}
-    }
-
-    // window width (576-767px)
-    @include media-breakpoint-up(sm) {
-
-    }
-
-    // window width (768-991px)
-    @include media-breakpoint-up(md) {
-      .card-title {font-size: 1.5rem;}
-    }
-
-    // window width (992-1199px)
-    @include media-breakpoint-up(lg) {
-
-    }
-
-    // window width (1200px-)
-    @include media-breakpoint-up(xl) {
-
+      .col-6, .col-12 {
+        padding: 2px;
+      }
     }
   }
   .row-3 {
     .col-sm-6 {
       padding: 6px;
     }
+
+    @include media-breakpoint-down(xs) {
+      .card-block {
+        padding: 0.5rem;
+      }
+    } 
+
     .card-subtitle {
       margin-bottom: 1rem;
       font-size: 80%;
@@ -288,6 +266,23 @@ html {
     background: #f8f8f8;
   }
 
+  #about-div {
+    // window width (-575px)
+    @include media-breakpoint-up(xs) {
+      i {
+        font-size: 3rem;
+        margin-bottom: 5px;
+        color: $color-base;
+      }
+      .card-title {font-size: 1.25rem;}
+    }
+
+    // window width (768-991px)
+    @include media-breakpoint-up(md) {
+      i {font-size: 5rem}
+      .card-title {font-size: 1.5rem;}
+    }
+  }
   #demos-div {
     img {
       margin-bottom: 1rem;
