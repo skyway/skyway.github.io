@@ -51,6 +51,7 @@ html {
 
 .site-footer {
   $footer-color: rgba($white,.8);
+  $footer-muted-color: rgba($gray-lighter, .8);
   color: $footer-color;
   padding-top: 20px;
   bottom: 0;
@@ -86,6 +87,12 @@ html {
     max-height: 30px;
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+
+  .links-div {
+    a {
+      color: $footer-muted-color;
+    }
   }
 
   // window width (-575px)
