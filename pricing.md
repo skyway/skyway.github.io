@@ -21,48 +21,49 @@ Community Editionは一切、料金がかかりません。
 
 ### 基本料金
 
-初期費用なしで利用できます。  
+<p>
+  初期費用なしで利用できます。<br>
+  <small class="text-muted">STUNの利用や通話の回数、room機能利用回数に制限はありません。</small>
+</p>
 
-<small class="text-muted">STUNの利用や通話の回数、room機能利用回数に制限はありません。</small>
-
-<table class="table table-sm">
+<table class="table table-sm pricing-table">
   <thead>
-    <tr>
-      <th></th>
-      <th class="text-right">Community Edition</th>
-      <th class="text-right">Enterprise Edition</th>
+    <tr class="m-0">
+      <th class="w-20"></th>
+      <th class="w-40 text-right">Community Edition</th>
+      <th class="w-40 text-right">Enterprise Edition</th>
     </tr>
   </thead>
     <tbody align="right">
       <tr>
         <th scope="row">基本料金</th>
-        <td>初期費用、月額費用とも¥0</td>
-        <td>初期費用¥0、月額費用¥100,000</td>
+        <td class="td-community">初期費用、月額費用とも¥0</td>
+        <td class="td-enterprise">初期費用¥0、月額費用¥100,000</td>
       </tr>
       <tr>
         <th scope="row">サポート</th>
-        <td>FAQ、Technical Forum</td>
-        <td>チケット（24時間365日）</td>
+        <td class="td-community">FAQ、Technical Forum</td>
+        <td class="td-enterprise">チケット（24時間365日）</td>
       </tr>
       <tr>
         <th scope="row">SLA</th>
-        <td>なし</td>
-        <td>稼働率99.99%保証</td>
+        <td class="td-community">なし</td>
+        <td class="td-enterprise">稼働率99.99%保証</td>
     </tr>
   </tbody>
 </table>
 
 ### 接続回数
 
-シグナリングサーバとの月間接続回数に応じた料金が発生します。<br>
-1回の接続あたりの接続時間やcallする回数に制限はありません。
+<p>
+  シグナリングサーバとの月間接続回数に応じた料金が発生します。<br>
+  <small class="text-muted">1回の接続あたりの接続時間やcallする回数に制限はありません。<span class="hidden-sm-down"><br></span>接続回数は、全APIKeyの合計ではなく、APIKey単位でカウントし、制限や料金の発生もAPIKey毎となります。</small>
+</p>
 
-<small class="text-muted">接続回数は、全APIKeyの合計ではなく、APIKey単位でカウントし、制限や料金の発生もAPIKey毎となります。</small>
-
-<table class="table table-sm">
+<table class="table table-sm pricing-table">
 <thead>
   <tr>
-    <th></th>
+    <th class="hidden-sm-down"></th>
     <th>接続回数</th>
     <th class="text-right">Community Edition</th>
     <th class="text-right">Enterprise Edition</th>
@@ -70,28 +71,36 @@ Community Editionは一切、料金がかかりません。
 </thead>
 <tbody align="right">
   <tr>
-    <th scope="row">シグナリング<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="シグナリング: 端末間で通信を行う際に、シグナリングサーバを介してお互いのIPアドレスやコーデックなど情報の交換を行います。">i</span></th>
-    <td align="left">〜500,000</td>
-    <td>¥0</td>
-    <td>¥0</td>
+    <th scope="row" class="hidden-sm">シグナリング<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="シグナリング: 端末間で通信を行う際に、シグナリングサーバを介してお互いのIPアドレスやコーデックなど情報の交換を行います。">i</span></th>
+    <td class="td-header" align="left">
+      〜500,000<span class="hidden-sm-up">回/月</span>
+    </td>
+    <td class="td-community">¥0</td>
+    <td class="td-enterprise">¥0</td>
   </tr>
   <tr>
-    <th scope="row"></th>
-    <td align="left">500,001〜1,000,000</td>
-    <td>制限</td>
-    <td>¥0</td>
+    <th scope="row" class="hidden-sm-down"></th>
+    <td class="td-header" align="left">
+      〜1,000,000<span class="hidden-sm-up">回/月</span>
+    </td>
+    <td class="td-community">制限</td>
+    <td class="td-enterprise">¥0</td>
   </tr>
   <tr>
-    <th scope="row"></th>
-    <td align="left">1,000,001〜10,000,000</td>
+    <th scope="row" class="hidden-sm-down"></th>
+    <td class="td-header" align="left">
+      〜10,000,000<span class="hidden-sm-up">回/月</span>
+    </td>
     <td></td>
-    <td>¥100,000</td>
+    <td class="td-enterprise">¥100,000</td>
   </tr>
   <tr>
-    <th scope="row"></th>
-    <td align="left">10,000,001+</td>
+    <th scope="row" class="hidden-sm-down"></th>
+    <td class="td-header" align="left">
+      10,000,001<span class="hidden-sm-up">回/月</span>〜
+    </td>
     <td></td>
-    <td>contact us</td>
+    <td class="td-enterprise">contact us</td>
   </tr>
 </tbody>
 </table>
@@ -99,15 +108,18 @@ Community Editionは一切、料金がかかりません。
 
 ### サーバ通信料
 
-TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生します。<br>
-1回の接続あたりの接続時間やcall回数に制限はありません。
+<p>
+  TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生します。<br>
+  <small class="text-muted">
+    1回の接続あたりの接続時間やcall回数に制限はありません。<span class="hidden-sm-down"><br></span>
+    サーバ通信量は、全APIKeyの合計ではなく、APIKey単位、TURN/SFU種別でカウントし、制限や料金の発生もAPIKey毎となります。また、サーバへのIN/OUTの通信の合計です。
+  </small>
+</p>
 
-<small class="text-muted">サーバ通信量は、全APIKeyの合計ではなく、APIKey単位でカウントし、制限や料金の発生もAPIKey毎となります。また、サーバへのIN/OUTの通信の合計です。</small>
-
-<table class="table table-sm">
+<table class="table table-sm pricing-table">
 <thead>
   <tr>
-    <th></th>
+    <th class="hidden-sm-down"></th>
     <th>通信量</th>
     <th class="text-right">Community Edition</th>
     <th class="text-right">Enterprise Edition</th>
@@ -115,24 +127,27 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
 </thead>
 <tbody align="right">
   <tr>
-    <th scope="row">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
-    <td align="left">〜500GB</td>
-    <td>¥0</td>
-    <td>¥40/GB</td>
+    <!-- PC表示用 -->
+    <th scope="row" class="hidden-sm-down">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
+    <!-- スマホ表示用 -->
+    <th scope="row" class="hidden-sm-up">TURN / SFU</th> 
+    <td class="td-header" align="left">〜500GB</td>
+    <td class="td-community">¥0</td>
+    <td class="td-enterprise">¥40/GB</td>
   </tr>
   <tr>
-    <th scope="row"></th>
-    <td align="left">501GB〜</td>
-    <td>制限</td>
-    <td>¥40/GB</td>
+    <th scope="row" class="hidden-sm-down"></th>
+    <td class="td-header" align="left">501GB〜</td>
+    <td class="td-community">制限</td>
+    <td class="td-enterprise">¥40/GB</td>
   </tr>
-  <tr>
+  <tr class="hidden-sm-down">
     <th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: 映像の送信をSFUサーバが代行することで、端末のCPUやネットワーク負荷を抑え、多人数での通話や配信を実現します。">i</span></th>
     <td align="left">〜500GB</td>
     <td>¥0</td>
     <td>¥40/GB</td>
   </tr>
-  <tr>
+  <tr class="hidden-sm-down">
     <th scope="row"></th>
     <td align="left">501GB〜</td>
     <td>制限</td>
@@ -158,40 +173,40 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-block">
         TURN利用上限までにどの程度通話できるかの目安です。<br>
-        <small class="text-muted">TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>TURNの利用制限がかかっても、Peer to Peerでの通信は可能です。<br>発信者が1人の場合の時間です。</small>
-        <table class="table table-sm">
+        <small class="text-muted">TURNの利用制限がかかっても、Peer to Peerでの通信は可能です。<br>TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
+        <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
-            <th></th>
-            <th class="text-right">法人向けWebサービス</th>
-            <th class="text-right">個人向けWebサービス</th>
-            <th class="text-right">スマートフォン向けアプリ</th>
+            <th class="w-25"></th>
+            <th class="w-25 text-right"><span>法人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
+            <th class="w-25 text-right"><span>個人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
+            <th class="w-25 text-right"><span class="hidden-sm-down">スマートフォン向け</span><wbr><span class="hidden-sm-down">アプリ</span><span class="hidden-md-up">スマホアプリ</span></th>
           </tr>
         </thead>
         <tbody align="right">
           <tr>
-            <th scope="row">1:1 Audio Call<br><small>40Kbps</small></th>
-            <td>69,444時間分<br>2,893日分</td>
-            <td>138,888時間分<br>5,787日分</td>
-            <td>1,388,888時間分<br>57,870日分</td>
+            <th scope="row">1:1音声通話<br><small>40Kbps</small></th>
+            <td><span>69,444</span><wbr><span><small class="text-muted">時間分</small></span><span><br>2,893</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>138,888</span><wbr><span><small class="text-muted">時間分</small></span><span><br>5,787</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>1,388,888</span><wbr><span><small class="text-muted">時間分</small></span><span><br>57,870</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
           <tr>
-            <th scope="row">1:1 SD Video Call<br><small>500Kbps</small></th>
-            <td>5,555時間分<br>231日分</td>
-            <td>11,111時間分<br>462日分</td>
-            <td>111,111時間分<br>4,629日分</td>
+            <th scope="row">1:1ビデオ通話(SD)<br><small>500Kbps</small></th>
+            <td><span>5,555</span><wbr><span><small class="text-muted">時間分</small></span><span><br>231</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>11,111</span><wbr><span><small class="text-muted">時間分</small></span><span><br>462</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>111,111</span><wbr><span><small class="text-muted">時間分</small></span><span><br>4,629</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
           <tr>
-            <th scope="row">1:1 HD Video Call<br><small>1.5Mbps</small></th>
-            <td>1,851時間分<br>77.1日分</td>
-            <td>3,703時間分<br>154日分</td>
-            <td>37,037時間分<br>1,543日分</td>
+            <th scope="row">1:1ビデオ通話(HD)<br><small>1.5Mbps</small></th>
+            <td><span>1,851</span><wbr><span><small class="text-muted">時間分</small></span><span><br>77.1</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>3,703</span><wbr><span><small class="text-muted">時間分</small></span><span><br>154</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>37,037</span><wbr><span><small class="text-muted">時間分</small></span><span><br>1,543</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
           <tr>
-            <th scope="row">4 Party SD Video Conference<br><small>1.5Mbps</small></th>
-            <td>1,851時間分<br>77.1日分</td>
-            <td>3,703時間分<br>154日分</td>
-            <td>37,037時間分<br>1,543日分</td>
+            <th scope="row">4人ビデオ会議(SD)<br><small>1.5Mbps</small></th>
+            <td><span>1,851</span><wbr><span><small class="text-muted">時間分</small></span><span><br>77.1</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>3,703</span><wbr><span><small class="text-muted">時間分</small></span><span><br>154</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>37,037</span><wbr><span><small class="text-muted">時間分</small></span><span><br>1,543</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
         </tbody>
         </table>
@@ -211,39 +226,39 @@ TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生�
       <div class="card-block">
         TURN利用時の料金目安です。<br>
         <small class="text-muted">TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の料金です。</small>
-        <table class="table table-sm">
+        <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
-            <th></th>
-            <th class="text-right">法人向けWebサービス</th>
-            <th class="text-right">個人向けWebサービス</th>
-            <th class="text-right">スマートフォン向けアプリ</th>
+            <th class="w-25"></th>
+            <th class="w-25 text-right"><span>法人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
+            <th class="w-25 text-right"><span>個人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
+            <th class="w-25 text-right"><span class="hidden-sm-down">スマートフォン向け</span><wbr><span class="hidden-sm-down">アプリ</span><span class="hidden-md-up">スマホアプリ</span></th>
           </tr>
         </thead>
         <tbody align="right">
           <tr>
-            <th scope="row">1:1 Audio Call<br><small>40Kbps</small></th>
-            <td>¥0.0096/分<br>¥0.576/時間</td>
-            <td>¥0.0048/分<br>¥0.288/時間</td>
-            <td>¥0.0005/分<br>¥0.0288/時間</td>
+            <th scope="row">1:1音声通話<br><small>40Kbps</small></th>
+            <td><span>¥0.0096</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.576</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.0048</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.288</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.0005</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.0288</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
           <tr>
-            <th scope="row">1:1 SD Video Call<br><small>500Kbps</small></th>
-            <td>¥0.12/分<br>¥7.2/時間</td>
-            <td>¥0.06/分<br>¥3.6/時間</td>
-            <td>¥0.006/分<br>¥0.36/時間</td>
+            <th scope="row">1:1ビデオ通話(SD)<br><small>500Kbps</small></th>
+            <td><span>¥0.12</span><wbr><span><small class="text-muted">分</small></span><span><br>¥7.2</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.06</span><wbr><span><small class="text-muted">分</small></span><span><br>¥3.6</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.006</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.36</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
           <tr>
-            <th scope="row">1:1 HD Video Call<br><small>1.5Mbps</small></th>
-            <td>¥0.36/分<br>¥21.6/時間</td>
-            <td>¥0.18/分<br>¥10.8/時間</td>
-            <td>¥0.018/分<br>¥1.08/時間</td>
+            <th scope="row">1:1ビデオ通話(HD)<br><small>1.5Mbps</small></th>
+            <td><span>¥0.36</span><wbr><span><small class="text-muted">分</small></span><span><br>¥21.6</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.18</span><wbr><span><small class="text-muted">分</small></span><span><br>¥10.8</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.018</span><wbr><span><small class="text-muted">分</small></span><span><br>¥1.08</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
           <tr>
-            <th scope="row">4 Party SD Video Conference<br><small>1.5Mbps</small></th>
-            <td>¥0.36/分<br>¥21.6/時間</td>
-            <td>¥0.18/分<br>¥10.8/時間</td>
-            <td>¥0.018/分<br>¥1.08/時間</td>
+            <th scope="row">4人ビデオ会議(SD)<br><small>1.5Mbps</small></th>
+            <td><span>¥0.36</span><wbr><span><small class="text-muted">分</small></span><span><br>¥21.6</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.18</span><wbr><span><small class="text-muted">分</small></span><span><br>¥10.8</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.018</span><wbr><span><small class="text-muted">分</small></span><span><br>¥1.08</span><wbr><span><small class="text-muted">日分</small></span></td>
           </tr>
         </tbody>
         </table>

@@ -7,6 +7,7 @@
 @import 'rouge'; // syntax highlight by rouge
 
 $color-base:#004386;
+$color-sub: $gray-light;
 $footer-height-md: 355px;
 $footer-height-xs: 656px;
 
@@ -201,7 +202,6 @@ html {
       }
     }
   }
-
   .card-group {
     margin-bottom: $spacer; // .table と同じ
   }
@@ -222,11 +222,11 @@ html {
     margin-top: 1rem;
   }
 
-  & > h2:not(:first-child) {
+  & > h2:not(:first-child), & > h3 {
     margin-top: 3rem;
   }
 
-  & > h3, & > h4, & > h5, & > h6 {
+  & > h4, & > h5, & > h6 {
     margin-top: 1.5rem;
   }
 
@@ -290,6 +290,90 @@ html {
     @include media-breakpoint-down(xs) {
       .card-block {
         padding: 1rem;
+      }
+    }
+  }
+
+  // pricing.html
+  #accordion {
+    @include media-breakpoint-down(xs) {
+      .card-block {
+        padding: 0.75rem;
+      }
+    }
+  }
+  .pricing-sample-table {
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-sm;
+      th {
+        padding: 0.25rem;
+      }
+    }
+  }
+  .pricing-table {
+    @include media-breakpoint-only(sm){
+      font-size: $font-size-sm;
+      .hidden-sm {
+        display: none;
+      }
+    }
+
+    // スマホでは、tableではなく、list表示
+    @include media-breakpoint-down(xs){
+      display: block;
+      list-style-type: none;
+
+      thead{
+        display: none;
+      }
+      tbody{
+        display: block;
+        tr{
+          display: block;
+          border-bottom: 1px solid #eceeef;
+          padding-bottom: .5em;
+          margin-bottom: .5em;
+        }
+        th, td{
+          display: list-item;
+          border: none;
+          text-align: left;
+        }
+        th {
+          margin-bottom: 5px;
+          background: $jumbotron-bg;
+        }
+        td {
+          margin-left: 20px;
+          padding: 0;
+        }
+        .td-header {
+          font-weight: bold;
+          margin-left: 0;
+        }
+        .td-community::before {
+          content: "community";
+          background-color: $color-base;
+          display: inline-block;
+          padding: .25em .4em;
+          font-size: 75%;
+          font-weight: 700;
+          line-height: 1;
+          color: #fff;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: baseline;
+          border-radius: .25rem;
+          width: 77px;
+          margin-right: 3px;
+        }
+        .td-enterprise {
+          @extend .td-community;
+          &::before {
+            background-color: $color-sub;
+            content: "enterprise";
+          }
+        }
       }
     }
   }
