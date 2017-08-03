@@ -14,7 +14,8 @@ lang: ja
 
 JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
 通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
-[完成したアプリのデモ](tbd)を試すことができます。
+
+[完成したアプリのデモ](#){:target="_blank"}を試すことができます。
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
@@ -28,34 +29,72 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 
 ### 開発前の準備
 
-ECLWebRTCへの開発者登録がまだの方は、まず、[新規登録](signup.md)から開発者登録をしてください。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリを作成して、APIキーを取得してください。
-利用可能ドメインは `localhost` としてください。
+#### ECLWebRTCのAPIキー発行
+
+ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+
+ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
+
+|設定項目|項目の説明|チュートリアルの設定内容|
+|:--|:--|:--|
+|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<BR>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
+|利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<BR>指定例：hogehoge.com|`localhost`|
+|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信が出来ない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
+|権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
+|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+
+#### ローカルWebサーバの準備
+
+WebRTCの機能をローカル環境で利用する場合は、Webサーバを利用する必要があります。
+
+##### Macの場合
+
+以下に示す幾つかの方法で、Webサーバをローカル環境で利用することが出来ます。
+
+- python 2.X
+    ```
+    $ python -m SimpleHTTPServer 8080
+    ```
+
+- python 3.X
+    ```
+    $ python -m http.server 8080
+    ```
+
+- ruby
+    ```
+    $ ruby -run -e httpd . -p 8080
+    ```
+
+- php
+    ```
+    $ php -S localhost:8080
+    ```
+
+##### Windowsの場合
+
+[Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにして下さい。
 
 ### プロジェクトの作成
 
-ベースとなる写経用のプロジェクトをGitHubからクローン云々。
-localのWebサーバのこととか。
+チュートリアルで利用するソースコードは以下のリポジトリからダウンロードしてください。  
+ダウンロード後は、 `index.html` をWebサーバで閲覧できるように適切に配置してください。
+
+- [https://github.com/skyway/eclwebrtc-js-sdk-tutorial](https://github.com/skyway/eclwebrtc-js-sdk-tutorial)
+
+以後のステップでは、同梱されている `script.js` に必要なコードを追記していきます。
+  
+- 本チュートリアルの制約事項
+  - Dom操作にはJQueryを利用しています。
+  - 動作確認済ブラウザは[Google Chrome](https://www.google.com/chrome)と[Firefox](https://www.mozilla.org/firefox/)の最新版です。
+
 
 ### カメラ映像、マイク音声の取得
 
-getUserMediaというAPIを利用。
-Promiseによる非同期処理を行うAPI
-
-*JavaScript*
-{: .lang}
-
-```js
-navigator.mediaDevices.getUserMedia({video: true, audio: true})
-    .then(function (stream) { // success
-    }).catch(function (error) { // error
-    return;
-});
-
-```
-
-getUserMediaに必要な処理を追加する
-`script.js`に追記して下さい
+Webブラウザでカメラ映像、マイク音声を取得するためには、`getUserMedia`というAPIを利用します。  
+以下のコードを追記して下さい。
 
 *JavaScript*
 {: .lang}
@@ -65,36 +104,46 @@ getUserMediaに必要な処理を追加する
 
     navigator.mediaDevices.getUserMedia({video: true, audio: true})
         .then(function (stream) {
+            // Success
             $('#myStream').get(0).srcObject = stream;
             localStream = stream;
         }).catch(function (error) {
+            // Error
             console.error('mediaDevice.getUserMedia() error:', error);
             return;
         });
 ```
 
-実装する際のポイント1
-VideoとAudioの選択
+getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指定をすることも可能です。
 
-`{video: true, audio: true}`
+- 例：VideoのみキャプチャしAudioは取り込まない
 
-キャプチャサイズの設定（一例/後ほど利用します）
+`{video: true, audio: false}`
+
+- 例：キャプチャサイズの設定例
 
 `{ audio: true, video: { width: 640, height: 480 } }`
 
-フレームレートの設定（一例/Chrome限定）
+- 例：フレームレートの設定（2017.08現在、Chromeでしか動作しません）
 
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
-実装する際のポイント2
-srcObject
-Chrome M52 , Firefox 42（Prefixが削除）で対応済み
-Stream Objectを直接設定可能
-VIDEO、AUDIO Elementで利用可能
+##### APIを使用する上の注意点1
 
-使用する上の注意点
-許可を求めるダイアログが出てくる
-複数のカメラやマイクが接続されている場合は、適切なものを選択する必要あり
+プライバシーを考慮し、ブラウザによっては、SSLで暗号化されたWebサイトでしか動作しません。
+2018.08現在の動作状況は以下のとおりです。
+
+|スキーマ\ブラウザ|Chrome|Firefox|
+|:--|:--:|:--:|
+|http://localhost|◯|◯|
+|http://domain.jp|x|◯|
+|file://index.html|x|◯|
+|https://domain.jp|◯|◯|
+
+#### APIを使用する上の注意点2
+
+利用者のプライバシーを守るために、許可を求めるダイアログが出てきます。  
+複数のカメラやマイクが接続されている場合は、このダイアログで任意のカメラやマイクを選ぶことが出来ます。
 
 <figure class="figure">
   <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
@@ -106,29 +155,25 @@ VIDEO、AUDIO Elementで利用可能
   <figcaption class="figure-caption">Firefoxのダイアログ</figcaption>
 </figure>
 
-使用する上の注意点
-ホスティング先に注意
+### ECLWebRTCサーバへ接続
 
-|スキーマ\ブラウザ|Chrome|Firefox|
-|:--|:--:|:--:|
-|http://localhost/|◯|◯|
-|http://domain.jp|x|◯|
-|file://index.html|x|◯|
-|https://domain.jp|◯|◯|
+#### SDKのインポート
 
-### サーバへ接続
-
-今回のハンズオンのHTMLには既に記載済みですが、以下の通りScript要素でSDKをインポートします。
+以下の通りScript要素でSDKをインポートします。  
+チュートリアルのソースコードでは`index.html`に追記済みです。
 
 *HTML*
 {: .lang}
 
 ```html
-<script type="text/javascript" src="https://cdn.skyway.io/skyway.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
 ```
 
-Peerオブジェクトを作成する
-`script.js`に追記して下さい
+#### Peerオブジェクトの作成
+
+Peerオブジェクトを作成するための処理を追記してください。  
+`apikey`には先程ダッシュボードで発行したAPIキーを指定してください。  
+`debug`ではログ出力レベルを指定します。`3`の場合は、開発用に全てのログを出力します。
 
 *JavaScript*
 {: .lang}
@@ -148,14 +193,17 @@ Peerオブジェクトを作成する
     });
 ```
 
+`new Peer`で指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+
 ### 接続成功・失敗時の処理
 
-PeerオブジェクトのEventListenerを追加する
-`script.js`に追記して下さい
+Peerオブジェクトに必要なEventListenerを追記してください。
 
-Openイベント
-SkyWayのシグナリングサーバと接続し、利用する準備が整ったら発火します
-今回は、PeerIDと呼ばれるクライアント識別用のIDをシグナリングサーバで発行し、その情報をUIに表示する処理を行っています
+#### Openイベント
+
+ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
+PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベント取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
+以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
 
 *JavaScript*
 {: .lang}
@@ -166,12 +214,114 @@ SkyWayのシグナリングサーバと接続し、利用する準備が整っ�
     });
 ```
 
-Callイベント
-相手から接続要求がきた場合に発火します
-相手との接続を管理するためのCallオブジェクトが取得できるため、それを利用して必要な処理を行います
-Answerメソッドを実行し、接続要求に応答します。この時に、自分自身のlocalStreamをセットすると、相手に映像・音声を送信することができるようになります
-Callオブジェクトを利用したEventListenerをセットします
-setupCallEventHandlers()の中身については後ほど説明
+#### Errorイベント
+
+何らかのエラーが発生した場合に発火します。エラーが発生したら、アラートメッセージでその内容を表示できるようにします。
+
+*JavaScript*
+{: .lang}
+
+```js
+    peer.on('error', function(err){
+        alert(err.message);
+    });
+```
+
+### 発信・切断処理
+
+#### 発信処理
+
+発信ボタンをクリックした場合に、相手に発信するための処理を追記してください。  
+`peer.call()`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。接続するための相手のPeerIDは、別途何らかの方法で入手する必要があります。  
+発信後はCallオブジェクトが返ってくるため、必要なEventListenerをセットします。  
+setupCallEventHandlers()の中身については後ほど説明します。
+
+*JavaScript*
+{: .lang}
+
+```js
+    $('#make-call').submit(function(e){
+        e.preventDefault();
+        const call = peer.call($('#callto-id').val(), localStream);
+        setupCallEventHandlers(call);
+    });
+```
+
+#### 切断処理
+
+切断ボタンをクリックした場合に、相手との接続を切断するための処理を追記してください。  
+`call.close()`で該当する接続を切断します。発信処理で生成したCallオブジェクトは`existingCall`として保持しておきます。オブジェクト保持は発信処理の`setupCallEventHandlers()`の中で実行します。
+
+*JavaScript*
+{: .lang}
+
+```js
+    $('#end-call').click(function(){
+        existingCall.close();
+    });
+```
+
+#### Callオブジェクトに必要なイベント
+
+Callオブジェクトに必要なEventListenerを追記してください。  
+今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先します。また、切断処理等で利用するため、Callオブジェクトを`existingCall`として保持しておきます。  
+この処理はアプリの仕様次第です。
+
+*JavaScript*
+{: .lang}
+
+```js
+    function setupCallEventHandlers(call){
+        if (existingCall) {
+            existingCall.close();
+        };
+
+        existingCall = call;
+        // 省略
+    }
+```
+
+相手の映像・音声を受信した際に発火します。  
+取得したStreamオブジェクトをVIDEO要素にセットします。  
+`addVideo()`、`setupEndCallUI()`の中身については後ほど説明します。
+
+*JavaScript*
+{: .lang}
+
+```js
+    function setupCallEventHandlers(call){
+        // 省略
+        call.on('stream', function(stream){
+            addVideo(call,stream);
+            setupEndCallUI();
+            $('#their-id').text(call.remoteId);
+        });
+        // 省略
+    }
+```
+
+`call.close()`による切断処理が実行され、実際に切断されたら発火します。このイベントは、`call.close()`実行した側、実行された側それぞれで発火します。`call.peer`で切断した相手のPeerIDを取得できます。  
+切断時にはVIDEO要素の削除とUI関連の処理をを削除します。`removeVideo()`、`setupMakeCallUI()`の中身については後ほど説明します。
+
+*JavaScript*
+{: .lang}
+
+```js
+    function setupCallEventHandlers(call){
+        // 省略
+        call.on('close', function(){
+            removeVideo(call.remoteId);
+            setupMakeCallUI();
+        });
+    }
+```
+    
+### 着信処理
+
+相手から接続要求がきた場合の処理を追記してください。  
+その際、相手との接続を管理するためのCallオブジェクトが取得できるため、それを利用して必要な処理を行います。  
+`call.answer()`を実行し、接続要求に応答します。この時に、自分自身の`localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
+Callオブジェクトを利用したEventListenerについては、発信・切断処理で追記した`setupCallEventHandlers()`と共通です。
 
 *JavaScript*
 {: .lang}
@@ -183,121 +333,26 @@ setupCallEventHandlers()の中身については後ほど説明
     });
 ```
 
-Errorイベント
-何らかのエラーが発生した場合に発火します
-
-*JavaScript*
-{: .lang}
-
-```js
-    peer.on('error', function(err){
-        alert(err.message);
-    });
-```
-
-### 発信処理
-
-`peer.call`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します
-PeerIDは電話番号のようなもので、何らかの方法で入手する必要があります
-Callオブジェクトが返ってくるため、必要なEventListenerをセットします
-setupCallEventHandlers()の中身については後ほど説明
-
-*JavaScript*
-{: .lang}
-
-```js
-    $('#make-call').submit(function(e){
-        e.preventDefault();
-        const call = peer.call($('#peer-id').val(), localStream);
-        setupCallEventHandlers(call);
-    });
-```
-
-切断処理
-Callオブジェクトのclose()メソッドを実行します
-先程生成したCallオブジェクトは`existingCall`として保持しておきます
-オブジェクト保持はsetupCallEventHandlers()の中で実行します
-
-*JavaScript*
-{: .lang}
-
-```js
-    $('#end-call').click(function(){
-        existingCall.close();
-    });
-```
-
-### 着信処理
-
-今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先する
-アプリの仕様次第
-
-*JavaScript*
-{: .lang}
-
-```js
-        if (existingCall) {
-            existingCall.close();
-        };
-
-        existingCall = call;
-```
-
-Streamイベント
-相手の映像・音声を受信した際に発火します
-取得したStreamオブジェクトをVIDEO要素にセットします
-addVideo()の中身については後ほど説明
-UI関連の処理を実施します
-切断用のボタンを表示
-
-*JavaScript*
-{: .lang}
-
-```js
-        call.on('stream', function(stream){
-            addVideo(call,stream);
-            setupEndCallUI();
-            $('#connected-peer-id').text(call.remoteId);
-        });
-```
-
-Closeイベント
-Callオブジェクトのclose()メソッドが実行され切断処理が完了したら発火します
-close()メソッドを実行した側、実行された側それぞれで発火します
-切断時にVIDEO要素を削除します
-`call.peer`で切断先のPeerIDを取得できます
-removeVideo()の中身については後ほど説明
-UI関連の処理を実施します
-接続用のボタン、PeerIDを入力するInputボックスを用意
-
-*JavaScript*
-{: .lang}
-
-```js
-        call.on('close', function(){
-            removeVideo(call.peer);
-            setupMakeCallUI();
-        });
-```
-
 ### UIのセットアップ
 
-VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます
-削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
+#### VIDEO要素の再生
+
+VIDEOを再生するための処理を追記してください。  
+VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます。削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
 
 *JavaScript*
 {: .lang}
 
 ```js
 function addVideo(call,stream){
-        const videoDom = $('<video autoplay>');
-        videoDom.attr('id',call.peer);
-        videoDom.get(0).srcObject = stream;
-        $('.remoteVideosContainer').append(videoDom);
+    $('#their-video').get(0).srcObject = stream;
     }
 ```
 
-切断された（した）相手のVIDEO要素をPeerIDを元に削除します
+#### VIDEO要素の削除
+
+切断された（した）相手のVIDEO要素を削除するための処理を追記してください。
+PeerIDを元に削除します。
 
 *JavaScript*
 {: .lang}
@@ -308,7 +363,9 @@ function addVideo(call,stream){
     }
 ```
 
-UI関連処理を実装します
+#### ボタンの表示、非表示切り替え
+
+発信ボタン、切断ボタンの表示を切り替えるための処理を追記してください。
 
 *JavaScript*
 {: .lang}
@@ -327,17 +384,41 @@ UI関連処理を実装します
 
 ### 動作確認
 
-2つのブラウザタブでアプリを開く
-片方の`Your id`を片方のInputボックスにコピペしてCallボックスをクリックする
+2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手の映像がお互いに表示されれば成功です。
 
 ## SDKのダウンロード
 
-[ZIPでダウンロード](#){: .btn .btn-primary}
-[GitHubでクローン](#){: .btn .btn-secondary}
+- npmを利用する場合
+
+  ```
+  $ npm install eclwebrtc-js
+  ```
+
+- CDNを利用する場合
+
+  *HTML*
+  {: .lang}
+  
+  ```html
+  <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
+  ```
+
+- ファイルでダウンロードする場合
+
+  [ZIPでダウンロード](https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip){: .btn .btn-primary}
+  [GitHubでクローン](https://github.com/nttcom/ECLWebRTC-JS-SDK){: .btn .btn-secondary}
+
 
 ## APIリファレンス
 
-[APIリファレンスを見る](#){: .btn .btn-primary}
+- ECLWebRTCをご利用のお客様
+
+  [APIリファレンスを見る](#){: .btn .btn-primary}
+
+- SkyWayをご利用のお客様
+
+  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#JS){: .btn btn-secondary target="_blank"}
+
 
 ## サンプルコード
 {: #sample-code }
@@ -370,35 +451,4 @@ UI関連処理を実装します
 ## サポート
 {: #support }
 
-<div class="row">
-  <div class="col-sm-4 h-100">
-    <div class="card h-100">
-      <div class="card-block">
-        <h3 class="card-title">FAQ</h3>
-        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
-        <p class="card-text">よくある質問や開発ノウハウをFAQとして公開しています<BR>困った場合はまず検索してみて下さい</p>
-        <a href="#" class="btn btn-primary">FAQを確認</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 h-100">
-    <div class="card h-100">
-      <div class="card-block">
-        <h3 class="card-title">Technical Forum</h3>
-        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
-        <p class="card-text">FAQだけでは解決できない事がある場合<BR>開発者同士の議論や情報交換にご活用下さい</p>
-        <a href="#" class="btn btn-primary">Technical Forumに参加</a>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-4 h-100">
-      <div class="card h-100">
-        <div class="card-block">
-          <h3 class="card-title">チケットサポート</h3>
-          <p class="card-text"><small class="text-muted">Enterprise Edition 限定</small></p>
-          <p class="card-text">ダッシュボードよりチケットを利用して開発に関する問い合わせが可能です<BR>詳しい利用方法は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html" target="_blank">「チケットシステムのご利用方法」</a>をご覧下さい</p>
-          <a href="#" class="btn btn-primary">ダッシュボードにログイン</a>
-        </div>
-      </div>
-    </div>
-</div>
+{% include support-cards.html %}
