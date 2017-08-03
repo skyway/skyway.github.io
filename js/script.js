@@ -1,7 +1,11 @@
 window.onload = function () {
 
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+      // enable tooltip
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // enable toggle icon for collapse
+      initCollapseIconToggle();
 
 
       /** 新着情報取得用スクリプト ここから**/
@@ -77,4 +81,22 @@ function updateNews(obj,id,siteurl){
     + 'すべてのニュース'
     + '</a>';
   $('#'+id).html(dom);
+}
+
+// アコーディオンのトグルアイコン変更
+function initCollapseIconToggle(){
+  $('#collapseOne, #collapseTwo, #collapseThree').on({
+    // 折り畳み開く処理
+    'show.bs.collapse': function() {
+      $('a[href="#' + this.id + '"] i.fa-chevron-down')
+        .removeClass('fa-chevron-down')
+        .addClass('fa-chevron-up');
+    },
+    // 折り畳み閉じる処理
+    'hide.bs.collapse': function() {
+      $('a[href="#' + this.id + '"] i.fa-chevron-up')
+        .removeClass('fa-chevron-up')
+        .addClass('fa-chevron-down');
+    }
+  });
 }
