@@ -7,12 +7,12 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-9">
+    <div class="col-12 col-lg-10">
       <div id="main" class="container">
         {{ content }}
       </div>
     </div>
-    <div class="hidden-md-down col-lg-3" id="rightnav-wrapper">
+    <div class="hidden-md-down col-lg-2" id="rightnav-wrapper">
       <div id="rightnav">
       </div>
     </div>
@@ -29,13 +29,6 @@
 <script>
   $(function() {
     $('#markdown-toc')
-      .addClass('nav flex-column')
-      .children()
-      .addClass('nav-item')
-      .children()
-      .addClass('nav-link')
-      .parent()
-      .parent()
       .appendTo('#rightnav')
       .show();
   });

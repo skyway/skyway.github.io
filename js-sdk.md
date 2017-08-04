@@ -4,8 +4,29 @@ title: JavaScript SDK
 lang: ja
 ---
 
-- TOC
-{:toc}
+<!-- div#rightnav -->
+
+<ul id="markdown-toc" class="nav flex-column" style="display: block;">
+    <li class="nav-item"><a href="#tutorial" class="nav-link">チュートリアル</a></li>
+    <ul>
+        <li class="nav-item"><a href="#preparation" class="nav-link">開発前の準備</a></li>
+        <li class="nav-item"><a href="#craete-project" class="nav-link">プロジェクトの作成</a></li>
+        <li class="nav-item"><a href="#getUserMedia" class="nav-link">カメラ映像、マイク音声の取得</a></li>
+        <li class="nav-item"><a href="#connect-server" class="nav-link">ECLWebRTCサーバへ接続</a></li>
+        <li class="nav-item"><a href="#eventlistener" class="nav-link">接続成功・失敗時の処理</a></li>
+        <li class="nav-item"><a href="#call-event" class="nav-link">発信・切断処理</a></li>
+        <li class="nav-item"><a href="#answer" class="nav-link">着信処理</a></li>
+        <li class="nav-item"><a href="#setup-ui" class="nav-link">UIのセットアップ</a></li>
+        <li class="nav-item"><a href="#testing" class="nav-link">動作確認</a></li>
+    </ul>
+    <li class="nav-item"><a href="#sdkdownload" class="nav-link">SDKのダウンロード</a></li>
+    <li class="nav-item"><a href="#testedbrowser" class="nav-link">動作確認済みブラウザ</a></li>
+    <li class="nav-item"><a href="#apireference" class="nav-link">APIリファレンス</a></li>
+    <li class="nav-item"><a href="#sample-code" class="nav-link">サンプルコード</a></li>
+    <li class="nav-item"><a href="#support" class="nav-link">サポート</a></li>
+</ul>
+
+<!-- div#main -->
 
 # JavaScript SDK
 
@@ -28,6 +49,7 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 </figure>
 
 ### 開発前の準備
+{: #preparation }
 
 #### ECLWebRTCのAPIキー発行
 
@@ -78,6 +100,7 @@ WebRTCの機能をローカル環境で利用する場合は、Webサーバを�
 [Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにして下さい。
 
 ### プロジェクトの作成
+{: #craete-project }
 
 チュートリアルで利用するソースコードは以下のリポジトリからダウンロードしてください。  
 ダウンロード後は、 `index.html` をWebサーバで閲覧できるように適切に配置してください。
@@ -92,6 +115,7 @@ WebRTCの機能をローカル環境で利用する場合は、Webサーバを�
 
 
 ### カメラ映像、マイク音声の取得
+{: #getUserMedia }
 
 Webブラウザでカメラ映像、マイク音声を取得するためには、`getUserMedia`というAPIを利用します。  
 以下のコードを追記して下さい。
@@ -156,6 +180,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 </figure>
 
 ### ECLWebRTCサーバへ接続
+{: #connect-server }
 
 #### SDKのインポート
 
@@ -196,6 +221,7 @@ Peerオブジェクトを作成するための処理を追記してください�
 `new Peer`で指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
 
 ### 接続成功・失敗時の処理
+{: #eventlistener }
 
 Peerオブジェクトに必要なEventListenerを追記してください。
 
@@ -228,6 +254,7 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
 ```
 
 ### 発信・切断処理
+{: #call-event }
 
 #### 発信処理
 
@@ -317,6 +344,7 @@ Callオブジェクトに必要なEventListenerを追記してください。
 ```
     
 ### 着信処理
+{: #answer }
 
 相手から接続要求がきた場合の処理を追記してください。  
 その際、相手との接続を管理するためのCallオブジェクトが取得できるため、それを利用して必要な処理を行います。  
@@ -334,6 +362,7 @@ Callオブジェクトを利用したEventListenerについては、発信・切
 ```
 
 ### UIのセットアップ
+{: #setup-ui }
 
 #### VIDEO要素の再生
 
@@ -383,6 +412,7 @@ PeerIDを元に削除します。
 ```
 
 ### 動作確認
+{: #testing }
 
 2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手の映像がお互いに表示されれば成功です。
 
