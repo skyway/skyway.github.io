@@ -387,6 +387,8 @@ PeerIDを元に削除します。
 2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手の映像がお互いに表示されれば成功です。
 
 ## SDKのダウンロード
+{: #sdkdownload }
+
 
 - npmを利用する場合
 
@@ -409,7 +411,16 @@ PeerIDを元に削除します。
   [GitHubでクローン](https://github.com/nttcom/ECLWebRTC-JS-SDK){: .btn .btn-secondary}
 
 
+## 動作確認済みブラウザ
+{: #testedbrowser }
+
+- [Google Chrome](https://www.google.com/chrome){: target="_blank"} 最新安定版
+
+- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 最新安定版
+
+
 ## APIリファレンス
+{: #apireference }
 
 - ECLWebRTCをご利用のお客様
 
@@ -417,7 +428,11 @@ PeerIDを元に削除します。
 
 - SkyWayをご利用のお客様
 
-  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#JS){: .btn btn-secondary target="_blank"}
+  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#JS){: .btn .btn-secondary target="_blank"}
+
+- ECLWebRTCとSkyWayのAPI差分
+
+  APIリファレンスの差分情報を[Github](https://github.com/nttcom/skyway-sdk-migration-docs)で提供しています。
 
 
 ## サンプルコード
