@@ -205,6 +205,11 @@ html {
   .card-group {
     margin-bottom: $spacer; // .table と同じ
   }
+  .card-block {
+    .btn {
+      font-size: 0.85rem;
+    }
+  }
 
   .lang { // Sprint3 で真面目に書く
     background-color: #f8f8f8;
@@ -341,13 +346,6 @@ html {
         display: none;
       }
     }
-    
-    .badge-community::before {
-
-    }
-    .badge-enterprise {
-
-    }
 
     // スマホでは、tableではなく、list表示
     @include media-breakpoint-down(xs){
@@ -415,10 +413,16 @@ html {
 
 #markdown-toc {
   display: none;
+  font-size: 0.85rem;
+  ul {
+    list-style: none;
+    padding-left: 10px;
+  }
 }
 
 #rightnav-wrapper {
   position: relative;
+  padding: 0 5px;
 
   #rightnav {
     position: fixed;
@@ -427,10 +431,13 @@ html {
     top: 10px;
     left: auto;
 
+    .nav-link {
+      padding: 0.2em .5em 0.2em 1em;
+    }
     .nav-link.active {
       border-left: .4em solid $blue;
-      padding: 0 1em 0 .6em;
-      margin: .5em 0;
+      padding: 0 .5em 0 .6em;
+      margin: .2em 0;
     }
   }
 }
