@@ -284,6 +284,30 @@ html {
     }
   }
 
+  .badge-community::before {
+    content: "community";
+    background-color: rgba($color-base, 0.7);
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 100%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    width: 85px;
+    margin-right: 3px;
+  }
+  .badge-enterprise {
+    @extend .badge-community;
+    &::before {
+      background-color: rgba($color-sub, 0.7);
+      content: "enterprise";
+    }
+  }
+
   // login.html
   #login-div {
     @extend .row;
@@ -316,6 +340,13 @@ html {
       .hidden-sm {
         display: none;
       }
+    }
+    
+    .badge-community::before {
+
+    }
+    .badge-enterprise {
+
     }
 
     // スマホでは、tableではなく、list表示
@@ -353,7 +384,7 @@ html {
         }
         .td-community::before {
           content: "community";
-          background-color: $color-base;
+          background-color: rgba($color-base, 0.7);
           display: inline-block;
           padding: .25em .4em;
           font-size: 75%;
@@ -370,7 +401,7 @@ html {
         .td-enterprise {
           @extend .td-community;
           &::before {
-            background-color: $color-sub;
+          background-color: rgba($color-sub, 0.7);
             content: "enterprise";
           }
         }
