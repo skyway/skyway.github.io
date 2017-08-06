@@ -14,7 +14,9 @@ lang: ja
 
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
-[完成したアプリのデモ](tbd)を試すことができます。
+
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオチャット](#){:target="_blank"}と同じものになります。
+完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
@@ -27,540 +29,722 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 </figure>
 
 ### 開発前の準備
+{: #preparation }
 
-ECLWebRTCへの開発者登録がまだの方は、まず、[新規登録](signup.md)から開発者登録をしてください。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリを作成して、APIキーを取得してください。
-利用可能ドメインは `localhost` としてください。
+#### ECLWebRTCのAPIキー発行
+
+ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+
+ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
+
+|設定項目|項目の説明|チュートリアルの設定内容|
+|:--|:--|:--|
+|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<BR>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
+|利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<BR>指定例：hogehoge.com|`localhost`|
+|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信が出来ない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
+|権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
+|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+
+#### 開発環境の準備
+
+このチュートリアルでは以下の環境を前提に開発を進めます。
+
+- Xcode Version 8.1
+- 動作確認端末
+  - iPod nano(MKH22J/A)
+- iOS バージョン
+  - 10.3.2
+- 開発言語
+  - ObjectiveC
 
 ### プロジェクトの作成
 
-ベースとなる写経用のプロジェクトをGitHubからクローン云々。
-必要なライブラリ、フレームワークを追加。
-SkyWay iOS SDKのダウンロード、Xcodeに追加、インポート。
-あるいはCocoaPods。
+チュートリアルで利用するXcodeのプロジェクトは以下のリポジトリからダウンロードしてください。  
 
-### サーバへ接続
+- [https://github.com/skyway/eclwebrtc-ios-sdk-tutorial](https://github.com/skyway/eclwebrtc-ios-sdk-tutorial)
 
-ECLWebRTCのシグナリングサーバに接続します。
+### SDKをプロジェクトに追加する
 
-まず初めに、シグナリングサーバに接続する際の引数で、APIキーと利用可能ドメインを指定します。
-app/src/main/java/io/skyway/testpeerjava/ を選択。
-MediaActivity.javaを開く。
-APIキーを各自 https://skyway.io/ds から取得したものを設定。
-利用可能ドメインは localhost に設定。
+SDKのバイナリファイルを配置します。  
+今回のチュートリアルでは、ダウンロードしたファイルを手動でプロジェクトに組込む手順を紹介します。  
 
-*Objective-C*
-{: .lang}
+1. SDKを[こちら](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip)からダウンロード
+2. ZIPファイルを解凍後、`ECLWebRTC.framework`を、`eclwebrtc-ios-sdk-tutorial`ディレクトリ直下に配置
+3. `eclwebrtc-ios-sdk-tutorial.xcodeproj`をダブルクリックしプロジェクトを開く
+4. 左ペインのファイルツリー上で右クリックし`Add File to…`を選択し、先程配置した`ECLWebRTC.framework`をファイルツリーに追加
+5. General > Linked Frameworks and Libraries から`ECLWebRTC.framework`を一度削除
+6. General > Embedded Binaries から`ECLWebRTC.framework`を再度追加
 
-```objc
-//APIキー、ドメインを設定
-SKWPeerOption* option = [[SKWPeerOption alloc] init];
-option.key = @"";
-option.domain = @"";
-```
+<figure class="figure">
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode1.png" class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
+  <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
+</figure>
 
-*Swift*
-{: .lang}
+プロジェクトに含まれる主要ファイルの説明は以下のとおりです。
 
-```swift
-//APIキー、ドメインを設定
-let option: SKWPeerOption = SKWPeerOption.init();
-option.key = ""
-option.domain = ""
-```
+- ViewController.m
+  - 今回のチュートリアルで主に必要なコードを追記していくコントローラー
+- PeerListViewController.m
+  - PeerID一覧を表示するUITableViewを生成するコントローラー
+  - 完成版が同梱されており、今回のチュートリアルでは触れません
+- storyboard
+  - 完成版が同梱されており、今回のチュートリアルで触れません
 
-Peerオブジェクトを生成します。
-Peerクラスは、SkyWayが提供するシグナリングのためのクラス。
-Peerオブジェクトを生成し、シグナリングサーバに接続する。
+### ヘッダーファイルインポート
+
+チュートリアルでは既に記載済みですが、`ViewController.h`にSDK用のヘッダーファイルを追加します。
 
 *Objective-C*
 {: .lang}
 
 ```objc
-// Peerオブジェクトのインスタンスを生成
-_peer = [[SKWPeer alloc] initWithOptions:option];
+#import <ECLWebRTC/SKWPeer.h>
 ```
 
-*Swift*
-{: .lang}
+### ビルドする
 
-```swift
-// Peerオブジェクトのインスタンスを生成
-_peer = SKWPeer.init(options: option);
-```
+1. General > Identity から Bundle Identifierを適宜修正
+2. Signing > Team から ビルドに利用するアカウントを選択
+3. 実機を接続しビルド実行
 
-### 接続成功・失敗時の処理
+実行時にエラーが出てしまいますが、以下の通りビルドに成功すれば準備完了です。
 
-エラー発生時のコールバック処理を、OnCallback()に記述する。
-Peer.on()で上記のコールバックを登録する。
-第一引数にイベント種別を登録（ERROR,OPENなど）。
-エラーが起きたらコンソールログを出力する。
-APIキーが間違っている。
-ドメインが登録されていない　など。
+<figure class="figure">
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-sc1.png" class="figure-img img-fluid rounded" alt="実機上でLaunchScreenが表示されたところ">
+  <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
+</figure>
 
+### ECLWebRTCサーバへの接続
+{: #connect-server }
+
+#### 宣言
+
+プログラム中で利用する定数を追記してください。  
+`apikey`には先程ダッシュボードで発行したAPIキーを指定してください。  
+`domain`には先程ダッシュボードで指定した利用可能ドメイン名のうち一つを指定してください。
 
 *Objective-C*
 {: .lang}
 
 ```objc
-//コールバックを登録（ERROR)
-    [_peer on:SKW_PEER_EVENT_ERROR callback:^(NSObject* obj)
-     {
-         SKWPeerError* error = (SKWPeerError*)obj;
-         NSLog(@"%@",error);
-     }];
+//
+// Set your APIkey and Domain
+//
+static NSString *const kAPIkey = @"apikey";
+static NSString *const kDomain = @"domain";
+
 ```
 
-*Swift*
-{: .lang}
-
-```swift
-//コールバックを登録（ERROR)
-    _peer?.on(SKWPeerEventEnum.PEER_EVENT_ERROR,callback:{ (obj: NSObject!) -> Void in
-        let error:SKWPeerError = obj as! SKWPeerError
-        print("\(error)")
-    })
-```
-
-成功時のコールバックを登録。
-自分のピアIDがコールバックの引数に渡されてくる。
-自分のピアIDを画面に表示する。
+プログラム中で利用するインスタンス変数の宣言を追記してください。  
+- `_peer` : Peerオブジェクト
+- `_localStream` : 自分自身のMediaStreamオブジェクト
+- `_remoteStream` : 相手のMediaStreamオブジェクト
+- `_mediaConnection` : MediaConnectionオブジェクト
 
 *Objective-C*
 {: .lang}
 
 ```objc
-// コールバックを登録(OPEN)
-[_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj)
-  {
-      _id = (NSString *)obj;
-      dispatch_async(dispatch_get_main_queue(), ^{
-         UILabel* lbl = (UILabel*)[self.view viewWithTag:TAG_ID];
-  　　　　　　　   [lbl setText:[NSString stringWithFormat:@"your ID: \n%@", _id]];
-      });
-}];
-```
-
-*Swift*
-{: .lang}
-
-```swift
-// コールバックを登録(OPEN)
-    _peer?.on(SKWPeerEventEnum.PEER_EVENT_OPEN,callback:{ (obj: NSObject!) -> Void in
-        self._id = obj as? String
-        dispatch_async(dispatch_get_main_queue(), {
-            self.idLabel.text = "your ID: \n\(self._id!)"
-        })
-    })
-```
-
-### カメラ映像、マイク音声の取得
-
-自分のカメラの映像を取得して表示。
-Navigator.getUserMediaで、カメラの映像が取得できる。
-Canvasにセットする。
-
-*Objective-C*
-{: .lang}
-
-```objc
-//メディアを取得
-[SKWNavigator initialize:_peer];
-SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
-_msLocal = [SKWNavigator getUserMedia:constraints];
-
-// 映像を表示する為のUI
-SKWVideo* localVideoView = [self.view viewWithTag:TAG_LOCAL_VIDEO];
-[localVideoView addSrc:_msLocal track:0];
-```
-
-*Swift*
-{: .lang}
-
-```swift
-//メディアを取得
-SKWNavigator.initialize(_peer);
-let constraints:SKWMediaConstraints = SKWMediaConstraints.init();
-_msLocal = SKWNavigator.getUserMedia(constraints) as SKWMediaStream
-    
-// 映像を表示する為のUI
-let localVideoView:SKWVideo = self.view.viewWithTag(ViewTag.TAG_LOCAL_VIDEO.hashValue) as! SKWVideo
-localVideoView.addSrc(_msLocal, track: 0)
-```
-
-### 着信時の処理
-
-シグナリングサーバ経由でビデオ通話着信があった場合の処理。
-相手に自分のメディア情報を回答。
-相手とのP2Pコネクションで発生するイベントのコールバックを登録。
-  
-*Objective-C*
-{: .lang}
-
-```objc
-//コールバックを登録（CALL)
-[_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj)
- {
-     _mediaConnection = (SKWMediaConnection *)obj;
-     [_mediaConnection answer:_msLocal];
-     [self setMediaCallbacks:_mediaConnection];
-     _bEstablished = YES;
-     [self updateUI];
- }];
-```
-
-*Swift*
-{: .lang}
-
-```swift
-//コールバックを登録（CALL)
-_peer?.on(SKWPeerEventEnum.PEER_EVENT_CALL, callback: { (obj:NSObject!) -> Void in
-    self._mediaConnection = obj as? SKWMediaConnection
-    self._mediaConnection?.answer(self._msLocal);
-    self._bEstablished = true
-    self.updateUI()
-})
-```
-
-P2Pコネクションのコールバック処理。
-映像を受信した場合(STREAM)、映像をUIに表示。
-コネクションが切断された場合、映像を削除。
-
-*Objective-C*
-{: .lang}
-
-```objc
-- (void)setMediaCallbacks:(SKWMediaConnection *)media
-{
-    // コールバックを登録（Stream）
-    [media on:SKW_MEDIACONNECTION_EVENT_STREAM callback:^(NSObject* obj)
-     {
-         _msRemote = (SKWMediaStream *)obj;
-         
-         dispatch_async(dispatch_get_main_queue(), ^
-                        {
-                            SKWVideo* vwRemote = (SKWVideo *)[self.view viewWithTag:TAG_REMOTE_VIDEO];
-                            [vwRemote setHidden:NO];
-                            [vwRemote addSrc:_msRemote track:0];
-                        });
-     }];
-    
-    // コールバックを登録（Close）
-    [media on:SKW_MEDIACONNECTION_EVENT_CLOSE callback:^(NSObject* obj)
-     {
+//
+// declaration
+//
+@interface ViewController () {
+        SKWPeer*			_peer;
+        SKWMediaStream*		_localStream;
+        SKWMediaStream*		_remoteStream;
+        SKWMediaConnection*	_mediaConnection;
         
-         dispatch_async(dispatch_get_main_queue(), ^{
-             
-              //Viewから削除
-             SKWVideo* vwRemote = (SKWVideo *)[self.view viewWithTag:TAG_REMOTE_VIDEO];
-             [vwRemote removeSrc:_msRemote track:0];
-             _msRemote = nil;
-             _mediaConnection = nil;
-             _bEstablished = NO;
-             [vwRemote setHidden:YES];
-         });
-         
-         [self updateUI];
-         
-     }];
+        NSString*			_strOwnId;
+        BOOL				_bConnected;   
+}
+```
+
+
+プロパティ宣言、そしてインスタンス変数のdealloc処理を追記してください。
+- `localView` : 自分自身の映像を表示するためのレンダラービューオブジェクト
+- `remoteView` : 相手の映像を表示するためのレンダラービューオブジェクト
+
+*Objective-C*
+{: .lang}
+
+```objc
+@property (weak, nonatomic) IBOutlet UILabel*   idLabel;
+@property (weak, nonatomic) IBOutlet UIButton*  actionButton;
+@property (weak, nonatomic) IBOutlet SKWVideo*  localView;
+@property (weak, nonatomic) IBOutlet SKWVideo*  remoteView;
+
+@end
+
+@implementation ViewController
+
+// 省略
+
+//
+// dealloc
+//
+- (void)dealloc {
+    _localStream = nil;
+    _remoteStream = nil;
+    _strOwnId = nil;
+    _mediaConnection = nil;
+    _peer = nil;
     
 }
 ```
 
-*Swift*
-{: .lang}
+#### Peerオブジェクトの作成
 
-```swift
-func setMediaCallbacks(media:SKWMediaConnection){
-    
-    //コールバックを登録（Stream）
-    media .on(SKWMediaConnectionEventEnum.MEDIACONNECTION_EVENT_STREAM, callback: { (obj:NSObject!) -> Void in
-        self._msRemote = obj as? SKWMediaStream
-        
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            let remoteVideoView:SKWVideo = self.view.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
-            remoteVideoView.hidden = false
-            remoteVideoView.addSrc(self._msRemote, track: 0)
-        })
-    })
-    
-    //コールバックを登録（Close）
-    media .on(SKWMediaConnectionEventEnum.MEDIACONNECTION_EVENT_CLOSE, callback: { (obj:NSObject!) -> Void in
-        self._msRemote = obj as? SKWMediaStream
-        
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            let remoteVideoView:SKWVideo = self.view.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
-            remoteVideoView.removeSrc(self._msRemote, track: 0)
-            self._msRemote = nil
-            self._mediaConnection = nil
-            self._bEstablished = false
-            remoteVideoView.hidden = true
-        })
-        self.updateUI()
-    })
-}
-```
-
-### 発信する
-
-相手へビデオ通話をかける。
-サーバに接続しているピアの一覧を取得する。
+viewDidLoadメソッド内に、Peerオブジェクトを作成するための処理を追記してください。  
+Peerオブジェクトには、optionクラスを利用し、APIキー、ドメイン名、デバッグレベルを指定してください。
 
 *Objective-C*
 {: .lang}
 
 ```objc
-//接続相手を選択する
-- (void)getPeerList
-{
-    if ((nil == _peer) || (nil == _id) || (0 == _id.length)){
-        return;
-    }
-    
-    [_peer listAllPeers:^(NSArray* peers)
-     {
-         _listPeerIds = [[NSMutableArray alloc] init];
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
-             for (NSString* strValue in peers)
-             {
-                 if (NSOrderedSame == [_id caseInsensitiveCompare:strValue])
-                 {
-                     continue;
-                 }
-                 
-                 [_listPeerIds addObject:strValue];
-             }
-         if((nil != _listPeerIds) && (0< [_listPeerIds count]))
-         {
-             [self showPeerListDialog];
-         }
-         
-     }];
-}
+    //
+    // Initialize Peer
+    //
+    SKWPeerOption* option = [[SKWPeerOption alloc] init];
+    option.key = kAPIkey;
+    option.domain = kDomain;
+    option.debug = 3;
+    _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-*Swift*
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+
+### 接続成功・失敗・切断時の処理
+{: #eventlistener }
+
+引き続きviewDidLoadメソッド内に、Peerオブジェクトに必要なイベントコールバックを追記してください。
+
+#### OPENイベント
+
+ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
+PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
+以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
+
+*Objective-C*
 {: .lang}
 
-```swift
-func getPeerList(){
-        if (_peer == nil) || (_id == nil) || (_id?.characters.count == 0) {
-            return
-        }
-        _peer?.listAllPeers({ (peers:[AnyObject]!) -> Void in
-            self._listPeerIds = []
-            let peersArray:[String] = peers as! [String]
-            for strValue:String in peersArray{
+```objc
+    //
+    // Set Peer event callbacks
+    //
+    
+    // OPEN
+    [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
+        
+        // Show my ID
+        _strOwnId = (NSString*) obj;
+        _idLabel.text = _strOwnId;
                 
-                if strValue == self._id{
-                    continue
-                }   
-                self._listPeerIds.append(strValue)
-            }
-            if self._listPeerIds.count > 0{
-                self.showPeerDialog()
-            }
-
-        })
-    }
+    }];
 ```
 
-通話したい相手を選んで、ビデオ通話発信する。
+#### カメラ映像、マイク音声の取得
+
+OPENイベントのコールバック内に、カメラ映像とマイク音声を取得するための処理を追記してください。  
+
+##### オプション設定
+
+SKWMediaConstraintsクラスで映像・音声取得に関するオプションを設定可能です。  
+ここで設定している項目の説明は以下のとおりです。  
+- `maxWidth`: キャプチャ映像の横サイズ上限（単位：ピクセル）
+- `maxHeight`: キャプチャ映像の縦サイズ上限（単位：ピクセル）
+- `cameraPosition`: 使用するカメラの選択（ディフォルトは`SKW_CAMERA_POSITION_FRONT`）
+  - カメラポジションは前面カメラ（`SKW_CAMERA_POSITION_FRONT`）と背面カメラ（`SKW_CAMERA_POSITION_BACK`）が選択可能
+
+これ以外の項目については、[APIリファレンス]()をご覧ください。  
 
 *Objective-C*
 {: .lang}
 
 ```objc
-- (void)call:(NSString *)strDestId
-{
-    SKWCallOption *option = [[SKWCallOption alloc]init];
-    _mediaConnection = [_peer callWithId:strDestId stream:_msLocal options:option];
-    
-    if(_mediaConnection != nil){
-        [self setMediaCallbacks:_mediaConnection];
-        _bEstablished = YES;
-    }
-    
-    [self updateUI];
-    
-}
+    // OPEN
+    [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
+        
+        // 省略
+        
+        // Set MediaConstraints
+        SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
+        constraints.maxWidth = 960;
+        constraints.maxHeight = 540;
+        constraints.cameraPosition = SKW_CAMERA_POSITION_FRONT;
+
+    }];        
+```
+
+##### 取得と再生
+
+SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分の映像（ローカルストリーム）が取得できます。  
+取得したMediaStreamオブジェクトに、addVideoRendererメソッドを利用して、ビデオレンダラー(表示用のSKWVideoオブジェクト)を割り当てます。
+
+*Objective-C*
+{: .lang}
+
+```objc
+    // OPEN
+    [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
+        
+        // 省略
+        
+        // Set MediaConstraints
+        // 省略
+
+        // Get a local MediaStream & show it
+        [SKWNavigator initialize:_peer];
+        _localStream = [SKWNavigator getUserMedia:constraints];
+        [_localStream addVideoRenderer:_localView track:0];
+
+    }];        
+```
 
 
-//ビデオ通話を終了する
-- (void)closeChat
-{
-    if (nil != _mediaConnection)
-    {
-        if (nil != _msRemote)
-        {
-            SKWVideo* video = (SKWVideo *)[self.view viewWithTag:TAG_REMOTE_VIDEO];
-            if (nil != video)
-            {
-                [video removeSrc:_msRemote track:0];
+#### ERRORイベント
+
+何らかのエラーが発生した場合に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
+
+*Objective-C*
+{: .lang}
+
+```objc
+    // ERROR
+    [_peer on:SKW_PEER_EVENT_ERROR callback:^(NSObject* obj) {
+        SKWPeerError* error = (SKWPeerError*)obj;
+        NSLog(@"%@",error);
+        
+    }];
+```
+
+#### CLOSEイベント
+
+Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+
+*Objective-C*
+{: .lang}
+
+```objc
+    // CLOSE
+    [_peer on:SKW_PEER_EVENT_CLOSE callback:^(NSObject* obj) {}];
+```
+
+#### DISCONNECTEDイベント
+
+シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+
+*Objective-C*
+{: .lang}
+
+```objc
+    // DISCONNECTED
+    [_peer on:SKW_PEER_EVENT_DISCONNECTED callback:^(NSObject* obj) {}];
+```
+
+### 発信・切断・着信処理
+{: #call-event }
+
+発信、切断、着信をするための処理を追記してください。
+
+#### 発信処理
+
+相手のPeerIDを選択して発信します。
+
+##### 発信先のPeerIDを取得
+
+actionButtonをタップし未接続状態であれば、listAllPeersメソッドを利用して接続先のPeerID一覧を取得します。取得した一覧から自分自身のIDを削除し、`PeerListViewController`で一覧表示します。  
+
+*Objective-C*
+{: .lang}
+
+```objc
+//
+// Action for actionButton (make/hang up a call)
+//
+- (IBAction)onActionButtonClicked:(id)sender {
+    
+    if(nil == _mediaConnection) {
+        
+        //
+        // Select remote peer & make a call
+        //
+        
+        // Get all IDs connected to the server
+        [_peer listAllPeers:^(NSArray* aryPeers){
+            NSMutableArray* maItems = [[NSMutableArray alloc] init];
+            if (nil == _strOwnId) {
+                 return;
             }
             
-            [_msRemote close];
+            // Exclude my own ID
+            for (NSString* strValue in aryPeers) {
+                if (NSOrderedSame != [_strOwnId caseInsensitiveCompare:strValue]) {
+                    [maItems addObject:strValue];
+                }
+            }
             
-            _msRemote = nil;
-        }
+            // Show IDs using UITableViewController
+            PeerListViewController* vc = [[PeerListViewController alloc] initWithStyle:UITableViewStylePlain];
+            vc.items = [NSArray arrayWithArray:maItems];
+            vc.delegate = self;
+            
+            UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:vc];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self presentViewController:nc animated:YES completion:nil];
+            });
+            
+            [maItems removeAllObjects];
         
+        }];
+    }
+         
+    else {
+
+    }
+}
+```
+
+##### 発信
+
+`PeerListViewController`でPeerIDが選択されたら、didSelectPeerメソッドが呼ばれます。相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
+発信後は必要なイベントコールバックをセットします。  
+`setMediaCallbacks`の中身については後ほど説明します。
+
+*Objective-C*
+{: .lang}
+
+```objc
+
+//
+// Create a MediaConnection
+//
+- (void) didSelectPeer:(NSString *)peerId {
+    _mediaConnection = [_peer callWithId:peerId stream:_localStream];
+    [self setMediaCallbacks];
+}
+```
+
+#### 切断処理
+
+相手との接続を切断します。
+
+##### MediaConnectionの切断
+
+actionButtonをタップした際に接続中であれば、MediaConnectionオブジェクトのCloseメソッドで該当するMediaConnectionを切断し、後ほど説明する`closeRemoteStream`で必要な処理を行います。
+
+*Objective-C*
+{: .lang}
+
+```objc
+//
+// Action for actionButton (make/hang up a call)
+//
+- (IBAction)onActionButtonClicked:(id)sender {
+    
+    if(nil == _mediaConnection) {
+        
+        // 省略
+         
+    else {
+        
+        //
+        // hang up a call
+        //
+        
+        [self closeRemoteStream];
         [_mediaConnection close];
     }
 }
 ```
 
-*Swift*
+##### MediaStreamのクローズ
+
+MediaConnectionオブジェクトのCloseメソッドが実行された後は、removeVideoRendererメソッドを利用して該当のMediaStreamに割り当てられた、ビデオレンダラーを取り外します。
+
+*Objective-C*
 {: .lang}
 
-```
-//ビデオ通話を開始する
-func call(strDestId: String) {
-    let option = SKWCallOption()
-    _mediaConnection = _peer!.callWithId(strDestId, stream: _msLocal, options: option)
-    if _mediaConnection != nil {
-        self.setMediaCallbacks(self._mediaConnection!)
-        _bEstablished = true
+```objc
+//
+// Close & release a remote MediaStream
+//
+- (void) closeRemoteStream {
+    if(nil == _remoteStream) {
+        return;
     }
-    self.updateUI()
+    
+    if(nil != _remoteView) {
+        [_remoteStream removeVideoRenderer:_remoteView track:0];
+    }
+    
+    [_remoteStream close];
+    _remoteStream = nil;
+}
+```
+
+##### コールバックイベントの解放関連
+
+MediaConnection切断をトリガーに各種コールバックイベントの開放処理を追記してください。  
+尚、`unsetPeerCallbacks`についてはPeerオブジェクトは破棄時に利用します。今回のチュートリアルでは、Peerオブジェクトの破棄は省略しているため未使用です。
+
+*Objective-C*
+{: .lang}
+
+```objc
+//
+// Unset callbacks for PEER_EVENTs
+//
+- (void)unsetPeerCallbacks {
+    if (nil == _peer) {
+        return;
+    }
+    
+    [_peer on:SKW_PEER_EVENT_OPEN callback:nil];
+    [_peer on:SKW_PEER_EVENT_CONNECTION callback:nil];
+    [_peer on:SKW_PEER_EVENT_CALL callback:nil];
+    [_peer on:SKW_PEER_EVENT_CLOSE callback:nil];
+    [_peer on:SKW_PEER_EVENT_DISCONNECTED callback:nil];
+    [_peer on:SKW_PEER_EVENT_ERROR callback:nil];
 }
 
-//ビデオ通話を終了する
-func closeChat(){
-    if _mediaConnection != nil{
-        if _msRemote != nil{
-            let remoteVideoView:SKWVideo = self.view.viewWithTag(ViewTag.TAG_REMOTE_VIDEO.hashValue) as! SKWVideo
-
-            remoteVideoView .removeSrc(_msRemote, track: 0)
-            _msRemote?.close()
-            _msRemote = nil
-        }
-        _mediaConnection?.close()
+//
+// Unset callbacks for MEDIACONNECTION_EVENTs
+//
+- (void)unsetMediaCallbacks {
+    if(nil == _mediaConnection) {
+        return;
     }
+    
+    [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_STREAM callback:nil];
+    [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_CLOSE callback:nil];
+    [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_ERROR callback:nil];
+}
+```
+
+#### 着信処理
+
+相手から接続要求がきた場合に応答します。   
+相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。引き数として相手との接続を管理するためのCallオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
+この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することが出来るようになります。  
+発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
+
+*Objective-C*
+{: .lang}
+
+
+```objc
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // 省略
+   
+    // CALL (Incoming call)
+    [_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj) {
+        if (YES == [obj isKindOfClass:[SKWMediaConnection class]]) {
+            _mediaConnection = (SKWMediaConnection *)obj;
+            [self setMediaCallbacks];
+            [_mediaConnection answer:_localStream];
+        }
+    }];
+```
+
+
+#### MediaConnectionオブジェクトに必要なイベント
+
+MediaConnectionオブジェクトに必要なイベントコールバックです。  
+`SKW_MEDIACONNECTION_EVENT_STREAM`は相手の映像・音声を受信した際に発火します。  
+コールバック内では、UI上の接続ステータスのアップデート処理と、取得した相手のMediaStreamオブジェクトにaddVideoRendererメソッドを利用して、ビデオレンダラーを割り当てます。
+
+*Objective-C*
+{: .lang}
+
+```objc
+//
+// Set callbacks for MEDIACONNECTION_EVENTs
+//
+- (void)setMediaCallbacks {
+    if (nil == _mediaConnection) {
+        return;
+    }
+    
+    [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_STREAM callback:^(NSObject* obj) {
+        if (YES == [obj isKindOfClass:[SKWMediaStream class]]) {
+            if (YES == _bConnected) {
+                return;
+            }
+            
+            // Change connection state
+            _bConnected = YES;
+            [self updateActionButtonTitle];
+            
+            // Get a remote MediaStream & show it
+            _remoteStream = (SKWMediaStream *)obj;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [_remoteStream addVideoRenderer:_remoteView track:0];
+            });
+            
+        }
+    }];
+   
+}
+
+```
+
+`SKW_MEDIACONNECTION_EVENT_CLOSE`は相手がメディアコネクションの切断処理を実行し、実際に切断されたら発火します。  
+コールバック内では、必要な切断処理を実行します。詳細は後述します。
+
+*Objective-C*
+{: .lang}
+
+```objc
+//
+// Set callbacks for MEDIACONNECTION_EVENTs
+//
+- (void)setMediaCallbacks {
+
+    // 省略
+    
+    [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_CLOSE callback:^(NSObject* obj) {
+        if (NO == _bConnected) {
+            return;
+        }
+        
+        [self closeRemoteStream];
+        [self unsetMediaCallbacks];
+        _mediaConnection = nil;
+        
+        _bConnected = NO;
+        [self updateActionButtonTitle];
+        
+    }];
+    
+}
+
+```
+
+`SKW_MEDIACONNECTION_EVENT_ERROR`は何らかのエラーが発生した際に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
+
+*Objective-C*
+{: .lang}
+
+```objc
+//
+// Set callbacks for MEDIACONNECTION_EVENTs
+//
+- (void)setMediaCallbacks {
+
+    // 省略
+    
+    [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_ERROR callback:^(NSObject* obj) { }];
 }
 ```
 
 ### UIのセットアップ
+{: #setup-ui }
 
-UIの初期化。
-
-*Objective-C*
-{: .lang}
-
-```objc
-略
-UIButton* btnCall = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-[btnCall setTag:TAG_WEBRTC_ACTION];
-[btnCall setFrame:rcCall];
-[btnCall setTitle:@"Call" forState:UIControlStateNormal];
-[btnCall addTarget:self action:@selector(pushCallButton:) forControlEvents:UIControlEventTouchUpInside];
-[self.view addSubview:btnCall];
-略)
-}
-略）
-- (void)pushCallButton:(NSObject *)sender
-{
-	UIButton* btn = (UIButton *)sender;
-	
-	if (TAG_WEBRTC_ACTION == btn.tag)
-	{
-		if (nil == _mediaConnection)
-		{
-			// Listing all peers
-            [self getPeerList];
-		}
-		else
-		{
-			// Closing chat
-			[self performSelectorInBackground:@selector(closeChat) withObject:nil];
-		}
-	}
-	
-}
-```
-
-*Swift*
-{: .lang}
-
-```swift
-//ボタンはstoryboardで設定
-
-@IBAction func pushCallButton(sender: AnyObject) {
-    if self._mediaConnection == nil {
-        self.getPeerList()
-    }else{
-        self.performSelectorInBackground("closeChat", withObject: nil)
-    }
-}
-```
-
-UIの更新。
+UI関連の必要な処理を追記してください。  
+actionButtonはトグルで利用するため、接続状態に応じてラベルを張り替えます。updateActionButtonTitleメソッドの中身を追記して下さい。
 
 *Objective-C*
 {: .lang}
 
 ```objc
--(void)updateUI{
+//
+// Update actionButton title
+//
+- (void)updateActionButtonTitle {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        //update Call Button
-        UIButton* btn = (UIButton *)[self.view viewWithTag:TAG_WEBRTC_ACTION];
-        if (NO == _bEstablished)
-        {
-            [btn setTitle:@"Call" forState:UIControlStateNormal];
-        }
-        else
-        {
-            [btn setTitle:@"Hang up" forState:UIControlStateNormal];
-        }
-
-        //update ID Label
-        UILabel* lbl = (UILabel*)[self.view viewWithTag:TAG_ID];
-        if (nil == _id)
-        {
-            [lbl setText:@"your ID: "];
-        }
-        else
-        {
-            [lbl setText:[NSString stringWithFormat:@"your ID: \n%@", _id]];
-        }
+        NSString* title = (_bConnected) ? @"Hang up" : @"Make Call";
+        [_actionButton setTitle:title forState:UIControlStateNormal];
     });
+    
 }
 ```
 
-*Swift*
+### カメラの切り替え
+{: #switch-camera}
+
+最後にカメラの切り替え処理を追記してください。  
+getCameraPositionメソッドで該当メディアストリームで利用しているカメラ位置情報を取得します。その取得結果を利用して、トグルで切り替えます。
+
+*Objective-C*
 {: .lang}
 
-```swift
-func updateUI(){
-    dispatch_async(dispatch_get_main_queue()) { () -> Void in
-        
-        //CALLボタンのアップデート
-        if self._bEstablished == false{
-            self.callButton.titleLabel?.text = "CALL"
-        }else{
-            self.callButton.titleLabel?.text = "Hang up"
-        }
-        
-        //IDラベルのアップデート
-        if self._id == nil{
-            self.idLabel.text = "your Id:"
-        }else{
-            self.idLabel.text = "your Id:"+self._id! as String
-        }
+```objc
+//
+// Action for switchCameraButton
+//
+- (IBAction)onSwitchCameraButtonClicked:(id)sender {
+    if(nil == _localStream) {
+        return;
     }
+    
+    SKWCameraPositionEnum pos = [_localStream getCameraPosition];
+    if(SKW_CAMERA_POSITION_BACK == pos) {
+        pos = SKW_CAMERA_POSITION_FRONT;
+    }
+    else if(SKW_CAMERA_POSITION_FRONT == pos) {
+        pos = SKW_CAMERA_POSITION_BACK;
+    }
+    else {
+        return;
+    }
+    
+    [_localStream setCameraPosition:pos];
 }
 ```
 
-これで完成です。
+### 動作確認
+{: #testing }
+
+実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することが出来ます。
 
 ## SDKのダウンロード
+{: #sdkdownload }
 
-[ZIPでダウンロード](#){: .btn .btn-primary}
-[GitHubでクローン](#){: .btn .btn-secondary}
+
+- CocoaPodsを利用する場合
+  - Podfile作成
+  ```
+  platform :ios, '7.0'
+  pod 'ECLWebRTC-iOS-SDK'
+  ```
+  - インストール
+  ```
+  $ pod install
+  ```
+
+- ファイルでダウンロードする場合
+
+  [ZIPでダウンロード](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip){: .btn .btn-primary}
+  [GitHubでクローン（git-lfsをインストールする必要あり）](https://github.com/nttcom/ECLWebRTC-iOS-SDK){: .btn .btn-secondary}
+
+
+## 対応OS
+{: #supportedos }
+
+- iOS 8+
+
 
 ## APIリファレンス
 
-[APIリファレンスを見る](#){: .btn .btn-primary}
+- ECLWebRTCをご利用のお客様
+
+  [APIリファレンスを見る](#){: .btn .btn-primary}
+
+- SkyWayをご利用のお客様
+
+  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#iOS){: .btn .btn-secondary target="_blank"}
+
+- ECLWebRTCとSkyWayのAPI差分
+
+  APIリファレンスの差分情報を[Github](https://github.com/nttcom/skyway-sdk-migration-docs)で提供しています。
+
 
 ## サンプルコード
 {: #sample-code }
@@ -590,35 +774,4 @@ func updateUI(){
 ## サポート
 {: #support }
 
-<div class="row">
-  <div class="col-sm-4 h-100">
-    <div class="card h-100">
-      <div class="card-block">
-        <h3 class="card-title">FAQ</h3>
-        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
-        <p class="card-text">よくある質問や開発ノウハウをFAQとして公開しています<BR>困った場合はまず検索してみて下さい</p>
-        <a href="#" class="btn btn-primary">FAQを確認</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-4 h-100">
-    <div class="card h-100">
-      <div class="card-block">
-        <h3 class="card-title">Technical Forum</h3>
-        <p class="card-text"><small class="text-muted">Enterprise Edition / Community Edition</small></p>
-        <p class="card-text">FAQだけでは解決できない事がある場合<BR>開発者同士の議論や情報交換にご活用下さい</p>
-        <a href="#" class="btn btn-primary">Technical Forumに参加</a>
-      </div>
-    </div>
-  </div>
-    <div class="col-sm-4 h-100">
-      <div class="card h-100">
-        <div class="card-block">
-          <h3 class="card-title">チケットサポート</h3>
-          <p class="card-text"><small class="text-muted">Enterprise Edition 限定</small></p>
-          <p class="card-text">ダッシュボードよりチケットを利用して開発に関する問い合わせが可能です<BR>詳しい利用方法は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html" target="_blank">「チケットシステムのご利用方法」</a>をご覧下さい</p>
-          <a href="#" class="btn btn-primary">ダッシュボードにログイン</a>
-        </div>
-      </div>
-    </div>
-</div>
+{% include support-cards.html %}

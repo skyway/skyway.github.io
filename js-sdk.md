@@ -13,9 +13,8 @@ lang: ja
         <li class="nav-item"><a href="#craete-project" class="nav-link">プロジェクトの作成</a></li>
         <li class="nav-item"><a href="#getUserMedia" class="nav-link">カメラ映像、マイク音声の取得</a></li>
         <li class="nav-item"><a href="#connect-server" class="nav-link">ECLWebRTCサーバへ接続</a></li>
-        <li class="nav-item"><a href="#eventlistener" class="nav-link">接続成功・失敗時の処理</a></li>
+        <li class="nav-item"><a href="#eventlistener" class="nav-link">接続成功・失敗・切断時の処理</a></li>
         <li class="nav-item"><a href="#call-event" class="nav-link">発信・切断処理</a></li>
-        <li class="nav-item"><a href="#answer" class="nav-link">着信処理</a></li>
         <li class="nav-item"><a href="#setup-ui" class="nav-link">UIのセットアップ</a></li>
         <li class="nav-item"><a href="#testing" class="nav-link">動作確認</a></li>
     </ul>
@@ -117,8 +116,9 @@ WebRTCの機能をローカル環境で利用する場合は、Webサーバを�
 ### カメラ映像、マイク音声の取得
 {: #getUserMedia }
 
-Webブラウザでカメラ映像、マイク音声を取得するためには、`getUserMedia`というAPIを利用します。  
-以下のコードを追記して下さい。
+映像・音声を取得する処理を追記してください。
+Webブラウザでカメラ映像、マイク音声を取得するためには、getUserMediaというAPIを利用します。    
+getUserMediaで取得した、Streamオブジェクト（自分の映像）を表示用のVIDEO要素にセットします。  
 
 *JavaScript*
 {: .lang}
@@ -129,7 +129,7 @@ Webブラウザでカメラ映像、マイク音声を取得するためには�
     navigator.mediaDevices.getUserMedia({video: true, audio: true})
         .then(function (stream) {
             // Success
-            $('#myStream').get(0).srcObject = stream;
+            $('#myStream').srcObject = stream;
             localStream = stream;
         }).catch(function (error) {
             // Error
@@ -218,17 +218,17 @@ Peerオブジェクトを作成するための処理を追記してください�
     });
 ```
 
-`new Peer`で指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
 
-### 接続成功・失敗時の処理
+### 接続成功・失敗・切断時の処理
 {: #eventlistener }
 
 Peerオブジェクトに必要なEventListenerを追記してください。
 
-#### Openイベント
+#### OPENイベント
 
 ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
-PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベント取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
+PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
 以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
 
 *JavaScript*
@@ -240,7 +240,7 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
     });
 ```
 
-#### Errorイベント
+#### ERRORイベント
 
 何らかのエラーが発生した場合に発火します。エラーが発生したら、アラートメッセージでその内容を表示できるようにします。
 
@@ -253,15 +253,42 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
     });
 ```
 
-### 発信・切断処理
+#### CLOSEイベント
+
+Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+
+*JavaScript*
+{: .lang}
+
+```js
+    peer.on('close', function(){
+    });
+```
+
+#### DISCONNECTEDイベント
+
+シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+
+*JavaScript*
+{: .lang}
+
+```js
+    peer.on('disconnected', function(){
+    });
+```
+
+
+### 発信・切断・着信処理
 {: #call-event }
+
+発信、切断、着信をするための処理を追記してください。
 
 #### 発信処理
 
-発信ボタンをクリックした場合に、相手に発信するための処理を追記してください。  
+発信ボタンをクリックした場合に相手に発信します。  
 `peer.call()`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。接続するための相手のPeerIDは、別途何らかの方法で入手する必要があります。  
 発信後はCallオブジェクトが返ってくるため、必要なEventListenerをセットします。  
-setupCallEventHandlers()の中身については後ほど説明します。
+`setupCallEventHandlers`の中身については後ほど説明します。
 
 *JavaScript*
 {: .lang}
@@ -276,7 +303,7 @@ setupCallEventHandlers()の中身については後ほど説明します。
 
 #### 切断処理
 
-切断ボタンをクリックした場合に、相手との接続を切断するための処理を追記してください。  
+切断ボタンをクリックした場合に、相手との接続を切断します。   
 `call.close()`で該当する接続を切断します。発信処理で生成したCallオブジェクトは`existingCall`として保持しておきます。オブジェクト保持は発信処理の`setupCallEventHandlers()`の中で実行します。
 
 *JavaScript*
@@ -287,10 +314,27 @@ setupCallEventHandlers()の中身については後ほど説明します。
         existingCall.close();
     });
 ```
+    
+#### 着信処理
+
+相手から接続要求がきた場合に応答します。    
+相手から接続要求が来た場合は`call`が発火します。引き数として相手との接続を管理するためのCallオブジェクトが取得できるため、`call.answer()`を実行し接続要求に応答します。  
+この時に、自分自身の`localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
+発信時の処理と同じく`setupCallEventHandlers`を実行し、 CallオブジェクトのEventListenerをセットします。
+
+*JavaScript*
+{: .lang}
+
+```js
+    peer.on('call', function(call){
+        call.answer(localStream);
+        setupCallEventHandlers(call);
+    });
+```
 
 #### Callオブジェクトに必要なイベント
 
-Callオブジェクトに必要なEventListenerを追記してください。  
+Callオブジェクトに必要なEventListenerです。    
 今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先します。また、切断処理等で利用するため、Callオブジェクトを`existingCall`として保持しておきます。  
 この処理はアプリの仕様次第です。
 
@@ -341,24 +385,6 @@ Callオブジェクトに必要なEventListenerを追記してください。
             setupMakeCallUI();
         });
     }
-```
-    
-### 着信処理
-{: #answer }
-
-相手から接続要求がきた場合の処理を追記してください。  
-その際、相手との接続を管理するためのCallオブジェクトが取得できるため、それを利用して必要な処理を行います。  
-`call.answer()`を実行し、接続要求に応答します。この時に、自分自身の`localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
-Callオブジェクトを利用したEventListenerについては、発信・切断処理で追記した`setupCallEventHandlers()`と共通です。
-
-*JavaScript*
-{: .lang}
-
-```js
-    peer.on('call', function(call){
-        call.answer(localStream);
-        setupCallEventHandlers(call);
-    });
 ```
 
 ### UIのセットアップ
@@ -414,7 +440,7 @@ PeerIDを元に削除します。
 ### 動作確認
 {: #testing }
 
-2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手の映像がお互いに表示されれば成功です。
+2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手とビデオチャットができれば成功です。
 
 ## SDKのダウンロード
 {: #sdkdownload }
@@ -423,7 +449,7 @@ PeerIDを元に削除します。
 - npmを利用する場合
 
   ```
-  $ npm install eclwebrtc-js
+  $ npm install eclwebrtc-js-sdk
   ```
 
 - CDNを利用する場合
@@ -445,7 +471,6 @@ PeerIDを元に削除します。
 {: #testedbrowser }
 
 - [Google Chrome](https://www.google.com/chrome){: target="_blank"} 最新安定版
-
 - [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 最新安定版
 
 
