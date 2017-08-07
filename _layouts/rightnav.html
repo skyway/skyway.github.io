@@ -29,10 +29,17 @@
 <script>
   $(function() {
     $('#markdown-toc')
+      .children()
+      .children('ul')
+      .children()
+      .children()
+      .addClass('nav-link')
+
+    $('#markdown-toc')
       .addClass('nav flex-column')
       .children()
       .addClass('nav-item')
-      .children()
+      .children('a')
       .addClass('nav-link')
       .parent()
       .parent()
