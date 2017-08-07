@@ -8,7 +8,7 @@
       <div id="main-nav-items" class="collapse navbar-collapse">
         <ul class="nav navbar-nav mr-auto">
 
-          {% if page.title == 'ホーム' %}
+          {% if page.title == site.title[page.lang] %}
           <li class="nav-item active hidden-md-down">
             <a class="nav-link" href="./">ホーム <span class="sr-only">(current)</span></a>
           </li>
@@ -63,11 +63,11 @@
 
           {% if page.title == 'ログイン' %}
           <li class="nav-item active">
-              <a class="nav-link" href="./login.html">ログイン</a> 
+              <a class="nav-link" href="./login.html">ログイン</a>
           </li>
           {% else %}
           <li class="nav-item">
-              <a class="nav-link" href="./login.html">ログイン</a> 
+              <a class="nav-link" href="./login.html">ログイン</a>
           </li>
           {% endif %}
 
