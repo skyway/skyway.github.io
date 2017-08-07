@@ -6,24 +6,8 @@ lang: ja
 
 <!-- div#rightnav -->
 
-<ul id="markdown-toc" class="nav flex-column" style="display: block;">
-    <li class="nav-item"><a href="#tutorial" class="nav-link">チュートリアル</a></li>
-    <ul>
-        <li class="nav-item"><a href="#preparation" class="nav-link">開発前の準備</a></li>
-        <li class="nav-item"><a href="#craete-project" class="nav-link">プロジェクトの作成</a></li>
-        <li class="nav-item"><a href="#getUserMedia" class="nav-link">カメラ映像、マイク音声の取得</a></li>
-        <li class="nav-item"><a href="#connect-server" class="nav-link">ECLWebRTCサーバへ接続</a></li>
-        <li class="nav-item"><a href="#eventlistener" class="nav-link">接続成功・失敗・切断時の処理</a></li>
-        <li class="nav-item"><a href="#call-event" class="nav-link">発信・切断処理</a></li>
-        <li class="nav-item"><a href="#setup-ui" class="nav-link">UIのセットアップ</a></li>
-        <li class="nav-item"><a href="#testing" class="nav-link">動作確認</a></li>
-    </ul>
-    <li class="nav-item"><a href="#sdkdownload" class="nav-link">SDKのダウンロード</a></li>
-    <li class="nav-item"><a href="#testedbrowser" class="nav-link">動作確認済みブラウザ</a></li>
-    <li class="nav-item"><a href="#apireference" class="nav-link">APIリファレンス</a></li>
-    <li class="nav-item"><a href="#sample-code" class="nav-link">サンプルコード</a></li>
-    <li class="nav-item"><a href="#support" class="nav-link">サポート</a></li>
-</ul>
+- TOC
+{:toc}
 
 <!-- div#main -->
 
