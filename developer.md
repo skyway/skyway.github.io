@@ -1,6 +1,6 @@
 ---
 layout: default
-title: デベロッパー
+title: 開発者
 lang: ja
 ---
 

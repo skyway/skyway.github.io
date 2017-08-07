@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Enterprise Cloud WebRTC Platform - ECLWebRTC
 lang: en
 ---
 

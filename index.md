@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ホーム
+title: Enterprise Cloud WebRTC Platform - ECLWebRTC
 lang: ja
 ---
 
