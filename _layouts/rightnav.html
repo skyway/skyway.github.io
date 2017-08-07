@@ -29,6 +29,13 @@
 <script>
   $(function() {
     $('#markdown-toc')
+      .addClass('nav flex-column')
+      .children()
+      .addClass('nav-item')
+      .children()
+      .addClass('nav-link')
+      .parent()
+      .parent()
       .appendTo('#rightnav')
       .show();
   });
