@@ -197,7 +197,7 @@ static NSString *const kDomain = @"domain";
 #### Peerオブジェクトの作成
 
 viewDidLoadメソッド内に、Peerオブジェクトを作成するための処理を追記してください。  
-Peerオブジェクトには、optionクラスを利用し、APIキー、ドメイン名、デバッグレベルを指定してください。
+Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、ドメイン名、デバッグレベルを指定してください。
 
 *Objective-C*
 {: .lang}
@@ -221,7 +221,7 @@ Peerオブジェクトで指定可能なその他のオプションについて�
 ### 接続成功・失敗・切断時の処理
 {: #eventlistener }
 
-引き続きviewDidLoadメソッド内に、Peerオブジェクトに必要なイベントコールバックを追記してください。
+続けて、Peerオブジェクトに必要なイベントコールバックを追記してください。
 
 #### OPENイベント
 
@@ -233,18 +233,18 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
 {: .lang}
 
 ```objc
-    //
-    // Set Peer event callbacks
-    //
+//
+// Set Peer event callbacks
+//
+
+// OPEN
+[_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // OPEN
-    [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
-        
-        // Show my ID
-        _strOwnId = (NSString*) obj;
-        _idLabel.text = _strOwnId;
-                
-    }];
+    // Show my ID
+    _strOwnId = (NSString*) obj;
+    _idLabel.text = _strOwnId;
+            
+}];
 ```
 
 #### カメラ映像、マイク音声の取得
@@ -266,18 +266,18 @@ SKWMediaConstraintsクラスで映像・音声取得に関するオプション�
 {: .lang}
 
 ```objc
-    // OPEN
-    [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
-        
-        // 省略
-        
-        // Set MediaConstraints
-        SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
-        constraints.maxWidth = 960;
-        constraints.maxHeight = 540;
-        constraints.cameraPosition = SKW_CAMERA_POSITION_FRONT;
+// OPEN
+[_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
+    
+    // 省略
+    
+    // Set MediaConstraints
+    SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
+    constraints.maxWidth = 960;
+    constraints.maxHeight = 540;
+    constraints.cameraPosition = SKW_CAMERA_POSITION_FRONT;
 
-    }];        
+}];        
 ```
 
 ##### 取得と再生
@@ -289,20 +289,20 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 {: .lang}
 
 ```objc
-    // OPEN
-    [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
-        
-        // 省略
-        
-        // Set MediaConstraints
-        // 省略
+// OPEN
+[_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
+    
+    // 省略
+    
+    // Set MediaConstraints
+    // 省略
 
-        // Get a local MediaStream & show it
-        [SKWNavigator initialize:_peer];
-        _localStream = [SKWNavigator getUserMedia:constraints];
-        [_localStream addVideoRenderer:_localView track:0];
+    // Get a local MediaStream & show it
+    [SKWNavigator initialize:_peer];
+    _localStream = [SKWNavigator getUserMedia:constraints];
+    [_localStream addVideoRenderer:_localView track:0];
 
-    }];        
+}];        
 ```
 
 
@@ -314,12 +314,12 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 {: .lang}
 
 ```objc
-    // ERROR
-    [_peer on:SKW_PEER_EVENT_ERROR callback:^(NSObject* obj) {
-        SKWPeerError* error = (SKWPeerError*)obj;
-        NSLog(@"%@",error);
-        
-    }];
+// ERROR
+[_peer on:SKW_PEER_EVENT_ERROR callback:^(NSObject* obj) {
+    SKWPeerError* error = (SKWPeerError*)obj;
+    NSLog(@"%@",error);
+    
+}];
 ```
 
 #### CLOSEイベント
@@ -330,8 +330,8 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```objc
-    // CLOSE
-    [_peer on:SKW_PEER_EVENT_CLOSE callback:^(NSObject* obj) {}];
+// CLOSE
+[_peer on:SKW_PEER_EVENT_CLOSE callback:^(NSObject* obj) {}];
 ```
 
 #### DISCONNECTEDイベント
@@ -342,8 +342,8 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```objc
-    // DISCONNECTED
-    [_peer on:SKW_PEER_EVENT_DISCONNECTED callback:^(NSObject* obj) {}];
+// DISCONNECTED
+[_peer on:SKW_PEER_EVENT_DISCONNECTED callback:^(NSObject* obj) {}];
 ```
 
 ### 発信・切断・着信処理
@@ -489,8 +489,8 @@ MediaConnectionオブジェクトのCloseメソッドが実行された後は、
 
 ##### コールバックイベントの解放関連
 
-MediaConnection切断をトリガーに各種コールバックイベントの開放処理を追記してください。  
-尚、`unsetPeerCallbacks`についてはPeerオブジェクトは破棄時に利用します。今回のチュートリアルでは、Peerオブジェクトの破棄は省略しているため未使用です。
+MediaConnection切断時に実行するコールバックイベントの開放処理を追記してください。  
+尚、`unsetPeerCallbacks`についてはPeerオブジェクトの破棄時に利用します。今回のチュートリアルでは、Peerオブジェクトの破棄は省略しているため未使用です。
 
 *Objective-C*
 {: .lang}
@@ -529,7 +529,7 @@ MediaConnection切断をトリガーに各種コールバックイベントの�
 #### 着信処理
 
 相手から接続要求がきた場合に応答します。   
-相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。引き数として相手との接続を管理するためのCallオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
+相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。引き数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
 この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することが出来るようになります。  
 発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
 
@@ -648,7 +648,7 @@ MediaConnectionオブジェクトに必要なイベントコールバックで�
 {: #setup-ui }
 
 UI関連の必要な処理を追記してください。  
-actionButtonはトグルで利用するため、接続状態に応じてラベルを張り替えます。updateActionButtonTitleメソッドの中身を追記して下さい。
+actionButtonはトグルで利用するため、接続状態に応じてラベルを張り替えます。updateActionButtonTitleメソッドの中身を追記してください。
 
 *Objective-C*
 {: .lang}
