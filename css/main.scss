@@ -385,8 +385,6 @@ html {
     .mini-headline-date {
       float: right;
       padding: 0;
-      // height: 28px;
-      // line-height: 28px;
       text-align: center;
       color: $color-base;
       padding: 0.5rem 0 0 0;
@@ -401,6 +399,7 @@ html {
       padding: 0.5rem;
       border-radius: 5px;
       color: #8f8f8f;
+      line-height: 1.2;
       p {
         margin-bottom: 0.5rem;
       }
