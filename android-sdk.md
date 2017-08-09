@@ -511,8 +511,7 @@ void showPeerIDs() {
 ##### 発信
 
 `PeerListDialogFragment`でPeerIDが選択されたら、onPeerSelectedメソッドが呼ばれます。相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
-発信後は必要なイベントコールバックをセットします。  
-`setMediaCallbacks`の中身については後ほど説明します。
+発信後は必要なイベントコールバックをセットします。`setMediaCallbacks`の中身については後ほど説明します。
 
 *Java*
 {: .lang}
@@ -602,44 +601,6 @@ void closeRemoteStream(){
 }
 ```
 
-##### コールバックイベントの解放関連
-
-MediaConnection切断時に実行するコールバックイベントの開放処理を追記してください。  
-
-*Java*
-{: .lang}
-
-```java
-//
-// Unset callbacks for PeerEvents
-//
-void unsetPeerCallback(Peer peer) {
-  if(null == _peer){
-    return;
-  }
-
-  peer.on(Peer.PeerEventEnum.OPEN, null);
-  peer.on(Peer.PeerEventEnum.CONNECTION, null);
-  peer.on(Peer.PeerEventEnum.CALL, null);
-  peer.on(Peer.PeerEventEnum.CLOSE, null);
-  peer.on(Peer.PeerEventEnum.DISCONNECTED, null);
-  peer.on(Peer.PeerEventEnum.ERROR, null);
-}
-
-//
-// Unset callbacks for MediaConnection.MediaEvents
-//
-void unsetMediaCallbacks() {
-  if(null == _mediaConnection){
-    return;
-  }
-
-  _mediaConnection.on(MediaConnection.MediaEventEnum.STREAM, null);
-  _mediaConnection.on(MediaConnection.MediaEventEnum.CLOSE, null);
-  _mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, null);
-}
-```
-
 #### 着信処理
 
 相手から接続要求がきた場合に応答します。   
@@ -699,7 +660,7 @@ void setMediaCallbacks() {
 ```
 
 `SKW_MEDIACONNECTION_EVENT_CLOSE`は相手がメディアコネクションの切断処理を実行し、実際に切断されたら発火します。  
-コールバック内では、必要な切断処理を実行します。詳細は後述します。
+コールバック内では、必要な切断処理を実行します。`closeRemoteStream`、`updateActionButtonTitle`の中身については後ほど説明します。
 
 *Java*
 {: .lang}
@@ -750,7 +711,11 @@ void setMediaCallbacks() {
 
 ### Activityライフサイクルに必要な処理
 
-Activityライフサイクルな各種メソッドに処理を追記してください。
+Activityライフサイクルに必要な処理を追記してください。  
+
+#### Overrideメソッドの処理
+
+Ovverrideされたメソッドに必要な処理を追記してください。  
 onDestoryメソッド内では、Peerオブジェクトを破棄するために`destoryPeer`を実行します。中身については後ほど説明します。
 
 *Java*
@@ -798,15 +763,18 @@ protected void onDestroy() {
 }
 ```
 
-### Peerオブジェクトの破棄
+#### Activity破棄時の処理
 
-Activityが破棄されるタイミングで必要な処理を追記してください。ここで実行されている処理の概要は以下のとおりです。  
+Activityが破棄されるタイミングで必要な処理を追記してください。  
+ここで実行されている処理の概要は以下のとおりです。  
 
 - リモート/ローカルのメディアストリームのクローズ
-- 各種コールバックイベントの開放
+- MediaConnectionオブジェクトに関するコールバックイベントの開放(`unsetMediaCallbacks`)
 - Navigatorオブジェクトの初期化
-- シグナリングサーバとの切断
-- Peerオブジェクトの破棄
+- Peerオブジェクトに関するコールバックイベントの開放(`unsetPeerCallback`)
+- シグナリングサーバとの切断とPeerオブジェクトの破棄
+
+`unsetMediaCallbacks`、`unsetPeerCallback`の中身については後ほど説明します。
 
 *Java*
 {: .lang}
@@ -845,6 +813,45 @@ private void destroyPeer() {
 
     _peer = null;
   }
+}
+```
+
+
+#### コールバックイベントの開放処理
+
+MediaConnectionオブジェクト、Peerオブジェクトに関するコールバックイベントの開放処理を追記してください。  
+
+*Java*
+{: .lang}
+
+```java
+//
+// Unset callbacks for PeerEvents
+//
+void unsetPeerCallback(Peer peer) {
+  if(null == _peer){
+    return;
+  }
+
+  peer.on(Peer.PeerEventEnum.OPEN, null);
+  peer.on(Peer.PeerEventEnum.CONNECTION, null);
+  peer.on(Peer.PeerEventEnum.CALL, null);
+  peer.on(Peer.PeerEventEnum.CLOSE, null);
+  peer.on(Peer.PeerEventEnum.DISCONNECTED, null);
+  peer.on(Peer.PeerEventEnum.ERROR, null);
+}
+
+//
+// Unset callbacks for MediaConnection.MediaEvents
+//
+void unsetMediaCallbacks() {
+  if(null == _mediaConnection){
+    return;
+  }
+
+  _mediaConnection.on(MediaConnection.MediaEventEnum.STREAM, null);
+  _mediaConnection.on(MediaConnection.MediaEventEnum.CLOSE, null);
+  _mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, null);
 }
 ```
 
