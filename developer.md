@@ -39,51 +39,54 @@ ECLWebRTCを利用すればアプリケーションの開発を簡単に始め�
 
 Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDKを用意しています。
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="list-group">
-                <a href="./js-sdk.html" class="list-group-item active">
-               <i class="fa fa-television fa-fw fa-3x" aria-hidden="true"></i> JavaScript SDK
-                </a>
-                <a href="/js-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-                <a href="/js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-                <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
-            </div>
+<div id="sdk-div" class="row">
+    <div class="col-6 col-md-3">
+        <div class="list-group">
+            <a href="./js-sdk.html" class="list-group-item active list-head">
+                <i class="fa fa-television fa-fw col-4" aria-hidden="true"></i>
+                <span class="col-8">JavaScript SDK</span>
+            </a>
+            <a href="/js-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="/js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
-        <div class="col">
-            <div class="list-group">
-                <a href="./ios-sdk.html" class="list-group-item active">
-                <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i> iOS SDK
-                </a>
-                <a href="ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-                <a href="ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-                <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
-            </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="list-group">
+            <a href="./ios-sdk.html" class="list-group-item active list-head">
+                <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i>
+                <span>iOS SDK</span>
+            </a>
+            <a href="ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
-        <div class="col">
-            <div class="list-group">
-                <a href="./android-sdk.html" class="list-group-item active">
-                <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i> Android SDK
-                </a>
-                <a href="./android-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-                <a href="/android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-                <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
-            </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="list-group">
+            <a href="./android-sdk.html" class="list-group-item active list-head">
+                <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i>
+                <span>Android SDK</span>
+            </a>
+            <a href="./android-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="/android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
-        <div class="col">
-            <div class="list-group">
-                <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="list-group-item active">
-                  <i class="fa fa-microchip fa-fw fa-3x" aria-hidden="true"></i> IoT SDK β version
-                </a>
-                <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_install.md" target="_blank" class="list-group-item list-group-item-action">インストール</a>
-                <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_use_sample_app.md" target="_blank" class="list-group-item list-group-item-action">利用手順</a>
-                <a href="https://github.com/nttcom/skyway-iot-sdk/tree/master/docs/apiref" target="_blank" class="list-group-item list-group-item-action">APIリファレンス</a>
-                <a href="https://github.com/nttcom/skyway-siru-sample" target="_blank" class="list-group-item list-group-item-action">サンプルコード</a>
-            </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="list-group">
+            <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="list-group-item active list-head">
+                <i class="fa fa-microchip fa-fw fa-3x" aria-hidden="true"></i>
+                <span>IoT SDK</span>
+                <small>β version</small>
+            </a>
+            <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_install.md" target="_blank" class="list-group-item list-group-item-action">インストール</a>
+            <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_use_sample_app.md" target="_blank" class="list-group-item list-group-item-action">利用手順</a>
+            <a href="https://github.com/nttcom/skyway-iot-sdk/tree/master/docs/apiref" target="_blank" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="https://github.com/nttcom/skyway-siru-sample" target="_blank" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
     </div>
 </div>
@@ -92,9 +95,9 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 ## すべての機能 
 
-<div class="row">
-    <div class="col-sm-4">
-        <div class="card">
+<div id="feature-div" class="row">
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">Media & Data</h3>
@@ -102,17 +105,17 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card">
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">シグナリング</h3>
                 <p class="card-text">IPアドレスやコーデック等の情報を相手と交換する為のサーバ、多人数通話に便利なRoom管理機能を備える</p>
             </div>
         </div>
-    </div>    
-    <div class="col-sm-4">
-        <div class="card">
+    </div>
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">STUN</h3>
@@ -120,11 +123,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             </div>
         </div>
     </div>
-</div>
-<br>
-<div class="row">
-    <div class="col-sm-4">
-        <div class="card">
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">認証</h3>
@@ -133,8 +133,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card">
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">TURN</h3>
@@ -143,8 +143,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="card">
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">SFU</h3>
@@ -154,11 +154,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             </div>
         </div>
     </div>
-</div>
-<br>
-<div class="row">
-    <div class="col-sm-4">
-        <div class="card">
+    <div class="col-6 col-sm-4">
+        <div class="card h-100">
             <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">画面共有</h3>
@@ -173,21 +170,28 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 開発に役立つドキュメントを公開しています。
 
-<div class="list-group">
-  <a href="./migration.html" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h3 class="mb-1"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>SkyWayからECLWebRTCへの移行方法</h3>
-      <small>2017年09月05日 公開</small>
+
+<div id="docs-div" class="row">
+    <div class="col-12 col-md-6">
+        <div class="card h-100">
+            <div class="card-block">
+                <h3 class="card-title">SkyWayからECLWebRTCへの移行方法</h3>
+                <p class="card-text">SkyWayは2018年3月31日をもってサービスを終了します。ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。</p>
+                <small class="text-muted">2017.9.5</small>
+                <a href="./sfu.html" class="btn btn-primary">マイグレーション</a>
+            </div>
+        </div>
     </div>
-    <p class="mb-1">SkyWayは2018年3月31日をもってサービスを終了します。<br>ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。<br>Community EditionからEnterprise Editionへの移行方法も合わせてご確認いただけます。</p>
-  </a>
-  <a href="http://webrtc-security.github.io/index.html" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h3 class="mb-1"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>WebRTCセキュリティレポート</h3>
-      <small>2015年7月28日 公開</small>
+    <div class="col-12 col-md-6">
+        <div class="card h-100">
+            <div class="card-block">
+                <h3 class="card-title">WebRTCセキュリティレポート</h3>
+                <p class="card-text">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。</p>
+                <small class="text-muted">2015.7.28</small>
+                <a href="./sfu.html" class="btn btn-primary">セキュリティレポート</a>
+            </div>
+        </div>
     </div>
-    <p class="mb-1">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。<br>Community EditionからEnterprise Editionへの移行方法も合わせてご確認いただけます。</p>
-  </a>
 </div>
 
 ## サポート

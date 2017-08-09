@@ -72,10 +72,10 @@ window.onload = function () {
 function updateNews(obj,id,siteurl){
   var dom = '';
   for(var i = 0;i < obj.articles.length;i++){
-    dom += '<div class="row"><div class="col-sm-2"><div class="col-sm-10 col-sm-offset-1">'
+    dom += '<div class="row"><div class="col-12 col-sm-2"><div class="mini-headline-date">'
       + obj.articles[i].body.substr(4,10)
-      + '</div></div><div class="col-sm-10">'
-      + obj.articles[i].body + '</div></div>'
+      + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
+      + obj.articles[i].body + '</div></div></div>'
   }
   dom += '<a  href=' + siteurl + ' target="_blank">'
     + 'すべてのニュース'
