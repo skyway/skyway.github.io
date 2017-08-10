@@ -98,7 +98,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 <div id="feature-div" class="row">
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">Media & Data</h3>
                 <p class="card-text">提供するSDKではメディアチャンネル・データチャンネルを利用可能</p>
@@ -107,7 +106,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">シグナリング</h3>
                 <p class="card-text">IPアドレスやコーデック等の情報を相手と交換する為のサーバ、多人数通話に便利なRoom管理機能を備える</p>
@@ -116,7 +114,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">STUN</h3>
                 <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<BR></p>
@@ -125,7 +122,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">認証</h3>
                 <p class="card-text">APIキーの不正利用を防止するための認証機能を提供</p>
@@ -135,7 +131,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">TURN</h3>
                 <p class="card-text">Peer to Peerで通信が確立できない環境にメディアを中継するサーバを提供</p>
@@ -145,7 +140,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">多人数通話や配信を実現する、映像・音声送信を代行するメディアサーバを提供</p>
@@ -156,7 +150,6 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
             <div class="card-block">
                 <h3 class="card-title">画面共有</h3>
                 <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
