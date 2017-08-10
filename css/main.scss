@@ -211,9 +211,15 @@ html {
     }
   }
 
+  .highlight {
+    padding: 0.5em;
+    line-height: 1.3;
+  }
+
   .lang { // Sprint3 で真面目に書く
     background-color: #f8f8f8;
     margin-bottom: 0;
+    font-size: 0.85em;
 
     em {
       font-style: normal;
@@ -228,14 +234,13 @@ html {
     margin-bottom: 1rem;
   }
 
-  & > h2:not(:first-child), & > h3 {
-    margin-top: 3rem;
+  & > h2, & > h3, & > h4, & > h5, & > h6 {
+    margin-top: 3.5rem;
     margin-bottom: 1rem;
   }
 
-  & > h4, & > h5, & > h6 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+  & > h1 + h2, & > h2 + h3, & > h3 + h4, & > h4 + h5, & > h5 + h6 {
+    margin-top: 2rem;
   }
 
   .jumbotron span, .card span {

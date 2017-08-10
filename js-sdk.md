@@ -58,25 +58,33 @@ WebRTCの機能をローカル環境で利用する場合は、Webサーバを�
 
 以下に示す幾つかの方法で、Webサーバをローカル環境で利用することが出来ます。
 
-- python 2.X
-    ```
-    $ python -m SimpleHTTPServer 8080
-    ```
+*python 2.X*
+{: .lang }
 
-- python 3.X
-    ```
-    $ python -m http.server 8080
-    ```
+```sh
+$ python -m SimpleHTTPServer 8080
+```
 
-- ruby
-    ```
-    $ ruby -run -e httpd . -p 8080
-    ```
+*python 3.X*
+{: .lang }
 
-- php
-    ```
-    $ php -S localhost:8080
-    ```
+```sh
+$ python -m http.server 8080
+```
+
+*ruby*
+{: .lang }
+
+```sh
+$ ruby -run -e httpd . -p 8080
+```
+
+*php*
+{: .lang }
+
+```sh
+$ php -S localhost:8080
+```
 
 ##### Windowsの場合
 
@@ -124,16 +132,11 @@ getUserMediaで取得した、Streamオブジェクト（自分の映像）を�
 
 getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指定をすることも可能です。
 
-- 例：VideoのみキャプチャしAudioは取り込まない
-
+- 例：VideoのみキャプチャしAudioは取り込まない    
 `{video: true, audio: false}`
-
-- 例：キャプチャサイズの設定例
-
+- 例：キャプチャサイズの設定例    
 `{ audio: true, video: { width: 640, height: 480 } }`
-
-- 例：フレームレートの設定（2017.08現在、Chromeでしか動作しません）
-
+- 例：フレームレートの設定（2017.08現在、Chromeでしか動作しません）    
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
 ##### APIを使用する上の注意点1
@@ -432,7 +435,7 @@ PeerIDを元に削除します。
 
 - npmを利用する場合
 
-  ```
+  ```sh
   $ npm install eclwebrtc-js-sdk
   ```
 
