@@ -77,7 +77,7 @@ function updateNews(obj,id,siteurl){
       + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
       + obj.articles[i].body + '</div></div></div>'
   }
-  dom += '<a  href=' + siteurl + ' target="_blank">'
+  dom += '<a class="allnewslink btn btn-primary" href=' + siteurl + ' target="_blank">'
     + 'すべてのニュース'
     + '</a>';
   $('#'+id).html(dom);

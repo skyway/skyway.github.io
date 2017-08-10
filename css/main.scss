@@ -256,6 +256,13 @@ html {
   }
   .tab-content {
     background: #f8f8f8;
+    height: 30rem;
+    overflow-y: scroll;
+    .allnewslink {
+      position: sticky;
+      left: 0.5rem;
+      bottom: 0.5rem;
+    }
   }
 
   // index.html系
