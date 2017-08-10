@@ -188,12 +188,17 @@ html {
     @extend .table;
   }
   .row {
+    margin-left: -6px;
+    margin-right: -6px;
+
     .col-6, .col-sm-6, .col-12 {
       padding: 6px;
     }
 
     @include media-breakpoint-down(xs) {
-      padding: 0 1rem;
+      // padding: 0 1rem;
+      padding-left: 6px;
+      padding-right: 6px;
       .card-block {
         padding: 0.5rem;
       }
