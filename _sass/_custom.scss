@@ -18,7 +18,9 @@ $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
 
-// Typography
+// Fonts
+
+$headings-font-weight: 600;
 
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, sans-serif;
 $font-family-base:       $font-family-sans-serif;

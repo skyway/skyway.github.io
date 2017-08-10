@@ -225,14 +225,17 @@ html {
 
   h1 {
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   & > h2:not(:first-child), & > h3 {
     margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 
   & > h4, & > h5, & > h6 {
     margin-top: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .jumbotron span, .card span {
@@ -534,6 +537,38 @@ html {
     }
   }
 
+  // Anchor
+  .header-link {
+    position: absolute;
+    padding-right: .5em;
+    margin-left: -1em;
+    color: inherit !important;
+    text-decoration: none !important;
+    opacity: 0;
+  }
+
+  .header-link .fa {
+    font-size: 66%;
+    vertical-align: .1em;
+  }
+
+  /* do not display in less than 768px screen */
+  @media (max-width: 767px) {
+    .header-link {
+      display: none !important;
+    }
+  }
+
+  *:hover > .header-link {
+    opacity: .75;
+    -webkit-transition: color .16s linear;
+    transition: color .16s linear;
+  }
+
+  *:hover > .header-link:hover,
+  *:hover > .header-link:focus {
+    opacity: 1;
+  }
 }
 
 // right nav

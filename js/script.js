@@ -100,3 +100,20 @@ function initCollapseIconToggle(){
     }
   });
 }
+
+// Anchor
+$(function() {
+  'use strict';
+
+  var headers = '#main > h2, #main > h3, #main > h4, #main > h5, #main > h6';
+  $(headers).filter('[id]').each(function () {
+    var header    = $(this),
+      headerId    = header.attr('id'),
+      anchorClass = 'header-link',
+      anchorIcon  = '<i class="fa fa-link" aria-hidden="true"></i>';
+    if (headerId) {
+      header.prepend($('<a />').addClass(anchorClass).attr({ 'href': '#' + headerId, 'aria-hidden': 'true' }).html(anchorIcon));
+    }
+    return this;
+  });
+});
