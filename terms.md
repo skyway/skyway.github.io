@@ -1,8 +1,11 @@
 ---
-layout: default
+layout: rightnav
 title: 利用規約
 lang: ja
 ---
+
+- TOC
+{:toc}
 
 # 利用規約
 Enterprise Cloud WebRTC Platform Community Edition（以下、ECLWebRTC）をご利用頂くためには本利用規約に同意して頂く必要がございます。
