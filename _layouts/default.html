@@ -5,6 +5,10 @@
 
     {% include header.html %}
 
+    {% if page.main_visual %}
+      {% include main-visual.html %}
+    {% endif %}
+
     <div id="main" class="container">
       {{ content }}
     </div>

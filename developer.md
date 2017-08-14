@@ -2,14 +2,15 @@
 layout: default
 title: 開発者
 lang: ja
+main_visual:
+  main_copy: <span>あなたの</span><wbr><span>アイデアを</span><wbr><span>形にしよう</span>
+  sub_copy: <span>マルチ</span><wbr><span>プラット</span><wbr><span>フォームに</span><wbr><span>対応する</span><wbr><span>SDKや</span><wbr><span>実践的な</span><wbr><span>チュートリアル、</span><wbr><span>豊富な</span><wbr><span>サンプルコードを</span><wbr><span>用意、</span><wbr><span>あなたの</span><wbr><span>アイデアを</span><wbr><span>すぐに</span><wbr><span>形に</span><wbr><span>できます</span>
+  links: 
+  copy_position: ["after"]
+  image_file_name: 
+  font_color: "#fff"
+  background_color: rgb(0, 67, 134)
 ---
-
-<div class="jumbotron">
-  <h1 class="display-4">あなたのアイディアを形にしよう</h1>
-  <p class="lead">マルチプラットフォームに対応するSDKや実践的なチュートリアル、豊富なサンプルコードを用意、あなたのアイディアをすぐに形にできます</p>
-  <p class="lead">
-  </p>
-</div>
 
 ## Get Started
 
