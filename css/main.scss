@@ -251,12 +251,6 @@ html {
     margin-top: 2rem;
   }
 
-  .col > h1, .col > h2, .col > h3, .col > h4, .col > h5, .col > h6 {
-    // グリッド直下の見出しのみに適用
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
   .card span {
     @extend .text-nowrap;
   }

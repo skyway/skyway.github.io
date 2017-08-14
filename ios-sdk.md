@@ -29,36 +29,30 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 ## SDKのダウンロード
 
-<div class="row">
-  <div class="col">
-    <h3 class="h4">CocoaPodsを利用する場合</h3>
-    <p>Podfileを作成して</p>
-    <div class="language-sh highlighter-rouge">
-      <pre class="highlight">
-<code>$ pod init</code></pre>
-    </div>
-    <p>以下を追記し、</p>
-    <p class="lang"><em>Prodfile</em></p>
-    <div class="highlighter-rouge">
-      <pre class="highlight">
-<code>platform :ios, '7.0'
-pod 'ECLWebRTC-iOS-SDK'</code></pre>
-    </div>
-    <p>インストールする。</p>
-    <div class="language-sh highlighter-rouge">
-      <pre class="highlight">
-<code>$ pod install</code></pre>
-    </div>
-  </div>
-  <div class="col">
-    <h3 class="h4">ファイルをダウンロードする場合</h3>
-    <p><a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a></p>
-    <p>
-      <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary">GitHubでクローン</a><br>
-      <small>git-lfsのインストールが必要です</small>
-    </p>
-  </div>
-</div>
+### CocoaPodsを利用する場合
+
+Podfileに以下を追記し、
+
+*Prodfile*
+{: .lang }
+
+```
+platform :ios, '7.0'
+pod 'ECLWebRTC-iOS-SDK'
+```
+
+インストールする。
+
+```sh
+$ pod init</code></pre>
+```
+
+### ファイルをダウンロードする場合
+
+[ZIPでダウンロード](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip){: .btn .btn-primary }
+
+[GitHubでクローン](https://github.com/nttcom/ECLWebRTC-iOS-SDK){: .btn .btn-secondary target=_blank }    
+<small>git-lfsのインストールが必要です</small>
 
 ## 対応OS
 
