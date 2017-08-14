@@ -241,12 +241,20 @@ html {
   }
 
   & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+    // #mainの直下の見出しのみに適用 (.jumbotronや.cardの中の見出しは対象外)
     margin-top: 3.5rem;
     margin-bottom: 1rem;
   }
 
   & > h1 + h2, & > h2 + h3, & > h3 + h4, & > h4 + h5, & > h5 + h6 {
+    // 本文を挟まずに見出しが続いた場合は、間隔を小さめにする
     margin-top: 2rem;
+  }
+
+  .col > h1, .col > h2, .col > h3, .col > h4, .col > h5, .col > h6 {
+    // グリッド直下の見出しのみに適用
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .card span {

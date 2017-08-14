@@ -29,39 +29,47 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 ## SDKのダウンロード
 
-- CocoaPodsを利用する場合
-  - Podfile作成
-  ```
-  platform :ios, '7.0'
-  pod 'ECLWebRTC-iOS-SDK'
-  ```
-  - インストール
-  ```
-  $ pod install
-  ```
-- ファイルでダウンロードする場合
-  [ZIPでダウンロード](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip){: .btn .btn-primary}
-  [GitHubでクローン（git-lfsをインストールする必要あり）](https://github.com/nttcom/ECLWebRTC-iOS-SDK){: .btn .btn-secondary}
-
+<div class="row">
+  <div class="col">
+    <h3 class="h4">CocoaPodsを利用する場合</h3>
+    <p>Podfileを作成して</p>
+    <div class="language-sh highlighter-rouge">
+      <pre class="highlight">
+<code>$ pod init</code></pre>
+    </div>
+    <p>以下を追記し、</p>
+    <p class="lang"><em>Prodfile</em></p>
+    <div class="highlighter-rouge">
+      <pre class="highlight">
+<code>platform :ios, '7.0'
+pod 'ECLWebRTC-iOS-SDK'</code></pre>
+    </div>
+    <p>インストールする。</p>
+    <div class="language-sh highlighter-rouge">
+      <pre class="highlight">
+<code>$ pod install</code></pre>
+    </div>
+  </div>
+  <div class="col">
+    <h3 class="h4">ファイルをダウンロードする場合</h3>
+    <p><a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a></p>
+    <p>
+      <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary">GitHubでクローン</a><br>
+      <small>git-lfsのインストールが必要です</small>
+    </p>
+  </div>
+</div>
 
 ## 対応OS
 
-- iOS 8+
+iOS 8+
 
 ## APIリファレンス
 
-- ECLWebRTCをご利用のお客様
+[ECLWebRTCのAPIリファレンス](#){: .btn .btn-primary}
+[SkyWayのAPIリファレンス](http://nttcom.github.io/skyway/docs/#iOS){: .btn .btn-secondary target="_blank"}
 
-  [APIリファレンスを見る](#){: .btn .btn-primary}
-
-- SkyWayをご利用のお客様
-
-  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#iOS){: .btn .btn-secondary target="_blank"}
-
-- ECLWebRTCとSkyWayのAPI差分
-
-  APIリファレンスの差分情報を[Github](https://github.com/nttcom/skyway-sdk-migration-docs)で提供しています。
-
+[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 
