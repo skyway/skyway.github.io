@@ -131,7 +131,6 @@ html {
 .jumbotron {
   // window width (-575px)
   @include media-breakpoint-up(xs) {
-    margin-top: 20px;
     padding: 1rem 1rem;
 
     .navbar-collapse {
@@ -147,7 +146,6 @@ html {
 
   // window width (576-767px)
   @include media-breakpoint-up(sm) {
-    margin-top: 30px;
     padding: 2rem 2rem;
 
     .display-4 {
@@ -160,7 +158,6 @@ html {
 
   // window width (768-991px)
   @include media-breakpoint-up(md) {
-    margin-top: 40px;
     padding: 4rem 2rem;
     .display-4 {
       font-size: 2.5rem;
@@ -178,6 +175,15 @@ html {
     .lead {
       font-size: 1.5rem;
     }
+  }
+
+  // all width
+  h1:not(:first-child) {
+    margin-top: 2rem;
+  }
+
+  span {
+    @extend .text-nowrap;
   }
 }
 
@@ -234,12 +240,7 @@ html {
     }
   }
 
-  h1 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  & > h2, & > h3, & > h4, & > h5, & > h6 {
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
     margin-top: 3.5rem;
     margin-bottom: 1rem;
   }
@@ -248,7 +249,7 @@ html {
     margin-top: 2rem;
   }
 
-  .jumbotron span, .card span {
+  .card span {
     @extend .text-nowrap;
   }
 

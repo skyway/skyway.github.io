@@ -2,28 +2,15 @@
 layout: default
 title: Enterprise Cloud WebRTC Platform - ECLWebRTC
 lang: ja
+main_visual:
+  main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
+  sub_copy: <span>ECLWebRTC</span><wbr><span>(旧称SkyWay)は、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span>
+  links: 
+  copy_position: ["after"]
+  image_file_name: three_devices.png
+  font_color: "#fff"
+  background_color: rgb(0, 67, 134)
 ---
-
-<!--
-- リンク
-  - [developer.md](developer.md)
-  - [developer.html](developer.html)
-- 画像
-  - ![150x150 dummy image]({{ site.rootdir[page.lang] }}images/150x150.png)
- -->
-
-<div class="jumbotron">
-  <h1 class="display-4"><span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span></h1>
-  <p class="lead"><span>ECLWebRTC</span><wbr><span>(旧称SkyWay)は、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span></p>
-  <div class="row">
-    <div class="col-6">
-      <img src="{{ site.rootdir[page.lang] }}images/index_js_top.png" class="img-fluid">
-    </div>
-    <div class="col-6">
-      <img src="{{ site.rootdir[page.lang] }}images/index_mobile_top.png" class="img-fluid">
-    </div>
-  </div>
-</div>
 
 <div class="card">
   <div class="card-block">

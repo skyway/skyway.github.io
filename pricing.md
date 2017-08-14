@@ -2,16 +2,15 @@
 layout: default
 title: 料金
 lang: ja
+main_visual:
+  main_copy: <span>あなたの</span><wbr><span>イノベーションを</span><wbr><span>始めよう</span>
+  sub_copy: <span>ECLWebRTCは、</span><wbr><span>無料で</span><wbr><span>利用できる</span><wbr>Community Editionを</span><wbr><span>用意して</span><wbr><span>います。</span>
+  links: <p class="lead"><a class="btn btn-secondary btn-lg" href="signup.html" role="button">無料で新規登録</a></p>
+  copy_position: ["after"]
+  image_file_name: 
+  font_color: "#fff"
+  background_color: rgb(0, 67, 134)
 ---
-
-<div class="jumbotron">
-  <h1 class="display-4">あなたのイノベーションを始めよう</h1>
-  <p class="lead">ECLWebRTCは、無料で利用できるCommunity Editionを用意しています。</p>
-  <p class="lead">
-  <a class="btn btn-primary btn-lg" href="#" role="button">無料で新規登録</a>
-  </p>
-</div>
-
 
 ## 料金
 
