@@ -25,10 +25,10 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
   <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
 </figure>
 
-### 開発前の準備
+## 開発前の準備
 {: #preparation }
 
-#### ECLWebRTCのAPIキー発行
+### ECLWebRTCのAPIキー発行
 
 ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
 開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
@@ -44,7 +44,7 @@ ECLWebRTCへの開発者登録がまだの方は、まず、[Community Edition�
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
 |権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
 
-#### 開発環境の準備
+### 開発環境の準備
 
 このチュートリアルでは以下の環境を前提に開発を進めます。
 
@@ -56,7 +56,8 @@ ECLWebRTCへの開発者登録がまだの方は、まず、[Community Edition�
 - 開発言語
   - ObjectiveC
 
-### プロジェクトの作成
+## プロジェクトの作成
+{: #create-project }
 
 チュートリアルで利用するXcodeのプロジェクトは以下のリポジトリからダウンロードしてください。  
 
@@ -113,10 +114,10 @@ SDKのバイナリファイルを配置します。
   <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
 </figure>
 
-### ECLWebRTCサーバへの接続
+## ECLWebRTCサーバへの接続
 {: #connect-server }
 
-#### 宣言
+### 宣言
 
 プログラム中で利用する定数を追記してください。  
 `apikey`には先程ダッシュボードで発行したAPIキーを指定してください。  
@@ -191,7 +192,7 @@ static NSString *const kDomain = @"domain";
 }
 ```
 
-#### Peerオブジェクトの作成
+### Peerオブジェクトの作成
 
 viewDidLoadメソッド内に、Peerオブジェクトを作成するための処理を追記してください。  
 Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、ドメイン名、デバッグレベルを指定してください。
@@ -215,12 +216,12 @@ Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、
 
 Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
 
-### 接続成功・失敗・切断時の処理
+## 接続成功・失敗・切断時の処理
 {: #eventlistener }
 
 続けて、Peerオブジェクトに必要なイベントコールバックを追記してください。
 
-#### OPENイベント
+### OPENイベント
 
 ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
 PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
@@ -244,11 +245,11 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
 }];
 ```
 
-#### カメラ映像、マイク音声の取得
+### カメラ映像、マイク音声の取得
 
 OPENイベントのコールバック内に、カメラ映像とマイク音声を取得するための処理を追記してください。  
 
-##### オプション設定
+#### オプション設定
 
 SKWMediaConstraintsクラスで映像・音声取得に関するオプションを設定可能です。  
 ここで設定している項目の説明は以下のとおりです。  
@@ -277,7 +278,7 @@ SKWMediaConstraintsクラスで映像・音声取得に関するオプション�
 }];        
 ```
 
-##### 取得と再生
+#### 取得と再生
 
 SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分の映像（ローカルストリーム）が取得できます。  
 取得したMediaStreamオブジェクトに、addVideoRendererメソッドを利用して、ビデオレンダラー(表示用のSKWVideoオブジェクト)を割り当てます。
@@ -303,7 +304,7 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 ```
 
 
-#### ERRORイベント
+### ERRORイベント
 
 何らかのエラーが発生した場合に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
 
@@ -319,7 +320,7 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 }];
 ```
 
-#### CLOSEイベント
+### CLOSEイベント
 
 Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
 
@@ -331,7 +332,7 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 [_peer on:SKW_PEER_EVENT_CLOSE callback:^(NSObject* obj) {}];
 ```
 
-#### DISCONNECTEDイベント
+### DISCONNECTEDイベント
 
 シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
 
@@ -343,16 +344,17 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 [_peer on:SKW_PEER_EVENT_DISCONNECTED callback:^(NSObject* obj) {}];
 ```
 
-### 発信・切断・着信処理
+## 発信・切断・着信処理
 {: #call-event }
 
 発信、切断、着信をするための処理を追記してください。
 
-#### 発信処理
+### 発信処理
+{: #call }
 
 相手のPeerIDを選択して発信します。
 
-##### 発信先のPeerIDを取得
+#### 発信先のPeerIDを取得
 
 actionButtonをタップし未接続状態であれば、listAllPeersメソッドを利用して接続先のPeerID一覧を取得します。取得した一覧から自分自身のIDを削除し、`PeerListViewController`で一覧表示します。  
 
@@ -406,7 +408,7 @@ actionButtonをタップし未接続状態であれば、listAllPeersメソッ�
 }
 ```
 
-##### 発信
+#### 発信
 
 `PeerListViewController`でPeerIDが選択されたら、didSelectPeerメソッドが呼ばれます。相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
 発信後は必要なイベントコールバックをセットします。  
@@ -426,11 +428,12 @@ actionButtonをタップし未接続状態であれば、listAllPeersメソッ�
 }
 ```
 
-#### 切断処理
+### 切断処理
+{: #disconnect }
 
 相手との接続を切断します。
 
-##### MediaConnectionの切断
+#### MediaConnectionの切断
 
 actionButtonをタップした際に接続中であれば、MediaConnectionオブジェクトのCloseメソッドで該当するMediaConnectionを切断し、後ほど説明する`closeRemoteStream`で必要な処理を行います。
 
@@ -459,7 +462,7 @@ actionButtonをタップした際に接続中であれば、MediaConnectionオ�
 }
 ```
 
-##### MediaStreamのクローズ
+#### MediaStreamのクローズ
 
 MediaConnectionオブジェクトのCloseメソッドが実行された後は、removeVideoRendererメソッドを利用して該当のMediaStreamに割り当てられた、ビデオレンダラーを取り外します。
 
@@ -484,7 +487,7 @@ MediaConnectionオブジェクトのCloseメソッドが実行された後は、
 }
 ```
 
-##### コールバックイベントの解放関連
+#### コールバックイベントの解放関連
 
 MediaConnection切断時に実行するコールバックイベントの開放処理を追記してください。  
 尚、`unsetPeerCallbacks`についてはPeerオブジェクトの破棄時に利用します。今回のチュートリアルでは、Peerオブジェクトの破棄は省略しているため未使用です。
@@ -523,7 +526,8 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 }
 ```
 
-#### 着信処理
+### 着信処理
+{: #oncall }
 
 相手から接続要求がきた場合に応答します。   
 相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。引き数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
@@ -551,7 +555,7 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 ```
 
 
-#### MediaConnectionオブジェクトに必要なイベント
+### MediaConnectionオブジェクトに必要なイベント
 
 MediaConnectionオブジェクトに必要なイベントコールバックです。  
 `SKW_MEDIACONNECTION_EVENT_STREAM`は相手の映像・音声を受信した際に発火します。  
@@ -641,7 +645,7 @@ MediaConnectionオブジェクトに必要なイベントコールバックで�
 }
 ```
 
-### UIのセットアップ
+## UIのセットアップ
 {: #setup-ui }
 
 UI関連の必要な処理を追記してください。  
@@ -663,7 +667,7 @@ actionButtonはトグルで利用するため、接続状態に応じてラベ�
 }
 ```
 
-### カメラの切り替え
+## カメラの切り替え
 {: #switch-camera}
 
 最後にカメラの切り替え処理を追記してください。  
@@ -696,79 +700,7 @@ getCameraPositionメソッドで該当メディアストリームで利用して
 }
 ```
 
-### 動作確認
+## 動作確認
 {: #testing }
 
 実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することが出来ます。
-
-## SDKのダウンロード
-{: #sdkdownload }
-
-
-- CocoaPodsを利用する場合
-  - Podfile作成
-  ```
-  platform :ios, '7.0'
-  pod 'ECLWebRTC-iOS-SDK'
-  ```
-  - インストール
-  ```
-  $ pod install
-  ```
-
-- ファイルでダウンロードする場合
-
-  [ZIPでダウンロード](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip){: .btn .btn-primary}
-  [GitHubでクローン（git-lfsをインストールする必要あり）](https://github.com/nttcom/ECLWebRTC-iOS-SDK){: .btn .btn-secondary}
-
-
-## 対応OS
-{: #supportedos }
-
-- iOS 8+
-
-
-## APIリファレンス
-
-- ECLWebRTCをご利用のお客様
-
-  [APIリファレンスを見る](#){: .btn .btn-primary}
-
-- SkyWayをご利用のお客様
-
-  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#iOS){: .btn .btn-secondary target="_blank"}
-
-- ECLWebRTCとSkyWayのAPI差分
-
-  APIリファレンスの差分情報を[Github](https://github.com/nttcom/skyway-sdk-migration-docs)で提供しています。
-
-
-## サンプルコード
-{: #sample-code }
-
-サンプルコードを公開しています。
-
-<table class="table w-75">
-  <tbody align="right">
-    <tr>
-      <th scope="row">1対1、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、SFU</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-## サポート
-{: #support }
-
-{% include support-cards.html %}
