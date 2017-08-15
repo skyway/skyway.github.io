@@ -73,7 +73,7 @@ iOS 8+
   </div>
 </div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
+[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/ios_sdk_next_version_api_diff.md){: _target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 
