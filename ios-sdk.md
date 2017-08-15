@@ -49,10 +49,15 @@ $ pod init
 
 ### ファイルをダウンロードする場合
 
-[ZIPでダウンロード](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip){: .btn .btn-primary }
-
-[GitHubでクローン](https://github.com/nttcom/ECLWebRTC-iOS-SDK){: .btn .btn-secondary target=_blank }    
-<small>git-lfsのインストールが必要です</small>
+<div class="d-sm-flex">
+  <div class="pr-1 pb-2">
+    <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a>
+  </div>
+  <div>
+    <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <small>git-lfsのインストールが必要です</small>
+  </div>
+</div>
 
 ## 対応OS
 
@@ -60,8 +65,14 @@ iOS 8+
 
 ## APIリファレンス
 
-[ECLWebRTCのAPIリファレンス](#){: .btn .btn-primary}
-[SkyWayのAPIリファレンス](http://nttcom.github.io/skyway/docs/#iOS){: .btn .btn-secondary target="_blank"}
+<div class="d-sm-flex">
+  <div class="pr-1 pb-2">
+    <a href="#" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+  </div>
+  <div class="pb-3">
+    <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
+  </div>
+</div>
 
 [ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
 
