@@ -240,6 +240,21 @@ html {
     @extend .text-nowrap;
   }
 
+  .card-borderless {
+    border: 0;
+    .card-body {
+      padding: 0;
+      & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+      }
+
+      & > h1 + h2, & > h2 + h3, & > h3 + h4, & > h4 + h5, & > h5 + h6 {
+        margin-top: 2rem;
+      }
+    }
+  }
+
   .nav-tabs {
     .nav-item {
       .nav-link.active {
