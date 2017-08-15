@@ -109,18 +109,18 @@ getUserMediaで取得した、Streamオブジェクト（自分の映像）を�
 {: .lang}
 
 ```js
-    let localStream = null;
+let localStream = null;
 
-    navigator.mediaDevices.getUserMedia({video: true, audio: true})
-        .then(function (stream) {
-            // Success
-            $('#myStream').srcObject = stream;
-            localStream = stream;
-        }).catch(function (error) {
-            // Error
-            console.error('mediaDevice.getUserMedia() error:', error);
-            return;
-        });
+navigator.mediaDevices.getUserMedia({video: true, audio: true})
+    .then(function (stream) {
+        // Success
+        $('#myStream').srcObject = stream;
+        localStream = stream;
+    }).catch(function (error) {
+        // Error
+        console.error('mediaDevice.getUserMedia() error:', error);
+        return;
+    });
 ```
 
 getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指定をすることも可能です。
@@ -184,18 +184,18 @@ Peerオブジェクトを作成するための処理を追記してください�
 {: .lang}
 
 ```js
-    let localStream = null;
-    let peer = null;
-    let existingCall = null;
+let localStream = null;
+let peer = null;
+let existingCall = null;
 
-    navigator.mediaDevices.getUserMedia({video: true, audio: true})
-      // 省略
-    });
+navigator.mediaDevices.getUserMedia({video: true, audio: true})
+    // 省略
+});
 
-    peer = new Peer({
-        key: 'apikey',
-        debug: 3
-    });
+peer = new Peer({
+    key: 'apikey',
+    debug: 3
+});
 ```
 
 Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
@@ -215,9 +215,9 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
 {: .lang}
 
 ```js
-    peer.on('open', function(){
-        $('#my-id').text(peer.id);
-    });
+peer.on('open', function(){
+    $('#my-id').text(peer.id);
+});
 ```
 
 ### ERRORイベント
@@ -228,9 +228,9 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
 {: .lang}
 
 ```js
-    peer.on('error', function(err){
-        alert(err.message);
-    });
+peer.on('error', function(err){
+    alert(err.message);
+});
 ```
 
 ### CLOSEイベント
@@ -241,8 +241,8 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```js
-    peer.on('close', function(){
-    });
+peer.on('close', function(){
+});
 ```
 
 ### DISCONNECTEDイベント
@@ -253,8 +253,8 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```js
-    peer.on('disconnected', function(){
-    });
+peer.on('disconnected', function(){
+});
 ```
 
 
@@ -274,11 +274,11 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```js
-    $('#make-call').submit(function(e){
-        e.preventDefault();
-        const call = peer.call($('#callto-id').val(), localStream);
-        setupCallEventHandlers(call);
-    });
+$('#make-call').submit(function(e){
+    e.preventDefault();
+    const call = peer.call($('#callto-id').val(), localStream);
+    setupCallEventHandlers(call);
+});
 ```
 
 ### 切断処理
@@ -290,9 +290,9 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```js
-    $('#end-call').click(function(){
-        existingCall.close();
-    });
+$('#end-call').click(function(){
+    existingCall.close();
+});
 ```
     
 ### 着信処理
@@ -306,10 +306,10 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 {: .lang}
 
 ```js
-    peer.on('call', function(call){
-        call.answer(localStream);
-        setupCallEventHandlers(call);
-    });
+peer.on('call', function(call){
+    call.answer(localStream);
+    setupCallEventHandlers(call);
+});
 ```
 
 ### Callオブジェクトに必要なイベント
@@ -322,14 +322,14 @@ Callオブジェクトに必要なEventListenerです。
 {: .lang}
 
 ```js
-    function setupCallEventHandlers(call){
-        if (existingCall) {
-            existingCall.close();
-        };
+function setupCallEventHandlers(call){
+    if (existingCall) {
+        existingCall.close();
+    };
 
-        existingCall = call;
-        // 省略
-    }
+    existingCall = call;
+    // 省略
+}
 ```
 
 相手の映像・音声を受信した際に発火します。  
@@ -340,15 +340,15 @@ Callオブジェクトに必要なEventListenerです。
 {: .lang}
 
 ```js
-    function setupCallEventHandlers(call){
-        // 省略
-        call.on('stream', function(stream){
-            addVideo(call,stream);
-            setupEndCallUI();
-            $('#their-id').text(call.remoteId);
-        });
-        // 省略
-    }
+function setupCallEventHandlers(call){
+    // 省略
+    call.on('stream', function(stream){
+        addVideo(call,stream);
+        setupEndCallUI();
+        $('#their-id').text(call.remoteId);
+    });
+    // 省略
+}
 ```
 
 `call.close()`による切断処理が実行され、実際に切断されたら発火します。このイベントは、`call.close()`実行した側、実行された側それぞれで発火します。`call.peer`で切断した相手のPeerIDを取得できます。  
@@ -358,13 +358,13 @@ Callオブジェクトに必要なEventListenerです。
 {: .lang}
 
 ```js
-    function setupCallEventHandlers(call){
-        // 省略
-        call.on('close', function(){
-            removeVideo(call.remoteId);
-            setupMakeCallUI();
-        });
-    }
+function setupCallEventHandlers(call){
+    // 省略
+    call.on('close', function(){
+        removeVideo(call.remoteId);
+        setupMakeCallUI();
+    });
+}
 ```
 
 ## UIのセットアップ
@@ -381,7 +381,7 @@ VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットす
 ```js
 function addVideo(call,stream){
     $('#their-video').get(0).srcObject = stream;
-    }
+}
 ```
 
 ### VIDEO要素の削除
@@ -393,9 +393,9 @@ PeerIDを元に削除します。
 {: .lang}
 
 ```js
-    function removeVideo(peerId){
-        $('#'+peerId).remove();
-    }
+function removeVideo(peerId){
+    $('#'+peerId).remove();
+}
 ```
 
 ### ボタンの表示、非表示切り替え
@@ -406,15 +406,15 @@ PeerIDを元に削除します。
 {: .lang}
 
 ```js
-    function setupMakeCallUI(){
-        $('#make-call').show();
-        $('#end-call').hide();
-    }
-    
-    function setupEndCallUI() {
-        $('#make-call').hide();
-        $('#end-call').show();
-    }
+function setupMakeCallUI(){
+    $('#make-call').show();
+    $('#end-call').hide();
+}
+
+function setupEndCallUI() {
+    $('#make-call').hide();
+    $('#end-call').show();
+}
 ```
 
 ## 動作確認
