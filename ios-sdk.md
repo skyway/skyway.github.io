@@ -80,25 +80,29 @@ iOS 8+
 
 サンプルコードを公開しています。
 
-<table class="table w-75">
-  <tbody align="right">
-    <tr>
-      <th scope="row">1対1、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、SFU</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-9 col-lg-7 col-xl-6">
+    <table class="table">
+      <tbody align="right">
+        <tr>
+          <th scope="row">1対1、P2P</th>
+          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">テキストチャット</a></td>
+        </tr>
+        <tr>
+          <th scope="row">多人数、P2P</th>
+          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">テキストチャット</a></td>
+        </tr>
+        <tr>
+          <th scope="row">多人数、SFU</th>
+          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">テキストチャット</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ## サポート
 
