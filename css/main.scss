@@ -8,8 +8,8 @@
 
 $color-base: #004386;
 $color-sub: $gray-600;
-$footer-height-md: 355px;
-$footer-height-xs: 656px;
+$footer-height-md: 431px;
+$footer-height-xs: 732px;
 
 body {
   // window width (-575px)
@@ -228,11 +228,13 @@ html {
   }
 
   & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+    // #mainの直下の見出しのみに適用 (.jumbotronや.cardの中の見出しは対象外)
     margin-top: 3.5rem;
     margin-bottom: 1rem;
   }
 
   & > h1 + h2, & > h2 + h3, & > h3 + h4, & > h4 + h5, & > h5 + h6 {
+    // 本文を挟まずに見出しが続いた場合は、間隔を小さめにする
     margin-top: 2rem;
   }
 
