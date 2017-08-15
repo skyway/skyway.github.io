@@ -6,7 +6,7 @@ lang: ja
 
 # ログイン
 
-<div id="login-div" class="row">
+<div id="login-div" class="row card-row">
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card h-100">
       <div class="card-body">
