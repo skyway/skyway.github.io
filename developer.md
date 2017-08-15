@@ -99,7 +99,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 <div id="feature-div" class="row">
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">Media & Data</h3>
                 <p class="card-text">提供するSDKではメディアチャンネル・データチャンネルを利用可能</p>
             </div>
@@ -107,7 +107,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">シグナリング</h3>
                 <p class="card-text">IPアドレスやコーデック等の情報を相手と交換する為のサーバ、多人数通話に便利なRoom管理機能を備える</p>
             </div>
@@ -115,7 +115,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">STUN</h3>
                 <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<BR></p>
             </div>
@@ -123,7 +123,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">認証</h3>
                 <p class="card-text">APIキーの不正利用を防止するための認証機能を提供</p>
                 <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-primary">利用方法(Github)</a>
@@ -132,7 +132,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">TURN</h3>
                 <p class="card-text">Peer to Peerで通信が確立できない環境にメディアを中継するサーバを提供</p>
                 <a href="./pricing.html#サーバ通信料" class="btn btn-primary">料金</a>
@@ -141,7 +141,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">多人数通話や配信を実現する、映像・音声送信を代行するメディアサーバを提供</p>
                 <a href="#" class="btn btn-primary">料金</a>
@@ -151,7 +151,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-6 col-sm-4">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">画面共有</h3>
                 <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
                 <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-primary">利用方法(Github)</a>
@@ -168,7 +168,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 <div id="docs-div" class="row">
     <div class="col-12 col-md-6">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">SkyWayからECLWebRTCへの移行方法</h3>
                 <p class="card-text">SkyWayは2018年3月31日をもってサービスを終了します。ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。</p>
                 <small class="text-muted">2017.9.5</small>
@@ -178,7 +178,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
     </div>
     <div class="col-12 col-md-6">
         <div class="card h-100">
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">WebRTCセキュリティレポート</h3>
                 <p class="card-text">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。</p>
                 <small class="text-muted">2015.7.28</small>

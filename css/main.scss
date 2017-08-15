@@ -6,8 +6,8 @@
 @import 'bootstrap';
 @import 'rouge'; // syntax highlight by rouge
 
-$color-base:#004386;
-$color-sub: $gray-light;
+$color-base: #004386;
+$color-sub: $gray-600;
 $footer-height-md: 431px;
 $footer-height-xs: 732px;
 
@@ -52,7 +52,7 @@ html {
 
 .site-footer {
   $footer-color: rgba($white,.8);
-  $footer-muted-color: rgba($gray-lighter, .8);
+  $footer-muted-color: rgba($gray-200, .8);
   color: $footer-color;
   padding-top: 20px;
   bottom: 0;
@@ -194,29 +194,16 @@ html {
     @extend .table;
   }
   .row {
-    margin-left: -6px;
-    margin-right: -6px;
-
-    .col-6, .col-sm-6, .col-12 {
-      padding: 6px;
-    }
-
     @include media-breakpoint-down(xs) {
-      // padding: 0 1rem;
-      padding-left: 6px;
-      padding-right: 6px;
-      .card-block {
+      .card-body {
         padding: 0.5rem;
-      }
-      .col-6, .col-12 {
-        padding: 2px;
       }
     }
   }
   .card-group {
     margin-bottom: $spacer; // .table と同じ
   }
-  .card-block {
+  .card-body {
     .btn {
       font-size: 0.85rem;
     }
@@ -363,7 +350,7 @@ html {
 
   #feature-div {
     @include media-breakpoint-down(sm) {
-      .card-block {
+      .card-body {
         padding: 0.5rem;
       }
       .card-title {
@@ -467,7 +454,7 @@ html {
   #login-div {
     @extend .row;
     @include media-breakpoint-down(xs) {
-      .card-block {
+      .card-body {
         padding: 1rem;
       }
     }
@@ -476,7 +463,7 @@ html {
   // pricing.html
   #accordion {
     @include media-breakpoint-down(xs) {
-      .card-block {
+      .card-body {
         padding: 0.75rem;
       }
     }
@@ -490,7 +477,13 @@ html {
     }
   }
   .pricing-table {
-    @include media-breakpoint-only(sm){
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-sm;
+      .hidden-xs {
+        display: none;
+      }
+    }
+    @include media-breakpoint-only(sm) {
       font-size: $font-size-sm;
       .hidden-sm {
         display: none;
@@ -623,4 +616,3 @@ html {
     }
   }
 }
-
