@@ -31,7 +31,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 
 
 
-<div id="about-div" class="row">
+<div id="about-div" class="row card-row">
   <div class="col-6 col-sm-6 col-lg-3">
     <div class="card h-100">
       <div class="card-body">
@@ -135,7 +135,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 ## 事例紹介
 
 
-<div class="row">
+<div class="row card-row">
   <div class="col-6 col-md-3">
     <div class="card h-100">
       <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap"></a>
