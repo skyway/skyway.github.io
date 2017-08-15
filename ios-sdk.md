@@ -7,7 +7,6 @@ lang: ja
 # iOS SDK
 
 ## チュートリアル
-{: #tutorial }
 
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
@@ -25,7 +24,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
   <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
 </figure>
 
-[続きを読む](ios-tutorial.html){: .btn .btn-primary }
+[チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
 
@@ -44,15 +43,20 @@ pod 'ECLWebRTC-iOS-SDK'
 インストールする。
 
 ```sh
-$ pod init</code></pre>
+$ pod init
 ```
 
 ### ファイルをダウンロードする場合
 
-[ZIPでダウンロード](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip){: .btn .btn-primary }
-
-[GitHubでクローン](https://github.com/nttcom/ECLWebRTC-iOS-SDK){: .btn .btn-secondary target=_blank }    
-<small>git-lfsのインストールが必要です</small>
+<div class="d-sm-flex">
+  <div class="pr-1 pb-2">
+    <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a>
+  </div>
+  <div>
+    <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <small>git-lfsのインストールが必要です</small>
+  </div>
+</div>
 
 ## 対応OS
 
@@ -60,34 +64,44 @@ iOS 8+
 
 ## APIリファレンス
 
-[ECLWebRTCのAPIリファレンス](#){: .btn .btn-primary}
-[SkyWayのAPIリファレンス](http://nttcom.github.io/skyway/docs/#iOS){: .btn .btn-secondary target="_blank"}
+<div class="d-sm-flex">
+  <div class="pr-1 pb-2">
+    <a href="#" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+  </div>
+  <div class="pb-3">
+    <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
+  </div>
+</div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
+[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/ios_sdk_next_version_api_diff.md){: _target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 
 サンプルコードを公開しています。
 
-<table class="table w-75">
-  <tbody align="right">
-    <tr>
-      <th scope="row">1対1、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、SFU</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-9 col-lg-7 col-xl-6">
+    <table class="table">
+      <tbody align="right">
+        <tr>
+          <th scope="row">1対1、P2P</th>
+          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">テキストチャット</a></td>
+        </tr>
+        <tr>
+          <th scope="row">多人数、P2P</th>
+          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">テキストチャット</a></td>
+        </tr>
+        <tr>
+          <th scope="row">多人数、SFU</th>
+          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">テキストチャット</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ## サポート
 
