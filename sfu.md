@@ -14,7 +14,7 @@ WebRTCは基本的にサーバは介さず、P2Pで直接通信を行います�
     <div class="col-sm-6">
         <div class="card">
             <img src='{{ site.rootdir[page.lang] }}images/fullmesh.png' id='fullmesh.png' width='350' alt='フルメッシュ接続の通信'>
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">フルメッシュ接続による多人数通話</h3>
                 <p class="card-text">参加者全員に対して映像・音声ストリームを送信するため、人数が増えると端末負荷が大きくなる</p>
             </div>
@@ -23,7 +23,7 @@ WebRTCは基本的にサーバは介さず、P2Pで直接通信を行います�
     <div class="col-sm-6">
         <div class="card">
             <img src='{{ site.rootdir[page.lang] }}images/sfu.png' id='sfu_img' width='350' alt='SFUを使用した通信'>
-            <div class="card-block">
+            <div class="card-body">
                 <h3 class="card-title">SFUを使用した多人数通話</h3>
                 <p class="card-text">サーバ（SFU）に対してのみ映像・音声ストリームを送信するため、フルメッシュ接続に比べて端末負荷を抑えることができる</p>
             </div>

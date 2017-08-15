@@ -195,7 +195,7 @@ html {
   }
   .row {
     @include media-breakpoint-down(xs) {
-      .card-block {
+      .card-body {
         padding: 0.5rem;
       }
     }
@@ -203,7 +203,7 @@ html {
   .card-group {
     margin-bottom: $spacer; // .table と同じ
   }
-  .card-block {
+  .card-body {
     .btn {
       font-size: 0.85rem;
     }
@@ -348,7 +348,7 @@ html {
 
   #feature-div {
     @include media-breakpoint-down(sm) {
-      .card-block {
+      .card-body {
         padding: 0.5rem;
       }
       .card-title {
@@ -452,7 +452,7 @@ html {
   #login-div {
     @extend .row;
     @include media-breakpoint-down(xs) {
-      .card-block {
+      .card-body {
         padding: 1rem;
       }
     }
@@ -461,7 +461,7 @@ html {
   // pricing.html
   #accordion {
     @include media-breakpoint-down(xs) {
-      .card-block {
+      .card-body {
         padding: 0.75rem;
       }
     }
@@ -475,7 +475,13 @@ html {
     }
   }
   .pricing-table {
-    @include media-breakpoint-only(sm){
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-sm;
+      .hidden-xs {
+        display: none;
+      }
+    }
+    @include media-breakpoint-only(sm) {
       font-size: $font-size-sm;
       .hidden-sm {
         display: none;
@@ -608,4 +614,3 @@ html {
     }
   }
 }
-
