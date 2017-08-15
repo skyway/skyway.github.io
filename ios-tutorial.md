@@ -1,6 +1,6 @@
 ---
 layout: rightnav
-title: iOS SDK
+title: iOS SDK チュートリアル
 lang: ja
 ---
 
