@@ -1,20 +1,13 @@
 ---
 layout: rightnav
-title: JavaScript SDK
+title: JavaScript SDK チュートリアル
 lang: ja
 ---
-
-<!-- div#rightnav -->
 
 - TOC
 {:toc}
 
-<!-- div#main -->
-
-# JavaScript SDK
-
-## チュートリアル
-{: #tutorial }
+# JavaScript SDK チュートリアル
 
 JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
 通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
@@ -31,10 +24,10 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
   <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
 </figure>
 
-### 開発前の準備
+## 開発前の準備
 {: #preparation }
 
-#### ECLWebRTCのAPIキー発行
+### ECLWebRTCのAPIキー発行
 
 ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
 開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
@@ -50,11 +43,11 @@ ECLWebRTCへの開発者登録がまだの方は、まず、[Community Edition�
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
 |権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
 
-#### ローカルWebサーバの準備
+### ローカルWebサーバの準備
 
 WebRTCの機能をローカル環境で利用する場合は、Webサーバを利用する必要があります。
 
-##### Macの場合
+#### Macの場合
 
 以下に示す幾つかの方法で、Webサーバをローカル環境で利用することが出来ます。
 
@@ -86,11 +79,11 @@ $ ruby -run -e httpd . -p 8080
 $ php -S localhost:8080
 ```
 
-##### Windowsの場合
+#### Windowsの場合
 
 [Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにして下さい。
 
-### プロジェクトの作成
+## プロジェクトの作成
 {: #craete-project }
 
 チュートリアルで利用するソースコードは以下のリポジトリからダウンロードしてください。  
@@ -105,7 +98,7 @@ $ php -S localhost:8080
   - 動作確認済ブラウザは[Google Chrome](https://www.google.com/chrome)と[Firefox](https://www.mozilla.org/firefox/)の最新版です。
 
 
-### カメラ映像、マイク音声の取得
+## カメラ映像、マイク音声の取得
 {: #getUserMedia }
 
 映像・音声を取得する処理を追記してください。
@@ -139,7 +132,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 - 例：フレームレートの設定（2017.08現在、Chromeでしか動作しません）    
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
-##### APIを使用する上の注意点1
+#### APIを使用する上の注意点1
 
 プライバシーを考慮し、ブラウザによっては、SSLで暗号化されたWebサイトでしか動作しません。
 2018.08現在の動作状況は以下のとおりです。
@@ -151,7 +144,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 |file://index.html|x|◯|
 |https://domain.jp|◯|◯|
 
-#### APIを使用する上の注意点2
+### APIを使用する上の注意点2
 
 利用者のプライバシーを守るために、許可を求めるダイアログが出てきます。  
 複数のカメラやマイクが接続されている場合は、このダイアログで任意のカメラやマイクを選ぶことが出来ます。
@@ -166,10 +159,10 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
   <figcaption class="figure-caption">Firefoxのダイアログ</figcaption>
 </figure>
 
-### ECLWebRTCサーバへ接続
+## ECLWebRTCサーバへ接続
 {: #connect-server }
 
-#### SDKのインポート
+### SDKのインポート
 
 以下の通りScript要素でSDKをインポートします。  
 チュートリアルのソースコードでは`index.html`に追記済みです。
@@ -181,7 +174,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
 ```
 
-#### Peerオブジェクトの作成
+### Peerオブジェクトの作成
 
 Peerオブジェクトを作成するための処理を追記してください。  
 `apikey`には先程ダッシュボードで発行したAPIキーを指定してください。  
@@ -207,12 +200,12 @@ Peerオブジェクトを作成するための処理を追記してください�
 
 Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
 
-### 接続成功・失敗・切断時の処理
+## 接続成功・失敗・切断時の処理
 {: #eventlistener }
 
 Peerオブジェクトに必要なEventListenerを追記してください。
 
-#### OPENイベント
+### OPENイベント
 
 ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
 PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
@@ -227,7 +220,7 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
     });
 ```
 
-#### ERRORイベント
+### ERRORイベント
 
 何らかのエラーが発生した場合に発火します。エラーが発生したら、アラートメッセージでその内容を表示できるようにします。
 
@@ -240,7 +233,7 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
     });
 ```
 
-#### CLOSEイベント
+### CLOSEイベント
 
 Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
 
@@ -252,7 +245,7 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
     });
 ```
 
-#### DISCONNECTEDイベント
+### DISCONNECTEDイベント
 
 シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
 
@@ -265,12 +258,12 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 ```
 
 
-### 発信・切断・着信処理
+## 発信・切断・着信処理
 {: #call-event }
 
 発信、切断、着信をするための処理を追記してください。
 
-#### 発信処理
+### 発信処理
 
 発信ボタンをクリックした場合に相手に発信します。  
 `peer.call()`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。接続するための相手のPeerIDは、別途何らかの方法で入手する必要があります。  
@@ -288,7 +281,7 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
     });
 ```
 
-#### 切断処理
+### 切断処理
 
 切断ボタンをクリックした場合に、相手との接続を切断します。   
 `call.close()`で該当する接続を切断します。発信処理で生成したCallオブジェクトは`existingCall`として保持しておきます。オブジェクト保持は発信処理の`setupCallEventHandlers()`の中で実行します。
@@ -302,7 +295,7 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
     });
 ```
     
-#### 着信処理
+### 着信処理
 
 相手から接続要求がきた場合に応答します。    
 相手から接続要求が来た場合は`call`が発火します。引き数として相手との接続を管理するためのCallオブジェクトが取得できるため、`call.answer()`を実行し接続要求に応答します。  
@@ -319,7 +312,7 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
     });
 ```
 
-#### Callオブジェクトに必要なイベント
+### Callオブジェクトに必要なイベント
 
 Callオブジェクトに必要なEventListenerです。    
 今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先します。また、切断処理等で利用するため、Callオブジェクトを`existingCall`として保持しておきます。  
@@ -374,10 +367,10 @@ Callオブジェクトに必要なEventListenerです。
     }
 ```
 
-### UIのセットアップ
+## UIのセットアップ
 {: #setup-ui }
 
-#### VIDEO要素の再生
+### VIDEO要素の再生
 
 VIDEOを再生するための処理を追記してください。  
 VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます。削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
@@ -391,7 +384,7 @@ function addVideo(call,stream){
     }
 ```
 
-#### VIDEO要素の削除
+### VIDEO要素の削除
 
 切断された（した）相手のVIDEO要素を削除するための処理を追記してください。
 PeerIDを元に削除します。
@@ -405,7 +398,7 @@ PeerIDを元に削除します。
     }
 ```
 
-#### ボタンの表示、非表示切り替え
+### ボタンの表示、非表示切り替え
 
 発信ボタン、切断ボタンの表示を切り替えるための処理を追記してください。
 
@@ -424,88 +417,7 @@ PeerIDを元に削除します。
     }
 ```
 
-### 動作確認
+## 動作確認
 {: #testing }
 
 2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手とビデオチャットができれば成功です。
-
-## SDKのダウンロード
-{: #sdkdownload }
-
-
-- npmを利用する場合
-
-  ```sh
-  $ npm install eclwebrtc-js-sdk
-  ```
-
-- CDNを利用する場合
-
-  *HTML*
-  {: .lang}
-  
-  ```html
-  <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
-  ```
-
-- ファイルでダウンロードする場合
-
-  [ZIPでダウンロード](https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip){: .btn .btn-primary}
-  [GitHubでクローン](https://github.com/nttcom/ECLWebRTC-JS-SDK){: .btn .btn-secondary}
-
-
-## 動作確認済みブラウザ
-{: #testedbrowser }
-
-- [Google Chrome](https://www.google.com/chrome){: target="_blank"} 最新安定版
-- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 最新安定版
-
-
-## APIリファレンス
-{: #apireference }
-
-- ECLWebRTCをご利用のお客様
-
-  [APIリファレンスを見る](#){: .btn .btn-primary}
-
-- SkyWayをご利用のお客様
-
-  [APIリファレンスを見る](http://nttcom.github.io/skyway/docs/#JS){: .btn .btn-secondary target="_blank"}
-
-- ECLWebRTCとSkyWayのAPI差分
-
-  APIリファレンスの差分情報を[Github](https://github.com/nttcom/skyway-sdk-migration-docs)で提供しています。
-
-
-## サンプルコード
-{: #sample-code }
-
-サンプルコードを公開しています。
-
-<table class="table">
-  <tbody align="right">
-    <tr>
-      <th scope="row">1対1、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、P2P</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">1:多のビデオ配信</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-    <tr>
-      <th scope="row">多人数、SFU</th>
-      <td><a href="#" class="card-link">ビデオチャット</a></td>
-      <td><a href="#" class="card-link">1:多のビデオ配信</a></td>
-      <td><a href="#" class="card-link">テキストチャット</a></td>
-    </tr>
-  </tbody>
-</table>
-
-## サポート
-{: #support }
-
-{% include support-cards.html %}
