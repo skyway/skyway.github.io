@@ -193,6 +193,17 @@ html {
   table {
     @extend .table;
   }
+
+  // cardを入れる.rowの中ではグリッド間隔を変える
+  .card-row {
+    $card-gutter-width: 12px;
+    &.row {
+      margin-right: ($card-gutter-width / -2);
+      margin-left:  ($card-gutter-width / -2);
+    }
+    @include make-grid-columns($gutter: $card-gutter-width);
+  }
+
   .row {
     @include media-breakpoint-down(xs) {
       .card-body {
