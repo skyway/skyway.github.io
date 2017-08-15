@@ -56,13 +56,13 @@ Community Editionは一切、料金がかかりません。
 
 <p>
   シグナリングサーバとの月間接続回数に応じた料金が発生します。<br>
-  <small class="text-muted">1回の接続あたりの接続時間やcallする回数に制限はありません。<span class="hidden-sm-down"><br></span>接続回数は、全APIKeyの合計ではなく、APIKey単位でカウントし、制限や料金の発生もAPIKey毎となります。</small>
+  <small class="text-muted">1回の接続あたりの接続時間やcallする回数に制限はありません。<span class="d-none d-md-inline"><br></span>接続回数は、全APIKeyの合計ではなく、APIKey単位でカウントし、制限や料金の発生もAPIKey毎となります。</small>
 </p>
 
 <table class="table table-sm pricing-table">
 <thead>
   <tr>
-    <th class="hidden-sm-down"></th>
+    <th class="d-none d-md-table-cell"></th>
     <th>接続回数</th>
     <th class="text-right">Community Edition</th>
     <th class="text-right">Enterprise Edition</th>
@@ -72,31 +72,31 @@ Community Editionは一切、料金がかかりません。
   <tr>
     <th scope="row" class="hidden-sm">シグナリング<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="シグナリング: 端末間で通信を行う際に、シグナリングサーバを介してお互いのIPアドレスやコーデックなど情報の交換を行います。">i</span></th>
     <td class="td-header" align="left">
-      〜500,000<span class="hidden-sm-up">回/月</span>
+      〜500,000<span class="d-sm-none">回/月</span>
     </td>
     <td class="td-community">¥0</td>
     <td class="td-enterprise">¥0</td>
   </tr>
   <tr>
-    <th scope="row" class="hidden-sm-down"></th>
+    <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">
-      〜1,000,000<span class="hidden-sm-up">回/月</span>
+      〜1,000,000<span class="d-sm-none">回/月</span>
     </td>
     <td class="td-community">制限</td>
     <td class="td-enterprise">¥0</td>
   </tr>
   <tr>
-    <th scope="row" class="hidden-sm-down"></th>
+    <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">
-      〜10,000,000<span class="hidden-sm-up">回/月</span>
+      〜10,000,000<span class="d-sm-none">回/月</span>
     </td>
     <td></td>
     <td class="td-enterprise">¥100,000</td>
   </tr>
   <tr>
-    <th scope="row" class="hidden-sm-down"></th>
+    <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">
-      10,000,001<span class="hidden-sm-up">回/月</span>〜
+      10,000,001<span class="d-sm-none">回/月</span>〜
     </td>
     <td></td>
     <td class="td-enterprise">contact us</td>
@@ -110,7 +110,7 @@ Community Editionは一切、料金がかかりません。
 <p>
   TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生します。<br>
   <small class="text-muted">
-    1回の接続あたりの接続時間やcall回数に制限はありません。<span class="hidden-sm-down"><br></span>
+    1回の接続あたりの接続時間やcall回数に制限はありません。<span class="d-none d-md-inline"><br></span>
     サーバ通信量は、全APIKeyの合計ではなく、APIKey単位、TURN/SFU種別でカウントし、制限や料金の発生もAPIKey毎となります。また、サーバへのIN/OUTの通信の合計です。
   </small>
 </p>
@@ -118,7 +118,7 @@ Community Editionは一切、料金がかかりません。
 <table class="table table-sm pricing-table">
 <thead>
   <tr>
-    <th class="hidden-sm-down"></th>
+    <th class="d-none d-md-table-cell"></th>
     <th>通信量</th>
     <th class="text-right">Community Edition</th>
     <th class="text-right">Enterprise Edition</th>
@@ -127,26 +127,26 @@ Community Editionは一切、料金がかかりません。
 <tbody align="right">
   <tr>
     <!-- PC表示用 -->
-    <th scope="row" class="hidden-sm-down">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
+    <th scope="row" class="d-none d-md-table-cell">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
     <!-- スマホ表示用 -->
-    <th scope="row" class="hidden-sm-up">TURN / SFU</th> 
+    <th scope="row" class="d-sm-none">TURN / SFU</th> 
     <td class="td-header" align="left">〜500GB</td>
     <td class="td-community">¥0</td>
     <td class="td-enterprise">¥40/GB</td>
   </tr>
   <tr>
-    <th scope="row" class="hidden-sm-down"></th>
+    <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">501GB〜</td>
     <td class="td-community">制限</td>
     <td class="td-enterprise">¥40/GB</td>
   </tr>
-  <tr class="hidden-sm-down">
+  <tr class="hidden-xs hidden-sm">
     <th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: 映像の送信をSFUサーバが代行することで、端末のCPUやネットワーク負荷を抑え、多人数での通話や配信を実現します。">i</span></th>
     <td align="left">〜500GB</td>
     <td>¥0</td>
     <td>¥40/GB</td>
   </tr>
-  <tr class="hidden-sm-down">
+  <tr class="hidden-xs hidden-sm">
     <th scope="row"></th>
     <td align="left">501GB〜</td>
     <td>制限</td>
@@ -170,16 +170,16 @@ Community Editionは一切、料金がかかりません。
       </div>
     </a>
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-      <div class="card-block">
+      <div class="card-body">
         TURN利用上限までにどの程度通話できるかの目安です。<br>
         <small class="text-muted">TURNの利用制限がかかっても、Peer to Peerでの通信は可能です。<br>TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
             <th class="w-25"></th>
-            <th class="w-25 text-right"><span>法人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
-            <th class="w-25 text-right"><span>個人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
-            <th class="w-25 text-right"><span class="hidden-sm-down">スマートフォン向け</span><wbr><span class="hidden-sm-down">アプリ</span><span class="hidden-md-up">スマホアプリ</span></th>
+            <th class="w-25 text-right"><span>法人向け</span><wbr><span class="d-none d-md-inline">Webサービス</span></th>
+            <th class="w-25 text-right"><span>個人向け</span><wbr><span class="d-none d-md-inline">Webサービス</span></th>
+            <th class="w-25 text-right"><span class="d-none d-md-inline">スマートフォン向け</span><wbr><span class="d-none d-md-inline">アプリ</span><span class="d-md-none">スマホアプリ</span></th>
           </tr>
         </thead>
         <tbody align="right">
@@ -222,16 +222,16 @@ Community Editionは一切、料金がかかりません。
       </div>
     </a>
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="card-block">
+      <div class="card-body">
         TURN利用時の料金目安です。<br>
         <small class="text-muted">TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の料金です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
             <th class="w-25"></th>
-            <th class="w-25 text-right"><span>法人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
-            <th class="w-25 text-right"><span>個人向け</span><wbr><span class="hidden-sm-down">Webサービス</span></th>
-            <th class="w-25 text-right"><span class="hidden-sm-down">スマートフォン向け</span><wbr><span class="hidden-sm-down">アプリ</span><span class="hidden-md-up">スマホアプリ</span></th>
+            <th class="w-25 text-right"><span>法人向け</span><wbr><span class="d-none d-md-inline">Webサービス</span></th>
+            <th class="w-25 text-right"><span>個人向け</span><wbr><span class="d-none d-md-inline">Webサービス</span></th>
+            <th class="w-25 text-right"><span class="d-none d-md-inline">スマートフォン向け</span><wbr><span class="d-none d-md-inline">アプリ</span><span class="d-md-none">スマホアプリ</span></th>
           </tr>
         </thead>
         <tbody align="right">

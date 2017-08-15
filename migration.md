@@ -11,7 +11,7 @@ lang: ja
 <div class="row d-flex justify-content-center align-items-center">
   <div class="col-lg-6 col-xl-5">
     <div class="card">
-      <div class="card-block">
+      <div class="card-body">
         <h3 class="card-title"><span>SkyWayを</span><wbr><span>ご利用中の方</span></h3>
         <p class="card-text">SkyWayは2018年3月31日をもって提供を終了します。SkyWayからECLWebRTCへの移行方法をご紹介します</p>
         <a href="#toECLWebRTC" class="btn btn-primary" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="false" aria-controls="collapseExample">移行方法を確認</a>
@@ -20,7 +20,7 @@ lang: ja
   </div>
   <div class="col-lg-6 col-xl-5">
     <div class="card">
-      <div class="card-block">
+      <div class="card-body">
         <h3 class="card-title"><span>ECLWebRTCを</span><wbr><span>ご利用中の方</span></h3>
         <p class="card-text">Community EditionからEnterprise Editionへの移行方法をご紹介します</p>
         <a href="#toEnterprise" class="btn btn-outline-primary" data-toggle="collapse" data-target="#toEnterprise" aria-expanded="false" aria-controls="collapseExample">移行方法を確認</a>
