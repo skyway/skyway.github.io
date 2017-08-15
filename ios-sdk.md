@@ -44,7 +44,7 @@ pod 'ECLWebRTC-iOS-SDK'
 インストールする。
 
 ```sh
-$ pod init</code></pre>
+$ pod init
 ```
 
 ### ファイルをダウンロードする場合
