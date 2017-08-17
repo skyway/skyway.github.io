@@ -59,9 +59,9 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i>
                 <span>iOS SDK</span>
             </a>
-            <a href="ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-            <a href="ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="./ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="./ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="./ios-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
     </div>
@@ -72,8 +72,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <span>Android SDK</span>
             </a>
             <a href="./android-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-            <a href="/android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="./android-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
     </div>

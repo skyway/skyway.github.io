@@ -66,7 +66,7 @@ iOS 8+
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="#" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+    <a href="./ios-reference/" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
   </div>
   <div class="pb-3">
     <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
