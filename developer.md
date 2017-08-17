@@ -47,9 +47,9 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <i class="fa fa-television fa-fw col-4" aria-hidden="true"></i>
                 <span class="col-8">JavaScript SDK</span>
             </a>
-            <a href="/js-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-            <a href="/js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="./js-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="./js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="./js-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
     </div>
