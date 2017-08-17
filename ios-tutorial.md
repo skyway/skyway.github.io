@@ -149,13 +149,13 @@ static NSString *const kDomain = @"domain";
 // declaration
 //
 @interface ViewController () {
-        SKWPeer*			_peer;
-        SKWMediaStream*		_localStream;
-        SKWMediaStream*		_remoteStream;
-        SKWMediaConnection*	_mediaConnection;
-        
-        NSString*			_strOwnId;
-        BOOL				_bConnected;   
+    SKWPeer*			_peer;
+    SKWMediaStream*		_localStream;
+    SKWMediaStream*		_remoteStream;
+    SKWMediaConnection*	_mediaConnection;
+    
+    NSString*			_strOwnId;
+    BOOL				_bConnected;   
 }
 ```
 

@@ -482,17 +482,17 @@ void showPeerIDs() {
         FragmentManager mgr = getFragmentManager();
         PeerListDialogFragment dialog = new PeerListDialogFragment();
         dialog.setListener(
-            new PeerListDialogFragment.PeerListDialogFragmentListener() {
-              @Override
-              public void onItemClick(final String item) {
-                _handler.post(new Runnable() {
-                  @Override
-                  public void run() {
-                    onPeerSelected(item);
-                  }
-                });
-              }
-            });
+          new PeerListDialogFragment.PeerListDialogFragmentListener() {
+            @Override
+            public void onItemClick(final String item) {
+              _handler.post(new Runnable() {
+                @Override
+                public void run() {
+                  onPeerSelected(item);
+                }
+              });
+            }
+          });
         dialog.setItems(_listPeerIds);
         dialog.show(mgr, "peerlist");
       }
