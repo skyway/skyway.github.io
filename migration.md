@@ -8,8 +8,8 @@ lang: ja
 
 <div id="accordion" role="tablist">
   <!-- controller -->
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-6 col-xl-5">
+  <div class="row">
+    <div class="col-lg-6">
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">
           <h3 class="card-title"><span>SkyWayを</span><wbr><span>ご利用中の方</span></h3>
@@ -20,7 +20,7 @@ lang: ja
         </div>
       </div>
     </div>
-    <div class="col-lg-6 col-xl-5">
+    <div class="col-lg-6">
       <div class="card">
         <div class="card-body" role="tab" id="headingTwo">
           <h3 class="card-title"><span>ECLWebRTCを</span><wbr><span>ご利用中の方</span></h3>
@@ -33,17 +33,16 @@ lang: ja
     </div>
   </div>
 
-  <p>
-    SkyWayは2018年3月31日をもって提供を終了します。<br>
-    SkyWayをご利用の方は、SkyWayを発展させた後継サービス「ECLWebRTC」への移行をお願いします。<br>
-    （参考: <a href="https://support.skyway.io/hc/ja" target="_target">SkyWayとECLWebRTCの機能比較)</a>
-  </p>
-
   <!-- content -->
   <div class="card card-borderless">
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>SkyWayからECLWebRTCへの移行について</h2>
+        <p>
+          SkyWayは2018年3月31日をもって提供を終了します。<br>
+          SkyWayをご利用の方は、SkyWayを発展させた後継サービス「ECLWebRTC」への移行をお願いします。<br>
+          （参考: <a href="https://support.skyway.io/hc/ja" target="_target">SkyWayとECLWebRTCの機能比較)</a>
+        </p>
         <h3>1. ECLWebRTC新規登録</h3>
         <p>
           <a href="./signup.html">新規登録ページ</a>よりECLWebRTCの新規登録をお願いします。<br>
