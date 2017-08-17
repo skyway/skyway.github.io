@@ -43,7 +43,7 @@ Android 4.2+ (API Level 17+)
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="#" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+    <a href="./android-reference/" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
   </div>
   <div class="pb-3">
     <a href="http://nttcom.github.io/skyway/docs/#Android" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
