@@ -1,0 +1,50 @@
+p.footer {
+  text-align: right;
+  padding-right: 12px;
+}
+
+a {
+	color: #004386;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.contents a:visited {
+	color: #004386;
+}
+
+a.code, a.code:visited, a.line, a.line:visited {
+	color: #004386;
+}
+
+a.codeRef, a.codeRef:visited, a.lineRef, a.lineRef:visited {
+	color: #004386;
+}
+
+.sm-dox {
+  background-image: none;
+  background-color: #DFE8F1;
+}
+
+.navpath ul {
+  background-image: none;
+  background-color: #DFE8F1;
+}
+
+div.ah, span.ah {
+  background-image: none;
+}
+
+div.header {
+  background-image: none;
+}
+
+.memtitle {
+  background-image: none;
+  background-color: #DFE8F1;
+}
+
+.memdoc, dl.reflist dd {
+  background-image: none;
+  -webkit-box-shadow: none;
+}
