@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Class: Connection - JavaScript SDK リファレンス - Enterprise Cloud WebRTC Platform - ECLWebRTC</title>
+    <title>Class: Connection - JavaScript SDK APIリファレンス - Enterprise Cloud WebRTC Platform - ECLWebRTC</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -21,9 +21,13 @@
         <p>
             <a href="../">Enterprise Cloud WebRTC Platform</a>
             /
-            <a href="../developer.html">開発者</a>
+            <a href="../developer.html" class="en">Developer</a>
+            <a href="../developer.html" class="jp">開発者</a>
             /
-            <a href="../js-sdk">JavaScript SDK</a>
+            <a href="../js-sdk.html">JavaScript SDK</a>
+            /
+            <span class="en">API Reference</span>
+            <span class="jp">APIリファレンス</span>
             /
             <span>Class: Connection</span>
         </p>
@@ -42,7 +46,8 @@
     
         <h2><span class="attribs"><span class="type-signature"></span></span>Connection<span class="signature">(remoteId, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description">Class that manages connections to other peers.</div>
+            <div class="class-description"><span class="en">Class that manages connections to other peers.</span>
+<span class="jp">Class that manages connections to other peers.</span></div>
         
     
 </header>
@@ -65,7 +70,8 @@
 
 
 <div class="description">
-    Create a connection to another peer. Cannot be called directly. Must be called by a subclass.
+    <span class="en">Create a connection to another peer. Cannot be called directly. Must be called by a subclass.</span>
+<span class="jp">Create a connection to another peer. Cannot be called directly. Must be called by a subclass.</span>
 </div>
 
 
@@ -127,7 +133,8 @@
 
             
 
-            <td class="description last">The peerId of the peer you are connecting to.</td>
+            <td class="description last"><span class="en">The peerId of the peer you are connecting to.</span>
+                           <span class="jp">The peerId of the peer you are connecting to.</span></td>
         </tr>
 
     
@@ -160,7 +167,8 @@
 
             
 
-            <td class="description last">Optional arguments for the connection.
+            <td class="description last"><span class="en">Optional arguments for the connection.</span>
+                            <span class="jp">Optional arguments for the connection.</span>
                 <h6>Properties</h6>
                 
 
@@ -214,8 +222,10 @@
 
             
 
-            <td class="description last">An ID to uniquely identify the connection.
-                                         Defaults to random string if not specified.</td>
+            <td class="description last"><span class="en">An ID to uniquely identify the connection.
+                                         Defaults to random string if not specified.</span>
+                                         <span class="jp">An ID to uniquely identify the connection.
+                                         Defaults to random string if not specified.</span></td>
         </tr>
 
     
@@ -323,7 +333,8 @@
 
 
 <div class="description">
-    Events the Connection can emit.
+    <span class="en">vents the Connection can emit.</span>
+<span class="jp">vents the Connection can emit.</span>
 </div>
 
 
@@ -390,7 +401,8 @@
 
 
 <div class="description">
-    An id to uniquely identify the connection.
+    <span class="en">An id to uniquely identify the connection.</span>
+<span class="jp">An id to uniquely identify the connection.</span>
 </div>
 
 
@@ -447,7 +459,8 @@
 
 
 <div class="description">
-    Any additional information to send to the peer.
+    <span class="en">Any additional information to send to the peer.</span>
+<span class="jp">Any additional information to send to the peer.</span>
 </div>
 
 
@@ -514,7 +527,8 @@
 
 
 <div class="description">
-    Whether the Connection has been opened or not.
+    <span class="en">Whether the Connection has been opened or not.</span>
+<span class="jp">Whether the Connection has been opened or not.</span>
 </div>
 
 
@@ -581,7 +595,8 @@
 
 
 <div class="description">
-    The remote peerId.
+    <span class="en">The remote peerId.</span>
+<span class="jp">The remote peerId.</span>
 </div>
 
 
@@ -617,7 +632,8 @@
     
 
     
-        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li>Use remoteId instead.</li></ul></dd>
+        <dt class="important tag-deprecated">Deprecated:</dt><dd><ul class="dummy"><li><span class="en">Use remoteId instead.</span>
+            <span class="jp">代わりにremoteIdを使ってください。</span></li></ul></dd>
     
 
     
@@ -650,7 +666,8 @@
 
 
 <div class="description">
-    PeerId of the peer this connection is connected to.
+    <span class="en">PeerId of the peer this connection is connected to.</span>
+<span class="jp">PeerId of the peer this connection is connected to.</span>
 </div>
 
 
@@ -717,7 +734,8 @@
 
 
 <div class="description">
-    The connection type. Either 'media' or 'data'.
+    <span class="en">The connection type. Either 'media' or 'data'.</span>
+<span class="jp">The connection type. Either 'media' or 'data'.</span>
 </div>
 
 
@@ -796,7 +814,8 @@
 
 
 <div class="description">
-    Disconnect from remote peer.
+    <span class="en">Disconnect from remote peer.</span>
+<span class="jp">Disconnect from remote peer.</span>
 </div>
 
 
@@ -882,7 +901,8 @@
 
 
 <div class="description">
-    Handle an sdp answer message from the remote peer.
+    <span class="en">Handle an sdp answer message from the remote peer.</span>
+<span class="jp">Handle an sdp answer message from the remote peer.</span>
 </div>
 
 
@@ -934,7 +954,8 @@
 
             
 
-            <td class="description last">Message object containing sdp answer.</td>
+            <td class="description last"><span class="en">Message object containing sdp answer.</span>
+                                <span class="jp">Message object containing sdp answer.</span></td>
         </tr>
 
     
@@ -1012,7 +1033,8 @@
 
 
 <div class="description">
-    Handle a candidate message from the remote peer.
+    <span class="en">Handle a candidate message from the remote peer.</span>
+<span class="jp">Handle a candidate message from the remote peer.</span>
 </div>
 
 
@@ -1064,7 +1086,8 @@
 
             
 
-            <td class="description last">Message object containing a candidate.</td>
+            <td class="description last"><span class="en">Message object containing a candidate.</span>
+                                   <span class="jp">Message object containing a candidate.</span></td>
         </tr>
 
     
@@ -1142,7 +1165,8 @@
 
 
 <div class="description">
-    Handle an offer message from the remote peer. Allows an offer to be updated.
+    <span class="en">Handle an offer message from the remote peer. Allows an offer to be updated.</span>
+<span class="jp">Handle an offer message from the remote peer. Allows an offer to be updated.</span>
 </div>
 
 
@@ -1194,7 +1218,8 @@
 
             
 
-            <td class="description last">Message object containing an offer.</td>
+            <td class="description last"><span class="en">Message object containing an offer.</span>
+                               <span class="jp">Message object containing an offer.</span></td>
         </tr>
 
     
@@ -1365,7 +1390,7 @@
 <br class="clear">
 
 <footer>
-    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Thu Aug 17 2017 11:37:01 GMT+0900 (JST)</p>
+    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Mon Aug 21 2017 19:52:53 GMT+0900 (JST)</p>
     <p>© NTT Communications Corporation All Rights Reserved.</p>
 </footer>
 
