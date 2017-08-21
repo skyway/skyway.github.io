@@ -1,16 +1,16 @@
-var Calculator;
+var CostSimulator;
 
 (function(){
 
     var ENTERPRISE = "Enterprise Edition"
       , COMMUNITY = "Community Edition";
 
-    Calculator = function(){
+    CostSimulator = function(){
         this.params = {};
         this.init();
     }
     
-    var proto_ = Calculator.prototype;
+    var proto_ = CostSimulator.prototype;
 
     proto_.test = function(){
         var testParam = {

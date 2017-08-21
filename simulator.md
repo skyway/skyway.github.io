@@ -203,10 +203,10 @@ lang: ja
 </div>
 
 
-<script src="{{ site.rootdir[page.lang] }}js/calculator.js"></script>
+<script src="{{ site.rootdir[page.lang] }}js/costSimulator.js"></script>
 
 <script>
-  var cal = new Calculator();
+  var cal = new CostSimulator();
 
   document.addEventListener('DOMContentLoaded', function() {
     $("#calculateBtn").on("click", function(){
@@ -254,8 +254,5 @@ lang: ja
 
       return params;
     }
-
   });
-
-
 </script>
