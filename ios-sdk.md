@@ -2,6 +2,7 @@
 layout: default
 title: iOS SDK
 lang: ja
+breadcrumb: [index.md, developer.md]
 ---
 
 # iOS SDK

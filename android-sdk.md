@@ -2,6 +2,7 @@
 layout: default
 title: Android SDK
 lang: ja
+breadcrumb: [index.md, developer.md]
 ---
 
 # Android SDK

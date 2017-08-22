@@ -2,6 +2,7 @@
 layout: default
 title: 料金シミュレーター
 lang: ja
+breadcrumb: [index.md, pricing.md]
 ---
 
 # 料金シミュレーター

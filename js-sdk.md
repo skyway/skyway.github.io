@@ -2,6 +2,7 @@
 layout: default
 title: JavaScript SDK
 lang: ja
+breadcrumb: [index.md, developer.md]
 ---
 
 # JavaScript SDK

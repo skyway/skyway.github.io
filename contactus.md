@@ -2,6 +2,7 @@
 layout: default
 title: お問い合わせ
 lang: ja
+breadcrumb: [index.md, signup.md]
 ---
 
 ## Enterprise Editionのご利用を検討中の方へ

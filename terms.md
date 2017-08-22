@@ -2,6 +2,7 @@
 layout: rightnav
 title: 利用規約
 lang: ja
+breadcrumb: [index.md, signup.md]
 ---
 
 - TOC

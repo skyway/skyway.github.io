@@ -2,6 +2,7 @@
 layout: default
 title: 新規登録
 lang: ja
+breadcrumb: [index.md]
 ---
 
 # 新規登録

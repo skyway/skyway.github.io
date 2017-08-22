@@ -2,6 +2,7 @@
 layout: rightnav
 title: JavaScript SDK チュートリアル
 lang: ja
+breadcrumb: [index.md, developer.md, js-sdk.md]
 ---
 
 - TOC
