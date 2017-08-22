@@ -4,11 +4,11 @@
     font-style: normal;
     src: url('../fonts/OpenSans-Regular-webfont.eot');
     src:
-        local('Open Sans'),
-        local('OpenSans'),
-        url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
-        url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+            local('Open Sans'),
+            local('OpenSans'),
+            url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+            url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
 }
 
 @font-face {
@@ -17,11 +17,11 @@
     font-style: normal;
     src: url('../fonts/OpenSans-Light-webfont.eot');
     src:
-        local('Open Sans Light'),
-        local('OpenSans Light'),
-        url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
-        url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+            local('Open Sans Light'),
+            local('OpenSans Light'),
+            url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+            url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
 }
 
 html
@@ -79,7 +79,7 @@ article dl {
 }
 
 article img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 section
@@ -113,6 +113,15 @@ nav
     padding-left: 16px;
 }
 
+#lang {
+    float: right;
+}
+
+#lang > p {
+    margin: 0 24px 0 0;
+    line-height: 1;
+}
+
 nav ul {
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
     font-size: 100%;
@@ -144,8 +153,9 @@ footer {
     font-size: 90%;
 }
 
-#breadcrumb {
-    margin: 12px 24px 20px;
+#breadcrumb > p {
+    margin: 28px 24px 0 24px;
+    line-height: 1;
 }
 
 h1, h2, h3, h4 {
@@ -301,40 +311,40 @@ tr > th:last-child { border-right: 1px solid #ddd; }
 
 .prettyprint code span.line
 {
-  display: inline-block;
+    display: inline-block;
 }
 
 .prettyprint.linenums
 {
-  padding-left: 70px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    padding-left: 70px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .prettyprint.linenums ol
 {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .prettyprint.linenums li
 {
-  border-left: 3px #ddd solid;
+    border-left: 3px #ddd solid;
 }
 
 .prettyprint.linenums li.selected,
 .prettyprint.linenums li.selected *
 {
-  background-color: lightyellow;
+    background-color: lightyellow;
 }
 
 .prettyprint.linenums li *
 {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 .params .name, .props .name, .name code {
