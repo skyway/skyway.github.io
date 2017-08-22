@@ -250,7 +250,7 @@ breadcrumb: [index.md, pricing.md]
       }
       if(partyNum && partyNum.length > 0) params.partyNum = partyNum;
 
-      var BitRate = parseInt($("#inputBitRate").val());
+      var BitRate = parseFloat($("#inputBitRate").val());
       if(BitRate) params.BitRate = BitRate;
 
       return params;
