@@ -8,7 +8,11 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-10">
-      <div id="main" class="container">
+      <div id="main">
+        {% if page.breadcrumb %}
+          {% include breadcrumb.html %}
+        {% endif %}
+
         {{ content }}
       </div>
     </div>
