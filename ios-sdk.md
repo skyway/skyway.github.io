@@ -28,6 +28,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 [チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
+{: #sdkdownload }
 
 ### CocoaPodsを利用する場合
 
