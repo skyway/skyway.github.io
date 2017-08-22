@@ -2,6 +2,7 @@
 layout: rightnav
 title: Android SDK チュートリアル
 lang: ja
+breadcrumb: [index.md, developer.md, android-sdk.md]
 ---
 
 - TOC

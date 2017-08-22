@@ -10,6 +10,7 @@ main_visual:
   image_file_name: 
   font_color: "#fff"
   background_color: rgb(0, 67, 134)
+breadcrumb: [index.md]
 ---
 
 ## 料金

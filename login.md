@@ -2,6 +2,7 @@
 layout: default
 title: ログイン
 lang: ja
+breadcrumb: [index.md]
 ---
 
 # ログイン

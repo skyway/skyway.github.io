@@ -2,6 +2,7 @@
 layout: default
 title: Android SDK
 lang: ja
+breadcrumb: [index.md, developer.md]
 ---
 
 # Android SDK
@@ -25,6 +26,7 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 [チュートリアルの続きを読む](android-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
+{: #sdkdownload }
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">

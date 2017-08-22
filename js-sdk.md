@@ -2,6 +2,7 @@
 layout: default
 title: JavaScript SDK
 lang: ja
+breadcrumb: [index.md, developer.md]
 ---
 
 # JavaScript SDK
@@ -26,6 +27,7 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 [チュートリアルの続きを読む](js-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
+{: #sdkdownload }
 
 ### npmを利用する場合
 

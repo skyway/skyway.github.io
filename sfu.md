@@ -2,6 +2,7 @@
 layout: default
 title: SFU
 lang: ja
+breadcrumb: [index.md, developer.md]
 ---
 
 # SFUについて

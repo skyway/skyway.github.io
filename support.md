@@ -2,6 +2,7 @@
 layout: default
 title: サポート
 lang: ja
+breadcrumb: [index.md]
 ---
 
 <h1>サポート</h1>
