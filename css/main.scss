@@ -214,23 +214,10 @@ html {
       .col#{$infix}-auto {
         display: flex;
       }
-      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-        // Provide basic `.col-{bp}` classes for equal-width flexbox columns
-        .col#{$infix} {
-          display: flex;
-        }
-        .col#{$infix}-auto {
-          display: flex;
-        }
-        @for $i from 1 through $grid-columns {
-          .col#{$infix}-#{$i} {
-            display: flex;
-          }
-        }
-      }
     }
     .card, .list-group {
-      flex-grow: 1;
+      flex-grow: 1;   // hack for Safari
+      width: 100%;    // hack for IE11
     }
   }
 
@@ -673,4 +660,9 @@ html {
 
 .breadcrumb {
   margin: 1rem 0 -2rem 0;
+}
+
+// IE11 Polyfill
+wbr:after {
+  content: "\00200B";
 }
