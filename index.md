@@ -33,7 +33,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
 
 <div id="about-div" class="row card-row">
   <div class="col-6 col-sm-6 col-lg-3">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <div class="text-center"><i class="fa fa-code fa-5x " aria-hidden="true"></i></div>
         <h3 class="card-title"><span>アプリ開発</span><wbr><span>に</span><wbr><span>集中</span></h3>
@@ -42,7 +42,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
     </div>
   </div>
   <div class="col-6 col-sm-6 col-lg-3">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <div class="text-center"><i class="fa fa-mobile fa-5x" aria-hidden="true"></i></div>
         <h3 class="card-title"><span>マルチ</span><wbr><span>プラット</span><wbr><span>フォーム</span></h3>
@@ -51,7 +51,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
     </div>
   </div>
   <div class="col-6 col-sm-6 col-lg-3">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <div class="text-center"><i class="fa fa-users fa-5x" aria-hidden="true"></i></div>
         <h3 class="card-title"><span>無料で</span><wbr><span>すぐに</span><wbr><span>試せる</span></h3>
@@ -60,7 +60,7 @@ ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用す�
     </div>
   </div>
   <div class="col-6 col-sm-6 col-lg-3">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <div class="text-center"><i class="fa fa-comments-o fa-5x" aria-hidden="true"></i></div>
         <h3 class="card-title"><span>サポート</span><wbr><span>と</span><wbr><span>SLA</span><wbr><span>で</span><wbr><span>安心</span></h3>
@@ -137,7 +137,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 
 <div class="row card-row">
   <div class="col-6 col-md-3">
-    <div class="card h-100">
+    <div class="card">
       <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Web会議</h3>
@@ -152,7 +152,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
     </div>
   </div>
   <div class="col-6 col-md-3">
-    <div class="card h-100">
+    <div class="card">
       <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">サポート</h3>
@@ -165,7 +165,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
     </div>
   </div>
   <div class="col-6 col-md-3">
-    <div class="card h-100">
+    <div class="card">
       <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">遠隔医療</h3>
@@ -177,7 +177,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
     </div>
   </div>
   <div class="col-6 col-md-3">
-    <div class="card h-100">
+    <div class="card">
       <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">IoT</h3>
