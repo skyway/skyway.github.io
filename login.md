@@ -9,7 +9,7 @@ breadcrumb: [index.md]
 
 <div id="login-div" class="row card-row">
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <h3 class="card-title">Community Edition</h3>
         <p class="card-text">個人開発者、スタートアップ向け</p>
@@ -19,7 +19,7 @@ breadcrumb: [index.md]
     </div>
   </div>
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <h3 class="card-title">Enterprise Edition</h3>
         <p class="card-text">大規模サービス向け</p>
@@ -29,7 +29,7 @@ breadcrumb: [index.md]
     </div>
   </div>
   <div class="col-12 col-md-6 col-lg-4">
-    <div class="card h-100">
+    <div class="card">
       <div class="card-body">
         <h3 class="card-title">SkyWay</h3>
         <p class="card-text">2018年3月31日をもってサービスを終了します。<a href="./migration.html">ECLWebRTCへの移行</a>をお願いします</p>

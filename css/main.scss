@@ -202,6 +202,36 @@ html {
       margin-left:  ($card-gutter-width / -2);
     }
     @include make-grid-columns($gutter: $card-gutter-width);
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      @for $i from 1 through $grid-columns {
+        .col#{$infix}-#{$i} {
+          display: flex;
+        }
+      }
+      .col#{$infix},
+      .col#{$infix}-auto {
+        display: flex;
+      }
+      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+        .col#{$infix} {
+          display: flex;
+        }
+        .col#{$infix}-auto {
+          display: flex;
+        }
+        @for $i from 1 through $grid-columns {
+          .col#{$infix}-#{$i} {
+            display: flex;
+          }
+        }
+      }
+    }
+    .card, .list-group {
+      flex-grow: 1;
+    }
   }
 
   .row {
