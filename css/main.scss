@@ -674,3 +674,8 @@ html {
 .breadcrumb {
   margin: 1rem 0 -2rem 0;
 }
+
+// IE11 Polyfill
+wbr:after {
+  content: "\00200B";
+}
