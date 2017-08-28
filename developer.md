@@ -215,3 +215,45 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
   <div class="tab-pane" id="failure" role="tabpanel">
   </div>
 </div>
+
+<script>
+$(function() {
+  'use strict';
+
+  // AJAXでZendeskのお知らせを取得して表示
+
+  // JSON取得
+  $.getJSON(JSON_URL_ANNOUNCEMENT).done(function(data) {
+    updateNews(data, 'announce', ZENDESK_URL_ANNOUNCEMENT);
+  }).fail(function(data) {
+    console.log('xhr failed');
+  });
+
+  $.getJSON(JSON_URL_MAINTENANCE).done(function(data) {
+    updateNews(data, 'maintenance', ZENDESK_URL_MAINTENANCE);
+  }).fail(function(data) {
+    console.log('xhr failed');
+  });
+
+  $.getJSON(JSON_URL_FAILURE).done(function(data) {
+    updateNews(data, 'failure', ZENDESK_URL_FAILURE);
+  }).fail(function(data) {
+    console.log('xhr failed');
+  });
+
+  // DOM作成
+  function updateNews(obj, id, siteurl){
+    var dom = '';
+    for(var i = 0; i < obj.articles.length; i++){
+      dom += '<div class="row"><div class="col-12 col-sm-2"><div class="mini-headline-date">'
+        + obj.articles[i].body.substr(4, 10)
+        + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
+        + obj.articles[i].body + '</div></div></div>'
+    }
+    dom += '<a class="allnewslink btn btn-primary" href=' + siteurl + ' target="_blank">'
+      + 'すべてのニュース'
+      + '</a>';
+    $('#' + id).html(dom);
+  }
+});
+</script>
