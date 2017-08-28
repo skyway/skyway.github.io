@@ -35,7 +35,7 @@ $(function () {
     dataType: 'json',
     async: 'true'
   }).done(function(data) {
-    updateNews(data,'announce',ZENDESK_URL_ANNOUNCEMENT);
+    updateNews(data, 'announce', ZENDESK_URL_ANNOUNCEMENT);
   }).fail(function(data) {
     console.log('xhr failed');
   });
@@ -46,7 +46,7 @@ $(function () {
     dataType: 'json',
     async: 'true'
   }).done(function(data) {
-    updateNews(data,'maintenance',ZENDESK_URL_MAINTENANCE);
+    updateNews(data, 'maintenance', ZENDESK_URL_MAINTENANCE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
@@ -57,7 +57,7 @@ $(function () {
     dataType: 'json',
     async: 'true'
   }).done(function(data) {
-    updateNews(data,'failure',ZENDESK_URL_FAILURE);
+    updateNews(data, 'failure', ZENDESK_URL_FAILURE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
