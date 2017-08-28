@@ -3,7 +3,7 @@ $(function() {
 
   $('[data-toggle="tooltip"]').tooltip();
 
-  /** 新着情報取得用スクリプト ここから**/
+  // AJAXでZendeskのお知らせを取得して表示
 
   // 言語判定（英語ページの場合は英語の情報を取得するため）
   var href = window.location.href;
@@ -31,6 +31,7 @@ $(function() {
   var ZENDESK_URL_MAINTENANCE = ZENDESK_URL_BASE + SECTION_ID_MAINTENANCE;
   var ZENDESK_URL_FAILURE = ZENDESK_URL_BASE + SECTION_ID_FAILURE;
 
+  // JSON取得
   $.getJSON(JSON_URL_ANNOUNCEMENT).done(function(data) {
     updateNews(data, 'announce', ZENDESK_URL_ANNOUNCEMENT);
   }).fail(function(data) {
@@ -49,9 +50,7 @@ $(function() {
     console.log('xhr failed');
   });
 
-  /** 新着情報取得用スクリプト ここまで **/
-
-  // 最新情報のDom生成
+  // DOM作成
   function updateNews(obj, id, siteurl){
     var dom = '';
     for(var i = 0; i < obj.articles.length; i++){
@@ -66,7 +65,7 @@ $(function() {
     $('#' + id).html(dom);
   }
 
-  // Anchor
+  // <h2>~<h6>ホバー時にアンカーアイコンを表示
   var headers = '#main > h2, #main > h3, #main > h4, #main > h5, #main > h6';
   $(headers).filter('[id]').each(function () {
     var header    = $(this),
