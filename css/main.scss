@@ -205,17 +205,17 @@ html {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
       @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
-          display: flex;
+          display: flex;  // Hack for Safari
         }
       }
       .col#{$infix},
       .col#{$infix}-auto {
-        display: flex;
+        display: flex;    // hack for Safari
       }
     }
     .card, .list-group {
-      flex-grow: 1;   // hack for Safari
-      width: 100%;    // hack for IE11
+      flex-grow: 1;       // hack for Safari
+      width: 100%;        // hack for IE11
     }
   }
 
