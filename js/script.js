@@ -29,34 +29,19 @@ $(function () {
   var ZENDESK_URL_MAINTENANCE = ZENDESK_URL_BASE + SECTION_ID_MAINTENANCE;
   var ZENDESK_URL_FAILURE = ZENDESK_URL_BASE + SECTION_ID_FAILURE;
 
-  $.ajax({
-    url: JSON_URL_ANNOUNCEMENT,
-    type: 'GET',
-    dataType: 'json',
-    async: 'true'
-  }).done(function(data) {
+  $.getJSON(JSON_URL_ANNOUNCEMENT).done(function(data) {
     updateNews(data, 'announce', ZENDESK_URL_ANNOUNCEMENT);
   }).fail(function(data) {
     console.log('xhr failed');
   });
 
-  $.ajax({
-    url: JSON_URL_MAINTENANCE,
-    type: 'GET',
-    dataType: 'json',
-    async: 'true'
-  }).done(function(data) {
+  $.getJSON(JSON_URL_MAINTENANCE).done(function(data) {
     updateNews(data, 'maintenance', ZENDESK_URL_MAINTENANCE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
 
-  $.ajax({
-    url: JSON_URL_FAILURE,
-    type: 'GET',
-    dataType: 'json',
-    async: 'true'
-  }).done(function(data) {
+  $.getJSON(JSON_URL_FAILURE).done(function(data) {
     updateNews(data, 'failure', ZENDESK_URL_FAILURE);
   }).fail(function(data) {
     console.log('xhr failed');
