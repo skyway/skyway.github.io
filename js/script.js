@@ -10,46 +10,54 @@ $(function () {
     prefix = 'en-us';
   }
 
-  // APIリクエスト
-  // リクエスト条件：最大取得件数4件、作成日で降順ソート
-  const announce = 'https://skyway-support.zendesk.com/api/v2/help_center/'+prefix+'/sections/207255008/articles.json?sort_by=created_at&sort_order=desc&per_page=3';
-  const maintenance = 'https://skyway-support.zendesk.com/api/v2/help_center/'+prefix+'/sections/207271047/articles.json?sort_by=created_at&sort_order=desc&per_page=3';
-  const failure = 'https://skyway-support.zendesk.com/api/v2/help_center/'+prefix+'/sections/207255108/articles.json?sort_by=created_at&sort_order=desc&per_page=3';
+  // Zendesk API URL
+  var SECTION_ID_ANNOUNCEMENT = '207255008';
+  var SECTION_ID_MAINTENANCE = '207271047';
+  var SECTION_ID_FAILURE = '207255108';
 
-  //新着情報サイトURL
-  const announce_site = 'https://support.skyway.io/hc/'+prefix+'/sections/207255008';
-  const maintenance_site = 'https://support.skyway.io/hc/'+prefix+'/sections/207271047';
-  const failure_site = 'https://support.skyway.io/hc/'+prefix+'/sections/207255108';
+  var JSON_URL_BASE = 'https://skyway-support.zendesk.com/api/v2/help_center/' + prefix + '/sections/';
+  var JSON_URL_QUERY = '/articles.json?sort_by=created_at&sort_order=desc&per_page=3';  // 3件、作成日降順
+
+  var JSON_URL_ANNOUNCEMENT = JSON_URL_BASE + SECTION_ID_ANNOUNCEMENT + JSON_URL_QUERY;
+  var JSON_URL_MAINTENANCE = JSON_URL_BASE + SECTION_ID_MAINTENANCE + JSON_URL_QUERY;
+  var JSON_URL_FAILURE = JSON_URL_BASE + SECTION_ID_FAILURE + JSON_URL_QUERY;
+
+  // Zendesk 新着情報 URL
+  var ZENDESK_URL_BASE = 'https://support.skyway.io/hc/' + prefix + '/sections/';
+
+  var ZENDESK_URL_ANNOUNCEMENT = ZENDESK_URL_BASE + SECTION_ID_ANNOUNCEMENT;
+  var ZENDESK_URL_MAINTENANCE = ZENDESK_URL_BASE + SECTION_ID_MAINTENANCE;
+  var ZENDESK_URL_FAILURE = ZENDESK_URL_BASE + SECTION_ID_FAILURE;
 
   $.ajax({
-    url: announce,
+    url: JSON_URL_ANNOUNCEMENT,
     type: 'GET',
     dataType: 'json',
     async: 'true'
   }).done(function(data) {
-    updateNews(data,'announce',announce_site);
+    updateNews(data,'announce',ZENDESK_URL_ANNOUNCEMENT);
   }).fail(function(data) {
     console.log('xhr failed');
   });
 
   $.ajax({
-    url: maintenance,
+    url: JSON_URL_MAINTENANCE,
     type: 'GET',
     dataType: 'json',
     async: 'true'
   }).done(function(data) {
-    updateNews(data,'maintenance',maintenance_site);
+    updateNews(data,'maintenance',ZENDESK_URL_MAINTENANCE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
 
   $.ajax({
-    url: failure,
+    url: JSON_URL_FAILURE,
     type: 'GET',
     dataType: 'json',
     async: 'true'
   }).done(function(data) {
-    updateNews(data,'failure',failure_site);
+    updateNews(data,'failure',ZENDESK_URL_FAILURE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
