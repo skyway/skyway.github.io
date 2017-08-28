@@ -1,109 +1,48 @@
-window.onload = function () {
+'use strict';
 
-    $(function () {
-      // enable tooltip
-      $('[data-toggle="tooltip"]').tooltip();
+// Constants
 
-      // enable toggle icon for collapse
-      initCollapseIconToggle();
+(function() { // 即時実行
+  // 言語判定（英語ページの場合は英語の情報を取得するため）
+  var lang = '';
+  switch (CONST.LANG) {
+    case 'ja':
+      lang = 'ja';
+      break;
+    case 'en':
+      lang = 'en-us';
+      break;
+    default:
+      lang = 'ja';
+      break;
+  };
 
+  // Zendesk API URL
+  var SECTION_ID_ANNOUNCEMENT = '207255008';
+  var SECTION_ID_MAINTENANCE = '207271047';
+  var SECTION_ID_FAILURE = '207255108';
 
-      /** 新着情報取得用スクリプト ここから**/
+  var JSON_URL_BASE = 'https://skyway-support.zendesk.com/api/v2/help_center/' + lang + '/sections/';
+  var JSON_URL_QUERY = '/articles.json?sort_by=created_at&sort_order=desc&per_page=3';  // 3件、作成日降順
 
-      // 言語判定（英語ページの場合は英語の情報を取得するため）
-      var href = window.location.href;
-      var prefix = 'ja';
-      if(href.match('\/en')){
-        prefix = 'en-us';
-      }
+  CONST.JSON_URL_ANNOUNCEMENT = JSON_URL_BASE + SECTION_ID_ANNOUNCEMENT + JSON_URL_QUERY;
+  CONST.JSON_URL_MAINTENANCE = JSON_URL_BASE + SECTION_ID_MAINTENANCE + JSON_URL_QUERY;
+  CONST.JSON_URL_FAILURE = JSON_URL_BASE + SECTION_ID_FAILURE + JSON_URL_QUERY;
 
-      // APIリクエスト
-      // リクエスト条件：最大取得件数4件、作成日で降順ソート
-      const announce = 'https://skyway-support.zendesk.com/api/v2/help_center/'+prefix+'/sections/207255008/articles.json?sort_by=created_at&sort_order=desc&per_page=3';
-      const maintenance = 'https://skyway-support.zendesk.com/api/v2/help_center/'+prefix+'/sections/207271047/articles.json?sort_by=created_at&sort_order=desc&per_page=3';
-      const failure = 'https://skyway-support.zendesk.com/api/v2/help_center/'+prefix+'/sections/207255108/articles.json?sort_by=created_at&sort_order=desc&per_page=3';
+  // Zendesk 新着情報 URL
+  var ZENDESK_URL_BASE = 'https://support.skyway.io/hc/' + lang + '/sections/';
 
-      //新着情報サイトURL
-      const announce_site = 'https://support.skyway.io/hc/'+prefix+'/sections/207255008';
-      const maintenance_site = 'https://support.skyway.io/hc/'+prefix+'/sections/207271047';
-      const failure_site = 'https://support.skyway.io/hc/'+prefix+'/sections/207255108';
+  CONST.ZENDESK_URL_ANNOUNCEMENT = ZENDESK_URL_BASE + SECTION_ID_ANNOUNCEMENT;
+  CONST.ZENDESK_URL_MAINTENANCE = ZENDESK_URL_BASE + SECTION_ID_MAINTENANCE;
+  CONST.ZENDESK_URL_FAILURE = ZENDESK_URL_BASE + SECTION_ID_FAILURE;
+})();
 
-      $.ajax({
-        url: announce,
-        type: 'GET',
-        dataType: 'json',
-        async: 'true'
-      }).done(function(data) {
-        updateNews(data,'announce',announce_site);
-      }).fail(function(data) {
-        console.log('xhr failed');
-      });
+$(function() {  // DOMが用意できてから実行
+  // Twitter Bootstrap Tooltips
 
-      $.ajax({
-        url: maintenance,
-        type: 'GET',
-        dataType: 'json',
-        async: 'true'
-      }).done(function(data) {
-        updateNews(data,'maintenance',maintenance_site);
-      }).fail(function(data) {
-        console.log('xhr failed');
-      });
+  $('[data-toggle="tooltip"]').tooltip();
 
-      $.ajax({
-        url: failure,
-        type: 'GET',
-        dataType: 'json',
-        async: 'true'
-      }).done(function(data) {
-        updateNews(data,'failure',failure_site);
-      }).fail(function(data) {
-        console.log('xhr failed');
-      });
-
-    });
-
-  /** 新着情報取得用スクリプト ここまで **/
-
-
-};
-
-// 最新情報のDom生成
-function updateNews(obj,id,siteurl){
-  var dom = '';
-  for(var i = 0;i < obj.articles.length;i++){
-    dom += '<div class="row"><div class="col-12 col-sm-2"><div class="mini-headline-date">'
-      + obj.articles[i].body.substr(4,10)
-      + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
-      + obj.articles[i].body + '</div></div></div>'
-  }
-  dom += '<a class="allnewslink btn btn-primary" href=' + siteurl + ' target="_blank">'
-    + 'すべてのニュース'
-    + '</a>';
-  $('#'+id).html(dom);
-}
-
-// アコーディオンのトグルアイコン変更
-function initCollapseIconToggle(){
-  $('#collapseOne, #collapseTwo, #collapseThree').on({
-    // 折り畳み開く処理
-    'show.bs.collapse': function() {
-      $('a[href="#' + this.id + '"] i.fa-chevron-down')
-        .removeClass('fa-chevron-down')
-        .addClass('fa-chevron-up');
-    },
-    // 折り畳み閉じる処理
-    'hide.bs.collapse': function() {
-      $('a[href="#' + this.id + '"] i.fa-chevron-up')
-        .removeClass('fa-chevron-up')
-        .addClass('fa-chevron-down');
-    }
-  });
-}
-
-// Anchor
-$(function() {
-  'use strict';
+  // <h2>~<h6>ホバー時にアンカーアイコンを表示
 
   var headers = '#main > h2, #main > h3, #main > h4, #main > h5, #main > h6';
   $(headers).filter('[id]').each(function () {

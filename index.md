@@ -13,10 +13,12 @@ main_visual:
 ---
 
 <div class="card">
-  <div class="card-body">
-    <div class="d-flex w-100 justify-content-between">
-      <a href="https://connpass.com" target="_blank">2017年9月29日にECLWebRTC Meetup #0を開催します。LT発表および参加申し込み受付中です。</a>
-      <small class="text-muted"><a href="https://support.skyway.io/">すべてのお知らせを見る</a></small>
+  <div class="card-body d-flex w-100 justify-content-between">
+    <div>
+      <a href="#" target="_blank" id="announcementLink"></a><br>
+    </div>
+    <div>
+      <small class="text-muted"><a href="https://support.skyway.io/hc/ja/sections/207255008">すべてのお知らせを見る</a></small>
     </div>
   </div>
 </div>
@@ -222,3 +224,21 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 </div>
+
+<script>
+$(function() {
+  'use strict';
+
+  // AJAXでZendeskのお知らせを取得して表示
+
+  // JSON取得
+  $.getJSON(CONST.JSON_URL_ANNOUNCEMENT).done(function(data) {
+    var article = data.articles[0];
+    var title = article.title;
+    var url = article.html_url;
+    $('#announcementLink').text(title).attr({href: url});
+  }).fail(function(data) {
+    console.log('xhr failed');
+  });
+});
+</script>

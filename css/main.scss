@@ -205,17 +205,17 @@ html {
       $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
       @for $i from 1 through $grid-columns {
         .col#{$infix}-#{$i} {
-          display: flex;
+          display: flex;  // Hack for Safari
         }
       }
       .col#{$infix},
       .col#{$infix}-auto {
-        display: flex;
+        display: flex;    // hack for Safari
       }
     }
     .card, .list-group {
-      flex-grow: 1;   // hack for Safari
-      width: 100%;    // hack for IE11
+      flex-grow: 1;       // hack for Safari
+      width: 100%;        // hack for IE11
     }
   }
 
@@ -283,29 +283,6 @@ html {
     }
   }
 
-  .nav-tabs {
-    .nav-item {
-      .nav-link.active {
-        color: #ffffff;
-        background: $color-base;
-        border-color: $color-base;
-      }
-      .nav-link {
-        border-color: $color-base;
-      }
-    }
-  }
-  .tab-content {
-    background: #f8f8f8;
-    height: 30rem;
-    overflow-y: scroll;
-    .allnewslink {
-      position: sticky;
-      left: 0.5rem;
-      bottom: 0.5rem;
-    }
-  }
-
   // index.html系
   #about-div {
     // window width (-575px)
@@ -370,7 +347,7 @@ html {
         font-size: 2rem;
       }
     }
-    @include media-breakpoint-only(xs) {
+    @include media-breakpoint-down(xs) {  // 効いていない
       .list-group-item {
         padding: 0.75rem;
       }
@@ -417,7 +394,7 @@ html {
         font-weight: bold;
       }
     }
-    @include media-breakpoint-only(xs) {
+    @include media-breakpoint-only(xs) {  // 効いていない
       .card-title {
         font-size: 1rem;
         font-weight: bold;
@@ -427,31 +404,25 @@ html {
   }
 
   .tab-pane {
-    .row {
-      margin: 0;
-      margin: 0.5rem;
-    }
-    .mini-headline-date {
-      float: right;
-      padding: 0;
-      text-align: center;
-      color: $color-base;
-      padding: 0.5rem 0 0 0;
-      @include media-breakpoint-only(sm) {
-        font-size: small;
-      }
-      @include media-breakpoint-only(xs) {
-        float: left;
+    position: relative;
+    .rows {
+      height: 24rem;
+      overflow-y: scroll;
+      padding-bottom: 2rem;
+
+      @include media-breakpoint-down(xs) {
+        height: auto;
       }
     }
     .mini-headline-text {
-      padding: 0.5rem;
-      border-radius: 5px;
-      color: #8f8f8f;
       line-height: 1.2;
-      p {
-        margin-bottom: 0.5rem;
-      }
+      margin-bottom: 1rem;
+    }
+    .allnewslink {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
     }
   }
 
