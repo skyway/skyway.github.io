@@ -229,12 +229,6 @@ $(function() {
   // AJAXでZendeskのお知らせを取得して表示
 
   // JSON取得
-  $.getJSON(CONST.JSON_URL_ANNOUNCEMENT).done(function(data) {
-    updateNews(data, 'announce', CONST.ZENDESK_URL_ANNOUNCEMENT);
-  }).fail(function(data) {
-    console.log('xhr failed');
-  });
-
   $.getJSON(CONST.JSON_URL_MAINTENANCE).done(function(data) {
     updateNews(data, 'maintenance', CONST.ZENDESK_URL_MAINTENANCE);
   }).fail(function(data) {
