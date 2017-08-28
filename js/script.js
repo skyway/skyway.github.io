@@ -1,4 +1,6 @@
-$(function () {
+$(function() {
+  'use strict';
+
   $('[data-toggle="tooltip"]').tooltip();
 
   /** 新着情報取得用スクリプト ここから**/
@@ -63,12 +65,8 @@ $(function () {
       + '</a>';
     $('#' + id).html(dom);
   }
-});
 
-// Anchor
-$(function() {
-  'use strict';
-
+  // Anchor
   var headers = '#main > h2, #main > h3, #main > h4, #main > h5, #main > h6';
   $(headers).filter('[id]').each(function () {
     var header    = $(this),
