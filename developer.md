@@ -200,19 +200,25 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 メンテナンス、障害情報を公開しています。  
 各情報の通知をRSSで受け取りたい方は、 [メンテナンス及び障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
 
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#maintenance" target="_blank" role="tab">メンテナンス情報</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#failure" target="_blank" role="tab">障害情報</a>
-  </li>
-</ul>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="maintenance" role="tabpanel"> 
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#maintenance" role="tab">メンテナンス情報</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#failure" role="tab">障害情報</a>
+      </li>
+    </ul>
   </div>
-  <div class="tab-pane" id="failure" role="tabpanel">
+  <div class="card-body">
+    <div class="tab-content">
+      <div class="tab-pane active" id="maintenance" role="tabpanel"> 
+      </div>
+      <div class="tab-pane" id="failure" role="tabpanel">
+      </div>
+    </div>
   </div>
 </div>
 
@@ -243,17 +249,36 @@ $(function() {
 
   // DOM作成
   function updateNews(obj, id, siteurl){
-    var dom = '';
-    for(var i = 0; i < obj.articles.length; i++){
-      dom += '<div class="row"><div class="col-12 col-sm-2"><div class="mini-headline-date">'
-        + obj.articles[i].body.substr(4, 10)
-        + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
-        + obj.articles[i].body + '</div></div></div>'
+    var $rows = $('<div>').addClass('rows');;
+    for (var i = 0; i < obj.articles.length; i++) {
+      var $cardTitle = $('<h4>')
+        .text(obj.articles[i].body.substr(4, 10))
+        .addClass('card-title h6');
+      var $cardText = $('<p>')
+        .html(obj.articles[i].body)
+        .addClass('mini-headline-text card-text');
+      var $col1 = $('<div>')
+        .addClass('col-sm-3 col-lg-2')
+        .append($cardTitle);
+      var $col2 = $('<div>')
+        .addClass('col-sm-9 col-lg-10')
+        .append($cardText);
+      var $row = $('<div>')
+        .addClass('row')
+        .append($col1)
+        .append($col2);
+      $rows.append($row);
     }
-    dom += '<a class="allnewslink btn btn-primary" href=' + siteurl + ' target="_blank">'
-      + 'すべてのニュース'
-      + '</a>';
-    $('#' + id).html(dom);
+    var $link = $('<a>')
+      .addClass('btn btn-primary')
+      .attr({
+        href: siteurl,
+        target: '_blank'
+      })
+      .text('すべて見る')
+      .appendTo('<div class="allnewslink">')
+      .parent();
+    $('#' + id).append($rows).append($link);
   }
 });
 </script>
