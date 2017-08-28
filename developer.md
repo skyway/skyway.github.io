@@ -223,20 +223,20 @@ $(function() {
   // AJAXでZendeskのお知らせを取得して表示
 
   // JSON取得
-  $.getJSON(JSON_URL_ANNOUNCEMENT).done(function(data) {
-    updateNews(data, 'announce', ZENDESK_URL_ANNOUNCEMENT);
+  $.getJSON(CONST.JSON_URL_ANNOUNCEMENT).done(function(data) {
+    updateNews(data, 'announce', CONST.ZENDESK_URL_ANNOUNCEMENT);
   }).fail(function(data) {
     console.log('xhr failed');
   });
 
-  $.getJSON(JSON_URL_MAINTENANCE).done(function(data) {
-    updateNews(data, 'maintenance', ZENDESK_URL_MAINTENANCE);
+  $.getJSON(CONST.JSON_URL_MAINTENANCE).done(function(data) {
+    updateNews(data, 'maintenance', CONST.ZENDESK_URL_MAINTENANCE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
 
-  $.getJSON(JSON_URL_FAILURE).done(function(data) {
-    updateNews(data, 'failure', ZENDESK_URL_FAILURE);
+  $.getJSON(CONST.JSON_URL_FAILURE).done(function(data) {
+    updateNews(data, 'failure', CONST.ZENDESK_URL_FAILURE);
   }).fail(function(data) {
     console.log('xhr failed');
   });
