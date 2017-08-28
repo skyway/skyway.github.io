@@ -47,25 +47,23 @@ $(function () {
     console.log('xhr failed');
   });
 
-});
+  /** 新着情報取得用スクリプト ここまで **/
 
-/** 新着情報取得用スクリプト ここまで **/
-
-// 最新情報のDom生成
-function updateNews(obj,id,siteurl){
-  var dom = '';
-  for(var i = 0;i < obj.articles.length;i++){
-    dom += '<div class="row"><div class="col-12 col-sm-2"><div class="mini-headline-date">'
-      + obj.articles[i].body.substr(4,10)
-      + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
-      + obj.articles[i].body + '</div></div></div>'
+  // 最新情報のDom生成
+  function updateNews(obj, id, siteurl){
+    var dom = '';
+    for(var i = 0; i < obj.articles.length; i++){
+      dom += '<div class="row"><div class="col-12 col-sm-2"><div class="mini-headline-date">'
+        + obj.articles[i].body.substr(4, 10)
+        + '</div></div><div class="col-12 col-sm-10"><div class="mini-headline-text">'
+        + obj.articles[i].body + '</div></div></div>'
+    }
+    dom += '<a class="allnewslink btn btn-primary" href=' + siteurl + ' target="_blank">'
+      + 'すべてのニュース'
+      + '</a>';
+    $('#' + id).html(dom);
   }
-  dom += '<a class="allnewslink btn btn-primary" href=' + siteurl + ' target="_blank">'
-    + 'すべてのニュース'
-    + '</a>';
-  $('#'+id).html(dom);
-}
-
+});
 
 // Anchor
 $(function() {
