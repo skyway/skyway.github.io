@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
-{% include head.html %}
-<body data-spy="scroll" data-target="#rightnav">
+  {% include head.html %}
+  <body data-spy="scroll" data-target="#rightnav">
+    {% include js-top.html %}
+    {% include header.html %}
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10">
+          <div id="main">
+            {% if page.breadcrumb %}
+              {% include breadcrumb.html %}
+            {% endif %}
 
-{% include header.html %}
-
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-10">
-      <div id="main">
-        {% if page.breadcrumb %}
-          {% include breadcrumb.html %}
-        {% endif %}
-
-        {{ content }}
+            {{ content }}
+          </div>
+        </div>
+        <div class="hidden-md-down col-lg-2" id="rightnav-wrapper">
+          <div id="rightnav">
+          </div>
+        </div>
       </div>
     </div>
-    <div class="hidden-md-down col-lg-2" id="rightnav-wrapper">
-      <div id="rightnav">
-      </div>
-    </div>
-  </div>
-</div>
 
-{% include footer.html %}
+    {% include footer.html %}
+    {% include js-bottom.html %}
 
-{% include js.html %}
+    <script>
+      $(function() {
+        'use strict';
+        $('#markdown-toc')
+          .children()
+          .children('ul')
+          .children()
+          .children()
+          .addClass('nav-link')
 
-<script>
-  $(function() {
-    'use strict';
-    $('#markdown-toc')
-      .children()
-      .children('ul')
-      .children()
-      .children()
-      .addClass('nav-link')
-
-    $('#markdown-toc')
-      .addClass('nav flex-column')
-      .children()
-      .addClass('nav-item')
-      .children('a')
-      .addClass('nav-link')
-      .parent()
-      .parent()
-      .appendTo('#rightnav')
-      .show();
-  });
-</script>
-</body>
+        $('#markdown-toc')
+          .addClass('nav flex-column')
+          .children()
+          .addClass('nav-item')
+          .children('a')
+          .addClass('nav-link')
+          .parent()
+          .parent()
+          .appendTo('#rightnav')
+          .show();
+      });
+    </script>
+  </body>
 </html>

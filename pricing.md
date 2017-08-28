@@ -275,3 +275,21 @@ Community Editionは一切、料金がかかりません。
 
 {% include signup-cards.html %}
 
+<script>
+$(function() {
+  $('#collapseOne, #collapseTwo, #collapseThree').on({
+    // 折り畳み開く処理
+    'show.bs.collapse': function() {
+      $('a[href="#' + this.id + '"] i.fa-chevron-down')
+        .removeClass('fa-chevron-down')
+        .addClass('fa-chevron-up');
+    },
+    // 折り畳み閉じる処理
+    'hide.bs.collapse': function() {
+      $('a[href="#' + this.id + '"] i.fa-chevron-up')
+        .removeClass('fa-chevron-up')
+        .addClass('fa-chevron-down');
+    }
+  });
+});
+</script>

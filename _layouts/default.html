@@ -2,13 +2,11 @@
 <html lang="{{ page.lang }}">
   {% include head.html %}
   <body>
-
+    {% include js-top.html %}
     {% include header.html %}
-
     {% if page.main_visual %}
       {% include main-visual.html %}
     {% endif %}
-
     <div id="main" class="container">
       {% if page.breadcrumb %}
         {% include breadcrumb.html %}
@@ -18,7 +16,6 @@
     </div>
 
     {% include footer.html %}
-
-    {% include js.html %}
+    {% include js-bottom.html %}
   </body>
 </html>
