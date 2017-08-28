@@ -2,23 +2,27 @@
 
 // Constants
 
-var CONST = {};
-
-// 即時実効
-(function() {
+(function() { // 即時実行
   // 言語判定（英語ページの場合は英語の情報を取得するため）
-  var href = window.location.href;
-  var prefix = 'ja';
-  if(href.match('\/en')){
-    prefix = 'en-us';
-  }
+  var lang = '';
+  switch (CONST.LANG) {
+    case 'ja':
+      lang = 'ja';
+      break;
+    case 'en':
+      lang = 'en-us';
+      break;
+    default:
+      lang = 'ja';
+      break;
+  };
 
   // Zendesk API URL
   var SECTION_ID_ANNOUNCEMENT = '207255008';
   var SECTION_ID_MAINTENANCE = '207271047';
   var SECTION_ID_FAILURE = '207255108';
 
-  var JSON_URL_BASE = 'https://skyway-support.zendesk.com/api/v2/help_center/' + prefix + '/sections/';
+  var JSON_URL_BASE = 'https://skyway-support.zendesk.com/api/v2/help_center/' + lang + '/sections/';
   var JSON_URL_QUERY = '/articles.json?sort_by=created_at&sort_order=desc&per_page=3';  // 3件、作成日降順
 
   CONST.JSON_URL_ANNOUNCEMENT = JSON_URL_BASE + SECTION_ID_ANNOUNCEMENT + JSON_URL_QUERY;
@@ -26,15 +30,14 @@ var CONST = {};
   CONST.JSON_URL_FAILURE = JSON_URL_BASE + SECTION_ID_FAILURE + JSON_URL_QUERY;
 
   // Zendesk 新着情報 URL
-  var ZENDESK_URL_BASE = 'https://support.skyway.io/hc/' + prefix + '/sections/';
+  var ZENDESK_URL_BASE = 'https://support.skyway.io/hc/' + lang + '/sections/';
 
   CONST.ZENDESK_URL_ANNOUNCEMENT = ZENDESK_URL_BASE + SECTION_ID_ANNOUNCEMENT;
   CONST.ZENDESK_URL_MAINTENANCE = ZENDESK_URL_BASE + SECTION_ID_MAINTENANCE;
   CONST.ZENDESK_URL_FAILURE = ZENDESK_URL_BASE + SECTION_ID_FAILURE;
 })();
 
-// DOMが準備できてから実行
-$(function() {
+$(function() {  // DOMが用意できてから実行
   // Twitter Bootstrap Tooltips
 
   $('[data-toggle="tooltip"]').tooltip();
