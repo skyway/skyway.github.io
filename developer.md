@@ -19,23 +19,25 @@ ECLWebRTCを利用すればアプリケーションの開発を簡単に始め�
 
 ### STEP1
 
-[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
+次のコマンドを入力して、ビデオチャットアプリを動かしてみましょう。
+
+```sh
+~ $ npm install eclwebrtc-skeleton
+~ $ npm start
+```
 
 ### STEP2
 
-次のコマンドを入力して、JavaScript SDKを利用したビデオチャットアプリを動かしてみましょう。
-
-```sh
-~ $ gem install jekyll
-~ $ jekyll new my-awesome-site
-~ $ cd my-awesome-site
-~/my-awesome-site $ jekyll serve
-```
+上手く動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
 
 ### STEP3
 
-上手く動いたら、STEP2のサンプルコードのAPIキーをSTEP1で発行したものと置き換えます。  
+次のコマンドを入力して、STEP1のビデオチャットアプリのAPIキーをあなたのものに変更しましょう。  
 チュートリアルやAPIリファレンスを参考に、本格的な開発を始めましょう。
+
+```sh
+~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+```
 
 ## SDK
 
