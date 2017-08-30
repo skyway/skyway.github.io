@@ -238,27 +238,27 @@ Community Editionは一切、料金がかかりません。
         <tbody align="right">
           <tr>
             <th scope="row">1:1音声通話<br><small>40Kbps</small></th>
-            <td><span>¥0.0096</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.576</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.0048</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.288</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.0005</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.0288</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.0096</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥0.576</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.0048</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥0.288</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.0005</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥0.0288</span><wbr><span><small class="text-muted">/時間</small></span></td>
           </tr>
           <tr>
             <th scope="row">1:1ビデオ通話(SD)<br><small>500Kbps</small></th>
-            <td><span>¥0.12</span><wbr><span><small class="text-muted">分</small></span><span><br>¥7.2</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.06</span><wbr><span><small class="text-muted">分</small></span><span><br>¥3.6</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.006</span><wbr><span><small class="text-muted">分</small></span><span><br>¥0.36</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.12</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥7.2</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.06</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥3.6</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.006</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥0.36</span><wbr><span><small class="text-muted">/時間</small></span></td>
           </tr>
           <tr>
             <th scope="row">1:1ビデオ通話(HD)<br><small>1.5Mbps</small></th>
-            <td><span>¥0.36</span><wbr><span><small class="text-muted">分</small></span><span><br>¥21.6</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.18</span><wbr><span><small class="text-muted">分</small></span><span><br>¥10.8</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.018</span><wbr><span><small class="text-muted">分</small></span><span><br>¥1.08</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.36</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥21.6</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.18</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥10.8</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.018</span><wbr><span><small class="text-muted">/分</small></span><span><br>¥1.08</span><wbr><span><small class="text-muted">/時間</small></span></td>
           </tr>
           <tr>
             <th scope="row">4人ビデオ会議(SD)<br><small>1.5Mbps</small></th>
-            <td><span>¥0.36</span><wbr><span><small class="text-muted">分</small></span><span><br>¥21.6</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.18</span><wbr><span><small class="text-muted">分</small></span><span><br>¥10.8</span><wbr><span><small class="text-muted">日分</small></span></td>
-            <td><span>¥0.018</span><wbr><span><small class="text-muted">分</small></span><span><br>¥1.08</span><wbr><span><small class="text-muted">日分</small></span></td>
+            <td><span>¥0.36</span><wbr><span><small class="text-muted">分</small></span><span><br>¥21.6</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.18</span><wbr><span><small class="text-muted">分</small></span><span><br>¥10.8</span><wbr><span><small class="text-muted">/時間</small></span></td>
+            <td><span>¥0.018</span><wbr><span><small class="text-muted">分</small></span><span><br>¥1.08</span><wbr><span><small class="text-muted">/時間</small></span></td>
           </tr>
         </tbody>
         </table>
