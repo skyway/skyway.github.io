@@ -43,7 +43,7 @@ breadcrumb: [index.md, developer.md]
         <p>
           <a href="./signup.html">新規登録ページ</a>よりCommunity Editionの新規登録をお願いします。<br>
           Community Editionは無料でご利用いただけます。詳細は<a href="./singup.html">料金ページ</a>をご確認ください。<br>
-          <a href="./contactus.html">Enterprise Editionにお申込み</a>いただいた場合も、以下の手順は同じです。
+          <a href="./contactus.html">Enterprise Editionに申し込み</a>いただいた場合も、以下の手順は同じです。
         </p>
         <a href="./signup.html" class="btn btn-primary">無料で新規登録</a>
         <h3>2. APIKey発行</h3>
@@ -70,9 +70,9 @@ breadcrumb: [index.md, developer.md]
     <div id="toEnterprise" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
         <h2>Community EditionからEnterprise Editionへの切り替えについて</h2>
-        <h3>1. Enterprise Editionへの申込</h3>
-        <p><a href="./contactus.html">新規登録ページ</a>よりEnterprise Editionへの新規申込をお願いします。</p>
-        <a href="./contactus.html" class="btn btn-primary">Enterprise Edition申込</a>
+        <h3>1. Enterprise Editionへの申し込み</h3>
+        <p><a href="./contactus.html">新規登録ページ</a>よりEnterprise Editionへの申し込みをお願いします。</p>
+        <a href="./contactus.html" class="btn btn-primary">Enterprise Edition申し込み</a>
         <h3>2. Community Editionからの移行</h3>
         <p>
           Community EditionからEnterprise EditionへAPIKeyを引継ぐ機能は、近日中に提供予定です。<br>
