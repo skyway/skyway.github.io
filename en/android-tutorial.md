@@ -8,86 +8,87 @@ breadcrumb: [en/index.md, en/developer.md, en/android-sdk.md]
 - TOC
 {:toc}
 
-# Android SDK チュートリアル
+# Android SDK turorial
 
-Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、Android SDKの使い方について理解を深めます。
-現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
-[完成したアプリのデモ](tbd)を試すことができます。
+By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
+The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
+You can try [demonstration of the completed application]().
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with video chat">
+  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with video chat</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-## 開発前の準備
+## Preparation before the Development Starts
 {: #preparation }
 
-### ECLWebRTCのAPIキー発行
+### Generate ECLWebRTC API Key
 
-ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+For customers who have not completed a developer registration, do so from [New Registration of the Community Edition](signup.md).
+For those who had registered already, or have just completed the registration, [Login to Dashboard](login.md) and create an application to obtain an API key.
 
-ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
+Application settings in the Dashboard are as follows.
 
-|設定項目|項目の説明|チュートリアルの設定内容|
+
+|Items to be set|Explanation of Items|Settings of Tutorial|
 |:--|:--|:--|
-|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<BR>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
-|利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<BR>指定例：hogehoge.com|`localhost`|
-|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信が出来ない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
-|権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
-|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+|Explanation of Application|Explanatory description attached to the application and is used only for display on the Dashboard. <br>Please specify within 128 characters.|ECLWebRTC Tutorial Application|
+|Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
+|Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
+|Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
+|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./android-reference/) for details.|ON|
+|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/nttcom/Peer-Authentication-Server-Samples) for details.|OFF|
 
-### 開発環境の準備
+### Preparation of Development Environment
 
-このチュートリアルでは以下の環境を前提に開発を進めます。
+In this tutorial, the development will proceed assuming the following environment.
 
 - Androdi Studio 2.3.3
-- 動作確認端末
+- Verified terminal
   - Nexus6
-- OSバージョン
+- OS Version
   - 7.1
-- 開発言語
+- Development language
   - Java
 
-## プロジェクトの作成
+## Create Project
 
-チュートリアルで利用するAndroid Studioのプロジェクトは以下のリポジトリからダウンロードしてください。  
+Download Android Studio project used in Tutorial from below repository.
 
 - [https://github.com/skyway/eclwebrtc-android-sdk-tutorial](https://github.com/skyway/eclwebrtc-android-sdk-tutorial)
 
-## SDKをプロジェクトに追加する
+## Add SDK to Project
 
-SDKのバイナリファイルを配置します。  
+Arrange SDK binary files.
 
-1. SDKを[こちら](https://github.com/nttcom/SkyWay-Android-SDK/releases/latest)からダウンロード
-2. 開発用プロジェクトに`app/libs`ディレクトリを作成する
-3. ZIPファイルを解凍後、`eclwebrtc.arr`を、`app/libs`ディレクトリ直下に配置
-4. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
+1. Download SDK from [here](https://github.com/nttcom/SkyWay-Android-SDK/releases/latest)
+2. Create `app/libs` directory for development project
+3. After decompressing ZIP file, arrange `eclwebrtc.arr` directly under `app/libs` directory.
+4. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
-  <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
+  <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
+  <figcaption class="figure-caption">As SDK is added to the project</figcaption>
 </figure>
 
-プロジェクトに含まれる主要ファイルの説明は以下のとおりです。
+Descriptions of main files contained in the project are as follows.
 
 - app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/MainActivity
-  - 今回のチュートリアルで主に必要なコードを追記していくコントローラー
+  - The controller to which required codes are mainly added in this tutorial.
 - app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/PeerListDialogFragment
-  - PeerID一覧を表示するListDialogを生成するコントローラー
-  - 完成版が同梱されており、今回のチュートリアルでは触れません
+  - Controller which genetrates ListDialog displaying a list of PeerID.
+  - The complete version is included in the kit and is not mentioned in this tutorial.
 - res/**
-  - リソースやレイアウトについては完成版が同梱されており、今回のチュートリアルでは触れません
+  - For resources and layout, the complete versions are included in the kit and are not mentioned in this tutorial.
 
-## ヘッダーファイルインポート
+## Header file import
 
-チュートリアルでは既に記載済みですが、SDK用のimport文を追記します。
+Though it is already stated in the tutorial, import statement for SDK is added.
 
 *Java*
 {: .lang}
@@ -105,9 +106,9 @@ import io.skyway.Peer.PeerError;
 import io.skyway.Peer.PeerOption;
 ```
 
-## マニフェストファイルへの追加
+## Add to Manifest File
 
-SDKの機能を利用するために、内容をマニフェストファイルに追記してください。
+To use SDK functions, add the contents to the manifest file.
 
 *Java*
 {: .lang}
@@ -125,18 +126,18 @@ SDKの機能を利用するために、内容をマニフェストファイル�
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 ```
 
-## ビルドする
+## Build
 
-実機を接続しビルドします。実機での処理は途中で止まりますが、ビルドできることを確認してください。
+Connect the actual device and execute build. Though processing on the actual device will stop on the way, please confirm that build is possible.
 
-## ECLWebRTCサーバへの接続
+## Connect with ECLWebRTC Server
 {: #connect-server }
 
-### 宣言
+### Declaration
 
-MainActivityにプログラム中で利用する定数を追記してください。  
-`API_KEY`には先程ダッシュボードで発行したAPIキーを指定してください。  
-`DOMAIN`には先程ダッシュボードで指定した利用可能ドメイン名のうち一つを指定してください。
+Add constants to MainActivity that are used in the program.  
+For `API_KEY`, specify the API key that was generated on the Dashboard just before.  
+For `DOMAIN`, specify one of the available domain names specified on the Dashboard just before.
 
 *Java*
 {: .lang}
@@ -150,11 +151,12 @@ private static final String DOMAIN = "domain";
 
 ```
 
-プログラム中で利用するインスタンス変数の宣言を追記してください。  
-- `_peer` : Peerオブジェクト
-- `_localStream` : 自分自身のMediaStreamオブジェクト
-- `_remoteStream` : 相手のMediaStreamオブジェクト
-- `_mediaConnection` : MediaConnectionオブジェクト
+Add declaration of instance variables used in the program.
+
+- `_peer` : Peer Object
+- `_localStream` : Own MediaStream Object
+- `_remoteStream` : Opponent MediaStream Object
+- `_mediaConnection` : MediaConnection Object
 
 *Java*
 {: .lang}
@@ -174,9 +176,9 @@ private boolean			_bConnected;
 private Handler			_handler;
 ```
 
-### UI関連処理
+### UI-Related Processing
 
-onCreateメソッドの冒頭で、メインウィンドウのタイトルを非表示に設定し、UIスレッド処理のためのHandlerを生成する処理を追記してください。
+At the beginning of onCreate method, add a process to hide the title of the main window and to generate a Handler for UI thread processing.
 
 *Java*
 {: .lang}
@@ -190,10 +192,10 @@ _handler = new Handler(Looper.getMainLooper());
 final Activity activity = this;
 ```
 
-### Peerオブジェクトの作成
+### Create Peer Object
 
-続けて、Peerオブジェクトを作成するための処理を追記してください。  
-Peerオブジェクトには、PeerOptionクラスを利用し、APIキー、ドメイン名、デバッグレベルを指定してください。
+In succession, add a process to create a Peer object.  
+For the Peer object, specify API key, domain name and debug level by using PeerOption class.
 
 *Java*
 {: .lang}
@@ -209,18 +211,18 @@ option.debug = Peer.DebugLevelEnum.ALL_LOGS;
 _peer = new Peer(this, option);
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+Please refer to [API Reference](./android-reference/) for other options that can be specified in Peer object.
 
-## 接続成功・失敗・切断時の処理
+##  Process When Connection is Succeeded, Failed, or Disconnected
 {: #eventlistener }
 
-続けて、Peerオブジェクトに必要なイベントコールバックを追記してください。
+In succession, add an event callback required for Peer object.
 
-### OPENイベント
+### Open Event
 
-ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
-PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
-以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
+Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.  
+A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.  
+In the following process, it displays PeerID to UI if the PeerID is generated.
 
 *Java*
 {: .lang}
@@ -244,14 +246,14 @@ _peer.on(Peer.PeerEventEnum.OPEN, new OnCallback() {
 });
 ```
 
-### カメラ映像、マイク音声の取得
+### Obtain Camera Image and Microphone Voice
 
-OPENイベントのコールバック内に、カメラ映像とマイク音声を取得するための処理を追記してください。  
+In the callback of the open event, add a process to obtain camera images and microphone voices.
 
-#### 権限リクエスト(1)
+#### Request for Administration(1)
 
-カメラ、マイクにアクセスするための権限があるかどうかのチェックを行い、無ければ権限を要求します。  
-権限がある場合は、startLocalStreamメソッドを実行してカメラ映像とマイク音声を取得します。
+It checks if an authority to access the camera and the microphone is given. If not, it demands the authority.  
+If the authority is given, execute startLocalStream method to obtain camera image and microphone voice.
 
 *Java*
 {: .lang}
@@ -270,9 +272,9 @@ else {
 }
 ```
 
-#### 権限リクエスト(2)
+#### Request for Administration(2)
 
-requestPermissionsメソッドで権限が取得できた場合は、startLocalStreamメソッドを実行してカメラ映像とマイク音声を取得します。
+If the authority is obtained by requestPermissions method, execute startLocalStream method to obtain camera image and microphone voice.
 
 *Java*
 {: .lang}
@@ -294,16 +296,16 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
 }
 ```
 
-#### オプション設定
+#### Option Setting
 
-MediaConstraintsクラスで映像・音声取得に関するオプションを設定可能です。  
-ここで設定している項目の説明は以下のとおりです。 
-- `maxWidth`: キャプチャ映像の横サイズ上限（単位：ピクセル）
-- `maxHeight`: キャプチャ映像の縦サイズ上限（単位：ピクセル）
-- `cameraPosition`: 使用するカメラの選択（ディフォルトは`FRONT`）
-  - カメラポジションは前面カメラ（`FRONT`）と背面カメラ（`BACK`）が選択可能
+Options on image and voice obtainment can be set by MediaConstraints class.  
+Descriptions of items set here are as follows.
+- `maxWidth`: The upper limit of the horizontal size of captured image (unit: pixel)
+- `maxHeight`: The upper limit of the vertical size of captured image (unit: pixel)
+- `cameraPosition`: Selection of a camera to use (default is `FRONT`)
+- `FRONT` camera or `BACK` camera can be selected for the `cameraPosition`.
 
-これ以外の項目については、[APIリファレンス]()をご覧ください。  
+Please refer to [API Reference](./android-reference/) for other items.
 
 *Java*
 {: .lang}
@@ -321,10 +323,10 @@ void startLocalStream() {
 }
 ```
 
-#### 取得と再生
+#### Obtainment and Playback
 
-Navigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分の映像（ローカルストリーム）が取得できます。  
-取得したMediaStreamオブジェクトに、addVideoRendererメソッドを利用して、ビデオレンダラー(表示用のCanvasオブジェクト)を割り当てます。
+Initialize Navigator class, specify `constraints` to the parameter of getUserMedia method and execute it to obtain the own image (local stream).  
+Use addVideoRenderer method to allocate video renderer (Canvas object for display) to the obtained MediaStream object.
 
 *Java*
 {: .lang}
@@ -345,9 +347,9 @@ void startLocalStream() {
 ```
 
 
-#### ERRORイベント
+#### Error Event
 
-何らかのエラーが発生した場合に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
+It ignites when any error occurs. Make it possible to show details of an error on the log if it occurs.
 
 *Java*
 {: .lang}
@@ -363,9 +365,9 @@ _peer.on(Peer.PeerEventEnum.ERROR, new OnCallback() {
 });
 ```
 
-#### CLOSEイベント
+#### Close Event
 
-Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+It ignites when connection with the Peer (partner) is broken. No specific process is applied in the tutorial.
 
 *Java*
 {: .lang}
@@ -380,9 +382,9 @@ _peer.on(Peer.PeerEventEnum.CLOSE, new OnCallback()	{
 });
 ```
 
-#### DISCONNECTEDイベント
+#### Disconnected Event
 
-シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+It ignites when connection with the signaling server is broken. No specific process is applied in the tutorial.
 
 *Java*
 {: .lang}
@@ -397,18 +399,18 @@ _peer.on(Peer.PeerEventEnum.DISCONNECTED, new OnCallback() {
 });
 ```
 
-### 発信・切断・着信処理
+### Calling/Disconnecting/Receiving Process
 {: #call-event }
 
-発信、切断、着信をするための処理を追記してください。
+Add processes to call/disconnect/receive.
 
-#### 発信処理
+#### Calling Process
 
-相手のPeerIDを選択して発信します。
+Select the PeerID of the partner and call him/her.
 
-##### 発信先のPeerIDを取得(1)
+##### Obtain the PeerID of the Destination (1)
 
-Make Callボタンをタップし未接続状態であれば、showPeerIDsメソッドを実行します。
+Tap the Make Call button. Execute showPeerIDs method if not in connected status.
 
 *Java*
 {: .lang}
@@ -436,9 +438,9 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### 発信先のPeerIDを取得(2)
+##### Obtain the PeerID of the Destination (2)
 
-showPeerIDsメソッドでは、listAllPeersメソッドを利用して、接続先のPeerID一覧を取得します。取得した一覧から自分自身のIDを削除し、`PeerListDialogFragment`で一覧表示します。
+In showPeerIDs method, listAllPeers method is used to obtain a list of PeerID of the connection destination. Delete your own ID from the obtained list and show the list with `PeerListDialogFragment`.
 
 *Java*
 {: .lang}
@@ -506,10 +508,10 @@ void showPeerIDs() {
 }
 ```
 
-##### 発信
+##### Calling
 
-`PeerListDialogFragment`でPeerIDが選択されたら、onPeerSelectedメソッドが呼ばれます。相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
-発信後は必要なイベントコールバックをセットします。`setMediaCallbacks`の中身については後ほど説明します。
+If Peer ID is selected in `PeerListDialogFragment`, onPeerSelected method will be called. Set the PeerID of the partner and your own localStream to the parameter, and call.  
+After calling, set up necessary event callbacks. Details of `setMediaCallbacks` will be explained later.
 
 *Java*
 {: .lang}
@@ -539,13 +541,13 @@ void onPeerSelected(String strPeerId) {
 }
 ```
 
-#### 切断処理
+#### Disconnecting Process
 
-相手との接続を切断します。
+It disconnects the connection with the partner.
 
-##### MediaConnectionの切断
+##### Disconnect MediaConnection
 
-actionButton（Make Callボタン）をタップし接続中であれば、MediaConnectionオブジェクトのCloseメソッドで該当するMediaConnectionを切断し、後ほど説明する`closeRemoteStream`で必要な処理を行います。
+Tap the actionButton (Make Call button). If the connection is alive, use Close method of MediaConnection object to disconnect the corresponding MediaConnection and perform necessary processing with `closeRemoteStream` which will be explained later.
 
 *Java*
 {: .lang}
@@ -577,9 +579,9 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### MediaStreamのクローズ
+##### Close MediaStream
 
-MediaConnectionオブジェクトのCloseメソッドが実行された後は、removeVideoRendererメソッドを利用して該当のMediaStreamに割り当てられた、ビデオレンダラーを取り外します。
+After Close method of MediaConnection object is executed, use removeVideoRenderer method to remove the video renderer assigned to the corresponding MediaStream.
 
 *Java*
 {: .lang}
@@ -599,12 +601,12 @@ void closeRemoteStream(){
 }
 ```
 
-#### 着信処理
+#### Receiving Process
 
-相手から接続要求がきた場合に応答します。   
-相手から接続要求が来た場合は`Peer.PeerEventEnum.CALL`が発火します。引き数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
-この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することが出来るようになります。  
-発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
+Responds when connection request is received from the partner.  
+If connection request is received from the partner, `Peer.PeerEventEnum.CALL` will ignite. As you can obtain MediaConnection object to manage the connection with the partner as a parameter, execute answer method and respond to the connection request.  
+If you set your own `_localStream` then, you will be able to send image and voice to your partner.  
+In the same way as the calling process, execute `setMediaCallbacks` and set the event. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -630,11 +632,11 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 ```
 
 
-#### MediaConnectionオブジェクトに必要なイベント
+#### Event necessary for MediaConnection Object
 
-MediaConnectionオブジェクトに必要なイベントコールバックです。  
-`MediaConnection.MediaEventEnum.STREAM`は相手の映像・音声を受信した際に発火します。  
-コールバック内では、UI上の接続ステータスのアップデート処理と、取得した相手のMediaStreamオブジェクトにaddVideoRendererメソッドを利用して、ビデオレンダラーを割り当てます。
+Event callback necessary for MediaConnection.  
+`MediaConnection.MediaEventEnum.STREAM` will ignite when image and/or voice of the partner are received.  
+In the callback, use update process of the connection status on UI and apply addVideoRenderer method to the obtained MediaStream object of the partner, in order to assign the video renderer.
 
 *Java*
 {: .lang}
@@ -657,8 +659,8 @@ void setMediaCallbacks() {
 }
 ```
 
-`SKW_MEDIACONNECTION_EVENT_CLOSE`は相手がメディアコネクションの切断処理を実行し、実際に切断されたら発火します。  
-コールバック内では、必要な切断処理を実行します。`closeRemoteStream`、`updateActionButtonTitle`の中身については後ほど説明します。
+`SKW_MEDIACONNECTION_EVENT_CLOSE` will ignite if the partner executes the disconnection process and if the connection is actually disconnected.  
+In the callback, necessary disconnection processes will be executed. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -683,7 +685,7 @@ void setMediaCallbacks() {
 }
 ```
 
-`MediaConnection.MediaEventEnum.ERROR`は何らかのエラーが発生した際に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
+`MediaConnection.MediaEventEnum.ERROR` will ignite when any error occurs. Make it possible to show details of an error on the log if it occurs.
 
 *Java*
 {: .lang}
@@ -707,14 +709,14 @@ void setMediaCallbacks() {
 }
 ```
 
-### Activityライフサイクルに必要な処理
+### Process necessary for Activity Lifecycle
 
-Activityライフサイクルに必要な処理を追記してください。  
+Add processes to various methods of the Activity Lifecycle.
 
 #### Overrideメソッドの処理
 
 Ovverrideされたメソッドに必要な処理を追記してください。  
-onDestoryメソッド内では、Peerオブジェクトを破棄するために`destoryPeer`を実行します。中身については後ほど説明します。
+In onDestory method, execute `destoryPeer` to destroy Peer objects. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -761,18 +763,18 @@ protected void onDestroy() {
 }
 ```
 
-#### Activity破棄時の処理
+#### Process necessary for Destroy Peer Objects
 
-Activityが破棄されるタイミングで必要な処理を追記してください。  
-ここで実行されている処理の概要は以下のとおりです。  
+Add necessary processes at the timing when Activity is destroyed. An outline of the processes executed here is as follows.
 
-- リモート/ローカルのメディアストリームのクローズ
-- MediaConnectionオブジェクトに関するコールバックイベントの開放(`unsetMediaCallbacks`)
-- Navigatorオブジェクトの初期化
-- Peerオブジェクトに関するコールバックイベントの開放(`unsetPeerCallback`)
-- シグナリングサーバとの切断とPeerオブジェクトの破棄
+- Close remote/local mediastream
+- Release callback event of MediaConnection Object.(`unsetMediaCallbacks`)
+- Initialize Navigator Object
+- Release callback event of Peer Object.(`unsetPeerCallback`)
+- Disconnect with the signaling server
+- Destroy Peer objects
 
-`unsetMediaCallbacks`、`unsetPeerCallback`の中身については後ほど説明します。
+Details of `unsetMediaCallbacks` and `unsetPeerCallback` will be explained later.
 
 *Java*
 {: .lang}
@@ -853,11 +855,11 @@ void unsetMediaCallbacks() {
 }
 ```
 
-### UIのセットアップ
+### Setup UI
 {: #setup-ui }
 
-UI関連の必要な処理を追記してください。  
-actionButtonはトグルで利用するため、接続状態に応じてラベルを張り替えます。updateActionButtonTitleメソッドの中身を追記してください。
+Add necessary processes related with UI.  
+As actionButton is used in toggle mode, change the label in accordance with the connection status. Add the contents of updateActionButtonTitle method.
 
 *Java*
 {: .lang}
@@ -883,11 +885,11 @@ void updateActionButtonTitle() {
 }
 ```
 
-### カメラの切り替え
+### Switching camera
 {: #switch-camera}
 
-最後にカメラの切り替え処理を追記してください。  
-switchCameraメソッドで、該当メディアストリームで利用しているカメラ位置をFRONT、BACKで交互に切り替えます。
+In the last, add a process of switching camera.  
+Using switchCamera method, switch the camera position used by the corresponding media stream between FRONT and BACK.
 
 *Java*
 {: .lang}
@@ -914,7 +916,7 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-### 動作確認
+### Operation Check
 {: #testing }
 
-実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することが出来ます。
+Build on a real machine and check the operation. Call a PeerID obtained by listAllPeers. If videochat is possible with the partner, the project is successful. If only one actual machine is available, you can check the operation by interconnecting with a Web application implemented by JavaScript SDK.

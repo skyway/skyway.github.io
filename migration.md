@@ -14,7 +14,7 @@ breadcrumb: [index.md, developer.md]
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">
           <h3 class="card-title"><span>新SDKへの</span><wbr><span>移行方法</span></h3>
-          <p class="card-text">2017年9月5日に提供を開始した新バージョンのSkyWay SDKへの移行方法をご紹介します。（参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_target">新旧SDKの機能差分と移行方法について)</a></p>
+          <p class="card-text">2017年9月7日に提供を開始した新バージョンのSkyWay SDKへの移行方法をご紹介します。（参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_target">新旧SDKの機能差分と移行方法について)</a></p>
             <a class="btn btn-outline-primary collapsed" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="true" aria-controls="toECLWebRTC">
               移行方法を確認
             </a>
