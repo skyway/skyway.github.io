@@ -24,7 +24,7 @@ breadcrumb: [index.md, pricing.md]
   </div>
 </div>
 
-<h4>Signaling利用料</h4>
+<h4>シグナリング利用料</h4>
 <small class="text-muted">
   new Peer()の実行回数
 </small>
@@ -173,7 +173,7 @@ breadcrumb: [index.md, pricing.md]
               <td id="resultBasePrice"></td>
             </tr>
             <tr>
-              <th scope="row">Signaling</th>
+              <th scope="row">シグナリング</th>
               <td id="resultSignalingUsage"></td>
               <td>¥100,000</td>
               <td id="resultSignalingPrice"></td>
