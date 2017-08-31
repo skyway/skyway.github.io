@@ -92,14 +92,14 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
       <td>初期¥0+月額¥100,000</td>
     </tr>
     <tr>
-      <th scope="row">シグナリング料金</th>
+      <th scope="row">接続回数(シグナリング)</th>
       <td>¥0<br>
         <small class="text-muted">回数の上限あり</small></td>
       <td>¥0<br>
         <small class="text-muted">1,000,001回以上は別途</small></td>
     </tr>
     <tr>
-      <th scope="row">TURN/SFU通信料金</th>
+      <th scope="row">サーバ通信料</th>
       <td>¥0<br>
         <small class="text-muted">転送量の上限あり</small></td>
       <td>¥40/GB</td>
