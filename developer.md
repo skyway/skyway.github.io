@@ -112,7 +112,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">シグナリング</h3>
-                <p class="card-text">IPアドレスやコーデック等の情報を相手と交換する為のサーバ、多人数通話に便利なRoom管理機能を備える</p>
+                <p class="card-text">IPアドレスやコーデック等の情報を相手と交換するためのサーバ、多人数通話に便利なRoom管理機能を備える</p>
             </div>
         </div>
     </div>
@@ -156,7 +156,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">画面共有</h3>
-                <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
+                <p class="card-text">画面共有用ブラウザ拡張を簡単に実装するためのライブラリ、サンプルコードを提供</p>
                 <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-primary">利用方法(Github)</a>
             </div>
         </div>
