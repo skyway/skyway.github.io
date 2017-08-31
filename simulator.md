@@ -7,7 +7,7 @@ breadcrumb: [index.md, pricing.md]
 
 # 料金シミュレーター
 
-<h4>月額基本料</h4>
+<h4>月額費用</h4>
 <div class="form-group row">
   <label for="inputPlan" class="col-sm-2 col-form-label">Edition</label>
   <div class="col-sm-10">
@@ -24,7 +24,7 @@ breadcrumb: [index.md, pricing.md]
   </div>
 </div>
 
-<h4>Signaling利用料</h4>
+<h4>接続回数(シグナリング)</h4>
 <small class="text-muted">
   new Peer()の実行回数
 </small>
@@ -39,7 +39,7 @@ breadcrumb: [index.md, pricing.md]
 </div>
 
 
-<h4>TURN/SFU利用料</h4>
+<h4>サーバ通信料</h4>
 <small class="text-muted">
   TURN/SFUの通信量
 </small>
@@ -173,7 +173,7 @@ breadcrumb: [index.md, pricing.md]
               <td id="resultBasePrice"></td>
             </tr>
             <tr>
-              <th scope="row">Signaling</th>
+              <th scope="row">シグナリング</th>
               <td id="resultSignalingUsage"></td>
               <td>¥100,000</td>
               <td id="resultSignalingPrice"></td>

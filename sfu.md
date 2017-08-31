@@ -36,7 +36,7 @@ WebRTCは基本的にサーバは介さず、P2Pで直接通信を行います�
 ## 利用方法
 
 SFUは、JavaScript SDK、iOS SDK、Android SDKからそれぞれ利用可能です。  
-ECLWebRTCが提供するRoomAPIには<b>SFU</b>と<b>フルメッシュ</b>の2つのモードがあり、簡単に切り替えることが出来ます。  
+ECLWebRTCが提供するRoomAPIには<b>SFU</b>と<b>フルメッシュ</b>の2つのモードがあり、簡単に切り替えることができます。  
 詳しい利用方法は[APIリファレンス](./sfu.htmk)をご覧ください。
 
 
