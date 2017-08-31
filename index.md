@@ -214,9 +214,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="modal-content">
       <div class="modal-body">
         <img class="img-fluid" src="http://via.placeholder.com/800x400?text=SkyWay-became-ECLWebRTC" alt="SkyWay-became-ECLWebRTC">
-        <p>SkyWayを発展させた後継サービス「ECLWebRTC」の提供を開始しました。SkyWayは2018年3月31日に提供を終了します。<br>
-        SkyWayをご利用の方は、ECLWebRTCへの移行をお願いします。</p>
         <p>
+          トライアル版のSkyWayは2018年3月31日をもって提供を終了します。<br>
+          無償でご利用いただけるSkyWay Community Editionへの移行をお願いします。<br>
           <a class="btn btn-primary" href="migration.html" role="button">移行方法を確認する</a>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
         </p>
