@@ -926,5 +926,5 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 ### 動作確認
 {: #testing }
 
-実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。
+実機でビルドし動作を確認してください。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。
 実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することができます。

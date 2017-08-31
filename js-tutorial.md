@@ -84,7 +84,7 @@ $ php -S localhost:8080
 
 #### Windowsの場合
 
-[Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにして下さい。
+[Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにしてください。
 
 ## プロジェクトの作成
 {: #craete-project }
