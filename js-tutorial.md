@@ -208,7 +208,7 @@ Peerオブジェクトで指定可能なその他のオプションについて�
 ## 接続成功・失敗・切断時の処理
 {: #eventlistener }
 
-Peerオブジェクトに必要なEventListenerを追記してください。
+Peerオブジェクトに必要なイベントリスナーを追記してください。
 
 ### openイベント
 
@@ -275,7 +275,7 @@ peer.on('disconnected', function(){
 発信ボタンをクリックした場合に相手に発信します。  
 `peer.call()`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。
 接続するための相手のPeerIDは、別途何らかの方法で入手する必要があります。  
-発信後はCallオブジェクトが返ってくるため、必要なEventListenerをセットします。  
+発信後はCallオブジェクトが返ってくるため、必要なイベントリスナーをセットします。  
 `setupCallEventHandlers`の中身については後ほど説明します。
 
 *JavaScript*
@@ -310,7 +310,7 @@ $('#end-call').click(function(){
 相手から接続要求が来た場合は`call`が発火します。
 引数として相手との接続を管理するためのCallオブジェクトが取得できるため、`call.answer()`を実行し接続要求に応答します。  
 この時に、自分自身の`localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
-発信時の処理と同じく`setupCallEventHandlers`を実行し、 CallオブジェクトのEventListenerをセットします。
+発信時の処理と同じく`setupCallEventHandlers`を実行し、 Callオブジェクトのイベントリスナーをセットします。
 
 *JavaScript*
 {: .lang}
@@ -324,7 +324,7 @@ peer.on('call', function(call){
 
 ### Callオブジェクトに必要なイベント
 
-Callオブジェクトに必要なEventListenerです。    
+Callオブジェクトに必要なイベントリスナーです。    
 今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先します。
 また、切断処理等で利用するため、Callオブジェクトを`existingCall`として保持しておきます。  
 この処理はアプリの仕様次第です。
