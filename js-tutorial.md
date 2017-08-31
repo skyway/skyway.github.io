@@ -97,7 +97,7 @@ $ php -S localhost:8080
 以後のステップでは、同梱されている `script.js` に必要なコードを追記していきます。
   
 - 本チュートリアルの制約事項
-  - Dom操作にはJQueryを利用しています。
+  - DOM操作にはjQueryを利用しています。
   - 動作確認済ブラウザは[Google Chrome](https://www.google.com/chrome)と[Firefox](https://www.mozilla.org/firefox/)の最新版です。
 
 
