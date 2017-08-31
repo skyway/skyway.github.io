@@ -28,7 +28,7 @@ ECLWebRTCを利用すればアプリケーションの開発を簡単に始め�
 
 ### STEP2
 
-上手く動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
+うまく動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
 
 ### STEP3
 
