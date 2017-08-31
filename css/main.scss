@@ -43,6 +43,15 @@ header {
   }
 }
 
+html[lang=ja] .navbar-brand { // totally height = 40px
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+html[lang=en] .navbar-brand { // totally height = 40px
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 
 // Sticky Footer
 html {
