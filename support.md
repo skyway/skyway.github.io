@@ -7,7 +7,7 @@ breadcrumb: [index.md]
 
 <h1>サポート</h1>
 
-開発に役立つコミュニティサポートやチケットサポートを提供しています。  
+開発に役立つTechnical Forumやチケットサポートを提供しています。  
 
 {% include support-cards.html %}
 

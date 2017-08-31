@@ -193,7 +193,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 ## サポート
 
-開発に役立つコミュニティサポートやチケットサポートを提供しています。
+開発に役立つTechnical Forumやチケットサポートを提供しています。
 
 {% include support-cards.html %}
 
