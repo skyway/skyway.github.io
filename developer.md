@@ -120,7 +120,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">STUN</h3>
-                <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<br></p>
+                <p class="card-text">NAT通過に必要な、自身のグローバルIPアドレスとポート番号を確認するサーバを無料で提供<br></p>
             </div>
         </div>
     </div>
