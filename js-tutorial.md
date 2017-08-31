@@ -132,13 +132,13 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 `{video: true, audio: false}`
 - 例：カメラ映像のサイズの設定例    
 `{ audio: true, video: { width: 640, height: 480 } }`
-- 例：カメラ映像のフレームレートの設定例（2017.08現在、Chromeでしか動作しません）    
+- 例：カメラ映像のフレームレートの設定例（2017年8月現在、Chromeでしか動作しません）    
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
 #### APIを使用する上の注意点1
 
 プライバシーを考慮し、ブラウザによっては、SSLで暗号化されたWebサイトでしか動作しません。
-2018.08現在の動作状況は以下のとおりです。
+2018年8月現在の動作状況は以下のとおりです。
 
 |スキーマ\ブラウザ|Chrome|Firefox|
 |:--|:--:|:--:|
