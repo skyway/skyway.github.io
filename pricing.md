@@ -173,7 +173,7 @@ Community Editionは一切、料金がかかりません。
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-body">
         TURN利用上限までにどの程度通話できるかの目安です。<br>
-        <small class="text-muted">TURNの利用制限がかかっても、P2Pでの通信は可能です。<br>TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
+        <small class="text-muted">TURNの利用制限がかかっても、P2Pでの通信は可能です。<br>TURNの利用率はユーザーによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
@@ -225,7 +225,7 @@ Community Editionは一切、料金がかかりません。
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="card-body">
         TURN利用時の料金目安です。<br>
-        <small class="text-muted">TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の料金です。</small>
+        <small class="text-muted">TURNの利用率はユーザーによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の料金です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
