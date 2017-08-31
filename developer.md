@@ -15,7 +15,7 @@ breadcrumb: [index.md]
 
 ## Get Started
 
-ECLWebRTCを利用すればアプリケーションの開発を簡単に始めることが出来ます。 
+ECLWebRTCを利用すればアプリケーションの開発を簡単に始めることができます。 
 
 ### STEP1
 

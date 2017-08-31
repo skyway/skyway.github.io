@@ -15,12 +15,14 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 [完成したアプリのデモ](tbd)を試すことができます。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
+    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
   <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png"
+    class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
   <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
 </figure>
 
@@ -38,7 +40,7 @@ ECLWebRTCへの開発者登録がまだの方は、まず、[Community Edition�
 |:--|:--|:--|
 |アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<BR>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
 |利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<BR>指定例：hogehoge.com|`localhost`|
-|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信が出来ない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
+|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
 |権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
@@ -71,7 +73,8 @@ SDKのバイナリファイルを配置します。
 4. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
+  <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png"
+    class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
   <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
 </figure>
 
@@ -218,8 +221,10 @@ Peerオブジェクトで指定可能なその他のオプションについて�
 
 ### OPENイベント
 
-ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
-PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
+ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。
+ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
+PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。
+PeerIDはクライアントサイドで指定することもできます。  
 以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
 
 *Java*
@@ -438,7 +443,8 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 
 ##### 発信先のPeerIDを取得(2)
 
-showPeerIDsメソッドでは、listAllPeersメソッドを利用して、接続先のPeerID一覧を取得します。取得した一覧から自分自身のIDを削除し、`PeerListDialogFragment`で一覧表示します。
+showPeerIDsメソッドでは、listAllPeersメソッドを利用して、接続先のPeerID一覧を取得します。
+取得した一覧から自分自身のIDを削除し、`PeerListDialogFragment`で一覧表示します。
 
 *Java*
 {: .lang}
@@ -508,7 +514,8 @@ void showPeerIDs() {
 
 ##### 発信
 
-`PeerListDialogFragment`でPeerIDが選択されたら、onPeerSelectedメソッドが呼ばれます。相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
+`PeerListDialogFragment`でPeerIDが選択されたら、onPeerSelectedメソッドが呼ばれます。
+相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
 発信後は必要なイベントコールバックをセットします。`setMediaCallbacks`の中身については後ほど説明します。
 
 *Java*
@@ -602,8 +609,9 @@ void closeRemoteStream(){
 #### 着信処理
 
 相手から接続要求がきた場合に応答します。   
-相手から接続要求が来た場合は`Peer.PeerEventEnum.CALL`が発火します。引き数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
-この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することが出来るようになります。  
+相手から接続要求が来た場合は`Peer.PeerEventEnum.CALL`が発火します。
+引き数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
+この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
 発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
 
 *Java*
@@ -683,7 +691,8 @@ void setMediaCallbacks() {
 }
 ```
 
-`MediaConnection.MediaEventEnum.ERROR`は何らかのエラーが発生した際に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
+`MediaConnection.MediaEventEnum.ERROR`は何らかのエラーが発生した際に発火します。
+エラーが発生したら、ログにその内容を表示できるようにします。
 
 *Java*
 {: .lang}
@@ -917,4 +926,5 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 ### 動作確認
 {: #testing }
 
-実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することが出来ます。
+実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。
+実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することができます。
