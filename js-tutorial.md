@@ -169,7 +169,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 
 ### SDKのインポート
 
-以下の通りScript要素でSDKをインポートします。  
+以下のとおりScript要素でSDKをインポートします。  
 チュートリアルのソースコードでは`index.html`に追記済みです。
 
 *HTML*

@@ -111,7 +111,7 @@ SDKのバイナリファイルを配置します。
 2. Signing > Team から ビルドに利用するアカウントを選択
 3. 実機を接続しビルド実行
 
-実行時にエラーが出てしまいますが、以下の通りビルドに成功すれば準備完了です。
+実行時にエラーが出てしまいますが、以下のとおりビルドに成功すれば準備完了です。
 
 <figure class="figure">
   <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-sc1.png"
