@@ -128,7 +128,7 @@ Community Editionは一切、料金がかかりません。
 <tbody align="right">
   <tr>
     <!-- PC表示用 -->
-    <th scope="row" class="d-none d-md-table-cell">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
+    <th scope="row" class="d-none d-md-table-cell">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: P2Pでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
     <!-- スマホ表示用 -->
     <th scope="row" class="d-sm-none">TURN / SFU</th> 
     <td class="td-header" align="left">〜500GB</td>
@@ -173,7 +173,7 @@ Community Editionは一切、料金がかかりません。
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-body">
         TURN利用上限までにどの程度通話できるかの目安です。<br>
-        <small class="text-muted">TURNの利用制限がかかっても、Peer to Peerでの通信は可能です。<br>TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
+        <small class="text-muted">TURNの利用制限がかかっても、P2Pでの通信は可能です。<br>TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>

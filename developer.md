@@ -137,7 +137,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
-                <p class="card-text">Peer to Peerで通信が確立できない環境にメディアを中継するサーバを提供</p>
+                <p class="card-text">P2Pで通信が確立できない環境にメディアを中継するサーバを提供</p>
                 <a href="./pricing.html#サーバ通信料" class="btn btn-primary">料金</a>
             </div>
         </div>
