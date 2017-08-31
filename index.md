@@ -199,33 +199,6 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 [migrationのモーダルを表示](./?origin=skyway)
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var search = location.search;
-  var STRING_OF_MODAL = 'origin=skyway';
-  if (search && search.split('?')[1].split('&').indexOf(STRING_OF_MODAL) !== -1) {
-    $('#migration').modal();
-    history.replaceState(null, null, location.href.replace(search, ''));
-  }
-});
-</script>
-
-<div class="modal fade bd-example-modal-lg" id="migration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img class="img-fluid" src="http://via.placeholder.com/800x400?text=SkyWay-became-ECLWebRTC" alt="SkyWay-became-ECLWebRTC">
-        <p>
-          トライアル版のSkyWayは2018年3月31日をもって提供を終了します。<br>
-          無償でご利用いただけるSkyWay Community Editionへの移行をお願いします。<br>
-          <a class="btn btn-primary" href="migration.html" role="button">移行方法を確認する</a>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
 $(function() {
   'use strict';
 
