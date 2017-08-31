@@ -12,17 +12,17 @@ breadcrumb: [index.md, developer.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオチャット](#){:target="_blank"}と同じものになります。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](#){:target="_blank"}と同じものになります。
 完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
 [チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
@@ -87,17 +87,17 @@ iOS 8+
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">ビデオ通話</a></td>
           <td><a href="#">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">ビデオ通話</a></td>
           <td><a href="#">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">ビデオ通話</a></td>
           <td><a href="#">テキストチャット</a></td>
         </tr>
       </tbody>

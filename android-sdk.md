@@ -14,13 +14,13 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 [完成したアプリのデモ](tbd)を試すことができます。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
 [チュートリアルの続きを読む](android-tutorial.html){: .btn .btn-primary }
@@ -64,17 +64,17 @@ Android 4.2+ (API Level 17+)
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">ビデオ通話</a></td>
           <td><a href="#">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">ビデオ通話</a></td>
           <td><a href="#">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <td><a href="#">ビデオ通話</a></td>
           <td><a href="#">テキストチャット</a></td>
         </tr>
       </tbody>

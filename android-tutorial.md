@@ -16,14 +16,14 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png"
-    class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
 ## 開発前の準備
@@ -926,5 +926,5 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 ### 動作確認
 {: #testing }
 
-実機でビルドし動作を確認してください。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。
+実機でビルドし動作を確認してください。listAllPeersで取得したPeerIDに対して発信し、相手とビデオ通話ができれば成功です。
 実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することができます。

@@ -17,14 +17,14 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
   <img src="http://via.placeholder.com/250x350"
-    class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
 ## 開発前の準備
@@ -154,13 +154,13 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 
 <figure class="figure">
   <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
+    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">Chromeのダイアログ</figcaption>
 </figure>
 
 <figure class="figure">
   <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
+    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">Firefoxのダイアログ</figcaption>
 </figure>
 
@@ -434,4 +434,4 @@ function setupEndCallUI() {
 {: #testing }
 
 2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。
-相手とビデオチャットができれば成功です。
+相手とビデオ通話ができれば成功です。
