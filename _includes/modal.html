@@ -1,0 +1,5 @@
+{% if page.lang %}
+{% include {{page.lang}}/modal.html %}
+{% else %}
+{% include jp/modal.html %}
+{% endif %}

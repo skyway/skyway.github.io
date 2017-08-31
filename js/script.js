@@ -42,6 +42,14 @@ $(function() {  // DOMが用意できてから実行
 
   $('[data-toggle="tooltip"]').tooltip();
 
+  // 旧サイトからのリダイレクト時にモーダル表示
+  var search = location.search;
+  var STRING_OF_MODAL = 'origin=skyway';
+  if (search && search.split('?')[1].split('&').indexOf(STRING_OF_MODAL) !== -1) {
+    $('#migration').modal();
+    history.replaceState(null, null, location.href.replace(search, ''));
+  }
+
   // <h2>~<h6>ホバー時にアンカーアイコンを表示
 
   var headers = '#main > h2, #main > h3, #main > h4, #main > h5, #main > h6';
