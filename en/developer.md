@@ -10,6 +10,7 @@ main_visual:
   image_file_name: 
   font_color: "#fff"
   background_color: rgb(0, 67, 134)
+breadcrumb: [en/index.md]
 ---
 
 ## Get Started
@@ -18,23 +19,25 @@ ECLWebRTCを利用すればアプリケーションの開発を簡単に始め�
 
 ### STEP1
 
-[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
+次のコマンドを入力して、ビデオチャットアプリを動かしてみましょう。
+
+```sh
+~ $ npm install eclwebrtc-skeleton
+~ $ npm start
+```
 
 ### STEP2
 
-次のコマンドを入力して、JavaScript SDKを利用したビデオチャットアプリを動かしてみましょう。
-
-```sh
-~ $ gem install jekyll
-~ $ jekyll new my-awesome-site
-~ $ cd my-awesome-site
-~/my-awesome-site $ jekyll serve
-```
+上手く動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
 
 ### STEP3
 
-上手く動いたら、STEP2のサンプルコードのAPIキーをSTEP1で発行したものと置き換えます。  
+次のコマンドを入力して、STEP1のビデオチャットアプリのAPIキーをあなたのものに変更しましょう。  
 チュートリアルやAPIリファレンスを参考に、本格的な開発を始めましょう。
+
+```sh
+~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+```
 
 ## SDK
 
@@ -47,7 +50,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <i class="fa fa-television fa-fw" aria-hidden="true"></i>
                 <span>JavaScript SDK</span>
             </a>
-            <a href="./js-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="./js-tutorial.html" class="list-group-item list-group-item-action">チュートリアル</a>
             <a href="./js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
             <a href="./js-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
@@ -59,9 +62,9 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i>
                 <span>iOS SDK</span>
             </a>
-            <a href="ios-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-            <a href="ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="./ios-tutorial.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="./ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="./ios-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
     </div>
@@ -71,9 +74,9 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i>
                 <span>Android SDK</span>
             </a>
-            <a href="./android-sdk.html" class="list-group-item list-group-item-action">チュートリアル</a>
-            <a href="/android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
-            <a href="#" class="list-group-item list-group-item-action">APIリファレンス</a>
+            <a href="./android-tutorial.html" class="list-group-item list-group-item-action">チュートリアル</a>
+            <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
+            <a href="./android-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
         </div>
     </div>
@@ -126,7 +129,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">認証</h3>
                 <p class="card-text">APIキーの不正利用を防止するための認証機能を提供</p>
-                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-primary">利用方法(Github)</a>
+                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-outline-primary">利用方法(Github)</a>
             </div>
         </div>
     </div>
@@ -135,7 +138,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
                 <p class="card-text">Peer to Peerで通信が確立できない環境にメディアを中継するサーバを提供</p>
-                <a href="./pricing.html#サーバ通信料" class="btn btn-primary">料金</a>
+                <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">料金</a>
             </div>
         </div>
     </div>
@@ -144,8 +147,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">多人数通話や配信を実現する、映像・音声送信を代行するメディアサーバを提供</p>
-                <a href="#" class="btn btn-primary">料金</a>
-                <a href="./sfu.html" class="btn btn-primary">SFUの説明</a>
+                <a href="#" class="btn btn-outline-primary">料金</a>
+                <a href="./sfu.html" class="btn btn-outline-primary">SFUの説明</a>
             </div>
         </div>
     </div>
@@ -154,7 +157,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">画面共有</h3>
                 <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
-                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-primary">利用方法(Github)</a>
+                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-outline-primary">利用方法(Github)</a>
             </div>
         </div>
     </div>
@@ -172,7 +175,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <h3 class="card-title">SkyWayからECLWebRTCへの移行方法</h3>
                 <p class="card-text">SkyWayは2018年3月31日をもってサービスを終了します。ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。</p>
                 <small class="text-muted">2017.9.5</small>
-                <a href="./sfu.html" class="btn btn-primary">マイグレーション</a>
+                <a href="./migration.html" class="btn btn-outline-primary">マイグレーション</a>
             </div>
         </div>
     </div>
@@ -182,7 +185,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <h3 class="card-title">WebRTCセキュリティレポート</h3>
                 <p class="card-text">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。</p>
                 <small class="text-muted">2015.7.28</small>
-                <a href="./sfu.html" class="btn btn-primary">セキュリティレポート</a>
+                <a href="http://webrtc-security.github.io/index.html" target="_blank" class="btn btn-outline-primary">セキュリティレポート</a>
             </div>
         </div>
     </div>
@@ -199,18 +202,79 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 メンテナンス、障害情報を公開しています。  
 各情報の通知をRSSで受け取りたい方は、 [メンテナンス及び障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
 
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#maintenance" target="_blank" role="tab">メンテナンス情報</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#failure" target="_blank" role="tab">障害情報</a>
-  </li>
-</ul>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="maintenance" role="tabpanel"> 
+<div class="card">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#maintenance" role="tab">メンテナンス情報</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#failure" role="tab">障害情報</a>
+      </li>
+    </ul>
   </div>
-  <div class="tab-pane" id="failure" role="tabpanel">
+  <div class="card-body">
+    <div class="tab-content">
+      <div class="tab-pane active" id="maintenance" role="tabpanel"> 
+      </div>
+      <div class="tab-pane" id="failure" role="tabpanel">
+      </div>
+    </div>
   </div>
 </div>
+
+<script>
+$(function() {
+  'use strict';
+
+  // AJAXでZendeskのお知らせを取得して表示
+
+  // JSON取得
+  $.getJSON(CONST.JSON_URL_MAINTENANCE).done(function(data) {
+    updateNews(data, 'maintenance', CONST.ZENDESK_URL_MAINTENANCE);
+  }).fail(function(data) {
+    console.log('xhr failed');
+  });
+
+  $.getJSON(CONST.JSON_URL_FAILURE).done(function(data) {
+    updateNews(data, 'failure', CONST.ZENDESK_URL_FAILURE);
+  }).fail(function(data) {
+    console.log('xhr failed');
+  });
+
+  // DOM作成
+  function updateNews(obj, id, siteurl){
+    var $rows = $('<div>').addClass('rows');;
+    for (var i = 0; i < obj.articles.length; i++) {
+      var $cardTitle = $('<h4>')
+        .text(obj.articles[i].body.substr(4, 10))
+        .addClass('card-title h6');
+      var $cardText = $('<p>')
+        .html(obj.articles[i].body)
+        .addClass('mini-headline-text card-text');
+      var $col1 = $('<div>')
+        .addClass('col-sm-3 col-lg-2')
+        .append($cardTitle);
+      var $col2 = $('<div>')
+        .addClass('col-sm-9 col-lg-10')
+        .append($cardText);
+      var $row = $('<div>')
+        .addClass('row')
+        .append($col1)
+        .append($col2);
+      $rows.append($row);
+    }
+    var $link = $('<a>')
+      .addClass('btn btn-primary')
+      .attr({
+        href: siteurl,
+        target: '_blank'
+      })
+      .text('すべて見る')
+      .appendTo('<div class="allnewslink">')
+      .parent();
+    $('#' + id).append($rows).append($link);
+  }
+});
+</script>
