@@ -4,7 +4,7 @@ title: 料金
 lang: ja
 main_visual:
   main_copy: <span>あなたの</span><wbr><span>イノベーションを</span><wbr><span>始めよう</span>
-  sub_copy: <span>ECLWebRTCは、</span><wbr><span>無料で</span><wbr><span>利用できる</span><wbr>Community Editionを</span><wbr><span>用意して</span><wbr><span>います。</span>
+  sub_copy: <span>ECLWebRTCは、</span><wbr><span>無料で</span><wbr><span>利用できる</span><wbr>Community Editionを</span><wbr><span>用意して</span><wbr><span>います</span>
   links: <p class="lead"><a class="btn btn-light btn-lg" href="signup.html" role="button">無料で新規登録</a></p>
   copy_position: ["after"]
   image_file_name: 
