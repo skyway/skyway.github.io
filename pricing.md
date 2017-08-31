@@ -109,7 +109,7 @@ Community Editionは一切、料金がかかりません。
 ### サーバ通信料
 
 <p>
-  TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生します。<br>
+  TURNサーバおよびSFUサーバとの月間通信量に応じた料金が発生します。<br>
   <small class="text-muted">
     1回の接続あたりの接続時間やcall回数に制限はありません。<span class="d-none d-md-inline"><br></span>
     サーバ通信量は、全APIKeyの合計ではなく、APIKey単位、TURN/SFU種別でカウントし、制限や料金の発生もAPIKey毎となります。また、サーバへのIN/OUTの通信の合計です。

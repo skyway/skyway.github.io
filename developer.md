@@ -200,7 +200,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 ## メンテナンス・障害情報
 
 メンテナンス、障害情報を公開しています。  
-各情報の通知をRSSで受け取りたい方は、 [メンテナンス及び障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
+各情報の通知をRSSで受け取りたい方は、 [メンテナンスおよび障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
 
 
 <div class="card">
