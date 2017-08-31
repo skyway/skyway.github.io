@@ -5,9 +5,9 @@ lang: en
 breadcrumb: [en/index.md]
 ---
 
-# 新規登録
+# Registration
 
-オンラインでの新規登録で、すぐに利用可能です。<br>
-世界中の開発者とともにあなたのイノベーションを始めましょう。
+New registration online will give you an immediate access.  
+Start your innovation with developers around the world.
 
 {% include signup-cards.html %}
