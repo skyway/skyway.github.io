@@ -117,7 +117,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   </tbody>
 </table>
 
-料金の詳細は[価格](pricing.md)をご覧ください。SLAの詳細は[サービス説明書](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html)をご覧ください。
+詳細は[料金](pricing.md)をご覧ください。SLAの詳細は[サービス説明書](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html)をご覧ください。
 
 ## デモ
 
