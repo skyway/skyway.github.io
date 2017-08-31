@@ -106,7 +106,7 @@ $ php -S localhost:8080
 
 映像・音声を取得する処理を追記してください。
 Webブラウザでカメラ映像、マイク音声を取得するためには、getUserMediaというAPIを利用します。    
-getUserMediaで取得した、Streamオブジェクト（自分の映像）を表示用のVIDEO要素にセットします。  
+getUserMediaで取得した、Streamオブジェクト（自分の映像）を表示用のvideo要素にセットします。  
 
 *JavaScript*
 {: .lang}
@@ -169,7 +169,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 
 ### SDKのインポート
 
-以下のとおりScript要素でSDKをインポートします。  
+以下のとおりscript要素でSDKをインポートします。  
 チュートリアルのソースコードでは`index.html`に追記済みです。
 
 *HTML*
@@ -344,7 +344,7 @@ function setupCallEventHandlers(call){
 ```
 
 相手の映像・音声を受信した際に発火します。  
-取得したStreamオブジェクトをVIDEO要素にセットします。  
+取得したStreamオブジェクトをvideo要素にセットします。  
 `addVideo()`、`setupEndCallUI()`の中身については後ほど説明します。
 
 *JavaScript*
@@ -364,7 +364,7 @@ function setupCallEventHandlers(call){
 
 `call.close()`による切断処理が実行され、実際に切断されたら発火します。
 このイベントは、`call.close()`実行した側、実行された側それぞれで発火します。`call.peer`で切断した相手のPeerIDを取得できます。  
-切断時にはVIDEO要素の削除とUI関連の処理をを削除します。`removeVideo()`、`setupMakeCallUI()`の中身については後ほど説明します。
+切断時にはvideo要素の削除とUI関連の処理をを削除します。`removeVideo()`、`setupMakeCallUI()`の中身については後ほど説明します。
 
 *JavaScript*
 {: .lang}
@@ -382,10 +382,10 @@ function setupCallEventHandlers(call){
 ## UIのセットアップ
 {: #setup-ui }
 
-### VIDEO要素の再生
+### video要素の再生
 
 VIDEOを再生するための処理を追記してください。  
-VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます。
+video要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます。
 削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
 
 *JavaScript*
@@ -397,9 +397,9 @@ function addVideo(call,stream){
 }
 ```
 
-### VIDEO要素の削除
+### video要素の削除
 
-切断された（した）相手のVIDEO要素を削除するための処理を追記してください。
+切断された（した）相手のvideo要素を削除するための処理を追記してください。
 PeerIDを元に削除します。
 
 *JavaScript*
