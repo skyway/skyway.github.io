@@ -5,31 +5,33 @@ lang: en
 breadcrumb: [en/index.md, en/signup.md]
 ---
 
-## Enterprise Editionのご利用を検討中の方へ
+## To Customers considering to use the Enterprise Edition
 
-Community EditionからEnterprise Editionへの移行や、新規利用に関する問い合わせはこちらをご利用下さい。
+Please use this inquaries for migration from Community Edition to Enterprise Edition and new use.
 
 <div class="row">
   <div class="col-sm-6 d-flex">
     <div class="card" style="flex-grow: 1;">
       <div class="card-body">
-        <h3 class="card-title">お問い合わせ（契約）</h3>
-        <p class="card-text">Webフォームまたは、電話でお受けしています</p>
-        <a href="#" class="btn btn-primary">資料請求・お問い合わせフォーム</a>
+        <h3 class="card-title">Inquary（Contract）</h3>
+        <p class="card-text">Inquiries in a Web form or by the phone are accepted.</p>
+        <a href="#" class="btn btn-primary">Document request and inquary form</a>
         <a href="tel:0120106107"><img src="{{ site.rootdir[page.lang] }}images/freedial.png"></a><br>
-        <small class="text-muted">※受付時間：9:30〜17:00（土日祝日を除く）</small>
+        <small class="text-muted">※Reception Time:9:00～17:00(Except for weekends and holidays)</small>
       </div>
     </div>
   </div>
   <div class="col-sm-6 d-flex">
     <div class="card" style="flex-grow: 1;">
       <div class="card-body">
-        <h3 class="card-title">お問い合わせ（サービス仕様）</h3>
-        <p class="card-text">Webフォームでお受けしています<br><small class="text-muted">契約済みの方は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html">チケットサポート</a>をご利用下さい<br>内容によりお答えできない場合もあります</small></p>
-        <a href="" class="btn btn-primary">お問い合わせフォーム</a>
+        <h3 class="card-title">Inquary（Service Specification）</h3>
+        <p class="card-text">Inquiries in a Web form are accepted. <br><small class="text-muted">
+        Customers who have contracted already are advised to use 
+        <a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html">Ticket Support</a>. An answer from NTT Com may not be available depending on the contents of the inquiry.</small></p>
+        <a href="" class="btn btn-primary">Inquary form</a>
       </div>
     </div>
   </div>
 </div>
 
-<a href="https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/bporder.html" data-toggle="tooltip" data-placement="bottom" title="既にNTTコミュニケーションズのビジネスポータルをご利用のお客さまは、即時ご利用いただけます">ビジネスポータルで新規登録</a>
+<a href="https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/bporder.html" data-toggle="tooltip" data-placement="bottom" title="Customers already used NTT Communications Business Portal are able to start using at once.">New registration from Business Portal</a>
