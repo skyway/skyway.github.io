@@ -11,4 +11,4 @@ breadcrumb: [index.md]
 
 {% include support-cards.html %}
 
-<p class="text-muted">Enterprise Editionの契約やサービス仕様に関する問い合わせは、<a href="./contactus.html">問い合わせページ</a>をご確認ください。</p>
+<p class="text-muted">Enterprise Editionの契約やサービス仕様に関するお問い合わせは、<a href="./contactus.html">お問い合わせページ</a>をご確認ください。</p>

@@ -7,7 +7,7 @@ breadcrumb: [index.md, signup.md]
 
 ## Enterprise Editionのご利用を検討中の方へ
 
-Community EditionからEnterprise Editionへの移行や、新規利用に関する問い合わせはこちらをご利用下さい。
+Community EditionからEnterprise Editionへの移行や、新規利用に関するお問い合わせはこちらをご利用下さい。
 
 <div class="row">
   <div class="col-sm-6 d-flex">
