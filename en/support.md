@@ -5,11 +5,11 @@ lang: en
 breadcrumb: [en/index.md]
 ---
 
-<h1>サポート</h1>
+<h1>Support</h1>
 
-開発に役立つコミュニティサポートやチケットサポートを提供しています。  
+Provides community support and support ticket useful for development.
 
 {% include support-cards.html %}
 
-<p class="text-muted">Enterprise Editionの契約やサービス仕様に関する問い合わせは、<a href="./contactus.html">問い合わせページ</a>をご確認ください。</p>
+<p class="text-muted">Please refer to <a href="./contactus.html">Inquiry page</a> regarding  inquiries for contract and service specification of Enterprise Edition.</p>
 
