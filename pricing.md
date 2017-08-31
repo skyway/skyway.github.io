@@ -4,7 +4,7 @@ title: 料金
 lang: ja
 main_visual:
   main_copy: <span>あなたの</span><wbr><span>イノベーションを</span><wbr><span>始めよう</span>
-  sub_copy: <span>ECLWebRTCは、</span><wbr><span>無料で</span><wbr><span>利用できる</span><wbr>Community Editionを</span><wbr><span>用意して</span><wbr><span>います。</span>
+  sub_copy: <span>ECLWebRTCは、</span><wbr><span>無料で</span><wbr><span>利用できる</span><wbr>Community Editionを</span><wbr><span>用意して</span><wbr><span>います</span>
   links: <p class="lead"><a class="btn btn-light btn-lg" href="signup.html" role="button">無料で新規登録</a></p>
   copy_position: ["after"]
   image_file_name: 
@@ -109,7 +109,7 @@ Community Editionは一切、料金がかかりません。
 ### サーバ通信料
 
 <p>
-  TURNサーバ及びSFUサーバとの月間通信量に応じた料金が発生します。<br>
+  TURNサーバおよびSFUサーバとの月間通信量に応じた料金が発生します。<br>
   <small class="text-muted">
     1回の接続あたりの接続時間やcall回数に制限はありません。<span class="d-none d-md-inline"><br></span>
     サーバ通信量は、全APIKeyの合計ではなく、APIKey単位、TURN/SFU種別でカウントし、制限や料金の発生もAPIKey毎となります。また、サーバへのIN/OUTの通信の合計です。
@@ -128,7 +128,7 @@ Community Editionは一切、料金がかかりません。
 <tbody align="right">
   <tr>
     <!-- PC表示用 -->
-    <th scope="row" class="d-none d-md-table-cell">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: Peer to Peerでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
+    <th scope="row" class="d-none d-md-table-cell">TURN<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="TURN: P2Pでの通信が確立できない環境で、TURNサーバを中継することによりNAT越えを実現します。">i</span></th>
     <!-- スマホ表示用 -->
     <th scope="row" class="d-sm-none">TURN / SFU</th> 
     <td class="td-header" align="left">〜500GB</td>
@@ -173,7 +173,7 @@ Community Editionは一切、料金がかかりません。
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-body">
         TURN利用上限までにどの程度通話できるかの目安です。<br>
-        <small class="text-muted">TURNの利用制限がかかっても、Peer to Peerでの通信は可能です。<br>TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
+        <small class="text-muted">TURNの利用制限がかかっても、P2Pでの通信は可能です。<br>TURNの利用率はユーザーによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の時間です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
@@ -225,7 +225,7 @@ Community Editionは一切、料金がかかりません。
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="card-body">
         TURN利用時の料金目安です。<br>
-        <small class="text-muted">TURNの利用率はエンドユーザによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の料金です。</small>
+        <small class="text-muted">TURNの利用率はユーザーによって大きく変わり、一般的に法人20%、個人10%、スマートフォン1%です。<br>発信者が1人の場合の料金です。</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>

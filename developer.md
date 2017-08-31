@@ -15,11 +15,11 @@ breadcrumb: [index.md]
 
 ## Get Started
 
-ECLWebRTCを利用すればアプリケーションの開発を簡単に始めることが出来ます。 
+ECLWebRTCを利用すればアプリケーションの開発を簡単に始めることができます。 
 
 ### STEP1
 
-次のコマンドを入力して、ビデオチャットアプリを動かしてみましょう。
+次のコマンドを入力して、ビデオ通話アプリを動かしてみましょう。
 
 ```sh
 ~ $ npm install eclwebrtc-skeleton
@@ -28,11 +28,11 @@ ECLWebRTCを利用すればアプリケーションの開発を簡単に始め�
 
 ### STEP2
 
-上手く動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
+うまく動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
 
 ### STEP3
 
-次のコマンドを入力して、STEP1のビデオチャットアプリのAPIキーをあなたのものに変更しましょう。  
+次のコマンドを入力して、STEP1のビデオ通話アプリのAPIキーをあなたのものに変更しましょう。  
 チュートリアルやAPIリファレンスを参考に、本格的な開発を始めましょう。
 
 ```sh
@@ -112,7 +112,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">シグナリング</h3>
-                <p class="card-text">IPアドレスやコーデック等の情報を相手と交換する為のサーバ、多人数通話に便利なRoom管理機能を備える</p>
+                <p class="card-text">IPアドレスやコーデック等の情報を相手と交換するためのサーバ、多人数通話に便利なRoom管理機能を備える</p>
             </div>
         </div>
     </div>
@@ -120,7 +120,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">STUN</h3>
-                <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<BR></p>
+                <p class="card-text">NAT越えに必要な、自身のグローバルIPアドレスとポート番号を確認するサーバを無料で提供<br></p>
             </div>
         </div>
     </div>
@@ -129,7 +129,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">認証</h3>
                 <p class="card-text">APIキーの不正利用を防止するための認証機能を提供</p>
-                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-outline-primary">利用方法(Github)</a>
+                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-outline-primary">利用方法(GitHub)</a>
             </div>
         </div>
     </div>
@@ -137,7 +137,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
-                <p class="card-text">Peer to Peerで通信が確立できない環境にメディアを中継するサーバを提供</p>
+                <p class="card-text">P2Pで通信が確立できない環境にメディアを中継するサーバを提供</p>
                 <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">料金</a>
             </div>
         </div>
@@ -156,8 +156,8 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">画面共有</h3>
-                <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
-                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-outline-primary">利用方法(Github)</a>
+                <p class="card-text">画面共有用ブラウザ拡張を簡単に実装するためのライブラリ、サンプルコードを提供</p>
+                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-outline-primary">利用方法(GitHub)</a>
             </div>
         </div>
     </div>
@@ -174,7 +174,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">SkyWayからECLWebRTCへの移行方法</h3>
                 <p class="card-text">SkyWayは2018年3月31日をもってサービスを終了します。ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。</p>
-                <small class="text-muted">2017.9.5</small>
+                <small class="text-muted">2017年9月5日</small>
                 <a href="./migration.html" class="btn btn-outline-primary">マイグレーション</a>
             </div>
         </div>
@@ -184,7 +184,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">WebRTCセキュリティレポート</h3>
                 <p class="card-text">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。</p>
-                <small class="text-muted">2015.7.28</small>
+                <small class="text-muted">2015年7月28日</small>
                 <a href="http://webrtc-security.github.io/index.html" target="_blank" class="btn btn-outline-primary">セキュリティレポート</a>
             </div>
         </div>
@@ -193,14 +193,14 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 ## サポート
 
-開発に役立つコミュニティサポートやチケットサポートを提供しています。
+開発に役立つTechnical Forumやチケットサポートを提供しています。
 
 {% include support-cards.html %}
 
 ## メンテナンス・障害情報
 
 メンテナンス、障害情報を公開しています。  
-各情報の通知をRSSで受け取りたい方は、 [メンテナンス及び障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
+各情報の通知をRSSで受け取りたい方は、 [メンテナンスおよび障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
 
 
 <div class="card">

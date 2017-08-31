@@ -120,7 +120,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">STUN</h3>
-                <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<BR></p>
+                <p class="card-text">NAT通過に必要な、自身のPublic IPアドレスとポート番号を確認するサーバを無料で提供<br></p>
             </div>
         </div>
     </div>
@@ -174,7 +174,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">SkyWayからECLWebRTCへの移行方法</h3>
                 <p class="card-text">SkyWayは2018年3月31日をもってサービスを終了します。ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。</p>
-                <small class="text-muted">2017.9.5</small>
+                <small class="text-muted">Sep 7th, 2017</small>
                 <a href="./migration.html" class="btn btn-outline-primary">マイグレーション</a>
             </div>
         </div>
@@ -184,7 +184,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">WebRTCセキュリティレポート</h3>
                 <p class="card-text">WebRTCのセキュリティに関する考察をオープンソースで公開しています。WebRTCのセキュリティについて詳しく知りたい方はご覧ください。</p>
-                <small class="text-muted">2015.7.28</small>
+                <small class="text-muted">Jul 28th, 2017</small>
                 <a href="http://webrtc-security.github.io/index.html" target="_blank" class="btn btn-outline-primary">セキュリティレポート</a>
             </div>
         </div>

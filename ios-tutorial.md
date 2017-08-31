@@ -13,17 +13,19 @@ breadcrumb: [index.md, developer.md, ios-sdk.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオチャット](#){:target="_blank"}と同じものになります。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](#){:target="_blank"}と同じものになります。
 完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
+    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png"
+    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
 ## 開発前の準備
@@ -38,9 +40,9 @@ ECLWebRTCへの開発者登録がまだの方は、まず、[Community Edition�
 
 |設定項目|項目の説明|チュートリアルの設定内容|
 |:--|:--|:--|
-|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<BR>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
-|利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<BR>指定例：hogehoge.com|`localhost`|
-|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信が出来ない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
+|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<br>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
+|利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<br>指定例：hogehoge.com|`localhost`|
+|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
 |権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
@@ -77,7 +79,8 @@ SDKのバイナリファイルを配置します。
 6. General > Embedded Binaries から`ECLWebRTC.framework`を再度追加
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode1.png" class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode1.png"
+    class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
   <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
 </figure>
 
@@ -108,10 +111,11 @@ SDKのバイナリファイルを配置します。
 2. Signing > Team から ビルドに利用するアカウントを選択
 3. 実機を接続しビルド実行
 
-実行時にエラーが出てしまいますが、以下の通りビルドに成功すれば準備完了です。
+実行時にエラーが出てしまいますが、以下のとおりビルドに成功すれば準備完了です。
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-sc1.png" class="figure-img img-fluid rounded" alt="実機上でLaunchScreenが表示されたところ">
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-sc1.png"
+    class="figure-img img-fluid rounded" alt="実機上でLaunchScreenが表示されたところ">
   <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
 </figure>
 
@@ -162,8 +166,8 @@ static NSString *const kDomain = @"domain";
 
 
 プロパティ宣言、そしてインスタンス変数のdealloc処理を追記してください。
-- `localView` : 自分自身の映像を表示するためのレンダラービューオブジェクト
-- `remoteView` : 相手の映像を表示するためのレンダラービューオブジェクト
+- `localView` : 自分自身のカメラ映像を表示するためのレンダラービューオブジェクト
+- `remoteView` : 相手のカメラ映像を表示するためのレンダラービューオブジェクト
 
 *Objective-C*
 {: .lang}
@@ -222,10 +226,12 @@ Peerオブジェクトで指定可能なその他のオプションについて�
 
 続けて、Peerオブジェクトに必要なイベントコールバックを追記してください。
 
-### OPENイベント
+### openイベント
 
-ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
-PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
+ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。
+ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
+PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。
+PeerIDはクライアントサイドで指定することもできます。  
 以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
 
 *Objective-C*
@@ -248,11 +254,11 @@ PeerIDと呼ばれるクライアント識別用のIDがシグナリングサー
 
 ### カメラ映像、マイク音声の取得
 
-OPENイベントのコールバック内に、カメラ映像とマイク音声を取得するための処理を追記してください。  
+openイベントのコールバック内に、カメラ映像とマイク音声を取得するための処理を追記してください。  
 
 #### オプション設定
 
-SKWMediaConstraintsクラスで映像・音声取得に関するオプションを設定可能です。  
+SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関するオプションを設定可能です。  
 ここで設定している項目の説明は以下のとおりです。  
 - `maxWidth`: キャプチャ映像の横サイズ上限（単位：ピクセル）
 - `maxHeight`: キャプチャ映像の縦サイズ上限（単位：ピクセル）
@@ -281,7 +287,7 @@ SKWMediaConstraintsクラスで映像・音声取得に関するオプション�
 
 #### 取得と再生
 
-SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分の映像（ローカルストリーム）が取得できます。  
+SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分のカメラ映像（ローカルストリーム）が取得できます。  
 取得したMediaStreamオブジェクトに、addVideoRendererメソッドを利用して、ビデオレンダラー(表示用のSKWVideoオブジェクト)を割り当てます。
 
 *Objective-C*
@@ -305,7 +311,7 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 ```
 
 
-### ERRORイベント
+### errorイベント
 
 何らかのエラーが発生した場合に発火します。エラーが発生したら、ログにその内容を表示できるようにします。
 
@@ -321,7 +327,7 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 }];
 ```
 
-### CLOSEイベント
+### closeイベント
 
 Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
 
@@ -333,7 +339,7 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 [_peer on:SKW_PEER_EVENT_CLOSE callback:^(NSObject* obj) {}];
 ```
 
-### DISCONNECTEDイベント
+### disconnectedイベント
 
 シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
 
@@ -357,7 +363,8 @@ Peer（相手）との接続が切れた際に発火します。チュートリ�
 
 #### 発信先のPeerIDを取得
 
-actionButtonをタップし未接続状態であれば、listAllPeersメソッドを利用して接続先のPeerID一覧を取得します。取得した一覧から自分自身のIDを削除し、`PeerListViewController`で一覧表示します。  
+actionButtonをタップし未接続状態であれば、listAllPeersメソッドを利用して接続先のPeerID一覧を取得します。
+取得した一覧から自分自身のIDを削除し、`PeerListViewController`で一覧表示します。  
 
 *Objective-C*
 {: .lang}
@@ -411,7 +418,8 @@ actionButtonをタップし未接続状態であれば、listAllPeersメソッ�
 
 #### 発信
 
-`PeerListViewController`でPeerIDが選択されたら、didSelectPeerメソッドが呼ばれます。相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
+`PeerListViewController`でPeerIDが選択されたら、didSelectPeerメソッドが呼ばれます。
+相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
 発信後は必要なイベントコールバックをセットします。  
 `setMediaCallbacks`の中身については後ほど説明します。
 
@@ -491,7 +499,8 @@ MediaConnectionオブジェクトのCloseメソッドが実行された後は、
 #### コールバックイベントの解放関連
 
 MediaConnection切断時に実行するコールバックイベントの開放処理を追記してください。  
-尚、`unsetPeerCallbacks`についてはPeerオブジェクトの破棄時に利用します。今回のチュートリアルでは、Peerオブジェクトの破棄は省略しているため未使用です。
+尚、`unsetPeerCallbacks`についてはPeerオブジェクトの破棄時に利用します。
+今回のチュートリアルでは、Peerオブジェクトの破棄は省略しているため未使用です。
 
 *Objective-C*
 {: .lang}
@@ -531,8 +540,9 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 {: #oncall }
 
 相手から接続要求がきた場合に応答します。   
-相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。引き数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
-この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することが出来るようになります。  
+相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。
+引数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
+この時に、自分自身の`_localStream`をセットすると、相手にカメラ映像・マイク音声を送信することができるようになります。  
 発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
 
 *Objective-C*
@@ -559,7 +569,7 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 ### MediaConnectionオブジェクトに必要なイベント
 
 MediaConnectionオブジェクトに必要なイベントコールバックです。  
-`SKW_MEDIACONNECTION_EVENT_STREAM`は相手の映像・音声を受信した際に発火します。  
+`SKW_MEDIACONNECTION_EVENT_STREAM`は相手のカメラ映像・マイク音声を受信した際に発火します。  
 コールバック内では、UI上の接続ステータスのアップデート処理と、取得した相手のMediaStreamオブジェクトにaddVideoRendererメソッドを利用して、ビデオレンダラーを割り当てます。
 
 *Objective-C*
@@ -704,4 +714,5 @@ getCameraPositionメソッドで該当メディアストリームで利用して
 ## 動作確認
 {: #testing }
 
-実機でビルドし動作を確認して下さい。listAllPeersで取得したPeerIDに対して発信し、相手とビデオチャットができれば成功です。実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することが出来ます。
+実機でビルドし動作を確認してください。listAllPeersで取得したPeerIDに対して発信し、相手とビデオ通話ができれば成功です。
+実機が1台しかない場合は、JavaScript SDKで実装したWebアプリケーションとの相互接続で動作を確認することができます。
