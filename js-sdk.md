@@ -71,7 +71,7 @@ $ npm install eclwebrtc-js-sdk
   </div>
 </div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGithubで公開しています。
+[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 

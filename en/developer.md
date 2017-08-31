@@ -126,7 +126,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">認証</h3>
                 <p class="card-text">APIキーの不正利用を防止するための認証機能を提供</p>
-                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-primary">利用方法(Github)</a>
+                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-primary">利用方法(GitHub)</a>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">画面共有</h3>
                 <p class="card-text">画面共有用ブラウザ拡張を簡単に実装する為のライブラリ、サンプルコードを提供</p>
-                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-primary">利用方法(Github)</a>
+                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-primary">利用方法(GitHub)</a>
             </div>
         </div>
     </div>
