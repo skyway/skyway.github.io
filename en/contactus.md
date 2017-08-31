@@ -34,4 +34,4 @@ Please use this inquaries for migration from Community Edition to Enterprise Edi
   </div>
 </div>
 
-<a href="https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/bporder.html" data-toggle="tooltip" data-placement="bottom" title="Customers already used NTT Communications Business Portal are able to start using at once.">New registration from Business Portal</a>
+<a href="https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/bporder.html" data-toggle="tooltip" data-placement="bottom" title="Customers already used NTT Communications Business Portal are able to start using at once.">Registration from Business Portal</a>

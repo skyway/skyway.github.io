@@ -138,7 +138,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
                 <p class="card-text">A server to relay media in an environment where Peer to Peer communication cannot be established is provided.</p>
-                <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">Charge</a>
+                <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">Pricing</a>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <div class="card-body">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">A media server that transmits images and voices as a proxy to realize multi-person conversation and distribution is provided.</p>
-                <a href="#" class="btn btn-outline-primary">Charge</a>
+                <a href="#" class="btn btn-outline-primary">Pricing</a>
                 <a href="./sfu.html" class="btn btn-outline-primary">Details of SFU</a>
             </div>
         </div>
