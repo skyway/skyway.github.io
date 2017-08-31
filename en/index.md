@@ -178,7 +178,7 @@ Please refer to [Pricing](pricing.md) for details of charge and refer to [Servic
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_iot_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_IoT_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">IoT</h3>
         <p class="card-text">WebRTC can be used also by embedded systems and IoT devices.
