@@ -166,8 +166,8 @@ static NSString *const kDomain = @"domain";
 
 
 プロパティ宣言、そしてインスタンス変数のdealloc処理を追記してください。
-- `localView` : 自分自身の映像を表示するためのレンダラービューオブジェクト
-- `remoteView` : 相手の映像を表示するためのレンダラービューオブジェクト
+- `localView` : 自分自身のカメラ映像を表示するためのレンダラービューオブジェクト
+- `remoteView` : 相手のカメラ映像を表示するためのレンダラービューオブジェクト
 
 *Objective-C*
 {: .lang}
@@ -258,7 +258,7 @@ openイベントのコールバック内に、カメラ映像とマイク音声�
 
 #### オプション設定
 
-SKWMediaConstraintsクラスで映像・音声取得に関するオプションを設定可能です。  
+SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関するオプションを設定可能です。  
 ここで設定している項目の説明は以下のとおりです。  
 - `maxWidth`: キャプチャ映像の横サイズ上限（単位：ピクセル）
 - `maxHeight`: キャプチャ映像の縦サイズ上限（単位：ピクセル）
@@ -287,7 +287,7 @@ SKWMediaConstraintsクラスで映像・音声取得に関するオプション�
 
 #### 取得と再生
 
-SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分の映像（ローカルストリーム）が取得できます。  
+SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分のカメラ映像（ローカルストリーム）が取得できます。  
 取得したMediaStreamオブジェクトに、addVideoRendererメソッドを利用して、ビデオレンダラー(表示用のSKWVideoオブジェクト)を割り当てます。
 
 *Objective-C*
@@ -542,7 +542,7 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 相手から接続要求がきた場合に応答します。   
 相手から接続要求が来た場合は`SKW_PEER_EVENT_CALL`が発火します。
 引数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
-この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
+この時に、自分自身の`_localStream`をセットすると、相手にカメラ映像・マイク音声を送信することができるようになります。  
 発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
 
 *Objective-C*
@@ -569,7 +569,7 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 ### MediaConnectionオブジェクトに必要なイベント
 
 MediaConnectionオブジェクトに必要なイベントコールバックです。  
-`SKW_MEDIACONNECTION_EVENT_STREAM`は相手の映像・音声を受信した際に発火します。  
+`SKW_MEDIACONNECTION_EVENT_STREAM`は相手のカメラ映像・マイク音声を受信した際に発火します。  
 コールバック内では、UI上の接続ステータスのアップデート処理と、取得した相手のMediaStreamオブジェクトにaddVideoRendererメソッドを利用して、ビデオレンダラーを割り当てます。
 
 *Objective-C*

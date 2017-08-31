@@ -301,7 +301,7 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
 
 #### オプション設定
 
-MediaConstraintsクラスで映像・音声取得に関するオプションを設定可能です。  
+MediaConstraintsクラスでカメラ映像・マイク音声取得に関するオプションを設定可能です。  
 ここで設定している項目の説明は以下のとおりです。 
 - `maxWidth`: キャプチャ映像の横サイズ上限（単位：ピクセル）
 - `maxHeight`: キャプチャ映像の縦サイズ上限（単位：ピクセル）
@@ -328,7 +328,7 @@ void startLocalStream() {
 
 #### 取得と再生
 
-Navigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分の映像（ローカルストリーム）が取得できます。  
+Navigatorクラスの初期化を行い、getUserMediaメソッドの引数に`constraints`を指定して実行することで、自分のカメラ映像（ローカルストリーム）が取得できます。  
 取得したMediaStreamオブジェクトに、addVideoRendererメソッドを利用して、ビデオレンダラー(表示用のCanvasオブジェクト)を割り当てます。
 
 *Java*
@@ -611,7 +611,7 @@ void closeRemoteStream(){
 相手から接続要求がきた場合に応答します。   
 相手から接続要求が来た場合は`Peer.PeerEventEnum.CALL`が発火します。
 引数として相手との接続を管理するためのMediaConnectionオブジェクトが取得できるため、answerメソッドを実行し接続要求に応答します。  
-この時に、自分自身の`_localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
+この時に、自分自身の`_localStream`をセットすると、相手にカメラ映像・マイク音声を送信することができるようになります。  
 発信時の処理と同じく`setMediaCallbacks`を実行し、イベントをセットします。中身については後ほど説明します。
 
 *Java*
@@ -641,7 +641,7 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 #### MediaConnectionオブジェクトに必要なイベント
 
 MediaConnectionオブジェクトに必要なイベントコールバックです。  
-`MediaConnection.MediaEventEnum.STREAM`は相手の映像・音声を受信した際に発火します。  
+`MediaConnection.MediaEventEnum.STREAM`は相手のカメラ映像・マイク音声を受信した際に発火します。  
 コールバック内では、UI上の接続ステータスのアップデート処理と、取得した相手のMediaStreamオブジェクトにaddVideoRendererメソッドを利用して、ビデオレンダラーを割り当てます。
 
 *Java*

@@ -104,9 +104,9 @@ $ php -S localhost:8080
 ## カメラ映像、マイク音声の取得
 {: #getUserMedia }
 
-映像・音声を取得する処理を追記してください。
+カメラ映像・マイク音声を取得する処理を追記してください。
 Webブラウザでカメラ映像、マイク音声を取得するためには、getUserMediaというAPIを利用します。    
-getUserMediaで取得した、Streamオブジェクト（自分の映像）を表示用のvideo要素にセットします。  
+getUserMediaで取得した、Streamオブジェクト（自分のカメラ映像）を表示用のvideo要素にセットします。  
 
 *JavaScript*
 {: .lang}
@@ -128,11 +128,11 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
 
 getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指定をすることも可能です。
 
-- 例：VideoのみキャプチャしAudioは取り込まない    
+- 例：カメラ映像のみ取り込み、マイク音声は取り込まない    
 `{video: true, audio: false}`
-- 例：キャプチャサイズの設定例    
+- 例：カメラ映像のサイズの設定例    
 `{ audio: true, video: { width: 640, height: 480 } }`
-- 例：フレームレートの設定（2017.08現在、Chromeでしか動作しません）    
+- 例：カメラ映像のフレームレートの設定例（2017.08現在、Chromeでしか動作しません）    
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
 #### APIを使用する上の注意点1
@@ -309,7 +309,7 @@ $('#end-call').click(function(){
 相手から接続要求がきた場合に応答します。    
 相手から接続要求が来た場合は`call`が発火します。
 引数として相手との接続を管理するためのCallオブジェクトが取得できるため、`call.answer()`を実行し接続要求に応答します。  
-この時に、自分自身の`localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
+この時に、自分自身の`localStream`をセットすると、相手にカメラ映像・マイク音声を送信することができるようになります。  
 発信時の処理と同じく`setupCallEventHandlers`を実行し、 Callオブジェクトのイベントリスナーをセットします。
 
 *JavaScript*
@@ -343,7 +343,7 @@ function setupCallEventHandlers(call){
 }
 ```
 
-相手の映像・音声を受信した際に発火します。  
+相手のカメラ映像・マイク音声を受信した際に発火します。  
 取得したStreamオブジェクトをvideo要素にセットします。  
 `addVideo()`、`setupEndCallUI()`の中身については後ほど説明します。
 
