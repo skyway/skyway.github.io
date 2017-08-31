@@ -123,7 +123,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 
 <div id="demos-div" class="row">
   <div class="col-12 col-sm-6">
-    <img class="img-fluid" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
+    <img class="img-fluid" src="{{ site.rootdir[page.lang] }}images/skywayconf.png" alt="SkyWay Conference">
   </div>
   <div class="col-12 col-sm-6">
 		<h5 class="mt-0">SkyWay Conference</h5>
@@ -140,7 +140,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 <div class="row card-row">
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/conf_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/conf_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Web会議</h3>
         <p class="card-text">アプリやプラグインのインストールが不要なので、従来のサービスより手軽に利用できます。<br>
@@ -155,7 +155,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/support_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/support_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">サポート</h3>
         <p class="card-text">電話をかけたり、別アプリに切り替えたりせずに通話できるので、アプリやWebサイト内でサポートが完結します。<br>
@@ -168,7 +168,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/healthcare_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/healthcare_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">遠隔医療</h3>
         <p class="card-text">WebRTCは、遠隔診療やヘルスケア相談にも活用されています。<br>
@@ -180,7 +180,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/iot_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/iot_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">IoT</h3>
         <p class="card-text">WebRTCは組み込み機器やIoTデバイスでも利用可能です。
