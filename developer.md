@@ -15,7 +15,7 @@ breadcrumb: [index.md]
 
 ## Get Started
 
-ECLWebRTCを利用すればアプリケーションの開発を簡単に始めることができます。 
+SkyWayを利用すればアプリケーションの開発を簡単に始めることができます。 
 
 ### STEP1
 
@@ -167,13 +167,13 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 開発に役立つドキュメントを公開しています。
 
-
 <div id="docs-div" class="row card-row">
     <div class="col-12 col-md-6">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">SkyWayからECLWebRTCへの移行方法</h3>
-                <p class="card-text">SkyWayは2018年3月31日をもってサービスを終了します。ドキュメントを参考にSkyWayからECLWebRTCへの移行をお願いします。</p>
+                <h3 class="card-title">新SDKへの移行方法</h3>
+                <p class="card-text">トライアル版のSkyWayは2018年3月31日をもって提供を終了します。
+                  2017年9月7日に提供を開始した新バージョンのSDKへの移行をお願いします。</p>
                 <small class="text-muted">2017年9月5日</small>
                 <a href="./migration.html" class="btn btn-outline-primary">マイグレーション</a>
             </div>

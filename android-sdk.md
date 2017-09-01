@@ -14,8 +14,8 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 [完成したアプリのデモ](tbd)を試すことができます。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
@@ -45,14 +45,14 @@ Android 4.2+ (API Level 17+)
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="./android-reference/" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+    <a href="./android-reference/" class="btn btn-primary">新SDKのAPIリファレンス</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#Android" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
+    <a href="http://nttcom.github.io/skyway/docs/#Android" class="btn btn-secondary" target="_blank">旧SDKのAPIリファレンス</a><br>
   </div>
 </div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }をGitHubで公開しています。
+[新旧SDKの機能差分と移行方法](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 

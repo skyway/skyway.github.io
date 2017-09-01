@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Enterprise Cloud WebRTC Platform - ECLWebRTC
+title: ECLWebRTC - Enterprise Cloud WebRTC Platform
 lang: en
 main_visual:
   main_copy: Try an Innovation through Realtime Communication.

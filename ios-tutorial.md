@@ -18,8 +18,8 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
@@ -31,16 +31,17 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 ## 開発前の準備
 {: #preparation }
 
-### ECLWebRTCのAPIキー発行
+### SkyWayのAPIキー発行
 
-ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+SkyWayへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+トライアル版SkyWayのAPIキーはご利用になれないので、トライアル版SkyWayをご利用の方も、新規登録をお願いします。
 開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
 
 ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
 |設定項目|項目の説明|チュートリアルの設定内容|
 |:--|:--|:--|
-|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<br>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
+|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<br>128文字以内で指定してください。|SkyWayチュートリアルアプリ|
 |利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<br>指定例：hogehoge.com|`localhost`|
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
@@ -72,11 +73,11 @@ SDKのバイナリファイルを配置します。
 今回のチュートリアルでは、ダウンロードしたファイルを手動でプロジェクトに組込む手順を紹介します。  
 
 1. SDKを[こちら](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip)からダウンロード
-2. ZIPファイルを解凍後、`ECLWebRTC.framework`を、`eclwebrtc-ios-sdk-tutorial`ディレクトリ直下に配置
-3. `eclwebrtc-ios-sdk-tutorial.xcodeproj`をダブルクリックしプロジェクトを開く
-4. 左ペインのファイルツリー上で右クリックし`Add File to…`を選択し、先程配置した`ECLWebRTC.framework`をファイルツリーに追加
-5. General > Linked Frameworks and Libraries から`ECLWebRTC.framework`を一度削除
-6. General > Embedded Binaries から`ECLWebRTC.framework`を再度追加
+2. ZIPファイルを解凍後、`SkyWay.framework`を、`skyway-ios-sdk-tutorial`ディレクトリ直下に配置
+3. `skyway-ios-sdk-tutorial.xcodeproj`をダブルクリックしプロジェクトを開く
+4. 左ペインのファイルツリー上で右クリックし`Add File to…`を選択し、先程配置した`SkyWay.framework`をファイルツリーに追加
+5. General > Linked Frameworks and Libraries から`SkyWay.framework`を一度削除
+6. General > Embedded Binaries から`SkyWay.framework`を再度追加
 
 <figure class="figure">
   <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode1.png"
@@ -119,7 +120,7 @@ SDKのバイナリファイルを配置します。
   <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
 </figure>
 
-## ECLWebRTCサーバへの接続
+## SkyWayサーバへの接続
 {: #connect-server }
 
 ### 宣言
@@ -228,8 +229,8 @@ Peerオブジェクトで指定可能なその他のオプションについて�
 
 ### openイベント
 
-ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。
-ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
+SkyWayのシグナリングサーバと接続し、利用する準備が整ったら発火します。
+SkyWayのすべての処理はこのイベント発火後に利用できるようになります。  
 PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。
 PeerIDはクライアントサイドで指定することもできます。  
 以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
