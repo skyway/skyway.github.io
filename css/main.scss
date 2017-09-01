@@ -8,8 +8,8 @@
 
 $color-base: $blue;
 $color-sub: $gray-600;
-$footer-height-md: 431px;
-$footer-height-xs: 752px;
+$footer-height-md: 415px;
+$footer-height-xs: 784px;
 
 body {
   // window width (-575px)
@@ -69,7 +69,6 @@ html {
   position: absolute;
   a {
     color: $footer-color;
-
     &:active,
     &:hover {
       color: darken($footer-color, 15%);
@@ -79,8 +78,34 @@ html {
   hr {
     border-top: 1px solid rgba($white, .2);
   }
-  .list-unstyled > .list-unstyled {
-    padding-left: 1em;
+
+  // site map
+  div {
+    > ul {
+      > li {
+        font-weight: $headings-font-weight;
+        margin-top: 0.875rem;
+        margin-bottom: 0.125rem;
+        &:first-child {
+          margin-top: 0;
+        }
+        > a {
+            color: $white;
+          &:active,
+          &:hover {
+            color: darken($white, 15%);
+          }
+        }
+      }
+      > ul {
+        font-size: $font-size-sm;
+        line-height: 1.25;
+        padding-left: 0;
+        > ul {
+          padding-left: 0.5em;
+        }
+      }
+    }
   }
 
   .logos-div {
