@@ -5,7 +5,7 @@ lang: en
 main_visual:
   main_copy: Start Your Innovation!
   sub_copy: ECLWebRTC offers the Community Edition for free.
-  links: <p class="lead"><a class="btn btn-light btn-lg" href="signup.html" role="button">Registration for free</a></p>
+  links: <p><a class="btn btn-light" href="signup.html" role="button">Registration for free</a></p>
   copy_position: ["after"]
   image_file_name: 
   font_color: "#fff"
