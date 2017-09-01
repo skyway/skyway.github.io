@@ -8,6 +8,23 @@ $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
 
+// Color
+
+$yellow:       rgb(253, 208, 0);    // corporate
+$blue:         rgb(0,   67,  134);  // corporate
+$yellow-light: rgb(254, 235, 191);  // corporate
+$yellow-dark:  rgb(182, 113, 0);    // corporate
+
+$indigo:  rgb(0, 97, 138);          // third
+$purple:  rgb(128, 27, 117);        // third
+$red:     rgb(199, 22, 30);         // third
+$orange:  rgb(246, 170, 0);         // secondary
+$green:   rgb(24, 147, 59);         // third
+$teal:    rgb(167, 197, 145);       // third
+$cyan:    rgb(0, 152, 216);         // secondary
+
+$link-color: #0051ac; // Knowledge Center
+
 // Fonts
 
 $headings-font-weight: 600;
@@ -63,20 +80,7 @@ $font-family-base:       $font-family-sans-serif;
   }
 }
 
-// Color
-
-$yellow:       rgb(253, 208, 0);    // corporate
-$blue:         rgb(0,   67,  134);  // corporate
-$yellow-light: rgb(254, 235, 191);  // corporate
-$yellow-dark:  rgb(182, 113, 0);    // corporate
-
-$indigo:  rgb(0, 97, 138);          // third
-$purple:  rgb(128, 27, 117);        // third
-$red:     rgb(199, 22, 30);         // third
-$orange:  rgb(246, 170, 0);         // secondary
-$green:   rgb(24, 147, 59);         // third
-$teal:    rgb(167, 197, 145);       // third
-$cyan:    rgb(0, 152, 216);         // secondary
+// Breadcrumb
 
 $breadcrumb-padding-x: 0;
 $breadcrumb-padding-y: 0;
