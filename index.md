@@ -4,7 +4,7 @@ title: SkyWay - Enterprise Cloud WebRTC Platform
 lang: ja
 main_visual:
   main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
-  sub_copy: <span>ECLWebRTC</span><wbr><span>(旧称SkyWay)は、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span>
+  sub_copy: <span>SkyWayは、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span>
   links: 
   copy_position: ["after"]
   image_file_name: three_devices.png
@@ -23,12 +23,12 @@ main_visual:
   </div>
 </div>
 
-## ECLWebRTCとは
+## SkyWayとは
 
 ビデオ会議やコンタクトセンター、遠隔作業支援、オンライン教育、ライブ配信など、さまざまな機会において、オンラインでのリアルタイムコミュニケーションのニーズが高まっています。
 ビデオ・音声通話、データ通信といったリアルタイムコミュニケーションの標準技術である「WebRTC」が登場し、リアルタイムコミュニケーションがより実現しやすくなってきました。
 
-ECLWebRTCを利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
+SkyWay利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
 自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 
 

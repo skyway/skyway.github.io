@@ -15,8 +15,8 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 [完成したアプリのデモ](#){:target="_blank"}を試すことができます。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
@@ -64,14 +64,14 @@ $ npm install eclwebrtc-js-sdk
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="./js-reference/" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+    <a href="./js-reference/" class="btn btn-primary">新SDKのAPIリファレンス</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#JS" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
+    <a href="http://nttcom.github.io/skyway/docs/#JS" class="btn btn-secondary" target="_blank">旧SDKのAPIリファレンス</a><br>
   </div>
 </div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
+[新旧SDKの機能差分と移行方法](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 

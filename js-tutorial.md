@@ -17,8 +17,8 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
@@ -30,16 +30,17 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 ## 開発前の準備
 {: #preparation }
 
-### ECLWebRTCのAPIキー発行
+### SkyWayのAPIキー発行
 
-ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+SkyWayへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+トライアル版SkyWayのAPIキーはご利用になれないので、トライアル版SkyWayをご利用の方も、新規登録をお願いします。
 開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
 
 ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
 |設定項目|項目の説明|チュートリアルの設定内容|
 |:--|:--|:--|
-|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<br>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
+|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<br>128文字以内で指定してください。|SkyWayチュートリアルアプリ|
 |利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<br>指定例：hogehoge.com|`localhost`|
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
@@ -154,17 +155,17 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 
 <figure class="figure">
   <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+    class="figure-img img-fluid rounded" alt="Chromeのダイアログ">
   <figcaption class="figure-caption">Chromeのダイアログ</figcaption>
 </figure>
 
 <figure class="figure">
   <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png"
-    class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる">
+    class="figure-img img-fluid rounded" alt="Firefoxのダイアログ">
   <figcaption class="figure-caption">Firefoxのダイアログ</figcaption>
 </figure>
 
-## ECLWebRTCサーバへ接続
+## SkyWayサーバへ接続
 {: #connect-server }
 
 ### SDKのインポート
@@ -212,8 +213,8 @@ Peerオブジェクトに必要なイベントリスナーを追記してくだ�
 
 ### openイベント
 
-ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。
-ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
+SkyWayのシグナリングサーバと接続し、利用する準備が整ったら発火します。
+SkyWayのすべての処理はこのイベント発火後に利用できるようになります。  
 PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。
 PeerIDはクライアントサイドで指定することもできます。  
 以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
