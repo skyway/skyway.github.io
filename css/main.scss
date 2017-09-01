@@ -162,50 +162,52 @@ html {
 // jumbotron
 .jumbotron {
   // window width (-575px)
-  @include media-breakpoint-up(xs) {
-    padding: 1rem 1rem;
-
-    .navbar-collapse {
-      padding-top: 4px;
+  @include media-breakpoint-down(xs) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    h1 {
+      font-size: $h3-font-size;
+      font-weight: $display4-weight;
     }
-    .display-4 {
-      font-size: 1.5rem;
-    }
-    .lead {
-      font-size: 1.0rem;
+    p {
+      font-size: $font-size-base;
     }
   }
 
   // window width (576-767px)
-  @include media-breakpoint-up(sm) {
-    padding: 2rem 2rem;
-
-    .display-4 {
-      font-size: 2.0rem;
+  @include media-breakpoint-only(sm) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    h1 {
+      font-size: $h2-font-size;
+      font-weight: $display4-weight;
     }
-    .lead {
-      font-size: 1.0rem;
+    p {
+      font-size: $font-size-base;
     }
   }
 
   // window width (768-991px)
-  @include media-breakpoint-up(md) {
-    padding: 4rem 2rem;
-    .display-4 {
-      font-size: 2.5rem;
+  @include media-breakpoint-only(md) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    h1 {
+      font-size: $h1-font-size;
+      font-weight: $display4-weight;
     }
-    .lead {
-      font-size: 1.25rem;
+    p {
+      font-size: $font-size-lg;
     }
   }
 
-  // window width (992-1199px)
+  // window width (992-1199px and 1200px~)
   @include media-breakpoint-up(lg) {
-    .display-4 {
-      font-size: 3.0rem;
+    h1 {
+      font-size: $display4-size;
+      font-weight: $display4-weight;
     }
-    .lead {
-      font-size: 1.5rem;
+    p {
+      font-size: $font-size-lg;
     }
   }
 
