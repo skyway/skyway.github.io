@@ -252,6 +252,7 @@ html {
     .card, .list-group {
       flex-grow: 1;       // hack for Safari
       width: 100%;        // hack for IE11
+      margin-bottom: $card-gutter-width;
     }
   }
 
