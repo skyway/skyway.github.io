@@ -2,10 +2,10 @@
   <div class="container">
     {% if page.main_visual.copy_position contains "before" %}
       {% if page.main_visual.main_copy %}
-        <h1 class="display-4">{{ page.main_visual.main_copy }}</h1>
+        <h1>{{ page.main_visual.main_copy }}</h1>
       {% endif %}
       {% if page.main_visual.sub_copy %}
-        <p class="lead">{{ page.main_visual.sub_copy }}</p>
+        <p>{{ page.main_visual.sub_copy }}</p>
       {% endif %}
       {% if page.main_visual.links %}
         {{ page.main_visual.links }}
@@ -16,10 +16,10 @@
     {% endif %}
     {% if page.main_visual.copy_position contains "after" %}
       {% if page.main_visual.main_copy %}
-        <h1 class="display-4">{{ page.main_visual.main_copy }}</h1>
+        <h1>{{ page.main_visual.main_copy }}</h1>
       {% endif %}
       {% if page.main_visual.sub_copy %}
-        <p class="lead">{{ page.main_visual.sub_copy }}</p>
+        <p>{{ page.main_visual.sub_copy }}</p>
       {% endif %}
       {% if page.main_visual.links %}
         {{ page.main_visual.links }}
