@@ -347,53 +347,49 @@ html {
       padding: 0.75rem;
       font-size: 1rem;
     }
+    .list-head {
+      height: 70px;
+      @include media-breakpoint-down(xs) {
+        padding: 1.25rem 0 0 0.25rem;
+      }
+      @include media-breakpoint-only(md) {
+        padding: 1.25rem 0 0 0.25rem;
+      }
+    }
+    i.fa {
+      font-size: 3rem;
+      padding: 0 5px;
+      display: inline-block;
+      @include media-breakpoint-down(xs) {
+        font-size: 2rem;
+        margin-right: -10px;
+      }
+      @include media-breakpoint-only(md) {
+        font-size: 2rem;
+        margin-right: -10px;
+      }
+    }
     span {
       align-items: center;
       padding: 0 5px;
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-sm;
+      }
+      @include media-breakpoint-only(md) {
+        font-size: $font-size-sm;
+      }
     }
     small {
       position: absolute;
       right: 0.5rem;
       top: 0.5rem;
-    }
-    i.fa {
-      font-size: 3rem;
-      padding: 0 5px;
-    }
-    .media-body {
-      flex: 0.4;
-    }
-    .list-head {
-      height: 70px;
-    }
-    @include media-breakpoint-only(md) {
-      .list-group-item {
-        padding: 0.75rem;
-      }
-      .list-head {
-        padding: 0.75rem 0.25rem;
-      }
-      small {
+      @include media-breakpoint-down(xs) {
         right: 0.25rem;
         top: 0;
       }
-      i.fa {
-        font-size: 2rem;
-      }
-    }
-    @include media-breakpoint-down(xs) {  // 効いていない
-      .list-group-item {
-        padding: 0.75rem;
-      }
-      .list-head {
-        padding: 0.75rem 0.25rem;
-      }
-      small {
+      @include media-breakpoint-only(md) {
         right: 0.25rem;
         top: 0;
-      }
-      i.fa {
-        font-size: 2rem;
       }
     }
   }
