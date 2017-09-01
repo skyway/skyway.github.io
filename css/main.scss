@@ -616,13 +616,13 @@ html {
 
 #rightnav-wrapper {
   position: relative;
-  padding: 0 5px;
+  padding: 11px 5px 0;
 
   #rightnav {
     position: fixed;
     position: -webkit-sticky;
     position: sticky;
-    top: 10px;
+    top: 11px;
     left: auto;
 
     .nav-link {
