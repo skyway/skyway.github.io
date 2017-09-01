@@ -37,18 +37,18 @@ There is no charge for Community Edition.
     <tbody align="right">
       <tr>
         <th scope="row">Basic Charge</th>
-        <td class="td-community">¥0 for both Initial and Monthly cost</td>
-        <td class="td-enterprise">Initial cost ¥0、Monthly cost¥100,000</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> ¥0 for both Initial and Monthly cost</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Initial cost ¥0、Monthly cost¥100,000</td>
       </tr>
       <tr>
         <th scope="row">Support</th>
-        <td class="td-community">FAQ, Technical Forum</td>
-        <td class="td-enterprise">Ticket（24/7）</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> FAQ, Technical Forum</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Ticket（24/7）</td>
       </tr>
       <tr>
         <th scope="row">SLA</th>
-        <td class="td-community">N/A</td>
-        <td class="td-enterprise">Availability of 99.99% guaranteed.</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> N/A</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Availability of 99.99% guaranteed.</td>
     </tr>
   </tbody>
 </table>
@@ -74,16 +74,16 @@ There is no charge for Community Edition.
     <td class="td-header" align="left">
       ~500,000<span class="d-sm-none">times/month</span>
     </td>
-    <td class="td-community">¥0</td>
-    <td class="td-enterprise">¥0</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> ¥0</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥0</td>
   </tr>
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">
       ~1,000,000<span class="d-sm-none">times/month</span>
     </td>
-    <td class="td-community">limit</td>
-    <td class="td-enterprise">¥0</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> limit</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥0</td>
   </tr>
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
@@ -91,7 +91,7 @@ There is no charge for Community Edition.
       1,000,001~<span class="d-sm-none">times/month</span>
     </td>
     <td></td>
-    <td class="td-enterprise">¥100,000</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥100,000</td>
   </tr>
 </tbody>
 </table>
@@ -123,14 +123,14 @@ There is no charge for Community Edition.
     <!-- for smartphone-->
     <th scope="row" class="d-sm-none">TURN / SFU</th> 
     <td class="td-header" align="left">~500GB</td>
-    <td class="td-community">¥0</td>
-    <td class="td-enterprise">¥40/GB</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> ¥0</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥40/GB</td>
   </tr>
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">501GB~</td>
-    <td class="td-community">limit</td>
-    <td class="td-enterprise">¥40/GB</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> limit</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥40/GB</td>
   </tr>
   <tr class="hidden-xs hidden-sm">
     <th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: By a SFU server transmitting image as a proxy, load of the terminal CPU and the network can be reduced, and multi-person conversation and distribution are realized.">i</span></th>
