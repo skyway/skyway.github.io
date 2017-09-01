@@ -3,18 +3,18 @@
     <a class="site-title navbar-brand" href="./">
       <img src="{{ site.rootdir[page.lang] }}images/skyway-logo.svg" width="215" height="38" alt="{{ site.title[page.lang] | escape }}">
     </a>
-    <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-brand navbar-toggler navbar-toggler-right">
+    <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="main-nav-items" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto">
 
         {% if page.title == site.title[page.lang] %}
-        <li class="nav-item active hidden-md-down">
+        <li class="nav-item active">
           <a class="nav-link" href="./">ホーム <span class="sr-only">(current)</span></a>
         </li>
         {% else %}
-        <li class="nav-item hidden-md-down">
+        <li class="nav-item">
           <a class="nav-link" href="./">ホーム</a>
         </li>
         {% endif %}
@@ -50,7 +50,7 @@
         {% endif %}
 
       </ul>
-      <ul class="nav navbar-nav mr-0">
+      <ul class="navbar-nav">
 
         {% if page.title == '新規登録' %}
         <li class="nav-item active">
