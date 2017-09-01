@@ -31,7 +31,7 @@ breadcrumb: [index.md]
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card">
       <div class="card-body">
-        <h3 class="card-title">トライアル版SkyWay<br><small>(旧SDK)</small></h3>
+        <h3 class="card-title">トライアル版<br><small>(旧SDK)</small></h3>
         <p class="card-text">2018年3月31日をもってサービスを終了します。<a href="./migration.html">Community Editionへの移行</a>をお願いします</p>
         <p><a href="#" class="btn btn-secondary">ダッシュボードにログイン</a></p>
       </div>
