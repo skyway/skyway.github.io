@@ -93,7 +93,6 @@ There is no charge for Community Edition.
     <td></td>
     <td class="td-enterprise">¥100,000</td>
   </tr>
-
 </tbody>
 </table>
 
