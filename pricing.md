@@ -37,18 +37,18 @@ Community Editionは一切、料金がかかりません。
     <tbody align="right">
       <tr>
         <th scope="row">基本料金</th>
-        <td class="td-community">初期費用、月額費用とも¥0</td>
-        <td class="td-enterprise">初期費用¥0、月額費用¥100,000</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> 初期費用、月額費用とも¥0</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> 初期費用¥0、月額費用¥100,000</td>
       </tr>
       <tr>
         <th scope="row">サポート</th>
-        <td class="td-community">FAQ、Technical Forum</td>
-        <td class="td-enterprise">チケット（24時間365日）</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> FAQ、Technical Forum</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> チケット（24時間365日）</td>
       </tr>
       <tr>
         <th scope="row">SLA</th>
-        <td class="td-community">なし</td>
-        <td class="td-enterprise">稼働率99.99%保証</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> なし</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> 稼働率99.99%保証</td>
     </tr>
   </tbody>
 </table>
@@ -75,16 +75,16 @@ Community Editionは一切、料金がかかりません。
     <td class="td-header" align="left">
       〜500,000<span class="d-sm-none">回/月</span>
     </td>
-    <td class="td-community">¥0</td>
-    <td class="td-enterprise">¥0</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> ¥0</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥0</td>
   </tr>
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">
       〜1,000,000<span class="d-sm-none">回/月</span>
     </td>
-    <td class="td-community">制限</td>
-    <td class="td-enterprise">¥0</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> 制限</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥0</td>
   </tr>
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
@@ -92,7 +92,7 @@ Community Editionは一切、料金がかかりません。
       〜10,000,000<span class="d-sm-none">回/月</span>
     </td>
     <td></td>
-    <td class="td-enterprise">¥100,000</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥100,000</td>
   </tr>
 </tbody>
 </table>
@@ -124,14 +124,14 @@ Community Editionは一切、料金がかかりません。
     <!-- スマホ表示用 -->
     <th scope="row" class="d-sm-none">TURN / SFU</th> 
     <td class="td-header" align="left">〜500GB</td>
-    <td class="td-community">¥0</td>
-    <td class="td-enterprise">¥40/GB</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> ¥0</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥40/GB</td>
   </tr>
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">501GB〜</td>
-    <td class="td-community">制限</td>
-    <td class="td-enterprise">¥40/GB</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> 制限</td>
+    <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥40/GB</td>
   </tr>
   <tr class="hidden-xs hidden-sm">
     <th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: 映像の送信をSFUサーバが代行することで、端末のCPUやネットワーク負荷を抑え、多人数での通話や配信を実現します。">i</span></th>

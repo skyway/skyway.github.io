@@ -490,38 +490,16 @@ html {
     }
   }
 
-  // support.html
-  #support-div {
-    @extend .row;
-
-    .card-subtitle {
-      margin-bottom: 1rem;
-      font-size: 80%;
-    }
-  }
-
-  .badge-community::before {
-    content: "community";
-    background-color: rgba($color-base, 0.7);
-    display: inline-block;
-    padding: .25em .4em;
-    font-size: 100%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25rem;
+  // support.html, priceing.html
+  .badge-community, .badge-enterprise {
     width: 85px;
-    margin-right: 3px;
+    display: inline-block;
+  }
+  .badge-community {
+    @include badge-variant(rgba($color-base, 0.7));
   }
   .badge-enterprise {
-    @extend .badge-community;
-    &::before {
-      background-color: rgba($color-sub, 0.7);
-      content: "enterprise";
-    }
+    @include badge-variant(rgba($color-sub, 0.7));
   }
 
   // login.html
@@ -563,6 +541,9 @@ html {
         display: none;
       }
     }
+    .td-badge .badge {
+      display: none;
+    }
 
     // スマホでは、tableではなく、list表示
     @include media-breakpoint-down(xs){
@@ -597,28 +578,9 @@ html {
           font-weight: bold;
           margin-left: 0;
         }
-        .td-community::before {
-          content: "community";
-          background-color: rgba($color-base, 0.7);
+        .td-badge .badge {
           display: inline-block;
-          padding: .25em .4em;
-          font-size: 75%;
-          font-weight: 700;
-          line-height: 1;
-          color: #fff;
-          text-align: center;
-          white-space: nowrap;
-          vertical-align: baseline;
-          border-radius: .25rem;
           width: 77px;
-          margin-right: 3px;
-        }
-        .td-enterprise {
-          @extend .td-community;
-          &::before {
-          background-color: rgba($color-sub, 0.7);
-            content: "enterprise";
-          }
         }
       }
     }
