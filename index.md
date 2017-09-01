@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Enterprise Cloud WebRTC Platform - ECLWebRTC
+title: SkyWay - Enterprise Cloud WebRTC Platform
 lang: ja
 main_visual:
   main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
