@@ -13,12 +13,15 @@ main_visual:
 ---
 
 <div class="card">
-  <div class="card-body d-flex w-100 justify-content-between">
-    <div>
-      <a href="#" target="_blank" id="announcementLink"></a><br>
+  <div class="card-body d-md-flex w-100 justify-content-between">
+    <div class="card-title-wrapper">
+      <small>最新のお知らせ</small>
     </div>
-    <div>
-      <small class="text-muted"><a href="https://support.skyway.io/hc/ja/sections/207255008">すべてのお知らせを見る</a></small>
+    <div class="card-text-wrapper">
+      <a href="#" target="_blank" id="announcementLink" class="card-text"></a>
+    </div>
+    <div class="card-link-wrapper">
+      <small class="text-muted"><a href="https://support.skyway.io/hc/ja/sections/207255008">過去のお知らせを見る</a></small>
     </div>
   </div>
 </div>
