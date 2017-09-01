@@ -19,11 +19,6 @@ You can try [demonstration of the completed application]().
   <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
-<figure class="figure">
-  <img src="http://via.placeholder.com/250x350" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
-  <figcaption class="figure-caption">Screenshot of video chat</figcaption>
-</figure>
-
 [Continue the turorial](js-tutorial.html){: .btn .btn-primary }
 
 ## Download SDK
