@@ -7,35 +7,35 @@ breadcrumb: [en/index.md, en/developer.md]
 
 # JavaScript SDK
 
-## チュートリアル
+## Turorial
 
-JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
-通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
+By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
+The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-[完成したアプリのデモ](#){:target="_blank"}を試すことができます。
+You can try [demonstration of the completed application]().
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="http://via.placeholder.com/250x350" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="http://via.placeholder.com/250x350" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](js-tutorial.html){: .btn .btn-primary }
+[Continue the turorial](js-tutorial.html){: .btn .btn-primary }
 
-## SDKのダウンロード
+## Download SDK
 {: #sdkdownload }
 
-### npmを利用する場合
+### Case: Using npm
 
 ```sh
 $ npm install eclwebrtc-js-sdk
 ```
 
-### CDNを利用する場合
+### Case: Using CDN
 
 *HTML*
 {: .lang}
@@ -44,67 +44,67 @@ $ npm install eclwebrtc-js-sdk
 <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
 ```
 
-### ファイルをダウンロードする場合
+### Case: Downloading as file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
   </div>
 </div>
 
-## 動作確認済みブラウザ
+##  Verified Browsers
 
-- [Google Chrome](https://www.google.com/chrome){: target="_blank"} 最新安定版
-- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 最新安定版
+- [Google Chrome](https://www.google.com/chrome){: target="_blank"} the newest stable version
+- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} the newest stable version
 
-## APIリファレンス
+## API Reference
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="./js-reference/" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+    <a href="./js-reference/" class="btn btn-primary">ECLWebRTC API Reference</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#JS" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
+    <a href="http://nttcom.github.io/skyway/docs/#JS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
   </div>
 </div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGithubで公開しています。
+Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
 
-## サンプルコード
+## Sample Code
 
-サンプルコードを公開しています。
+Sample code is open to public.
 
 <div class="row">
-  <div class="col-lg-9 col-xl-8">
+  <div class="col-md-9 col-lg-7 col-xl-6">
     <table class="table">
       <tbody align="right">
         <tr>
-          <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
+          <th scope="row">One-on-One, P2P</th>
+          <td><a href="#">video chat</a></td>
           <td></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="#">text chat</a></td>
         </tr>
         <tr>
-          <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
-          <td><a href="#">1:多のビデオ配信</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <th scope="row">Multi-party, P2P</th>
+          <td><a href="#">video chat</a></td>
+          <td><a href="#">One-to-many video distribution</a></td>
+          <td><a href="#">text chat</a></td>
         </tr>
         <tr>
-          <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオチャット</a></td>
-          <td><a href="#">1:多のビデオ配信</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <th scope="row">Multi-party, SFU</th>
+          <td><a href="#">video chat</a></td>
+          <td><a href="#">One-to-many video distribution</a></td>
+          <td><a href="#">text chat</a></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-## サポート
+## Support
 {: #support }
 
 {% include support-cards.html %}

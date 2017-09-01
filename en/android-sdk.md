@@ -23,7 +23,7 @@ You can try [demonstration of the completed application]().
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](android-tutorial.html){: .btn .btn-primary }
+[Continue the turorial](android-tutorial.html){: .btn .btn-primary }
 
 ##  Download SDK
 {: #sdkdownload }

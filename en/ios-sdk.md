@@ -7,32 +7,33 @@ breadcrumb: [en/index.md, en/developer.md]
 
 # iOS SDK
 
-## チュートリアル
+## Turorial
 
-iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
-現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
+By using basic functions of iOS SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the iOS SDK.
+The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオチャット](#){:target="_blank"}と同じものになります。
-完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
+The application to be created in this tutorial will be the same as [one-to-one video chat]() provided as sample codes.
+If you want to try the completed application, download the source codes and build in accordance with the build procedure of this tutorial.
+
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use SkyWay to perform signaling to interconnect terminals with video chat">
+  <figcaption class="figure-caption">Use SkyWay to perform signaling to interconnect terminals with video chat</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
+[Continue the turorial](ios-tutorial.html){: .btn .btn-primary }
 
-## SDKのダウンロード
+## Download DSK
 {: #sdkdownload }
 
-### CocoaPodsを利用する場合
+### Case: Using CocoaPods
 
-Podfileに以下を追記し、
+Add the contents to the Prodfile.
 
 *Prodfile*
 {: .lang }
@@ -42,69 +43,69 @@ platform :ios, '7.0'
 pod 'ECLWebRTC-iOS-SDK'
 ```
 
-インストールする。
+You can install ECLWebRTC in your project.
 
 ```sh
 $ pod init
 ```
 
-### ファイルをダウンロードする場合
+### Case: Downloading as file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
-    <small>git-lfsのインストールが必要です</small>
+    <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <small>git lfs install must be run.</small>
   </div>
 </div>
 
-## 対応OS
+## Supported OS
 
 iOS 8+
 
-## APIリファレンス
+## API Reference
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="./ios-reference/" class="btn btn-primary">ECLWebRTCのAPIリファレンス</a>
+    <a href="./ios-reference/" class="btn btn-primary">ECLWebRTC API Reference</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-secondary" target="_blank">SkyWayのAPIリファレンス</a><br>
+    <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
   </div>
 </div>
 
-[ECLWebRTCとSkyWayのAPI差分](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/ios_sdk_next_version_api_diff.md){: _target="_blank" }をGitHubで公開しています。
+Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
 
-## サンプルコード
+## Sample Code
 
-サンプルコードを公開しています。
+Sample Code is open to public.
 
 <div class="row">
   <div class="col-md-9 col-lg-7 col-xl-6">
     <table class="table">
       <tbody align="right">
         <tr>
-          <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <th scope="row">One-on-One, P2P</th>
+          <td><a href="#">video chat</a></td>
+          <td><a href="#">text chat</a></td>
         </tr>
         <tr>
-          <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオチャット</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <th scope="row">Multi-party, P2P</th>
+          <td><a href="#">video chat</a></td>
+          <td><a href="#">text chat</a></td>
         </tr>
         <tr>
-          <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオチャット</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <th scope="row">Multi-party, P2P</th>
+          <td><a href="#">video chat</a></td>
+          <td><a href="#">text chat</a></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-## サポート
+## Support
 
 {% include support-cards.html %}
