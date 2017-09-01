@@ -24,7 +24,7 @@ You can try [demonstration of the completed application]().
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-## Preparation before the Development Starts
+## Preparation before the Development Start
 {: #preparation }
 
 ### Generate ECLWebRTC API Key

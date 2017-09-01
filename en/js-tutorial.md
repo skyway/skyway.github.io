@@ -8,49 +8,43 @@ breadcrumb: [en/index.md, en/developer.md, en/js-sdk.md]
 - TOC
 {:toc}
 
-# JavaScript SDK チュートリアル
+# JavaScript SDK Tutorial
 
-JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
-通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
+By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
+The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-[完成したアプリのデモ](#){:target="_blank"}を試すことができます。
-
-<figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる</figcaption>
-</figure>
+You can try [demonstration of the completed application]().
 
 <figure class="figure">
-  <img src="http://via.placeholder.com/250x350" class="figure-img img-fluid rounded" alt="ビデオチャットのスクリーンショット">
-  <figcaption class="figure-caption">ビデオチャットのスクリーンショット</figcaption>
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
-## 開発前の準備
+##  Preparation before the Development Start
 {: #preparation }
 
-### ECLWebRTCのAPIキー発行
+### Generate ECLWebRTC API Key
 
-ECLWebRTCへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+For customers who have not completed a developer registration, do so from [Registration of the Community Edition](./signup.html).
+For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
 
-ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
-|設定項目|項目の説明|チュートリアルの設定内容|
+|Items to be set|Explanation of Items|Settings of Tutorial|
 |:--|:--|:--|
-|アプリケーション説明文|アプリケーションにつける説明文で、ダッシュボードでの表示のみに利用されます。<BR>128文字以内で指定してください。|ECLWebRTCチュートリアルアプリ|
-|利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<BR>指定例：hogehoge.com|`localhost`|
-|権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信が出来ない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
-|権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
-|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+|Explanation of Application|Explanatory description attached to the application and is used only for display on the Dashboard. <br>Please specify within 128 characters.|ECLWebRTC Tutorial Application|
+|Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
+|Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
+|Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
+|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./android-reference/) for details.|ON|
+|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/nttcom/Peer-Authentication-Server-Samples) for details.|OFF|
 
-### ローカルWebサーバの準備
+### Preparation for Local Web Server
 
-WebRTCの機能をローカル環境で利用する場合は、Webサーバを利用する必要があります。
+If you use WebRTC functions in the local environment, you need to use a Web server.
 
-#### Macの場合
+#### In case of Mac
 
-以下に示す幾つかの方法で、Webサーバをローカル環境で利用することが出来ます。
+You can use a Web server in the local environment by the several methods shown below.
 
 *python 2.X*
 {: .lang }
@@ -80,31 +74,31 @@ $ ruby -run -e httpd . -p 8080
 $ php -S localhost:8080
 ```
 
-#### Windowsの場合
+#### In case of Windows
 
-[Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにして下さい。
+Install [Mongoose](https://cesanta.com/) or [XAMPP](https://sourceforge.net/projects/xampp/) to make a Web server available in the local environment.
 
-## プロジェクトの作成
+## Create Project
 {: #craete-project }
 
-チュートリアルで利用するソースコードは以下のリポジトリからダウンロードしてください。  
-ダウンロード後は、 `index.html` をWebサーバで閲覧できるように適切に配置してください。
+For the source codes used in the tutorial, please download them from the following repository.
+
+After downloading, arrange `index.html` adequately so that it can be viewed on the Web server.
 
 - [https://github.com/skyway/eclwebrtc-js-sdk-tutorial](https://github.com/skyway/eclwebrtc-js-sdk-tutorial)
 
-以後のステップでは、同梱されている `script.js` に必要なコードを追記していきます。
-  
-- 本チュートリアルの制約事項
-  - Dom操作にはJQueryを利用しています。
-  - 動作確認済ブラウザは[Google Chrome](https://www.google.com/chrome)と[Firefox](https://www.mozilla.org/firefox/)の最新版です。
+In the following steps, we will add required codes to `script.js` which is included in the package.
 
+- Restriction for this Tutorial
+    - JQuery is used for Dom operation.
+    - Verified browsers are the latest versions of [Google Chrome](https://www.google.com/chrome) and [Firefox](https://www.mozilla.org/firefox/).
 
-## カメラ映像、マイク音声の取得
+## Obtain Camera Image and Microphone Voice
 {: #getUserMedia }
 
-映像・音声を取得する処理を追記してください。
-Webブラウザでカメラ映像、マイク音声を取得するためには、getUserMediaというAPIを利用します。    
-getUserMediaで取得した、Streamオブジェクト（自分の映像）を表示用のVIDEO要素にセットします。  
+Add a process to obtain camera images and microphone voices.  
+We use an API called getUserMedia to obtain camera images and microphone voices.  
+Set the Stream object (own image) obtained by getUserMedia to the VIDEO element for display.
 
 *JavaScript*
 {: .lang}
@@ -124,49 +118,51 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
     });
 ```
 
-getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指定をすることも可能です。
+You can set the following specification to Constraints(`{video: true, audio: true}`) of getUserMedia.
 
-- 例：VideoのみキャプチャしAudioは取り込まない    
+- Example: Capture video only, no audio  
 `{video: true, audio: false}`
-- 例：キャプチャサイズの設定例    
+- Example：Setting example of capture size 
 `{ audio: true, video: { width: 640, height: 480 } }`
-- 例：フレームレートの設定（2017.08現在、Chromeでしか動作しません）    
+- Example: Setting the frame rate. (As of August, 2017, it works only on Chrome.)    
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
-#### APIを使用する上の注意点1
 
-プライバシーを考慮し、ブラウザによっては、SSLで暗号化されたWebサイトでしか動作しません。
-2018.08現在の動作状況は以下のとおりです。
 
-|スキーマ\ブラウザ|Chrome|Firefox|
+#### Notes on Using API 1
+
+Considering the privacy protection, it works only on Website encrypted by SSL, depending on the browser.  
+Compatibility status as of August, 2017 is as follows.
+
+|Schemer/Browser|Chrome|Firefox|
 |:--|:--:|:--:|
 |http://localhost|◯|◯|
 |http://domain.jp|x|◯|
 |file://index.html|x|◯|
 |https://domain.jp|◯|◯|
 
-### APIを使用する上の注意点2
+### Notes on Using API 2
 
-利用者のプライバシーを守るために、許可を求めるダイアログが出てきます。  
-複数のカメラやマイクが接続されている場合は、このダイアログで任意のカメラやマイクを選ぶことが出来ます。
+To protect the privacy of the user, a dialog box asking for your permission will appear.  
+If multiple cameras and/or microphones are connected, you can choose any camera and/or microphone with this dialog.
 
 <figure class="figure">
-  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">Chromeのダイアログ</figcaption>
+  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png" class="figure-img img-fluid rounded" alt="Dialogue of Chrome">
+  <figcaption class="figure-caption">Dialogue of Chrome</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png" class="figure-img img-fluid rounded" alt="ECLWebRTCでシグナリングをして、端末間がビデオチャットで繋がる">
-  <figcaption class="figure-caption">Firefoxのダイアログ</figcaption>
+  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png" class="figure-img img-fluid rounded" alt="Dialogue of Firefox">
+  <figcaption class="figure-caption">Dialogue of Firefox</figcaption>
 </figure>
 
-## ECLWebRTCサーバへ接続
+## Connect with ECLWebRTC server
 {: #connect-server }
 
-### SDKのインポート
+### Import SDK
 
-以下の通りScript要素でSDKをインポートします。  
-チュートリアルのソースコードでは`index.html`に追記済みです。
+Import the SDK as a script element as follows.  
+In the tutorial source codes, it is already added to `index.html`.
 
 *HTML*
 {: .lang}
@@ -175,11 +171,11 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
 ```
 
-### Peerオブジェクトの作成
+### Create Peer Object
 
-Peerオブジェクトを作成するための処理を追記してください。  
-`apikey`には先程ダッシュボードで発行したAPIキーを指定してください。  
-`debug`ではログ出力レベルを指定します。`3`の場合は、開発用に全てのログを出力します。
+Add a process to create a Peer object.  
+For `apikey`, specify the API key that was generated on the Dashboard just before.  
+In `debug`, specify the log output level. If it is `3`, all logs will be outputted for development.
 
 *JavaScript*
 {: .lang}
@@ -199,18 +195,18 @@ peer = new Peer({
 });
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+Please refer to [API Reference](./js-reference/) for other options that can be specified in Peer object.
 
-## 接続成功・失敗・切断時の処理
+## Process When Connection is Succeeded, Failed, or Disconnected
 {: #eventlistener }
 
-Peerオブジェクトに必要なEventListenerを追記してください。
+Add an EventListener required in Peer object.
 
-### OPENイベント
+### Open Event
 
-ECLWebRTCのシグナリングサーバと接続し、利用する準備が整ったら発火します。ECLWebRTCのすべての処理はこのイベント発火後に利用できるようになります。  
-PeerIDと呼ばれるクライアント識別用のIDがシグナリングサーバで発行され、コールバックイベントで取得できます。PeerIDはクライアントサイドで指定することも出来ます。  
-以下の処理では、PeerIDが発行されたら、その情報をUIに表示する処理を行っています。
+Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.  
+A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.  
+In the following process, it displays PeerID to UI if the PeerID is generated.
 
 *JavaScript*
 {: .lang}
@@ -221,9 +217,9 @@ peer.on('open', function(){
 });
 ```
 
-### ERRORイベント
+### Error Event
 
-何らかのエラーが発生した場合に発火します。エラーが発生したら、アラートメッセージでその内容を表示できるようにします。
+It ignites when any error occurs. We will make it possible to show details of an error on an alert message if it occurs.
 
 *JavaScript*
 {: .lang}
@@ -234,9 +230,9 @@ peer.on('error', function(err){
 });
 ```
 
-### CLOSEイベント
+### Close Event
 
-Peer（相手）との接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+It ignites when connection with the Peer (partner) is broken. No specific process is applied in the tutorial.
 
 *JavaScript*
 {: .lang}
@@ -246,9 +242,9 @@ peer.on('close', function(){
 });
 ```
 
-### DISCONNECTEDイベント
+### Disconnected Event
 
-シグナリングサーバとの接続が切れた際に発火します。チュートリアルでは特に処理は行いません。
+It ignites when connection with the signaling server is broken. No specific process is applied in the tutorial.
 
 *JavaScript*
 {: .lang}
@@ -259,17 +255,18 @@ peer.on('disconnected', function(){
 ```
 
 
-## 発信・切断・着信処理
+## Calling/Disconnecting/Receiving Process
 {: #call-event }
 
-発信、切断、着信をするための処理を追記してください。
+Add processes to call/disconnect/receive.
 
-### 発信処理
+### Calling Process
 
-発信ボタンをクリックした場合に相手に発信します。  
-`peer.call()`で相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。接続するための相手のPeerIDは、別途何らかの方法で入手する必要があります。  
-発信後はCallオブジェクトが返ってくるため、必要なEventListenerをセットします。  
-`setupCallEventHandlers`の中身については後ほど説明します。
+If you click the Call button, a call is made to the partner.  
+Use `peer.call()` to set the PeerID of the partner and your own localStream to the parameter , and call.
+The PeerID of the partner to connect should be obtained separately by some means.  
+As Call object will be returned after the call, set a necessary EventListener.  
+Details of `setupCallEventHandlers` will be explained later.
 
 *JavaScript*
 {: .lang}
@@ -282,10 +279,10 @@ $('#make-call').submit(function(e){
 });
 ```
 
-### 切断処理
+###  Disconnecting Process
 
-切断ボタンをクリックした場合に、相手との接続を切断します。   
-`call.close()`で該当する接続を切断します。発信処理で生成したCallオブジェクトは`existingCall`として保持しておきます。オブジェクト保持は発信処理の`setupCallEventHandlers()`の中で実行します。
+If you click the Disconnect button, the connection with the partner will be disconnected.  
+Use `call.close()` to disconnect the corresponding connection. Keep the Call object created in the calling process as `existingCall`. Execute object keeping in `setupCallEventHandlers()` of the calling process.
 
 *JavaScript*
 {: .lang}
@@ -296,12 +293,12 @@ $('#end-call').click(function(){
 });
 ```
     
-### 着信処理
+###  Receiving Process
 
-相手から接続要求がきた場合に応答します。    
-相手から接続要求が来た場合は`call`が発火します。引き数として相手との接続を管理するためのCallオブジェクトが取得できるため、`call.answer()`を実行し接続要求に応答します。  
-この時に、自分自身の`localStream`をセットすると、相手に映像・音声を送信することができるようになります。  
-発信時の処理と同じく`setupCallEventHandlers`を実行し、 CallオブジェクトのEventListenerをセットします。
+Responds when connection request is received from the partner.  
+If connection request is received from the partner, `call` will ignite. As you can obtain a Call object to manage the connection with the partner as a parameter, execute `call.answer()` and respond to the connection request.  
+If you set your own `localStream` then, you will be able to send image and voice to your partner.  
+In the same way as calling process, execute `setupCallEventHandlers` and set the EventListener of the Call object.
 
 *JavaScript*
 {: .lang}
@@ -313,11 +310,11 @@ peer.on('call', function(call){
 });
 ```
 
-### Callオブジェクトに必要なイベント
+### Event necessary for Call Object
 
-Callオブジェクトに必要なEventListenerです。    
-今回作るアプリでは既に接続中の場合は一旦既存の接続を切断し、後からきた接続要求を優先します。また、切断処理等で利用するため、Callオブジェクトを`existingCall`として保持しておきます。  
-この処理はアプリの仕様次第です。
+EventListener necessary for Call Object.  
+In the application that we create this time, if the connection is alive, cut the existing connection and prioritize a connection request arrived later. Keep the Call object as `existingCall` to use it in disconnecting process, etc.  
+This process depends on the specifications of the application.
 
 *JavaScript*
 {: .lang}
@@ -333,9 +330,9 @@ function setupCallEventHandlers(call){
 }
 ```
 
-相手の映像・音声を受信した際に発火します。  
-取得したStreamオブジェクトをVIDEO要素にセットします。  
-`addVideo()`、`setupEndCallUI()`の中身については後ほど説明します。
+It will ignite when an image and/or a voice of the partner are received.  
+Set the obtained Stream object to VIDEO element.  
+Details of `addVideo()` and `setupEndCallUI()` will be explained later.
 
 *JavaScript*
 {: .lang}
@@ -352,8 +349,8 @@ function setupCallEventHandlers(call){
 }
 ```
 
-`call.close()`による切断処理が実行され、実際に切断されたら発火します。このイベントは、`call.close()`実行した側、実行された側それぞれで発火します。`call.peer`で切断した相手のPeerIDを取得できます。  
-切断時にはVIDEO要素の削除とUI関連の処理をを削除します。`removeVideo()`、`setupMakeCallUI()`の中身については後ほど説明します。
+Disconnection process by `call.close()` is executed and it will ignite when actually disconnected. This event will ignite each on the executer-side and the executed-side. By `call.peer`, you can obtain the PeerID of the partner you disconnected.  
+At the time of disconnection, delete VIDEO elements and UI-related processes. Details of `removeVideo()` and `setupMakeCallUI()` will be explained later.
 
 *JavaScript*
 {: .lang}
@@ -368,13 +365,13 @@ function setupCallEventHandlers(call){
 }
 ```
 
-## UIのセットアップ
+## Setup UI
 {: #setup-ui }
 
-### VIDEO要素の再生
+### Playback of Video Element
 
-VIDEOを再生するための処理を追記してください。  
-VIDEO要素のsrcObjectプロパティにStreamオブジェクトをセットすることで再生できます。削除する処理のことを考えて、idプロパティに`call.peer(PeerID)`をセットします
+Add processes to play back video.
+You can play back video by setting Stream object to srcObject property of the video element. Considering the processes to delete, set `call.peer(PeerID)` to the id property.
 
 *JavaScript*
 {: .lang}
@@ -385,10 +382,10 @@ function addVideo(call,stream){
 }
 ```
 
-### VIDEO要素の削除
+###  Delete Video Element
 
-切断された（した）相手のVIDEO要素を削除するための処理を追記してください。
-PeerIDを元に削除します。
+Add a processes to delete video elements of the disconnected (disconnecting) partner.  
+Delete based on PeerID.
 
 *JavaScript*
 {: .lang}
@@ -399,9 +396,9 @@ function removeVideo(peerId){
 }
 ```
 
-### ボタンの表示、非表示切り替え
+### Switch Over to Display/Hide the Button
 
-発信ボタン、切断ボタンの表示を切り替えるための処理を追記してください。
+Add a process to switch over the display of the Call button and Disconnect button.
 
 *JavaScript*
 {: .lang}
@@ -418,7 +415,7 @@ function setupEndCallUI() {
 }
 ```
 
-## 動作確認
+## Operation Check
 {: #testing }
 
-2つのブラウザタブでアプリを開きます。片方の`Your id`を片方のInputボックスにコピペしてCallボタンをクリックしてください。相手とビデオチャットができれば成功です。
+Open the application on two browsers. Copy one of the `Your id` and paste it to the Input Box of other browser. If videochat is possible between the tow browsers, the work is successful.

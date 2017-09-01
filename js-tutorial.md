@@ -138,9 +138,9 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 #### APIを使用する上の注意点1
 
 プライバシーを考慮し、ブラウザによっては、SSLで暗号化されたWebサイトでしか動作しません。
-2018年8月現在の動作状況は以下のとおりです。
+2017年8月現在の動作状況は以下のとおりです。
 
-|スキーマ\ブラウザ|Chrome|Firefox|
+|スキーマ/ブラウザ|Chrome|Firefox|
 |:--|:--:|:--:|
 |http://localhost|◯|◯|
 |http://domain.jp|x|◯|
