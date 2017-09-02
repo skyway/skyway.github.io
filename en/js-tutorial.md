@@ -28,6 +28,7 @@ You can try [demonstration of the completed application]().
 For customers who have not completed a developer registration, do so from [Registration of the Community Edition](./signup.html).
 For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
 
+Application settings on the Dashboard are as follows.
 
 |Items to be set|Explanation of Items|Settings of Tutorial|
 |:--|:--|:--|

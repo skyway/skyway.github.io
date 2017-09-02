@@ -855,7 +855,7 @@ void unsetMediaCallbacks() {
 }
 ```
 
-### Setup UI
+## Setup UI
 {: #setup-ui }
 
 Add necessary processes related with UI.  
@@ -885,7 +885,7 @@ void updateActionButtonTitle() {
 }
 ```
 
-### Switching camera
+## Switching Camera
 {: #switch-camera}
 
 In the last, add a process of switching camera.  
@@ -916,7 +916,7 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-### Operation Check
+## Operation Check
 {: #testing }
 
 Build on a real machine and check the operation. Call a PeerID obtained by listAllPeers. If videochat is possible with the partner, the project is successful. If only one actual machine is available, you can check the operation by interconnecting with a Web application implemented by JavaScript SDK.
