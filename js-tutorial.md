@@ -21,12 +21,6 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
   <figcaption class="figure-caption">ECLWebRTCでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
-<figure class="figure">
-  <img src="http://via.placeholder.com/250x350"
-    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
-  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
-</figure>
-
 ## 開発前の準備
 {: #preparation }
 
