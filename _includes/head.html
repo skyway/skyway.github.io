@@ -1,17 +1,34 @@
+{% if page.title == site.title[page.lang] %}
+  {% assign title_tag = site.title[page.lang] | escape %}
+{% else %}
+  {% assign title_tag = site.title[page.lang] | prepend: " - " | prepend: page.title | escape %}
+{% endif %}
+{% assign description_tag = page.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
+{% assign full_url = page.url | replace: 'index.html','' | prepend: site.url %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{%if page.title != site.title[page.lang] %}{{ page.title | escape }} - {% endif %}{{ site.title[page.lang] | escape }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-
-  {% assign custom_url = site.url | append: site.baseurl %}
-  {% assign full_base_url = custom_url %}
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: full_base_url }}">
+  <title>{{ title_tag }}</title>
+  {% if page.description %}
+  <meta name="description" content="{{ description_tag }}">
+  {% endif %}
+  <meta property="og:title" content="{{ title_tag }}">
+  {%if page.title == site.title[page.lang] %}
+  <meta property="og:type" content="website">
+  {% else %}
+  <meta property="og:type" content="article">
+  {% endif %}
+  <meta property="og:url" content="{{ full_url }}">
+  {% comment %}
+  <meta property="og:image" content="{{ page.ogImage | default: site.ogImage }}">
+  {% endcomment %}
+  <meta property="og:site_name" content="{{ site.title[page.lang] }}">
+  {% if page.description %}
+  <meta property="og:description" content="{{ description_tag }}">
+  {% endif %}
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: full_base_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title[page.lang] | escape }}" href="{{ "/feed.xml" | prepend: full_base_url }}">
-
+  <link rel="canonical" href="{{ full_url }}">
   {% include google-analytics.html %}
 </head>
