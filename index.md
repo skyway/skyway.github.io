@@ -133,7 +133,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 		<p>インストールなし、会員登録なし、ログインなしで利用できる、多人数通話に対応したWeb会議です。
 		ブラウザでURLにアクセスするだけで参加できます。
 		画面共有にも対応しています。</p>
-		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
+		<p><a class="btn btn-primary" href="https://conf.webrtc.ecl.ntt.com/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
   </div>
 </div>
 
