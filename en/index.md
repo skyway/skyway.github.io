@@ -144,10 +144,9 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
       <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_conf_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Web Conferencing</h3>
-        <p class="card-text">Easier to use than conventional services since you don't need to install any applications, register or login.<br>
+        <p class="card-text">Easier to use than conventional services since you don't need to install anything<br>
         <font class="d-none d-lg-block">
-        Services that don't require installation, registration or login have started appearing.
-        You can also share your screen.
+        Using ECL WebRTC, there are now services that don't require registration and allows you to start a video conference by just sharing a link.
         </font>
         </p>
         <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">See example</a></p>
