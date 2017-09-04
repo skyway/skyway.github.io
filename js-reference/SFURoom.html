@@ -25,8 +25,8 @@
             /
             <a href="../js-sdk.html">JavaScript SDK</a>
             /
-            <span class="en">API Reference</span>
-            <span class="jp">APIリファレンス</span>
+            <a href="./" class="en">API Reference</a>
+            <a href="./" class="jp">APIリファレンス</a>
             /
             <span>Class: SFURoom</span>
         </p>
@@ -43,9 +43,10 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>SFURoom<span class="signature">(name, peerId, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>SFURoom</h2>
         
-            <div class="class-description">Class that manages SFU type room.</div>
+            <div class="class-description"><span class="en">Class that manages SFU type room.</span>
+<span class="jp">SFU接続でのルームを提供するルームクラスです。</span></div>
         
     
 </header>
@@ -55,377 +56,14 @@
     
         
 
-    
-    <h2>Constructor</h2>
-    
 
-    
-    <h4 class="name" id="SFURoom"><span class="type-signature"></span>new SFURoom<span class="signature">(name, peerId, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-    
 
-    
 
 
 
-<div class="description">
-    Creates a SFU type room.
-</div>
 
 
 
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>name</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Room name.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>peerId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">peerId - User's peerId.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>options</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Optional arguments for the connection.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>stream</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">MediaStream</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The MediaStream to send to the remote peer.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>pcConfig</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A RTCConfiguration dictionary for the RTCPeerConnection.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>videoBandwidth</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A max video bandwidth(kbps)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>audioBandwidth</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A max audio bandwidth(kbps)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>videoCodec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A video codec like 'H264'</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>audioCodec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A video codec like 'PCMU'</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -433,10 +71,6 @@
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -488,15 +122,6 @@
     </div>
 
     
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li><a href="Room.html">Room</a></li>
-    </ul>
-
 
     
 
@@ -506,294 +131,10 @@
 
     
 
-    
-
-    
-
-    
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id=".EVENTS"><span class="type-signature">(static) </span>EVENTS<span class="type-signature"> :Enum</span></h4>
-
-
-
-
-<div class="description">
-    Events the SFURoom class can emit.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Enum</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id=".MESSAGE_EVENTS"><span class="type-signature">(static) </span>MESSAGE_EVENTS<span class="type-signature"> :Enum</span></h4>
-
-
-
-
-<div class="description">
-    Message events the MeshRoom class can emit.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">Enum</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
     
 
     
         <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="call"><span class="type-signature"></span>call<span class="signature">(stream<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Send Offer request message to SFU server.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>stream</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">MediaStream</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">A media stream to send.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         
             
@@ -809,7 +150,8 @@
 
 
 <div class="description">
-    Close PeerConnection and emit leave and close event.
+    <span class="en">Close PeerConnection and emit leave and close event.</span>
+<span class="jp">ルームを退出し、ルーム内のすべてのユーザとのコネクションをcloseします</span>
 </div>
 
 
@@ -825,10 +167,6 @@
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -890,7 +228,8 @@
 
 
 <div class="description">
-    Start getting room's logs from SkyWay server.
+    <span class="en">Start getting room's logs from signaling server.</span>
+<span class="jp">シグナリングサーバにルームのログ取得を要求します。</span>
 </div>
 
 
@@ -906,924 +245,6 @@
 
 
 <dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#getLog">Room#getLog</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="handleData"><span class="type-signature"></span>handleData<span class="signature">(dataMessage)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Handle received data message from other paricipants in the room.
-It emits data event.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>dataMessage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The data message to handle.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>data</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">ArrayBuffer</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The data that a peer sent in the room.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>src</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The peerId of the peer who sent the data.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>roomName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The name of the room user is joining.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#handleData">Room#handleData</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="handleJoin"><span class="type-signature"></span>handleJoin<span class="signature">(joinMessage)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Handles Join message from SFU server.
-It emits peerJoin event and if the message contains user's peerId, also emits open event.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>joinMessage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Message object.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>src</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The peerId of the peer that joined.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>roomName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The name of the joined room.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="handleLeave"><span class="type-signature"></span>handleLeave<span class="signature">(leaveMessage)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Handles Leave message from SFU server.
-It emits peerLeave message.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>leaveMessage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Message from SFU server.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="handleLog"><span class="type-signature"></span>handleLog<span class="signature">(logs)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Handle received log message.
-It emits log event with room's logs.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>logs</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An array containing JSON text.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#handleLog">Room#handleLog</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="handleOffer"><span class="type-signature"></span>handleOffer<span class="signature">(offerMessage)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Handles Offer message from SFU server.
-It create new RTCPeerConnection object.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>offerMessage</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Message object containing Offer SDP.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>offer</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Object containing Offer SDP text.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
 
     
 
@@ -1885,7 +306,8 @@ It create new RTCPeerConnection object.
 
 
 <div class="description">
-    Replace the stream being sent with a new one.
+    <span class="en">Replace the stream being sent with a new one.</span>
+<span class="jp">送信しているMediaStreamを更新します。受信のみモードから双方向に切り替えることも出来ます。</span>
 </div>
 
 
@@ -1937,7 +359,8 @@ It create new RTCPeerConnection object.
 
             
 
-            <td class="description last">The stream to replace the old stream with.</td>
+            <td class="description last"><span class="en">The stream to replace the old stream with.</span>
+                                 <span class="jp">交換対象となる新しいMediaStreamです。</span></td>
         </tr>
 
     
@@ -1950,10 +373,6 @@ It create new RTCPeerConnection object.
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -2015,8 +434,9 @@ It create new RTCPeerConnection object.
 
 
 <div class="description">
-    Send data to all participants in the room with WebSocket.
-It emits broadcast event.
+    <span class="en">Send data to all participants in the room with WebSocket.</span>
+<span class="en">It emits broadcast event.</span>
+<span class="jp">WebSocketを使用してルーム内の全てのユーザにデータを送信します。</span>
 </div>
 
 
@@ -2068,7 +488,8 @@ It emits broadcast event.
 
             
 
-            <td class="description last">The data to send.</td>
+            <td class="description last"><span class="en">The data to send.</span>
+                  <span class="jp">送信するデータです。</span></td>
         </tr>
 
     
@@ -2081,140 +502,6 @@ It emits broadcast event.
 
 
 <dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="updateMsidMap"><span class="type-signature"></span>updateMsidMap<span class="signature">(msids)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Update the entries in the msid to peerId map.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>msids</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Object with msids as the key and peerIds as the values.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
 
     
 
@@ -2284,7 +571,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    All connections in the room has closed.
+    <span class="en">All connections in the room has closed.</span>
+<span class="jp">ルームをcloseしたときに発生します。</span>
 </div>
 
 
@@ -2301,15 +589,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:close">Room#event:close</a>
-    </li></ul></dd>
     
 
     
@@ -2370,7 +649,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    Data received from peer.
+    <span class="en">Data received from peer.</span>
+<span class="jp">他のユーザから送信されたデータを受信した時に発生します。</span>
 </div>
 
 
@@ -2437,7 +717,8 @@ It emits broadcast event.
 
             
 
-            <td class="description last">The peerId of the peer who sent the data.</td>
+            <td class="description last"><span class="en">The peerId of the peer who sent the data.</span>
+                         <span class="jp">送信者のpeerId</span></td>
         </tr>
 
     
@@ -2460,7 +741,8 @@ It emits broadcast event.
 
             
 
-            <td class="description last">The data that a peer sent in the room.</td>
+            <td class="description last"><span class="en">The data that a peer sent in the room.</span>
+                     <span class="jp">受信したデータ</span></td>
         </tr>
 
     
@@ -2472,15 +754,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:data">Room#event:data</a>
-    </li></ul></dd>
     
 
     
@@ -2541,7 +814,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    Error occured
+    <span class="en">Error occured</span>
+<span class="jp">エラーが起きた時に発生します。</span>
 </div>
 
 
@@ -2558,15 +832,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:error">Room#event:error</a>
-    </li></ul></dd>
     
 
     
@@ -2627,7 +892,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    Room's log received.
+    <span class="en">Room's log received.</span>
+<span class="jp">ルームのログを受信したときに発生します。</span>
 </div>
 
 
@@ -2654,15 +920,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:log">Room#event:log</a>
-    </li></ul></dd>
     
 
     
@@ -2723,7 +980,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    Room is ready.
+    <span class="en">Room is ready.</span>
+<span class="jp">ユーザがルームへ入室したときに発生します。</span>
 </div>
 
 
@@ -2740,15 +998,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:open">Room#event:open</a>
-    </li></ul></dd>
     
 
     
@@ -2809,7 +1058,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    New peer has joined.
+    <span class="en">New peer has joined.</span>
+<span class="jp">ルームに新しいユーザが参加したときに発生します。</span>
 </div>
 
 
@@ -2836,15 +1086,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:peerJoin">Room#event:peerJoin</a>
-    </li></ul></dd>
     
 
     
@@ -2905,7 +1146,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    A peer has left.
+    <span class="en">A peer has left.</span>
+<span class="jp">あるユーザがルームを退出したときに発生します。</span>
 </div>
 
 
@@ -2932,15 +1174,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:peerLeave">Room#event:peerLeave</a>
-    </li></ul></dd>
     
 
     
@@ -3001,7 +1234,8 @@ It emits broadcast event.
 
 
 <div class="description">
-    MediaStream received from peer in the room.
+    <span class="en">MediaStream received from peer in the room.</span>
+<span class="jp">他のユーザのストリームを受信した時に発生します。送信者のpeerIdは stream.peerIdで取得できます。</span>
 </div>
 
 
@@ -3028,15 +1262,6 @@ It emits broadcast event.
 
 <dl class="details">
 
-    
-
-    
-
-    
-    <dt class="inherited-from">Inherited From:</dt>
-    <dd class="inherited-from"><ul class="dummy"><li>
-        <a href="Room.html#event:stream">Room#event:stream</a>
-    </li></ul></dd>
     
 
     
@@ -3099,13 +1324,13 @@ It emits broadcast event.
         <p><script>document.write('<a href="' + location.href.replace('/js-reference/', '/en/js-reference/') + '">English</a>');</script></p>
     </div>
 
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Connection.html">Connection</a></li><li><a href="DataConnection.html">DataConnection</a></li><li><a href="Logger.html">Logger</a></li><li><a href="MediaConnection.html">MediaConnection</a></li><li><a href="MeshRoom.html">MeshRoom</a></li><li><a href="Negotiator.html">Negotiator</a></li><li><a href="Peer.html">Peer</a></li><li><a href="Room.html">Room</a></li><li><a href="SdpUtil.html">SdpUtil</a></li><li><a href="SFURoom.html">SFURoom</a></li><li><a href="Socket.html">Socket</a></li></ul><h3>Events</h3><ul><li><a href="Connection.html#event:close">close</a></li><li><a href="DataConnection.html#event:close">close</a></li><li><a href="MediaConnection.html#event:close">close</a></li><li><a href="MeshRoom.html#event:close">close</a></li><li><a href="MeshRoom.html#event:data">data</a></li><li><a href="MeshRoom.html#event:error">error</a></li><li><a href="MeshRoom.html#event:log">log</a></li><li><a href="MeshRoom.html#event:open">open</a></li><li><a href="MeshRoom.html#event:peerJoin">peerJoin</a></li><li><a href="MeshRoom.html#event:peerLeave">peerLeave</a></li><li><a href="MeshRoom.html#event:stream">stream</a></li><li><a href="Room.html#event:close">close</a></li><li><a href="Room.html#event:data">data</a></li><li><a href="Room.html#event:error">error</a></li><li><a href="Room.html#event:log">log</a></li><li><a href="Room.html#event:open">open</a></li><li><a href="Room.html#event:peerJoin">peerJoin</a></li><li><a href="Room.html#event:peerLeave">peerLeave</a></li><li><a href="Room.html#event:stream">stream</a></li><li><a href="SFURoom.html#event:close">close</a></li><li><a href="SFURoom.html#event:data">data</a></li><li><a href="SFURoom.html#event:error">error</a></li><li><a href="SFURoom.html#event:log">log</a></li><li><a href="SFURoom.html#event:open">open</a></li><li><a href="SFURoom.html#event:peerJoin">peerJoin</a></li><li><a href="SFURoom.html#event:peerLeave">peerLeave</a></li><li><a href="SFURoom.html#event:stream">stream</a></li></ul><h3>Global</h3><ul><li><a href="global.html#blobToArrayBuffer">blobToArrayBuffer</a></li><li><a href="global.html#isSecure">isSecure</a></li><li><a href="global.html#joinArrayBuffers">joinArrayBuffers</a></li><li><a href="global.html#randomId">randomId</a></li><li><a href="global.html#randomToken">randomToken</a></li><li><a href="global.html#validateId">validateId</a></li><li><a href="global.html#validateKey">validateKey</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DataConnection.html">DataConnection</a></li><li><a href="MediaConnection.html">MediaConnection</a></li><li><a href="MeshRoom.html">MeshRoom</a></li><li><a href="Peer.html">Peer</a></li><li><a href="SFURoom.html">SFURoom</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Tue Aug 22 2017 12:42:16 GMT+0900 (JST)</p>
+    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Mon Sep 04 2017 19:10:00 GMT+0900 (JST)</p>
     <p>© NTT Communications Corporation All Rights Reserved.</p>
 </footer>
 
