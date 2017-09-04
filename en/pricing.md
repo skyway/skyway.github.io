@@ -15,8 +15,8 @@ breadcrumb: [en/index.md]
 
 ## Pricing
 
-Registration online will give you an immediate access.  
-Start your innovation with developers around the world.  
+Registration online will give you an immediate access.
+Start your innovation with developers around the world.
 There is no charge for Community Edition.
 
 ### Basic Charge

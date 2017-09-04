@@ -97,8 +97,8 @@ In the following steps, we will add required codes to `script.js` which is inclu
 ## Obtain Camera Image and Microphone Voice
 {: #getUserMedia }
 
-Add a process to obtain camera images and microphone voices.  
-We use an API called getUserMedia to obtain camera images and microphone voices.  
+Add a process to obtain camera images and microphone voices.
+We use an API called getUserMedia to obtain camera images and microphone voices.
 Set the Stream object (own image) obtained by getUserMedia to the VIDEO element for display.
 
 *JavaScript*
@@ -132,7 +132,7 @@ You can set the following specification to Constraints(`{video: true, audio: tru
 
 #### Notes on Using API 1
 
-Considering the privacy protection, it works only on Website encrypted by SSL, depending on the browser.  
+Considering the privacy protection, it works only on Website encrypted by SSL, depending on the browser.
 Compatibility status as of August, 2017 is as follows.
 
 |Schemer/Browser|Chrome|Firefox|
@@ -144,7 +144,7 @@ Compatibility status as of August, 2017 is as follows.
 
 ### Notes on Using API 2
 
-To protect the privacy of the user, a dialog box asking for your permission will appear.  
+To protect the privacy of the user, a dialog box asking for your permission will appear.
 If multiple cameras and/or microphones are connected, you can choose any camera and/or microphone with this dialog.
 
 <figure class="figure">
@@ -162,7 +162,7 @@ If multiple cameras and/or microphones are connected, you can choose any camera 
 
 ### Import SDK
 
-Import the SDK as a script element as follows.  
+Import the SDK as a script element as follows.
 In the tutorial source codes, it is already added to `index.html`.
 
 *HTML*
@@ -174,8 +174,8 @@ In the tutorial source codes, it is already added to `index.html`.
 
 ### Create Peer Object
 
-Add a process to create a Peer object.  
-For `apikey`, specify the API key that was generated on the Dashboard just before.  
+Add a process to create a Peer object.
+For `apikey`, specify the API key that was generated on the Dashboard just before.
 In `debug`, specify the log output level. If it is `3`, all logs will be outputted for development.
 
 *JavaScript*
@@ -205,8 +205,8 @@ Add an EventListener required in Peer object.
 
 ### Open Event
 
-Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.  
-A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.  
+Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.
+A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.
 In the following process, it displays PeerID to UI if the PeerID is generated.
 
 *JavaScript*
@@ -263,10 +263,10 @@ Add processes to call/disconnect/receive.
 
 ### Calling Process
 
-If you click the Call button, a call is made to the partner.  
+If you click the Call button, a call is made to the partner.
 Use `peer.call()` to set the PeerID of the partner and your own localStream to the parameter , and call.
-The PeerID of the partner to connect should be obtained separately by some means.  
-As Call object will be returned after the call, set a necessary EventListener.  
+The PeerID of the partner to connect should be obtained separately by some means.
+As Call object will be returned after the call, set a necessary EventListener.
 Details of `setupCallEventHandlers` will be explained later.
 
 *JavaScript*
@@ -282,7 +282,7 @@ $('#make-call').submit(function(e){
 
 ###  Disconnecting Process
 
-If you click the Disconnect button, the connection with the partner will be disconnected.  
+If you click the Disconnect button, the connection with the partner will be disconnected.
 Use `call.close()` to disconnect the corresponding connection. Keep the Call object created in the calling process as `existingCall`. Execute object keeping in `setupCallEventHandlers()` of the calling process.
 
 *JavaScript*
@@ -296,9 +296,9 @@ $('#end-call').click(function(){
     
 ###  Receiving Process
 
-Responds when connection request is received from the partner.  
-If connection request is received from the partner, `call` will ignite. As you can obtain a Call object to manage the connection with the partner as a parameter, execute `call.answer()` and respond to the connection request.  
-If you set your own `localStream` then, you will be able to send image and voice to your partner.  
+Responds when connection request is received from the partner.
+If connection request is received from the partner, `call` will ignite. As you can obtain a Call object to manage the connection with the partner as a parameter, execute `call.answer()` and respond to the connection request.
+If you set your own `localStream` then, you will be able to send image and voice to your partner.
 In the same way as calling process, execute `setupCallEventHandlers` and set the EventListener of the Call object.
 
 *JavaScript*
@@ -313,8 +313,8 @@ peer.on('call', function(call){
 
 ### Event necessary for Call Object
 
-EventListener necessary for Call Object.  
-In the application that we create this time, if the connection is alive, cut the existing connection and prioritize a connection request arrived later. Keep the Call object as `existingCall` to use it in disconnecting process, etc.  
+EventListener necessary for Call Object.
+In the application that we create this time, if the connection is alive, cut the existing connection and prioritize a connection request arrived later. Keep the Call object as `existingCall` to use it in disconnecting process, etc.
 This process depends on the specifications of the application.
 
 *JavaScript*
@@ -331,8 +331,8 @@ function setupCallEventHandlers(call){
 }
 ```
 
-It will ignite when an image and/or a voice of the partner are received.  
-Set the obtained Stream object to VIDEO element.  
+It will ignite when an image and/or a voice of the partner are received.
+Set the obtained Stream object to VIDEO element.
 Details of `addVideo()` and `setupEndCallUI()` will be explained later.
 
 *JavaScript*
@@ -350,7 +350,7 @@ function setupCallEventHandlers(call){
 }
 ```
 
-Disconnection process by `call.close()` is executed and it will ignite when actually disconnected. This event will ignite each on the executer-side and the executed-side. By `call.peer`, you can obtain the PeerID of the partner you disconnected.  
+Disconnection process by `call.close()` is executed and it will ignite when actually disconnected. This event will ignite each on the executer-side and the executed-side. By `call.peer`, you can obtain the PeerID of the partner you disconnected.
 At the time of disconnection, delete VIDEO elements and UI-related processes. Details of `removeVideo()` and `setupMakeCallUI()` will be explained later.
 
 *JavaScript*
@@ -385,7 +385,7 @@ function addVideo(call,stream){
 
 ###  Delete Video Element
 
-Add a processes to delete video elements of the disconnected (disconnecting) partner.  
+Add a processes to delete video elements of the disconnected (disconnecting) partner.
 Delete based on PeerID.
 
 *JavaScript*
