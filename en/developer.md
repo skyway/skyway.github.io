@@ -3,8 +3,8 @@ layout: default
 title: Developer
 lang: en
 main_visual:
-  main_copy: Realize your idea.
-  sub_copy: With the SDK supporting multi-platforms, practical tutorials and abundant sample codes, you can realize your idea at once.
+  main_copy: Shape your ideas into reality.
+  sub_copy: With SDKs supporting multiple platforms, lots of tutorials and sample code, ECLWebRTC can help you materialize your ideas.
   links: 
   copy_position: ["after"]
   image_file_name: 
@@ -15,7 +15,7 @@ breadcrumb: [en/index.md]
 
 ## Get Started
 
-ECLWebRTC enables customers to start developing application easily.
+ECLWebRTC enables customers to start developing applications easily.
 
 ### STEP1
 
@@ -28,12 +28,12 @@ Enter the following command to start a videochat application.
 
 ### STEP2
 
-If it works fine, register for[Community Edition](./signup.html) and generate API Key.
+Once you've given it a try, sign up for the free [Community Edition](./signup.html) and get an API Key.
 
 ### STEP3
 
-Replace the API key in the sample code in STEP1 with the one generated in STEP2.
-Start a new development on a full-scale basis by consulting Tutorials and API Reference.
+Replace the API key in the sample code with the one you got in STEP2.
+Start a developing a fully functioning app by reading the tutorials and API reference.
 
 ```sh
 ~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
@@ -41,7 +41,7 @@ Start a new development on a full-scale basis by consulting Tutorials and API Re
 
 ## SDK
 
-There are four SDK which covers Web browser, iOS, Android and IoT device.
+There are SDKs for Web browsers, iOS, Android and IoT devices.
 
 <div id="sdk-div" class="row card-row">
     <div class="col-6 col-md-3">
@@ -112,7 +112,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Signaling</h3>
-                <p class="card-text">A server to exchange information such as IP addresses and codec with the partner. It is equipped with Room management function useful for multi-person conversation.</p>
+                <p class="card-text">Exchanges information needed to start a WebRTC session, such as IP addresses and codec with the partner. Also includes Room management functionality useful for communicating with many people.</p>
             </div>
         </div>
     </div>
@@ -120,7 +120,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">STUN</h3>
-                <p class="card-text">A server to check own Public IP address and Port No. required for NAT passing is provided for free.<br></p>
+                <p class="card-text">Servers used to get your public IP address and port number to traverse your NAT can be used for free.<br></p>
             </div>
         </div>
     </div>
@@ -128,7 +128,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Authorization</h3>
-                <p class="card-text">Authentication functions to prevent illegal use of API keys are provided.</p>
+                <p class="card-text">Authentication is provided to prevent illegal use of API keys.</p>
                 <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-outline-primary">How to use(Github)</a>
             </div>
         </div>
@@ -137,7 +137,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
-                <p class="card-text">A server to relay media in an environment where Peer to Peer communication cannot be established is provided.</p>
+                <p class="card-text">Servers to relay media in environments where Peer to Peer communication cannot be established.</p>
                 <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">Pricing</a>
             </div>
         </div>
@@ -146,7 +146,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">SFU</h3>
-                <p class="card-text">A media server that transmits images and voices as a proxy to realize multi-person conversation and distribution is provided.</p>
+                <p class="card-text">Media servers that relay voice and video data to make conferences with many people possible.</p>
                 <a href="#" class="btn btn-outline-primary">Pricing</a>
                 <a href="./sfu.html" class="btn btn-outline-primary">Details of SFU</a>
             </div>
@@ -156,7 +156,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Screen Sharing</h3>
-                <p class="card-text">A library and sample codes to facilitate implementation of browser extension for screen sharing are provided.</p>
+                <p class="card-text">A library and sample code to help implement a browser extension that allows screen sharing.</p>
                 <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-outline-primary">How to use(Github)</a>
             </div>
         </div>
@@ -165,14 +165,14 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
 
 ## Document
 
-Document useful for development is open to public.
+Documents useful for development.
 
 <div id="docs-div" class="row card-row">
     <div class="col-12 col-md-6">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">How to migrate to ECLWebRTC</h3>
-                <p class="card-text">Skyway is terminated as of March 31st, 2018. Please migrate from SkyWay to ECLWebRTC reffering to document.</p>
+                <p class="card-text">SkyWay will be terminated as of March 31st, 2018. Please migrate from SkyWay to ECLWebRTC using this document.</p>
                 <small class="text-muted">Sep 7th, 2017</small>
                 <a href="./migration.html" class="btn btn-outline-primary">Migration</a>
             </div>
@@ -182,7 +182,7 @@ Document useful for development is open to public.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">WebRTC Security report</h3>
-                <p class="card-text">Considerations on WebRTC security are released as an open-source. Customers interested to know details of WebRTC security are advised to read them.</p>
+                <p class="card-text">An open-source document on the considerations on WebRTC security. Recommended for customers interested in knowing about the security concerns of WebRTC.</p>
                 <small class="text-muted">Jul 28th, 2017</small>
                 <a href="http://webrtc-security.github.io/index.html" target="_blank" class="btn btn-outline-primary">Security Report</a>
             </div>
@@ -192,14 +192,14 @@ Document useful for development is open to public.
 
 ## サポート
 
-Provides community ticket support useful for development.
+Community support tickets useful for development.
 
 {% include support-cards.html %}
 
 ## Maintenance and Failure Information
 
-Maintenance and Failure Information is open to public.
-For customers who want to receive notification of each information by RSS, please see [Announcement and Notification of Maintenance and Failure Information](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"}.
+Maintenance and Failure Information.
+If you want to receive RSS notifications, please see [Announcement and Notification of Maintenance and Failure Information](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"}.
 
 
 
