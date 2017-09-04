@@ -43,10 +43,10 @@ $ npm install eclwebrtc-js-sdk
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/js-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/js-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
   </div>
 </div>
 

@@ -36,17 +36,17 @@ $ npm install eclwebrtc-js-sdk
 {: .lang}
   
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway.js"></script>
 ```
 
 ### Case: Downloading as file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
+    <a href="https://github.com/skyway/js-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <a href="https://github.com/skyway/js-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
   </div>
 </div>
 

@@ -33,9 +33,9 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 ### SkyWayのAPIキー発行
 
-SkyWayへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
+SkyWayへの開発者登録がまだの方は、まず、[Community Editionの新規登録](./signup.html)から開発者登録をしてください。
 トライアル版SkyWayのAPIキーはご利用になれないので、トライアル版SkyWayをご利用の方も、新規登録をお願いします。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](./login.html)し、アプリケーションを作成して、APIキーを取得してください。
 
 ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
@@ -46,7 +46,7 @@ SkyWayへの開発者登録がまだの方は、まず、[Community Editionの�
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples){:target="_blank"} をご覧ください。|OFF|
 
 ### 開発環境の準備
 
@@ -65,7 +65,7 @@ SkyWayへの開発者登録がまだの方は、まず、[Community Editionの�
 
 チュートリアルで利用するXcodeのプロジェクトは以下のリポジトリからダウンロードしてください。  
 
-- [https://github.com/skyway/eclwebrtc-ios-sdk-tutorial](https://github.com/skyway/eclwebrtc-ios-sdk-tutorial)
+- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial)
 
 ### SDKをプロジェクトに追加する
 
@@ -220,7 +220,7 @@ Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、
     _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./ios-reference/)をご覧ください。
 
 ## 接続成功・失敗・切断時の処理
 {: #eventlistener }
@@ -266,7 +266,7 @@ SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関す�
 - `cameraPosition`: 使用するカメラの選択（ディフォルトは`SKW_CAMERA_POSITION_FRONT`）
   - カメラポジションは前面カメラ（`SKW_CAMERA_POSITION_FRONT`）と背面カメラ（`SKW_CAMERA_POSITION_BACK`）が選択可能
 
-これ以外の項目については、[APIリファレンス]()をご覧ください。  
+これ以外の項目については、[APIリファレンス](./ios-reference/)をご覧ください。  
 
 *Objective-C*
 {: .lang}
