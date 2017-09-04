@@ -135,8 +135,8 @@ Connect the actual device and execute build. Though processing on the actual dev
 
 ### Declaration
 
-Add constants to MainActivity that are used in the program.  
-For `API_KEY`, specify the API key that was generated on the Dashboard just before.  
+Add constants to MainActivity that are used in the program.
+For `API_KEY`, specify the API key that was generated on the Dashboard just before.
 For `DOMAIN`, specify one of the available domain names specified on the Dashboard just before.
 
 *Java*
@@ -194,7 +194,7 @@ final Activity activity = this;
 
 ### Create Peer Object
 
-In succession, add a process to create a Peer object.  
+In succession, add a process to create a Peer object.
 For the Peer object, specify API key, domain name and debug level by using PeerOption class.
 
 *Java*
@@ -220,8 +220,8 @@ In succession, add an event callback required for Peer object.
 
 ### Open Event
 
-Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.  
-A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.  
+Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.
+A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.
 In the following process, it displays PeerID to UI if the PeerID is generated.
 
 *Java*
@@ -252,7 +252,7 @@ In the callback of the open event, add a process to obtain camera images and mic
 
 #### Request for Administration(1)
 
-It checks if an authority to access the camera and the microphone is given. If not, it demands the authority.  
+It checks if an authority to access the camera and the microphone is given. If not, it demands the authority.
 If the authority is given, execute startLocalStream method to obtain camera image and microphone voice.
 
 *Java*
@@ -298,7 +298,7 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
 
 #### Option Setting
 
-Options on image and voice obtainment can be set by MediaConstraints class.  
+Options on image and voice obtainment can be set by MediaConstraints class.
 Descriptions of items set here are as follows.
 - `maxWidth`: The upper limit of the horizontal size of captured image (unit: pixel)
 - `maxHeight`: The upper limit of the vertical size of captured image (unit: pixel)
@@ -325,7 +325,7 @@ void startLocalStream() {
 
 #### Obtainment and Playback
 
-Initialize Navigator class, specify `constraints` to the parameter of getUserMedia method and execute it to obtain the own image (local stream).  
+Initialize Navigator class, specify `constraints` to the parameter of getUserMedia method and execute it to obtain the own image (local stream).
 Use addVideoRenderer method to allocate video renderer (Canvas object for display) to the obtained MediaStream object.
 
 *Java*
@@ -510,7 +510,7 @@ void showPeerIDs() {
 
 ##### Calling
 
-If Peer ID is selected in `PeerListDialogFragment`, onPeerSelected method will be called. Set the PeerID of the partner and your own localStream to the parameter, and call.  
+If Peer ID is selected in `PeerListDialogFragment`, onPeerSelected method will be called. Set the PeerID of the partner and your own localStream to the parameter, and call.
 After calling, set up necessary event callbacks. Details of `setMediaCallbacks` will be explained later.
 
 *Java*
@@ -603,9 +603,9 @@ void closeRemoteStream(){
 
 #### Receiving Process
 
-Responds when connection request is received from the partner.  
-If connection request is received from the partner, `Peer.PeerEventEnum.CALL` will ignite. As you can obtain MediaConnection object to manage the connection with the partner as a parameter, execute answer method and respond to the connection request.  
-If you set your own `_localStream` then, you will be able to send image and voice to your partner.  
+Responds when connection request is received from the partner.
+If connection request is received from the partner, `Peer.PeerEventEnum.CALL` will ignite. As you can obtain MediaConnection object to manage the connection with the partner as a parameter, execute answer method and respond to the connection request.
+If you set your own `_localStream` then, you will be able to send image and voice to your partner.
 In the same way as the calling process, execute `setMediaCallbacks` and set the event. Details will be explained later.
 
 *Java*
@@ -634,8 +634,8 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 
 #### Event necessary for MediaConnection Object
 
-Event callback necessary for MediaConnection.  
-`MediaConnection.MediaEventEnum.STREAM` will ignite when image and/or voice of the partner are received.  
+Event callback necessary for MediaConnection.
+`MediaConnection.MediaEventEnum.STREAM` will ignite when image and/or voice of the partner are received.
 In the callback, use update process of the connection status on UI and apply addVideoRenderer method to the obtained MediaStream object of the partner, in order to assign the video renderer.
 
 *Java*
@@ -659,7 +659,7 @@ void setMediaCallbacks() {
 }
 ```
 
-`SKW_MEDIACONNECTION_EVENT_CLOSE` will ignite if the partner executes the disconnection process and if the connection is actually disconnected.  
+`SKW_MEDIACONNECTION_EVENT_CLOSE` will ignite if the partner executes the disconnection process and if the connection is actually disconnected.
 In the callback, necessary disconnection processes will be executed. Details will be explained later.
 
 *Java*
@@ -858,7 +858,7 @@ void unsetMediaCallbacks() {
 ## Setup UI
 {: #setup-ui }
 
-Add necessary processes related with UI.  
+Add necessary processes related with UI.
 As actionButton is used in toggle mode, change the label in accordance with the connection status. Add the contents of updateActionButtonTitle method.
 
 *Java*
@@ -888,7 +888,7 @@ void updateActionButtonTitle() {
 ## Switching Camera
 {: #switch-camera}
 
-In the last, add a process of switching camera.  
+In the last, add a process of switching camera.
 Using switchCamera method, switch the camera position used by the corresponding media stream between FRONT and BACK.
 
 *Java*

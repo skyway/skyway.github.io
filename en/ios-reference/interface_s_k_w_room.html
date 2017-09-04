@@ -69,7 +69,7 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
+<iframe src="javascript:void(0)" frameborder="0"
         name="MSearchResults" id="MSearchResults">
 </iframe>
 </div>
@@ -85,7 +85,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Room base class.  
+<p>Room base class.
  <a href="interface_s_k_w_room.html#details">More...</a></p>
 
 <p><code>#import &lt;<a class="el" href="_s_k_w_room_8h_source.html">SKWRoom.h</a>&gt;</code></p>
@@ -135,7 +135,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_LOG <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSArray* logs = (NSArray*)arg1;</div><div class="line">    [logs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop) {</div><div class="line">        NSString* logStr = (NSString*)obj;</div><div class="line">        NSError* error = nil;</div><div class="line">        id logData = [NSJSONSerialization JSONObjectWithData:[logStr dataUsingEncoding:NSUTF8StringEncoding]</div><div class="line">                                                     options:0</div><div class="line">                                                       error:&amp;error];</div><div class="line">        if (nil == error)</div><div class="line">        {</div><div class="line">            NSLog(@&quot;SKW_ROOM_EVENT_LOG: %@&quot;, logData);</div><div class="line">        }</div><div class="line">    }];</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a09c2d417cd302156884525b9cc1123ef">getLog</a>];</div></div><!-- fragment --> 
+<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_LOG <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSArray* logs = (NSArray*)arg1;</div><div class="line">    [logs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop) {</div><div class="line">        NSString* logStr = (NSString*)obj;</div><div class="line">        NSError* error = nil;</div><div class="line">        id logData = [NSJSONSerialization JSONObjectWithData:[logStr dataUsingEncoding:NSUTF8StringEncoding]</div><div class="line">                                                     options:0</div><div class="line">                                                       error:&amp;error];</div><div class="line">        if (nil == error)</div><div class="line">        {</div><div class="line">            NSLog(@&quot;SKW_ROOM_EVENT_LOG: %@&quot;, logData);</div><div class="line">        }</div><div class="line">    }];</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a09c2d417cd302156884525b9cc1123ef">getLog</a>];</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a5f02542e9d2a7be9f5194fe0e147942b"></a>
@@ -152,7 +152,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a5f02542e9d2a7be9f5194fe0e147942b">offAll</a>];</div></div><!-- fragment --> 
+<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a5f02542e9d2a7be9f5194fe0e147942b">offAll</a>];</div></div><!-- fragment -->
 </div>
 </div>
 <a id="a2531df8db5b7c99b28e7773f1c093871"></a>

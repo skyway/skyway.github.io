@@ -7,7 +7,7 @@ breadcrumb: [en/index.md, en/developer.md]
 
 # About SFU
 
-WebRTC communicates, basically not via server, but directly in P2P.  
+WebRTC communicates, basically not via server, but directly in P2P.
 In multi-person conversation, it is common to use a method called "full-mesh connection" which employs multiple P2P connections simultaneously, while ECLWebRTC provides a media server called SFU to realize stable conversation with more persons.
 
 
