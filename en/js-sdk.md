@@ -12,7 +12,7 @@ breadcrumb: [en/index.md, en/developer.md]
 By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
 The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-You can try [demonstration of the completed application]().
+You can try [demonstration of the completed application](){: target="_blank"}.
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
@@ -66,7 +66,7 @@ $ npm install eclwebrtc-js-sdk
   </div>
 </div>
 
-Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
+Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: target="_blank"}.
 
 ## Sample Code
 
@@ -78,21 +78,21 @@ Sample code is open to public.
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="#">video chat</a></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="#">text chat</a></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="#">video chat</a></td>
-          <td><a href="#">One-to-many video distribution</a></td>
-          <td><a href="#">text chat</a></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_broadcast" target="_blank">One-to-many video distribution</a></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, SFU</th>
-          <td><a href="#">video chat</a></td>
-          <td><a href="#">One-to-many video distribution</a></td>
-          <td><a href="#">text chat</a></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_videochat" target="_blank">video chat</a></td>
+          <td></td>
+          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>

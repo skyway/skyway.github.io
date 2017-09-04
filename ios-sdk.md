@@ -25,7 +25,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
+[チュートリアルの続きを読む](./ios-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
 {: #sdkdownload }

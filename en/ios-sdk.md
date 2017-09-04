@@ -12,7 +12,7 @@ breadcrumb: [en/index.md, en/developer.md]
 By using basic functions of iOS SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the iOS SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat]() provided as sample codes.
+The application to be created in this tutorial will be the same as [one-to-one video chat](){:target="_blank"} provided as sample codes.
 If you want to try the completed application, download the source codes and build in accordance with the build procedure of this tutorial.
 
 
@@ -26,7 +26,7 @@ If you want to try the completed application, download the source codes and buil
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-[Continue the turorial](ios-tutorial.html){: .btn .btn-primary }
+[Continue the turorial](./ios-tutorial.html){: .btn .btn-primary }
 
 ## Download DSK
 {: #sdkdownload }
