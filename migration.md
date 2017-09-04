@@ -43,7 +43,7 @@ breadcrumb: [index.md, developer.md]
         <h3>1. Community Edition新規登録</h3>
         <p>
           Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。<br>
-          Community Editionは無料でご利用いただけます。詳細は<a href="./singup.html">料金ページ</a>をご確認ください。<br>
+          Community Editionは無料でご利用いただけます。詳細は<a href="./pricing.html">料金ページ</a>をご確認ください。<br>
           <a href="./contactus.html">Enterprise Editionに申し込み</a>いただいた場合も、以下の手順は同じです。
         </p>
         <a href="./signup.html" class="btn btn-primary">無料で新規登録</a>
@@ -56,12 +56,10 @@ breadcrumb: [index.md, developer.md]
         <p>
           SDKのAPIに一部差分があるため、以下のドキュメントを参考にプログラムの修正をお願いします。
         </p>
-        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" class="btn btn-primary">SDK差分と移行方法について</a></p>
+        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_target" class="btn btn-primary">SDK差分と移行方法について</a></p>
         <div class="alert alert-info" role="alert">
-          <p>
             トライアル版のSDKとは相互接続できません<br>
             最新のSDKは、SkyWay Community EditionまたはEnterprise Editionで発行したAPIKeyのみご利用いただけます。
-          </p>
         </div>
       </div>
     </div>

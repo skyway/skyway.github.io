@@ -44,7 +44,7 @@ breadcrumb: [en/index.md, en/developer.md]
         <h3>1. Registration of ECLWebRTC</h3>
         <p>
           Please make a new registration of ECLWebRTC on the <a href="./signup.html">Registration page</a>.
-          The Community Edition can be used for free. Please refer to <a href="./singup.html">Pricing page</a> for details.
+          The Community Edition can be used for free. Please refer to <a href="./pricing.html">Pricing page</a> for details.
           The following procedure is the same even if you <a href="./contactus.html">registration the Enterprise Edition</a>.
         </p>
         <a href="./signup.html" class="btn btn-primary">Registration for Free</a>
@@ -59,10 +59,8 @@ breadcrumb: [en/index.md, en/developer.md]
         </p>
         <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" class="btn btn-primary">SDK difference and how to migrate</a></p>
         <div class="alert alert-info" role="alert">
-          <p>
             The SDK of SkyWay and the SDK of ECLWebRTC cannot be interconnected.<br>
             The SDK of ECLWebRTC accepts APIKey generated only by the Community Edition or the Enterprise Edition of ECLWebRTC.
-          </p>
         </div>
       </div>
     </div>
