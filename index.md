@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SkyWay - Enterprise Cloud WebRTC Platform
-description: SkyWayは、アプリやWebサイト、IoTデバイスにビデオ通話を追加できる開発者のためのプラットフォームです。SkyWayを利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。自社サービスの開発・提供に専念して、イノベーションに集中することができます。
+description: SkyWayは、アプリやWebサイト、IoTデバイスにビデオ通話を追加できる開発者のためのプラットフォームです。SkyWayを利用すれば、自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 lang: ja
 main_visual:
   main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
