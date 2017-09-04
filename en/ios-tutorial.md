@@ -10,10 +10,10 @@ breadcrumb: [en/index.md, en/developer.md, en/ios-sdk.md]
 
 # iOS SDK Tutorial
 
-By using basic functions of iOS SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the iOS SDK.  
+By using basic functions of iOS SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the iOS SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat]() provided as sample codes.  
+The application to be created in this tutorial will be the same as [one-to-one video chat]() provided as sample codes.
 If you want to try the completed application, download the source codes and build in accordance with the build procedure of this tutorial.
 
 
@@ -32,7 +32,7 @@ If you want to try the completed application, download the source codes and buil
 
 ### Generate ECLWebRTC API Key
 
-For customers who have not completed a developer registration, do so from [Registration of the Community Edition](./signup.html).  
+For customers who have not completed a developer registration, do so from [Registration of the Community Edition](./signup.html).
 For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
 
 Application settings on the Dashboard are as follows.
@@ -67,7 +67,7 @@ Download Xcode project used in Tutorial from below repository.
 
 ### Add SDK to Project
 
-Arrange SDK binary files.  
+Arrange SDK binary files.
 In this tutorial, we will introduce a procedure to manually set the downloaded file into the project.
 
 1. Download SDK from [Here](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip)
@@ -121,8 +121,8 @@ Though we will see some errors during execution, the preparation is complete if 
 
 ### Declaration
 
-Add constants that are used in the program.  
-For `apikey`, specify the API key that was generated on the Dashboard just before.  
+Add constants that are used in the program.
+For `apikey`, specify the API key that was generated on the Dashboard just before.
 For `domain`, specify one of the available domain names specified on the Dashboard just before.
 
 *Objective-C*
@@ -227,8 +227,8 @@ In succession, add an event callback required for Peer object.
 
 ### Open Event
 
-Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.  
-A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.  
+Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.
+A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.
 In the following process, it displays PeerID to UI if the PeerID is generated.
 
 *Objective-C*
@@ -285,7 +285,7 @@ Please refer to [API Reference]() for other items.
 
 #### Obtainment and Playback
 
-Initialize SKWNavigator class, specify `constraints` to the parameter of getUserMedia method and execute it to obtain the own image (local stream).  
+Initialize SKWNavigator class, specify `constraints` to the parameter of getUserMedia method and execute it to obtain the own image (local stream).
 Use addVideoRenderer method to allocate video renderer (SKWVideo object for display) to the obtained MediaStream object.
 
 *Objective-C*
@@ -415,8 +415,8 @@ Tap actionButton. If in not-connected status, use listAllPeers method to obtain 
 
 #### Calling
 
-If Peer ID is selected in `PeerListViewController`, didSelectPeer method will be called. Set the PeerID of the partner and your own localStream to the parameter, and call.  
-After calling, set up necessary event callbacks.  
+If Peer ID is selected in `PeerListViewController`, didSelectPeer method will be called. Set the PeerID of the partner and your own localStream to the parameter, and call.
+After calling, set up necessary event callbacks.
 Details of `setMediaCallbacks` will be explained later.
 
 *Objective-C*
@@ -535,9 +535,9 @@ In addition, concerning `unsetPeerCallbacks`, it will be used when we destroy Pe
 ### Receiving Process
 {: #oncall }
 
-Responds when connection request is received from the partner.  
-If connection request is received from the partner, `SKW_PEER_EVENT_CALL` will ignite. As you can obtain MediaConnection object to manage the connection with the partner as a parameter, execute answer method and respond to the connection request.  
-If you set your own `_localStream` then, you will be able to send image and voice to your partner.  
+Responds when connection request is received from the partner.
+If connection request is received from the partner, `SKW_PEER_EVENT_CALL` will ignite. As you can obtain MediaConnection object to manage the connection with the partner as a parameter, execute answer method and respond to the connection request.
+If you set your own `_localStream` then, you will be able to send image and voice to your partner.
 In the same way as the calling process, execute `setMediaCallbacks` and set the event. Details will be explained later.
 
 *Objective-C*
@@ -563,7 +563,7 @@ In the same way as the calling process, execute `setMediaCallbacks` and set the 
 
 ### Event necessary for MediaConnection Object
 
-Event callback necessary for MediaConnection.  
+Event callback necessary for MediaConnection.
 `SKW_MEDIACONNECTION_EVENT_STREAM` will ignite when image and/or voice of the partner are received.
 
 In the callback, use update process of the connection status on UI and apply addVideoRenderer method to the obtained MediaStream object of the partner, to assign the video renderer.
@@ -603,7 +603,7 @@ In the callback, use update process of the connection status on UI and apply add
 
 ```
 
-`SKW_MEDIACONNECTION_EVENT_CLOSE` will ignite if the partner executes the disconnection process and if the connection is actually disconnected.  
+`SKW_MEDIACONNECTION_EVENT_CLOSE` will ignite if the partner executes the disconnection process and if the connection is actually disconnected.
 In the callback, necessary disconnection processes will be executed. Details will be explained later.
 
 *Objective-C*
@@ -655,7 +655,7 @@ In the callback, necessary disconnection processes will be executed. Details wil
 ## Setup UI
 {: #setup-ui }
 
-Add necessary processes related with UI.  
+Add necessary processes related with UI.
 As actionButton is used in toggle mode, change the label in accordance with the connection status. Add the contents of updateActionButtonTitle method.
 
 *Objective-C*
@@ -677,7 +677,7 @@ As actionButton is used in toggle mode, change the label in accordance with the 
 ## Switching Camera
 {: #switch-camera}
 
-In the last, add a process of switching camera.  
+In the last, add a process of switching camera.
 Use getCameraPosition method to obtain the camera position used by the corresponding media stream. Use the result obtained to switch over by toggling.
 
 *Objective-C*

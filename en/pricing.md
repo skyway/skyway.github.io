@@ -15,8 +15,8 @@ breadcrumb: [en/index.md]
 
 ## Pricing
 
-Registration online will give you an immediate access.  
-Start your innovation with developers around the world.  
+Registration online will give you an immediate access.
+Start your innovation with developers around the world.
 There is no charge for Community Edition.
 
 ### Basic Charge
@@ -261,7 +261,7 @@ Call time until use limit of TURN of the Community Edition in each case, and est
 
 ## About Charges
 
-Please refer to [FAQ]() for details.  
+Please refer to [FAQ]() for details.
 If you need detailed estimation of the charge, please use [Charge Simulator]().
 
 ## Start Your Innovation!
