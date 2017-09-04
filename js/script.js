@@ -30,7 +30,7 @@
   CONST.JSON_URL_FAILURE = JSON_URL_BASE + SECTION_ID_FAILURE + JSON_URL_QUERY;
 
   // Zendesk 新着情報 URL
-  var ZENDESK_URL_BASE = 'https://support.skyway.io/hc/' + lang + '/sections/';
+  var ZENDESK_URL_BASE = 'https://support.webrtc.ecl.ntt.com/hc/' + lang + '/sections/';
 
   CONST.ZENDESK_URL_ANNOUNCEMENT = ZENDESK_URL_BASE + SECTION_ID_ANNOUNCEMENT;
   CONST.ZENDESK_URL_MAINTENANCE = ZENDESK_URL_BASE + SECTION_ID_MAINTENANCE;

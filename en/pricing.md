@@ -261,8 +261,8 @@ Call time until use limit of TURN of the Community Edition in each case, and est
 
 ## About Charges
 
-Please refer to [FAQ]() for details.
-If you need detailed estimation of the charge, please use [Charge Simulator]().
+Please refer to [FAQ]() for details.  
+If you need detailed estimation of the charge, please use [Pricing Table and Pricing Simulator](https://ecl.ntt.com/en/pricing/).
 
 ## Start Your Innovation!
 

@@ -11,7 +11,7 @@ breadcrumb: [en/index.md, en/developer.md]
 
 By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
-You can try [demonstration of the completed application]().
+You can try [demonstration of the completed application](#){:target="_blank"}.
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with video chat">
@@ -30,10 +30,10 @@ You can try [demonstration of the completed application]().
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/releases/latest" class="btn btn-primary">Download as ZIP</a>
+    <a href="https://github.com/skyway/android-sdk/releases/latest" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <a href="https://github.com/skyway/android-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
   </div>
 </div>
 
@@ -64,18 +64,19 @@ Sample code is open to public.
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="#">video chat</a></td>
-          <td><a href="#">text chat</a></td>
+          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/p2p_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/p2p_textchat" target="_blank">text chat</a></td>
+        </tr>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="#">video chat</a></td>
-          <td><a href="#">text chat</a></td>
+          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/fullmesh_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/fullmesh_textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
-          <th scope="row">Multi-party, SFU</th>
-          <td><a href="#">video chat</a></td>
-          <td><a href="#">text chat</a></td>
+          <th scope="row">Multi-party, P2P</th>
+          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/sfu_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/sfu_textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>
