@@ -14,7 +14,7 @@ breadcrumb: [index.md, developer.md]
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">
           <h3 class="card-title"><span>新SDKへの</span><wbr><span>移行方法</span></h3>
-          <p class="card-text">2017年9月7日に提供を開始した新バージョンのSkyWay SDKへの移行方法をご紹介します。（参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_target">新旧SDKの機能差分と移行方法について)</a></p>
+          <p class="card-text">2017年9月7日に提供を開始した新バージョンのSkyWay SDKへの移行方法をご紹介します。（参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank">新旧SDKの機能差分と移行方法について)</a></p>
             <a class="btn btn-outline-primary collapsed" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="true" aria-controls="toECLWebRTC">
               移行方法を確認
             </a>
@@ -39,7 +39,7 @@ breadcrumb: [index.md, developer.md]
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>新SDKヘの移行について</h2>
-        <p>トライアル版のSkyWayは2018年3月31日をもって提供を終了します。最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.skyway.io/hc/ja" target="_target">新旧SkyWayの機能比較)</a></p>
+        <p>トライアル版のSkyWayは2018年3月31日をもって提供を終了します。最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.webrtc.ecl.ntt.com/hc/ja" target="_blank">新旧SkyWayの機能比較)</a></p>
         <h3>1. Community Edition新規登録</h3>
         <p>
           Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。<br>
@@ -56,7 +56,7 @@ breadcrumb: [index.md, developer.md]
         <p>
           SDKのAPIに一部差分があるため、以下のドキュメントを参考にプログラムの修正をお願いします。
         </p>
-        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_target" class="btn btn-primary">SDK差分と移行方法について</a></p>
+        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-primary">SDK差分と移行方法について</a></p>
         <div class="alert alert-info" role="alert">
             トライアル版のSDKとは相互接続できません<br>
             最新のSDKは、SkyWay Community EditionまたはEnterprise Editionで発行したAPIKeyのみご利用いただけます。
