@@ -53,7 +53,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <a href="./js-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./js-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">Sample Code</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -65,7 +65,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <a href="./ios-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./ios-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">Sample Code</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -77,7 +77,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <a href="./android-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./android-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">Sample Code</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -138,7 +138,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
                 <p class="card-text">A server to relay media in an environment where Peer to Peer communication cannot be established is provided.</p>
-                <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">Pricing</a>
+                <a href="./pricing.html#turnsfu-communication-charge" class="btn btn-outline-primary">Pricing</a>
             </div>
         </div>
     </div>
@@ -147,7 +147,7 @@ There are four SDK which covers Web browser, iOS, Android and IoT device.
             <div class="card-body">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">A media server that transmits images and voices as a proxy to realize multi-person conversation and distribution is provided.</p>
-                <a href="#" class="btn btn-outline-primary">Pricing</a>
+                <a href="./pricing.html#turnsfu-communication-charge" class="btn btn-outline-primary">Pricing</a>
                 <a href="./sfu.html" class="btn btn-outline-primary">Details of SFU</a>
             </div>
         </div>
@@ -199,7 +199,7 @@ Provides community ticket support useful for development.
 ## Maintenance and Failure Information
 
 Maintenance and Failure Information is open to public.
-For customers who want to receive notification of each information by RSS, please see [Announcement and Notification of Maintenance and Failure Information](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"}.
+For customers who want to receive notification of each information by RSS, please see [Announcement and Notification of Maintenance and Failure Information](https://support.webrtc.ecl.ntt.com/hc/en-us/articles/236195548){:target="_blank"}.
 
 
 
