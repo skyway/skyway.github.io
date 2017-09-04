@@ -63,7 +63,7 @@ In this tutorial, the development will proceed assuming the following environmen
 
 Download Xcode project used in Tutorial from below repository.
 
-- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial)
+- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial){:target="_blank"}
 
 ### Add SDK to Project
 

@@ -65,7 +65,7 @@ SkyWayへの開発者登録がまだの方は、まず、[Community Editionの�
 
 チュートリアルで利用するXcodeのプロジェクトは以下のリポジトリからダウンロードしてください。  
 
-- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial)
+- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial){:target="_blank"}
 
 ### SDKをプロジェクトに追加する
 
