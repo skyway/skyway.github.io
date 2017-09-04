@@ -131,7 +131,7 @@ Please refer to [Pricing](pricing.md) for details of charge and refer to [Servic
   <div class="col-12 col-sm-6">
 		<h5 class="mt-0">SkyWay Conference</h5>
 		<p>Web conference capable of multi-person conversation, and usable without installation, membership registration and login. You can participate in a conference just by accessing a URL by a browser. It also supports screen sharing.</p>
-		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button" target="_blank">Open SkyWay Conference</a></p>
+		<p><a class="btn btn-primary" href="https://conf.webrtc.ecl.ntt.com/" role="button" target="_blank">Open SkyWay Conference</a></p>
   </div>
 </div>
 
