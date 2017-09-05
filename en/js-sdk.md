@@ -78,21 +78,21 @@ Sample code is open to public.
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_broadcast" target="_blank">One-to-many video distribution</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">One-to-many video distribution</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, SFU</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>
