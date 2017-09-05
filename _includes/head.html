@@ -28,7 +28,7 @@
   {% if page.description %}
   <meta property="og:description" content="{{ description_tag }}">
   {% endif %}
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: full_base_url | replace_first: "http://", "//" | replace_first: "https://", "//" }}">
+  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: full_base_url | replace_first: 'http://', '//' | replace_first: 'https://', '//' }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="canonical" href="{{ full_url }}">
   {% include google-analytics.html %}
