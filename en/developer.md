@@ -22,13 +22,14 @@ ECLWebRTC enables customers to start developing applications easily.
 Enter the following command to start a videochat application.
 
 ```sh
-~ $ npm install eclwebrtc-skeleton
-~ $ npm start
+$ git clone git@github.com:skyway/skyway-js-skeleton.git
+$ cd skyway-js-skeleton
+$ npm install & npm start
 ```
 
 ### STEP2
 
-Once you've given it a try, sign up for the free [Community Edition](./signup.html) and get an API Key.
+Once you've given it a try, sign up for the free [Community Edition](https://console-webrtc-free.ecl.ntt.com/users/registration) and get an API Key.
 
 ### STEP3
 
@@ -36,7 +37,7 @@ Replace the API key in the sample code with the one you got in STEP2.
 Start a developing a fully functioning app by reading the tutorials and API reference.
 
 ```sh
-~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+$ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
 ## SDK
@@ -53,7 +54,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="./js-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./js-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
+            <a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -65,7 +66,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="./ios-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./ios-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
+            <a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -77,7 +78,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="./android-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./android-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
+            <a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -129,7 +130,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <div class="card-body">
                 <h3 class="card-title">Authorization</h3>
                 <p class="card-text">Authentication is provided to prevent illegal use of API keys.</p>
-                <a href="https://github.com/nttcom/Peer-Authentication-Server-Samples" target="_blank" class="btn btn-outline-primary">How to use(Github)</a>
+                <a href="https://github.com/skyway/skyway-peer-authentication-samples" target="_blank" class="btn btn-outline-primary">How to use(Github)</a>
             </div>
         </div>
     </div>
@@ -157,7 +158,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <div class="card-body">
                 <h3 class="card-title">Screen Sharing</h3>
                 <p class="card-text">A library and sample code to help implement a browser extension that allows screen sharing.</p>
-                <a href="https://github.com/nttcom/SkyWay-ScreenShare" target="_blank" class="btn btn-outline-primary">How to use(Github)</a>
+                <a href="https://github.com/skyway/skyway-screenshare" target="_blank" class="btn btn-outline-primary">How to use(Github)</a>
             </div>
         </div>
     </div>

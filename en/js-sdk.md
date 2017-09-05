@@ -24,29 +24,23 @@ You can try [demonstration of the completed application](){: target="_blank"}.
 ## Download SDK
 {: #sdkdownload }
 
-### Case: Using npm
-
-```sh
-$ npm install eclwebrtc-js-sdk
-```
-
 ### Case: Using CDN
 
 *HTML*
 {: .lang}
   
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
 ### Case: Downloading as file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/js-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
+    <a href="https://github.com/skyway/skyway-js-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/skyway/js-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <a href="https://github.com/skyway/skyway-js-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
   </div>
 </div>
 
@@ -62,11 +56,11 @@ $ npm install eclwebrtc-js-sdk
     <a href="./js-reference/" class="btn btn-primary">ECLWebRTC API Reference</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#JS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
+    <a href="http://nttcom.github.io/skyway/en/docs/#JS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
   </div>
 </div>
 
-Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: target="_blank"}.
+Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs){: target="_blank"}.
 
 ## Sample Code
 
@@ -78,21 +72,21 @@ Sample code is open to public.
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_broadcast" target="_blank">One-to-many video distribution</a></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">One-to-many video distribution</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, SFU</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>

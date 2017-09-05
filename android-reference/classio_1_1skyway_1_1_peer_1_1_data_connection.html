@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>io.skyway.Peer.DataConnection クラス - Android SDK APIリファレンス - Enterprise Cloud WebRTC Platform - ECLWebRTC</title>
+<title>io.skyway.Peer.DataConnection クラス - Android SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -590,7 +590,7 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIAL
 <p>プロパティ serialization の値によって送信処理が変わります。</p>
 <p>binary / binary-utf8 の場合、js-binarypack 相当のシリアライズを送信処理をおこないます。 送信先がブラウザーの場合に有用です。</p>
 <p>json の場合、Array, Map などを JSON 文字列にしてバイナリ送受信します。</p>
-<p>none の場合、String はテキスト送受信、それ以外は ByteBuffer に変換出来る物をバイナリ送受信します。</p>
+<p>none の場合、String はテキスト送受信、それ以外は ByteBuffer に変換できる物をバイナリ送受信します。</p>
 <div class="fragment"><div class="line">DataConnection* data;</div><div class="line"></div><div class="line">String message = <span class="stringliteral">&quot;Send data.&quot;</span>;</div><div class="line"></div><div class="line"><span class="keywordtype">boolean</span> bResult = data.send(message);</div><div class="line"><span class="keywordflow">if</span> (bResult) {</div><div class="line">    <span class="comment">// successful.</span></div><div class="line">} <span class="keywordflow">else</span> {</div><div class="line">    <span class="comment">// failure.</span></div><div class="line">}</div></div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>送信するオブジェクトを設定します。</td></tr>

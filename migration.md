@@ -39,7 +39,7 @@ breadcrumb: [index.md, developer.md]
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>新SDKヘの移行について</h2>
-        <p>トライアル提供していました旧SkyWayは2018年3月31日をもって提供を終了します。2017年9月6日以前にSkyWayにご登録いただいた方も最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.webrtc.ecl.ntt.com/hc/ja" target="_blank">新旧SkyWayの機能比較)</a></p>
+        <p>トライアル提供していました旧SkyWayは2018年3月をもって提供を終了します。2017年9月6日以前にSkyWayにご登録いただいた方も最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a></p>
         <h3>1. Community Edition新規登録</h3>
         <p>
           Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。<br>
@@ -58,7 +58,7 @@ breadcrumb: [index.md, developer.md]
         </p>
         <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-primary">SDK差分と移行方法について</a></p>
         <div class="alert alert-info" role="alert">
-            トライアル版のSDKとは相互接続できません<br>
+            2017年9月6日以前のトライアル版のSDKとは相互接続できません<br>
             最新のSDKは、SkyWay Community EditionまたはEnterprise Editionで発行したAPIKeyのみご利用いただけます。
         </div>
       </div>
