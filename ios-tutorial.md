@@ -13,18 +13,17 @@ breadcrumb: [index.md, developer.md, ios-sdk.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](#){:target="_blank"}と同じものになります。
-完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p_videochat){:target="_blank"}と同じものになります。
+完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png"
-    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
@@ -34,13 +33,13 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 ### SkyWayのAPIキー発行
 
 <p>
-  SkyWayへの開発者登録がまだの方は、まず、<a href="./signup.html">Community Editionの新規登録</a>から開発者登録をしてください。
+  SkyWayへの開発者登録がまだの方は、まず、<a href="https://console-webrtc-free.ecl.ntt.com/users/registration">Community Editionの新規登録</a>から開発者登録をしてください。
   <small class="text-muted">
     <br>トライアル提供していました旧SkyWayのAPIキーはご利用になれないため、2017年9月6日以前にSkyWayにご登録いただいた方も新規登録をお願いします。
   </small>
 </p>
 
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](./login.html)し、アプリケーションを作成して、APIキーを取得してください。
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](https://console-webrtc-free.ecl.ntt.com/users/login)し、アプリケーションを作成して、APIキーを取得してください。
 ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
 |設定項目|項目の説明|チュートリアルの設定内容|
@@ -49,7 +48,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 |利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<br>指定例：hogehoge.com|`localhost`|
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
-|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
+|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、[APIリファレンス](./ios-reference/interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a)をご覧ください。|ON|
 |権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} をご覧ください。|OFF|
 
 ### 開発環境の準備
@@ -69,14 +68,14 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 チュートリアルで利用するXcodeのプロジェクトは以下のリポジトリからダウンロードしてください。  
 
-- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial){:target="_blank"}
+- [https://github.com/skyway/skyway-ios-sdk-tutorial](https://github.com/skyway/skyway-ios-sdk-tutorial){:target="_blank"}
 
 ### SDKをプロジェクトに追加する
 
 SDKのバイナリファイルを配置します。  
 今回のチュートリアルでは、ダウンロードしたファイルを手動でプロジェクトに組込む手順を紹介します。  
 
-1. SDKを[こちら](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip)からダウンロード
+1. SDKを[こちら](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)からダウンロード
 2. ZIPファイルを解凍後、`SkyWay.framework`を、`skyway-ios-sdk-tutorial`ディレクトリ直下に配置
 3. `skyway-ios-sdk-tutorial.xcodeproj`をダブルクリックしプロジェクトを開く
 4. 左ペインのファイルツリー上で右クリックし`Add File to…`を選択し、先程配置した`SkyWay.framework`をファイルツリーに追加
@@ -224,7 +223,7 @@ Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、
     _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./ios-reference/)をご覧ください。
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./ios-reference/interface_s_k_w_peer_option.html)をご覧ください。
 
 ## 接続成功・失敗・切断時の処理
 {: #eventlistener }
@@ -270,7 +269,7 @@ SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関す�
 - `cameraPosition`: 使用するカメラの選択（ディフォルトは`SKW_CAMERA_POSITION_FRONT`）
   - カメラポジションは前面カメラ（`SKW_CAMERA_POSITION_FRONT`）と背面カメラ（`SKW_CAMERA_POSITION_BACK`）が選択可能
 
-これ以外の項目については、[APIリファレンス](./ios-reference/)をご覧ください。  
+これ以外の項目については、[APIリファレンス](./ios-reference/interface_s_k_w_media_constraints.html)をご覧ください。  
 
 *Objective-C*
 {: .lang}
