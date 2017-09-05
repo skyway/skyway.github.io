@@ -39,7 +39,7 @@ breadcrumb: [en/index.md, en/developer.md]
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>About migration from SkyWay to ECLWebRTC</h2>
-        <p>SkyWay is terminated as of March, 2018. How to migrate from Skyway to ECLWebRTC is explained.Customers who are using SkyWay are requested to migrate to the succeeding service “ECLWebRTC”, which is an advanced version of SkyWay.(Reference: <a href="https://support.webrtc.ecl.ntt.com/hc/en-us/" target="_blank">Function comparison of SkyWay and ECLWebRTC)</a></p>
+        <p>SkyWay is terminated as of March, 2018. How to migrate from Skyway to ECLWebRTC is explained.Customers who are using SkyWay are requested to migrate to the succeeding service “ECLWebRTC”, which is an advanced version of SkyWay.(Reference: <a href="https://support.skyway.io/hc/en-us/articles/115012186787" target="_blank">What is the difference between ECLWebRTC and SkyWay)</a></p>
         <p>Migrate according to following procedure.</p>
         <h3>1. Registration of ECLWebRTC</h3>
         <p>
