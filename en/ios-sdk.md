@@ -72,7 +72,7 @@ iOS 8+
     <a href="./ios-reference/" class="btn btn-primary">ECLWebRTC API Reference</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
+    <a href="http://nttcom.github.io/skyway/en/docs/#iOS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
   </div>
 </div>
 
