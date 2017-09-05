@@ -66,9 +66,9 @@ Download Android Studio project used in Tutorial from below repository.
 
 Arrange SDK binary files.
 
-1. Download SDK from [here](https://github.com/skyway/android-sdk/releases/latest){:target="_blank"}
+1. Download SDK from [here](https://github.com/skyway/skyway-android-sdk/releases/latest){:target="_blank"}
 2. Create `app/libs` directory for development project
-3. After decompressing ZIP file, arrange `eclwebrtc.arr` directly under `app/libs` directory.
+3. After decompressing ZIP file, arrange `skyway.arr` directly under `app/libs` directory.
 4. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.
 
 <figure class="figure">

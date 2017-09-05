@@ -73,7 +73,7 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 SDKのバイナリファイルを配置します。  
 
-1. SDKを[こちら](https://github.com/skyway/android-sdk/releases/latest){:target="_blank"}からダウンロード
+1. SDKを[こちら](https://github.com/skyway/skyway-android-sdk/releases/latest){:target="_blank"}からダウンロード
 2. 開発用プロジェクトに`app/libs`ディレクトリを作成する
 3. ZIPファイルを解凍後、`skyway.arr`を、`app/libs`ディレクトリ直下に配置
 4. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
