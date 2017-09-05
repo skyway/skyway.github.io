@@ -43,7 +43,7 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples){:target="_blank"}をご覧ください。|OFF|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"}をご覧ください。|OFF|
 
 ### ローカルWebサーバの準備
 
@@ -175,7 +175,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 {: .lang}
 
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
 ### Peerオブジェクトの作成

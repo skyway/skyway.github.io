@@ -36,17 +36,17 @@ $ npm install eclwebrtc-js-sdk
 {: .lang}
   
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
 ### Case: Downloading as file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/js-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
+    <a href="https://github.com/skyway/skyway-js-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/skyway/js-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <a href="https://github.com/skyway/skyway-js-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
   </div>
 </div>
 
@@ -62,7 +62,7 @@ $ npm install eclwebrtc-js-sdk
     <a href="./js-reference/" class="btn btn-primary">ECLWebRTC API Reference</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#JS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
+    <a href="http://nttcom.github.io/skyway/en/docs/#JS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
   </div>
 </div>
 
@@ -78,21 +78,21 @@ Sample code is open to public.
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_broadcast" target="_blank">One-to-many video distribution</a></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_broadcast" target="_blank">One-to-many video distribution</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, SFU</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_videochat" target="_blank">video chat</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>
