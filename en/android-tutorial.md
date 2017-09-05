@@ -12,7 +12,7 @@ breadcrumb: [en/index.md, en/developer.md, en/android-sdk.md]
 
 By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
-You can try [demonstration of the completed application]().
+You can try [demonstration of the completed application]()(#){:target="_blank"}.
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with video chat">
@@ -29,8 +29,8 @@ You can try [demonstration of the completed application]().
 
 ### Generate ECLWebRTC API Key
 
-For customers who have not completed a developer registration, do so from [New Registration of the Community Edition](signup.md).
-For those who had registered already, or have just completed the registration, [Login to Dashboard](login.md) and create an application to obtain an API key.
+For customers who have not completed a developer registration, do so from [New Registration of the Community Edition](./signup.html).
+For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
 
 Application settings in the Dashboard are as follows.
 
@@ -42,7 +42,7 @@ Application settings in the Dashboard are as follows.
 |Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
 |Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./android-reference/) for details.|ON|
-|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/nttcom/Peer-Authentication-Server-Samples) for details.|OFF|
+|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/nttcom/Peer-Authentication-Server-Samples){:target="_blank"} for details.|OFF|
 
 ### Preparation of Development Environment
 
@@ -66,7 +66,7 @@ Download Android Studio project used in Tutorial from below repository.
 
 Arrange SDK binary files.
 
-1. Download SDK from [here](https://github.com/nttcom/SkyWay-Android-SDK/releases/latest)
+1. Download SDK from [here](https://github.com/skyway/android-sdk/releases/latest){:target="_blank"}
 2. Create `app/libs` directory for development project
 3. After decompressing ZIP file, arrange `eclwebrtc.arr` directly under `app/libs` directory.
 4. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.

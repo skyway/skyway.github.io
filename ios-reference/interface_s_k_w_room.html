@@ -36,7 +36,7 @@
      /
      <a href="../ios-sdk.html">iOS SDK</a>
      /
-     <span>APIリファレンス</span>
+     <a href="./">APIリファレンス</a>
      /
      <span>SKWRoom クラス</span>
     </p>
@@ -85,7 +85,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="interface_s_k_w_mesh_room.html" title="メッシュルームクラス ">SKWMeshRoom</a> / <a class="el" href="interface_s_k_w_s_f_u_room.html" title="SFU ルームクラス ">SKWSFURoom</a> の基底クラスです。  
+<p><a class="el" href="interface_s_k_w_mesh_room.html" title="メッシュ接続でのルームを提供するルームクラスです。 ">SKWMeshRoom</a> / <a class="el" href="interface_s_k_w_s_f_u_room.html" title="SFU ルームクラス ">SKWSFURoom</a> の基底クラスです。  
  <a href="interface_s_k_w_room.html#details">[詳解]</a></p>
 
 <p><code>#import &lt;<a class="el" href="_s_k_w_room_8h_source.html">SKWRoom.h</a>&gt;</code></p>
@@ -95,7 +95,7 @@ SKWRoom の継承関係図</div>
  <div class="center">
   <img src="interface_s_k_w_room.png" usemap="#SKWRoom_map" alt=""/>
   <map id="SKWRoom_map" name="SKWRoom_map">
-<area href="interface_s_k_w_mesh_room.html" title="メッシュルームクラス " alt="SKWMeshRoom" shape="rect" coords="0,112,101,136"/>
+<area href="interface_s_k_w_mesh_room.html" title="メッシュ接続でのルームを提供するルームクラスです。 " alt="SKWMeshRoom" shape="rect" coords="0,112,101,136"/>
 <area href="interface_s_k_w_s_f_u_room.html" title="SFU ルームクラス " alt="SKWSFURoom" shape="rect" coords="111,112,212,136"/>
 </map>
  </div></div>
@@ -112,7 +112,7 @@ SKWRoom の継承関係図</div>
 <tr class="memdesc:a5f02542e9d2a7be9f5194fe0e147942b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="interface_s_k_w_room.html" title="SKWMeshRoom / SKWSFURoom の基底クラスです。 ">SKWRoom</a> の設定済みイベントコールバック block を解除します。  <a href="#a5f02542e9d2a7be9f5194fe0e147942b">[詳解]</a><br /></td></tr>
 <tr class="separator:a5f02542e9d2a7be9f5194fe0e147942b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09c2d417cd302156884525b9cc1123ef"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_room.html#a09c2d417cd302156884525b9cc1123ef">getLog</a></td></tr>
-<tr class="memdesc:a09c2d417cd302156884525b9cc1123ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のルームのログ情報を取得します。結果は SKW_ROOM_EVENT_LOG イベントで返されます。  <a href="#a09c2d417cd302156884525b9cc1123ef">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a09c2d417cd302156884525b9cc1123ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">シグナリングサーバにルームのログ取得を要求します。結果は SKW_ROOM_EVENT_LOG イベントで返されます。  <a href="#a09c2d417cd302156884525b9cc1123ef">[詳解]</a><br /></td></tr>
 <tr class="separator:a09c2d417cd302156884525b9cc1123ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -123,7 +123,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr class="separator:a3d768ecc7d07e78f5ee15db37228191f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p><a class="el" href="interface_s_k_w_mesh_room.html" title="メッシュルームクラス ">SKWMeshRoom</a> / <a class="el" href="interface_s_k_w_s_f_u_room.html" title="SFU ルームクラス ">SKWSFURoom</a> の基底クラスです。 </p>
+<div class="textblock"><p><a class="el" href="interface_s_k_w_mesh_room.html" title="メッシュ接続でのルームを提供するルームクラスです。 ">SKWMeshRoom</a> / <a class="el" href="interface_s_k_w_s_f_u_room.html" title="SFU ルームクラス ">SKWSFURoom</a> の基底クラスです。 </p>
 </div><h2 class="groupheader">メソッド詳解</h2>
 <a id="a09c2d417cd302156884525b9cc1123ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09c2d417cd302156884525b9cc1123ef">&#9670;&nbsp;</a></span>getLog()</h2>
@@ -140,7 +140,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
       </table>
 </div><div class="memdoc">
 
-<p>現在のルームのログ情報を取得します。結果は SKW_ROOM_EVENT_LOG イベントで返されます。 </p>
+<p>シグナリングサーバにルームのログ取得を要求します。結果は SKW_ROOM_EVENT_LOG イベントで返されます。 </p>
 <div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_LOG <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSArray* logs = (NSArray*)arg1;</div><div class="line">    [logs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop) {</div><div class="line">        NSString* logStr = (NSString*)obj;</div><div class="line">        NSError* error = nil;</div><div class="line">        id logData = [NSJSONSerialization JSONObjectWithData:[logStr dataUsingEncoding:NSUTF8StringEncoding]</div><div class="line">                                                     options:0</div><div class="line">                                                       error:&amp;error];</div><div class="line">        if (nil == error)</div><div class="line">        {</div><div class="line">            NSLog(@&quot;SKW_ROOM_EVENT_LOG: %@&quot;, logData);</div><div class="line">        }</div><div class="line">    }];</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a09c2d417cd302156884525b9cc1123ef">getLog</a>];</div></div><!-- fragment --> 
 </div>
 </div>

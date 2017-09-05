@@ -22,13 +22,14 @@ SkyWayを利用すればアプリケーションの開発を簡単に始める�
 次のコマンドを入力して、ビデオ通話アプリを動かしてみましょう。
 
 ```sh
-~ $ npm install eclwebrtc-skeleton
-~ $ npm start
+~ $ git clone git@github.com:skyway/skyway-js-skeleton.git
+~ $ cd skyway-js-skeleton
+~ $ npm install & npm start
 ```
 
 ### STEP2
 
-うまく動いたら、[Community Edition](http://127.0.0.1:4000/signup.html#)に登録し、APIキーを発行しましょう。　　
+うまく動いたら、[Community Edition](./signup.html)に登録し、APIキーを発行しましょう。　　
 
 ### STEP3
 
@@ -36,7 +37,7 @@ SkyWayを利用すればアプリケーションの開発を簡単に始める�
 チュートリアルやAPIリファレンスを参考に、本格的な開発を始めましょう。
 
 ```sh
-~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+~ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
 ## SDK
@@ -53,7 +54,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <a href="./js-tutorial.html" class="list-group-item list-group-item-action">チュートリアル</a>
             <a href="./js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
             <a href="./js-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -65,7 +66,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <a href="./ios-tutorial.html" class="list-group-item list-group-item-action">チュートリアル</a>
             <a href="./ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
             <a href="./ios-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -77,7 +78,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <a href="./android-tutorial.html" class="list-group-item list-group-item-action">チュートリアル</a>
             <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
             <a href="./android-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">サンプルコード</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -147,7 +148,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">多人数通話や配信を実現する、映像・音声送信を代行するメディアサーバを提供</p>
-                <a href="#" class="btn btn-outline-primary">料金</a>
+                <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">料金</a>
                 <a href="./sfu.html" class="btn btn-outline-primary">SFUの説明</a>
             </div>
         </div>
@@ -200,7 +201,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 ## メンテナンス・障害情報
 
 メンテナンス、障害情報を公開しています。  
-各情報の通知をRSSで受け取りたい方は、 [メンテナンスおよび障害情報のお知らせと通知について](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
+各情報の通知をRSSで受け取りたい方は、 [メンテナンスおよび障害情報のお知らせと通知について](https://support.webrtc.ecl.ntt.com/hc/ja/articles/236195548){:target="_blank"} をご覧ください。
 
 
 <div class="card">

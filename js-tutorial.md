@@ -26,10 +26,14 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 
 ### SkyWayのAPIキー発行
 
-SkyWayへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
-トライアル版SkyWayのAPIキーはご利用になれないので、トライアル版SkyWayをご利用の方も、新規登録をお願いします。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+<p>
+  SkyWayへの開発者登録がまだの方は、まず、<a href="./signup.html">Community Editionの新規登録</a>から開発者登録をしてください。
+  <small class="text-muted">
+    <br>トライアル提供していました旧SkyWayのAPIキーはご利用になれないため、2017年9月6日以前にSkyWayにご登録いただいた方も新規登録をお願いします。
+  </small>
+</p>
 
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](./login.html)し、アプリケーションを作成して、APIキーを取得してください。
 ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
 |設定項目|項目の説明|チュートリアルの設定内容|
@@ -39,7 +43,7 @@ SkyWayへの開発者登録がまだの方は、まず、[Community Editionの�
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples){:target="_blank"}をご覧ください。|OFF|
 
 ### ローカルWebサーバの準備
 
@@ -79,7 +83,7 @@ $ php -S localhost:8080
 
 #### Windowsの場合
 
-[Mongoose](https://cesanta.com/)や[XAMPP](https://sourceforge.net/projects/xampp/)をインストールし、Webサーバをローカル環境で利用できるようにしてください。
+[Mongoose](https://cesanta.com/){:target="_blank"}や[XAMPP](https://sourceforge.net/projects/xampp/){:target="_blank"}をインストールし、Webサーバをローカル環境で利用できるようにしてください。
 
 ## プロジェクトの作成
 {: #craete-project }
@@ -87,13 +91,13 @@ $ php -S localhost:8080
 チュートリアルで利用するソースコードは以下のリポジトリからダウンロードしてください。  
 ダウンロード後は、 `index.html` をWebサーバで閲覧できるように適切に配置してください。
 
-- [https://github.com/skyway/eclwebrtc-js-sdk-tutorial](https://github.com/skyway/eclwebrtc-js-sdk-tutorial)
+- [https://github.com/skyway/js-sdk-tutorial](https://github.com/skyway/js-sdk-tutorial){:target="_blank"}
 
 以後のステップでは、同梱されている `script.js` に必要なコードを追記していきます。
   
 - 本チュートリアルの制約事項
   - DOM操作にはjQueryを利用しています。
-  - 動作確認済ブラウザは[Google Chrome](https://www.google.com/chrome)と[Firefox](https://www.mozilla.org/firefox/)の最新版です。
+  - 動作確認済ブラウザは[Google Chrome](https://www.google.com/chrome){:target="_blank"}と[Firefox](https://www.mozilla.org/firefox/){:target="_blank"}の最新版です。
 
 
 ## カメラ映像、マイク音声の取得
@@ -171,7 +175,7 @@ getUserMediaのConstraints(`{video: true, audio: true}`)に以下のような指
 {: .lang}
 
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway.js"></script>
 ```
 
 ### Peerオブジェクトの作成
@@ -198,7 +202,7 @@ peer = new Peer({
 });
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./js-reference/)をご覧ください。
 
 ## 接続成功・失敗・切断時の処理
 {: #eventlistener }

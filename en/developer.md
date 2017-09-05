@@ -22,8 +22,9 @@ ECLWebRTC enables customers to start developing applications easily.
 Enter the following command to start a videochat application.
 
 ```sh
-~ $ npm install eclwebrtc-skeleton
-~ $ npm start
+~ $ git clone git@github.com:skyway/skyway-js-skeleton.git
+~ $ cd skyway-js-skeleton
+~ $ npm install & npm start
 ```
 
 ### STEP2
@@ -36,7 +37,7 @@ Replace the API key in the sample code with the one you got in STEP2.
 Start a developing a fully functioning app by reading the tutorials and API reference.
 
 ```sh
-~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+~ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
 ## SDK
@@ -53,7 +54,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="./js-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./js-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./js-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action">Sample Code</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -65,7 +66,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="./ios-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./ios-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./ios-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action">Sample Code</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -77,7 +78,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="./android-tutorial.html" class="list-group-item list-group-item-action">Tutorial</a>
             <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDK Download</a>
             <a href="./android-reference/" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action">Sample Code</a>
+            <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
     <div class="col-6 col-md-3">
@@ -138,7 +139,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <div class="card-body">
                 <h3 class="card-title">TURN</h3>
                 <p class="card-text">Servers to relay media in environments where Peer to Peer communication cannot be established.</p>
-                <a href="./pricing.html#サーバ通信料" class="btn btn-outline-primary">Pricing</a>
+                <a href="./pricing.html#turnsfu-communication-charge" class="btn btn-outline-primary">Pricing</a>
             </div>
         </div>
     </div>
@@ -147,7 +148,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <div class="card-body">
                 <h3 class="card-title">SFU</h3>
                 <p class="card-text">Media servers that relay voice and video data to make conferences with many people possible.</p>
-                <a href="#" class="btn btn-outline-primary">Pricing</a>
+                <a href="./pricing.html#turnsfu-communication-charge" class="btn btn-outline-primary">Pricing</a>
                 <a href="./sfu.html" class="btn btn-outline-primary">Details of SFU</a>
             </div>
         </div>
@@ -199,7 +200,7 @@ Community support tickets useful for development.
 ## Maintenance and Failure Information
 
 Maintenance and Failure Information.
-If you want to receive RSS notifications, please see [Announcement and Notification of Maintenance and Failure Information](https://support.skyway.io/hc/ja/articles/236195548){:target="_blank"}.
+If you want to receive RSS notifications, please see [Announcement and Notification of Maintenance and Failure Information](https://support.webrtc.ecl.ntt.com/hc/en-us/articles/236195548){:target="_blank"}.
 
 
 

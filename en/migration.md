@@ -14,7 +14,7 @@ breadcrumb: [en/index.md, en/developer.md]
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">
           <h3 class="card-title">Customers using SkyWay</h3>
-          <p class="card-text">SkyWay is terminated as of March 31st, 2018. How to migrate from Skyway to ECLWebRTC is explained.（Reference: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_target">SDK difference and how to migrate)</a></p>
+          <p class="card-text">SkyWay is terminated as of March 31st, 2018. How to migrate from Skyway to ECLWebRTC is explained.（Reference: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank">SDK difference and how to migrate)</a></p>
             <a class="btn btn-outline-primary collapsed" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="true" aria-controls="toECLWebRTC">
               Confirm how to migrate
             </a>
@@ -39,12 +39,12 @@ breadcrumb: [en/index.md, en/developer.md]
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>About migration from SkyWay to ECLWebRTC</h2>
-        <p>SkyWay is terminated as of March 31st, 2018. How to migrate from Skyway to ECLWebRTC is explained.Customers who are using SkyWay are requested to migrate to the succeeding service “ECLWebRTC”, which is an advanced version of SkyWay.(Reference: <a href="https://support.skyway.io/hc/ja" target="_target">Function comparison of SkyWay and ECLWebRTC)</a></p>
+        <p>SkyWay is terminated as of March 31st, 2018. How to migrate from Skyway to ECLWebRTC is explained.Customers who are using SkyWay are requested to migrate to the succeeding service “ECLWebRTC”, which is an advanced version of SkyWay.(Reference: <a href="https://support.webrtc.ecl.ntt.com/hc/en-us/" target="_blank">Function comparison of SkyWay and ECLWebRTC)</a></p>
         <p>Migrate according to following procedure.</p>
         <h3>1. Registration of ECLWebRTC</h3>
         <p>
           Please make a new registration of ECLWebRTC on the <a href="./signup.html">Registration page</a>.
-          The Community Edition can be used for free. Please refer to <a href="./singup.html">Pricing page</a> for details.
+          The Community Edition can be used for free. Please refer to <a href="./pricing.html">Pricing page</a> for details.
           The following procedure is the same even if you <a href="./contactus.html">registration the Enterprise Edition</a>.
         </p>
         <a href="./signup.html" class="btn btn-primary">Registration for Free</a>
@@ -57,12 +57,10 @@ breadcrumb: [en/index.md, en/developer.md]
         <p>
           As some differences exist in API of the SDK, please modify the program by referencing to the following document.
         </p>
-        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" class="btn btn-primary">SDK difference and how to migrate</a></p>
+        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-primary">SDK difference and how to migrate</a></p>
         <div class="alert alert-info" role="alert">
-          <p>
             The SDK of SkyWay and the SDK of ECLWebRTC cannot be interconnected.<br>
             The SDK of ECLWebRTC accepts APIKey generated only by the Community Edition or the Enterprise Edition of ECLWebRTC.
-          </p>
         </div>
       </div>
     </div>

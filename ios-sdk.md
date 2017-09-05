@@ -25,7 +25,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
+[チュートリアルの続きを読む](./ios-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
 {: #sdkdownload }
@@ -55,7 +55,7 @@ $ pod init
     <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/ios-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
     <small>git-lfsのインストールが必要です</small>
   </div>
 </div>
@@ -87,18 +87,18 @@ iOS 8+
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p_textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh_textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu_textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>
