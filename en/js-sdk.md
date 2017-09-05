@@ -24,12 +24,6 @@ You can try [demonstration of the completed application](){: target="_blank"}.
 ## Download SDK
 {: #sdkdownload }
 
-### Case: Using npm
-
-```sh
-$ npm install eclwebrtc-js-sdk
-```
-
 ### Case: Using CDN
 
 *HTML*
@@ -66,7 +60,7 @@ $ npm install eclwebrtc-js-sdk
   </div>
 </div>
 
-Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: target="_blank"}.
+Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs){: target="_blank"}.
 
 ## Sample Code
 

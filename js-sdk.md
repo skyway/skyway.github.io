@@ -24,12 +24,6 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 ## SDKのダウンロード
 {: #sdkdownload }
 
-### npmを利用する場合
-
-```sh
-$ npm install eclwebrtc-js-sdk
-```
-
 ### CDNを利用する場合
 
 *HTML*
