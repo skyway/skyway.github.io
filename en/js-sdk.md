@@ -12,11 +12,18 @@ breadcrumb: [en/index.md, en/developer.md]
 By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
 The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-You can try [demonstration of the completed application](){: target="_blank"}.
+You can try [demonstration of the completed application](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){: target="_blank"}.
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
   <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+</figure>
+
+<figure class="figure">
+  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-videchat.png"
+    class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
 [Continue the turorial](js-tutorial.html){: .btn .btn-primary }
@@ -79,7 +86,7 @@ Sample code is open to public.
         <tr>
           <th scope="row">Multi-party, P2P</th>
           <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">One-to-many video distribution</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">video distribution</a></td>
           <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
