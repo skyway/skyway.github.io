@@ -7,23 +7,25 @@ breadcrumb: [en/index.md, en/developer.md]
 
 # Android SDK
 
-## Turorial
+## Tutorial
 
 By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
-You can try [demonstration of the completed application](#){:target="_blank"}.
+
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided as sample codes.
+If you want to try the completed application, [download the source codes](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
+
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with video chat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with video chat</figcaption>
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
   <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
-
-[Continue the turorial](android-tutorial.html){: .btn .btn-primary }
 
 ##  Download SDK
 {: #sdkdownload }

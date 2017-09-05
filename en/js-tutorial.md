@@ -13,11 +13,18 @@ breadcrumb: [en/index.md, en/developer.md, en/js-sdk.md]
 By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
 The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-You can try [demonstration of the completed application](){:target="_blank"}.
+You can try [demonstration of the completed application](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){:target="_blank"}.
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
   <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+</figure>
+
+<figure class="figure">
+  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-videchat.png"
+    class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
 ##  Preparation before the Development Start
@@ -25,8 +32,8 @@ You can try [demonstration of the completed application](){:target="_blank"}.
 
 ### Generate ECLWebRTC API Key
 
-For customers who have not completed a developer registration, do so from [Registration of the Community Edition](./signup.html).
-For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
+For customers who have not completed a developer registration, do so from [Registration of the Community Edition](https://console-webrtc-free.ecl.ntt.com/users/registration).
+For those who had registered already, or have just completed the registration, [Login to Dashboard](https://console-webrtc-free.ecl.ntt.com/users/login) and create an application to obtain an API key.
 
 Application settings on the Dashboard are as follows.
 
@@ -36,7 +43,7 @@ Application settings on the Dashboard are as follows.
 |Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
 |Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
-|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./android-reference/) for details.|ON|
+|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./js-reference/Peer.html#listAllPeers) for details.|ON|
 |Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
 
 ### Preparation for Local Web Server
@@ -86,7 +93,7 @@ For the source codes used in the tutorial, please download them from the followi
 
 After downloading, arrange `index.html` adequately so that it can be viewed on the Web server.
 
-- [https://github.com/skyway/js-sdk-tutorial](https://github.com/skyway/js-sdk-tutorial){:target="_blank"}
+- [https://github.com/skyway/skyway-js-sdk-tutorial](https://github.com/skyway/skyway-js-sdk-tutorial){:target="_blank"}
 
 In the following steps, we will add required codes to `script.js` which is included in the package.
 
@@ -148,12 +155,12 @@ To protect the privacy of the user, a dialog box asking for your permission will
 If multiple cameras and/or microphones are connected, you can choose any camera and/or microphone with this dialog.
 
 <figure class="figure">
-  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/7e985821-901b-33eb-0f57-2fc4b677f0d8.png" class="figure-img img-fluid rounded" alt="Dialogue of Chrome">
+  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-chrome-gum.png" class="figure-img img-fluid rounded" alt="Dialogue of Chrome">
   <figcaption class="figure-caption">Dialogue of Chrome</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://qiita-image-store.s3.amazonaws.com/0/6651/21d50fdc-e86a-d301-98f1-2a8df20c7608.png" class="figure-img img-fluid rounded" alt="Dialogue of Firefox">
+  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-firefox-gum.png" class="figure-img img-fluid rounded" alt="Dialogue of Firefox">
   <figcaption class="figure-caption">Dialogue of Firefox</figcaption>
 </figure>
 
@@ -196,7 +203,7 @@ peer = new Peer({
 });
 ```
 
-Please refer to [API Reference](./js-reference/) for other options that can be specified in Peer object.
+Please refer to [API Reference](./js-reference/Peer.html#Peer) for other options that can be specified in Peer object.
 
 ## Process When Connection is Succeeded, Failed, or Disconnected
 {: #eventlistener }

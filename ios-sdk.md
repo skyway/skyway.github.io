@@ -12,11 +12,12 @@ breadcrumb: [index.md, developer.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](#){:target="_blank"}と同じものになります。
-完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p_videochat){:target="_blank"}と同じものになります。
+完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
@@ -56,7 +57,6 @@ $ pod init
   </div>
   <div>
     <a href="https://github.com/skyway/skyway-ios-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
-    <small>git-lfsのインストールが必要です</small>
   </div>
 </div>
 
