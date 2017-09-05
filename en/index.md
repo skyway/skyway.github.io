@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ECLWebRTC - Enterprise Cloud WebRTC Platform
-description: ECLWebRTC is a platform for developers that lets you add video conversation to applications, Web sites and IoT devices. With ECLWebRTC, you can concentrate on developing your service and focus on innovation.
+description: A platform for developers that lets you add video chat to mobile apps, websites and IoT devices. With ECLWebRTC, you can focus on innovation and development.
 lang: en
 main_visual:
   main_copy: Try an Innovation through Realtime Communication.
