@@ -262,7 +262,6 @@ These are an estimate of the call times until you hit the TURN usage limit for t
 
 ## About Pricing
 
-Please refer to the [FAQ]() for details.
 If you need detailed estimation of the cost, please use the [Cost Simulator](https://ecl.ntt.com/en/pricing/).
 
 ## Start Innovating!
