@@ -97,7 +97,7 @@ $ php -S localhost:8080
 チュートリアルで利用するソースコードは以下のリポジトリからダウンロードしてください。  
 ダウンロード後は、 `index.html` をWebサーバで閲覧できるように適切に配置してください。
 
-- [https://github.com/skyway/js-sdk-tutorial](https://github.com/skyway/js-sdk-tutorial){:target="_blank"}
+- [https://github.com/skyway/skyway-js-sdk-tutorial](https://github.com/skyway/skyway-js-sdk-tutorial){:target="_blank"}
 
 以後のステップでは、同梱されている `script.js` に必要なコードを追記していきます。
   
