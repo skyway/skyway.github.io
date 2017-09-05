@@ -78,21 +78,21 @@ $ npm install eclwebrtc-js-sdk
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_broadcast" target="_blank">1:多のビデオ配信</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">1:多のビデオ配信</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>
