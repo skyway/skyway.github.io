@@ -13,13 +13,14 @@ breadcrumb: [en/index.md, en/developer.md, en/ios-sdk.md]
 By using basic functions of iOS SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the iOS SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](){:target="_blank"} provided as sample codes.  
-If you want to try the completed application, download the source codes and build in accordance with the build procedure of this tutorial.
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p_videochat){:target="_blank"} provided as sample codes.
+If you want to try the completed application, [download the source codes](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
 
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use SkyWay to perform signaling to interconnect terminals with video chat">
-  <figcaption class="figure-caption">Use SkyWay to perform signaling to interconnect terminals with video chat</figcaption>
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
@@ -32,8 +33,8 @@ If you want to try the completed application, download the source codes and buil
 
 ### Generate ECLWebRTC API Key
 
-For customers who have not completed a developer registration, do so from [Registration of the Community Edition](./signup.html).
-For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
+For customers who have not completed a developer registration, do so from [Registration of the Community Edition](https://console-webrtc-free.ecl.ntt.com/users/registration).
+For those who had registered already, or have just completed the registration, [Login to Dashboard](https://console-webrtc-free.ecl.ntt.com/users/login) and create an application to obtain an API key.
 
 Application settings on the Dashboard are as follows.
 
@@ -43,7 +44,7 @@ Application settings on the Dashboard are as follows.
 |Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
 |Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
-|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./android-reference/) for details.|ON|
+|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./ios-reference/interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a) for details.|ON|
 |Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
 
 ### Preparation of Development Environment
@@ -63,14 +64,14 @@ In this tutorial, the development will proceed assuming the following environmen
 
 Download Xcode project used in Tutorial from below repository.
 
-- [https://github.com/skyway/ios-sdk-tutorial](https://github.com/skyway/ios-sdk-tutorial){:target="_blank"}
+- [https://github.com/skyway/skyway-ios-sdk-tutorial](https://github.com/skyway/skyway-ios-sdk-tutorial){:target="_blank"}
 
 ### Add SDK to Project
 
 Arrange SDK binary files.
 In this tutorial, we will introduce a procedure to manually set the downloaded file into the project.
 
-1. Download SDK from [Here](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip)
+1. Download SDK from [Here](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)
 2. After decompressing the ZIP file, arrange `ECLWebRTC.framework` directly under `eclwebrtc-ios-sdk-tutorial` directory.
 3. Double click `eclwebrtc-ios-sdk-tutorial.xcodeproj` and open project.
 4. Right-click on the file tree on the left pane and select [ **Add File to…** ] to add `ECLWebRTC.framework` arranged just before to the file tree.
@@ -218,7 +219,7 @@ For the Peer object, specify API key, domain name and debug level by using SKWPe
     _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-Please refer to [API Reference](./ios-reference/) for other options that can be specified in Peer object.
+Please refer to [API Reference](./ios-reference/interface_s_k_w_peer_option.html) for other options that can be specified in Peer object.
 
 ## Process When Connection is Succeeded, Failed, or Disconnected
 {: #eventlistener }
@@ -263,7 +264,7 @@ Explanation for items to be set is as below.
 `cameraPosition`: Select camera for use（`SKW_CAMERA_POSITION_FRONT` as default）
 - For the camera position, front camera (`SKW_CAMERA_POSITION_FRONT`) or back camera (`SKW_CAMERA_POSITION_BACK`) can be selected.
 
-Please refer to [API Reference](./ios-reference/) for other items.
+Please refer to [API Reference](./ios-reference/interface_s_k_w_media_constraints.html) for other items.
 
 *Objective-C*
 {: .lang}
