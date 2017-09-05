@@ -4,7 +4,8 @@
   {% assign title_tag = site.title[page.lang] | prepend: " - " | prepend: page.title | escape %}
 {% endif %}
 {% assign description_tag = page.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
-{% assign full_url = page.url | replace: 'index.html','' | prepend: site.url %}
+{% assign full_base_url = site.url | append: site.baseurl %}
+{% assign full_url = page.url | replace: 'index.html','' | prepend: full_base_url %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,7 +28,7 @@
   {% if page.description %}
   <meta property="og:description" content="{{ description_tag }}">
   {% endif %}
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: full_base_url }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="canonical" href="{{ full_url }}">
   {% include google-analytics.html %}
