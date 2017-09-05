@@ -8,15 +8,19 @@ breadcrumb: [en/index.md, en/developer.md, en/android-sdk.md]
 - TOC
 {:toc}
 
-# Android SDK turorial
+# Android SDK tutorial
 
 By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
 The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
-You can try [demonstration of the completed application]()(#){:target="_blank"}.
+
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided as sample codes.
+If you want to try the completed application, [download the source codes](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
+
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with video chat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with video chat</figcaption>
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
+  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
@@ -29,8 +33,8 @@ You can try [demonstration of the completed application]()(#){:target="_blank"}.
 
 ### Generate ECLWebRTC API Key
 
-For customers who have not completed a developer registration, do so from [New Registration of the Community Edition](./signup.html).
-For those who had registered already, or have just completed the registration, [Login to Dashboard](./login.html) and create an application to obtain an API key.
+For customers who have not completed a developer registration, do so from [New Registration of the Community Edition](https://console-webrtc-free.ecl.ntt.com/users/registration).
+For those who had registered already, or have just completed the registration, [Login to Dashboard](https://console-webrtc-free.ecl.ntt.com/users/login) and create an application to obtain an API key.
 
 Application settings in the Dashboard are as follows.
 
@@ -60,7 +64,7 @@ In this tutorial, the development will proceed assuming the following environmen
 
 Download Android Studio project used in Tutorial from below repository.
 
-- [https://github.com/skyway/eclwebrtc-android-sdk-tutorial](https://github.com/skyway/eclwebrtc-android-sdk-tutorial)
+- [https://github.com/skyway/skyway-android-sdk-tutorial](https://github.com/skyway/skyway-android-sdk-tutorial)
 
 ## Add SDK to Project
 
