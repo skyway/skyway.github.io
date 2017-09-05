@@ -12,12 +12,20 @@ breadcrumb: [index.md, developer.md]
 JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
 通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-[完成したアプリのデモ](){:target="_blank"}を試すことができます。
+[完成したアプリのデモ](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){:target="_blank"}を試すことができます。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
+
+<figure class="figure">
+  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-videchat.png"
+    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
+</figure>
+
 
 [チュートリアルの続きを読む](./js-tutorial.html){: .btn .btn-primary }
 
