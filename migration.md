@@ -58,7 +58,7 @@ breadcrumb: [index.md, developer.md]
         </p>
         <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-primary">SDK差分と移行方法について</a></p>
         <div class="alert alert-info" role="alert">
-            トライアル版のSDKとは相互接続できません<br>
+            2017年9月6日以前のトライアル版のSDKとは相互接続できません<br>
             最新のSDKは、SkyWay Community EditionまたはEnterprise Editionで発行したAPIKeyのみご利用いただけます。
         </div>
       </div>

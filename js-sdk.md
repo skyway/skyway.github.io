@@ -19,7 +19,7 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](js-tutorial.html){: .btn .btn-primary }
+[チュートリアルの続きを読む](./js-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
 {: #sdkdownload }
@@ -36,17 +36,17 @@ $ npm install eclwebrtc-js-sdk
 {: .lang}
   
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
 ### ファイルをダウンロードする場合
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/js-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-js-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/skyway/js-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/skyway-js-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
   </div>
 </div>
 
@@ -78,21 +78,21 @@ $ npm install eclwebrtc-js-sdk
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_videochat" target="_blank">ビデオ通話</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/p2p_broadcast" target="_blank">1:多のビデオ配信</a></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p_broadcast" target="_blank">1:多のビデオ配信</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh_textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_videochat" target="_blank">ビデオ通話</a></td>
           <td></td>
-          <td><a href="https://github.com/skyway/js-sdk/tree/master/examples/sfu_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu_textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>
