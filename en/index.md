@@ -93,7 +93,7 @@ The Enterprise Edition can be used for commercial, large-scale services without 
     <tr>
       <th scope="row">Basic Charge</th>
       <td>¥0</td>
-      <td>Initial ¥0 + Monthly ¥100,000</td>
+      <td>¥100,000 per month</td>
     </tr>
     <tr>
       <th scope="row">Signaling Charge</th>
@@ -194,10 +194,6 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
 
 
 [See other examples](https://skyway.github.io/usecase/)
-
-<!-- Modal -->
-
-[migrationのモーダルを表示](./?origin=skyway)
 
 <script>
 $(function() {

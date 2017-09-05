@@ -30,10 +30,10 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/android-sdk/releases/latest" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-android-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/skyway/android-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/skyway-android-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
   </div>
 </div>
 
@@ -64,18 +64,18 @@ Android 4.2+ (API Level 17+)
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/p2p_videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/p2p_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/fullmesh_videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/fullmesh_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/mesh-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/mesh-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/sfu_videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/android-sdk/tree/master/examples/sfu_textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>

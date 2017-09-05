@@ -53,10 +53,10 @@ $ pod init
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">Download as ZIP</a>
+    <a href="https://github.com/skyway/skyway-ios-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
   </div>
   <div>
-    <a href="https://github.com/skyway/ios-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <a href="https://github.com/skyway/skyway-ios-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
     <small>git lfs install must be run.</small>
   </div>
 </div>
@@ -72,7 +72,7 @@ iOS 8+
     <a href="./ios-reference/" class="btn btn-primary">ECLWebRTC API Reference</a>
   </div>
   <div class="pb-3">
-    <a href="http://nttcom.github.io/skyway/docs/#iOS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
+    <a href="http://nttcom.github.io/skyway/en/docs/#iOS" class="btn btn-outline-primary" target="_blank">SkyWay API Reference</a><br>
   </div>
 </div>
 

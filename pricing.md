@@ -89,7 +89,7 @@ Community Editionは一切、料金がかかりません。
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">
-      〜10,000,000<span class="d-sm-none">回/月</span>
+      1,000,001〜<span class="d-sm-none">回/月</span>
     </td>
     <td></td>
     <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥100,000</td>
@@ -260,7 +260,7 @@ Community Editionは一切、料金がかかりません。
 </div>
 
 ## 料金に関して
-より詳細な情報は[FAQ]()をご覧ください<br>
+
 より詳細に料金を見積りたい方は[料金表及び料金シミュレーター](https://ecl.ntt.com/pricing/)をご利用ください
 
 ## あなたのイノベーションを始めよう

@@ -26,7 +26,7 @@ Community EditionからEnterprise Editionへの移行や、申し込みに関す
       <div class="card-body">
         <h3 class="card-title">お問い合わせ（サービス仕様）</h3>
         <p class="card-text">Webフォームでお受けしています<br><small class="text-muted">契約済みの方は<a href="https://ecl.ntt.com/documents/tutorials/rsts/Support/ticket/ticket.html">チケットサポート</a>をご利用下さい<br>内容によりお答えできない場合もあります</small></p>
-        <a href="https://support.webrtc.ecl.ntt.com/hc/ja/requests/new" class="btn btn-primary">お問い合わせフォーム</a>
+        <a href="https://support.skyway.io/hc/ja/requests/new" class="btn btn-primary">お問い合わせフォーム</a>
       </div>
     </div>
   </div>
