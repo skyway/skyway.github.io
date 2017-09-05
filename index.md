@@ -198,10 +198,6 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 
 [その他の事例はこちら](https://skyway.github.io/usecase/)
 
-<!-- Modal -->
-
-[migrationのモーダルを表示](./?origin=skyway)
-
 <script>
 $(function() {
   'use strict';
