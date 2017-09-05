@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['scaling',['scaling',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas.html#ae5fd0b1870c921ce34dcea1720e092be',1,'io::skyway::Peer::Browser::Canvas']]],
-  ['serialization',['serialization',['../classio_1_1skyway_1_1_peer_1_1_connect_option.html#ac3265677be44d4e796e95e0cddf9d913',1,'io::skyway::Peer::ConnectOption']]],
-  ['server_5ferror',['SERVER_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#aa51699adee04ba5cd284ec6865fc1f0a',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
-  ['sfu',['SFU',['../enumio_1_1skyway_1_1_peer_1_1_room_option_1_1_room_mode_enum.html#a31d39c895d0c69f96a47744c1457e83b',1,'io::skyway::Peer::RoomOption::RoomModeEnum']]],
-  ['socket_5fclosed',['SOCKET_CLOSED',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a6a28e2cd0f8ad91200b145da8f7eab45',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
-  ['socket_5ferror',['SOCKET_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a3282cc24f86ee825cab8c3466a2227ce',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
-  ['ssl_5funavailable',['SSL_UNAVAILABLE',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#ac1c55710c6c8a324c2b59b8347b79c21',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
-  ['stream',['STREAM',['../enumio_1_1skyway_1_1_peer_1_1_media_connection_1_1_media_event_enum.html#a173aa67361f7e638db3611edab21563c',1,'io.skyway.Peer.MediaConnection.MediaEventEnum.STREAM()'],['../classio_1_1skyway_1_1_peer_1_1_room_option.html#a37f49ff5f2c3ae607fc42121b0d93dc4',1,'io.skyway.Peer.RoomOption.stream()']]]
+  ['reliable',['reliable',['../classio_1_1skyway_1_1_peer_1_1_connect_option.html#af5fe4d8e7ffa6a9b4f2b1456ce60c9b3',1,'io::skyway::Peer::ConnectOption']]],
+  ['remove_5fstream',['REMOVE_STREAM',['../enumio_1_1skyway_1_1_peer_1_1_media_connection_1_1_media_event_enum.html#ae06582ff8eeca4fee64b95b17bd919ab',1,'io.skyway.Peer.MediaConnection.MediaEventEnum.REMOVE_STREAM()'],['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a56a7cfca220946ad2680f816be715304',1,'io.skyway.Peer.Room.RoomEventEnum.REMOVE_STREAM()']]],
+  ['room_5ferror',['ROOM_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#aa6429f5cb69392eac0c6dd615169f6b3',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]]
 ];

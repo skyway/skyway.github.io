@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['data',['DATA',['../enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#a2bb545262be6a7bee2d6ae8a6bc2114e',1,'io::skyway::Peer::DataConnection::DataEventEnum']]],
+  ['data',['data',['../classio_1_1skyway_1_1_peer_1_1_room_data_message.html#addde377c84fc3825cad28b2d06e7960f',1,'io.skyway.Peer.RoomDataMessage.data()'],['../enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#a2bb545262be6a7bee2d6ae8a6bc2114e',1,'io.skyway.Peer.DataConnection.DataEventEnum.DATA()'],['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a21b92a8d617f742b4612373efab8b527',1,'io.skyway.Peer.Room.RoomEventEnum.DATA()']]],
   ['dataconnection',['DataConnection',['../classio_1_1skyway_1_1_peer_1_1_data_connection.html',1,'io::skyway::Peer']]],
   ['dataeventenum',['DataEventEnum',['../enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html',1,'io::skyway::Peer::DataConnection']]],
   ['debug',['debug',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#a37816dd7eea915fb054d0805da21dc3f',1,'io::skyway::Peer::PeerOption']]],

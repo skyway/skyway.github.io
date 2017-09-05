@@ -36,7 +36,7 @@
      /
      <a href="../android-sdk.html">Android SDK</a>
      /
-     <span>API Reference</span>
+     <a href="./">API Reference</a>
      /
      <span>io.skyway.Peer.MediaConnection Class Reference</span>
     </p>
@@ -83,11 +83,16 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classio_1_1skyway_1_1_peer_1_1_media_connection-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">io.skyway.Peer.MediaConnection Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Alternative class as <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html" title="Alternative class as MediaConnection. ">MediaConnection</a>.  
+ <a href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#details">More...</a></p>
 
 <p>Inherits io.skyway.Peer.BaseConnection.</p>
 <table class="memberdecls">
@@ -100,16 +105,22 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acf145c2196a0e3c01459df20b3c9adec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#acf145c2196a0e3c01459df20b3c9adec">on</a> (<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_media_connection_1_1_media_event_enum.html">MediaEventEnum</a> event, <a class="el" href="interfaceio_1_1skyway_1_1_peer_1_1_on_callback.html">OnCallback</a> callback)</td></tr>
+<tr class="memdesc:acf145c2196a0e3c01459df20b3c9adec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callbacks for media connection events.  <a href="#acf145c2196a0e3c01459df20b3c9adec">More...</a><br /></td></tr>
 <tr class="separator:acf145c2196a0e3c01459df20b3c9adec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac230466aaee7cf06d554b195b813fc71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#ac230466aaee7cf06d554b195b813fc71">answer</a> (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html">MediaStream</a> stream, <a class="el" href="classio_1_1skyway_1_1_peer_1_1_answer_option.html">AnswerOption</a> option)</td></tr>
+<tr class="memdesc:ac230466aaee7cf06d554b195b813fc71"><td class="mdescLeft">&#160;</td><td class="mdescRight">When receiving a call event on a peer, you can call .answer on the media connection provided by the callback to accept the call with MediaStream and options.  <a href="#ac230466aaee7cf06d554b195b813fc71">More...</a><br /></td></tr>
 <tr class="separator:ac230466aaee7cf06d554b195b813fc71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa042900ff415e5aaaa058bc3420c0d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#aa042900ff415e5aaaa058bc3420c0d0a">answer</a> (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html">MediaStream</a> stream)</td></tr>
+<tr class="memdesc:aa042900ff415e5aaaa058bc3420c0d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">When receiving a call event on a peer, you can call .answer on the media connection provided by the callback to accept the call with MediaStream.  <a href="#aa042900ff415e5aaaa058bc3420c0d0a">More...</a><br /></td></tr>
 <tr class="separator:aa042900ff415e5aaaa058bc3420c0d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea79648ef22eb4e01d32265b6aa6b6b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#aea79648ef22eb4e01d32265b6aa6b6b7">answer</a> ()</td></tr>
+<tr class="memdesc:aea79648ef22eb4e01d32265b6aa6b6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">When receiving a call event on a peer, you can call .answer on the media connection provided by the callback to accept the call.  <a href="#aea79648ef22eb4e01d32265b6aa6b6b7">More...</a><br /></td></tr>
 <tr class="separator:aea79648ef22eb4e01d32265b6aa6b6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3f0209bfdc4269534a66c9b21b24c7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#ae3f0209bfdc4269534a66c9b21b24c7b">close</a> ()</td></tr>
+<tr class="memdesc:ae3f0209bfdc4269534a66c9b21b24c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html" title="Alternative class as MediaConnection. ">MediaConnection</a>.  <a href="#ae3f0209bfdc4269534a66c9b21b24c7b">More...</a><br /></td></tr>
 <tr class="separator:ae3f0209bfdc4269534a66c9b21b24c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f426e983fedaf30b7356f878b1e1ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#a30f426e983fedaf30b7356f878b1e1ba">replaceStream</a> (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html">MediaStream</a> stream)</td></tr>
+<tr class="memdesc:a30f426e983fedaf30b7356f878b1e1ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replace the stream being sent with a new one.  <a href="#a30f426e983fedaf30b7356f878b1e1ba">More...</a><br /></td></tr>
 <tr class="separator:a30f426e983fedaf30b7356f878b1e1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54d42df983cffabfe2598a249b233ce5"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#a54d42df983cffabfe2598a249b233ce5">peer</a> ()</td></tr>
 <tr class="memdesc:a54d42df983cffabfe2598a249b233ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a peer ID.  <a href="#a54d42df983cffabfe2598a249b233ce5">More...</a><br /></td></tr>
@@ -132,8 +143,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a38594dfb0a1de30034a103d333ebb3a3"><td class="memItemLeft" align="right" valign="top"><a id="a38594dfb0a1de30034a103d333ebb3a3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td></tr>
 <tr class="separator:a38594dfb0a1de30034a103d333ebb3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81b6d9a42f624679b2be3a8a7643c526"><td class="memItemLeft" align="right" valign="top">final Object&#160;</td><td class="memItemRight" valign="bottom"><b>peerConnection</b> ()</td></tr>
+<tr class="separator:a81b6d9a42f624679b2be3a8a7643c526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5b6bad15e1e99ea763ab19ab3710ef"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><b>reliable</b> ()</td></tr>
+<tr class="memdesc:aec5b6bad15e1e99ea763ab19ab3710ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data channel reliable.  <a href="#aec5b6bad15e1e99ea763ab19ab3710ef">More...</a><br /></td></tr>
+<tr class="separator:aec5b6bad15e1e99ea763ab19ab3710ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d9e69040ec60f79a62c00ba6f888a4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html">SerializationEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><b>serialization</b> ()</td></tr>
+<tr class="memdesc:a6d9e69040ec60f79a62c00ba6f888a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data channel serialization type.  <a href="#a6d9e69040ec60f79a62c00ba6f888a4e">More...</a><br /></td></tr>
+<tr class="separator:a6d9e69040ec60f79a62c00ba6f888a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a072ab1c939ab4d780c693766913e48ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html">Peer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>provider</b> ()</td></tr>
+<tr class="memdesc:a072ab1c939ab4d780c693766913e48ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parent <a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="Peer class. ">Peer</a> object.  <a href="#a072ab1c939ab4d780c693766913e48ed">More...</a><br /></td></tr>
+<tr class="separator:a072ab1c939ab4d780c693766913e48ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0018d29a23997f147265a8e750bedefa"><td class="memItemLeft" align="right" valign="top">final String&#160;</td><td class="memItemRight" valign="bottom"><b>browser</b> ()</td></tr>
+<tr class="separator:a0018d29a23997f147265a8e750bedefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6973fd4422f0e396afdf51f11e20419f"><td class="memItemLeft" align="right" valign="top">final Peer.PeerTypeEnum&#160;</td><td class="memItemRight" valign="bottom"><b>serverType</b> ()</td></tr>
+<tr class="separator:a6973fd4422f0e396afdf51f11e20419f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a72de12ee634b4f15bcb67be5aac6ec25"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><b>getSerialization</b> (<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html">SerializationEnum</a> <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#acc6f9285694d396361926c0ce5003511">type</a>)</td></tr>
+<tr class="memdesc:a72de12ee634b4f15bcb67be5aac6ec25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert serialization enum type to string.  <a href="#a72de12ee634b4f15bcb67be5aac6ec25">More...</a><br /></td></tr>
+<tr class="separator:a72de12ee634b4f15bcb67be5aac6ec25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a180d1aaa42a453d37c3b7e560545e06e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html">SerializationEnum</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getSerializationEnum</b> (String <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#acc6f9285694d396361926c0ce5003511">type</a>)</td></tr>
+<tr class="memdesc:a180d1aaa42a453d37c3b7e560545e06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert string to serialization enum type.  <a href="#a180d1aaa42a453d37c3b7e560545e06e">More...</a><br /></td></tr>
+<tr class="separator:a180d1aaa42a453d37c3b7e560545e06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ace3329c1c2d591124d4582fe1f2498c4"><td class="memItemLeft" align="right" valign="top"><a id="ace3329c1c2d591124d4582fe1f2498c4"></a>
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>TYPE_DATA</b> = &quot;data&quot;</td></tr>
+<tr class="separator:ace3329c1c2d591124d4582fe1f2498c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7e16209dca12f1a168517a41f3529e"><td class="memItemLeft" align="right" valign="top"><a id="a4b7e16209dca12f1a168517a41f3529e"></a>
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>TYPE_MEDIA</b> = &quot;media&quot;</td></tr>
+<tr class="separator:a4b7e16209dca12f1a168517a41f3529e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad07e49a1bc0def8ad8c42bc135deeb90"><td class="memItemLeft" align="right" valign="top"><a id="ad07e49a1bc0def8ad8c42bc135deeb90"></a>
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIALIZATION_BINARY</b> = &quot;binary&quot;</td></tr>
+<tr class="separator:ad07e49a1bc0def8ad8c42bc135deeb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4d7e8ede05dae566652990d6b43754"><td class="memItemLeft" align="right" valign="top"><a id="a4c4d7e8ede05dae566652990d6b43754"></a>
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIALIZATION_BINARY_UTF8</b> = &quot;binary-utf8&quot;</td></tr>
+<tr class="separator:a4c4d7e8ede05dae566652990d6b43754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41bd992fafd3ee33b2e17aa35befc76"><td class="memItemLeft" align="right" valign="top"><a id="ab41bd992fafd3ee33b2e17aa35befc76"></a>
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIALIZATION_JSON</b> = &quot;json&quot;</td></tr>
+<tr class="separator:ab41bd992fafd3ee33b2e17aa35befc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaa364f0ef322eab8ef8c04e37ad766"><td class="memItemLeft" align="right" valign="top"><a id="aeeaa364f0ef322eab8ef8c04e37ad766"></a>
+static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIALIZATION_NONE</b> = &quot;none&quot;</td></tr>
+<tr class="separator:aeeaa364f0ef322eab8ef8c04e37ad766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Alternative class as <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html" title="Alternative class as MediaConnection. ">MediaConnection</a>. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac230466aaee7cf06d554b195b813fc71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac230466aaee7cf06d554b195b813fc71">&#9670;&nbsp;</a></span>answer() <span class="overload">[1/3]</span></h2>
 
@@ -159,10 +217,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>When receiving a call event on a peer, you can call .answer on the media connection provided by the callback to accept the call with MediaStream and options. </p>
 <div class="fragment"><div class="line">Peer <a class="code" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#a54d42df983cffabfe2598a249b233ce5">peer</a>;</div><div class="line">MediaConnection media;</div><div class="line"></div><div class="line">Navigator.initialize(peer);</div><div class="line"></div><div class="line">MediaConstraints constraints = <span class="keyword">new</span> MediaConstraints();</div><div class="line">MediaStream stream = Navigator.getUserMedia(constraints);</div><div class="line"></div><div class="line"></div><div class="line">peer.on(Peer.PeerEventEnum.CALL, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line"></div><div class="line">        media = (MediaConnection)<span class="keywordtype">object</span>;</div><div class="line"></div><div class="line">        AnswerOption options = <span class="keyword">new</span> AnswerOption();</div><div class="line">        options.videoBandwidth = 1024;</div><div class="line">        options.audioBandwidth = 128;</div><div class="line">        options.videoCodec = <span class="stringliteral">&quot;H264&quot;</span>;</div><div class="line">        options.audioCodec = <span class="stringliteral">&quot;PCMU&quot;</span></div><div class="line"></div><div class="line">        media.answer(stream, options);</div><div class="line">    }</div><div class="line">});</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td></td></tr>
-    <tr><td class="paramname">option</td><td></td></tr>
+    <tr><td class="paramname">stream</td><td>MediaStream</td></tr>
+    <tr><td class="paramname">option</td><td>Answer Options </td></tr>
   </table>
   </dd>
 </dl>
@@ -184,9 +244,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>When receiving a call event on a peer, you can call .answer on the media connection provided by the callback to accept the call with MediaStream. </p>
 <div class="fragment"><div class="line">Peer <a class="code" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#a54d42df983cffabfe2598a249b233ce5">peer</a>;</div><div class="line">MediaConnection media;</div><div class="line"></div><div class="line">Navigator.initialize(peer);</div><div class="line"></div><div class="line">MediaConstraints constraints = <span class="keyword">new</span> MediaConstraints();</div><div class="line">MediaStream stream = Navigator.getUserMedia(constraints);</div><div class="line"></div><div class="line">peer.on(Peer.PeerEventEnum.CALL, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line">        media = (MediaConnection)<span class="keywordtype">object</span>;</div><div class="line">        media.answer(stream);</div><div class="line">    }</div><div class="line">});</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td><pre class="fragment">    local stream</pre> </td></tr>
+    <tr><td class="paramname">stream</td><td>MediaStream </td></tr>
   </table>
   </dd>
 </dl>
@@ -207,7 +269,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>When receiving a call event on a peer, you can call .answer on the media connection provided by the callback to accept the call. </p>
 <div class="fragment"><div class="line">Peer <a class="code" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html#a54d42df983cffabfe2598a249b233ce5">peer</a>;</div><div class="line"></div><div class="line">peer.on(Peer.PeerEventEnum.CALL, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line">        media = (MediaConnection)<span class="keywordtype">object</span>;</div><div class="line">        media.answer();</div><div class="line">    }</div><div class="line">});</div></div><!-- fragment --> 
+</div>
+</div>
+<a id="a0018d29a23997f147265a8e750bedefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0018d29a23997f147265a8e750bedefa">&#9670;&nbsp;</a></span>browser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String io.skyway.Peer.BaseConnection.browser </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd></dd></dl>
+
 </div>
 </div>
 <a id="ae3f0209bfdc4269534a66c9b21b24c7b"></a>
@@ -224,6 +314,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Closes the <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html" title="Alternative class as MediaConnection. ">MediaConnection</a>. </p>
 <div class="fragment"><div class="line">MediaConnection media;</div><div class="line"></div><div class="line">media.close();</div><div class="line">media = null;</div></div><!-- fragment --> 
 </div>
 </div>
@@ -244,6 +336,78 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
 
 <p>Connection ID. </p>
 <dl class="section return"><dt>Returns</dt><dd>Connection ID. </dd></dl>
+
+</div>
+</div>
+<a id="a72de12ee634b4f15bcb67be5aac6ec25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72de12ee634b4f15bcb67be5aac6ec25">&#9670;&nbsp;</a></span>getSerialization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String io.skyway.Peer.BaseConnection.getSerialization </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html">SerializationEnum</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert serialization enum type to string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>serialization enum type</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>serialization type string</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>#getSerializationEnum(String) </dd></dl>
+
+</div>
+</div>
+<a id="a180d1aaa42a453d37c3b7e560545e06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a180d1aaa42a453d37c3b7e560545e06e">&#9670;&nbsp;</a></span>getSerializationEnum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html">SerializationEnum</a> io.skyway.Peer.BaseConnection.getSerializationEnum </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convert string to serialization enum type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>serialization type string</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>serialization enum type</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>#getSerialization(SerializationEnum) </dd></dl>
 
 </div>
 </div>
@@ -332,6 +496,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set callbacks for media connection events. </p>
 <div class="fragment"><div class="line">MediaConnection media;</div><div class="line"></div><div class="line">media.on(MediaConnection.MediaEventEnum.STREAM, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line">        MediaStream stream = (MediaStream *)<span class="keywordtype">object</span>;</div><div class="line">    }</div><div class="line">});</div><div class="line"></div><div class="line">media.on(MediaConnection.MediaEventEnum.REMOVE_STREAM, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line">        MediaStream stream = (MediaStream *)<span class="keywordtype">object</span>;</div><div class="line">    }</div><div class="line">});</div><div class="line"></div><div class="line">media.on(MediaConnection.MediaEventEnum.CLOSE, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line">        <span class="comment">// 処理を記述</span></div><div class="line">    }</div><div class="line">});</div><div class="line"></div><div class="line">media.on(MediaConnection.MediaEventEnum.ERROR, <span class="keyword">new</span> OnCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div><div class="line">        PeerError error = (PeerError)<span class="keywordtype">object</span>;</div><div class="line">        <span class="comment">// 処理を記述</span></div><div class="line">    }</div><div class="line">});</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>Media connection event type to watch</td></tr>
@@ -362,6 +528,88 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
 
 </div>
 </div>
+<a id="a81b6d9a42f624679b2be3a8a7643c526"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b6d9a42f624679b2be3a8a7643c526">&#9670;&nbsp;</a></span>peerConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Object io.skyway.Peer.BaseConnection.peerConnection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a072ab1c939ab4d780c693766913e48ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a072ab1c939ab4d780c693766913e48ed">&#9670;&nbsp;</a></span>provider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html">Peer</a> io.skyway.Peer.BaseConnection.provider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parent <a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="Peer class. ">Peer</a> object. </p>
+<dl class="section return"><dt>Returns</dt><dd>Parent <a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="Peer class. ">Peer</a> object. </dd></dl>
+
+</div>
+</div>
+<a id="aec5b6bad15e1e99ea763ab19ab3710ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5b6bad15e1e99ea763ab19ab3710ef">&#9670;&nbsp;</a></span>reliable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean io.skyway.Peer.BaseConnection.reliable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data channel reliable. </p>
+<dl class="section return"><dt>Returns</dt><dd>Data channel reliable. </dd></dl>
+
+</div>
+</div>
 <a id="a30f426e983fedaf30b7356f878b1e1ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a30f426e983fedaf30b7356f878b1e1ba">&#9670;&nbsp;</a></span>replaceStream()</h2>
 
@@ -377,12 +625,68 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Replace the stream being sent with a new one. </p>
 <div class="fragment"><div class="line">MediaConnection media;</div><div class="line">MediaStream stream;</div><div class="line"></div><div class="line">media.replaceStream(stream);</div></div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td></td></tr>
+    <tr><td class="paramname">stream</td><td>The stream to replace the old stream with. </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6d9e69040ec60f79a62c00ba6f888a4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9e69040ec60f79a62c00ba6f888a4e">&#9670;&nbsp;</a></span>serialization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html">SerializationEnum</a> io.skyway.Peer.BaseConnection.serialization </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data channel serialization type. </p>
+<dl class="section return"><dt>Returns</dt><dd>Data channel serialization type. </dd></dl>
+
+</div>
+</div>
+<a id="a6973fd4422f0e396afdf51f11e20419f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6973fd4422f0e396afdf51f11e20419f">&#9670;&nbsp;</a></span>serverType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final Peer.PeerTypeEnum io.skyway.Peer.BaseConnection.serverType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>

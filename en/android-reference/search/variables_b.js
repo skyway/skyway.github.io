@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['only_5ferror',['ONLY_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_debug_level_enum.html#a6c1e63ba7327b3ae73c8402e29d308df',1,'io::skyway::Peer::Peer::DebugLevelEnum']]],
-  ['open',['OPEN',['../enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#af107c5dcceb7d8521954bb4a41d0de7b',1,'io.skyway.Peer.DataConnection.DataEventEnum.OPEN()'],['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#a5378f84ac555ea2c7d5818577116db60',1,'io.skyway.Peer.Peer.PeerEventEnum.OPEN()']]],
-  ['open_5fws',['OPEN_WS',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#aea7eb9fa9b698023d47882afeb3d8931',1,'io::skyway::Peer::Peer::PeerEventEnum']]]
+  ['network',['NETWORK',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a1ec3b39ca73c8264deb9769dad576117',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['no_5ferror',['NO_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#aff3a5f30913f3256731806b7bc6da241',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['no_5flogs',['NO_LOGS',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_debug_level_enum.html#adf68dbb426c822679c30094fa8eae6d1',1,'io::skyway::Peer::Peer::DebugLevelEnum']]]
 ];
