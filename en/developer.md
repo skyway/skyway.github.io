@@ -22,8 +22,8 @@ ECLWebRTC enables customers to start developing applications easily.
 Enter the following command to start a videochat application.
 
 ```sh
-~ $ npm install eclwebrtc-skeleton
-~ $ npm start
+$ npm install eclwebrtc-skeleton
+$ npm start
 ```
 
 ### STEP2
@@ -36,7 +36,7 @@ Replace the API key in the sample code with the one you got in STEP2.
 Start a developing a fully functioning app by reading the tutorials and API reference.
 
 ```sh
-~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+$ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
 ## SDK

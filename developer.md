@@ -22,8 +22,8 @@ SkyWayを利用すればアプリケーションの開発を簡単に始める�
 次のコマンドを入力して、ビデオ通話アプリを動かしてみましょう。
 
 ```sh
-~ $ npm install eclwebrtc-skeleton
-~ $ npm start
+$ npm install eclwebrtc-skeleton
+$ npm start
 ```
 
 ### STEP2
@@ -36,7 +36,7 @@ SkyWayを利用すればアプリケーションの開発を簡単に始める�
 チュートリアルやAPIリファレンスを参考に、本格的な開発を始めましょう。
 
 ```sh
-~ $ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
+$ echo "window.__ECLWEBRTC_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
 ## SDK
