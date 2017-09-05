@@ -28,7 +28,7 @@ Please use this inquaries for migration from Community Edition to Enterprise Edi
         <p class="card-text">Inquiries in a Web form are accepted. <br><small class="text-muted">
         Customers who have contracted already are advised to use 
         <a href="https://ecl.ntt.com/en/documents/tutorials/rsts/Support/ticket/ticket.html">Ticket Support</a>. An answer from NTT Com may not be available depending on the contents of the inquiry.</small></p>
-        <a href="https://support.webrtc.ecl.ntt.com/hc/en-us/requests/new" class="btn btn-primary">Inquiry form</a>
+        <a href="https://support.skyway.io/hc/en-us/requests/new" class="btn btn-primary">Inquiry form</a>
       </div>
     </div>
   </div>
