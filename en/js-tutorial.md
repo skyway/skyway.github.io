@@ -93,7 +93,7 @@ For the source codes used in the tutorial, please download them from the followi
 
 After downloading, arrange `index.html` adequately so that it can be viewed on the Web server.
 
-- [https://github.com/skyway/js-sdk-tutorial](https://github.com/skyway/js-sdk-tutorial){:target="_blank"}
+- [https://github.com/skyway/skyway-js-sdk-tutorial](https://github.com/skyway/skyway-js-sdk-tutorial){:target="_blank"}
 
 In the following steps, we will add required codes to `script.js` which is included in the package.
 
