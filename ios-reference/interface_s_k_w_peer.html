@@ -36,7 +36,7 @@
      /
      <a href="../ios-sdk.html">iOS SDK</a>
      /
-     <span>APIリファレンス</span>
+     <a href="./">APIリファレンス</a>
      /
      <span>SKWPeer クラス</span>
     </p>
@@ -572,7 +572,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
 </div><div class="memdoc">
 
 <p>認証情報を更新します。 </p>
-<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_peer.html">SKWPeer</a>* peer;</div><div class="line"></div><div class="line"><a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a>* credential = [[<a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a> alloc] init];</div><div class="line">credential.timestamp = [[NSDate date] timeIntervalSince1970];</div><div class="line">credential.ttl = 86400;</div><div class="line">credential.authToken = <span class="stringliteral">@&quot;calculated auth token&quot;</span>;</div><div class="line"></div><div class="line">[peer <a class="code" href="interface_s_k_w_peer.html#a27c42a392e3daaa4a0a95d21c882753c">updateCredential</a>:credential];</div></div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_peer.html">SKWPeer</a>* peer;</div><div class="line"></div><div class="line"><a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a>* credential = [[<a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a> alloc] init];</div><div class="line">credential.<a class="code" href="interface_s_k_w_peer_credential.html#ab0a1d59b900f0b33b01450684e4bca21">timestamp</a> = [[NSDate date] timeIntervalSince1970];</div><div class="line">credential.<a class="code" href="interface_s_k_w_peer_credential.html#a0cd8d03113105cb8fa5fd115c6544a26">ttl</a> = 86400;</div><div class="line">credential.<a class="code" href="interface_s_k_w_peer_credential.html#a7e9a93b86139bcdd46f70fa5082f7919">authToken</a> = <span class="stringliteral">@&quot;calculated auth token&quot;</span>;</div><div class="line"></div><div class="line">[peer <a class="code" href="interface_s_k_w_peer.html#a27c42a392e3daaa4a0a95d21c882753c">updateCredential</a>:credential];</div></div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">newCredential</td><td>新しい認証情報 </td></tr>
   </table>
