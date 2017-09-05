@@ -39,7 +39,7 @@ breadcrumb: [index.md, developer.md]
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>新SDKヘの移行について</h2>
-        <p>トライアル版のSkyWayは2018年3月31日をもって提供を終了します。最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.webrtc.ecl.ntt.com/hc/ja" target="_blank">新旧SkyWayの機能比較)</a></p>
+        <p>トライアル提供していました旧SkyWayは2018年3月31日をもって提供を終了します。2017年9月6日以前にSkyWayにご登録いただいた方も最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.webrtc.ecl.ntt.com/hc/ja" target="_blank">新旧SkyWayの機能比較)</a></p>
         <h3>1. Community Edition新規登録</h3>
         <p>
           Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。<br>
