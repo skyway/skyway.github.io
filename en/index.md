@@ -195,10 +195,6 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
 
 [See other examples](https://skyway.github.io/usecase/)
 
-<!-- Modal -->
-
-[migrationのモーダルを表示](./?origin=skyway)
-
 <script>
 $(function() {
   'use strict';

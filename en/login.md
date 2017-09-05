@@ -32,7 +32,7 @@ breadcrumb: [en/index.md]
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">SkyWay</h3>
-        <p class="card-text">Service is terminated as of March 22nd, 2018. <a href="./migration.html">Migration to ECLWebRTC</a> is recommended.</p>
+        <p class="card-text">Service is terminated as of March, 2018. <a href="./migration.html">Migration to ECLWebRTC</a> is recommended.</p>
         <p><a href="https://skyway.io/ds/" class="btn btn-outline-primary">Login to Dashboard</a></p>
       </div>
     </div>
