@@ -12,20 +12,21 @@ breadcrumb: [index.md, developer.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](#){:target="_blank"}と同じものになります。
-完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p_videochat){:target="_blank"}と同じものになります。
+完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <img src="{{ site.rootdir[page.lang] }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](ios-tutorial.html){: .btn .btn-primary }
+[チュートリアルの続きを読む](./ios-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
 {: #sdkdownload }
@@ -52,11 +53,10 @@ $ pod init
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-ios-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-iOS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
-    <small>git-lfsのインストールが必要です</small>
+    <a href="https://github.com/skyway/skyway-ios-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
   </div>
 </div>
 
@@ -87,18 +87,18 @@ iOS 8+
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p_textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh_textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu_videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu_textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['videobandwidth',['videoBandwidth',['../classio_1_1skyway_1_1_peer_1_1_answer_option.html#a96854994f40b12b1b8c064f9b0ced29f',1,'io.skyway.Peer.AnswerOption.videoBandwidth()'],['../classio_1_1skyway_1_1_peer_1_1_call_option.html#a639811451f9a49692f03c0550438a101',1,'io.skyway.Peer.CallOption.videoBandwidth()'],['../classio_1_1skyway_1_1_peer_1_1_room_option.html#ae7fb4493e29c4b22331856738f1d29de',1,'io.skyway.Peer.RoomOption.videoBandwidth()']]],
-  ['videocodec',['videoCodec',['../classio_1_1skyway_1_1_peer_1_1_answer_option.html#a2e00b9e542518cdbc444dcb8933b8503',1,'io.skyway.Peer.AnswerOption.videoCodec()'],['../classio_1_1skyway_1_1_peer_1_1_call_option.html#ac21c42b4b86e5c855d20efd8705d18c4',1,'io.skyway.Peer.CallOption.videoCodec()'],['../classio_1_1skyway_1_1_peer_1_1_room_option.html#af47c698ddd4c404c55e5b56b2dd90df1',1,'io.skyway.Peer.RoomOption.videoCodec()']]],
-  ['videoflag',['videoFlag',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_constraints.html#a6a94172c87d3368799df10ce61ad65bb',1,'io::skyway::Peer::Browser::MediaConstraints']]],
-  ['vp8hwcodec',['vp8hwcodec',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#ace964280cbc3068476d4444068a1dd48',1,'io::skyway::Peer::PeerOption']]]
+  ['unavailable_5fid',['UNAVAILABLE_ID',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a6daf76e5f9cf34053cc515239954939f',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['unknown',['UNKNOWN',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a687800d8fdc00183f23d0dcf443ec37d',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['unspecified',['UNSPECIFIED',['../enumio_1_1skyway_1_1_peer_1_1_browser_1_1_media_constraints_1_1_camera_position_enum.html#aa13a27f1de9e1e29f9af5b63084d5440',1,'io::skyway::Peer::Browser::MediaConstraints::CameraPositionEnum']]],
+  ['url',['url',['../classio_1_1skyway_1_1_peer_1_1_ice_config.html#ae8dabb5ec7dff963b0da650dbbb4167b',1,'io::skyway::Peer::IceConfig']]],
+  ['username',['username',['../classio_1_1skyway_1_1_peer_1_1_ice_config.html#ac101ce7dd6af3162f9fce2e98e420761',1,'io::skyway::Peer::IceConfig']]]
 ];

@@ -12,23 +12,25 @@ breadcrumb: [index.md, developer.md]
 JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、JavaScript SDKの使い方について理解を深めます。
 通話相手のIDを入力し、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-[完成したアプリのデモ](#){:target="_blank"}を試すことができます。
+[完成したアプリのデモ](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){:target="_blank"}を試すことができます。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
-[チュートリアルの続きを読む](js-tutorial.html){: .btn .btn-primary }
+<figure class="figure">
+  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-videchat.png"
+    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
+</figure>
+
+
+[チュートリアルの続きを読む](./js-tutorial.html){: .btn .btn-primary }
 
 ## SDKのダウンロード
 {: #sdkdownload }
-
-### npmを利用する場合
-
-```sh
-$ npm install eclwebrtc-js-sdk
-```
 
 ### CDNを利用する場合
 
@@ -36,17 +38,17 @@ $ npm install eclwebrtc-js-sdk
 {: .lang}
   
 ```html
-<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/eclwebrtc-latest.js"></script>
+<script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
 ### ファイルをダウンロードする場合
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-js-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-JS-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/skyway-js-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
   </div>
 </div>
 
@@ -66,7 +68,7 @@ $ npm install eclwebrtc-js-sdk
   </div>
 </div>
 
-[新旧SDKの機能差分と移行方法](https://github.com/nttcom/skyway-sdk-migration-docs){: _target="_blank" }をGitHubで公開しています。
+[新旧SDKの機能差分と移行方法](https://github.com/nttcom/skyway-sdk-migration-docs){: target="_blank" }をGitHubで公開しています。
 
 ## サンプルコード
 
@@ -78,21 +80,21 @@ $ npm install eclwebrtc-js-sdk
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
           <td></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">1:多のビデオ配信</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">1:多のビデオ配信</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">1:多のビデオ配信</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
+          <td></td>
+          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>

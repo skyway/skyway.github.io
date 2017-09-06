@@ -13,18 +13,17 @@ breadcrumb: [index.md, developer.md, ios-sdk.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](#){:target="_blank"}と同じものになります。
-完成したアプリを試したい場合は、ソースコードをダウンロードし、このチュートリアルのビルド手順に沿ってビルドししてください。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"}と同じものになります。
+完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png"
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png"
-    class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <img src="{{ site.rootdir[page.lang] }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
@@ -33,10 +32,14 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 ### SkyWayのAPIキー発行
 
-SkyWayへの開発者登録がまだの方は、まず、[Community Editionの新規登録](signup.md)から開発者登録をしてください。
-トライアル版SkyWayのAPIキーはご利用になれないので、トライアル版SkyWayをご利用の方も、新規登録をお願いします。
-開発者登録済みの方、完了した方は、[ダッシュボードにログイン](login.md)し、アプリケーションを作成して、APIキーを取得してください。
+<p>
+  SkyWayへの開発者登録がまだの方は、まず、<a href="https://console-webrtc-free.ecl.ntt.com/users/registration">Community Editionの新規登録</a>から開発者登録をしてください。
+  <small class="text-muted">
+    <br>トライアル提供していました旧SkyWayのAPIキーはご利用になれないため、2017年9月6日以前にSkyWayにご登録いただいた方も新規登録をお願いします。
+  </small>
+</p>
 
+開発者登録済みの方、完了した方は、[ダッシュボードにログイン](https://console-webrtc-free.ecl.ntt.com/users/login)し、アプリケーションを作成して、APIキーを取得してください。
 ダッシュボードでのアプリケーションの設定内容は以下のとおりです。
 
 |設定項目|項目の説明|チュートリアルの設定内容|
@@ -45,8 +48,8 @@ SkyWayへの開発者登録がまだの方は、まず、[Community Editionの�
 |利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<br>指定例：hogehoge.com|`localhost`|
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
-|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、APIリファレンスをご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/nttcom/Peer-Authentication-Server-Samples)をご覧ください。|OFF|
+|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、[APIリファレンス](./ios-reference/interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a)をご覧ください。|ON|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} をご覧ください。|OFF|
 
 ### 開発環境の準備
 
@@ -65,14 +68,14 @@ SkyWayへの開発者登録がまだの方は、まず、[Community Editionの�
 
 チュートリアルで利用するXcodeのプロジェクトは以下のリポジトリからダウンロードしてください。  
 
-- [https://github.com/skyway/eclwebrtc-ios-sdk-tutorial](https://github.com/skyway/eclwebrtc-ios-sdk-tutorial)
+- [https://github.com/skyway/skyway-ios-sdk-tutorial](https://github.com/skyway/skyway-ios-sdk-tutorial){:target="_blank"}
 
 ### SDKをプロジェクトに追加する
 
 SDKのバイナリファイルを配置します。  
 今回のチュートリアルでは、ダウンロードしたファイルを手動でプロジェクトに組込む手順を紹介します。  
 
-1. SDKを[こちら](https://s3-ap-northeast-1.amazonaws.com/skyway-sdk-production/skyway-ios-sdk.zip)からダウンロード
+1. SDKを[こちら](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)からダウンロード
 2. ZIPファイルを解凍後、`SkyWay.framework`を、`skyway-ios-sdk-tutorial`ディレクトリ直下に配置
 3. `skyway-ios-sdk-tutorial.xcodeproj`をダブルクリックしプロジェクトを開く
 4. 左ペインのファイルツリー上で右クリックし`Add File to…`を選択し、先程配置した`SkyWay.framework`をファイルツリーに追加
@@ -80,7 +83,7 @@ SDKのバイナリファイルを配置します。
 6. General > Embedded Binaries から`SkyWay.framework`を再度追加
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode1.png"
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode-sc.png"
     class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
   <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
 </figure>
@@ -103,7 +106,7 @@ SDKのバイナリファイルを配置します。
 {: .lang}
 
 ```objc
-#import <ECLWebRTC/SKWPeer.h>
+#import <SkyWay/SKWPeer.h>
 ```
 
 ### ビルドする
@@ -115,7 +118,7 @@ SDKのバイナリファイルを配置します。
 実行時にエラーが出てしまいますが、以下のとおりビルドに成功すれば準備完了です。
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-sc1.png"
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-splash.png"
     class="figure-img img-fluid rounded" alt="実機上でLaunchScreenが表示されたところ">
   <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
 </figure>
@@ -152,7 +155,7 @@ static NSString *const kDomain = @"domain";
 
 ```objc
 //
-// declaration
+// Instance declaration
 //
 @interface ViewController () {
     SKWPeer*			_peer;
@@ -174,6 +177,9 @@ static NSString *const kDomain = @"domain";
 {: .lang}
 
 ```objc
+//
+// Property declaration
+//
 @property (weak, nonatomic) IBOutlet UILabel*   idLabel;
 @property (weak, nonatomic) IBOutlet UIButton*  actionButton;
 @property (weak, nonatomic) IBOutlet SKWVideo*  localView;
@@ -183,7 +189,8 @@ static NSString *const kDomain = @"domain";
 
 @implementation ViewController
 
-// 省略
+     :
+     :
 
 //
 // dealloc
@@ -196,6 +203,11 @@ static NSString *const kDomain = @"domain";
     _peer = nil;
     
 }
+
+     :
+     :
+
+@end
 ```
 
 ### Peerオブジェクトの作成
@@ -220,7 +232,7 @@ Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、
     _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス]()をご覧ください。
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./ios-reference/interface_s_k_w_peer_option.html)をご覧ください。
 
 ## 接続成功・失敗・切断時の処理
 {: #eventlistener }
@@ -266,7 +278,7 @@ SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関す�
 - `cameraPosition`: 使用するカメラの選択（ディフォルトは`SKW_CAMERA_POSITION_FRONT`）
   - カメラポジションは前面カメラ（`SKW_CAMERA_POSITION_FRONT`）と背面カメラ（`SKW_CAMERA_POSITION_BACK`）が選択可能
 
-これ以外の項目については、[APIリファレンス]()をご覧ください。  
+これ以外の項目については、[APIリファレンス](./ios-reference/interface_s_k_w_media_constraints.html)をご覧ください。  
 
 *Objective-C*
 {: .lang}
@@ -275,7 +287,8 @@ SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関す�
 // OPEN
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // 省略
+     :
+     :
     
     // Set MediaConstraints
     SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
@@ -298,10 +311,13 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 // OPEN
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // 省略
+     :
+     :
     
     // Set MediaConstraints
-    // 省略
+    
+     :
+     :
 
     // Get a local MediaStream & show it
     [SKWNavigator initialize:_peer];
@@ -458,7 +474,8 @@ actionButtonをタップした際に接続中であれば、MediaConnectionオ�
     
     if(nil == _mediaConnection) {
         
-        // 省略
+     :
+     :
          
     else {
         
@@ -554,7 +571,8 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 省略
+     :
+     :
    
     // CALL (Incoming call)
     [_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj) {
@@ -620,7 +638,8 @@ MediaConnectionオブジェクトに必要なイベントコールバックで�
 //
 - (void)setMediaCallbacks {
 
-    // 省略
+     :
+     :
     
     [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_CLOSE callback:^(NSObject* obj) {
         if (NO == _bConnected) {
@@ -651,7 +670,8 @@ MediaConnectionオブジェクトに必要なイベントコールバックで�
 //
 - (void)setMediaCallbacks {
 
-    // 省略
+     :
+     :
     
     [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_ERROR callback:^(NSObject* obj) { }];
 }
@@ -667,6 +687,24 @@ actionButtonはトグルで利用するため、接続状態に応じてラベ�
 {: .lang}
 
 ```objc
+//
+// UIViewcontroller lifecycle
+//
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    [self updateActionButtonTitle];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    [super viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 //
 // Update actionButton title
 //

@@ -1,6 +1,25 @@
 var searchData=
 [
-  ['terminate',['terminate',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_navigator.html#a45ac3761f8ffdd296a21fbbe3bb8ea48',1,'io::skyway::Peer::Browser::Navigator']]],
-  ['turn',['turn',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#a4ea606014bf4be9406eb234b845af8d2',1,'io::skyway::Peer::PeerOption']]],
-  ['type',['type',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#a57f0d73f2a624c735ee43229dd02afe7',1,'io.skyway.Peer.PeerOption.type()'],['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#a8fcc6f0f68c9add14eb4ad6a1cb2c910',1,'io.skyway.Peer.DataConnection.type()'],['../classio_1_1skyway_1_1_peer_1_1_media_connection.html#acc6f9285694d396361926c0ce5003511',1,'io.skyway.Peer.MediaConnection.type()']]]
+  ['scaling',['scaling',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas.html#ae5fd0b1870c921ce34dcea1720e092be',1,'io::skyway::Peer::Browser::Canvas']]],
+  ['scalingenum',['ScalingEnum',['../enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html',1,'io::skyway::Peer::Browser::Canvas']]],
+  ['secure',['secure',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#afd342829b317aa21f92fed8d484e7381',1,'io::skyway::Peer::PeerOption']]],
+  ['send',['send',['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#a3899b66eba989ef9ec41322a75504925',1,'io.skyway.Peer.DataConnection.send()'],['../classio_1_1skyway_1_1_peer_1_1_room.html#adc87abbe83dff60e6fa322064eff7e48',1,'io.skyway.Peer.Room.send()']]],
+  ['serialization',['serialization',['../classio_1_1skyway_1_1_peer_1_1_connect_option.html#ac3265677be44d4e796e95e0cddf9d913',1,'io.skyway.Peer.ConnectOption.serialization()'],['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#a07e9107d9e5f16d303efae00cc1efef3',1,'io.skyway.Peer.DataConnection.serialization()']]],
+  ['serializationenum',['SerializationEnum',['../enumio_1_1skyway_1_1_peer_1_1_base_connection_1_1_serialization_enum.html',1,'io::skyway::Peer::BaseConnection']]],
+  ['server_5ferror',['SERVER_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#aa51699adee04ba5cd284ec6865fc1f0a',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['setaudiosource',['setAudioSource',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a33cbd0b65306d8eed7d02ebfe363c3a4',1,'io::skyway::Peer::Browser::MediaStream']]],
+  ['setenableaudiotrack',['setEnableAudioTrack',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a7196a5463936e49c365d907eabddf1ff',1,'io::skyway::Peer::Browser::MediaStream']]],
+  ['setenablevideotrack',['setEnableVideoTrack',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ab2ed1012ceccc22eed5c7312495e6b17',1,'io::skyway::Peer::Browser::MediaStream']]],
+  ['setvideocapture',['setVideoCapture',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a2ec21a6a65f2086bc91a0d771304c7f9',1,'io::skyway::Peer::Browser::MediaStream']]],
+  ['setvideosource',['setVideoSource',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a55efdb3c301861c6ebc9b4600c24702e',1,'io::skyway::Peer::Browser::MediaStream']]],
+  ['setzordermediaoverlay',['setZOrderMediaOverlay',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas.html#a002736be52623af1f0195b61384345ff',1,'io::skyway::Peer::Browser::Canvas']]],
+  ['setzorderontop',['setZOrderOnTop',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas.html#a56f98bc12c150fac98314e4371ca2ad4',1,'io::skyway::Peer::Browser::Canvas']]],
+  ['sfu',['SFU',['../enumio_1_1skyway_1_1_peer_1_1_room_option_1_1_room_mode_enum.html#a31d39c895d0c69f96a47744c1457e83b',1,'io::skyway::Peer::RoomOption::RoomModeEnum']]],
+  ['sfuroom',['SFURoom',['../classio_1_1skyway_1_1_peer_1_1_s_f_u_room.html',1,'io::skyway::Peer']]],
+  ['socket_5fclosed',['SOCKET_CLOSED',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a6a28e2cd0f8ad91200b145da8f7eab45',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['socket_5ferror',['SOCKET_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a3282cc24f86ee825cab8c3466a2227ce',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['src',['src',['../classio_1_1skyway_1_1_peer_1_1_room_data_message.html#aa3f1bc37d9369151bf5487070dc21c5a',1,'io::skyway::Peer::RoomDataMessage']]],
+  ['ssl_5funavailable',['SSL_UNAVAILABLE',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#ac1c55710c6c8a324c2b59b8347b79c21',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['stream',['STREAM',['../enumio_1_1skyway_1_1_peer_1_1_media_connection_1_1_media_event_enum.html#a173aa67361f7e638db3611edab21563c',1,'io.skyway.Peer.MediaConnection.MediaEventEnum.STREAM()'],['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a21093fef479b2b8c46ac7ce2ae4476ce',1,'io.skyway.Peer.Room.RoomEventEnum.STREAM()'],['../classio_1_1skyway_1_1_peer_1_1_room_option.html#a37f49ff5f2c3ae607fc42121b0d93dc4',1,'io.skyway.Peer.RoomOption.stream()']]],
+  ['switchcamera',['switchCamera',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ad87c4e1d48b63106b156d309da8a00e5',1,'io::skyway::Peer::Browser::MediaStream']]]
 ];

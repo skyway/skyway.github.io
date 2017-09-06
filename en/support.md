@@ -7,7 +7,7 @@ breadcrumb: [en/index.md]
 
 <h1>Support</h1>
 
-Provides community support and support ticket useful for development.
+Provides developer community and support ticket useful for development.
 
 {% include support-cards.html %}
 

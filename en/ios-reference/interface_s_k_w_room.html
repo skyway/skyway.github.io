@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SKWRoom Class Reference - iOS SDK API Reference - Enterprise Cloud WebRTC Platform - ECLWebRTC</title>
+<title>SKWRoom Class Reference - iOS SDK API Reference - ECLWebRTC - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,13 +30,13 @@
    </div>
    <div id="breadcrumb">
     <p>
-     <a href="../">Enterprise Cloud WebRTC Platform</a>
+     <a href="../">ECLWebRTC</a>
      /
      <a href="../developer.html">Developer</a>
      /
      <a href="../ios-sdk.html">iOS SDK</a>
      /
-     <span>API Reference</span>
+     <a href="./">API Reference</a>
      /
      <span>SKWRoom Class Reference</span>
     </p>
@@ -95,20 +95,24 @@ Inheritance diagram for SKWRoom:</div>
  <div class="center">
   <img src="interface_s_k_w_room.png" usemap="#SKWRoom_map" alt=""/>
   <map id="SKWRoom_map" name="SKWRoom_map">
-<area href="interface_s_k_w_mesh_room.html" alt="SKWMeshRoom" shape="rect" coords="0,112,101,136"/>
-<area href="interface_s_k_w_s_f_u_room.html" alt="SKWSFURoom" shape="rect" coords="111,112,212,136"/>
+<area href="interface_s_k_w_mesh_room.html" title="Mesh room class. " alt="SKWMeshRoom" shape="rect" coords="0,112,101,136"/>
+<area href="interface_s_k_w_s_f_u_room.html" title="SFU room class. " alt="SKWSFURoom" shape="rect" coords="111,112,212,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_room.html#ad9b3a18bf1156b08b8ef4986a0c7d557">send:</a></td></tr>
+<tr class="memdesc:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to all participants in the room with WebSocket.  <a href="#ad9b3a18bf1156b08b8ef4986a0c7d557">More...</a><br /></td></tr>
 <tr class="separator:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2531df8db5b7c99b28e7773f1c093871"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on:callback:</a></td></tr>
+<tr class="memdesc:a2531df8db5b7c99b28e7773f1c093871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set blocks for <a class="el" href="interface_s_k_w_room.html" title="Room base class. ">SKWRoom</a> events.  <a href="#a2531df8db5b7c99b28e7773f1c093871">More...</a><br /></td></tr>
 <tr class="separator:a2531df8db5b7c99b28e7773f1c093871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f02542e9d2a7be9f5194fe0e147942b"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_room.html#a5f02542e9d2a7be9f5194fe0e147942b">offAll</a></td></tr>
+<tr class="memdesc:a5f02542e9d2a7be9f5194fe0e147942b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cancels the set event callback block of <a class="el" href="interface_s_k_w_room.html" title="Room base class. ">SKWRoom</a>.  <a href="#a5f02542e9d2a7be9f5194fe0e147942b">More...</a><br /></td></tr>
 <tr class="separator:a5f02542e9d2a7be9f5194fe0e147942b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09c2d417cd302156884525b9cc1123ef"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_room.html#a09c2d417cd302156884525b9cc1123ef">getLog</a></td></tr>
+<tr class="memdesc:a09c2d417cd302156884525b9cc1123ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start getting room's logs from signaling server.  <a href="#a09c2d417cd302156884525b9cc1123ef">More...</a><br /></td></tr>
 <tr class="separator:a09c2d417cd302156884525b9cc1123ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -135,6 +139,9 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Start getting room's logs from signaling server. </p>
+<p>The result is returned in the SKW_ROOM_EVENT_LOG event.</p>
 <div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_LOG <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSArray* logs = (NSArray*)arg1;</div><div class="line">    [logs enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL* stop) {</div><div class="line">        NSString* logStr = (NSString*)obj;</div><div class="line">        NSError* error = nil;</div><div class="line">        id logData = [NSJSONSerialization JSONObjectWithData:[logStr dataUsingEncoding:NSUTF8StringEncoding]</div><div class="line">                                                     options:0</div><div class="line">                                                       error:&amp;error];</div><div class="line">        if (nil == error)</div><div class="line">        {</div><div class="line">            NSLog(@&quot;SKW_ROOM_EVENT_LOG: %@&quot;, logData);</div><div class="line">        }</div><div class="line">    }];</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a09c2d417cd302156884525b9cc1123ef">getLog</a>];</div></div><!-- fragment --> 
 </div>
 </div>
@@ -152,6 +159,8 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Cancels the set event callback block of <a class="el" href="interface_s_k_w_room.html" title="Room base class. ">SKWRoom</a>. </p>
 <div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a5f02542e9d2a7be9f5194fe0e147942b">offAll</a>];</div></div><!-- fragment --> 
 </div>
 </div>
@@ -180,6 +189,8 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set blocks for <a class="el" href="interface_s_k_w_room.html" title="Room base class. ">SKWRoom</a> events. </p>
 <div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_STREAM <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    <a class="code" href="interface_s_k_w_media_stream.html">SKWMediaStream</a>* stream = (SKWMediaStream*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_REMOVE_STREAM <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    <a class="code" href="interface_s_k_w_media_stream.html">SKWMediaStream</a>* stream = (SKWMediaStream*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_OPEN <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSString* roomName = (NSString*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_CLOSE <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSString* roomName = (NSString*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_PEER_JOIN <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSString* peerId = (NSString*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_PEER_LEAVE <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSString* peerId = (NSString*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_ERROR <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    <a class="code" href="interface_s_k_w_peer_error.html">SKWPeerError</a>* error = (SKWPeerError*)arg1;</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_DATA <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSString* peerId = (NSString*)arg1;</div><div class="line">    if ([arg2 isKindOfClass:[NSString class]]) {</div><div class="line">        NSString* data = (NSString*)arg2;</div><div class="line">    }</div><div class="line">    else if ([arg2 isKindOfClass:[NSData class]]) {</div><div class="line">        NSData* data = (NSData*)arg2;</div><div class="line">    }</div><div class="line">}];</div><div class="line"></div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">on</a>:SKW_ROOM_EVENT_LOG <a class="code" href="interface_s_k_w_room.html#a2531df8db5b7c99b28e7773f1c093871">callback</a>:^(NSObject* arg1, NSObject* arg2) {</div><div class="line">    NSArray* logs = (NSArray*)arg1;</div><div class="line">}];</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>Event type</td></tr>
@@ -205,13 +216,16 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Send data to all participants in the room with WebSocket. </p>
+<p>It emits broadcast event.</p>
 <div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_room.html">SKWRoom</a>* room;</div><div class="line">[room <a class="code" href="interface_s_k_w_room.html#ad9b3a18bf1156b08b8ef4986a0c7d557">send</a>:@&quot;Hello.&quot;];</div></div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td></td></tr>
+    <tr><td class="paramname">data</td><td>Send data</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Result. </dd></dl>
 
 </div>
 </div>
