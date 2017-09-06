@@ -23,7 +23,7 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <img src="{{ site.rootdir[page.lang] }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
@@ -74,10 +74,9 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 SDKのバイナリファイルを配置します。  
 
-1. SDKを[こちら](https://github.com/skyway/skyway-android-sdk/releases/latest){:target="_blank"}からダウンロード
-2. 開発用プロジェクトに`app/libs`ディレクトリを作成する
-3. ZIPファイルを解凍後、`skyway.arr`を、`app/libs`ディレクトリ直下に配置
-4. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
+1. SDKを[こちら](https://github.com/skyway/skyway-android-sdk/archive/master.zip)からダウンロード
+2. ZIPファイルを解凍後、`skyway.arr`を、`app/libs`ディレクトリ直下に配置
+3. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
 
 <figure class="figure">
   <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png"
@@ -103,6 +102,9 @@ SDKのバイナリファイルを配置します。
 {: .lang}
 
 ```java
+//
+// Import for SkyWay
+//
 import io.skyway.Peer.Browser.Canvas;
 import io.skyway.Peer.Browser.MediaConstraints;
 import io.skyway.Peer.Browser.MediaStream;
@@ -192,10 +194,16 @@ onCreateメソッドの冒頭で、メインウィンドウのタイトルを非
 {: .lang}
 
 ```java
+//
+// Windows title hidden
+//
 Window wnd = getWindow();
 wnd.addFlags(Window.FEATURE_NO_TITLE);
 setContentView(R.layout.activity_main);
 
+//
+// Set UI handler
+//
 _handler = new Handler(Looper.getMainLooper());
 final Activity activity = this;
 ```
@@ -290,6 +298,9 @@ requestPermissionsメソッドで権限が取得できた場合は、startLocalS
 {: .lang}
 
 ```java
+//
+// onRequestPermissionResult
+//
 @Override
 public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
     switch (requestCode) {
@@ -706,19 +717,19 @@ void setMediaCallbacks() {
 
 ```java
 //
-// Set callbacks for MEDIACONNECTION_EVENTs
+// Set callbacks for MediaConnection.MediaEvents
 //
-- (void)setMediaCallbacks {
+void setMediaCallbacks() {
 
-    // 省略
-    
-		_mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, new OnCallback()	{
-			@Override
-			public void onCallback(Object object) {
-				PeerError error = (PeerError) object;
-				Log.d(TAG, "[On/MediaError]" + error);
-			}
-		});
+  // 省略
+
+  _mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, new OnCallback()	{
+    @Override
+    public void onCallback(Object object) {
+      PeerError error = (PeerError) object;
+      Log.d(TAG, "[On/MediaError]" + error);
+    }
+  });
 
 }
 ```
@@ -736,6 +747,9 @@ onDestoryメソッド内では、Peerオブジェクトを破棄するために`
 {: .lang}
 
 ```java
+//
+// Activity Lifecycle
+//
 @Override
 protected void onStart() {
   super.onStart();

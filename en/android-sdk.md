@@ -23,7 +23,7 @@ If you want to try the completed application, [download the source codes](https:
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <img src="{{ site.rootdir[page.lang] }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 

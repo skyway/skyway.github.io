@@ -24,7 +24,7 @@ If you want to try the completed application, [download the source codes](https:
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <img src="{{ site.rootdir[page.lang] }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
@@ -70,10 +70,9 @@ Download Android Studio project used in Tutorial from below repository.
 
 Arrange SDK binary files.
 
-1. Download SDK from [here](https://github.com/skyway/skyway-android-sdk/releases/latest){:target="_blank"}
-2. Create `app/libs` directory for development project
-3. After decompressing ZIP file, arrange `skyway.arr` directly under `app/libs` directory.
-4. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.
+1. Download SDK from [here](https://github.com/skyway/skyway-android-sdk/archive/master.zip)
+2. After decompressing ZIP file, arrange `skyway.arr` directly under `app/libs` directory.
+3. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.
 
 <figure class="figure">
   <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
@@ -98,6 +97,9 @@ Though it is already stated in the tutorial, import statement for SDK is added.
 {: .lang}
 
 ```java
+//
+// Import for SkyWay
+//
 import io.skyway.Peer.Browser.Canvas;
 import io.skyway.Peer.Browser.MediaConstraints;
 import io.skyway.Peer.Browser.MediaStream;
@@ -188,10 +190,16 @@ At the beginning of onCreate method, add a process to hide the title of the main
 {: .lang}
 
 ```java
+//
+// Windows title hidden
+//
 Window wnd = getWindow();
 wnd.addFlags(Window.FEATURE_NO_TITLE);
 setContentView(R.layout.activity_main);
 
+//
+// Set UI handler
+//
 _handler = new Handler(Looper.getMainLooper());
 final Activity activity = this;
 ```
@@ -284,6 +292,9 @@ If the authority is obtained by requestPermissions method, execute startLocalStr
 {: .lang}
 
 ```java
+//
+// onRequestPermissionResult
+//
 @Override
 public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
     switch (requestCode) {
@@ -696,19 +707,19 @@ void setMediaCallbacks() {
 
 ```java
 //
-// Set callbacks for MEDIACONNECTION_EVENTs
+// Set callbacks for MediaConnection.MediaEvents
 //
-- (void)setMediaCallbacks {
+void setMediaCallbacks() {
 
-    // 省略
-    
-		_mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, new OnCallback()	{
-			@Override
-			public void onCallback(Object object) {
-				PeerError error = (PeerError) object;
-				Log.d(TAG, "[On/MediaError]" + error);
-			}
-		});
+  // 省略
+
+  _mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, new OnCallback()	{
+    @Override
+    public void onCallback(Object object) {
+      PeerError error = (PeerError) object;
+      Log.d(TAG, "[On/MediaError]" + error);
+    }
+  });
 
 }
 ```
@@ -726,6 +737,9 @@ In onDestory method, execute `destoryPeer` to destroy Peer objects. Details will
 {: .lang}
 
 ```java
+//
+// Activity Lifecycle
+//
 @Override
 protected void onStart() {
   super.onStart();
