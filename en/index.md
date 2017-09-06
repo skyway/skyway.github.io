@@ -110,7 +110,7 @@ The Enterprise Edition can be used for commercial, large-scale services without 
     </tr>
     <tr>
       <th scope="row">Support</th>
-      <td>FAQ, Technical Forum</td>
+      <td>FAQ, Developer Community</td>
       <td>Web form</td>
     </tr>
     <tr>

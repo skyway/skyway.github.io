@@ -110,7 +110,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
     </tr>
     <tr>
       <th scope="row">サポート</th>
-      <td>FAQ、Technical Forum</td>
+      <td>FAQ、開発者コミュニティ</td>
       <td>Webフォーム</td>
     </tr>
     <tr>
