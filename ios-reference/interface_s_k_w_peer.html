@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SKWPeer クラス - iOS SDK APIリファレンス - Enterprise Cloud WebRTC Platform - ECLWebRTC</title>
+<title>SKWPeer クラス - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,13 +30,13 @@
    </div>
    <div id="breadcrumb">
     <p>
-     <a href="../">Enterprise Cloud WebRTC Platform</a>
+     <a href="../">SkyWay</a>
      /
      <a href="../developer.html">開発者</a>
      /
      <a href="../ios-sdk.html">iOS SDK</a>
      /
-     <span>APIリファレンス</span>
+     <a href="./">APIリファレンス</a>
      /
      <span>SKWPeer クラス</span>
     </p>
@@ -131,7 +131,7 @@ SKWPeer の継承関係図</div>
 <tr class="memdesc:aae708c20969bc1dbe8b314f3825e39e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピアオブジェクトを破棄状態にします。  <a href="#aae708c20969bc1dbe8b314f3825e39e5">[詳解]</a><br /></td></tr>
 <tr class="separator:aae708c20969bc1dbe8b314f3825e39e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87e4f8349efd2e9178af7e5a5b47708a"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a">listAllPeers:</a></td></tr>
-<tr class="memdesc:a87e4f8349efd2e9178af7e5a5b47708a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWay シグナリングサーバーから接続可能な ピア ID の一覧を取得します。  <a href="#a87e4f8349efd2e9178af7e5a5b47708a">[詳解]</a><br /></td></tr>
+<tr class="memdesc:a87e4f8349efd2e9178af7e5a5b47708a"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWay シグナリングサーバから接続可能な ピア ID の一覧を取得します。  <a href="#a87e4f8349efd2e9178af7e5a5b47708a">[詳解]</a><br /></td></tr>
 <tr class="separator:a87e4f8349efd2e9178af7e5a5b47708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e4345a5968a700c612f20e164ac9bb"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interface_s_k_w_room.html">SKWRoom</a> *__nullable)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_s_k_w_peer.html#a67e4345a5968a700c612f20e164ac9bb">joinRoomWithName:options:</a></td></tr>
 <tr class="memdesc:a67e4345a5968a700c612f20e164ac9bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルームに参加します  <a href="#a67e4345a5968a700c612f20e164ac9bb">[詳解]</a><br /></td></tr>
@@ -489,7 +489,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
       </table>
 </div><div class="memdoc">
 
-<p>SkyWay シグナリングサーバーから接続可能な ピア ID の一覧を取得します。 </p>
+<p>SkyWay シグナリングサーバから接続可能な ピア ID の一覧を取得します。 </p>
 <div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_peer.html">SKWPeer</a>* peer;</div><div class="line"></div><div class="line">[peer <a class="code" href="interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a">listAllPeers</a>:^(NSArray* aryPeers) {</div><div class="line">   for (NSString* strPeer in aryPeers) {</div><div class="line">       <span class="comment">// something to do.</span></div><div class="line">   }</div><div class="line">}];</div></div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>コールバックブロック </td></tr>
@@ -572,7 +572,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
 </div><div class="memdoc">
 
 <p>認証情報を更新します。 </p>
-<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_peer.html">SKWPeer</a>* peer;</div><div class="line"></div><div class="line"><a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a>* credential = [[<a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a> alloc] init];</div><div class="line">credential.timestamp = [[NSDate date] timeIntervalSince1970];</div><div class="line">credential.ttl = 86400;</div><div class="line">credential.authToken = <span class="stringliteral">@&quot;calculated auth token&quot;</span>;</div><div class="line"></div><div class="line">[peer <a class="code" href="interface_s_k_w_peer.html#a27c42a392e3daaa4a0a95d21c882753c">updateCredential</a>:credential];</div></div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
+<div class="fragment"><div class="line"><a class="code" href="interface_s_k_w_peer.html">SKWPeer</a>* peer;</div><div class="line"></div><div class="line"><a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a>* credential = [[<a class="code" href="interface_s_k_w_peer_credential.html">SKWPeerCredential</a> alloc] init];</div><div class="line">credential.<a class="code" href="interface_s_k_w_peer_credential.html#ab0a1d59b900f0b33b01450684e4bca21">timestamp</a> = [[NSDate date] timeIntervalSince1970];</div><div class="line">credential.<a class="code" href="interface_s_k_w_peer_credential.html#a0cd8d03113105cb8fa5fd115c6544a26">ttl</a> = 86400;</div><div class="line">credential.<a class="code" href="interface_s_k_w_peer_credential.html#a7e9a93b86139bcdd46f70fa5082f7919">authToken</a> = <span class="stringliteral">@&quot;calculated auth token&quot;</span>;</div><div class="line"></div><div class="line">[peer <a class="code" href="interface_s_k_w_peer.html#a27c42a392e3daaa4a0a95d21c882753c">updateCredential</a>:credential];</div></div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">newCredential</td><td>新しい認証情報 </td></tr>
   </table>

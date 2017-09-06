@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
 <head>
     <meta charset="utf-8">
-    <title>Class: Peer - JavaScript SDK APIリファレンス - Enterprise Cloud WebRTC Platform - ECLWebRTC</title>
+    <title>Class: Peer - JavaScript SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -18,15 +18,15 @@
 <div id="main">
     <div id="breadcrumb">
         <p>
-            <a href="../">Enterprise Cloud WebRTC Platform</a>
+            <a href="../">SkyWay</a>
             /
             <a href="../developer.html" class="en">Developer</a>
             <a href="../developer.html" class="jp">開発者</a>
             /
             <a href="../js-sdk.html">JavaScript SDK</a>
             /
-            <span class="en">API Reference</span>
-            <span class="jp">APIリファレンス</span>
+            <a href="./" class="en">API Reference</a>
+            <a href="./" class="jp">APIリファレンス</a>
             /
             <span>Class: Peer</span>
         </p>
@@ -45,8 +45,8 @@
     
         <h2><span class="attribs"><span class="type-signature"></span></span>Peer<span class="signature">(id<span class="signature-attributes">opt</span>, options)</span><span class="type-signature"></span></h2>
         
-            <div class="class-description">Class that manages all p2p connections and rooms.
-This class contains socket.io message handlers.</div>
+            <div class="class-description"><span class="en">Class that manages all p2p connections and rooms.</span>
+<span class="jp">P2P接続およびルーム接続機能を操作するためのクラスです。</span></div>
         
     
 </header>
@@ -69,7 +69,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Create new Peer instance. This is called by user application.
+    <span class="en">Create new Peer instance and connect to the signaling server.</span>
+<span class="jp">Peerインスタンスを生成します。シグナリングサーバに接続します。</span>
 </div>
 
 
@@ -133,7 +134,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">User's peerId.</td>
+            <td class="description last"><span class="en">User's peerId.</span>
+                       <span class="jp">ユーザーのPeer IDです。</span></td>
         </tr>
 
     
@@ -164,7 +166,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Optional arguments for the connection.
+            <td class="description last"><span class="en">Optional arguments for the connection.</span>
+                          <span class="jp">接続に関するパラメータを指定するオプションです。</span>
                 <h6>Properties</h6>
                 
 
@@ -222,7 +225,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">SkyWay API key.</td>
+            <td class="description last"><span class="en">ECLWebRTC API key.</span>
+                              <span class="jp">SkyWayのAPIキーです。</span></td>
         </tr>
 
     
@@ -261,7 +265,9 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">Log level. NONE:0, ERROR:1, WARN:2, FULL:3.</td>
+            <td class="description last"><span class="en">Log level. NONE:0, ERROR:1, WARN:2, FULL:3.</span>
+                                    <span class="jp">ログレベル： NONE:0、 ERROR:1、 WARN:2、 FULL:3 から選択できます。</span>
+<!--</td>
         </tr>
 
     
@@ -298,7 +304,7 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">The host name of signaling server.</td>
+            <td class="description last"><span class="en">The host name of signaling server.</span></td>
         </tr>
 
     
@@ -335,7 +341,7 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">The port number of signaling server.</td>
+            <td class="description last"><span class="en">The port number of signaling server.</span></td>
         </tr>
 
     
@@ -374,7 +380,7 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">The host name of the dispatcher server.</td>
+            <td class="description last"><span class="en">The host name of the dispatcher server.</span></td>
         </tr>
 
     
@@ -413,7 +419,7 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">The port number of dispatcher server.</td>
+            <td class="description last"><span class="en">The port number of dispatcher server.</span></td>
         </tr>
 
     
@@ -452,7 +458,7 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">True if the dispatcher server supports https.</td>
+            <td class="description last"><span class="en">True if the dispatcher server supports https.</span></td>
         </tr>
 
     
@@ -491,7 +497,9 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">The token used to authorize Peer.</td>
+            <td class="description last"><span class="en">The token used to authorize Peer.</span>
+                                                     <span class="jp">Peerを認証するために利用するトークン。</span>
+--></td>
         </tr>
 
     
@@ -530,7 +538,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">A RTCConfiguration dictionary for the RTCPeerConnection.</td>
+            <td class="description last"><span class="en">A RTCConfiguration dictionary for the RTCPeerConnection.</span>
+                                                        <span class="jp">RTCPeerConnectionに渡されるオブジェクトです。</span></td>
         </tr>
 
     
@@ -569,7 +578,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">Whether using TURN or not.</td>
+            <td class="description last"><span class="en">Whether using ECLWebRTC's TURN or not.</span>
+                                       <span class="jp">SkyWayで提供するTURNを使うかどうかのフラグです。</span></td>
         </tr>
 
     
@@ -606,10 +616,138 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">The credential used to authenticate peer.
-   + @param {number} [options.credential.timestamp] - Current UNIX timestamp.
-   + @param {number} [options.credential.ttl] - Time to live; The credential expires at timestamp + ttl.
-   + @param {string} [options.credential.authToken] - Credential token calculated with HMAC.</td>
+            <td class="description last"><span class="en">The credential used to authenticate peer.</span>
+                                       <span class="jp">Peerを認証するためのクレデンシャルです。次のプロパティを含みます。</span>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>timestamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><span class="en">Current UNIX timestamp.</span>
+                                                 <span class="jp">現在のUNIXタイムスタンプです。</span></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ttl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><span class="en">Time to live; The credential expires at timestamp + ttl.</span>
+                                           <span class="jp">Time to live(ttl)。タイムスタンプ + ttl の時間でクレデンシャルが失効します。</span></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>authToken</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><span class="en">Credential token calculated with HMAC.</span>
+                                                 <span class="jp">HMACを利用して生成する認証用トークンです。</span></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -629,10 +767,6 @@ This class contains socket.io message handlers.</div>
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -684,19 +818,6 @@ This class contains socket.io message handlers.</div>
     </div>
 
     
-        <h3 class="subsection-title">Extends</h3>
-
-        
-
-
-    <ul>
-        <li>EventEmitter</li>
-    </ul>
-
-
-    
-
-    
 
     
 
@@ -711,13 +832,14 @@ This class contains socket.io message handlers.</div>
 
         
             
-<h4 class="name" id=".EVENTS"><span class="type-signature">(static) </span>EVENTS<span class="type-signature"> :Enum</span></h4>
+<h4 class="name" id="connections"><span class="type-signature"></span>connections<span class="type-signature"> :object</span></h4>
 
 
 
 
 <div class="description">
-    Events the Peer class can emit.
+    <span class="en">Object contains all connections.</span>
+<span class="jp">全てのコネクションを保持するオブジェクトです。</span>
 </div>
 
 
@@ -726,7 +848,7 @@ This class contains socket.io message handlers.</div>
     <ul>
         <li>
             
-<span class="param-type">Enum</span>
+<span class="param-type">object</span>
 
 
         </li>
@@ -741,6 +863,66 @@ This class contains socket.io message handlers.</div>
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="id"><span class="type-signature"></span>id<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    <span class="en">The Peer ID specified by a user or randomly assigned Peer ID by the signaling server.</span>
+<span class="jp">ユーザーが指定したPeer ID、もしくはサーバが生成したPeer IDです。</span>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
 
     
 
@@ -784,7 +966,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Whether the socket is connecting to the signalling server or not.
+    <span class="en">Whether the socket is connecting to the signalling server or not.</span>
+<span class="jp">シグナリングサーバへの接続状況を保持します。</span>
 </div>
 
 
@@ -808,6 +991,66 @@ This class contains socket.io message handlers.</div>
     
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id="rooms"><span class="type-signature"></span>rooms<span class="type-signature"> :object</span></h4>
+
+
+
+
+<div class="description">
+    <span class="en">Object contains all rooms.</span>
+<span class="jp">全てのルームを保持するオブジェクトです。</span>
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
 
     
 
@@ -855,1212 +1098,6 @@ This class contains socket.io message handlers.</div>
     
 
     
-    <h4 class="name" id="_checkOpenStatus"><span class="type-signature"></span>_checkOpenStatus<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Return socket open status and emit error when it's not open.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - The socket status.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">boolean</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="_emitNotConnectedError"><span class="type-signature"></span>_emitNotConnectedError<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Emit not connected error.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="_initializeFullMeshRoom"><span class="type-signature"></span>_initializeFullMeshRoom<span class="signature">(roomName, roomOptions)</span><span class="type-signature"> &rarr; {<a href="SFURoom.html">SFURoom</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Create and setup a MeshRoom instance and emit MESH_JOIN message to SkyWay server.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>roomName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The name of the room user is joining to.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>roomOptions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">Optional arguments for the RTCPeerConnection.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>pcConfig</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A RTCConfiguration dictionary for the RTCPeerConnection.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>peerId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">User's peerId.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'mesh'
-                
-                </td>
-            
-
-            <td class="description last">One of 'sfu' or 'mesh'.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>stream</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">MediaStream</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Media stream user wants to emit.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>videoBandwidth</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A max video bandwidth(kbps)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>audioBandwidth</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A max audio bandwidth(kbps)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>videoCodec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A video codec like 'H264'</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>audioCodec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A video codec like 'PCMU'</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - An instance of MeshRoom.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="SFURoom.html">SFURoom</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="_initializeSfuRoom"><span class="type-signature"></span>_initializeSfuRoom<span class="signature">(roomName, roomOptions<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="SFURoom.html">SFURoom</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Create and setup a SFURoom instance and emit SFU_JOIN message to SkyWay server.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>roomName</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">The name of the room user is joining to.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>roomOptions</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">Optional arguments for the RTCPeerConnection.
-                <h6>Properties</h6>
-                
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Attributes</th>
-        
-
-        
-        <th>Default</th>
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>pcConfig</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A RTCConfiguration dictionary for the RTCPeerConnection.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>peerId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">User's peerId.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>mode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                    'mesh'
-                
-                </td>
-            
-
-            <td class="description last">One of 'sfu' or 'mesh'.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>stream</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">MediaStream</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">Media stream user wants to emit.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>videoBandwidth</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A max video bandwidth(kbps)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>audioBandwidth</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A max audio bandwidth(kbps)</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>videoCodec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A video codec like 'H264'</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>audioCodec</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-                <td class="default">
-                
-                </td>
-            
-
-            <td class="description last">A video codec like 'PCMU'</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    - An instance of SFURoom.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="SFURoom.html">SFURoom</a></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-
-
-        
-            
-
-    
-
-    
     <h4 class="name" id="call"><span class="type-signature"></span>call<span class="signature">(peerId, stream<span class="signature-attributes">opt</span>, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {<a href="MediaConnection.html">MediaConnection</a>}</span></h4>
     
 
@@ -2069,7 +1106,9 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Creates new MediaConnection.
+    <span class="en">Calls the designated Peer and creates new MediaConnection.</span>
+<span class="jp">指定したPeerにメディアチャネルで接続して、MediaConnectionを作成します。</span>
+<span class="jp">オプションを指定することで、帯域幅・コーデックを指定できます。</span>
 </div>
 
 
@@ -2131,7 +1170,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">The peerId of the peer you are connecting to.</td>
+            <td class="description last"><span class="en">The peerId of the peer you are calling.</span>
+                         <span class="jp">接続先のPeer IDです。</span></td>
         </tr>
 
     
@@ -2164,8 +1204,10 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">The MediaStream to send to the remote peer.
-                              If not set, the caller creates offer SDP with `sendonly` attribute.</td>
+            <td class="description last"><span class="en">The MediaStream to send to the remote peer.</span>
+                                <span class="en">If not set, the caller creates offer SDP with `recvonly` attribute.</span>
+                                <span class="jp">リモートのPeerへ送るメディアストリームです。</span>
+                                <span class="jp">設定されていない場合は、受信のみモードで発信します。</span></td>
         </tr>
 
     
@@ -2198,7 +1240,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Optional arguments for the connection.
+            <td class="description last"><span class="en">Optional arguments for the connection.</span>
+                            <span class="jp">発信時に付与するオプションです。帯域幅・コーデックを指定します。</span>
                 <h6>Properties</h6>
                 
 
@@ -2222,39 +1265,6 @@ This class contains socket.io message handlers.</div>
     </thead>
 
     <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>connectionId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An ID to uniquely identify the connection.</td>
-        </tr>
-
     
 
         <tr>
@@ -2285,74 +1295,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Label to easily identify the connection on either peer.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>queuedMessages</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An array of messages that were already
-                 received before the connection was created.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>payload</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An offer message that triggered creating this object.</td>
+            <td class="description last"><span class="en">Label to easily identify the connection on either peer.</span>
+                                  <span class="jp">接続先のPeer IDを識別するのに利用するラベルです。</span></td>
         </tr>
 
     
@@ -2385,7 +1329,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">A max video bandwidth(kbps)</td>
+            <td class="description last"><span class="en">A max video bandwidth(kbps)</span>
+                                           <span class="jp">映像の最大帯域幅(kbps)です。</span></td>
         </tr>
 
     
@@ -2418,7 +1363,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">A max audio bandwidth(kbps)</td>
+            <td class="description last"><span class="en">A max audio bandwidth(kbps)</span>
+                                           <span class="jp">音声の最大帯域幅(kbps)です。</span></td>
         </tr>
 
     
@@ -2451,7 +1397,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">A video codec like 'H264'</td>
+            <td class="description last"><span class="en">A video codec like 'H264'</span>
+                                       <span class="jp">'H264'などの映像コーデックです。</span></td>
         </tr>
 
     
@@ -2484,7 +1431,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">A video codec like 'PCMU'</td>
+            <td class="description last"><span class="en">A video codec like 'PCMU'</span>
+                                       <span class="jp">'PCMU'などの音声コーデックです。</span></td>
         </tr>
 
     
@@ -2532,10 +1480,6 @@ This class contains socket.io message handlers.</div>
     
 
     
-
-    
-
-    
 </dl>
 
 
@@ -2554,7 +1498,8 @@ This class contains socket.io message handlers.</div>
 
         
 <div class="param-desc">
-    An instance of MediaConnection.
+    <span class="en">An instance of MediaConnection.</span>
+                          <span class="jp">MediaConnectionのインスタンス</span>
 </div>
 
 
@@ -2591,7 +1536,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Creates new DataConnection.
+    <span class="en">Connects to the designated Peer and creates new DataConnection.</span>
+<span class="jp">指定したPeerにデータチャネルで接続して、DataConnectionインスタンスを生成します。</span>
 </div>
 
 
@@ -2653,7 +1599,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">User's peerId.</td>
+            <td class="description last"><span class="en">User's peerId.</span>
+                         <span class="jp">接続先のPeer IDです。</span></td>
         </tr>
 
     
@@ -2686,7 +1633,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Optional arguments for DataConnection.
+            <td class="description last"><span class="en">Optional arguments for DataConnection.</span>
+                            <span class="jp">接続時に付与するオプションです。</span>
                 <h6>Properties</h6>
                 
 
@@ -2710,39 +1658,6 @@ This class contains socket.io message handlers.</div>
     </thead>
 
     <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>connectionId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An ID to uniquely identify the connection.</td>
-        </tr>
-
     
 
         <tr>
@@ -2773,7 +1688,42 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Label to easily identify the connection on either peer.</td>
+            <td class="description last"><span class="en">Label to easily identify the connection on either peer.</span>
+                                  <span class="jp">接続先のPeer IDを識別するのに利用するラベルです。</span></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>metadata</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><span class="en">Any additional information to send to the peer.</span>
+                                     <span class="jp">コネクションに関連付けされるメタデータで、コネクションを開始したpeerに渡されます。</span></td>
         </tr>
 
     
@@ -2806,75 +1756,10 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">How to serialize data when sending.
-                 One of 'binary', 'json' or 'none'.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>queuedMessages</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An array of messages that were already
-                 received before the connection was created.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>payload</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last">An offer message that triggered creating this object.</td>
+            <td class="description last"><span class="en">How to serialize data when sending.</span>
+                                          <span class="en">One of 'binary', 'json' or 'none'.</span>
+                                          <span class="jp">送信時のシリアライズ方法を指定します。</span>
+                                          <span class="jp">'binary'、'json'、'none'のいずれか、となります。</span></td>
         </tr>
 
     
@@ -2894,10 +1779,6 @@ This class contains socket.io message handlers.</div>
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -2944,7 +1825,8 @@ This class contains socket.io message handlers.</div>
 
         
 <div class="param-desc">
-    An instance of DataConnection.
+    <span class="en">An instance of DataConnection.</span>
+                         <span class="jp">DataConnectionのインスタンス</span>
 </div>
 
 
@@ -2981,7 +1863,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Close all connections and disconnect socket.
+    <span class="en">Close all connections and disconnect socket.</span>
+<span class="jp">全てのコネクションを閉じ、シグナリングサーバへの接続を切断します。</span>
 </div>
 
 
@@ -2997,10 +1880,6 @@ This class contains socket.io message handlers.</div>
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -3062,7 +1941,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Close socket and clean up some properties, then emit disconnect event.
+    <span class="en">Close socket and clean up some properties, then emit disconnect event.</span>
+<span class="jp">シグナリングサーバへの接続を閉じ、disconnectedイベントを送出します。</span>
 </div>
 
 
@@ -3106,10 +1986,6 @@ This class contains socket.io message handlers.</div>
     
 
     
-
-    
-
-    
 </dl>
 
 
@@ -3124,184 +2000,6 @@ This class contains socket.io message handlers.</div>
 
 
 
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="getConnection"><span class="type-signature"></span>getConnection<span class="signature">(peerId, connectionId)</span><span class="type-signature"> &rarr; {<a href="MediaConnection.html">MediaConnection</a>|<a href="DataConnection.html">DataConnection</a>}</span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Returns a connection according to given peerId and connectionId.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>peerId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The peerId of the connection to be searched.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>connectionId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An ID to uniquely identify the connection.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    Search result.
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="MediaConnection.html">MediaConnection</a></span>
-|
-
-<span class="param-type"><a href="DataConnection.html">DataConnection</a></span>
-
-
-    </dd>
-</dl>
-
-    
 
 
 
@@ -3321,7 +2019,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Join fullmesh type or SFU type room that two or more users can join.
+    <span class="en">Join fullmesh type or SFU type room that two or more users can join.</span>
+<span class="jp">メッシュ接続のルーム、またはSFU接続のルームに参加します。</span>
 </div>
 
 
@@ -3383,7 +2082,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">The name of the room user is joining to.</td>
+            <td class="description last"><span class="en">The name of the room user is joining to.</span>
+                           <span class="jp">参加先のルームの名前です。</span></td>
         </tr>
 
     
@@ -3416,7 +2116,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Optional arguments for the RTCPeerConnection.
+            <td class="description last"><span class="en">Options to configure connection</span>
+                               <span class="jp">接続時に選択・付与するオプションです。</span>
                 <h6>Properties</h6>
                 
 
@@ -3478,7 +2179,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">One of 'sfu' or 'mesh'.</td>
+            <td class="description last"><span class="en">One of 'sfu' or 'mesh'.</span>
+                                            <span class="jp">'sfu'または'mesh'を指定します。</span></td>
         </tr>
 
     
@@ -3515,7 +2217,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">Media stream user wants to emit.</td>
+            <td class="description last"><span class="en">Media stream user wants to emit.</span>
+                                            <span class="jp">ユーザーが送信するメディアストリームです。</span></td>
         </tr>
 
     
@@ -3552,7 +2255,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">A max video bandwidth(kbps)</td>
+            <td class="description last"><span class="en">A max video bandwidth(kbps)</span>
+                                               <span class="jp">映像の最大帯域幅(kbps)です。</span></td>
         </tr>
 
     
@@ -3589,7 +2293,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">A max audio bandwidth(kbps)</td>
+            <td class="description last"><span class="en">A max audio bandwidth(kbps)</span>
+                                               <span class="jp">音声の最大帯域幅(kbps)です。</span></td>
         </tr>
 
     
@@ -3626,7 +2331,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">A video codec like 'H264'</td>
+            <td class="description last"><span class="en">A video codec like 'H264'</span>
+                                           <span class="jp">'H264'などの映像コーデックです。</span></td>
         </tr>
 
     
@@ -3663,7 +2369,8 @@ This class contains socket.io message handlers.</div>
                 </td>
             
 
-            <td class="description last">A video codec like 'PCMU'</td>
+            <td class="description last"><span class="en">A video codec like 'PCMU'</span>
+                                           <span class="jp">'PCMU'などの音声コーデックです。</span></td>
         </tr>
 
     
@@ -3711,10 +2418,6 @@ This class contains socket.io message handlers.</div>
     
 
     
-
-    
-
-    
 </dl>
 
 
@@ -3733,7 +2436,8 @@ This class contains socket.io message handlers.</div>
 
         
 <div class="param-desc">
-    - An instance of SFURoom or MeshRoom.
+    <span class="en">An instance of SFURoom or MeshRoom.</span>
+                           <span class="jp">SFURoomまたはMeshRoomのインスタンス</span>
 </div>
 
 
@@ -3773,7 +2477,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Call Rest API and get the list of peerIds assciated with API key.
+    <span class="en">Call Rest API and get the list of peerIds assciated with API key.</span>
+<span class="jp">REST APIを利用して、APIキーに紐づくPeerID一覧を取得します。</span>
 </div>
 
 
@@ -3825,7 +2530,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">The callback function that is called after XHR.</td>
+            <td class="description last"><span class="en">The callback function that is called after XHR.</span>
+                       <span class="jp">PeerID一覧を取得したときに呼ばれるコールバック関数です。。</span></td>
         </tr>
 
     
@@ -3838,91 +2544,6 @@ This class contains socket.io message handlers.</div>
 
 
 <dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="reconnect"><span class="type-signature"></span>reconnect<span class="signature">()</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Reconnect to SkyWay server. Does not work after a peer.destroy().
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
 
     
 
@@ -3984,7 +2605,8 @@ This class contains socket.io message handlers.</div>
 
 
 <div class="description">
-    Update server-side credential by sending a request in order to extend TTL.
+    <span class="en">Update server-side credential by sending a request in order to extend TTL.</span>
+<span class="jp">TTLを延長するための更新リクエストの送付します。</span>
 </div>
 
 
@@ -4036,7 +2658,8 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">The new credential generated by user.
+            <td class="description last"><span class="en">The new credential generated by user.</span>
+                                <span class="jp">ユーザー側で作成する新しいクレデンシャルです。</span>
                 <h6>Properties</h6>
                 
 
@@ -4090,9 +2713,76 @@ This class contains socket.io message handlers.</div>
 
             
 
-            <td class="description last">Current UNIX timestamp.
-   + @param {number} [newCredential.ttl] - Time to live; The credential expires at timestamp + ttl.
-   + @param {string} [newCredential.authToken] - Credential token calculated with HMAC.</td>
+            <td class="description last"><span class="en">Current UNIX timestamp.</span>
+                                            <span class="jp">現在のUNIXタイムスタンプです。</span></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ttl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><span class="en">Time to live; The credential expires at timestamp + ttl.</span>
+                                      <span class="jp">Time to live(ttl)。タイムスタンプ + ttl の時間でクレデンシャルが失効します。</span></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>authToken</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><span class="en">Credential token calculated with HMAC.</span>
+                                            <span class="jp">HMACを利用して生成する認証用トークンです。</span></td>
         </tr>
 
     
@@ -4112,10 +2802,6 @@ This class contains socket.io message handlers.</div>
 
 
 <dl class="details">
-
-    
-
-    
 
     
 
@@ -4169,6 +2855,634 @@ This class contains socket.io message handlers.</div>
     
 
     
+        <h3 class="subsection-title">Events</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:call">call</h4>
+    
+
+    
+
+
+
+<div class="description">
+    <span class="en">Received a call from peer.</span>
+<span class="jp">接続先のPeerからMediaChannelの接続を受信したときのイベントです。</span>
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="MediaConnection.html">MediaConnection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:close">close</h4>
+    
+
+    
+
+
+
+<div class="description">
+    <span class="en">Finished closing all connections to peers.</span>
+<span class="jp">Peerに対する全ての接続を終了したときのイベントです。</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:connection">connection</h4>
+    
+
+    
+
+
+
+<div class="description">
+    <span class="en">Received a connection from peer.</span>
+<span class="jp">接続先のPeerからDataChannelの接続を受信したときのイベントです。</span>
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="DataConnection.html">DataConnection</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:disconnected">disconnected</h4>
+    
+
+    
+
+
+
+<div class="description">
+    <span class="en">Disconnected from the signalling server.</span>
+<span class="jp">シグナリングサーバから切断したときのイベントです。</span>
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><span class="jp">Peer ID</span>
+                        <span class="en">Peer ID</span></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:error">error</h4>
+    
+
+    
+
+
+
+<div class="description">
+    <span class="en">Error occurred.</span>
+<span class="jp">エラーが発生した場合のイベントです。</span>
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Error</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="event:open">open</h4>
+    
+
+    
+
+
+
+<div class="description">
+    <span class="en">Successfully connected to signaling server.</span>
+<span class="jp">シグナリングサーバへ正常に接続できたときのイベントです。</span>
+</div>
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><span class="jp">Peer ID</span>
+                        <span class="en">Peer ID</span></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
 </article>
 
 </section>
@@ -4183,13 +3497,13 @@ This class contains socket.io message handlers.</div>
         <p><script>document.write('<a href="' + location.href.replace('/js-reference/', '/en/js-reference/') + '">English</a>');</script></p>
     </div>
 
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Connection.html">Connection</a></li><li><a href="DataConnection.html">DataConnection</a></li><li><a href="Logger.html">Logger</a></li><li><a href="MediaConnection.html">MediaConnection</a></li><li><a href="MeshRoom.html">MeshRoom</a></li><li><a href="Negotiator.html">Negotiator</a></li><li><a href="Peer.html">Peer</a></li><li><a href="Room.html">Room</a></li><li><a href="SdpUtil.html">SdpUtil</a></li><li><a href="SFURoom.html">SFURoom</a></li><li><a href="Socket.html">Socket</a></li></ul><h3>Events</h3><ul><li><a href="Connection.html#event:close">close</a></li><li><a href="DataConnection.html#event:close">close</a></li><li><a href="MediaConnection.html#event:close">close</a></li><li><a href="MeshRoom.html#event:close">close</a></li><li><a href="MeshRoom.html#event:data">data</a></li><li><a href="MeshRoom.html#event:error">error</a></li><li><a href="MeshRoom.html#event:log">log</a></li><li><a href="MeshRoom.html#event:open">open</a></li><li><a href="MeshRoom.html#event:peerJoin">peerJoin</a></li><li><a href="MeshRoom.html#event:peerLeave">peerLeave</a></li><li><a href="MeshRoom.html#event:stream">stream</a></li><li><a href="Room.html#event:close">close</a></li><li><a href="Room.html#event:data">data</a></li><li><a href="Room.html#event:error">error</a></li><li><a href="Room.html#event:log">log</a></li><li><a href="Room.html#event:open">open</a></li><li><a href="Room.html#event:peerJoin">peerJoin</a></li><li><a href="Room.html#event:peerLeave">peerLeave</a></li><li><a href="Room.html#event:stream">stream</a></li><li><a href="SFURoom.html#event:close">close</a></li><li><a href="SFURoom.html#event:data">data</a></li><li><a href="SFURoom.html#event:error">error</a></li><li><a href="SFURoom.html#event:log">log</a></li><li><a href="SFURoom.html#event:open">open</a></li><li><a href="SFURoom.html#event:peerJoin">peerJoin</a></li><li><a href="SFURoom.html#event:peerLeave">peerLeave</a></li><li><a href="SFURoom.html#event:stream">stream</a></li></ul><h3>Global</h3><ul><li><a href="global.html#blobToArrayBuffer">blobToArrayBuffer</a></li><li><a href="global.html#isSecure">isSecure</a></li><li><a href="global.html#joinArrayBuffers">joinArrayBuffers</a></li><li><a href="global.html#randomId">randomId</a></li><li><a href="global.html#randomToken">randomToken</a></li><li><a href="global.html#validateId">validateId</a></li><li><a href="global.html#validateKey">validateKey</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DataConnection.html">DataConnection</a></li><li><a href="MediaConnection.html">MediaConnection</a></li><li><a href="MeshRoom.html">MeshRoom</a></li><li><a href="Peer.html">Peer</a></li><li><a href="SFURoom.html">SFURoom</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Tue Aug 22 2017 12:42:16 GMT+0900 (JST)</p>
+    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4</a> on Wed Sep 06 2017 08:03:10 GMT+0900 (JST)</p>
     <p>© NTT Communications Corporation All Rights Reserved.</p>
 </footer>
 

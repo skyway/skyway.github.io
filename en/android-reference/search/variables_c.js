@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['path',['path',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#a2b4b30e6ba2d42939a5b3028e00bd19f',1,'io::skyway::Peer::PeerOption']]],
-  ['peer_5funavailable',['PEER_UNAVAILABLE',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a5aff69a9d7e8f925f64c0d247d7d3e80',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]]
+  ['only_5ferror',['ONLY_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_debug_level_enum.html#a6c1e63ba7327b3ae73c8402e29d308df',1,'io::skyway::Peer::Peer::DebugLevelEnum']]],
+  ['open',['OPEN',['../enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#af107c5dcceb7d8521954bb4a41d0de7b',1,'io.skyway.Peer.DataConnection.DataEventEnum.OPEN()'],['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#a5378f84ac555ea2c7d5818577116db60',1,'io.skyway.Peer.Peer.PeerEventEnum.OPEN()'],['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#afe87dd77a8b5b1e89b485fd26b70f6d1',1,'io.skyway.Peer.Room.RoomEventEnum.OPEN()']]],
+  ['open_5fws',['OPEN_WS',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#aea7eb9fa9b698023d47882afeb3d8931',1,'io::skyway::Peer::Peer::PeerEventEnum']]],
+  ['opensles',['opensles',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#ab8301b1918dcadc6ea9c1103071ec05f',1,'io::skyway::Peer::PeerOption']]]
 ];

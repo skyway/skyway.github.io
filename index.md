@@ -1,6 +1,7 @@
 ---
 layout: default
 title: SkyWay - Enterprise Cloud WebRTC Platform
+description: SkyWayは、アプリやWebサイト、IoTデバイスにビデオ通話を追加できる開発者のためのプラットフォームです。SkyWayを利用すれば、自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 lang: ja
 main_visual:
   main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
@@ -31,7 +32,7 @@ main_visual:
 ビデオ会議やコンタクトセンター、遠隔作業支援、オンライン教育、ライブ配信など、さまざまな機会において、オンラインでのリアルタイムコミュニケーションのニーズが高まっています。
 ビデオ・音声通話、データ通信といったリアルタイムコミュニケーションの標準技術である「WebRTC」が登場し、リアルタイムコミュニケーションがより実現しやすくなってきました。
 
-SkyWay利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
+SkyWayを利用すれば、WebRTCに必要なサーバを構築・運用することなく、手軽にビデオ・音声通話、データ通信を利用できます。
 自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 
 
@@ -109,7 +110,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
     </tr>
     <tr>
       <th scope="row">サポート</th>
-      <td>FAQ、Technical Forum</td>
+      <td>FAQ、開発者コミュニティ</td>
       <td>Webフォーム</td>
     </tr>
     <tr>
@@ -133,7 +134,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 		<p>インストールなし、会員登録なし、ログインなしで利用できる、多人数通話に対応したWeb会議です。
 		ブラウザでURLにアクセスするだけで参加できます。
 		画面共有にも対応しています。</p>
-		<p><a class="btn btn-primary" href="https://conf2.skyway.io/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
+		<p><a class="btn btn-primary" href="https://conf.webrtc.ecl.ntt.com/" role="button" target="_blank">SkyWay Conferenceを開く</a></p>
   </div>
 </div>
 
@@ -196,10 +197,6 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 
 
 [その他の事例はこちら](https://skyway.github.io/usecase/)
-
-<!-- Modal -->
-
-[migrationのモーダルを表示](./?origin=skyway)
 
 <script>
 $(function() {

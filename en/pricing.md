@@ -3,9 +3,9 @@ layout: default
 title: Pricing
 lang: en
 main_visual:
-  main_copy: Start Your Innovation!
-  sub_copy: ECLWebRTC offers the Community Edition for free.
-  links: <p><a class="btn btn-light" href="signup.html" role="button">Registration for free</a></p>
+  main_copy: Start Innovating!
+  sub_copy: ECLWebRTC offers a free Community Edition.
+  links: <p><a class="btn btn-light" href="signup.html" role="button">Register for free</a></p>
   copy_position: ["after"]
   image_file_name: 
   font_color: "#fff"
@@ -15,15 +15,15 @@ breadcrumb: [en/index.md]
 
 ## Pricing
 
-Registration online will give you an immediate access.  
-Start your innovation with developers around the world.  
-There is no charge for Community Edition.
+You can start using ECLWebRTC as soon as you sign up.
+Start innovating with developers around the world.
+Community Edition is completely free of charge!
 
 ### Basic Charge
 
 <p>
   ECLWebRTC is available without initial cost.<br>
-  <small class="text-muted">There is no limit on use of STUN, number of conversation times, or number of use times of room function.</small>
+  <small class="text-muted">There is no limit on the use of STUN, the number of calls, or the number of rooms created.</small>
 </p>
 
 <table class="table table-sm pricing-table">
@@ -37,33 +37,34 @@ There is no charge for Community Edition.
     <tbody align="right">
       <tr>
         <th scope="row">Basic Charge</th>
-        <td class="td-badge"><span class="badge badge-community">community</span> ¥0 for both Initial and Monthly cost</td>
-        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Initial cost ¥0、Monthly cost¥100,000</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> Free </td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥100,000 per month </td>
       </tr>
       <tr>
         <th scope="row">Support</th>
-        <td class="td-badge"><span class="badge badge-community">community</span> FAQ, Technical Forum</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> FAQ, Developer Community</td>
         <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Ticket（24/7）</td>
       </tr>
       <tr>
         <th scope="row">SLA</th>
         <td class="td-badge"><span class="badge badge-community">community</span> N/A</td>
-        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Availability of 99.99% guaranteed.</td>
+        <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> 99.99% availability guaranteed.</td>
     </tr>
   </tbody>
 </table>
 
-### The number of connection
+### Number of connections
 
 <p>
-  <small class="text-muted">There is no restriction on the connection time or the number of calls, per connection. <span class="d-none d-md-inline"><br></span>The number of connections is counted per APIKey. limits and charges are managed per APIKey.</small>
+  Charges are based on the number of connections to the signaling server per month. <br>
+  <small class="text-muted">There is no limit on the connection time or the number of calls per connection. <span class="d-none d-md-inline"><br></span>The number of connections is counted per API key. Limits and charges are calculated on a per API key basis.</small>
 </p>
 
 <table class="table table-sm pricing-table">
 <thead>
   <tr>
     <th class="d-none d-md-table-cell"></th>
-    <th>The number of connection</th>
+    <th>Number of connections</th>
     <th class="text-right">Community Edition</th>
     <th class="text-right">Enterprise Edition</th>
   </tr>
@@ -82,7 +83,7 @@ There is no charge for Community Edition.
     <td class="td-header" align="left">
       ~1,000,000<span class="d-sm-none">times/month</span>
     </td>
-    <td class="td-badge"><span class="badge badge-community">community</span> limit</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> unavailable </td>
     <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥0</td>
   </tr>
   <tr>
@@ -97,13 +98,13 @@ There is no charge for Community Edition.
 </table>
 
 
-### TURN/SFU Communication Charge
+### TURN/SFU Usage
 
 <p>
-  The charge will be made in accordance with the monthly traffic between TURN server and SFU server.<br>
+  Charges are based on the monthly traffic to/from the TURN and SFU servers.<br>
   <small class="text-muted">
     There is no restriction on the connection time or the number of calls, per connection. <span class="d-none d-md-inline"><br></span>
-    The server traffic is counted per API Key and by TURN/SFU type. Limitations and charges are managed per API Key. And it is a sum of IN/OUT communication to/from servers.
+    The server traffic is counted per API Key, separately for TURN and SFU.  Limits and charges are calculated on a per API key basis. All network traffic in and out of the servers is counted.
   </small>
 </p>
 
@@ -129,11 +130,11 @@ There is no charge for Community Edition.
   <tr>
     <th scope="row" class="d-none d-md-table-cell"></th>
     <td class="td-header" align="left">501GB~</td>
-    <td class="td-badge"><span class="badge badge-community">community</span> limit</td>
+    <td class="td-badge"><span class="badge badge-community">community</span> unavailable </td>
     <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> ¥40/GB</td>
   </tr>
   <tr class="hidden-xs hidden-sm">
-    <th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: By a SFU server transmitting image as a proxy, load of the terminal CPU and the network can be reduced, and multi-person conversation and distribution are realized.">i</span></th>
+    <th scope="row">SFU<span class="badge badge-pill badge-info" data-toggle="tooltip" data-placement="top" title="SFU: By using SFU servers to smartly relay video data, network and cpu load of client machines can be reduced, greatly increasing the quality of conferences with many users.">i</span></th>
     <td align="left">~500GB</td>
     <td>¥0</td>
     <td>¥40/GB</td>
@@ -148,9 +149,9 @@ There is no charge for Community Edition.
 </table>
 
 
-#### Usage model
+#### Usage estimates
 
-Call time until use limit of TURN of the Community Edition in each case, and estimation of charge for the Enterprise Edition.
+These are an estimate of the call times until you hit the TURN usage limit for the Community Edition, and the estimated cost for the Enterprise Edition.
 
 <div id="accordion" role="tablist" aria-multiselectable="true">
   <div class="card">
@@ -164,8 +165,8 @@ Call time until use limit of TURN of the Community Edition in each case, and est
     </a>
     <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
       <div class="card-body">
-        Estimation of the extent that call is possible until the maximum use of TURN<br>
-        <small class="text-muted">Peer-to-Peer communication is possible even if use limit of TURN. <br>The usage rate of TURN varies significantly among end users. <br>In general, it is 20% for companies, 10% for individuals and 1% for smartphones. <br>Time in case of one caller.</small>
+        Estimate of possible call times until TURN usage limit is hit.<br>
+        <small class="text-muted">Peer-to-Peer communication is possible even if you are past the TURN usage limit. <br>The usage rate of TURN varies significantly among end users. <br>In general, it is 20% for companies, 10% for individuals and 1% for smartphones. <br>Time in case of one caller.</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
@@ -217,7 +218,7 @@ Call time until use limit of TURN of the Community Edition in each case, and est
     <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="card-body">
         Estimated charge when TURN is used.<br>
-        <small class="text-muted">Peer-to-Peer communication is possible even if limit of TURN. <br>The usage rate of TURN varies significantly among end users. <br>In general, it is 20% for companies, 10% for individuals and 1% for smartphones. <br>Time in case of one caller.</small>
+        <small class="text-muted">The usage rate of TURN varies significantly among end users. <br>In general, it is 20% for companies, 10% for individuals and 1% for smartphones. <br>Time in case of one caller.</small>
         <table class="pricing-sample-table table table-sm">
         <thead>
           <tr>
@@ -259,12 +260,11 @@ Call time until use limit of TURN of the Community Edition in each case, and est
   </div>
 </div>
 
-## About Charges
+## About Pricing
 
-Please refer to [FAQ]() for details.  
-If you need detailed estimation of the charge, please use [Charge Simulator]().
+If you need detailed estimation of the cost, please use the [Cost Simulator](https://ecl.ntt.com/en/pricing/).
 
-## Start Your Innovation!
+## Start Innovating!
 
 {% include signup-cards.html %}
 

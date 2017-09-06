@@ -11,10 +11,13 @@ breadcrumb: [index.md, developer.md]
 
 Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、Android SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
-[完成したアプリのデモ](tbd)を試すことができます。
+
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"}と同じものになります。
+完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-android-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/hands-on-summary.png" class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
+  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+    class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
@@ -30,10 +33,10 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK/releases/latest" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-android-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
   <div>
-    <a href="https://github.com/nttcom/ECLWebRTC-Android-SDK" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/skyway-android-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
   </div>
 </div>
 
@@ -64,18 +67,18 @@ Android 4.2+ (API Level 17+)
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/mesh-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/mesh-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="#">ビデオ通話</a></td>
-          <td><a href="#">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>

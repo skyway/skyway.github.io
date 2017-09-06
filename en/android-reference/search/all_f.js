@@ -1,17 +1,15 @@
 var searchData=
 [
-  ['reconnect',['reconnect',['../classio_1_1skyway_1_1_peer_1_1_peer.html#a38fffc0bb0b06041051fb53a3183f3c5',1,'io::skyway::Peer::Peer']]],
-  ['reliable',['reliable',['../classio_1_1skyway_1_1_peer_1_1_connect_option.html#af5fe4d8e7ffa6a9b4f2b1456ce60c9b3',1,'io.skyway.Peer.ConnectOption.reliable()'],['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#a67e9e68064fe6bef5f84d5f4538b4fad',1,'io.skyway.Peer.DataConnection.reliable()']]],
-  ['remove_5fstream',['REMOVE_STREAM',['../enumio_1_1skyway_1_1_peer_1_1_media_connection_1_1_media_event_enum.html#ae06582ff8eeca4fee64b95b17bd919ab',1,'io::skyway::Peer::MediaConnection::MediaEventEnum']]],
-  ['removeaudiotrack',['removeAudioTrack',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a8d9f488dbda24d9fe99f54dafa2f4c25',1,'io::skyway::Peer::Browser::MediaStream']]],
-  ['removesrc',['removeSrc',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas.html#a28a49c71a0e4bb5ffb1ca165c7c107d2',1,'io::skyway::Peer::Browser::Canvas']]],
-  ['removevideorenderer',['removeVideoRenderer',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ad3900e8dd3e8a94bcd4ab9f3cd2e59ea',1,'io::skyway::Peer::Browser::MediaStream']]],
-  ['removevideotrack',['removeVideoTrack',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#aecb8b8e0676c5128616c93c19b729827',1,'io::skyway::Peer::Browser::MediaStream']]],
-  ['replacestream',['replaceStream',['../classio_1_1skyway_1_1_peer_1_1_media_connection.html#a30f426e983fedaf30b7356f878b1e1ba',1,'io.skyway.Peer.MediaConnection.replaceStream()'],['../classio_1_1skyway_1_1_peer_1_1_mesh_room.html#aad7d6530fcc39a8ad948975e842b5605',1,'io.skyway.Peer.MeshRoom.replaceStream()'],['../classio_1_1skyway_1_1_peer_1_1_s_f_u_room.html#afbd4648acbd63aaa104b77091d1c033d',1,'io.skyway.Peer.SFURoom.replaceStream()']]],
-  ['room',['Room',['../classio_1_1skyway_1_1_peer_1_1_room.html',1,'io::skyway::Peer']]],
-  ['room_5ferror',['ROOM_ERROR',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#aa6429f5cb69392eac0c6dd615169f6b3',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
-  ['roomdatamessage',['RoomDataMessage',['../classio_1_1skyway_1_1_peer_1_1_room_data_message.html',1,'io::skyway::Peer']]],
-  ['roomeventenum',['RoomEventEnum',['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html',1,'io::skyway::Peer::Room']]],
-  ['roommodeenum',['RoomModeEnum',['../enumio_1_1skyway_1_1_peer_1_1_room_option_1_1_room_mode_enum.html',1,'io::skyway::Peer::RoomOption']]],
-  ['roomoption',['RoomOption',['../classio_1_1skyway_1_1_peer_1_1_room_option.html',1,'io::skyway::Peer']]]
+  ['path',['path',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#a2b4b30e6ba2d42939a5b3028e00bd19f',1,'io::skyway::Peer::PeerOption']]],
+  ['peer',['Peer',['../classio_1_1skyway_1_1_peer_1_1_peer.html',1,'io.skyway.Peer.Peer'],['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#aaacbb3e584c7585b60903e12401e76dd',1,'io.skyway.Peer.DataConnection.peer()'],['../classio_1_1skyway_1_1_peer_1_1_media_connection.html#a54d42df983cffabfe2598a249b233ce5',1,'io.skyway.Peer.MediaConnection.peer()'],['../classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702',1,'io.skyway.Peer.Peer.Peer(Context context, PeerOption options)'],['../classio_1_1skyway_1_1_peer_1_1_peer.html#a6462592bee517811f1d39e5da01db5d7',1,'io.skyway.Peer.Peer.Peer(Context context, String peerId, PeerOption options)']]],
+  ['peer_5fjoin',['PEER_JOIN',['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#ae04a76ddfab0c30cd742ddacbdca904a',1,'io::skyway::Peer::Room::RoomEventEnum']]],
+  ['peer_5fleave',['PEER_LEAVE',['../enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a360fdee6418dabf5ff0f59130d875900',1,'io::skyway::Peer::Room::RoomEventEnum']]],
+  ['peer_5funavailable',['PEER_UNAVAILABLE',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a5aff69a9d7e8f925f64c0d247d7d3e80',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
+  ['peercredential',['PeerCredential',['../classio_1_1skyway_1_1_peer_1_1_peer_credential.html',1,'io.skyway.Peer.PeerCredential'],['../classio_1_1skyway_1_1_peer_1_1_peer_credential.html#aea2831adc2e01c99f22e24c37580b8c1',1,'io.skyway.Peer.PeerCredential.PeerCredential()']]],
+  ['peererror',['PeerError',['../classio_1_1skyway_1_1_peer_1_1_peer_error.html',1,'io.skyway.Peer.PeerError'],['../classio_1_1skyway_1_1_peer_1_1_peer_error.html#a8a95efe5c0049d30ed6e9b7da988a83a',1,'io.skyway.Peer.PeerError.PeerError()'],['../classio_1_1skyway_1_1_peer_1_1_peer_error.html#a8476e23910382c39cecd153d137590b3',1,'io.skyway.Peer.PeerError.PeerError(String type, String error)']]],
+  ['peererrorenum',['PeerErrorEnum',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html',1,'io::skyway::Peer::PeerError']]],
+  ['peereventenum',['PeerEventEnum',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html',1,'io::skyway::Peer::Peer']]],
+  ['peeroption',['PeerOption',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html',1,'io.skyway.Peer.PeerOption'],['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#af8ebd4d06b4b3b41760999791a87a9e4',1,'io.skyway.Peer.PeerOption.PeerOption()']]],
+  ['peertypeenum',['PeerTypeEnum',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_type_enum.html',1,'io::skyway::Peer::Peer']]],
+  ['port',['port',['../classio_1_1skyway_1_1_peer_1_1_peer_option.html#a28f24fd17a12d6f9c98aad2d470575d8',1,'io::skyway::Peer::PeerOption']]]
 ];
