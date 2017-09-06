@@ -197,6 +197,8 @@ html {
 
   // window width (992-1199px and 1200px~)
   @include media-breakpoint-up(lg) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     h1 {
       font-size: $display4-size;
       font-weight: $display4-weight;
