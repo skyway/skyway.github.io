@@ -147,7 +147,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
         <h3 class="card-title">Web Conferencing</h3>
         <p class="card-text">Easier to use than conventional services since you don't need to install anything<br>
         <font class="d-none d-lg-block">
-        Using ECL WebRTC, there are now services that don't require registration and allows you to start a video conference by just sharing a link.
+        Using ECLWebRTC, there are now services that don't require registration and allows you to start a video conference by just sharing a link.
         </font>
         </p>
         <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">See example</a></p>
