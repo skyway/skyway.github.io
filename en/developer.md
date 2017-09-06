@@ -193,7 +193,7 @@ Documents useful for development.
 
 ## サポート
 
-Community support tickets useful for development.
+Provides developer community and support ticket useful for development.
 
 {% include support-cards.html %}
 
