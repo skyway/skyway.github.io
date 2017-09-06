@@ -9,7 +9,7 @@ main_visual:
   copy_position: ["after"]
   image_file_name: three_devices.png
   font_color: "#fff"
-  background_color: "#5285ff"
+  background_color: rgb(0, 67, 134)
 ---
 
 <div class="card">
