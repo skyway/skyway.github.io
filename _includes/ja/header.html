@@ -1,81 +1,83 @@
 <header class="site-header" role="banner">
   <nav class="navbar navbar-dark navbar-expand-md bg-primary">
-    <a class="site-title navbar-brand" href="./">
-      <img src="{{ site.rootdir[page.lang] }}images/skyway-logo.svg" width="107" height="38" alt="{{ site.title[page.lang] | escape }}">
-    </a>
-    <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-toggler">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="main-nav-items" class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto">
+    <div class="container">
+      <a class="site-title navbar-brand" href="./">
+        <img src="{{ site.rootdir[page.lang] }}images/skyway-logo.svg" width="107" height="38" alt="{{ site.title[page.lang] | escape }}">
+      </a>
+      <button data-target="#main-nav-items" data-toggle="collapse" type="button" class="navbar-toggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="main-nav-items" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
 
-        {% if page.title == site.title[page.lang] %}
-        <li class="nav-item active">
-          <a class="nav-link" href="./">ホーム <span class="sr-only">(current)</span></a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="./">ホーム</a>
-        </li>
-        {% endif %}
+          {% if page.title == site.title[page.lang] %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./">ホーム <span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./">ホーム</a>
+          </li>
+          {% endif %}
 
-        {% if page.title == '開発者' %}
-        <li class="nav-item active">
-          <a class="nav-link" href="./developer.html">開発者<span class="sr-only">(current)</span></a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="./developer.html">開発者</a>
-        </li>
-        {% endif %}
+          {% if page.title == '開発者' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./developer.html">開発者<span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./developer.html">開発者</a>
+          </li>
+          {% endif %}
 
-        {% if page.title == '料金' %}
-        <li class="nav-item active">
-          <a class="nav-link" href="./pricing.html">料金<span class="sr-only">(current)</span></a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="./pricing.html">料金</a>
-        </li>
-        {% endif %}
+          {% if page.title == '料金' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./pricing.html">料金<span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./pricing.html">料金</a>
+          </li>
+          {% endif %}
 
-        {% if page.title == 'サポート' %}
-        <li class="nav-item active">
-          <a class="nav-link" href="./support.html">サポート<span class="sr-only">(current)</span></a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="./support.html">サポート</a>
-        </li>
-        {% endif %}
+          {% if page.title == 'サポート' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./support.html">サポート<span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./support.html">サポート</a>
+          </li>
+          {% endif %}
 
-      </ul>
-      <ul class="navbar-nav">
+        </ul>
+        <ul class="navbar-nav">
 
-        {% if page.title == '新規登録' %}
-        <li class="nav-item active">
-          <a class="nav-link" href="./signup.html">新規登録</a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="./signup.html">新規登録</a>
-        </li>
-        {% endif %}
+          {% if page.title == '新規登録' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./signup.html">新規登録</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./signup.html">新規登録</a>
+          </li>
+          {% endif %}
 
-        {% if page.title == 'ログイン' %}
-        <li class="nav-item active">
-          <a class="nav-link" href="./login.html">ログイン</a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="./login.html">ログイン</a>
-        </li>
-        {% endif %}
+          {% if page.title == 'ログイン' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./login.html">ログイン</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html">ログイン</a>
+          </li>
+          {% endif %}
 
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.rootdir[page.lang] }}{{ site.homedir['en'] }}{{ page.path | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">English</a>
-        </li>
-      </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.rootdir[page.lang] }}{{ site.homedir['en'] }}{{ page.path | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">English</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
