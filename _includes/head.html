@@ -20,19 +20,17 @@
   {% else %}
   <meta property="og:type" content="article">
   {% endif %}
-  <meta property="og:url" content="{{ full_url }}">
-  {% comment %}
-  <meta property="og:image" content="{{ page.ogImage | default: site.ogImage }}">
-  {% endcomment %}
+  <meta property="og:url" content="{{ full_url | replace_first: 'http://', 'https://' }}">
+  <meta property="og:image" content="{{ page.og_image | default: site.og_image[page.lang] | prepend: full_base_url | replace_first: 'http://', 'https://' }}">
   <meta property="og:site_name" content="{{ site.title[page.lang] }}">
   {% if page.description %}
   <meta property="og:description" content="{{ description_tag }}">
   {% endif %}
-  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: full_base_url | replace_first: 'http://', '//' | replace_first: 'https://', '//' }}">
+  <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="canonical" href="{{ full_url }}">
+  <link rel="canonical" href="{{ full_url | replace_first: 'http://', 'https://' }}">
   {% include google-analytics.html %}
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | prepend: site.baseurl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | prepend: site.baseurl }}">
 </head>

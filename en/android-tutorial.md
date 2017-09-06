@@ -18,13 +18,13 @@ If you want to try the completed application, [download the source codes](https:
 
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+  <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
   <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <img src="{{ site.baseurl }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
@@ -75,7 +75,7 @@ Arrange SDK binary files.
 3. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
+  <img src="{{ site.baseurl }}/images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
   <figcaption class="figure-caption">As SDK is added to the project</figcaption>
 </figure>
 
