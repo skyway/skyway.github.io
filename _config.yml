@@ -7,6 +7,9 @@ rootdir:
 homedir:
   ja: ./
   en: en/
+og_image:
+  ja: /images/skyway-ogp.png
+  en: /images/eclwebrtc-ogp.png
 
 # Build settings
 markdown: kramdown
