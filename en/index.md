@@ -121,7 +121,7 @@ The Enterprise Edition can be used for commercial, large-scale services without 
   </tbody>
 </table>
 
-Please refer to [Pricing](pricing.md) for pricing details and refer to [Service Descriptions](https://ecl.ntt.com/documents/service-descriptions/webrtc/webrtc.html){:target="_blank"} for details of the SLA.
+Please refer to [Pricing](pricing.md) for pricing details and refer to [Service Descriptions](https://ecl.ntt.com/en/documents/service-descriptions/rsts/webrtc/webrtc.html){:target="_blank"} for details of the SLA.
 
 ## Demo
 
