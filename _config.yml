@@ -1,12 +1,9 @@
 title:
   ja: SkyWay - Enterprise Cloud WebRTC Platform
   en: ECLWebRTC - Enterprise Cloud WebRTC Platform
-rootdir:
-  ja: ./
-  en: ../
 homedir:
-  ja: ./
-  en: en/
+  ja: /
+  en: /en/
 og_image:
   ja: /images/skyway-ogp.png
   en: /images/eclwebrtc-ogp.png

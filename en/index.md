@@ -127,7 +127,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
 
 <div id="demos-div" class="row">
   <div class="col-12 col-sm-6">
-    <img class="img-fluid" src="{{ site.rootdir[page.lang] }}/images/skywayconf.png" alt="SkyWay Conference">
+    <img class="img-fluid" src="{{ site.baseurl }}/images/skywayconf.png" alt="SkyWay Conference">
   </div>
   <div class="col-12 col-sm-6">
 		<h5 class="mt-0">SkyWay Conference</h5>
@@ -142,7 +142,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
 <div class="row card-row">
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_conf_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/images/en_conf_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Web Conferencing</h3>
         <p class="card-text">Easier to use than conventional services since you don't need to install anything<br>
@@ -156,7 +156,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_support_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/images/en_support_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Support</h3>
         <p class="card-text">Support can be completely contained with the website or app as you can talk without making a phone call or switching over to other application.<br>
@@ -169,7 +169,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_healthcare_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/images/en_healthcare_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Telemedicate</h3>
         <p class="card-text">WebRTC for remote diagnosis and health care consulting.<br>
@@ -181,7 +181,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_IoT_400x250.png" alt="Card image cap"></a>
+      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/images/en_IoT_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">IoT</h3>
         <p class="card-text">WebRTC can be used on embedded systems and IoT devices.

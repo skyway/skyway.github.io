@@ -17,13 +17,13 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-android-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+  <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <img src="{{ site.baseurl }}/images/android-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ SDKのバイナリファイルを配置します。
 3. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/android-tutorial-studio1.png"
+  <img src="{{ site.baseurl }}/images/android-tutorial-studio1.png"
     class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
   <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
 </figure>

@@ -17,13 +17,13 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+  <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
+  <img src="{{ site.baseurl }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ SDKのバイナリファイルを配置します。
 6. General > Embedded Binaries から`SkyWay.framework`を再度追加
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode-sc.png"
+  <img src="{{ site.baseurl }}/images/ios-tutorial-xcode-sc.png"
     class="figure-img img-fluid rounded" alt="SDKをプロジェクトに追加したところ">
   <figcaption class="figure-caption">SDKをプロジェクトに追加したところ</figcaption>
 </figure>
@@ -118,7 +118,7 @@ SDKのバイナリファイルを配置します。
 実行時にエラーが出てしまいますが、以下のとおりビルドに成功すれば準備完了です。
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-splash.png"
+  <img src="{{ site.baseurl }}/images/ios-tutorial-splash.png"
     class="figure-img img-fluid rounded" alt="実機上でLaunchScreenが表示されたところ">
   <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
 </figure>

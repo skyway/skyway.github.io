@@ -15,13 +15,13 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 [完成したアプリのデモ](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){:target="_blank"}を試すことができます。
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+  <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="SkyWayでシグナリングをして、端末間がビデオ通話で繋がる">
   <figcaption class="figure-caption">SkyWayでシグナリングをして、端末間がビデオ通話で繋がる</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-videchat.png"
+  <img src="{{ site.baseurl }}/images/js-tutorial-videchat.png"
     class="figure-img img-fluid rounded" alt="ビデオ通話のスクリーンショット">
   <figcaption class="figure-caption">ビデオ通話のスクリーンショット</figcaption>
 </figure>

@@ -18,13 +18,13 @@ If you want to try the completed application, [download the source codes](https:
 
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+  <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
   <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <img src="{{ site.baseurl }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ In this tutorial, we will introduce a procedure to manually set the downloaded f
 6. From [ **General** ] → [ **Embedded Binaries** ], add `ECLWebRTC.framework` again.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode-sc.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
+  <img src="{{ site.baseurl }}/images/ios-tutorial-xcode-sc.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
   <figcaption class="figure-caption">As SDK is added to the project</figcaption>
 </figure>
 
@@ -113,7 +113,7 @@ Though it is already stated in the tutorial, add the header file for SDK to `Vie
 Though we will see some errors during execution, the preparation is complete if we succeed in the build as follows.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-splash-sc.png" class="figure-img img-fluid rounded" alt="As the LaunchScreen is displayed on the actual device.">
+  <img src="{{ site.baseurl }}/images/ios-tutorial-splash-sc.png" class="figure-img img-fluid rounded" alt="As the LaunchScreen is displayed on the actual device.">
   <figcaption class="figure-caption">As the LaunchScreen is displayed on the actual device.</figcaption>
 </figure>
 
