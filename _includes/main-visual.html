@@ -12,7 +12,7 @@
       {% endif %}
     {% endif %}
     {% if page.main_visual.image_file_name %}
-      <img src="{{ site.rootdir[page.lang] }}images/{{ page.main_visual.image_file_name }}" class="img-fluid">
+      <img src="{{ site.baseurl }}/images/{{ page.main_visual.image_file_name }}" class="img-fluid">
     {% endif %}
     {% if page.main_visual.copy_position contains "after" %}
       {% if page.main_visual.main_copy %}

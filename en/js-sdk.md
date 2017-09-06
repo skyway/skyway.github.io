@@ -15,13 +15,13 @@ The application will have functions to input ID of a conversation partner, to st
 You can try [demonstration of the completed application](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){: target="_blank"}.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/sdk-tutorial-top-image.png"
+  <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
     class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
   <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}/images/js-tutorial-videchat.png"
+  <img src="{{ site.baseurl }}/images/js-tutorial-videchat.png"
     class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>

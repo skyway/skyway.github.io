@@ -3,7 +3,7 @@
     {% for bcpage in page.breadcrumb %}
     {% for sitepage in site.pages %}
     {% if sitepage.path == bcpage %}
-    <li class="breadcrumb-item"><a href="{{ site.rootdir[page.lang] }}.{{ sitepage.url }}">{% if sitepage.title == site.title[page.lang] %}ECLWebRTC{% else %}{{ sitepage.title }}{% endif %}</a></li>
+    <li class="breadcrumb-item"><a href="{{ site.baseurl }}{{ sitepage.url }}">{% if sitepage.title == site.title[page.lang] %}ECLWebRTC{% else %}{{ sitepage.title }}{% endif %}</a></li>
     {% endif %}
     {% endfor %}
     {% endfor %}
