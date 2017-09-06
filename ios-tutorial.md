@@ -155,7 +155,7 @@ static NSString *const kDomain = @"domain";
 
 ```objc
 //
-// declaration
+// Instance declaration
 //
 @interface ViewController () {
     SKWPeer*			_peer;
@@ -177,6 +177,9 @@ static NSString *const kDomain = @"domain";
 {: .lang}
 
 ```objc
+//
+// Property declaration
+//
 @property (weak, nonatomic) IBOutlet UILabel*   idLabel;
 @property (weak, nonatomic) IBOutlet UIButton*  actionButton;
 @property (weak, nonatomic) IBOutlet SKWVideo*  localView;
@@ -186,7 +189,8 @@ static NSString *const kDomain = @"domain";
 
 @implementation ViewController
 
-// 省略
+     :
+     :
 
 //
 // dealloc
@@ -199,6 +203,11 @@ static NSString *const kDomain = @"domain";
     _peer = nil;
     
 }
+
+     :
+     :
+
+@end
 ```
 
 ### Peerオブジェクトの作成
@@ -278,7 +287,8 @@ SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関す�
 // OPEN
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // 省略
+     :
+     :
     
     // Set MediaConstraints
     SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
@@ -301,10 +311,13 @@ SKWNavigatorクラスの初期化を行い、getUserMediaメソッドの引数�
 // OPEN
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // 省略
+     :
+     :
     
     // Set MediaConstraints
-    // 省略
+    
+     :
+     :
 
     // Get a local MediaStream & show it
     [SKWNavigator initialize:_peer];
@@ -461,7 +474,8 @@ actionButtonをタップした際に接続中であれば、MediaConnectionオ�
     
     if(nil == _mediaConnection) {
         
-        // 省略
+     :
+     :
          
     else {
         
@@ -557,7 +571,8 @@ MediaConnection切断時に実行するコールバックイベントの開放�
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 省略
+     :
+     :
    
     // CALL (Incoming call)
     [_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj) {
@@ -623,7 +638,8 @@ MediaConnectionオブジェクトに必要なイベントコールバックで�
 //
 - (void)setMediaCallbacks {
 
-    // 省略
+     :
+     :
     
     [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_CLOSE callback:^(NSObject* obj) {
         if (NO == _bConnected) {
@@ -654,7 +670,8 @@ MediaConnectionオブジェクトに必要なイベントコールバックで�
 //
 - (void)setMediaCallbacks {
 
-    // 省略
+     :
+     :
     
     [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_ERROR callback:^(NSObject* obj) { }];
 }
@@ -670,6 +687,24 @@ actionButtonはトグルで利用するため、接続状態に応じてラベ�
 {: .lang}
 
 ```objc
+//
+// UIViewcontroller lifecycle
+//
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    [self updateActionButtonTitle];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    [super viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 //
 // Update actionButton title
 //
