@@ -42,7 +42,7 @@ Community Editionは一切、料金がかかりません。
       </tr>
       <tr>
         <th scope="row">サポート</th>
-        <td class="td-badge"><span class="badge badge-community">community</span> FAQ、Technical Forum</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> FAQ、開発者コミュニティ</td>
         <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> チケット（24時間365日）</td>
       </tr>
       <tr>

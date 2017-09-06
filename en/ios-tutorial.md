@@ -24,7 +24,7 @@ If you want to try the completed application, [download the source codes](https:
 </figure>
 
 <figure class="figure">
-  <img src="https://github.com/skyway/webrtc-handson-native/wiki/img/video-chat.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
+  <img src="{{ site.rootdir[page.lang] }}/images/ios-tutorial-videochat-sc.png" class="figure-img img-fluid rounded" alt="Screenshot of video chat">
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ In this tutorial, we will introduce a procedure to manually set the downloaded f
 6. From [ **General** ] → [ **Embedded Binaries** ], add `ECLWebRTC.framework` again.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode1.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-xcode-sc.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
   <figcaption class="figure-caption">As SDK is added to the project</figcaption>
 </figure>
 
@@ -101,7 +101,7 @@ Though it is already stated in the tutorial, add the header file for SDK to `Vie
 {: .lang}
 
 ```objc
-#import <ECLWebRTC/SKWPeer.h>
+#import <SkyWay/SKWPeer.h>
 ```
 
 ### Build
@@ -113,7 +113,7 @@ Though it is already stated in the tutorial, add the header file for SDK to `Vie
 Though we will see some errors during execution, the preparation is complete if we succeed in the build as follows.
 
 <figure class="figure">
-  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-sc1.png" class="figure-img img-fluid rounded" alt="As the LaunchScreen is displayed on the actual device.">
+  <img src="{{ site.rootdir[page.lang] }}images/ios-tutorial-splash-sc.png" class="figure-img img-fluid rounded" alt="As the LaunchScreen is displayed on the actual device.">
   <figcaption class="figure-caption">As the LaunchScreen is displayed on the actual device.</figcaption>
 </figure>
 
@@ -150,7 +150,7 @@ Add declaration of instance variables used in the program.
 
 ```objc
 //
-// declaration
+// Instance declaration
 //
 @interface ViewController () {
     SKWPeer*			_peer;
@@ -171,7 +171,10 @@ Add property declaration and dealloc process of instance variables.
 *Objective-C*
 {: .lang}
 
-```objc
+```obj
+//
+// Property declaration
+//
 @property (weak, nonatomic) IBOutlet UILabel*   idLabel;
 @property (weak, nonatomic) IBOutlet UIButton*  actionButton;
 @property (weak, nonatomic) IBOutlet SKWVideo*  localView;
@@ -181,7 +184,8 @@ Add property declaration and dealloc process of instance variables.
 
 @implementation ViewController
 
-// 省略
+     :
+     :
 
 //
 // dealloc
@@ -194,8 +198,12 @@ Add property declaration and dealloc process of instance variables.
     _peer = nil;
     
 }
-```
 
+     :
+     :
+
+@end
+```
 ### Create Peer Object
 
 Add a process to create a Peer object in viewDidLoad method.
@@ -273,7 +281,8 @@ Please refer to [API Reference](./ios-reference/interface_s_k_w_media_constraint
 // OPEN
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // 省略
+     :
+     :
     
     // Set MediaConstraints
     SKWMediaConstraints* constraints = [[SKWMediaConstraints alloc] init];
@@ -296,10 +305,13 @@ Use addVideoRenderer method to allocate video renderer (SKWVideo object for disp
 // OPEN
 [_peer on:SKW_PEER_EVENT_OPEN callback:^(NSObject* obj) {
     
-    // 省略
+     :
+     :
     
     // Set MediaConstraints
-    // 省略
+    
+     :
+     :
 
     // Get a local MediaStream & show it
     [SKWNavigator initialize:_peer];
@@ -454,7 +466,8 @@ If the connection is alive when the actionButton is tapped, use Close method of 
     
     if(nil == _mediaConnection) {
         
-        // 省略
+     :
+     :
          
     else {
         
@@ -549,7 +562,8 @@ In the same way as the calling process, execute `setMediaCallbacks` and set the 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 省略
+     :
+     :
    
     // CALL (Incoming call)
     [_peer on:SKW_PEER_EVENT_CALL callback:^(NSObject* obj) {
@@ -616,7 +630,8 @@ In the callback, necessary disconnection processes will be executed. Details wil
 //
 - (void)setMediaCallbacks {
 
-    // 省略
+     :
+     :
     
     [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_CLOSE callback:^(NSObject* obj) {
         if (NO == _bConnected) {
@@ -647,7 +662,8 @@ In the callback, necessary disconnection processes will be executed. Details wil
 //
 - (void)setMediaCallbacks {
 
-    // 省略
+     :
+     :
     
     [_mediaConnection on:SKW_MEDIACONNECTION_EVENT_ERROR callback:^(NSObject* obj) { }];
 }
@@ -663,6 +679,24 @@ As actionButton is used in toggle mode, change the label in accordance with the 
 {: .lang}
 
 ```objc
+//
+// UIViewcontroller lifecycle
+//
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    [self updateActionButtonTitle];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+    [super viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
 //
 // Update actionButton title
 //

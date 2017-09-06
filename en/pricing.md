@@ -42,7 +42,7 @@ Community Edition is completely free of charge!
       </tr>
       <tr>
         <th scope="row">Support</th>
-        <td class="td-badge"><span class="badge badge-community">community</span> FAQ, Technical Forum</td>
+        <td class="td-badge"><span class="badge badge-community">community</span> FAQ, Developer Community</td>
         <td class="td-badge"><span class="badge badge-enterprise">enterprise</span> Ticket（24/7）</td>
       </tr>
       <tr>
