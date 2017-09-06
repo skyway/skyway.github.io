@@ -204,7 +204,7 @@ breadcrumb: [index.md, pricing.md]
 </div>
 
 
-<script src="{{ site.rootdir[page.lang] }}js/costSimulator.js"></script>
+<script src="{{ site.baseurl }}/js/costSimulator.js"></script>
 
 <script>
   var cal = new CostSimulator();

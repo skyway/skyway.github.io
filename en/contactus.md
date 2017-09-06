@@ -16,7 +16,7 @@ Please use this inquaries for migration from Community Edition to Enterprise Edi
         <h3 class="card-title">Inquiry（Contract）</h3>
         <p class="card-text">Inquiries in a Web form or by the phone are accepted.</p>
         <a href="https://dm.ntt.com/en_inq_1058_01reg" class="btn btn-primary">Document request and inquiry form</a>
-        <a href="tel:0120106107"><img src="{{ site.rootdir[page.lang] }}images/freedial.png"></a><br>
+        <a href="tel:0120106107"><img src="{{ site.baseurl }}/images/freedial.png"></a><br>
         <small class="text-muted">※Reception Time:9:00～17:00(Except for weekends and holidays)</small>
       </div>
     </div>
