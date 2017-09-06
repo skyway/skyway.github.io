@@ -142,7 +142,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
 <div class="row card-row">
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_conf_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_conf_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Web Conferencing</h3>
         <p class="card-text">Easier to use than conventional services since you don't need to install anything<br>
@@ -150,50 +150,50 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
         Using ECLWebRTC, there are now services that don't require registration and allows you to start a video conference by just sharing a link.
         </font>
         </p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">See example</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/conf/" role="button">See example</a></p>
       </div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_support_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_support_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Support</h3>
         <p class="card-text">Support can be completely contained with the website or app as you can talk without making a phone call or switching over to other application.<br>
         <font class="d-none d-lg-block">
         As login information can be easily forwarded to the agent from the app, no time has to be spent identifying/verifying the customer.
         You can share documents, screens, and check customer status by using a camera.</font></p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/support/" role="button">See example</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/support/" role="button">See example</a></p>
       </div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_healthcare_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_healthcare_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Telemedicate</h3>
         <p class="card-text">WebRTC for remote diagnosis and health care consulting.<br>
         <font class="d-none d-lg-block">
         In Japan, the Ministry of Health, Labor and Welfare removed a ban on the remote diagnosis in 2015. This triggered massive growth in this market.</font></p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/healthcare/" role="button">See example</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/healthcare/" role="button">See example</a></p>
       </div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_IoT_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}/images/en_IoT_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">IoT</h3>
         <p class="card-text">WebRTC can be used on embedded systems and IoT devices.
         It is also used in communication devices such as smart homes and digital signs.</p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/iot/" role="button">See example</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/iot/" role="button">See example</a></p>
       </div>
     </div>
   </div>
 </div>
 
 
-[See other examples](https://skyway.github.io/usecase/)
+[See other examples](https://webrtc.ecl.ntt.com/usecase/)
 
 <script>
 $(function() {

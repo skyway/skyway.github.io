@@ -144,7 +144,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 <div class="row card-row">
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/conf_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/conf_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">Web会議</h3>
         <p class="card-text">アプリやプラグインのインストールが不要なので、従来のサービスより手軽に利用できます。<br>
@@ -153,50 +153,50 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
         資料や画面を共有することも可能です。
         </font>
         </p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/conf/" role="button">事例を見る</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/conf/" role="button">事例を見る</a></p>
       </div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/support_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/support/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/support_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">サポート</h3>
         <p class="card-text">電話をかけたり、別アプリに切り替えたりせずに通話できるので、アプリやWebサイト内でサポートが完結します。<br>
         <font class="d-none d-lg-block">
         ログイン情報を引き継げるので、本人確認の手間も不要です。
         資料や画面を共有したり、カメラを使って状況を確認することも可能です。</font></p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/support/" role="button">事例を見る</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/support/" role="button">事例を見る</a></p>
       </div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/healthcare_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/healthcare/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/healthcare_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">遠隔医療</h3>
         <p class="card-text">WebRTCは、遠隔診療やヘルスケア相談にも活用されています。<br>
         <font class="d-none d-lg-block">
         日本では、厚労省が2015年に遠隔診療を実質解禁したことがきっかけとなり、市場が成長しています。</font></p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/healthcare/" role="button">事例を見る</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/healthcare/" role="button">事例を見る</a></p>
       </div>
     </div>
   </div>
   <div class="col-6 col-md-3">
     <div class="card">
-      <a href="https://skyway.github.io/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/iot_400x250.png" alt="Card image cap"></a>
+      <a href="https://webrtc.ecl.ntt.com/usecase/skyway/iot/"><img class="card-img-top img-fluid" src="{{ site.rootdir[page.lang] }}images/iot_400x250.png" alt="Card image cap"></a>
       <div class="card-body">
         <h3 class="card-title">IoT</h3>
         <p class="card-text">WebRTCは組み込み機器やIoTデバイスでも利用可能です。
         コミュニケーションデバイスやデジタルサイネージなどでも活用されています。</p>
-        <p><a class="btn btn-primary" href="https://skyway.github.io/usecase/skyway/iot/" role="button">事例を見る</a></p>
+        <p><a class="btn btn-primary" href="https://webrtc.ecl.ntt.com/usecase/skyway/iot/" role="button">事例を見る</a></p>
       </div>
     </div>
   </div>
 </div>
 
 
-[その他の事例はこちら](https://skyway.github.io/usecase/)
+[その他の事例はこちら](https://webrtc.ecl.ntt.com/usecase/)
 
 <script>
 $(function() {
