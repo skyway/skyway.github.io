@@ -20,7 +20,7 @@ main_visual:
     </div>
     <div class="card-text-wrapper">
       <a href="#" target="_blank" id="announcementLink" class="card-text"></a>
-      <!--<a href="#" target="_blank" class="card-text">static announcement</a>-->
+      <a href="https://support.skyway.io/hc/ja/articles/115012406508-SkyWay-Developer-Meetup-1-開催のお知らせ" target="_blank" class="card-text">SkyWay Developer Meetup #1 開催のお知らせ</a>
     </div>
     <div class="card-link-wrapper">
       <small class="text-muted"><a href="https://support.skyway.io/hc/ja/sections/207255008">過去のお知らせを見る</a></small>
