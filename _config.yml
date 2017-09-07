@@ -7,6 +7,9 @@ homedir:
 og_image:
   ja: /images/skyway-ogp.png
   en: /images/eclwebrtc-ogp.png
+twitter_image:
+  ja: /images/skyway-twitter.png
+  en: /images/eclwebrtc-twitter.png
 
 # Build settings
 markdown: kramdown
