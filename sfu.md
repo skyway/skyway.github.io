@@ -37,6 +37,6 @@ WebRTCは基本的にサーバは介さず、P2Pで直接通信を行います�
 
 SFUは、JavaScript SDK、iOS SDK、Android SDKからそれぞれ利用可能です。  
 SkyWayが提供するRoomAPIには<b>SFU</b>と<b>フルメッシュ</b>の2つのモードがあり、簡単に切り替えることができます。  
-詳しい利用方法は[APIリファレンス](./sfu.htmk)をご覧ください。
+詳しい利用方法は[APIリファレンス](./developer.html#sdk)をご覧ください。
 
 

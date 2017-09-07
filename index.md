@@ -13,13 +13,14 @@ main_visual:
   background_color: rgb(0, 67, 134)
 ---
 
-<div class="card">
+<div class="card announcement">
   <div class="card-body d-md-flex w-100 justify-content-between">
     <div class="card-title-wrapper">
       <small>最新のお知らせ</small>
     </div>
     <div class="card-text-wrapper">
       <a href="#" target="_blank" id="announcementLink" class="card-text"></a>
+      <!--<a href="#" target="_blank" class="card-text">static announcement</a>-->
     </div>
     <div class="card-link-wrapper">
       <small class="text-muted"><a href="https://support.skyway.io/hc/ja/sections/207255008">過去のお知らせを見る</a></small>
