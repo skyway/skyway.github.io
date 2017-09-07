@@ -70,11 +70,11 @@ breadcrumb: [index.md, developer.md]
         <p>
           新しいSDKに差し替えてください。ダウンロード先は以下の通りです。
         </p>
-        <p>
-          <a href="./js-sdk.html#sdkdownload" class="btn btn-outline-primary">JavaScript SDKのダウンロード</a>
-          <a href="./ios-sdk.html#sdkdownload" class="btn btn-outline-primary">iOS SDKのダウンロード</a>
-          <a href="./android-sdk.html#sdkdownload" class="btn btn-outline-primary">Android SDKのダウンロード</a>
-        </p>
+        <ul>
+          <li><a href="./js-sdk.html#sdkdownload">JavaScript SDK</a></li>
+          <li><a href="./ios-sdk.html#sdkdownload">iOS SDK</a></li>
+          <li><a href="./android-sdk.html#sdkdownload">Android SDK</a></li>
+        </ul>
         <h3 id="4-APIキー差し替え">4. APIキーの差し替えとプログラムの修正</h3>
         <p>
           以下の手順を参考にして、APIキーを先ほど発行した新しいものに書き換えてください。
