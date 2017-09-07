@@ -13,13 +13,14 @@ main_visual:
   background_color: rgb(0, 67, 134)
 ---
 
-<div class="card">
+<div class="card announcement">
   <div class="card-body d-md-flex w-100 justify-content-between">
     <div class="card-title-wrapper">
       <small>Announcements</small>
     </div>
     <div class="card-text-wrapper">
       <a href="#" target="_blank" id="announcementLink" class="card-text"></a>
+      <!--<a href="#" target="_blank" class="card-text">static announcement</a>-->
     </div>
     <div class="card-link-wrapper">
       <small class="text-muted"><a href="https://support.skyway.io/hc/en-us/sections/207255008">See all</a></small>
