@@ -14,10 +14,13 @@ breadcrumb: [index.md, developer.md]
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">
           <h3 class="card-title"><span>新SDKへの</span><wbr><span>移行方法</span></h3>
-          <p class="card-text">2017年9月7日に提供を開始した新バージョンのSkyWay SDKへの移行方法をご紹介します。（参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank">新旧SDKの機能差分と移行方法について)</a></p>
-            <a class="btn btn-outline-primary collapsed" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="true" aria-controls="toECLWebRTC">
-              移行方法を確認
-            </a>
+          <p class="card-text">
+            2017年9月7日に提供を開始した、新しいSDKへの移行方法をご説明します。
+            （参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank">新旧SDKの機能差分)</a>
+          </p>
+          <a class="btn btn-outline-primary collapsed" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="true" aria-controls="toECLWebRTC">
+            移行方法を確認
+          </a>
         </div>
       </div>
     </div>
@@ -39,28 +42,55 @@ breadcrumb: [index.md, developer.md]
     <div id="toECLWebRTC" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
       <div class="card-body">
         <h2>新SDKヘの移行について</h2>
-        <p>トライアル提供していました旧SkyWayは2018年3月をもって提供を終了します。2017年9月6日以前にSkyWayにご登録いただいた方も最新のSDKに移行し、Community Editionの利用をお願いします（参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a></p>
+        <p>
+          トライアル提供していた旧SkyWayは2018年3月に提供を終了します。
+          2017年9月6日以前にSkyWayに登録された方は、Community Editionへの新規登録と、新SDKへの移行をお願いします。
+          （参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a>
+        </p>
         <h3>1. Community Edition新規登録</h3>
         <p>
-          Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。<br>
+          Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。
           Community Editionは無料でご利用いただけます。詳細は<a href="./pricing.html">料金ページ</a>をご確認ください。<br>
-          <a href="./contactus.html">Enterprise Editionに申し込み</a>いただいた場合も、以下の手順は同じです。
+          <a href="./contactus.html">Enterprise Editionに申し込み</a>いただく場合も、以下の手順は同じです。
         </p>
-        <a href="./signup.html" class="btn btn-primary">無料で新規登録</a>
-        <h3>2. APIKey発行</h3>
         <p>
-          トライアル版でご利用中のAPIキーは最新のSDKではご利用いただけません。<br>
-          ダッシュボードにて新規APIKeyを発行し、次の<a href="#3-SDK差し替え">3. SDKの差し替え</a>を参考に、APIKeyの差し替えをお願いします。
+          <a href="./signup.html" class="btn btn-outline-primary">無料で新規登録</a>
         </p>
-        <h3 id="3-SDK差し替え">3. SDK差し替え</h3>
+        <h3>2. APIキー発行</h3>
         <p>
-          SDKのAPIに一部差分があるため、以下のドキュメントを参考にプログラムの修正をお願いします。
+          旧SkyWayのAPIキーは、新SDKで利用できません。
+          以下の手順を参考にして、ダッシュボードで新しいAPIキーを発行してください。
         </p>
-        <p><a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-primary">SDK差分と移行方法について</a></p>
-        <div class="alert alert-info" role="alert">
-            2017年9月6日以前のトライアル版のSDKとは相互接続できません<br>
-            最新のSDKは、SkyWay Community EditionまたはEnterprise Editionで発行したAPIKeyのみご利用いただけます。
-        </div>
+        <ul>
+          <li><a href="./js-tutorial.html#skywayのapiキー発行">JavaScript SDK チュートリアル / SkyWayのAPIキー発行</a></li>
+          <li><a href="./ios-tutorial.html#skywayのapiキー発行">iOS SDK チュートリアル / SkyWayのAPIキー発行</a></li>
+          <li><a href="./android-tutorial.html#skywayのapiキー発行">Android SDK チュートリアル / SkyWayのAPIキー発行</a></li>
+        </ul>
+        <h3 id="3-SDK差し替え">3. SDKの差し替え</h3>
+        <p>
+          新しいSDKに差し替えてください。ダウンロード先は以下の通りです。
+        </p>
+        <p>
+          <a href="./js-sdk.html#sdkdownload" class="btn btn-outline-primary">JavaScript SDKのダウンロード</a>
+          <a href="./ios-sdk.html#sdkdownload" class="btn btn-outline-primary">iOS SDKのダウンロード</a>
+          <a href="./android-sdk.html#sdkdownload" class="btn btn-outline-primary">Android SDKのダウンロード</a>
+        </p>
+        <h3 id="4-APIキー差し替え">4. APIキーの差し替えとプログラムの修正</h3>
+        <p>
+          以下の手順を参考にして、APIキーを先ほど発行した新しいものに書き換えてください。
+        </p>
+        <ul>
+          <li><a href="./js-tutorial.html#peerオブジェクトの作成">JavaScript SDK チュートリアル / Peerオブジェクトの作成</a></li>
+          <li><a href="./ios-tutorial.html#宣言">iOS SDK チュートリアル / 宣言</a></li>
+          <li><a href="./android-tutorial.html#宣言">Android SDK チュートリアル / 宣言</a></li>
+        </ul>
+        <p>
+          SDKの仕様が一部変更になったので、以下のドキュメントを参考にして、プログラムを修正してください。<br>
+          リンク先にも書かれていますが、旧SDKと新SDKの間で相互接続はできません。ご注意ください。
+        </p>
+        <p>
+          <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-outline-primary">新旧SDKの機能差分</a>
+        </p>
       </div>
     </div>
   </div>
@@ -73,8 +103,8 @@ breadcrumb: [index.md, developer.md]
         <a href="./contactus.html" class="btn btn-primary">Enterprise Edition申し込み</a>
         <h3>2. Community Editionからの移行</h3>
         <p>
-          Community EditionからEnterprise EditionへAPIKeyを引継ぐ機能は、近日中に提供予定です。<br>
-          提供開始まではEnterprise Editionのダッシュボード画面にてAPIKeyを新規発行し、差し替えをお願いします。
+          Community EditionからEnterprise EditionへAPIキーを引継ぐ機能は、近日中に提供予定です。<br>
+          提供開始まではEnterprise Editionのダッシュボード画面にてAPIキーを新規発行し、差し替えをお願いします。
         </p>
         <h4>Enterprise editionへの移行タイミングについて</h4>
         <p>
