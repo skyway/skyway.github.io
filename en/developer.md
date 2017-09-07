@@ -200,7 +200,7 @@ Provides developer community and support ticket useful for development.
 ## Maintenance and Failure Information
 
 Maintenance and Failure Information.
-If you want to receive RSS notifications, please see [Announcement and Notification of Maintenance and Failure Information](https://support.webrtc.ecl.ntt.com/hc/en-us/articles/236195548){:target="_blank"}.
+If you want to receive RSS notifications, please see [Announcement and Notification of Maintenance and Failure Information](https://support.skyway.io/hc/en-us/articles/236195548){:target="_blank"}.
 
 
 
