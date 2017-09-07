@@ -37,4 +37,4 @@ In multi-person conversation, it is common to use a method called "full-mesh con
 
 You can use SFU from JavaScript SDK, iOS SDK and Android SDK.
 RoomAPI provided by ECLWebRTC has two modes, SFU and Full-Mesh, which can be switched easily.
-Please refer to API Reference for details on how to use.
+Please refer to [API Reference](./developer.html#sdk) for details on how to use.
