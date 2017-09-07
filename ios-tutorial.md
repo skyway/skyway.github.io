@@ -118,7 +118,7 @@ SDKのバイナリファイルを配置します。
 実行時にエラーが出てしまいますが、以下のとおりビルドに成功すれば準備完了です。
 
 <figure class="figure">
-  <img src="{{ site.baseurl }}/images/ios-tutorial-splash.png"
+  <img src="{{ site.baseurl }}/images/ios-tutorial-splash-sc.png"
     class="figure-img img-fluid rounded" alt="実機上でLaunchScreenが表示されたところ">
   <figcaption class="figure-caption">実機上でLaunchScreenが表示されたところ</figcaption>
 </figure>
