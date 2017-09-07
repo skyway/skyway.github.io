@@ -26,6 +26,7 @@
   {% if page.description %}
   <meta property="og:description" content="{{ description_tag }}">
   {% endif %}
+  <meta name="twitter:image" content="{{ page.twitter_image | default: site.twitter_image[page.lang] | prepend: full_base_url | replace_first: 'http://', 'https://' }}" />
   <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="canonical" href="{{ full_url | replace_first: 'http://', 'https://' }}">
