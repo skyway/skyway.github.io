@@ -45,9 +45,9 @@ breadcrumb: [index.md, developer.md]
         <p>
           トライアル提供していた旧SkyWayは2018年3月に提供を終了します。
           2017年9月6日以前にSkyWayに登録された方は、Community Editionへの新規登録と、新SDKへの移行をお願いします。
-          （参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a>
+          （参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a><br>
+          <small class="text-muted"><a href="#moverio">EPSON MOVERIO向けアプリを開発される方へ</a></small>
         </p>
-        <p class="text-muted"><small><a href="#moverio">EPSON MOVERIO向けアプリを開発される方へ</a></small></p>
         <h3>1. Community Edition新規登録</h3>
         <p>
           Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。
