@@ -72,11 +72,11 @@ Arrange SDK binary files.
 In this tutorial, we will introduce a procedure to manually set the downloaded file into the project.
 
 1. Download SDK from [Here](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)
-2. After decompressing the ZIP file, arrange `ECLWebRTC.framework` directly under `eclwebrtc-ios-sdk-tutorial` directory.
-3. Double click `eclwebrtc-ios-sdk-tutorial.xcodeproj` and open project.
-4. Right-click on the file tree on the left pane and select [ **Add File to…** ] to add `ECLWebRTC.framework` arranged just before to the file tree.
-5. From [ **General** ] → [ **Linked Frameworks and Libraries** ], delete `ECLWebRTC.framework` once.
-6. From [ **General** ] → [ **Embedded Binaries** ], add `ECLWebRTC.framework` again.
+2. After decompressing the ZIP file, arrange `SkyWay.framework` directly under `skyway-ios-sdk-tutorial` directory.
+3. Double click `skyway-ios-sdk-tutorial.xcodeproj` and open project.
+4. Right-click on the file tree on the left pane and select [ **Add File to…** ] to add `SkyWay.framework` arranged just before to the file tree.
+5. From [ **General** ] → [ **Linked Frameworks and Libraries** ], delete `SkyWay.framework` once.
+6. From [ **General** ] → [ **Embedded Binaries** ], add `SkyWay.framework` again.
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/ios-tutorial-xcode-sc.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
