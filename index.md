@@ -38,7 +38,7 @@ SkyWayを利用すれば、WebRTCに必要なサーバを構築・運用する�
 
 
 
-<div id="about-div" class="row card-row">
+<div id="about-div" class="row row-for-slim-card">
   <div class="col-6 col-sm-6 col-lg-3">
     <div class="card">
       <div class="card-body">
@@ -142,7 +142,7 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
 ## 事例紹介
 
 
-<div class="row card-row">
+<div class="row row-for-slim-card">
   <div class="col-6 col-md-3">
     <div class="card">
       <a href="https://webrtc.ecl.ntt.com/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/images/conf_400x250.png" alt="Card image cap"></a>

@@ -9,14 +9,14 @@ breadcrumb: [index.md, developer.md]
 
 <div id="accordion" role="tablist">
   <!-- controller -->
-  <div class="row card-row">
+  <div class="row row-for-slim-card">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">
           <h3 class="card-title"><span>新SDKへの</span><wbr><span>移行方法</span></h3>
           <p class="card-text">
             2017年9月7日に提供を開始した、新しいSDKへの移行方法をご説明します。
-            （参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank">新旧SDKの機能差分)</a>
+            （参考: <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank">新旧SDKの機能差分</a>)
           </p>
           <a class="btn btn-outline-primary collapsed" data-toggle="collapse" href="#toECLWebRTC" aria-expanded="true" aria-controls="toECLWebRTC">
             移行方法を確認
@@ -47,6 +47,7 @@ breadcrumb: [index.md, developer.md]
           2017年9月6日以前にSkyWayに登録された方は、Community Editionへの新規登録と、新SDKへの移行をお願いします。
           （参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a>
         </p>
+        <p class="text-muted"><small><a href="#moverio">EPSON MOVERIO向けアプリを開発される方へ</a></small></p>
         <h3>1. Community Edition新規登録</h3>
         <p>
           Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。
@@ -90,6 +91,11 @@ breadcrumb: [index.md, developer.md]
         </p>
         <p>
           <a href="https://github.com/nttcom/skyway-sdk-migration-docs" target="_blank" class="btn btn-outline-primary">新旧SDKの機能差分</a>
+        </p>
+        <h3 id="moverio">EPSON MOVERIO向けアプリを開発される方へ</h3>
+        <p>
+          新しいSDKは、BT-300/350のみに対応しています。
+          以前、<a href="http://www.epson.jp/products/smartglasses/partner/applist/" target="_blank">MOVERIO「パートナープログラム」</a>で配布していた専用SDKは不要です。
         </p>
       </div>
     </div>
