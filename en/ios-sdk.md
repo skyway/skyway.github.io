@@ -41,7 +41,7 @@ Add the contents to the Prodfile.
 
 ```
 platform :ios, '7.0'
-pod 'ECLWebRTC-iOS-SDK'
+pod 'SkyWay-iOS-SDK'
 ```
 
 You can install ECLWebRTC in your project.

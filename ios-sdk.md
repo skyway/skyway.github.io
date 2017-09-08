@@ -40,7 +40,7 @@ Podfileに以下を追記し、
 
 ```
 platform :ios, '7.0'
-pod 'ECLWebRTC-iOS-SDK'
+pod 'SkyWay-iOS-SDK'
 ```
 
 インストールする。
