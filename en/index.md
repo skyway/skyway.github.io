@@ -38,7 +38,7 @@ You can concentrate on developing your service and focus on innovation.
 
 
 
-<div id="about-div" class="row card-row">
+<div id="about-div" class="row row-for-slim-card">
   <div class="col-6 col-sm-6 col-lg-3">
     <div class="card">
       <div class="card-body">
@@ -140,7 +140,7 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
 ## Use Cases
 
 
-<div class="row card-row">
+<div class="row row-for-slim-card">
   <div class="col-6 col-md-3">
     <div class="card">
       <a href="https://webrtc.ecl.ntt.com/usecase/skyway/conf/"><img class="card-img-top img-fluid" src="{{ site.baseurl }}/images/en_conf_400x250.png" alt="Card image cap"></a>

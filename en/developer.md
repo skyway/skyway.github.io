@@ -44,7 +44,7 @@ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 
 There are SDKs for Web browsers, iOS, Android and IoT devices.
 
-<div id="sdk-div" class="row card-row">
+<div id="sdk-div" class="row row-for-slim-card">
     <div class="col-6 col-md-3">
         <div class="list-group">
             <a href="./js-sdk.html" class="list-group-item active list-head">
@@ -100,7 +100,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
 
 ## All Features
 
-<div id="feature-div" class="row card-row">
+<div id="feature-div" class="row row-for-slim-card">
     <div class="col-6 col-sm-4">
         <div class="card">
             <div class="card-body">
@@ -168,7 +168,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
 
 Documents useful for development.
 
-<div id="docs-div" class="row card-row">
+<div id="docs-div" class="row row-for-slim-card">
     <div class="col-12 col-md-6">
         <div class="card">
             <div class="card-body">
