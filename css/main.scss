@@ -226,7 +226,7 @@ html {
   }
 
   // cardを入れる.rowの中ではグリッド間隔を変える
-  .card-row {
+  .row-for-slim-card {
     $card-gutter-width: 12px;
     &.row {
       margin-right: ($card-gutter-width / -2);
@@ -249,6 +249,12 @@ html {
     .card, .list-group {
       flex-grow: 1;       // hack for Safari
       width: 100%;        // hack for IE11
+      margin-bottom: $card-gutter-width;
+    }
+  }
+  .row-for-slim-card, .row-for-card {
+    $card-gutter-width: 12px;
+    .card, .list-group {
       margin-bottom: $card-gutter-width;
     }
   }

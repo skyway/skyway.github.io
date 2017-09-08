@@ -9,7 +9,7 @@ breadcrumb: [en/index.md, en/developer.md]
 
 <div id="accordion" role="tablist">
   <!-- controller -->
-  <div class="row card-row">
+  <div class="row row-for-slim-card">
     <div class="col-lg-6">
       <div class="card">
         <div class="card-body" role="tab" id="headingOne">

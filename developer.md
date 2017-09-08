@@ -44,7 +44,7 @@ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 
 Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDKを用意しています。
 
-<div id="sdk-div" class="row card-row">
+<div id="sdk-div" class="row row-for-slim-card">
     <div class="col-6 col-md-3">
         <div class="list-group">
             <a href="./js-sdk.html" class="list-group-item active list-head">
@@ -100,7 +100,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 ## すべての機能 
 
-<div id="feature-div" class="row card-row">
+<div id="feature-div" class="row row-for-slim-card">
     <div class="col-6 col-sm-4">
         <div class="card">
             <div class="card-body">
@@ -168,7 +168,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 
 開発に役立つドキュメントを公開しています。
 
-<div id="docs-div" class="row card-row">
+<div id="docs-div" class="row row-for-slim-card">
     <div class="col-12 col-md-6">
         <div class="card">
             <div class="card-body">

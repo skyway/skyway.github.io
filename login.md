@@ -7,7 +7,7 @@ breadcrumb: [index.md]
 
 # ログイン
 
-<div id="login-div" class="row card-row">
+<div id="login-div" class="row row-for-slim-card">
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card">
       <div class="card-body">
