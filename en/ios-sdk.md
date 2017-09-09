@@ -92,7 +92,6 @@ Sample Code is open to public.
           <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
           <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
         </tr>
-        </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
           <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-videochat" target="_blank">video chat</a></td>
