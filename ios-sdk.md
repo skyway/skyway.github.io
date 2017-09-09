@@ -35,18 +35,19 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 Podfileに以下を追記し、
 
-*Prodfile*
+*Podfile*
 {: .lang }
 
 ```
-platform :ios, '7.0'
-pod 'SkyWay-iOS-SDK'
+platform :ios, '8.0'
+pod 'SkyWay'
 ```
 
 インストールする。
 
 ```sh
-$ pod init
+$ pod setup
+$ pod install
 ```
 
 ### ファイルをダウンロードする場合

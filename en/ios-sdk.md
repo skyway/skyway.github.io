@@ -36,18 +36,19 @@ If you want to try the completed application, [download the source codes](https:
 
 Add the contents to the Prodfile.
 
-*Prodfile*
+*Podfile*
 {: .lang }
 
 ```
-platform :ios, '7.0'
-pod 'SkyWay-iOS-SDK'
+platform :ios, '8.0'
+pod 'SkyWay'
 ```
 
 You can install ECLWebRTC in your project.
 
 ```sh
-$ pod init
+$ pod setup
+$ pod install
 ```
 
 ### Case: Downloading as file
