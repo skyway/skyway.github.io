@@ -88,18 +88,18 @@ iOS 8+
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh-textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>

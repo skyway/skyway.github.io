@@ -89,19 +89,18 @@ Sample Code is open to public.
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
-        </tr>
-        </tr>
-        <tr>
-          <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/fullmesh-textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/ios-sdk/tree/master/examples/sfu-textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-textchat" target="_blank">text chat</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Multi-party, P2P</th>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>
