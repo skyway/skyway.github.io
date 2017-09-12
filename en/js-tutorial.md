@@ -44,7 +44,7 @@ Application settings on the Dashboard are as follows.
 |Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
 |Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./js-reference/Peer.html#listAllPeers) for details.|ON|
-|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [Here](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
+|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [How to use Authorization(GitHub)](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
 
 ### Preparation for Local Web Server
 
@@ -100,6 +100,7 @@ In the following steps, we will add required codes to `script.js` which is inclu
 - Restriction for this Tutorial
     - JQuery is used for Dom operation.
     - Verified browsers are the latest versions of [Google Chrome](https://www.google.com/chrome){:target="_blank"} and [Firefox](https://www.mozilla.org/firefox/){:target="_blank"}.
+    - Please set [the authorization function](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} to OFF in the dashboard.
 
 ## Obtain Camera Image and Microphone Voice
 {: #getUserMedia }

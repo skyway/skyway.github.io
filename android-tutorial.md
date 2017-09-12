@@ -50,7 +50,7 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
 |権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、[APIリファレンス](./android-reference/classio_1_1skyway_1_1_peer_1_1_peer.html#a7305e3fa5f05bebc58067a6caf8c9596)をご覧ください。|ON|
-|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。詳しくは[こちら](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"}をご覧ください。|OFF|
+|権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。本チュートリアルには認証機能の利用は含まれておりません。ご利用いただく場合は[認証機能利用方法(GitHub)](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"}をご覧ください。|OFF|
 
 ### 開発環境の準備
 
@@ -63,6 +63,8 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
   - 7.1
 - 開発言語
   - Java
+- 認証機能
+  - [認証機能](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"}はダッシュボードにてOFFに設定してください。
 
 ## プロジェクトの作成
 
