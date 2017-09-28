@@ -52,7 +52,6 @@
 
         </ul>
 
-        {% unless page.is_dashboard %}
         <ul class="navbar-nav">
 
           {% if page.title == 'Sign up' %}
@@ -75,11 +74,12 @@
           </li>
           {% endif %}
 
+          {% unless page.is_dashboard %}
           <li class="nav-item">
             <a class="nav-link" href="{{ site.baseurl }}{{ site.homedir['ja'] }}{{ page.path | remove_first: 'en/' | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">日本語</a>
           </li>
+          {% endunless %}
         </ul>
-        {% endunless %}
       </div>
     </div>
   </nav>
