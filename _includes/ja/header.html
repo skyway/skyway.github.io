@@ -51,6 +51,8 @@
           {% endif %}
 
         </ul>
+
+        {% unless page.is_dashboard %}
         <ul class="navbar-nav">
 
           {% if page.title == '新規登録' %}
@@ -77,6 +79,7 @@
             <a class="nav-link" href="{{ site.baseurl }}{{ site.homedir['en'] }}{{ page.path | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">English</a>
           </li>
         </ul>
+        {% endunless %}
       </div>
     </div>
   </nav>
