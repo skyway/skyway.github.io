@@ -95,7 +95,7 @@ breadcrumb: [index.md, developer.md]
         <h3 id="moverio">EPSON MOVERIO向けアプリを開発される方へ</h3>
         <p>
           新しいSDKは、BT-300/350のみに対応しています。
-          以前、<a href="http://www.epson.jp/products/smartglasses/partner/applist/" target="_blank">MOVERIO「パートナープログラム」</a>で配布していた専用SDKは不要です。
+          以前、MOVERIO用に配布していた専用SDKは不要です。
         </p>
       </div>
     </div>
