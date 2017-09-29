@@ -10,47 +10,48 @@
       <div id="main-nav-items" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
 
-          {% if page.title == site.title[page.lang] %}
-          <li class="nav-item active">
-            <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="./">Home</a>
-          </li>
-          {% endif %}
+        {% if page.title == site.title[page.lang] %}
+        <li class="nav-item active">
+          <a class="nav-link" href="./">Home<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="./">Home</a>
+        </li>
+        {% endif %}
 
-          {% if page.title == 'Developer' %}
-          <li class="nav-item active">
-            <a class="nav-link" href="./developer.html">Developer<span class="sr-only">(current)</span></a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="./developer.html">Developer</a>
-          </li>
-          {% endif %}
+        {% if page.title == 'Developer' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="./developer.html">Developer<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="./developer.html">Developer</a>
+        </li>
+        {% endif %}
 
-          {% if page.title == 'Pricing' %}
-          <li class="nav-item active">
-            <a class="nav-link" href="./pricing.html">Pricing<span class="sr-only">(current)</span></a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="./pricing.html">Pricing</a>
-          </li>
-          {% endif %}
+        {% if page.title == 'Pricing' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="./pricing.html">Pricing<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="./pricing.html">Pricing</a>
+        </li>
+        {% endif %}
 
-          {% if page.title == 'Support' %}
-          <li class="nav-item active">
-            <a class="nav-link" href="./support.html">Support<span class="sr-only">(current)</span></a>
-          </li>
-          {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="./support.html">Support</a>
-          </li>
-          {% endif %}
+        {% if page.title == 'Support' %}
+        <li class="nav-item active">
+          <a class="nav-link" href="./support.html">Support<span class="sr-only">(current)</span></a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="./support.html">Support</a>
+        </li>
+        {% endif %}
 
         </ul>
+
         <ul class="navbar-nav">
 
           {% if page.title == 'Sign up' %}
@@ -73,9 +74,11 @@
           </li>
           {% endif %}
 
+          {% unless page.is_dashboard %}
           <li class="nav-item">
             <a class="nav-link" href="{{ site.baseurl }}{{ site.homedir['ja'] }}{{ page.path | remove_first: 'en/' | replace_first: 'index.md', './' | replace_first: '.md', '.html' }}">日本語</a>
           </li>
+          {% endunless %}
         </ul>
       </div>
     </div>
