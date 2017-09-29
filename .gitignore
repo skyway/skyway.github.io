@@ -2,9 +2,21 @@
 .DS_Store
 
 # Jekyll
-_site/
+_site/*.*
+_site/Gemfile
+_site/*/*
 .sass-cache/
 .jekyll-metadata
+
+# Dashboard
+!_site/header-footer.*.html
+!_site/assets/main.css
+!_site/css/main.css
+!_site/images/ecl-logo.svg
+!_site/images/eclwebrtc-logo.svg
+!_site/images/nttcom-logo.png
+!_site/images/skyway-logo.svg
+!_site/js/script.js
 
 # JetBrains
 .idea
