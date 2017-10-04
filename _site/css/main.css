@@ -2426,8 +2426,10 @@ a.text-dark:focus, a.text-dark:hover { color: #1d2124 !important; }
 
 .highlight { background-color: #f8f8f8; }
 
-@media (max-width: 767px) { body { margin-bottom: 823px; } }
-@media (min-width: 768px) { body { margin-bottom: 410px; } }
+@media (max-width: 575px) { body { margin-bottom: 746px; } }
+@media (min-width: 576px) and (max-width: 767px) { body { margin-bottom: 732px; } }
+@media (min-width: 768px) and (max-width: 991px) { body { margin-bottom: 406px; } }
+@media (min-width: 992px) { body { margin-bottom: 369px; } }
 
 @media (max-width: 767px) { header .navbar-collapse { padding-top: 4px; } }
 header .navbar-toggler-right { right: -1rem; }
@@ -2437,9 +2439,11 @@ header .navbar-toggler-right { right: -1rem; }
 html { position: relative; min-height: 100%; }
 
 .site-footer { color: rgba(255, 255, 255, 0.8); padding-top: 20px; bottom: 0; width: 100%; position: absolute; }
-@media (max-width: 767px) { .site-footer { height: 783px; } }
-@media (min-width: 768px) { .site-footer { height: 370px; } }
-@media (min-width: 576px) and (max-width: 767px) { .site-footer > .container { padding-right: 0; padding-left: 0; } }
+@media (max-width: 575px) { .site-footer { height: 706px; } }
+@media (min-width: 576px) and (max-width: 767px) { .site-footer { height: 692px; }
+  .site-footer > .container { padding-right: 0; padding-left: 0; } }
+@media (min-width: 768px) and (max-width: 991px) { .site-footer { height: 366px; } }
+@media (min-width: 992px) { .site-footer { height: 329px; } }
 .site-footer a { color: rgba(255, 255, 255, 0.8); }
 .site-footer a:active, .site-footer a:hover { color: rgba(217, 217, 217, 0.8); }
 .site-footer hr { border-top: 1px solid rgba(255, 255, 255, 0.2); }
@@ -2449,18 +2453,17 @@ html { position: relative; min-height: 100%; }
 .site-footer div > ul > li > a:active, .site-footer div > ul > li > a:hover { color: #d9d9d9; }
 .site-footer div > ul > ul { font-size: 0.875rem; line-height: 1.25; padding-left: 0; }
 .site-footer div > ul > ul > ul { padding-left: 0.5em; }
-@media (max-width: 767px) { .site-footer .logos-div > div { margin-top: 1rem; width: 100%; } }
-@media (min-width: 768px) { .site-footer .logos-div { margin-right: -2em; }
-  .site-footer .logos-div > div { margin-right: 2rem; } }
+.site-footer .logos-div > div:nth-last-child(n+2) { margin-right: 2rem; }
 .site-footer .logos-div #nttcom-logo { width: 164px; }
 .site-footer .logos-div #ecl-logo { width: 180px; margin-top: 5px; margin-bottom: 5px; }
 .site-footer .links-div { color: rgba(206, 212, 218, 0.8); font-size: 0.875rem; }
 .site-footer .links-div a { color: rgba(206, 212, 218, 0.8); }
 .site-footer .links-div a:active, .site-footer .links-div a:hover { color: rgba(162, 174, 185, 0.8); }
-@media (max-width: 767px) { .site-footer .links-div { margin-top: 1em; }
-  .site-footer .links-div > div { margin-top: 0.5rem; width: 100%; } }
-@media (min-width: 768px) { .site-footer .links-div { margin-top: 1.25rem; margin-right: -2em; }
-  .site-footer .links-div > div { margin-right: 2rem; } }
+@media (max-width: 767px) { .site-footer .links-div { margin-top: 1rem; } }
+@media (min-width: 992px) { .site-footer .links-div > div:nth-last-child(n+2) { margin-right: 2rem; } }
+.site-footer .copy-div { color: rgba(206, 212, 218, 0.8); font-size: 0.875rem; margin-top: 1rem; }
+.site-footer .copy-div a { color: rgba(206, 212, 218, 0.8); }
+.site-footer .copy-div a:active, .site-footer .copy-div a:hover { color: rgba(162, 174, 185, 0.8); }
 
 @media (max-width: 575px) { .jumbotron { padding-top: 1rem; padding-bottom: 1rem; }
   .jumbotron h1 { font-size: 1.5rem; font-weight: 300; }
