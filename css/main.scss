@@ -8,8 +8,8 @@
 
 $color-base: $blue;
 $color-sub: $gray-600;
-$footer-height-md: 415px;
-$footer-height-xs: 784px;
+$footer-height-md: 370px;
+$footer-height-xs: 783px;
 
 body {
   // window width (-575px)
@@ -56,12 +56,31 @@ html {
 
 .site-footer {
   $footer-color: rgba($white,.8);
-  $footer-muted-color: rgba($gray-200, .8);
+  $footer-muted-color: rgba($gray-400, .8);
   color: $footer-color;
   padding-top: 20px;
   bottom: 0;
   width: 100%;
   position: absolute;
+
+  // window width (~767px)
+  @include media-breakpoint-down(sm) {
+    height: $footer-height-xs;
+  }
+  // window width (768px~)
+  @include media-breakpoint-up(md) {
+    height: $footer-height-md;
+  }
+
+  // same as bootstrap default navbar
+  // window width (576~767px)
+  @include media-breakpoint-only(sm) {
+    > .container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
   a {
     color: $footer-color;
     &:active,
@@ -104,52 +123,63 @@ html {
   }
 
   .logos-div {
-    height: 40px;
-  }
-
-  #nttcom-logo {
-    width: 164px;
-  }
-
-  #ecl-logo {
-    width: 180px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .links-div {
-    a {
-      color: $footer-muted-color;
-    }
-  }
-
-  // window width (-575px)
-  @include media-breakpoint-up(xs) {
-    height: $footer-height-xs;
-    .links-div {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      div {
-        padding: 0 2px;
+    // window width (~767px)
+    @include media-breakpoint-down(sm) {
+      > div {
+        margin-top: 1rem;
         width: 100%;
       }
     }
-    #copyright-text {
-      font-size: 0.8rem;
-    }
-  }
-  // window width (768-991px)
-  @include media-breakpoint-up(md) {
-    height: $footer-height-md;
-    .links-div {
-      div {
-        padding: 3px 2px;
-        width: auto;
+
+    // window width (768px~)
+    @include media-breakpoint-up(md) {
+      margin-right: -2em;
+      > div {
+        margin-right: 2rem;
       }
     }
-    #copyright-text {
-      font-size: 1.0rem;
+
+    #nttcom-logo {
+      width: 164px;
     }
+
+    #ecl-logo {
+      width: 180px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .links-div {
+    color: $footer-muted-color;
+    a {
+      color: $footer-muted-color;
+      &:active,
+      &:hover {
+        color: darken($footer-muted-color, 15%);
+      }
+    }
+
+    font-size: $font-size-sm;
+
+    // window width (~767px)
+    @include media-breakpoint-down(sm) {
+      margin-top: 1em;
+      > div {
+        margin-top: 0.5rem;
+        width: 100%;
+      }
+    }
+
+    // window width (768px~)
+    @include media-breakpoint-up(md) {
+      margin-top: 1.25rem;
+      margin-right: -2em;
+      > div {
+        margin-right: 2rem;
+      }
+    }
+
   }
 }
 
