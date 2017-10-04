@@ -2426,18 +2426,20 @@ a.text-dark:focus, a.text-dark:hover { color: #1d2124 !important; }
 
 .highlight { background-color: #f8f8f8; }
 
-body { margin-bottom: 824px; }
-@media (min-width: 768px) { body { margin-bottom: 455px; } }
+@media (max-width: 767px) { body { margin-bottom: 823px; } }
+@media (min-width: 768px) { body { margin-bottom: 410px; } }
 
-header .navbar-collapse { padding-top: 4px; }
-@media (min-width: 768px) { header .navbar-collapse { padding-top: 0px; } }
+@media (max-width: 767px) { header .navbar-collapse { padding-top: 4px; } }
 header .navbar-toggler-right { right: -1rem; }
 
 .navbar-brand { padding-top: 1px; padding-bottom: 1px; }
 
 html { position: relative; min-height: 100%; }
 
-.site-footer { color: rgba(255, 255, 255, 0.8); padding-top: 20px; bottom: 0; width: 100%; position: absolute; height: 784px; }
+.site-footer { color: rgba(255, 255, 255, 0.8); padding-top: 20px; bottom: 0; width: 100%; position: absolute; }
+@media (max-width: 767px) { .site-footer { height: 783px; } }
+@media (min-width: 768px) { .site-footer { height: 370px; } }
+@media (min-width: 576px) and (max-width: 767px) { .site-footer > .container { padding-right: 0; padding-left: 0; } }
 .site-footer a { color: rgba(255, 255, 255, 0.8); }
 .site-footer a:active, .site-footer a:hover { color: rgba(217, 217, 217, 0.8); }
 .site-footer hr { border-top: 1px solid rgba(255, 255, 255, 0.2); }
@@ -2447,16 +2449,18 @@ html { position: relative; min-height: 100%; }
 .site-footer div > ul > li > a:active, .site-footer div > ul > li > a:hover { color: #d9d9d9; }
 .site-footer div > ul > ul { font-size: 0.875rem; line-height: 1.25; padding-left: 0; }
 .site-footer div > ul > ul > ul { padding-left: 0.5em; }
-.site-footer .logos-div { height: 40px; }
-.site-footer #nttcom-logo { width: 164px; }
-.site-footer #ecl-logo { width: 180px; margin-top: 5px; margin-bottom: 5px; }
-.site-footer .links-div a { color: rgba(233, 236, 239, 0.8); }
-.site-footer .links-div { margin-top: 1rem; margin-bottom: 1rem; }
-.site-footer .links-div div { padding: 0 2px; width: 100%; }
-.site-footer #copyright-text { font-size: 0.8rem; }
-@media (min-width: 768px) { .site-footer { height: 415px; }
-  .site-footer .links-div div { padding: 3px 2px; width: auto; }
-  .site-footer #copyright-text { font-size: 1.0rem; } }
+@media (max-width: 767px) { .site-footer .logos-div > div { margin-top: 1rem; width: 100%; } }
+@media (min-width: 768px) { .site-footer .logos-div { margin-right: -2em; }
+  .site-footer .logos-div > div { margin-right: 2rem; } }
+.site-footer .logos-div #nttcom-logo { width: 164px; }
+.site-footer .logos-div #ecl-logo { width: 180px; margin-top: 5px; margin-bottom: 5px; }
+.site-footer .links-div { color: rgba(206, 212, 218, 0.8); font-size: 0.875rem; }
+.site-footer .links-div a { color: rgba(206, 212, 218, 0.8); }
+.site-footer .links-div a:active, .site-footer .links-div a:hover { color: rgba(162, 174, 185, 0.8); }
+@media (max-width: 767px) { .site-footer .links-div { margin-top: 1em; }
+  .site-footer .links-div > div { margin-top: 0.5rem; width: 100%; } }
+@media (min-width: 768px) { .site-footer .links-div { margin-top: 1.25rem; margin-right: -2em; }
+  .site-footer .links-div > div { margin-right: 2rem; } }
 
 @media (max-width: 575px) { .jumbotron { padding-top: 1rem; padding-bottom: 1rem; }
   .jumbotron h1 { font-size: 1.5rem; font-weight: 300; }
@@ -2716,7 +2720,8 @@ html { position: relative; min-height: 100%; }
   #main #feature-div .btn { padding: 0.5rem; margin-bottom: 0.25rem; } }
 #main #docs-div .card-title { font-size: 1.5rem; }
 #main #docs-div small { position: absolute; right: 0.25rem; top: 0; }
-@media (min-width: 768px) and (max-width: 991px) { #main #docs-div .card-title { font-size: 1rem; font-weight: bold; } }
+@media (min-width: 768px) and (max-width: 991px) { #main #docs-div .card-title { font-size: 1rem; } }
+@media (max-width: 575px) { #main #docs-div .card-title { font-size: 1rem; margin-top: 0.5rem; } }
 #main .tab-pane { position: relative; }
 #main .tab-pane .rows { height: 24rem; overflow-y: scroll; padding-bottom: 2rem; }
 @media (max-width: 575px) { #main .tab-pane .rows { height: auto; } }
