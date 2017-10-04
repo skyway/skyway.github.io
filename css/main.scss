@@ -8,18 +8,27 @@
 
 $color-base: $blue;
 $color-sub: $gray-600;
-$footer-height-md: 370px;
-$footer-height-xs: 783px;
+$footer-height-xs: 706px;
+$footer-height-sm: 692px;
+$footer-height-md: 366px;
+$footer-height-lg: 329px;
 
 body {
-  // window width (~767px)
-  @include media-breakpoint-down(sm) {
+  // window width (~575px)
+  @include media-breakpoint-down(xs) {
     margin-bottom: $footer-height-xs + 40px;
   }
-
+  // window width (576~767px)
+  @include media-breakpoint-only(sm) {
+    margin-bottom: $footer-height-sm + 40px;
+  }
   // window width (768~991px)
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-only(md) {
     margin-bottom: $footer-height-md + 40px;
+  }
+  // window width (992px~)
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $footer-height-lg + 40px;
   }
 }
 
@@ -56,22 +65,27 @@ html {
   width: 100%;
   position: absolute;
 
-  // window width (~767px)
-  @include media-breakpoint-down(sm) {
+  // window width (~575px)
+  @include media-breakpoint-down(xs) {
     height: $footer-height-xs;
   }
-  // window width (768px~)
-  @include media-breakpoint-up(md) {
-    height: $footer-height-md;
-  }
-
-  // same as bootstrap default navbar
   // window width (576~767px)
   @include media-breakpoint-only(sm) {
+    height: $footer-height-sm;
+
+    // same settings as bootstrap default navbar
     > .container {
       padding-right: 0;
       padding-left: 0;
     }
+  }
+  // window width (768~991px)
+  @include media-breakpoint-only(md) {
+    height: $footer-height-md;
+  }
+  // window width (992px~)
+  @include media-breakpoint-up(lg) {
+    height: $footer-height-lg;
   }
 
   a {
@@ -116,20 +130,8 @@ html {
   }
 
   .logos-div {
-    // window width (~767px)
-    @include media-breakpoint-down(sm) {
-      > div {
-        margin-top: 1rem;
-        width: 100%;
-      }
-    }
-
-    // window width (768px~)
-    @include media-breakpoint-up(md) {
-      margin-right: -2em;
-      > div {
-        margin-right: 2rem;
-      }
+    > div:nth-last-child(n+2) {
+      margin-right: 2rem;
     }
 
     #nttcom-logo {
@@ -143,8 +145,9 @@ html {
     }
   }
 
-  .links-div {
+  @mixin footer-muted-text() {
     color: $footer-muted-color;
+    font-size: $font-size-sm;
     a {
       color: $footer-muted-color;
       &:active,
@@ -152,27 +155,26 @@ html {
         color: darken($footer-muted-color, 15%);
       }
     }
+  }
 
-    font-size: $font-size-sm;
+  .links-div {
+    @include footer-muted-text();
 
     // window width (~767px)
     @include media-breakpoint-down(sm) {
-      margin-top: 1em;
-      > div {
-        margin-top: 0.5rem;
-        width: 100%;
-      }
+      margin-top: 1rem;
     }
-
-    // window width (768px~)
-    @include media-breakpoint-up(md) {
-      margin-top: 1.25rem;
-      margin-right: -2em;
-      > div {
+    // window width (992px~)
+    @include media-breakpoint-up(lg) {
+      > div:nth-last-child(n+2) {
         margin-right: 2rem;
       }
     }
+  }
 
+  .copy-div {
+    @include footer-muted-text();
+    margin-top: 1rem;
   }
 }
 
