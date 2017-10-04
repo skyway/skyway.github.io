@@ -12,29 +12,22 @@ $footer-height-md: 370px;
 $footer-height-xs: 783px;
 
 body {
-  // window width (-575px)
-  @include media-breakpoint-up(xs) {
+  // window width (~767px)
+  @include media-breakpoint-down(sm) {
     margin-bottom: $footer-height-xs + 40px;
   }
 
-  // window width (768-991px)
+  // window width (768~991px)
   @include media-breakpoint-up(md) {
     margin-bottom: $footer-height-md + 40px;
   }
 }
 
 header {
-  // window width (-575px)
-  @include media-breakpoint-up(xs) {
+  // window width (~767px)
+  @include media-breakpoint-down(sm) {
     .navbar-collapse {
       padding-top: 4px;
-    }
-  }
-
-  // window width (768-991px)
-  @include media-breakpoint-up(md) {
-    .navbar-collapse {
-      padding-top: 0px;
     }
   }
 
@@ -183,10 +176,9 @@ html {
   }
 }
 
-
 // jumbotron
 .jumbotron {
-  // window width (-575px)
+  // window width (~575px)
   @include media-breakpoint-down(xs) {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -199,7 +191,7 @@ html {
     }
   }
 
-  // window width (576-767px)
+  // window width (576~767px)
   @include media-breakpoint-only(sm) {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -212,7 +204,7 @@ html {
     }
   }
 
-  // window width (768-991px)
+  // window width (768~991px)
   @include media-breakpoint-only(md) {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -225,7 +217,7 @@ html {
     }
   }
 
-  // window width (992-1199px and 1200px~)
+  // window width (992px~)
   @include media-breakpoint-up(lg) {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -290,6 +282,7 @@ html {
   }
 
   .row {
+    // window width (~575px)
     @include media-breakpoint-down(xs) {
       .card-body {
         padding: 0.5rem;
@@ -357,6 +350,7 @@ html {
   .announcement {
     .card-body {
       padding: 0.75rem;
+      // window width (~767px)
       @include media-breakpoint-down(sm) {
         padding: 0.5rem;
       }
@@ -371,6 +365,7 @@ html {
     .card-text-wrapper {
       flex-grow: 1;
       margin-right: 1rem;
+      // window width (~767px)
       @include media-breakpoint-down(sm) {
         margin-right: 0;
         width: 100%;
@@ -385,13 +380,14 @@ html {
     }
     .card-link-wrapper {
       flex-shrink: 0;
+      // window width (~767px)
       @include media-breakpoint-down(sm) {
         text-align: right;
       }
     }
   }
   #about-div {
-    // window width (-575px)
+    // window width (~575px)
     @include media-breakpoint-up(xs) {
       i {
         font-size: 3rem;
@@ -401,7 +397,7 @@ html {
       .card-title {font-size: 1.25rem;}
     }
 
-    // window width (768-991px)
+    // window width (768px~)
     @include media-breakpoint-up(md) {
       i {font-size: 5rem}
       .card-title {font-size: 1.5rem;}
@@ -421,9 +417,11 @@ html {
     }
     .list-head {
       height: 70px;
+      // window width (~575px)
       @include media-breakpoint-down(xs) {
         padding: 1.25rem 0 0 0.25rem;
       }
+      // window width (768~991px)
       @include media-breakpoint-only(md) {
         padding: 1.25rem 0 0 0.25rem;
       }
@@ -432,10 +430,12 @@ html {
       font-size: 3rem;
       padding: 0 5px;
       display: inline-block;
+      // window width (~575px)
       @include media-breakpoint-down(xs) {
         font-size: 2rem;
         margin-right: -10px;
       }
+      // window width (768~991px)
       @include media-breakpoint-only(md) {
         font-size: 2rem;
         margin-right: -10px;
@@ -444,9 +444,11 @@ html {
     span {
       align-items: center;
       padding: 0 5px;
+      // window width (~575px)
       @include media-breakpoint-down(xs) {
         font-size: $font-size-sm;
       }
+      // window width (768~991px)
       @include media-breakpoint-only(md) {
         font-size: $font-size-sm;
       }
@@ -455,10 +457,12 @@ html {
       position: absolute;
       right: 0.5rem;
       top: 0.5rem;
+      // window width (~575px)
       @include media-breakpoint-down(xs) {
         right: 0.25rem;
         top: 0;
       }
+      // window width (768~991px)
       @include media-breakpoint-only(md) {
         right: 0.25rem;
         top: 0;
@@ -467,6 +471,7 @@ html {
   }
 
   #feature-div {
+    // window width (~767px)
     @include media-breakpoint-down(sm) {
       .card-body {
         padding: 0.5rem;
@@ -490,16 +495,16 @@ html {
       right: 0.25rem;
       top: 0;
     }
+    // window width (768~991px)
     @include media-breakpoint-only(md) {
       .card-title {
         font-size: 1rem;
-        font-weight: bold;
       }
     }
-    @include media-breakpoint-only(xs) {  // 効いていない
+    // window width (~575px)
+    @include media-breakpoint-down(xs) {
       .card-title {
         font-size: 1rem;
-        font-weight: bold;
         margin-top: 0.5rem;
       }
     }
@@ -512,6 +517,7 @@ html {
       overflow-y: scroll;
       padding-bottom: 2rem;
 
+      // window width (~575px)
       @include media-breakpoint-down(xs) {
         height: auto;
       }
@@ -543,6 +549,7 @@ html {
   // login.html
   #login-div {
     @extend .row;
+    // window width (~575px)
     @include media-breakpoint-down(xs) {
       .card-body {
         padding: 1rem;
@@ -552,6 +559,7 @@ html {
 
   // pricing.html
   #accordion {
+    // window width (~575px)
     @include media-breakpoint-down(xs) {
       .card-body {
         padding: 0.75rem;
@@ -559,6 +567,7 @@ html {
     }
   }
   .pricing-sample-table {
+    // window width (~575px)
     @include media-breakpoint-down(xs) {
       font-size: $font-size-sm;
       th {
@@ -567,12 +576,14 @@ html {
     }
   }
   .pricing-table {
+    // window width (~575px)
     @include media-breakpoint-down(xs) {
       font-size: $font-size-sm;
       .hidden-xs {
         display: none;
       }
     }
+    // window width (~767px)
     @include media-breakpoint-only(sm) {
       font-size: $font-size-sm;
       .hidden-sm {
@@ -584,6 +595,7 @@ html {
     }
 
     // スマホでは、tableではなく、list表示
+    // window width (~575px)
     @include media-breakpoint-down(xs){
       display: block;
       list-style-type: none;
