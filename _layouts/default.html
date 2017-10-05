@@ -13,7 +13,10 @@
       {% endif %}
 
       {{ content }}
-      {% include modal.html %}
+
+      {% unless page.is_dashboard %}
+        {% include modal.html %}
+      {% endunless %}
     </div>
 
     {% include footer.html %}
