@@ -2,13 +2,19 @@
 layout: rightnav
 title: ECL API Reference
 lang: en
-breadcrumb: [en/index.md, en/developer.md, en/ecl-api.md]
+breadcrumb: [en/index.md, en/developer.md]
 ---
 
 - TOC
 {:toc}
 
 # ECL API Reference
+
+The APIs described in this page is only available for Enterprise Edition users.
+
+Before using the APIs, the authentication token must be obtained according to this [procedure](https://ecl.ntt.com/en/documents/api-references/first-step/). Then attach the token in the "X-Auth-Token" header, in the HTTP request.
+
+The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api-references/).
 
 ## API List
  
@@ -21,10 +27,6 @@ breadcrumb: [en/index.md, en/developer.md, en/ecl-api.md]
 |Update app|PUT| `/tenants/{tenant_id}/apps/{app_id}`|
 |Get app secret key |GET|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 |Renew app secret key |POST|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
-
-### Obtain authentication token
-
-- "X-Subject-Token" should be attached in the request to WebRTC API. "X-Subject-Token" can be obtained along with  https://ecl.ntt.com/en/documents/api-references/first-step/ .
 
 ## Get apps list
 {: #get-app-list }
@@ -51,7 +53,7 @@ GET /tenants/212dd263522c4e73887212edfc7273e6/apps?expandApps
 
 With expandApps set.
 
-```
+```json
 [
   {
     "id": "13808fa08f0a8020203820df",
@@ -67,8 +69,8 @@ With expandApps set.
     "id": "808fa2020382008f0a1380df",
     "apikey": "91cf3-2ae929f-3a021-0903af",
     "description": "Second app",
-    "domains": ['*.skyway.io', 'nttcom.github.io'],
-    "permissions": ['TURN_ENABLED'],
+    "domains": ["*.skyway.io", "nttcom.github.io"],
+    "permissions": ["TURN_ENABLED"],
     "status": "active",
     "created_at": "2016-12-09T22:50:21Z",
     "updated_at": "2016-12-10T23:50:21Z"
@@ -78,7 +80,7 @@ With expandApps set.
 
 Without expandApps set.
 
-```
+```json
 [
   {
     "id": "13808fa08f0a8020203820df",
@@ -110,7 +112,9 @@ POST /tenants/{tenant_id}/apps
 
 ```
 POST /tenants/212dd263522c4e73887212edfc7273e6/apps
+```
 
+```json
 {
   "description": "skyway app"
 }
@@ -130,10 +134,10 @@ POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
-```
+```json
 {
   "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92"
+  "apikey": "139fa-021390f-2903a-afae92",
   "description": "skyway app",
   "domains": [],
   "permissions": [],
@@ -166,7 +170,7 @@ none
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
-```
+```json
 {
   "id": "13808fa08f0a8020203820df",
   "apikey": "139fa-021390f-2903a-afae92",
@@ -189,7 +193,7 @@ DELETE /tenants/{tenant_id}/apps/{app_id}
 
 ### Response
 
-```
+```json
 {}
 ```
 
@@ -210,7 +214,9 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 
 ```
 PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
+```
 
+```json
 {
   "description": "Updated description",
   "status": "active",
@@ -259,7 +265,7 @@ GET /tenants/{tenant_id}/apps/{app_id}/secretkey
 |:--|:--|:--|
 |secretkey|string|The secret key for the app|
 
-```
+```json
 {
   "secretkey": "f3Vu9vua9muCMEM82om"
 }
@@ -280,7 +286,7 @@ POST /tenants/{tenant_id}/apps/{app_id}/secretkey
 |:--|:--|:--|
 |secretkey|string|The new secret key for the app|
 
-```
+```json
 {
   "secretkey": "f3Vu9vua9muCMEM82om"
 }
