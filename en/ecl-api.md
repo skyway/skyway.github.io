@@ -1,8 +1,8 @@
 ---
 layout: rightnav
 title: ECL API Reference
-lang: ja
-breadcrumb: [index.md, developer.md]
+lang: en
+breadcrumb: [en/index.md, en/developer.md]
 ---
 
 - TOC
