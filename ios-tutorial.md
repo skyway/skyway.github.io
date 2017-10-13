@@ -48,7 +48,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 |利用可能ドメイン名|作成するアプリケーションで利用するドメイン名を入力します。利用可能ドメイン名は複数指定可能です。利用可能ドメイン名は複数指定可能です。<br>指定例：hogehoge.com|`localhost`|
 |権限(TURNを利用する)|TURN(Traversal Using Relay around NAT) サーバを利用する場合はチェックします。TURNサーバは、ファイアウォールを経由する等の理由によりP2P通信ができない場合でも、メディアやデータをリレーすることにより通信を可能とします。ユーザーに最も近いTURNサーバが自動的に選択されます。|ON|
 |権限(SFUを利用する)|SFU(Selective  Forwarding  Unit)サーバを利用する場合はチェックします。SFUとは、P2PではなくSFUというメディアサーバを経由して映像や音声の送受信を行う技術です。詳しくは[SFUについて](./sfu.html)をご覧ください。|ON|
-|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、[APIリファレンス](./ios-reference/interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a)をご覧ください。|ON|
+|権限(listAllPeers APIを利用する)|`listALLPeers API`を使用する場合はチェックします。このAPIは、APIキー毎のアクティブなPeerIDを取得します。詳しくは、[APIリファレンス](./ios-reference/a00129.html#a87e4f8349efd2e9178af7e5a5b47708a)をご覧ください。|ON|
 |権限(APIキー認証を利用する)|APIキーの不正利用を防止するための認証機能を提供します。本チュートリアルには認証機能の利用は含まれておりません。ご利用いただく場合は[認証機能利用方法(GitHub)](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} をご覧ください。|OFF|
 
 ### 開発環境の準備
@@ -234,7 +234,7 @@ Peerオブジェクトには、SKWPeerOptionクラスを利用し、APIキー、
     _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./ios-reference/interface_s_k_w_peer_option.html)をご覧ください。
+Peerオブジェクトで指定可能なその他のオプションについては、[APIリファレンス](./ios-reference/a00141.html)をご覧ください。
 
 ## 接続成功・失敗・切断時の処理
 {: #eventlistener }
@@ -280,7 +280,7 @@ SKWMediaConstraintsクラスでカメラ映像・マイク音声取得に関す�
 - `cameraPosition`: 使用するカメラの選択（ディフォルトは`SKW_CAMERA_POSITION_FRONT`）
   - カメラポジションは前面カメラ（`SKW_CAMERA_POSITION_FRONT`）と背面カメラ（`SKW_CAMERA_POSITION_BACK`）が選択可能
 
-これ以外の項目については、[APIリファレンス](./ios-reference/interface_s_k_w_media_constraints.html)をご覧ください。  
+これ以外の項目については、[APIリファレンス](./ios-reference/a00113.html)をご覧ください。  
 
 *Objective-C*
 {: .lang}
