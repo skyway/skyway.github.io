@@ -44,7 +44,7 @@ Application settings on the Dashboard are as follows.
 |Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
 |Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
-|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./ios-reference/interface_s_k_w_peer.html#a87e4f8349efd2e9178af7e5a5b47708a) for details.|ON|
+|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./ios-reference/a00129.html#a87e4f8349efd2e9178af7e5a5b47708a) for details.|ON|
 |Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [How to use Authorization(GitHub)](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
 
 ### Preparation of Development Environment
@@ -229,7 +229,7 @@ For the Peer object, specify API key, domain name and debug level by using SKWPe
     _peer	= [[SKWPeer alloc] initWithId:nil options:option];
 ```
 
-Please refer to [API Reference](./ios-reference/interface_s_k_w_peer_option.html) for other options that can be specified in Peer object.
+Please refer to [API Reference](./ios-reference/a00141.html) for other options that can be specified in Peer object.
 
 ## Process When Connection is Succeeded, Failed, or Disconnected
 {: #eventlistener }
@@ -274,7 +274,7 @@ Explanation for items to be set is as below.
 `cameraPosition`: Select camera for use（`SKW_CAMERA_POSITION_FRONT` as default）
 - For the camera position, front camera (`SKW_CAMERA_POSITION_FRONT`) or back camera (`SKW_CAMERA_POSITION_BACK`) can be selected.
 
-Please refer to [API Reference](./ios-reference/interface_s_k_w_media_constraints.html) for other items.
+Please refer to [API Reference](./ios-reference/a00113.html) for other items.
 
 *Objective-C*
 {: .lang}
