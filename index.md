@@ -5,7 +5,7 @@ description: SkyWayは、アプリやWebサイト、IoTデバイスにビデオ�
 lang: ja
 main_visual:
   main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
-  sub_copy: <span>SkyWayは、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>開発者のための</span><wbr><span>プラットフォームです</span>
+  sub_copy: <span>SkyWayは、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>プラットフォームです</span>
   links: 
   copy_position: ["after"]
   image_file_name: three_devices.png
