@@ -5,7 +5,7 @@ description: A platform for developers that lets you add video chat to mobile ap
 lang: en
 main_visual:
   main_copy: Innovation Through Real-time Communication.
-  sub_copy: ECLWebRTC is a platform for developers that lets you add video conversation to applications, Web sites and IoT devices.
+  sub_copy: ECLWebRTC is a platform that lets you add video conversation to applications, Web sites and IoT devices.
   links: 
   copy_position: ["after"]
   image_file_name: three_devices.png
