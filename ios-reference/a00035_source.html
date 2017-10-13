@@ -1,0 +1,108 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SKWMediaStream.h ソースファイル - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">iOS SDK API リファレンス
+   </div>
+   <div id="lang">
+    <p><script>document.write('<a href="' + location.href.replace('/ios-reference/', '/en/ios-reference/') + '">English</a>');</script></p>
+   </div>
+   <div id="breadcrumb">
+    <p>
+     <a href="../">SkyWay</a>
+     /
+     <a href="../developer.html">開発者</a>
+     /
+     <a href="../ios-sdk.html">iOS SDK</a>
+     /
+     <a href="./">APIリファレンス</a>
+     /
+     <span>SKWMediaStream.h ソースファイル</span>
+    </p>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cbbef509c911a51682cbd68a057b3a88.html">skyway_cocoa</a></li><li class="navelem"><a class="el" href="dir_2f0315374a65b96c00f6e72b639e5029.html">SkyWay</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SKWMediaStream.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a00035.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// SKWMediaStream.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SkyWay SDK</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#import &quot;<a class="code" href="a00032.html">SKWMediaConstraints.h</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#import &quot;SKWCommon.h&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00161.html">SKWVideo</a>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00117.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="a00117.html">SKWMediaStream</a> : NSObject &lt; NSCopying &gt;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00117.html#a683b6368730e00c9ab995727c4e9053f">   23</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString* __nullable <a class="code" href="a00117.html#a683b6368730e00c9ab995727c4e9053f">label</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00117.html#af1c7ed5452c3bfba86c688611e2c4540">   28</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString* __nullable <a class="code" href="a00117.html#af1c7ed5452c3bfba86c688611e2c4540">peerId</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;- (void)<a class="code" href="a00117.html#aa182585049649e02bae1d4f01f67a478">close</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;- (NSUInteger)<a class="code" href="a00117.html#a45c5bcfea64e5a273c779f4ab8b891bf">getVideoTracks</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (void)setEnableVideoTrack:(NSUInteger)pos enable:(BOOL)enable;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (BOOL)getEnableVideoTrack:(NSUInteger)pos;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;- (NSUInteger)<a class="code" href="a00117.html#a0a74f9705dbd0809bfa65574234ee83c">getAudioTracks</a>;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;- (void)setEnableAudioTrack:(NSUInteger)pos enable:(BOOL)enable;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;- (BOOL)getEnableAudioTrack:(NSUInteger)pos;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;- (BOOL)setCameraPosition:(<a class="code" href="a00032.html#a8b5453a971a720144b9eef1dceace92b">SKWCameraPositionEnum</a>)pos;</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;- (<a class="code" href="a00032.html#a8b5453a971a720144b9eef1dceace92b">SKWCameraPositionEnum</a>)<a class="code" href="a00117.html#a99ba5f7067a1d6b751b4e706cd4b8156">getCameraPosition</a>;</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;- (BOOL)<a class="code" href="a00117.html#a985c9bb19be1a945bec59f3fa864f382">switchCamera</a>;</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;- (void)addVideoRenderer:(<a class="code" href="a00161.html">SKWVideo</a>* __nonnull)renderer track:(NSUInteger)trackNo;</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;- (void)removeVideoRenderer:(<a class="code" href="a00161.html">SKWVideo</a>* __nonnull)renderer track:(NSUInteger)trackNo;</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="a00117_html_a0a74f9705dbd0809bfa65574234ee83c"><div class="ttname"><a href="a00117.html#a0a74f9705dbd0809bfa65574234ee83c">-[SKWMediaStream getAudioTracks]</a></div><div class="ttdeci">NSUInteger getAudioTracks()</div><div class="ttdoc">メディアストリームに追加されているオーディオトラック数を取得します。 </div></div>
+<div class="ttc" id="a00117_html_af1c7ed5452c3bfba86c688611e2c4540"><div class="ttname"><a href="a00117.html#af1c7ed5452c3bfba86c688611e2c4540">SKWMediaStream::peerId</a></div><div class="ttdeci">NSString *__nullable peerId</div><div class="ttdoc">リモートメディアストリームを所有しているピア ID です。ローカルストリームの場合は割り当てられません。 ...</div><div class="ttdef"><b>Definition:</b> SKWMediaStream.h:28</div></div>
+<div class="ttc" id="a00117_html_a45c5bcfea64e5a273c779f4ab8b891bf"><div class="ttname"><a href="a00117.html#a45c5bcfea64e5a273c779f4ab8b891bf">-[SKWMediaStream getVideoTracks]</a></div><div class="ttdeci">NSUInteger getVideoTracks()</div><div class="ttdoc">メディアストリームに追加されているビデオトラック数を取得します。 </div></div>
+<div class="ttc" id="a00117_html_a985c9bb19be1a945bec59f3fa864f382"><div class="ttname"><a href="a00117.html#a985c9bb19be1a945bec59f3fa864f382">-[SKWMediaStream switchCamera]</a></div><div class="ttdeci">BOOL switchCamera()</div><div class="ttdoc">ローカル iOS デバイスのメディアストリームの場合、使用カメラ位置を切り替えます。 </div></div>
+<div class="ttc" id="a00117_html_aa182585049649e02bae1d4f01f67a478"><div class="ttname"><a href="a00117.html#aa182585049649e02bae1d4f01f67a478">-[SKWMediaStream close]</a></div><div class="ttdeci">void close()</div><div class="ttdoc">メディアストリームをすべて閉じます。 </div></div>
+<div class="ttc" id="a00161_html"><div class="ttname"><a href="a00161.html">SKWVideo</a></div><div class="ttdoc">映像を表示するレンダラービューオブジェクトです。 </div><div class="ttdef"><b>Definition:</b> SKWVideo.h:32</div></div>
+<div class="ttc" id="a00117_html"><div class="ttname"><a href="a00117.html">SKWMediaStream</a></div><div class="ttdoc">メディアストリーム </div><div class="ttdef"><b>Definition:</b> SKWMediaStream.h:18</div></div>
+<div class="ttc" id="a00117_html_a683b6368730e00c9ab995727c4e9053f"><div class="ttname"><a href="a00117.html#a683b6368730e00c9ab995727c4e9053f">SKWMediaStream::label</a></div><div class="ttdeci">NSString *__nullable label</div><div class="ttdoc">メディアストリームのラベルです </div><div class="ttdef"><b>Definition:</b> SKWMediaStream.h:23</div></div>
+<div class="ttc" id="a00032_html"><div class="ttname"><a href="a00032.html">SKWMediaConstraints.h</a></div></div>
+<div class="ttc" id="a00032_html_a8b5453a971a720144b9eef1dceace92b"><div class="ttname"><a href="a00032.html#a8b5453a971a720144b9eef1dceace92b">SKWCameraPositionEnum</a></div><div class="ttdeci">SKWCameraPositionEnum</div><div class="ttdoc">カメラ位置 </div><div class="ttdef"><b>Definition:</b> SKWMediaConstraints.h:15</div></div>
+<div class="ttc" id="a00117_html_a99ba5f7067a1d6b751b4e706cd4b8156"><div class="ttname"><a href="a00117.html#a99ba5f7067a1d6b751b4e706cd4b8156">-[SKWMediaStream getCameraPosition]</a></div><div class="ttdeci">SKWCameraPositionEnum getCameraPosition()</div><div class="ttdoc">ローカル iOS デバイスのメディアストリームオブジェクトの場合、現在のカメラ位置を取得します。 ...</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+<p class="footer">© NTT Communications Corporation All Rights Reserved.</p>
+</body>
+</html>
