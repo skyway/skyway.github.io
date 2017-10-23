@@ -10,7 +10,7 @@ main_visual:
   copy_position: ["after"]
   image_file_name: three_devices.png
   font_color: "#fff"
-  background_color: rgb(0, 67, 134)
+  background_color: "#004386"
 ---
 
 <div class="card announcement">
