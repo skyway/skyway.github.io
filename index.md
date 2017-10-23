@@ -4,13 +4,13 @@ title: SkyWay - Enterprise Cloud WebRTC Platform
 description: SkyWayは、アプリやWebサイト、IoTデバイスにビデオ通話を追加できる開発者のためのプラットフォームです。SkyWayを利用すれば、自社サービスの開発・提供に専念して、イノベーションに集中することができます。
 lang: ja
 main_visual:
-  main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>に</span><wbr><span>挑戦</span><wbr><span>しよう</span>
-  sub_copy: <span>SkyWayは、</span><wbr><span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話を</span><wbr><span>追加できる</span><wbr><span>プラットフォームです</span>
+  main_copy: <span>リアルタイム</span><wbr><span>コミュニケーション</span><wbr><span>で</span><wbr><span>イノベーション</span><wbr><span>を</span><wbr><span>起こそう</span>
+  sub_copy: <span>アプリや</span><wbr><span>Webサイト、</span><wbr><span>IoTデバイスに</span><wbr><span>ビデオ通話と</span><wbr><span>P2P通信を</span><wbr><span>追加できる</span><wbr><span>API</span>
   links: 
   copy_position: ["after"]
   image_file_name: three_devices.png
   font_color: "#fff"
-  background_color: rgb(0, 67, 134)
+  background_color: "#004386"
 ---
 
 <div class="card announcement">
