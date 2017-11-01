@@ -424,16 +424,3 @@ None
   "secretkey": "<secretkey>"
 }
 ```
-
-## Permission examples
-
-|Permission name|Description|
-|:--|:--|
-|TURN|Enables TURN for peers on the app|
-|SFU|Enables SFU for peers on the app|
-|USER_LIST|Enables the [`listAllPeers()`](https://webrtc.ecl.ntt.com/en/js-reference/Peer.html) function|
-|PEER_AUTHENTICATION|Only allows peers authenticated using an access token to connect to this app.|
-
-
-
-
