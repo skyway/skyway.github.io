@@ -65,7 +65,7 @@ None
 
 |Name|Type|Description|
 |:--|:--|:--|
-|-|Array\<App>|An array of apps belonging to this tenant. Information returned depends on whether expandApps parameter was true or not|
+|-|Array\<App>|An array of apps belonging to this tenant. Information returned depends on whether expandApps parameter was true or not.|
 
 ##### Response Format
 
@@ -127,10 +127,10 @@ POST /tenants/{tenant_id}/apps
 
 |Name|Type|Description|
 |:--|:--|:--|
-|description|string|Optional. A description of the app. Up to 128 chars. |
-|domains|Array\<string>|Optional. The domains permitted for the app|
-|permissions|Array\<string>|Optional. The permissions enabled for the app|
-|status|string|Optional. The app status. One of `"active"` or `"suspended"`|
+|description|string|Optional. A description of the app. Up to 128 chars.|
+|domains|Array\<string>|Optional. The domains permitted for the app.|
+|permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", and "PEER_AUTHENTICATION" can be set.|
+|status|string|Optional. The app status. One of `"active"` or `"suspended"`.|
 
 ##### Request Format
 
@@ -148,10 +148,10 @@ POST /tenants/{tenant_id}/apps
 |:--|:--|:--|
 |id|string|The app id|
 |apikey|string|The app apikey|
-|description|string|A description of the app.|
+|description|string|A description of the app|
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
-|status|string|The status of the app.|
+|status|string|The status of the app|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
@@ -209,10 +209,10 @@ None
 |:--|:--|:--|
 |id|string|The app id|
 |apikey|string|The app apikey|
-|description|string|A description of the app.|
+|description|string|A description of the app|
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
-|status|string|The status of the app.|
+|status|string|The status of the app|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
