@@ -74,22 +74,22 @@ With expandApps set.
 ```json
 [
   {
-    "id": "13808fa08f0a8020203820df",
-    "apikey": "139fa-021390f-2903a-afae92",
-    "description": "First app",
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>",
     "domains": [],
     "permissions": [],
-    "status": "active",
+    "status": "<status>",
     "created_at": "2016-12-09T21:50:21Z",
     "updated_at": "2016-12-09T21:50:21Z"
   },
   {
-    "id": "808fa2020382008f0a1380df",
-    "apikey": "91cf3-2ae929f-3a021-0903af",
-    "description": "Second app",
-    "domains": ["*.webrtc.ecl.ntt.com", "skyway.github.io"],
-    "permissions": ["TURN_ENABLED"],
-    "status": "active",
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>",
+    "domains": ["<domain1>", "<domain2>"],
+    "permissions": ["<permission>"],
+    "status": "<status>",
     "created_at": "2016-12-09T22:50:21Z",
     "updated_at": "2016-12-10T23:50:21Z"
   }
@@ -101,14 +101,14 @@ Without expandApps set.
 ```json
 [
   {
-    "id": "13808fa08f0a8020203820df",
-    "apikey": "139fa-021390f-2903a-afae92",
-    "description": "First app"
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>"
   },
   {
-    "id": "808fa2020382008f0a1380df",
-    "apikey": "91cf3-2ae929f-3a021-0903af",
-    "description": "Second app"
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>"
   }
 ]
 ```
@@ -136,7 +136,7 @@ POST /tenants/{tenant_id}/apps
 
 ```json
 {
-  "description": "skyway app"
+  "description": "<description>"
 }
 ```  
 
@@ -172,9 +172,9 @@ POST /tenants/{tenant_id}/apps
 
 ```json
 {
-  "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92",
-  "description": "skyway app",
+  "id": "{tenant_id}",
+  "apikey": "{apikey_id}",
+  "description": "<description>",
   "domains": [],
   "permissions": [],
   "status": "active",
@@ -229,12 +229,12 @@ None
 
 ```json
 {
-  "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92",
-  "description": "skyway app",
-  "domains": ["*.webrtc.ecl.ntt.com", "skyway.github.io"],
-  "permissions": ["TURN_ENABLED"],
-  "status": "active",
+  "id": "{tenant_id}",
+  "apikey": "{apikey_id}",
+  "description": "<description>",
+  "domains": ["<domain1>", "<domain2>"],
+  "permissions": ["<permission>"],
+  "status": "<status>",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T21:50:21Z"
 }
@@ -295,16 +295,16 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |:--|:--|:--|
 |description|string|Optional. A description of the app|
 |domains|Array\<string>|Optional. The domains permitted for the app|
-|permissions|Array\<string>|Optional. The permissions enabled for the app|
+|permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", and "PEER_AUTHENTICATION" can be set.|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`|
 
 ##### Request Format
 
 ```json
 {
-  "description": "Updated description",
-  "status": "active",
-  "domains": ["*.skyway.io", "nttcom.github.io"]
+  "description": "<description>",
+  "status": "<status>",
+  "domains": ["<domain1>", "<domain2>"]
 }
 ```
 
@@ -343,12 +343,12 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 
 ```
 {
-  "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92"
-  "description": "Updated description",
-  "domains": ["*.webrtc.ecl.ntt.com", "skyway.github.io"],
-  "permissions": ["TURN_ENABLED"],
-  "status": "active",
+  "id": "{tenant_id}",
+  "apikey": "{apikey_id}"
+  "description": "<description>",
+  "domains": ["<domain1>", "<domain2>"],
+  "permissions": ["<permission>"],
+  "status": "<status>",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T23:20:21Z"
 }
@@ -385,7 +385,7 @@ None
 
 ```json
 {
-  "secretkey": "f3Vu9vua9muCMEM82om"
+  "secretkey": "<secretkey>"
 }
 ```
 
@@ -421,7 +421,7 @@ None
 
 ```json
 {
-  "secretkey": "f3Vu9vua9muCMEM82om"
+  "secretkey": "<secretkey>"
 }
 ```
 
