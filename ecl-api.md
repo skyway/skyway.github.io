@@ -28,14 +28,19 @@ The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api
 |Get app secret key |GET|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 |Renew app secret key |POST|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 
-## Get apps list
+### Get apps list
 {: #get-app-list }
+
+#### Request
+
+##### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps
 ```
 
-### Request Parameters
+
+##### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -44,12 +49,22 @@ GET /tenants/{tenant_id}/apps
 ```
 GET /tenants/212dd263522c4e73887212edfc7273e6/apps?expandApps
 ```
+##### Request Format
 
-### Response
+None
+
+#### Response
+
+##### Response Codes
+
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |-|Array\<App>|An array of apps belonging to this tenant. Information returned depends on whether expandApps parameter was true or not|
+
+##### Response Format
 
 With expandApps set.
 
@@ -95,13 +110,17 @@ Without expandApps set.
 ]
 ```
 
-## Create new app
+### Create new app
+
+#### Request
+
+##### Request URL
 
 ```
 POST /tenants/{tenant_id}/apps
 ```
 
-### Request Parameters
+##### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -113,6 +132,7 @@ POST /tenants/{tenant_id}/apps
 ```
 POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 ```
+##### Request Format
 
 ```json
 {
@@ -120,8 +140,9 @@ POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 }
 ```  
 
-### Response
+#### Response
 
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -133,6 +154,10 @@ POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 |status|string|The status of the app.|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
+
+##### Response Codes
+
+##### Response Format
 
 ```json
 {
@@ -147,17 +172,27 @@ POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 }
 ```
 
-## Get app
+### Get app
+
+#### Request
+
+##### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps/{app_id}
 ```
 
-### Request Parameters
+##### Request Parameters
 
-none
+None
 
-### Response
+##### Request Format
+
+None
+
+#### Response
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -169,6 +204,10 @@ none
 |status|string|The status of the app.|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
+
+##### Response Codes
+
+##### Response Format
 
 ```json
 {
@@ -183,27 +222,49 @@ none
 }
 ```
 
-## Delete app
+### Delete app
+
+#### Request
+
+##### Request URL
 
 ```
 DELETE /tenants/{tenant_id}/apps/{app_id}
 ```
 
-### Request Parameters
+##### Request Parameters
 
-### Response
+None
+
+##### Request Format
+
+None
+
+#### Response
+
+##### Response Parameters
+
+None
+
+##### Response Codes
+
+##### Response Format
 
 ```json
 {}
 ```
 
-## Update app
+### Update app
+
+#### Request
+
+##### Request URL
 
 ```
 PUT /tenants/{tenant_id}/apps/{app_id}
 ```
 
-### Request Parameters
+##### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -215,6 +276,7 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 ```
 PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
 ```
+##### Request Format
 
 ```json
 {
@@ -224,7 +286,10 @@ PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
 }
 ```
 
-### Response
+#### Response
+
+##### Response Parameters
+
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -236,6 +301,10 @@ PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
 |status|string|The status of the app.|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
+
+##### Response Codes
+
+##### Response Format
 
 ```
 {
@@ -251,19 +320,33 @@ PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
 ```
 
 
-## Get an app secret key
+### Get an app secret key
+
+#### Request
+
+##### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps/{app_id}/secretkey
 ```
 
-### Request Parameters
+##### Request Parameters
 
-### Response
+None
+
+##### Request Format
+
+#### Response
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |secretkey|string|The secret key for the app|
+
+##### Response Codes
+
+##### Response Format
 
 ```json
 {
@@ -271,20 +354,35 @@ GET /tenants/{tenant_id}/apps/{app_id}/secretkey
 }
 ```
 
-## Regenerate app secret key
+### Regenerate app secret key
+
+#### Request
+
+##### Request URL
 
 ```
 POST /tenants/{tenant_id}/apps/{app_id}/secretkey
 ```
 
-### Request Parameters
+##### Request Parameters
 
-### Response
+None
 
+##### Request Format
+
+None
+
+#### Response
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |secretkey|string|The new secret key for the app|
+
+##### Response Codes
+
+##### Response Format
 
 ```json
 {
