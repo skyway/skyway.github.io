@@ -46,9 +46,6 @@ GET /tenants/{tenant_id}/apps
 |:--|:--|:--|
 |expandApps|boolean|Expands the apps array to contain the whole body of the app object (except the secret key) when true. Only returns id, apikey and description when false. True if present, default is false. Can also explicitly set expandApps=true or expandApps=false.|
 
-```
-GET /tenants/212dd263522c4e73887212edfc7273e6/apps?expandApps
-```
 ##### Request Format
 
 None
@@ -57,6 +54,12 @@ None
 
 ##### Response Codes
 
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
 
 ##### Response Parameters
 
@@ -129,9 +132,6 @@ POST /tenants/{tenant_id}/apps
 |permissions|Array\<string>|Optional. The permissions enabled for the app|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`|
 
-```
-POST /tenants/212dd263522c4e73887212edfc7273e6/apps
-```
 ##### Request Format
 
 ```json
@@ -156,6 +156,17 @@ POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 |updated_at|string|When this app was last updated.|
 
 ##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|400|Description exceeding the maximum length|
+|-|Domain exceeding the maximum length|
+|-|Invalid domain format|
+|-|Invalid status|
+|-|Invalid permissions|
+|403|Not authenticated|
+|-|Tenant is suspended|
 
 ##### Response Format
 
@@ -207,6 +218,13 @@ None
 
 ##### Response Codes
 
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
+
 ##### Response Format
 
 ```json
@@ -248,6 +266,13 @@ None
 
 ##### Response Codes
 
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|App doesn't exist|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
+
 ##### Response Format
 
 ```json
@@ -273,9 +298,6 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |permissions|Array\<string>|Optional. The permissions enabled for the app|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`|
 
-```
-PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
-```
 ##### Request Format
 
 ```json
@@ -303,6 +325,19 @@ PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
 |updated_at|string|When this app was last updated.|
 
 ##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|400|Description exceeding the maximum length|
+|-|Domain exceeding the maximum length|
+|-|Invalid domain format|
+|-|Invalid status|
+|-|Invalid permissions|
+|403|Not authenticated|
+|-|Tenant is suspended|
+|-|App doesn't exist|
+
 
 ##### Response Format
 
