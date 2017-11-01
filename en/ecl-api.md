@@ -28,50 +28,68 @@ The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api
 |Get app secret key |GET|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 |Renew app secret key |POST|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 
-## Get apps list
+### Get apps list
 {: #get-app-list }
+
+#### Request
+
+##### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps
 ```
 
-### Request Parameters
+
+##### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |expandApps|boolean|Expands the apps array to contain the whole body of the app object (except the secret key) when true. Only returns id, apikey and description when false. True if present, default is false. Can also explicitly set expandApps=true or expandApps=false.|
 
-```
-GET /tenants/212dd263522c4e73887212edfc7273e6/apps?expandApps
-```
+##### Request Format
 
-### Response
+None
+
+#### Response
+
+##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
-|-|Array\<App>|An array of apps belonging to this tenant. Information returned depends on whether expandApps parameter was true or not|
+|-|Array\<App>|An array of apps belonging to this tenant. Information returned depends on whether expandApps parameter was true or not.|
+
+##### Response Format
 
 With expandApps set.
 
 ```json
 [
   {
-    "id": "13808fa08f0a8020203820df",
-    "apikey": "139fa-021390f-2903a-afae92",
-    "description": "First app",
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>",
     "domains": [],
     "permissions": [],
-    "status": "active",
+    "status": "<status>",
     "created_at": "2016-12-09T21:50:21Z",
     "updated_at": "2016-12-09T21:50:21Z"
   },
   {
-    "id": "808fa2020382008f0a1380df",
-    "apikey": "91cf3-2ae929f-3a021-0903af",
-    "description": "Second app",
-    "domains": ["*.webrtc.ecl.ntt.com", "skyway.github.io"],
-    "permissions": ["TURN_ENABLED"],
-    "status": "active",
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>",
+    "domains": ["<domain1>", "<domain2>"],
+    "permissions": ["<permission>"],
+    "status": "<status>",
     "created_at": "2016-12-09T22:50:21Z",
     "updated_at": "2016-12-10T23:50:21Z"
   }
@@ -83,62 +101,80 @@ Without expandApps set.
 ```json
 [
   {
-    "id": "13808fa08f0a8020203820df",
-    "apikey": "139fa-021390f-2903a-afae92",
-    "description": "First app"
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>"
   },
   {
-    "id": "808fa2020382008f0a1380df",
-    "apikey": "91cf3-2ae929f-3a021-0903af",
-    "description": "Second app"
+    "id": "{tenant_id}",
+    "apikey": "{apikey_id}",
+    "description": "<description>"
   }
 ]
 ```
 
-## Create new app
+### Create new app
+
+#### Request
+
+##### Request URL
 
 ```
 POST /tenants/{tenant_id}/apps
 ```
 
-### Request Parameters
+##### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
-|description|string|Optional. A description of the app. Up to 128 chars. |
-|domains|Array\<string>|Optional. The domains permitted for the app|
-|permissions|Array\<string>|Optional. The permissions enabled for the app|
-|status|string|Optional. The app status. One of `"active"` or `"suspended"`|
+|description|string|Optional. A description of the app. Up to 128 chars.|
+|domains|Array\<string>|Optional. The domains permitted for the app.|
+|permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", and "PEER_AUTHENTICATION" can be set.|
+|status|string|Optional. The app status. One of `"active"` or `"suspended"`.|
 
-```
-POST /tenants/212dd263522c4e73887212edfc7273e6/apps
-```
+##### Request Format
 
 ```json
 {
-  "description": "skyway app"
+  "description": "<description>"
 }
 ```  
 
-### Response
+#### Response
 
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |id|string|The app id|
 |apikey|string|The app apikey|
-|description|string|A description of the app.|
+|description|string|A description of the app|
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
-|status|string|The status of the app.|
+|status|string|The status of the app|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
+##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|400|Description exceeding the maximum length|
+|-|Domain exceeding the maximum length|
+|-|Invalid domain format|
+|-|Invalid status|
+|-|Invalid permissions|
+|403|Not authenticated|
+|-|Tenant is suspended|
+
+##### Response Format
+
 ```json
 {
-  "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92",
-  "description": "skyway app",
+  "id": "{tenant_id}",
+  "apikey": "{apikey_id}",
+  "description": "<description>",
   "domains": [],
   "permissions": [],
   "status": "active",
@@ -147,84 +183,135 @@ POST /tenants/212dd263522c4e73887212edfc7273e6/apps
 }
 ```
 
-## Get app
+### Get app
+
+#### Request
+
+##### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps/{app_id}
 ```
 
-### Request Parameters
+##### Request Parameters
 
-none
+None
 
-### Response
+##### Request Format
+
+None
+
+#### Response
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |id|string|The app id|
 |apikey|string|The app apikey|
-|description|string|A description of the app.|
+|description|string|A description of the app|
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
-|status|string|The status of the app.|
+|status|string|The status of the app|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
+##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
+
+##### Response Format
+
 ```json
 {
-  "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92",
-  "description": "skyway app",
-  "domains": ["*.webrtc.ecl.ntt.com", "skyway.github.io"],
-  "permissions": ["TURN_ENABLED"],
-  "status": "active",
+  "id": "{tenant_id}",
+  "apikey": "{apikey_id}",
+  "description": "<description>",
+  "domains": ["<domain1>", "<domain2>"],
+  "permissions": ["<permission>"],
+  "status": "<status>",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T21:50:21Z"
 }
 ```
 
-## Delete app
+### Delete app
+
+#### Request
+
+##### Request URL
 
 ```
 DELETE /tenants/{tenant_id}/apps/{app_id}
 ```
 
-### Request Parameters
+##### Request Parameters
 
-### Response
+None
+
+##### Request Format
+
+None
+
+#### Response
+
+##### Response Parameters
+
+None
+
+##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|App doesn't exist|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
+
+##### Response Format
 
 ```json
 {}
 ```
 
-## Update app
+### Update app
+
+#### Request
+
+##### Request URL
 
 ```
 PUT /tenants/{tenant_id}/apps/{app_id}
 ```
 
-### Request Parameters
+##### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |description|string|Optional. A description of the app|
 |domains|Array\<string>|Optional. The domains permitted for the app|
-|permissions|Array\<string>|Optional. The permissions enabled for the app|
+|permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", and "PEER_AUTHENTICATION" can be set.|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`|
 
-```
-PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
-```
+##### Request Format
 
 ```json
 {
-  "description": "Updated description",
-  "status": "active",
-  "domains": ["*.skyway.io", "nttcom.github.io"]
+  "description": "<description>",
+  "status": "<status>",
+  "domains": ["<domain1>", "<domain2>"]
 }
 ```
 
-### Response
+#### Response
+
+##### Response Parameters
+
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -237,70 +324,103 @@ PUT /tenants/212dd263522c4e73887212edfc7273e6/apps/13808fa08f0a8020203820df
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
+##### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|400|Description exceeding the maximum length|
+|-|Domain exceeding the maximum length|
+|-|Invalid domain format|
+|-|Invalid status|
+|-|Invalid permissions|
+|403|Not authenticated|
+|-|Tenant is suspended|
+|-|App doesn't exist|
+
+
+##### Response Format
+
 ```
 {
-  "id": "13808fa08f0a8020203820df",
-  "apikey": "139fa-021390f-2903a-afae92"
-  "description": "Updated description",
-  "domains": ["*.webrtc.ecl.ntt.com", "skyway.github.io"],
-  "permissions": ["TURN_ENABLED"],
-  "status": "active",
+  "id": "{tenant_id}",
+  "apikey": "{apikey_id}"
+  "description": "<description>",
+  "domains": ["<domain1>", "<domain2>"],
+  "permissions": ["<permission>"],
+  "status": "<status>",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T23:20:21Z"
 }
 ```
 
 
-## Get an app secret key
+### Get an app secret key
+
+#### Request
+
+##### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps/{app_id}/secretkey
 ```
 
-### Request Parameters
+##### Request Parameters
 
-### Response
+None
+
+##### Request Format
+
+#### Response
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |secretkey|string|The secret key for the app|
 
+##### Response Codes
+
+##### Response Format
+
 ```json
 {
-  "secretkey": "f3Vu9vua9muCMEM82om"
+  "secretkey": "<secretkey>"
 }
 ```
 
-## Regenerate app secret key
+### Regenerate app secret key
+
+#### Request
+
+##### Request URL
 
 ```
 POST /tenants/{tenant_id}/apps/{app_id}/secretkey
 ```
 
-### Request Parameters
+##### Request Parameters
 
-### Response
+None
 
+##### Request Format
+
+None
+
+#### Response
+
+##### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |secretkey|string|The new secret key for the app|
 
+##### Response Codes
+
+##### Response Format
+
 ```json
 {
-  "secretkey": "f3Vu9vua9muCMEM82om"
+  "secretkey": "<secretkey>"
 }
 ```
-
-## Permission examples
-
-|Permission name|Description|
-|:--|:--|
-|TURN|Enables TURN for peers on the app|
-|SFU|Enables SFU for peers on the app|
-|USER_LIST|Enables the [`listAllPeers()`](https://webrtc.ecl.ntt.com/en/js-reference/Peer.html) function|
-|PEER_AUTHENTICATION|Only allows peers authenticated using an access token to connect to this app.|
-
-
-
-
