@@ -270,6 +270,7 @@ None
 |:--|:--|
 |200|Normal end|
 |403|App doesn't exist|
+|-|Not authenticated|
 |-|Tenant is suspended|
 |-|Tenant is Deleted|
 
@@ -338,10 +339,9 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |-|Tenant is suspended|
 |-|App doesn't exist|
 
-
 #### Response Format
 
-```
+```json
 {
   "id": "{tenant_id}",
   "apikey": "{apikey_id}"
@@ -353,7 +353,6 @@ PUT /tenants/{tenant_id}/apps/{app_id}
   "updated_at": "2016-12-09T23:20:21Z"
 }
 ```
-
 
 ## Get an app secret key
 
@@ -380,6 +379,14 @@ None
 |secretkey|string|The secret key for the app|
 
 #### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|App doesn't exist|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
 
 #### Response Format
 
@@ -416,6 +423,14 @@ None
 |secretkey|string|The new secret key for the app|
 
 #### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|App doesn't exist|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
 
 #### Response Format
 
