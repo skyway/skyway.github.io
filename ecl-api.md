@@ -17,7 +17,8 @@ Before using the APIs, the authentication token must be obtained according to th
 The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api-references/).
 
 # API List
- 
+{: .h2 }
+
 |Description|Method|Endpoint|
 |:--|:--|:--|
 |Get apps list|GET| `/tenants/{tenant_id}/apps`|
@@ -29,7 +30,6 @@ The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api
 |Renew app secret key |POST|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 
 ## Get apps list
-{: #get-app-list }
 
 ### Request
 
