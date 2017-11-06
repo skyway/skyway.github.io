@@ -16,7 +16,7 @@ Before using the APIs, the authentication token must be obtained according to th
 
 The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api-references/).
 
-## API List
+# API List
  
 |Description|Method|Endpoint|
 |:--|:--|:--|
@@ -28,31 +28,31 @@ The API endpoint URL can be found at [here](https://ecl.ntt.com/en/documents/api
 |Get app secret key |GET|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 |Renew app secret key |POST|`/tenants/{tenant_id}/apps/{app_id}/secretkey`|
 
-### Get apps list
+## Get apps list
 {: #get-app-list }
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps
 ```
 
 
-##### Request Parameters
+#### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |expandApps|boolean|Expands the apps array to contain the whole body of the app object (except the secret key) when true. Only returns id, apikey and description when false. True if present, default is false. Can also explicitly set expandApps=true or expandApps=false.|
 
-##### Request Format
+#### Request Format
 
 None
 
-#### Response
+### Response
 
-##### Response Codes
+#### Response Codes
 
 |Code|Condition|
 |:--|:--|
@@ -61,13 +61,13 @@ None
 |-|Tenant is suspended|
 |-|Tenant is Deleted|
 
-##### Response Parameters
+#### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |-|Array\<App>|An array of apps belonging to this tenant. Information returned depends on whether expandApps parameter was true or not.|
 
-##### Response Format
+#### Response Format
 
 With expandApps set.
 
@@ -113,17 +113,17 @@ Without expandApps set.
 ]
 ```
 
-### Create new app
+## Create new app
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 POST /tenants/{tenant_id}/apps
 ```
 
-##### Request Parameters
+#### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -132,7 +132,7 @@ POST /tenants/{tenant_id}/apps
 |permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", and "PEER_AUTHENTICATION" can be set.|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`.|
 
-##### Request Format
+#### Request Format
 
 ```json
 {
@@ -140,9 +140,9 @@ POST /tenants/{tenant_id}/apps
 }
 ```  
 
-#### Response
+### Response
 
-##### Response Parameters
+#### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -155,7 +155,7 @@ POST /tenants/{tenant_id}/apps
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
-##### Response Codes
+#### Response Codes
 
 |Code|Condition|
 |:--|:--|
@@ -168,7 +168,7 @@ POST /tenants/{tenant_id}/apps
 |403|Not authenticated|
 |-|Tenant is suspended|
 
-##### Response Format
+#### Response Format
 
 ```json
 {
@@ -183,27 +183,27 @@ POST /tenants/{tenant_id}/apps
 }
 ```
 
-### Get app
+## Get app
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps/{app_id}
 ```
 
-##### Request Parameters
+#### Request Parameters
 
 None
 
-##### Request Format
+#### Request Format
 
 None
 
-#### Response
+### Response
 
-##### Response Parameters
+#### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -216,7 +216,7 @@ None
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
-##### Response Codes
+#### Response Codes
 
 |Code|Condition|
 |:--|:--|
@@ -225,7 +225,7 @@ None
 |-|Tenant is suspended|
 |-|Tenant is Deleted|
 
-##### Response Format
+#### Response Format
 
 ```json
 {
@@ -240,31 +240,31 @@ None
 }
 ```
 
-### Delete app
+## Delete app
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 DELETE /tenants/{tenant_id}/apps/{app_id}
 ```
 
-##### Request Parameters
+#### Request Parameters
 
 None
 
-##### Request Format
+#### Request Format
 
 None
 
-#### Response
+### Response
 
-##### Response Parameters
+#### Response Parameters
 
 None
 
-##### Response Codes
+#### Response Codes
 
 |Code|Condition|
 |:--|:--|
@@ -273,23 +273,23 @@ None
 |-|Tenant is suspended|
 |-|Tenant is Deleted|
 
-##### Response Format
+#### Response Format
 
 ```json
 {}
 ```
 
-### Update app
+## Update app
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 PUT /tenants/{tenant_id}/apps/{app_id}
 ```
 
-##### Request Parameters
+#### Request Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
@@ -298,7 +298,7 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", and "PEER_AUTHENTICATION" can be set.|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`|
 
-##### Request Format
+#### Request Format
 
 ```json
 {
@@ -308,9 +308,9 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 }
 ```
 
-#### Response
+### Response
 
-##### Response Parameters
+#### Response Parameters
 
 
 |Name|Type|Description|
@@ -324,7 +324,7 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
-##### Response Codes
+#### Response Codes
 
 |Code|Condition|
 |:--|:--|
@@ -339,7 +339,7 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |-|App doesn't exist|
 
 
-##### Response Format
+#### Response Format
 
 ```
 {
@@ -355,33 +355,33 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 ```
 
 
-### Get an app secret key
+## Get an app secret key
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 GET /tenants/{tenant_id}/apps/{app_id}/secretkey
 ```
 
-##### Request Parameters
+#### Request Parameters
 
 None
 
-##### Request Format
+#### Request Format
 
-#### Response
+### Response
 
-##### Response Parameters
+#### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |secretkey|string|The secret key for the app|
 
-##### Response Codes
+#### Response Codes
 
-##### Response Format
+#### Response Format
 
 ```json
 {
@@ -389,35 +389,35 @@ None
 }
 ```
 
-### Regenerate app secret key
+## Regenerate app secret key
 
-#### Request
+### Request
 
-##### Request URL
+#### Request URL
 
 ```
 POST /tenants/{tenant_id}/apps/{app_id}/secretkey
 ```
 
-##### Request Parameters
+#### Request Parameters
 
 None
 
-##### Request Format
+#### Request Format
 
 None
 
-#### Response
+### Response
 
-##### Response Parameters
+#### Response Parameters
 
 |Name|Type|Description|
 |:--|:--|:--|
 |secretkey|string|The new secret key for the app|
 
-##### Response Codes
+#### Response Codes
 
-##### Response Format
+#### Response Format
 
 ```json
 {
