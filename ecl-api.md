@@ -270,6 +270,7 @@ None
 |:--|:--|
 |200|Normal end|
 |403|App doesn't exist|
+|-|Not authenticated|
 |-|Tenant is suspended|
 |-|Tenant is Deleted|
 
@@ -381,6 +382,14 @@ None
 
 #### Response Codes
 
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|App doesn't exist|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
+
 #### Response Format
 
 ```json
@@ -416,6 +425,14 @@ None
 |secretkey|string|The new secret key for the app|
 
 #### Response Codes
+
+|Code|Condition|
+|:--|:--|
+|200|Normal end|
+|403|Not authenticated|
+|-|App doesn't exist|
+|-|Tenant is suspended|
+|-|Tenant is Deleted|
 
 #### Response Format
 
