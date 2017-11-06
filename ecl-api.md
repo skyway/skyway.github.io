@@ -339,10 +339,9 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |-|Tenant is suspended|
 |-|App doesn't exist|
 
-
 #### Response Format
 
-```
+```json
 {
   "id": "{tenant_id}",
   "apikey": "{apikey_id}"
@@ -354,7 +353,6 @@ PUT /tenants/{tenant_id}/apps/{app_id}
   "updated_at": "2016-12-09T23:20:21Z"
 }
 ```
-
 
 ## Get an app secret key
 
