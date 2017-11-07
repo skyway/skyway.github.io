@@ -370,6 +370,8 @@ None
 
 #### Request Format
 
+None
+
 ### Response
 
 #### Response Parameters
