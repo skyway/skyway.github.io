@@ -8,286 +8,206 @@ breadcrumb: [en/index.md, en/signup.md]
 - TOC
 {:toc}
 
-# 利用規約
-Enterprise Cloud WebRTC Platform Community Edition（以下、ECLWebRTC）をご利用頂くためには本利用規約に同意していただく必要がございます。
+# Terms and Conditions
+To use Enterprise Cloud WebRTC Platform Community Edition (“ECLWebRTC”), you must agree to these terms of service.
 
-## 第1章 総則
+## Section 1. General Provisions
 
-### （本規約の目的）
+### Article 1 (Purpose of these Terms)
 
-第1条 エヌ・ティ・ティ・コミュニケーションズ株式会社（以下「当社」といいます。）は、このECLWebRTC利用規約（以下「本規約」といいます。）を定め、これにより第２項に定める契約者に対して無償で、第４条に定めるECLWebRTCサービス（以下「本サービス」といいます。）を提供します。
+1. NTT Communications Corporation (“NTTCom”) have established these terms of service for ECLWebRTC (these “Terms”), under which NTTCom shall provide the ECLWebRTC services described in Article 4 (the “Services”) to Customer defined in Paragraph 2 without charge.
 
-2 本サービスに係る契約者（以下「契約者」といいます。）は、本規約を誠実に遵守するものとします。
+2. The customer of the Services (“Customer”) shall comply with these Terms in good faith.
 
-### （本規約の変更）
+### Article 2 (Revision to these Terms)
 
-第2条 当社は本規約を必要に応じて変更することがあります。この場合には、提供条件は、変更後の規約によります。
+NTTCom may revise these Terms as necessary.  In such cases, the provision of the Services shall be governed by the revised Terms.
 
-### （本規約の公表）
+### Article 3 (Publication of these Terms)
 
-第3条 当社は、当社のWebページ（ [https://webrtc.ecl.ntt.com](https://webrtc.ecl.ntt.com/){:target="_blank"} ）その他当社が別に定める方法により、本規約を公表します。
+NTTCom shall publish these Terms on its website([https://webrtc.ecl.ntt.com](https://webrtc.ecl.ntt.com/){:target="_blank"}) or otherwise in the manner designated by NTTCom.
 
-### （用語の定義）
+### Article 4 (Definition)
 
-第4条 本規約において、次の用語はそれぞれ次の意味で使用します。
+For the purpose of these Terms, the following words shall have the following meanings:
 
-||用語|用語の意味|
-|:-:|:--|:--|
-|1|ECLWebRTCサービス|WebRTCの機能を簡易に利用するためのシグナリング機能、セッション管理機能（契約者のサービス（本サービスを利用して契約者が提供するサービスを言います。）を利用するユーザ数等を収集可能にする機能を言います。）等を提供するサービス|
-|2|APIキー|本サービスを提供する際に、当社が契約者に付与する識別符号|
+|Term|Definition|
+|:--|:--|
+|API Key|an identifier provided by NTTCom to Customer when providing the Services|
 
-## 第2章 契約
+## Section 2. Agreement
 
-### （契約の単位）
+### Article 5 (Subscription Unit)
 
-第5条 当社は1アカウント毎に1の本サービスに係る契約を締結します。
+NTTCom shall enter into one agreement for the Services for each account.
 
-### （本サービスの契約申込）
+### Article 6 (Subscription for the Services)
 
-第6条 本サービスに係る契約の申込みをするときは、当社の指定する方法により申し込みを行っていただきます。
+1. When subscribing for the Services, Customer shall do so in the manner designated by NTTCom.
+2. When changing details of Customer’s subscription, Customer shall request such change in the manner designated by NTTCom, and NTTCom shall implement such change.
 
-2 申込み内容を変更するときは、当社の指定する方法により申し込みを行っていただき、当社にて変更手続きを実施することとします。
+### Article 7 (Acceptance of Subscription for the Services)
 
-### （本サービスの契約申込の承諾）
+1. NTTCom shall accept a subscription for the Services in the order of receipt.
+2. Notwithstanding the provisions of the preceding paragraph, NTTCom may not accept a subscription for the Services if:
+(1) it is technically extremely difficult to provide the Services;
+(2) a person who subscribes for the Services is or has been suspended from using the Services or his/her subscription for the Services has been terminated;
+(3) a person who subscribes for the Services submits false information in relation to the subscription; or
+(4) the NTTCom has other significant difficulties in performing its duties relating to the Services.
+3. Upon acceptance of the subscription in accordance with Paragraph 1, NTTCom shall provide one API Key to Customer.
 
-第7条 当社は、本サービスに係る契約の申込みがあったときは、受け付けた順序に従って承諾します。
+### Article 8 (Succession of Contractual Status)
 
-2 当社は前項の規定にかかわらず、次の場合には、本サービスに係る契約の申込みを承諾しないことがあります。
+1. In the event of a succession of Customer’s contractual status relating to the Services as a result of inheritance or corporate merger or demerger, the heir or the NTTCom surviving the merger or established by the merger or the NTTCom established by the demerger shall notify NTTCom thereof in the manner designated by NTTCom.
+2. In the case of the preceding paragraph, if there are two or more persons who succeed to Customer’s contractual status, one of them shall be designated as a representative to NTTCom and notify NTTCom thereof.  The same applies if such representative is replaced.
+3. Until receipt of notice of the representative pursuant to the preceding paragraph, NTTCom shall treat one of the persons who succeed Customer’s contractual status as a representative.
 
-（1）本サービスを提供することが技術上著しく困難なとき。
+### Article 9 (Notification of Change of Name or Other Information)
 
-（2）本サービスに係る契約の申込みをした者が本サービスの利用を停止されている若しくは停止されたことがある又は本サービスに係る契約の解除を受けたことがあるとき。
+1. In the case of a change of Customer’s name, trade name, address or location, Customer shall promptly notify NTTCom thereof.
+2. NTTCom shall not be responsible in any way for any disadvantage suffered by Customer as a result of its failure to notify NTTCom of the change referred to in the preceding paragraph.
 
-（3）本サービスに係る契約の申込みをした者が、申込みにあたり虚偽の内容を申し出たとき。
+### Article 10 (Obtaining Log Information)
 
-（4）その他本サービスに係る業務の遂行上著しい支障があるとき。
+Customer agrees in advance that it will collect and process its communication log and other information relating to the Services, store and accumulate the information so collected/processed in the equipment necessary for the Services (the “Equipment”), and use the information so stored/accumulated.
 
-3 当社は第１項に定める承諾をもって、契約者に１のAPIキーを払い出します。
+### Article 11 (Assignment of the Right under the Agreement)
 
-### （契約の地位の承継）
+Customer may not assign the right to use the Services (which means the right of Customer to receive the Services under the agreement for the Services; the same applies hereinafter).
 
-第8条 相続又は法人の合併若しくは分割により本サービスに係る契約の地位の承継があったときは、相続人又は合併後存続する法人若しくは合併により設立された法人又は分割により設立された法人は、当社の指定する方法により当社に届け出ていただきます。
+### Article 12 (Termination by Customer of Subscription of the Services)
 
-2 前項の場合に、地位を承継した者が2人以上あるときは、そのうちの1人を当社に対する代表者と定め、これを届け出ていただきます。これを変更したときも同様とします。
+Customer shall, when intending to terminate the agreement for the Services, notify NTTCom thereof in advance in the manner designated by NTTCom.
 
-3 当社は、前項の規定による代表者の届出があるまでの間、その地位を承継した者のうちの1人を代表者として取り扱います。
+### Article 13 (Termination by NTTCom of Subscription of the Services)
 
-### （氏名等の変更の届出）
+1. NTTCom may terminate the agreement for the Services in any of the following circumstances:
+(1) Customer who is suspended from using the Services pursuant to Article 15 (Suspension of Use) still fails to remedy the relevant situation;
+(2) Customer provides false information to NTTCom;
+(3) it becomes extremely difficult to provide the Services to Customer as a result of compulsory measures under laws (including foreign laws; the same applies hereinafter); or
+(4) Customer otherwise breaches any of these Terms.
+3. NTTCom shall, when intending to terminate the agreement for the Services pursuant to the preceding paragraph, notify Customer thereof in advance; provided, however, that this shall not apply if there are urgent and compelling reasons.
 
-第9条 契約者は、その氏名若しくは商号又は住所若しくは所在地について変更があったときは、そのことを速やかに当社に届け出ていただきます。
+## Section 3. Suspension of Provision / Use
 
-2 前項に規定する変更の届出を怠ったことにより契約者が不利益を被った場合であっても、当社はその一切の責任を負わないものとします。
+### Article 14 (Suspension of Provision)
 
-### （ログ情報の取得等）
+1. NTTCom may suspend the provision of the Services in any of the following circumstances:
+(1) it is inevitable for maintenance and other works on NTTCom’s facilities;
+(2) a natural disaster, accident or other emergency occurs or is likely to occur;
+(3) the Services do not work correctly and it is extremely difficult to provide the Services on a continuous basis;
+(4) it becomes extremely difficult to provide the Services as a result of compulsory measures under laws; or
+(5) the provision of communications is ceased pursuant to Article 16 (Restrictions of the Provision).
+2. NTTCom shall, when suspending the provision of the Services pursuant to the preceding paragraph, notify Customer thereof in advance; provided, however, that this shall not apply if there are urgent and compelling reasons.
 
-第10条 契約者は、契約者の本サービスに係る通信ログ等の情報を収集及び加工し、本サービスを提供するために必要な設備（以下「本設備」といいます）に保存及び蓄積しこれを利用することに予め同意するものとします。
+### Article 15 (Suspension of Use)
 
-### （契約に基づく権利の譲渡）
+1. NTTCom may suspend Customer from using the Services without giving prior notice if Customer:
+(1) fails to pay or NTTCom considers Customer is likely to fail to pay, any fee or other amounts due; 
+(2) breaches the provisions of Article 19 (Customer’s Obligations); or
+(3) in addition to the preceding two paragraphs, engages in an act that breaches these Terms and causes or is likely to cause a significant hindrance to the performance of the NTTCom’s business relating to the Services.
+2. NTTCom shall, when suspending Customer from using the Services pursuant to the preceding paragraph, notify Customer in advance of the reason therefor and date(s) and period for such suspension; provided, however, that this shall not apply if there are urgent and compelling reasons.
 
-第11条 本サービスに係る利用権（契約者が本サービスに係る契約に基づいて本サービスの提供を受ける権利をいいます。以下同じとします。）を譲渡することができないものとします。
+### Article 16 (Restriction of Use)
+
+If a natural disaster, accident or other emergency occurs or is likely to occur and NTTCom deems it necessary, NTTCom may cease the provision of communications relating to the Services to give priority to communications on matters that are necessary for disaster prevention or relief efforts, for securing of transportation, communications or electric power supply, or for the maintenance of public order and those that are to be performed urgently for the public interest.
 
-### （契約者が行う本サービスに係る契約の解除）
+## Section 4. Compensation for Damage
 
-第12条 契約者は、本サービスに係る契約を解除しようとするときは、そのことをあらかじめ当社の指定する方法により当社に通知していただきます。
+### Article 17 (Indemnification)
 
-### （当社が行う本サービスに係る契約の解除）
+1. NTTCom shall not be liable for any loss or damage suffered by Customer, and Customer shall not make a claim for the damage against NTTCom.
+2. The provisions of the preceding paragraph shall not apply to any loss or damage suffered by Customer as a result of willful misconduct or gross negligence of NTTCom.
+3. Customer shall be responsible for resolving and hold harmless NTTCom against, any loss or damage caused by Customer to a third party as a result of the use of the Services.
+4. NTTCom shall not be responsible in any way to Customer for any results caused as a result of the use of the Services whether such results are caused by failure or defect in the equipment necessary to provide the Services, unauthorized access by a third party, commercial business dispute, compulsory measures under laws or any other reason.
+5. If it becomes necessary to implement modification or alteration of Customer’s own devices or equipment (the “Modifications” in this Article) as a result of amendment of these Terms, NTTCom shall not pay any costs required for such Modifications.
 
-第13条 当社は、契約者が次のいずれかに該当するときは、本サービスに係る契約の解除をすることがあります。
+## Section 5. Miscellaneous
 
-（1）第 15 条（利用停止）の規定により本サービスの利用を停止された契約者が、なおその事実を解消しないとき。
+### Article 18 (Discontinuance of the Service)
 
-（2）当社に申し出た内容に虚偽の内容を記載したとき。
+1. NTTCom may discontinue the Services in part or in whole without giving notice to Customer.
+2. If the Services are discontinued in part or in whole pursuant to the preceding paragraph, the agreement relating to the Services so discontinued in part or in whole shall be terminated.
+3. NTTCom shall not be liable in any way for any loss or damage suffered by Customer as a result of discontinuance of the Services in part or in whole.
+4. NTTCom may assign to a third party its business relating to the Services in part or in whole without giving notice to Customer.  In such case, Customer shall agree that NTTCom will assign rights regarding these Terms to a person to whom NTTCom assigns such business.
 
-（3）法令等（外国法等を含みます。以下同じとします。）に基づく強制的な処分により本サービスを提供することが著しく困難となったとき。
+### Article 19 (Customer’s Obligations)
 
-（4）その他、本規約に違反したとき。
+1. Customer shall agree to comply with the following:
+(1) Customer will not license or sublicense the Services to a third party or otherwise engage in an act that allows a third party to use the Services;
+(2) Customer will not engage in an act that infringes copyright of other rights of NTTCom or a third party;
+(3) Customer will not manipulate or delete the data of NTTCom or a third party that it can access using the Services;
+(4) Customer will not use the Services, while pretending to be a third party;
+(5) Customer will not develop any application for the Services using an API key other than the one issued under this agreement;
+(6) Customer will not intentionally transmit or distribute malicious computer program(s);
+(7) Customer will not engage in an act that causes a hindrance to the use or operation of NTTCom’s equipment through unauthorized access to such equipment;
+(8) Customer will not collect personal information of a third party without consent of the third party or by fraudulent means;
+(9) Customert is not a person who is prohibited from exporting or providing technology under the laws of Japan;
+(10) Customer will not utilize the Services to develop, manufacture or use weapons of mass destruction or conventional weapons, including nuclear weapons defined in export-related laws of Japan;
+(11) it will comply with export-related laws of Japan, and will not allow the Services (including technology used in the Services; the same applies in this item) or its services provided through the use of the Services to be utilized by any NTTCom, resident, citizen, denied person or denied NTTCom of embargoed countries or sanctioned countries without permission of the competent government authority;
+(12) it will not engage in any other act that breaches laws, these Terms or public interest, hinders the operation of the services, damages the credibility of NTTCom or causes disadvantage to NTTCom or a third party; or
+(13) it will not engage in any other act that is likely to fall under or is similar to any of the preceding items.
+2. If Customer damages NTTCom’s equipment or other devices for the Services in breach of the preceding paragraph, Customer shall pay the expenses necessary for repair or other works by the date designated by NTTCom.
+3. NTTCom shall not be liable in any way for any loss or damage suffered by Customer or other person as a result of breach of Customer’s obligations under this Article.
+4. Customer shall be responsible for managing the API Key for the Services, and shall not disclose the content thereof to a third party without good reasons.
+5. If Customer causes or NTTCom deems that Customer is likely to cause, a significant hindrance to the performance of the NTTCom’s business relating to the Services or NTTCom’s equipment in breach of the preceding paragraph, NTTCom may change or remove the API Key or take other necessary measures separately determined by NTTCom.
+6. NTTCom shall, when taking necessary measures pursuant to the preceding paragraph, notify Customer in advance of the reason therefor and its intention to take other necessary measures; provided, however, that this shall not apply if there are urgent and compelling reasons.
 
-3 当社は、前項の規定により、本サービスに係る契約を解除しようとするときは、あらかじめ契約者にそのことを通知します。ただし、緊急やむを得ない場合は、この限りでありません。
+### Article 20 (Notice to Customer)
 
-## 第3章 利用中止等
+1. Notice to Customer may, at the discretion of NTTCom, be given in any of the following manner.
+(1) Notice shall be given by posting on NTTCom’s website.  In such case, notice shall be deemed to have been given to Customer upon posting the same.
+(2) Notice shall be given by sending an email to Customer’s email address provided to NTTCom by Customer when subscribing for the Services or thereafter.  In such case, notice shall be deemed to have been given to Customer when it reaches the telecommunication equipment which manages Customer’s email address.
+(3) Otherwise, notice shall be given in the manner that NTTCom deems appropriate.  In such case, the notice shall be deemed to have been given to Customer at the time designated by NTTCom in such notice.
+2. If written notice is required under these Terms or applicable laws, Customer shall agree in advance that NTTCom may give notice in accordance with each item of the preceding paragraph in lieu of written notice.
 
-### （利用中止） 
+### Article 21 (NTTCom’s Intellectual Property Rights)
 
-第14条 当社は、次の場合には、本サービスの利用を中止することがあります。
+1. Copyright (including rights specified in Articles 27 and 28 of the Copyright Act) and moral rights of an author (meaning rights specified in Articles 18 to 20 of the Copyright Act) to and in goods and materials lent or presented by NTTCom to Customer in relation to the provision of the Services (including these Terms, specifications for the Services and instruction manuals; the same applies in this Article) as well as any and all know-how and other intellectual property rights contained in those materials shall belong to NTTCom or person(s) designated by NTTCom.
+2. Customer shall treat the goods and materials referred to in the preceding paragraph as follows:
+(1) it shall not use them for purposes other than using the Services;
+(2) it shall not reproduce, modify or edit them;
+(3) it shall not lend, assign or provide as collateral them to a third party whether or not for profit; or
+(4) it shall not remove or change copyright statement required by NTTCom or person(s) designated by NTTCom.
+3. The provisions of this Article shall survive termination of the agreement for the Services.
 
-（1）当社の設備の保守上又は工事上やむを得ないとき。
+### Article 22 (Handling of Personal Information)
 
-（2）天災、事変、その他の非常事態が発生し、又は発生するおそれがあるとき。
+1. Handling of personal information about Customer obtained by NTTCom in providing the Services (“Personal Information” in this Article) shall be as separately determined by NTTCom.
+2. If Customer makes a request for Personal Information held by NTTCom, NTTCom shall, in principle, provide access to such Personal Information.
+3. If Customer makes a request pursuant to the preceding paragraph and is given access to Personal Information (including giving notice if the NTTCom has no such Personal Information), Customer shall be required to pay the charge separately determined by NTTCom.
 
-（3）本サービスが正常に動作せず、本サービスを継続して提供することが著しく困難であるとき。
+### Article 23 (Court of Jurisdiction)
 
-（4）法令等に基づく強制的な処分により本サービスを提供することが著しく困難となったとき。
+The Tokyo District Court shall have exclusive jurisdiction in first instance over any dispute arising in connection with the Services between Customer and NTTCom.
 
-（5）第 16 条（利用の制限）の規定により、通信利用を中止するとき。 
+### Article 24 (Governing Law)
 
-2 当社は、前項の規定により本サービスの利用を中止するときは、あらかじめ契約者にそのことを通知します。ただし、緊急やむを得ない場合は、この限りでありません。
+These Terms shall be governed by the laws of Japan.
 
-### （利用停止）
+### Article 25 (No Warranty)
 
-第15条 当社は、契約者が次のいずれかに該当するときは、事前に通知することなく本サービスの利用を停止することがあります。
+1. NTTCom shall not make any warranties of any kind as to the Services including the following:
+(1) the content of the Services will satisfy Customer’s requirements or interest or be useful;
+(2) the Services and any information and contents available/supplied in the Services (the “Supplied Information”) are complete, accurate, latest, useful, appropriate or reliable;
+(3) the content of the Supplied Information is effective or safe to any Customer;
+(4) any activity conducted by Customer using the Services will be fit for Customer’s particular purpose;
+(5) the Services will be provided in a timely manner to Customer;
+(6) there will be no defects in the Services;
+(7) the Services will not be suspended, ceased or discontinued;
+(8) there will be no failures or errors in the Services;
+(9) the use of the Services will not affect any application or data in the device used; or
+(10) the Services or software or other materials for the Services will not infringe third party rights.
+2. NTTCom shall not warrant or be obliged to ensure that the Services can be used on any model of a device voluntarily used by Customer.
+3. NTTCom shall not be liable in any way for any damage caused to Customer’s device(s) or data by or in relation to the use of the Services.
+4. NTTCom’s security measures against any virus contained in a linked website or a transmission route including the provision of the Services or attack from the outside shall only be equivalent to those provided by other competitors at the relevant time.
 
-（1）料金その他の債務について、支払期日を経過してもなお支払わないとき又は支払いを怠るおそれがあると当社が判断したとき。
+## Supplemental Provisions
 
-（2）第19条（契約者の義務）の規定に違反したとき。
+### (Effective Date)
 
-（3）前2号のほか、本規約に反する行為であって、本サービスに関する当社の業務の遂行に著しい支障を及ぼし、又は及ぼすおそれがある行為をしたとき。
+These terms shall take affect from December 5, 2013.
 
-2 当社は、前項の規定により本サービスの利用を停止するときは、あらかじめその理由、利用停止をする日及び期間を契約者に通知します。 ただし、緊急やむを得ない場合は、この限りでありません。
+### (Date of Revision)
 
-### （利用の制限）
-
-第16条 当社は、天災、事変その他の非常事態が発生し、又は発生するおそれがある場合であって、当社が必要と認めたときは、災害の予防若しくは救援、交通、通信若しくは電力の供給の確保又は秩序の維持のために必要な事項を内容とする通信及び公共の 利益のため緊急を要する事項を内容とする通信を優先的に取り扱うため、本サービスに係る通信の利用を中止する措置をとることがあります。
-
-## 第4章 損害賠償等
-
-### （免責）
-
-第17条 当社は契約者に係る一切の損害を賠償しないものとし、契約者は当社にその損害についての請求をしないものとします。
-
-2 当社の故意・重過失により契約者に損害が生じた場合は、前項の規定は適用しないものとします。
-
-3 契約者は、本サービスの利用により第三者に対し損害を与えた場合、自己の責任でこれを解決し、当社にいかなる責任も負担させないものとします。
-
-4 当社は、本サービスの利用により生じる結果について、契約者に対し、本サービスの提供に必要な設備の不具合、故障、第三者による不正侵入、商取引上の紛争、法令等に基づく強制的な処分又はその他の原因を問わず、いかなる責任も負担しないものとします。
-
-5 当社は、本規約の変更等により自営端末設備等の改造又は変更（以下この条において「改造等」といいます。）を要することとなる場合であっても、その改造等に要する費用については負担しません。
-
-## 第5章 雑則
-
-### （本サービスの廃止等）
-
-第18条 当社は、契約者に通知することなく本サービスの一部又は全部を廃止することがあります。
-
-2 前項の規定による本サービスの一部または全部の廃止があったときは、本サービスの一部又は全部に係る契約は終了するものとします。
-
-3 本サービスの一部又は全部の廃止により、契約者が何らかの損害を被った場合においても、当社は一切の責任を負いません。
-
-4 当社は、契約者に通知することなく、本サービスの一部又は全部に係る事業を第三者に譲渡することがあります。この場合において、契約者は、当社が当該事業を譲渡する者に本規約に関する諸権利を譲渡することに同意するものとします。
-
-### （契約者の義務）
-
-第19条 契約者は、次のことを守っていただきます。
-
-（1）本サービスの第三者への利用許諾、再許諾、その他第三者が本サービスを利用可能となるような行為をしないこと。
-
-（2）当社又は第三者の著作権その他の権利を侵害する行為をしないこと。
-
-（3）本サービスによりアクセス可能な当社又は第三者のデータを改ざん、消去する行為をしないこと。
-
-（4）第三者になりすまして本サービスを利用する行為をしないこと。
-
-（5）本契約に基づき発行されたAPIキー以外を利用して本サービスに係るアプリケーションの開発等を行わないこと。
-
-（6）意図的に有害なコンピュータプログラム等を送信しないこと。
-
-（7）当社の設備に無権限でアクセスし、その利用又は運営に支障を与える行為をしないこと。
-
-（8）本人の同意を得ることなく、又は詐欺的な手段により第三者の個人情報を収集する行為をしないこと。
-
-（9）契約者が日本国法により輸出または技術の提供を禁止されている者ではないこと。
-
-（10）本サービスを、日本国の輸出関連法規に定める核兵器を含む大量破壊兵器若しくは通常兵器等の開発、製造または使用のために利用しないこと。
-
-（11）日本国の輸出関連法規を遵守し、本サービス（本サービスに使用されている技術を含みます。以下、本号において同じとします。）または本サービスを利用して提供する契約者のサービスを監督官庁の許可なしに禁輸国又は貿易制裁国の企業、居住者、国民、 取引禁止者若しくは取引禁止企業に対し利用させないこと。
-
-（12）その他、法令、本規約若しくは公序良俗に反する行為、サービスの運営を妨害する行為、当社の信用を毀損する行為、又は当社 若しくは第三者に不利益を与える行為をしないこと。
-
-（13）その他前各号に該当する恐れのある行為又はこれに類する行為を行わないこと。
-
-2 契約者は、前項の規定に違反して本サービスに係る当社の設備等を毀損したときには、当社が指定する期日までにその修繕その他の工事等に必要な費用を支払っていただきます。
-
-3 当社は、契約者の本条に規定する義務違反により契約者又はその他の者に発生する損害について一切の責任を負わないものとします。
-
-4 契約者は、本サービスに係るAPIキーを管理する責任を負うものとし、その内容をみだりに第三者に知らせてはなりません。
-
-5 契約者が前項の規定に違反して本サービスに係る当社の業務遂行又は当社の設備に著しい支障を及ぼし、又は及ぼすおそれがあると当社が判断した場合、当社はAPIキーの変更又は削除その他当社が別に定める必要な措置をとる場合があります。
-
-6 当社は、前項の規定により必要な措置をとる場合は、あらかじめその理由、その他必要な措置をとる旨を契約者に通知します。ただし、緊急やむを得ない場合はこの限りでありません。
-
-### （契約者に対する通知）
-
-第20条 契約者に対する通知は、当社の判断により、次のいずれかの方法で行うことができるものとします。
-
-（1）当社の Web サイト上に掲載して行います。この場合は、掲載された時をもって、契約者に対する通知が完了したものとみなします。
-
-（2）契約者が利用申込みの際又はその後に当社に届け出た契約者の電子メールアドレス宛に電子メールを送信して行います。この場合は、契約者の電子メールアドレスを管理する電気通信設備に到達した時をもって、契約者に対する通知が完了したものとみなします。
-
-（3）その他、当社が適切と判断する方法で行います。この場合は、当該通知の中で当社が指定した時をもって、契約者に対する当該通知が完了したものとみなします。
-
-2 本規約又は関連法令において書面による通知手続が求められている場合であっても、契約者は、当社が前項各号の手続をもって書面による通知に代えることができることに予め同意するものとします。
-
-### （当社の知的所有権）
-
-第21条 本サービスの提供に関連して当社が契約者に貸与又は提示する物品（本規約、本サービスの仕様書、取扱マニュアル等を含みます。以下、本条において同じとします。）に関する著作権（著作権法第 27 条及び第 28 条の権利を含みます。）及び著作者人格権 （著作権法第 18 条から第 20 条の権利をいいます。）並びにそれに含まれるノウハウ等一切の知的財産権は当社又は当社の指定する者に帰属するものとします。
-
-2 契約者は前項のほか、次のとおり物品を取り扱うものとします。
-
-（1）本サービスの利用目的以外に使用しないこと。
-
-（2）複製・改変・編集等を行わないこと。
-
-（3）営利目的の有無を問わず、第三者に貸与・譲渡・担保設定等しないこと。
-
-（4）当社又は当社の指定する者が表示した著作権表示を削除又は変更しないこと。
-
-3 本条の規定は、本サービスに係る契約の終了後も効力を有するものとします。
-
-### （個人情報の取扱い）
-
-第22条 当社は、本サービスの提供にあたり、当社が取得する契約者に係る個人情報（以下本条において「個人情報」といいます。）の 取扱いについては、当社が別に定めるところによります。
-
-2 当社は、当社が保有している個人情報について契約者から開示の請求があったときは、原則として開示をします。
-
-3 契約者は、前項の請求をし、その個人情報の開示（該当個人情報が存在しない場合に、その旨を知らせることを含みます。）を受けたときは、当社が別に定める手数料の支払いを要します。
-
-### （管轄裁判所）
-
-第23条 契約者と当社との間で本サービスに関して紛争が生じた場合、東京地方裁判所を第一審の専属的合意管轄裁判所とします。
-
-### （準拠法）
-
-第24条 本規約に関する準拠法は日本法とします。
-
-### （非保証）
-
-第25条 当社は、以下の内容を含め、本サービスについて一切の保証を行うものではありません。
-
-（１）本サービスの内容が契約者の要求や趣向に合致すること又は有益であること
-
-（２）本サービスおよび本サービスにつき表示・提供する一切の情報およびコンテンツ(以下、「提供情報等」)が、完全・正確であること、最新であること、有用であること、適切であること又は信頼できるものであること
-
-（３）提供情報等はいかなる契約者に対しても、効果的又は安全な内容であること
-
-（４）契約者が本サービスを利用して行った行為が契約者の特定の目的に適合すること
-
-（５）本サービスが契約者にとってタイムリーに提供されること
-
-（６）本サービスにいかなる瑕疵もないこと
-
-（７）本サービスが中断、中止、廃止されないこと
-
-（８）本サービスにおいていかなる不具合やエラーも発生しないこと
-
-（９）本サービスを利用する事によって、利用する端末内のアプリケーションやデータ等に影響を及ぼさないこと
-
-（10）本サービスまたは本サービス係るソフトウェア等が第三者の権利を侵害しないこと
-
-2 当社は、契約者の任意の利用端末の機種等すべてに関して、本サービスの利用が可能であることを保証するものではなく､また、利用を可能とする対応の義務を負うものではありません。
-
-3 当社は、本サービスの利用に起因又は関連して契約者の利用端末およびデータに発生した損害について、一切責任を負わないものとします。
-
-4 当社の、本サービスの提供を含むリンク先若しくは送信ルートに含まれるウイルス又は外部からの攻撃に対するセキュリティ対策は、その時点における同業他社と同等レベルのものに限られます。
- 
-## 附則
-
-### (実施期日)
-
-この規約は、平成25年12月05日より実施します。
-
-### (改定期日)
-
-この規約は、平成27年10月14日より実施します。
-
-### (改定期日)
-
-この規約は、平成29年09月07日より実施します。
+These revised terms shall take effect from September 7, 2017.
