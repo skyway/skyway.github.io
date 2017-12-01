@@ -106,7 +106,7 @@ Enterprise Cloud WebRTC Platform SkyWay Community Edition（以下、SkyWay）�
 
 ## 第3章 利用中止等
 
-### （利用中止） 
+### （利用中止）
 
 第14条 当社は、次の場合には、本サービスの利用を中止することがあります。
 
