@@ -40,6 +40,13 @@ $ npm install & npm start
 $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
+## SDKを利用する前に
+
+各SDKを利用する際に役立つ、共通の概念や通信モデルについて、ドキュメントを公開しています。  
+はじめにお読みください。
+
+[SkyWayの通信モデル](./communication-model.html){: .btn .btn-primary }
+
 ## SDK
 
 Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDKを用意しています。
@@ -169,7 +176,17 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
 開発に役立つドキュメントを公開しています。
 
 <div id="docs-div" class="row row-for-slim-card">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">SkyWayの通信モデル</h3>
+                <p class="card-text">各SDKを利用する際に役立つ、共通の概念や通信モデルについて、ドキュメントを公開しています。</p>
+                <small class="text-muted">2017年11月28日</small>
+                <a href="./communication-model.html" class="btn btn-outline-primary">SkyWayの通信モデル</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">新SDKへの移行方法</h3>
@@ -180,7 +197,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-sm-6 col-lg-4">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">WebRTCセキュリティレポート</h3>
