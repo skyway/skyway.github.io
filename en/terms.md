@@ -8,7 +8,7 @@ breadcrumb: [en/index.md, en/signup.md]
 - TOC
 {:toc}
 
-# Terms and Conditions
+# Terms of Service
 To use Enterprise Cloud WebRTC Platform Community Edition (“ECLWebRTC”), you must agree to these terms of service.
 
 ## Section 1. General Provisions
@@ -33,6 +33,7 @@ For the purpose of these Terms, the following words shall have the following mea
 
 |Term|Definition|
 |:--|:--|
+|Services|services provided by NTTCom that enable Customer to easily use WebRTC by offering functions such as signaling servers and session management.|
 |API Key|an identifier provided by NTTCom to Customer when providing the Services|
 
 ## Section 2. Agreement

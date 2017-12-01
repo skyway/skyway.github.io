@@ -181,7 +181,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <div class="card-body">
                 <h3 class="card-title">SkyWayの通信モデル</h3>
                 <p class="card-text">各SDKを利用する際に役立つ、共通の概念や通信モデルについて、ドキュメントを公開しています。</p>
-                <small class="text-muted">2017年11月28日</small>
+                <small class="text-muted">2017年12月4日</small>
                 <a href="./communication-model.html" class="btn btn-outline-primary">SkyWayの通信モデル</a>
             </div>
         </div>
