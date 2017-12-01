@@ -173,7 +173,7 @@ Documents useful for development.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">How to migrate to ECLWebRTC</h3>
-                <p class="card-text">SkyWay will be terminated as of March 31st, 2018. Please migrate from SkyWay to ECLWebRTC using this document.</p>
+                <p class="card-text">SkyWay will be terminated as of March, 2018. Please migrate from SkyWay to ECLWebRTC using this document.</p>
                 <small class="text-muted">Sep 7th, 2017</small>
                 <a href="./migration.html" class="btn btn-outline-primary">Migration</a>
             </div>

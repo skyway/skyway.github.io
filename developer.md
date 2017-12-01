@@ -190,7 +190,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">新SDKへの移行方法</h3>
-                <p class="card-text">トライアル版のSkyWayは2018年3月31日をもって提供を終了します。
+                <p class="card-text">トライアル版のSkyWayは2018年3月をもって提供を終了します。
                   2017年9月7日に提供を開始した新バージョンのSDKへの移行をお願いします。</p>
                 <small class="text-muted">2017年9月5日</small>
                 <a href="./migration.html" class="btn btn-outline-primary">マイグレーション</a>
