@@ -32,6 +32,12 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 ## SDKのダウンロード
 {: #sdkdownload }
 
+### npmを利用する場合
+
+```
+$ npm install skyway-js
+```
+
 ### CDNを利用する場合
 
 *HTML*

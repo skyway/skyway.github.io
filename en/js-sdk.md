@@ -31,6 +31,12 @@ You can try [demonstration of the completed application](https://webrtc.ecl.ntt.
 ## Download SDK
 {: #sdkdownload }
 
+### Case: Using npm
+
+```
+$ npm install skyway-js
+```
+
 ### Case: Using CDN
 
 *HTML*
