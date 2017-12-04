@@ -33,8 +33,22 @@ You can try [demonstration of the completed application](https://webrtc.ecl.ntt.
 
 ### Case: Using npm
 
+With npm installed, run
+
 ```
-$ npm install skyway-js
+$ npm install -s skyway-js
+```
+
+You can then use require or import to import the package.
+
+```js
+// require
+const Peer = require('skyway-js');
+const peer = new Peer({key: 'your-api-key'});
+ 
+// import
+import Peer from 'skyway-js';
+const peer = new Peer({key: 'your-api-key'});
 ```
 
 ### Case: Using CDN
