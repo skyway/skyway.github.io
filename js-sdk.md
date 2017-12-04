@@ -34,8 +34,22 @@ JavaScript SDKの基本機能を利用して、1:1のシンプルなビデオ通
 
 ### npmを利用する場合
 
+npmをインストールしコマンドを実行
+
 ```
-$ npm install skyway-js
+$ npm install -s skyway-js
+```
+
+requireまたはimportを利用してパッケージをインポート
+
+```js
+// require
+const Peer = require('skyway-js');
+const peer = new Peer({key: 'your-api-key'});
+ 
+// import
+import Peer from 'skyway-js';
+const peer = new Peer({key: 'your-api-key'});
 ```
 
 ### CDNを利用する場合
