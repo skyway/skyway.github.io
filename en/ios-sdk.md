@@ -29,12 +29,12 @@ If you want to try the completed application, [download the source codes](https:
 
 [Continue the turorial](./ios-tutorial.html){: .btn .btn-primary }
 
-## Download DSK
+## Download SDK
 {: #sdkdownload }
 
 ### Case: Using CocoaPods
 
-Add the contents to the Prodfile.
+Add the contents to the Podfile.
 
 *Podfile*
 {: .lang }
