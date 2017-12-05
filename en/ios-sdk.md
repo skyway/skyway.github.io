@@ -34,7 +34,7 @@ If you want to try the completed application, [download the source codes](https:
 
 ### Case: Using CocoaPods
 
-Add the contents to the Prodfile.
+Add the contents to the Podfile.
 
 *Podfile*
 {: .lang }
