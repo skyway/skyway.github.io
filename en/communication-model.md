@@ -8,54 +8,54 @@ breadcrumb: [en/index.md, en/developer.md]
 - TOC
 {:toc}
 
-# ECLWebRTCの通信モデル
+# Communication model of ECLWebRTC
 
-ECLWebRTCを利用するに当たり、知っておくべき概念を説明します。ECLWebRTCでは複数のSDKが提供されていますが、関数名は同一 [^1]であるため、本記事の内容はどのSDKにも活用できます。
+This article describes basic concept of ECLWebRTC. ECLWebRTC provides several SDKs. The function name described in this article is based on JavaScript SDK, but the name is basically same[^1] among the other SDKs, so this article basically applies to all SDKs.
 
-[^1]: パラメタ、クラス名などの微差はあります
+[^1]: Subtle differences among parameters and class names.
 
-## Peerについて
+## Peer
 
-ECLWebRTCを利用して何らかのサービスを作る場合、最初にPeer(ピア)というインスタンスを作成します。Peerは、ECLWebRTCのシグナリングサーバや、他のクライアントとの接続を管理するエージェントです。たとえば、1:1で双方向でやり取りするビデオチャットでは、発信側と着信側で2つのエージェントが音声・映像を送受信します。
+When you develop some services, You need to create `Peer` instance at first. Peer is kind of an agent which manages the connection to signaling server and the connections between other clients. For example, in 1-to-1 video chat application, each calling party and called party sends and receives media such as audio and video.
 
-### Peer IDについて
+### Peer ID
 
-ECLWebRTCで、Peerを作成(`new Peer`)すると、作成したPeerがシグナリングサーバへ接続します。接続が成功すると、`Peer.open`イベントの発火と共に、ECLWebRTCサーバ側がランダムに作成するPeer IDという値を取得できます。Peer IDはPeerを一意に識別するためのIDです。接続が失敗した場合は`Peer.error`イベントが発火します。
+When creating a new Peer(`new Peer`), the peer connects to ECLWebRTC's signaling server. When the connection succeeds, you can obtain the Peer ID with the ECLWebRTC server creates randomly and will be notified by `Peer.open` event. The Peer ID is used to identify the peer. If the connection establishment to ECLWebRTC's server, the `Peer.error` event will fire.
 
-Peer IDはECLWebRTCサーバ側が作成するのみではなく、開発者自身が独自に指定可能(`new Peer('独自のPeer ID')`)です。
+The peer ID is not only created by ECLWebRTC's signaling server, but also assigned by developers like `new Peer('your own Peer ID')`.
 
-## 2つの通信モデル
+## 2 Communication Models
 
-ECLWebRTCを利用してクライアント間の接続を管理するモデルは大きく2つあります。1つが電話をベースにしたモデル、もう1つはルームをベースにしたモデルです。
+There are 2 models for managing connections between clients; one is based on Telephone model, and the other one is based on Room model.
 
-### 1. 電話モデル
+### 1. Telephone Model
 
-携帯電話などで通話する場合と同様に、1:1で通信をするモデルです。通信を開始する場合には相手のPeer IDを何らかの手段で知る必要があります。
+Like chatting via cellphone, the telephone model provides 1:1 communication. When initiating communication, a destination Peer ID should be obtained in some way.
 
-#### 音声・映像の場合(メディアチャネル)
+#### Media Channel (Audio and Video)
 
-相手側に発信する(`Peer.call()`)場合には、電話番号の代わりにPeer IDを指定します。着信すると、`call`イベントが着信側で発火します。そのcall要求に対して`answer()`を呼ぶことで、通信が確立します。発信者・着信者ともに、音声・映像は`stream`イベントの発火と共に取得できます。
+When calling to opponent(`Peer.call()`), you need to specify PeerID like phone number. The `call` event will fire on incoming call. To answer the call, you need to call `answer()`. Then, connection will be established. Audio and video media streams can be acquired with `stream` event.
 
-#### データの場合(データチャネル)
+#### Data Channel
 
-音声や映像ではなく、データのみをやり取りしたい場合は、`Peer.connect()`を利用します。接続が確立すると`connection`イベントが発火します。
+If you want to send and receive data, `Peer.connect()` is used to establish Data Channel. After connection established, `connection` event will be fired.
 
-メディアチャネルと異なり、データチャネルでは`answer()`を明示的に呼ぶ必要はなく、自動的に接続が確立されます。
+Unlike Media Channel, `answer()` needs not be called explicitly, but the connection is established automatically.
 
-### 2. ルームモデル
+### 2. Room Model
 
-同じルームに存在する全てのPeerで会話[^2]するモデルです。
+Like chatting in the same room, Peers talks with the other peers[^2] in Room model.
 
-Peerはルーム名を指定してルームに参加(`peer.joinRoom(ルーム名など)`)します。他の参加者から音声/映像などのメディアを受信した場合は、`Room.stream`イベントが発火し、メディア通信が確立されます。ルームから退出する場合は、`Room.close()`を利用します。なお、`Room.close()`はルームから退出するのみで、ルーム全体が削除されるわけではありません(他の参加者がルームに参加していた場合に、それらの参加社の通信が切断されるわけではありません) 。全ての参加者がルームから退出すると、ルームが削除されます。
+At first Peer specifies the room name and join the room(`peer.joinRoom()`). Then, if the peer receives audio and video media stream, `Room.stream` will be fired. If the Peer wants to leave the room, `Room.close()` is used. Note `Room.close()` doesn't remove the room itself; If other peers are joining the room, those peers don't leave and their media connections continue. If all of the peers in the room leave, the room is removed. 
 
-ルームの名前空間はAPIキー毎に独立しています。つまり、AというAPIキーとBというAPIキーがあった場合に、どちらも同じhogeというルーム名を作成したとしても、2つのルーム名は別個として扱われます。Aのルームの参加者と、Bのルームの参加者同士での通信は確立しません。
+Each API key has each namespace. Namely, if there are 2 API keys(A and B) and if the same room name is created by both API key, 2 rooms are treated as separate room. The peers in the room of API key A and B can't establish connection, if the API key is different.
 
-なお、ルームの実現方式は、フルメッシュとSFUという方式の2種類があります。これらの方式の詳細は、[こちら](https://webrtc.ecl.ntt.com/sfu.html)で確認できます。
+You can choose `Full mesh` room and `SFU` room when using room. See details from [here](https://webrtc.ecl.ntt.com/en/sfu.html).
 
-[^2]:  Peerは音声や映像を送受信する一方で、受信専用で動作することも可能なため、発言せずに聞き取りに専念するような通信も実現できます。
+[^2]: Peers can not only send and receive media stream, but only receive media stream.
 
-## メディアストリームの扱いについて
+## Media Stream
 
-ECLWebRTCで音声や映像を通信相手と送受信したい場合、[メディアストリーム(MediaStream)](https://www.w3.org/TR/mediacapture-streams/#mediastream){:target="_blank"}を利用します。 メディアストリームの作成[^3]・加工は、ECLWebRTCのSDKでは提供しておらず、あくまで入力時にECLWebRTCに渡す/出力時にECLWebRTC SDKから取得するのみになります。
+With ECLWebRTC, if the peer sends and receives the audio and video, [MediaStream](https://www.w3.org/TR/mediacapture-streams/#mediastream){:target="_blank"} is used. The way of generating or modifying media stream[^3] isn't provided by ECLWebRTC. You can only pass the media stream to ECLWebRTC's SDK as input and get the media stream from ECLWebRTC's SDK as output.
 
-[^3]: iOS/Android SDKは、SDK内部で`Navigator.getUserMedia`を実装しています。また、JavaScript向けの[ECLWebRTC-ScreenShare](https://github.com/ECLWebRTC/ECLWebRTC-screenshare){:target="_blank"}は、スクリーン共有機能を利用するためのgetUserMedia関数のラッパー機能を提供しています。
+[^3]: iOS/Android SDK implements `Navigator.getUserMedia` internally. Also, [ECLWebRTC-ScreenShare](https://github.com/ECLWebRTC/ECLWebRTC-screenshare){:target="_blank"} is provided as a wrapper of `getUserMedia` to share a screen.
