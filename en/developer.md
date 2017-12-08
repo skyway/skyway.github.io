@@ -40,6 +40,12 @@ Start a developing a fully functioning app by reading the tutorials and API refe
 $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 ```
 
+## Basic Concept
+
+This article describes basic concept of ECLWebRTC. Recommended for developers interested in knowing about the communication model of ECLWebRTC.
+
+[Communication Model](./communication-model.html){: .btn .btn-primary }
+
 ## SDK
 
 There are SDKs for Web browsers, iOS, Android and IoT devices.
@@ -169,7 +175,17 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
 Documents useful for development.
 
 <div id="docs-div" class="row row-for-slim-card">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Communication Model of ECLWebRTC</h3>
+                <p class="card-text">This article describes basic concept of ECLWebRTC. Recommended for developers interested in knowing about the communication model of ECLWebRTC.</p>
+                <small class="text-muted">Dec 8th, 2017</small>
+                <a href="./communication-model.html" class="btn btn-outline-primary">Communication Model</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">How to migrate to ECLWebRTC</h3>
@@ -179,7 +195,7 @@ Documents useful for development.
             </div>
         </div>
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 col-lg-4">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">WebRTC Security report</h3>
@@ -191,7 +207,7 @@ Documents useful for development.
     </div>
 </div>
 
-## サポート
+## Support
 
 Provides developer community and support ticket useful for development.
 
