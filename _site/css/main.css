@@ -2731,10 +2731,10 @@ html { position: relative; min-height: 100%; }
 #main .tab-pane .mini-headline-text { line-height: 1.2; margin-bottom: 1rem; }
 #main .tab-pane .allnewslink { position: absolute; text-align: center; width: 100%; bottom: 0; }
 #main .badge-community, #main .badge-enterprise { width: 85px; display: inline-block; }
-#main .badge-community { color: #fff; background-color: rgba(0, 67, 134, 0.7); }
-#main .badge-community[href]:focus, #main .badge-community[href]:hover { color: #fff; text-decoration: none; background-color: rgba(0, 42, 83, 0.7); }
-#main .badge-enterprise { color: #fff; background-color: rgba(134, 142, 150, 0.7); }
-#main .badge-enterprise[href]:focus, #main .badge-enterprise[href]:hover { color: #fff; text-decoration: none; background-color: rgba(108, 117, 125, 0.7); }
+#main .badge-community { color: #fff; background-color: #1983ec; }
+#main .badge-community[href]:focus, #main .badge-community[href]:hover { color: #fff; text-decoration: none; background-color: #1069c3; }
+#main .badge-enterprise { color: #fff; background-color: #0d4379; }
+#main .badge-enterprise[href]:focus, #main .badge-enterprise[href]:hover { color: #fff; text-decoration: none; background-color: #082a4b; }
 @media (max-width: 575px) { #main #login-div .card-body { padding: 1rem; } }
 @media (max-width: 575px) { #main #accordion .card-body { padding: 0.75rem; } }
 @media (max-width: 575px) { #main .pricing-sample-table { font-size: 0.875rem; }
