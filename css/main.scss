@@ -546,10 +546,10 @@ html {
     display: inline-block;
   }
   .badge-community {
-    @include badge-variant(rgba($color-base, 0.7));
+    @include badge-variant(lighten(desaturate($color-base, 15%), 25%));
   }
   .badge-enterprise {
-    @include badge-variant(rgba($color-sub, 0.7));
+    @include badge-variant(desaturate($color-base, 20%));
   }
 
   // login.html
