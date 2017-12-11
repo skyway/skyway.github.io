@@ -9,17 +9,17 @@ breadcrumb: [en/index.md, en/developer.md]
 
 ## Tutorial
 
-By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
-The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
+In the tutorial, you will create a one-on-one video chat application using the basic features of the Android SDK.
+The app will have the ability to display a list of users currently connected to the server, to select a conversation partner, to call, answer and hang up a one-to-one video conversation.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided as sample codes.
-If you want to try the completed application, [download the source codes](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided in the samples.
+If you want to try the completed app, [download the source codes](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
 
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
-    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to start a video chat session between two devices">
+  <figcaption class="figure-caption">Use ECLWebRTC to start a video chat session between two devices</figcaption>
 </figure>
 
 <figure class="figure">
@@ -43,7 +43,7 @@ If you want to try the completed application, [download the source codes](https:
 
 Android 4.2+ (API Level 17+)
 
-## API Refference
+## API Reference
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
@@ -54,11 +54,9 @@ Android 4.2+ (API Level 17+)
   </div>
 </div>
 
-Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
+List of changes between the (old) SkyWay SDK and the new ECLWebRTC SDK   [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
 
 ## Sample Code
-
-Sample code is open to public.
 
 <div class="row">
   <div class="col-md-9 col-lg-7 col-xl-6">

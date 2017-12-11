@@ -9,15 +9,15 @@ breadcrumb: [en/index.md, en/developer.md]
 
 ## Turorial
 
-By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
-The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
+In the tutorial, you will create a one-on-one video chat web-app using the basic features of the JS SDK.
+The web-app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-You can try [demonstration of the completed application](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){: target="_blank"}.
+You can try it out [here](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){: target="_blank"}.
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
-    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to start a video chat session between two devices">
+  <figcaption class="figure-caption">Use ECLWebRTC to start a video chat session between two devices</figcaption>
 </figure>
 
 <figure class="figure">
@@ -28,10 +28,10 @@ You can try [demonstration of the completed application](https://webrtc.ecl.ntt.
 
 [Continue the turorial](js-tutorial.html){: .btn .btn-primary }
 
-## Download SDK
+## Using the SDK
 {: #sdkdownload }
 
-### Case: Using npm
+### Using npm
 
 With npm installed, run
 
@@ -45,22 +45,22 @@ You can then use require or import to import the package.
 // require
 const Peer = require('skyway-js');
 const peer = new Peer({key: 'your-api-key'});
- 
+
 // import
 import Peer from 'skyway-js';
 const peer = new Peer({key: 'your-api-key'});
 ```
 
-### Case: Using CDN
+### Including the SDK directly from the CDN
 
 *HTML*
 {: .lang}
-  
+
 ```html
 <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
-### Case: Downloading as file
+### Downloading as a file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
@@ -87,11 +87,9 @@ const peer = new Peer({key: 'your-api-key'});
   </div>
 </div>
 
-Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs){: target="_blank"}.
+A list of changes between the old (SkyWay) SDK and the new ECLWebRTC SDK can be found on  [Github](https://github.com/nttcom/skyway-sdk-migration-docs){: target="_blank"}.
 
 ## Sample Code
-
-Sample code is open to public.
 
 <div class="row">
   <div class="col-md-9 col-lg-7 col-xl-6">
