@@ -9,12 +9,11 @@ breadcrumb: [en/index.md, en/developer.md]
 
 ## Tutorial
 
-In the tutorial, you will create a one-on-one video chat application using the basic features of the Android SDK.
-The app will have the ability to display a list of users currently connected to the server, to select a conversation partner, to call, answer and hang up a one-to-one video conversation.
+In the tutorial, you will create a one-on-one video chat app using the basic features of the Android SDK.
+The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided in the samples.
-If you want to try the completed app, [download the source codes](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
-
+The app you will make is the same as the [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided in the samples.
+If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and follow the tutorial to build.
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
@@ -27,7 +26,7 @@ If you want to try the completed app, [download the source codes](https://github
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-##  Download SDK
+##  Downloading the SDK
 {: #sdkdownload }
 
 <div class="d-sm-flex">
@@ -39,7 +38,7 @@ If you want to try the completed app, [download the source codes](https://github
   </div>
 </div>
 
-## 対応OS
+## Compatible OS's
 
 Android 4.2+ (API Level 17+)
 
@@ -54,7 +53,7 @@ Android 4.2+ (API Level 17+)
   </div>
 </div>
 
-List of changes between the (old) SkyWay SDK and the new ECLWebRTC SDK   [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
+A list of changes between the old (SkyWay) SDK and the new ECLWebRTC SDK can be found on  [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
 
 ## Sample Code
 
