@@ -7,7 +7,7 @@ breadcrumb: [en/index.md, en/developer.md]
 
 # JavaScript SDK
 
-## Turorial
+## Tutorial
 
 In the tutorial, you will create a one-on-one video chat web-app using the basic features of the JS SDK.
 The web-app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
@@ -26,7 +26,7 @@ You can try it out [here](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){: 
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-[Continue the turorial](js-tutorial.html){: .btn .btn-primary }
+[Continue the tutorial](js-tutorial.html){: .btn .btn-primary }
 
 ## Using the SDK
 {: #sdkdownload }
