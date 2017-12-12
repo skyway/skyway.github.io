@@ -10,15 +10,15 @@ breadcrumb: [en/index.md, en/developer.md, en/js-sdk.md]
 
 # JavaScript SDK Tutorial
 
-By using basic functions of JavaScript SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the JavaScript SDK.
-The application will have functions to input ID of a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
+In the tutorial, you will create a one-on-one video chat web-app using the basic features of the JS SDK.
+The web-app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-You can try [demonstration of the completed application](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){:target="_blank"}.
+You can try it out [here](https://webrtc.ecl.ntt.com/skyway-js-sdk-tutorial/){: target="_blank"}.
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
-    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to start a video chat session between two devices">
+  <figcaption class="figure-caption">Use ECLWebRTC to start a video chat session between two devices</figcaption>
 </figure>
 
 <figure class="figure">
@@ -27,32 +27,32 @@ You can try [demonstration of the completed application](https://webrtc.ecl.ntt.
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-##  Preparation before the Development Start
+##  Preparation before Starting Development
 {: #preparation }
 
-### Generate ECLWebRTC API Key
+### Obtain an ECLWebRTC API Key
 
-For customers who have not completed a developer registration, do so from [Registration of the Community Edition](https://console-webrtc-free.ecl.ntt.com/users/registration).
-For those who had registered already, or have just completed the registration, [Login to Dashboard](https://console-webrtc-free.ecl.ntt.com/users/login) and create an application to obtain an API key.
+For customers who have not completed developer registration, do so from the [Community Edition registration page](https://console-webrtc-free.ecl.ntt.com/users/registration).
+For those who had registered already, or have just completed the registration, login to the [dashboard](https://console-webrtc-free.ecl.ntt.com/users/login) and create an application to obtain an API key.
 
 Application settings on the Dashboard are as follows.
 
-|Items to be set|Explanation of Items|Settings of Tutorial|
+|Field|Explanation of Item|What to set it to for this tutorial|
 |:--|:--|:--|
-|Explanation of Application|Explanatory description attached to the application and is used only for display on the Dashboard. <br>Please specify within 128 characters.|ECLWebRTC Tutorial Application|
-|Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
-|Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
-|Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
-|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./js-reference/Peer.html#listAllPeers) for details.|ON|
-|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [How to use Authorization(GitHub)](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
+|Application Description|A short description of the application. This is only used when displaying applications on the Dashboard to help identify them. <br>Must be less than 128 characters.|ECLWebRTC Tutorial Application|
+|Available Domains|Domain names of the servers that will be serving the web-app. Multiple domains can be specified. <br>Example：foobar.com|`localhost`|
+|Enabled TURN|Allow users to use TURN (Traversal Using Relay around NAT) servers. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
+|Enable SFU|Allow users to use SFU (Selective Forwarding Unit) server. SFU's allow sending/receiving video and voice through a central media relay server, avoiding many disadvantages of using multiple P2P connections. Please refer to the [SFU documentation](./sfu.html) for details.|ON|
+|Enabled listAllPeers API|Allow users to use the `listAllPeers API`, which gets a list of the PeerIDs of all connected users. Refer to [API Reference](./js-reference/Peer.html#listAllPeers) for details.|ON|
+|Enabled API Key authentication|Enables authentication function to prevent unauthorized use. Refer to [this GitHub repository](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details on how to use authentication.|OFF|
 
-### Preparation for Local Web Server
+### Preparing a local web server
 
-If you use WebRTC functions in the local environment, you need to use a Web server.
+You must use a web server to serve your HTML files in order to use WebRTC.
 
-#### In case of Mac
+#### Mac machines (OSX)
 
-You can use a Web server in the local environment by the several methods shown below.
+You can set up a simple web server to serve project files by running one of the commands below in the project directory that you will set up in the next step.
 
 *python 2.X*
 {: .lang }
@@ -82,32 +82,32 @@ $ ruby -run -e httpd . -p 8080
 $ php -S localhost:8080
 ```
 
-#### In case of Windows
+#### Windows machines
 
-Install [Mongoose](https://cesanta.com/){:target="_blank"} or [XAMPP](https://sourceforge.net/projects/xampp/){:target="_blank"} to make a Web server available in the local environment.
+Install and set up [Mongoose](https://cesanta.com/){:target="_blank"} or [XAMPP](https://sourceforge.net/projects/xampp/){:target="_blank"} and serve your project folder which you will set up in the next step.
 
 ## Create Project
-{: #craete-project }
+{: #create-project }
 
-For the source codes used in the tutorial, please download them from the following repository.
-
-After downloading, arrange `index.html` adequately so that it can be viewed on the Web server.
+For the source code used in the tutorial, please download them from the following repository.
 
 - [https://github.com/skyway/skyway-js-sdk-tutorial](https://github.com/skyway/skyway-js-sdk-tutorial){:target="_blank"}
 
-In the following steps, we will add required codes to `script.js` which is included in the package.
+After downloading, set up `index.html` so that it can be viewed on the Web server.
 
-- Restriction for this Tutorial
-    - JQuery is used for Dom operation.
-    - Verified browsers are the latest versions of [Google Chrome](https://www.google.com/chrome){:target="_blank"} and [Firefox](https://www.mozilla.org/firefox/){:target="_blank"}.
-    - Please set [the authorization function](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} to OFF in the dashboard.
+In the following steps, we will add required code to the `script.js` file, which is included in the repository.
 
-## Obtain Camera Image and Microphone Voice
+- Some warnings before we begin
+    - jQuery is used in order to simplify DOM manipulation.
+    - This tutorial is verified on the latests versions of [Google Chrome](https://www.google.com/chrome){:target="_blank"} and [Firefox](https://www.mozilla.org/firefox/){:target="_blank"}. We may not support older versions so make sure your browser is up to date.
+    - Make sure [API Key authentication](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} is turned OFF in the dashboard.
+
+## Obtaining video/audio streams from the camera/microphone
 {: #getUserMedia }
 
-Add a process to obtain camera images and microphone voices.
-We use an API called getUserMedia to obtain camera images and microphone voices.
-Set the Stream object (own image) obtained by getUserMedia to the VIDEO element for display.
+We first need code to get a media stream from the camera and microphone.
+This can be done with a function called `getUserMedia`.
+Set the stream you get from `getUserMedia` to the `srcObject` property of a video element to display the obtained video stream.
 
 *JavaScript*
 {: .lang}
@@ -127,51 +127,51 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
     });
 ```
 
-You can set the following specification to Constraints(`{video: true, audio: true}`) of getUserMedia.
+You can set the following options to the constraints (first) argument of getUserMedia.
 
-- Example: Capture video only, no audio  
+- Capture both video and audio with default settings
+`{video: true, audio: true}`
+- Capture video only, no audio  
 `{video: true, audio: false}`
-- Example：Setting example of capture size 
+- Get the video with a resolution of 640x480
 `{ audio: true, video: { width: 640, height: 480 } }`
-- Example: Setting the frame rate. (As of August, 2017, it works only on Chrome.)    
+- Setting the max/min frame rate. (This works only on Chrome as of August 2017)    
 `{ audio: true, video: { frameRate: { min: 10, max: 15 } } }`
 
+#### Common pitfalls 1
 
+Depending on the browser, getUserMedia may only work with websites encrypted using SSL, due to security/privacy concerns.
+The compatibility status as of August 2017 is as follows.
 
-#### Notes on Using API 1
-
-Considering the privacy protection, it works only on Website encrypted by SSL, depending on the browser.
-Compatibility status as of August, 2017 is as follows.
-
-|Schemer/Browser|Chrome|Firefox|
+|Scheme/Browser|Chrome|Firefox|
 |:--|:--:|:--:|
 |http://localhost|◯|◯|
 |http://domain.jp|x|◯|
 |file://index.html|x|◯|
 |https://domain.jp|◯|◯|
 
-### Notes on Using API 2
+#### Common pitfalls 2
 
-To protect the privacy of the user, a dialog box asking for your permission will appear.
-If multiple cameras and/or microphones are connected, you can choose any camera and/or microphone with this dialog.
+In order to protect the user's privacy, they must accept a dialog box asking for permission to access the camera/microphone or else getUserMedia will fail.
+If multiple cameras and/or microphones are connected, you can choose the camera and/or microphone with this dialog.
 
 <figure class="figure">
-  <img src="{{ site.baseurl }}/images/js-tutorial-chrome-gum.png" class="figure-img img-fluid rounded" alt="Dialogue of Chrome">
-  <figcaption class="figure-caption">Dialogue of Chrome</figcaption>
+  <img src="{{ site.baseurl }}/images/js-tutorial-chrome-gum.png" class="figure-img img-fluid rounded" alt="Chrome permission dialogue">
+  <figcaption class="figure-caption">Chrome permission dialogue</figcaption>
 </figure>
 
 <figure class="figure">
-  <img src="{{ site.baseurl }}/images/js-tutorial-firefox-gum.png" class="figure-img img-fluid rounded" alt="Dialogue of Firefox">
-  <figcaption class="figure-caption">Dialogue of Firefox</figcaption>
+  <img src="{{ site.baseurl }}/images/js-tutorial-firefox-gum.png" class="figure-img img-fluid rounded" alt="Firefox permission dialogue">
+  <figcaption class="figure-caption">Firefox permission dialogue</figcaption>
 </figure>
 
-## Connect with ECLWebRTC server
+## Connect to the ECLWebRTC server
 {: #connect-server }
 
 ### Import SDK
 
-Import the SDK as a script element as follows.
-In the tutorial source codes, it is already added to `index.html`.
+Include the SDK using a script tag.
+In the tutorial source code, it is already added to `index.html`.
 
 *HTML*
 {: .lang}
@@ -180,11 +180,11 @@ In the tutorial source codes, it is already added to `index.html`.
 <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
 ```
 
-### Create Peer Object
+### Create a new instance of Peer
 
-Add a process to create a Peer object.
-For `apikey`, specify the API key that was generated on the Dashboard just before.
-In `debug`, specify the log output level. If it is `3`, all logs will be outputted for development.
+Initialize a new Peer object.
+Set the `key` property of the options argument to the API key that was generated on the Dashboard earlier.
+For `debug`, specify the log output level. Log level `3` is debug mode, outputting all possible logs.
 
 *JavaScript*
 {: .lang}
@@ -204,18 +204,18 @@ peer = new Peer({
 });
 ```
 
-Please refer to [API Reference](./js-reference/Peer.html#Peer) for other options that can be specified in Peer object.
+Refer to the [API Reference](./js-reference/Peer.html#Peer) for all options that can be used in the Peer object.
 
-## Process When Connection is Succeeded, Failed, or Disconnected
+## Handling connection success, errors and disconnections
 {: #eventlistener }
 
-Add an EventListener required in Peer object.
+Add the appropriate event handlers to handle each event.
 
 ### Open Event
 
-Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.
-A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.
-In the following process, it displays PeerID to UI if the PeerID is generated.
+Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other functions on the Peer object.
+An ID which uniquely identifies the client, known as the PeerID, can be obtained from the first argument of the callback function of the open event, or the `id` property of the Peer object. The PeerID is specified by passing a string as the first argument in `new Peer()`, or randomly generated on the server if one isn't specified.
+The following code, displays the PeerID after the connection to the server is established.
 
 *JavaScript*
 {: .lang}
@@ -228,7 +228,7 @@ peer.on('open', function(){
 
 ### Error Event
 
-It ignites when any error occurs. We will make it possible to show details of an error on an alert message if it occurs.
+Emitted when any error occurs. Makes it possible to determine the cause of the error and handle it appropriately (e.g. displaying the message in an alert)
 
 *JavaScript*
 {: .lang}
@@ -241,7 +241,7 @@ peer.on('error', function(err){
 
 ### Close Event
 
-It ignites when connection with the Peer (partner) is broken. No specific process is applied in the tutorial.
+Emitted when the connection with another Peer is broken. We don't handle this event in this tutorial.
 
 *JavaScript*
 {: .lang}
@@ -253,7 +253,7 @@ peer.on('close', function(){
 
 ### Disconnected Event
 
-It ignites when connection with the signaling server is broken. No specific process is applied in the tutorial.
+Emitted when the connection with the ECLWebRTC server is broken. We don't handle this event in this tutorial.
 
 *JavaScript*
 {: .lang}
@@ -264,18 +264,17 @@ peer.on('disconnected', function(){
 ```
 
 
-## Calling/Disconnecting/Receiving Process
+## Calling, Disconnecting and Receiving calls
 {: #call-event }
 
-Add processes to call/disconnect/receive.
+### Call
 
-### Calling Process
-
-If you click the Call button, a call is made to the partner.
-Use `peer.call()` to set the PeerID of the partner and your own localStream to the parameter , and call.
-The PeerID of the partner to connect should be obtained separately by some means.
-As Call object will be returned after the call, set a necessary EventListener.
-Details of `setupCallEventHandlers` will be explained later.
+Call the partner when the Call button is clicked.
+Use the `peer.call()` function to start the call. Specify the PeerID of the partner and your own mediaStream as arguments.
+The PeerID of the partner to connect must be obtained by some other means (email, SMS, etc).
+`peer.call()` returns a `MediaConnection` object which we'll assign to the variable `call`.
+Set the necessary event handlers on `call`.
+Details of what we do `setupCallEventHandlers` will be explained later.
 
 *JavaScript*
 {: .lang}
@@ -288,10 +287,11 @@ $('#make-call').submit(function(e){
 });
 ```
 
-###  Disconnecting Process
+###  Disconnecting
 
-If you click the Disconnect button, the connection with the partner will be disconnected.
-Use `call.close()` to disconnect the corresponding connection. Keep the Call object created in the calling process as `existingCall`. Execute object keeping in `setupCallEventHandlers()` of the calling process.
+Disconnect the connection to the partner when the Disconnect button is clicked.
+Use `call.close()` to disconnect the `MediaConnection`.
+Use the `MediaConnection` object contained in the global variable `existingCall`, which we will assign later in `setupCallEventHandlers()`.
 
 *JavaScript*
 {: .lang}
@@ -301,13 +301,14 @@ $('#end-call').click(function(){
     existingCall.close();
 });
 ```
-    
-###  Receiving Process
 
-Responds when connection request is received from the partner.
-If connection request is received from the partner, `call` will ignite. As you can obtain a Call object to manage the connection with the partner as a parameter, execute `call.answer()` and respond to the connection request.
-If you set your own `localStream` then, you will be able to send image and voice to your partner.
-In the same way as calling process, execute `setupCallEventHandlers` and set the EventListener of the Call object.
+###  Receiving
+
+Answer when a partner requests a connection.
+When someone is trying to establish a media connection with you, the `call` event will be emitted. The callback function will contain the `MediaConnection` object as the first argument (which we will call `call`).
+To accept the connection, call `call.answer()`, passing in your local mediaStream.
+
+Set up the call event handlers in the same way you did when calling a partner.
 
 *JavaScript*
 {: .lang}
@@ -319,11 +320,13 @@ peer.on('call', function(call){
 });
 ```
 
-### Event necessary for Call Object
+### Event handlers on the MediaConnection object
 
-EventListener necessary for Call Object.
-In the application that we create this time, if the connection is alive, cut the existing connection and prioritize a connection request arrived later. Keep the Call object as `existingCall` to use it in disconnecting process, etc.
-This process depends on the specifications of the application.
+Here we set up the event handler's on the `MediaConnection` object we got above (stored as `call`).
+
+How you want to handle new calls when one already exists depends on the requirements of the application.
+In this tutorial, if there is an existing call, we hang up that one and connect with the new one.
+We assign the call to the global `existingCall` variable so we can track if there is an existing one and close it.
 
 *JavaScript*
 {: .lang}
@@ -335,12 +338,13 @@ function setupCallEventHandlers(call){
     };
 
     existingCall = call;
-    // 省略
+
+    // continues below ...
 }
 ```
 
-It will ignite when an image and/or a voice of the partner are received.
-Set the obtained Stream object to VIDEO element.
+The `stream` event is emitted when a mediaStream from the partner is received.
+Add obtained mediaStream object to the video.
 Details of `addVideo()` and `setupEndCallUI()` will be explained later.
 
 *JavaScript*
@@ -348,25 +352,32 @@ Details of `addVideo()` and `setupEndCallUI()` will be explained later.
 
 ```js
 function setupCallEventHandlers(call){
-    // 省略
+    // ... continued from above
+
     call.on('stream', function(stream){
-        addVideo(call,stream);
+        addVideo(call, stream);
         setupEndCallUI();
         $('#their-id').text(call.remoteId);
     });
-    // 省略
+
+    // continues below ...
 }
 ```
 
-Disconnection process by `call.close()` is executed and it will ignite when actually disconnected. This event will ignite each on the executer-side and the executed-side. By `call.peer`, you can obtain the PeerID of the partner you disconnected.
-At the time of disconnection, delete VIDEO elements and UI-related processes. Details of `removeVideo()` and `setupMakeCallUI()` will be explained later.
+The `close` event is emitted when the media connection with the partner is disconnected.
+The most common way for this event to occur is if one side disconnects intentionally using `call.close()`.
+This event will be emitted on both partners.
+You can find the PeerID of the partner who disconnected using `call.peer`.
+
+When the partner disconnects in our application, remove their video stream and set up the UI to handle a new call. Details of `removeVideo()` and `setupMakeCallUI()` will be explained later.
 
 *JavaScript*
 {: .lang}
 
 ```js
 function setupCallEventHandlers(call){
-    // 省略
+    // ... continued from above
+
     call.on('close', function(){
         removeVideo(call.remoteId);
         setupMakeCallUI();
@@ -377,37 +388,35 @@ function setupCallEventHandlers(call){
 ## Setup UI
 {: #setup-ui }
 
-### Playback of Video Element
+### Playing the partner's video stream in a video element
 
-Add processes to play back video.
-You can play back video by setting Stream object to srcObject property of the video element. Considering the processes to delete, set `call.peer(PeerID)` to the id property.
+You can play video by setting the `srcObject` property of the video element to a mediaStream object.
 
 *JavaScript*
 {: .lang}
 
 ```js
-function addVideo(call,stream){
+function addVideo(call, stream){
     $('#their-video').get(0).srcObject = stream;
 }
 ```
 
-###  Delete Video Element
+###  Removing the video stream
 
-Add a processes to delete video elements of the disconnected (disconnecting) partner.
-Delete based on PeerID.
+Remove the partner's video stream by unsetting the `srcObject` property of the video element.
 
 *JavaScript*
 {: .lang}
 
 ```js
 function removeVideo(peerId){
-    $('#'+peerId).remove();
+    $('#their-video').get(0).srcObject = undefined;
 }
 ```
 
-### Switch Over to Display/Hide the Button
+### Updating the UI to display/hide the call button
 
-Add a process to switch over the display of the Call button and Disconnect button.
+Implement functions to toggle the button being displayed between the Call and Disconnect buttons.
 
 *JavaScript*
 {: .lang}
@@ -424,7 +433,7 @@ function setupEndCallUI() {
 }
 ```
 
-## Operation Check
+## Trying it out
 {: #testing }
 
-Open the application on two browsers. Copy one of the `Your id` and paste it to the Input Box of other browser. If videochat is possible between the tow browsers, the work is successful.
+Open the web page on two browser windows. The PeerID should be displayed in the "Your id" section. Copy the PeerID from one browser and paste it to the text box of the other browser and click the Call button. It should connect and a video chat between the two windows should start.
