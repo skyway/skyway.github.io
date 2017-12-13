@@ -14,7 +14,7 @@ In the tutorial, you will create a one-on-one video chat web-app using the basic
 The web-app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
 The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided in the samples.
-If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and and follow the tutorial to build.
+If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and follow "build" section of this tutorial.
 
 
 <figure class="figure">
@@ -87,9 +87,9 @@ In this tutorial, we will use the method of manually downloading and adding the 
 Here is an overview of each of the files contained in the project.
 
 - ViewController.m
-  - Controller which contains the main code for this app. You will be working with this file exclusively for this tutorial.
+  - Contains the main code for this app. You will be working with this file exclusively for this tutorial.
 - PeerListViewController.m
-  - Controller which generates the UITableView to display a list of PeerID.
+  - Generates the UITableView to display a list of PeerID.
   - The completed version is included in the repository and will not be referenced in this tutorial.
 - storyboard
   - The completed version is included in the repository and will not be referenced in this tutorial.
@@ -111,7 +111,7 @@ Add the header file for the SDK to `ViewController.h`.
 2. Select account from Signing > Team used for Build.
 3. Connect the iOS device and select build.
 
-We expect some errors during here but the preparation is complete if we succeed in the build passes and looks like the following image.
+We expect some errors during here but the preparation is complete if the build passes and looks like the following image.
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/ios-tutorial-splash-sc.png" class="figure-img img-fluid rounded" alt="The LaunchScreen is displayed on the device.">
@@ -121,10 +121,10 @@ We expect some errors during here but the preparation is complete if we succeed 
 ## Connect to the ECLWebRTC server
 {: #connect-server }
 
-### Setting required variables
+### Defining variables
 
 Add constants that are used in the program.
-Set the `kAPIkey` variable to the API key that was generated on the Dashboard earlier.
+Set `kAPIkey` to the API key that was generated on the Dashboard earlier.
 For `kDomain`, specify one of the Available Domains you set in the Dashboard (e.g. "localhost").
 
 *Objective-C*
@@ -209,7 +209,7 @@ Declare properties and set up dealloc of instance variables.
 
 Create a Peer object in the viewDidLoad method.
 
-When creating the Peer object, specify the API key, domain name and debug level by using SKWPeerOption class.
+When creating the Peer object, specify the API key, domain name and debug level by using the SKWPeerOption class.
 
 *Objective-C*
 {: .lang}
@@ -241,7 +241,7 @@ Add the appropriate event callbacks to handle each event.
 
 Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other functions on the Peer object.
 An ID which uniquely identifies the client, known as the PeerID, can be obtained from the callback function. The PeerID can be specified or randomly generated on the server if one isn't specified.
-The following code, displays the PeerID after the connection to the server is established.
+This code displays the PeerID after the connection to the server is established.
 
 *Objective-C*
 {: .lang}
@@ -320,7 +320,7 @@ Use the addVideoRenderer method to allocate a video renderer (SKWVideo object) f
 
 ### Error Event
 
-Emitted when any error occurs. Makes it possible to determine the cause of the error and handle it appropriately (e.g. displaying the message in the log)
+Emitted when any error occurs. Makes it possible to determine the cause of the error and handle it appropriately (e.g. displaying the message in the log).
 
 *Objective-C*
 {: .lang}
@@ -366,9 +366,9 @@ Emitted when the connection with the ECLWebRTC server is broken. We don't handle
 
 Select the PeerID of the partner you want to call and call him/her.
 
-#### Obtain the PeerID of the Destination
+#### Obtain the PeerID of your partner
 
-Tap the actionButton. If you aren't already connected to a peer, use the listAllPeers method to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListViewController`.
+Tap the actionButton. If you aren't already connected to a peer, use the `listAllPeers()` function to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListViewController`.
 
 *Objective-C*
 {: .lang}
@@ -422,7 +422,7 @@ Tap the actionButton. If you aren't already connected to a peer, use the listAll
 
 #### Connecting to the partner
 
-If a PeerID is selected in the `PeerListViewController`, the `didSelectPeer` method will be called. Pass the PeerID of the partner and your own localStream, and call.
+If a PeerID is selected in the `PeerListViewController`, the `didSelectPeer` method will be called. Call the `callWithId` function, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
 After calling, set up the necessary event callbacks.
 Details of `setMediaCallbacks` will be explained later.
 
@@ -447,7 +447,7 @@ Disconnect the connection with the partner.
 
 #### Terminate MediaConnection
 
-If the connection is alive when the actionButton is tapped, use the Close method of MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
+If the connection is alive when the actionButton is tapped, use the `close` function of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
 
 *Objective-C*
 {: .lang}
@@ -477,7 +477,7 @@ If the connection is alive when the actionButton is tapped, use the Close method
 
 #### Close MediaStream
 
-When the Close method of the MediaConnection object is called, use removeVideoRenderer method to remove the video renderer assigned to the MediaStream.
+When the `close` function of the MediaConnection object is called, use the `removeVideoRenderer` function to remove the video renderer assigned to the MediaStream.
 
 *Objective-C*
 {: .lang}
@@ -544,7 +544,7 @@ In addition, `unsetPeerCallbacks` will be used when we destroy Peer objects. It 
 {: #oncall }
 
 Answer when a partner requests a connection.
-When someone is trying to establish a media connection with you, `SKW_PEER_EVENT_CALL` will fire. Call the `answer` method on the MediaConnection object you get from the callback.
+When someone is trying to establish a media connection with you, `SKW_PEER_EVENT_CALL` will fire. Call the `answer` method on the MediaConnection object you get from the callback to accept the connection.
 If you set your own `_localStream`, you will be able to send video and voice to your partner.
 Use `setMediaCallbacks` to set event handlers like you did after `callWithId`. Details will be explained later.
 
@@ -569,12 +569,12 @@ Use `setMediaCallbacks` to set event handlers like you did after `callWithId`. D
 ```
 
 
-### Events handlers on the MediaConnection object
+### Event handlers on the MediaConnection object
 
 Here we set up the event handlers on the `MediaConnection` object we got above.
 `SKW_MEDIACONNECTION_EVENT_STREAM` will fire when a MediaStream is received from your partner.
 
-In the callback, use update the connection status on the UI and use the addVideoRenderer method on the MediaStream object of the partner, to play the received stream.
+In the callback, update the connection status on the UI and use the `addVideoRenderer` method on the MediaStream object of the partner, to play the received stream.
 
 *Objective-C*
 {: .lang}
@@ -702,11 +702,11 @@ As actionButton is used in toggle mode, change the label depending on the connec
 }
 ```
 
-## Switching Camera
+## Switching Cameras
 {: #switch-camera}
 
 Finally, we're going to add a way to switch between device cameras.
-Use getCameraPosition method to obtain the camera position used by the specified media stream. Use the other setting to toggle cameras.
+Use the `getCameraPosition` function to obtain the camera position used by the specified media stream. Then, set to the other setting to toggle cameras.
 
 *Objective-C*
 {: .lang}
