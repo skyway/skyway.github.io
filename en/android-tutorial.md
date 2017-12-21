@@ -10,17 +10,17 @@ breadcrumb: [en/index.md, en/developer.md, en/android-sdk.md]
 
 # Android SDK tutorial
 
-By using basic functions of Android SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the Android SDK.
-The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
+In the tutorial, you will create a one-on-one video chat app using the basic features of the Android SDK.
+The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided as sample codes.
-If you want to try the completed application, [download the source codes](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"}  provided in the samples.
+If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and follow "build" section of this tutorial.
 
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
-    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to start a video chat session between two devices">
+  <figcaption class="figure-caption">Use ECLWebRTC to start a video chat session between two devices</figcaption>
 </figure>
 
 <figure class="figure">
@@ -28,72 +28,68 @@ If you want to try the completed application, [download the source codes](https:
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-## Preparation before the Development Start
+## Preparations
 {: #preparation }
 
-### Generate ECLWebRTC API Key
+### Obtain an ECLWebRTC API Key
 
 For customers who have not completed a developer registration, do so from [New Registration of the Community Edition](https://console-webrtc-free.ecl.ntt.com/users/registration).
 For those who had registered already, or have just completed the registration, [Login to Dashboard](https://console-webrtc-free.ecl.ntt.com/users/login) and create an application to obtain an API key.
 
-Application settings in the Dashboard are as follows.
+Application settings on the Dashboard are as follows.
 
-
-|Items to be set|Explanation of Items|Settings of Tutorial|
+|Field|Explanation of Item|What to set it to for this tutorial|
 |:--|:--|:--|
-|Explanation of Application|Explanatory description attached to the application and is used only for display on the Dashboard. <br>Please specify within 128 characters.|ECLWebRTC Tutorial Application|
-|Available Domain Name|Enter Domain Name used in application creating. Multiple available Domain Name can be specified. Multiple available Domain Name can be specified. <br>Example：hogehoge.com|`localhost`|
-|Administration (Use TURN)|Check this in case of using the TURN (Traversal Using Relay around NAT) server. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
-|Administration (Use TURN)|Check this in case of using SFU (Selective Forwarding Unit) server. SFU is a technology to send/receive image and voice via a media server called SFU but not using P2P. Please refer to [About SFU](./sfu.html) for details.|ON|
-|Administration (Use listAllPeers API)|Check this in case of using `listALLPeers API`. This API obtains an active PeerID per API key. Please refer to [API Reference](./android-reference/) for details.|ON|
-|Administration (Use API Key authorization)|Provides authorization function to prevent from unauthorized use. Please refer to [How to use Authorization(GitHub)](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details.|OFF|
+|Application Description|A short description of the application. This is only used when displaying applications on the Dashboard to help identify them. <br>Must be less than 128 characters.|ECLWebRTC Tutorial Application|
+|Available Domains|Domain names of the servers that will be serving the app. Multiple domains can be specified. <br>Example: foobar.com|`localhost`|
+|Enabled TURN|Allow users to use TURN (Traversal Using Relay around NAT) servers. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
+|Enable SFU|Allow users to use SFU (Selective Forwarding Unit) server. SFU's allow sending/receiving video and voice through a central media relay server, avoiding many disadvantages of using multiple P2P connections. Please refer to the [SFU documentation](./sfu.html) for details.|ON|
+|Enabled listAllPeers API|Allow users to use the `listAllPeers API`, which gets a list of the PeerIDs of all connected users. Refer to [API Reference](./android-reference/) for details.|ON|
+|Enabled API Key authentication|Enables authentication function to prevent unauthorized use. Refer to [this GitHub repository](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} for details on how to use authentication.|OFF|
 
-### Preparation of Development Environment
 
-In this tutorial, the development will proceed assuming the following environment.
+### Preparing the development environment
 
-- Androdi Studio 2.3.3
-- Verified terminal
-  - Nexus6
+We have verified this tutorial with the following environment.
+
+- Android Studio 2.3.3
+- Verified device
+  - Nexus 6
 - OS Version
-  - 7.1
+  - Android 7.1
 - Development language
   - Java
-- Authorization
-  - Please set [the authorization function](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} to OFF in the dashboard.
+- Authentication
+  - Make sure [API Key authentication](https://github.com/skyway/skyway-peer-authentication-samples){:target="_blank"} is turned OFF in the dashboard.
 
-## Create Project
+## Creating the project
 
-Download Android Studio project used in Tutorial from below repository.
+Download the Android Studio project used for this tutorial by cloning the repository below.
 
 - [https://github.com/skyway/skyway-android-sdk-tutorial](https://github.com/skyway/skyway-android-sdk-tutorial)
 
-## Add SDK to Project
+## Add the SDK to the project
 
-Arrange SDK binary files.
-
-1. Download SDK from [here](https://github.com/skyway/skyway-android-sdk/archive/master.zip)
-2. After decompressing ZIP file, arrange `skyway.arr` directly under `app/libs` directory.
-3. Open the development project on an IDE such as Android Studio, and complete settings of the build tool such as Gradle.
+1. Download the SDK [here](https://github.com/skyway/skyway-android-sdk/archive/master.zip)
+2. Unzip the file and move `skyway.arr` directly into the `app/libs` directory.
+3. Open the development project with an IDE (e.g. Android Studio), and complete build tool (e.g. Gradle) settings.
 
 <figure class="figure">
-  <img src="{{ site.baseurl }}/images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="As SDK is added to the project">
-  <figcaption class="figure-caption">As SDK is added to the project</figcaption>
+  <img src="{{ site.baseurl }}/images/android-tutorial-studio1.png" class="figure-img img-fluid rounded" alt="After the SDK is added to the project">
+  <figcaption class="figure-caption">After the SDK is added to the project</figcaption>
 </figure>
 
-Descriptions of main files contained in the project are as follows.
+Here is an overview of each of the files contained in the project.
 
 - app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/MainActivity
-  - The controller to which required codes are mainly added in this tutorial.
+  - Contains the main code for this app. You will be working with this file exclusively for this tutorial.
 - app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/PeerListDialogFragment
-  - Controller which genetrates ListDialog displaying a list of PeerID.
-  - The complete version is included in the kit and is not mentioned in this tutorial.
+  - Generates the ListDialog to display a list of PeerIDs.
+  - The completed version is included in the repository and will not be referenced in this tutorial.
 - res/**
-  - For resources and layout, the complete versions are included in the kit and are not mentioned in this tutorial.
+  - For resources and layout, the completed version are included in the repository and will not be referenced in this tutorial.
 
-## Header file import
-
-Though it is already stated in the tutorial, import statement for SDK is added.
+## Import the classes
 
 *Java*
 {: .lang}
@@ -114,9 +110,9 @@ import io.skyway.Peer.PeerError;
 import io.skyway.Peer.PeerOption;
 ```
 
-## Add to Manifest File
+## Add features and permissions to manifest file
 
-To use SDK functions, add the contents to the manifest file.
+Enable the following features and permissions in the manifest file.
 
 *Java*
 {: .lang}
@@ -136,16 +132,16 @@ To use SDK functions, add the contents to the manifest file.
 
 ## Build
 
-Connect the actual device and execute build. Though processing on the actual device will stop on the way, please confirm that build is possible.
+Connect the device and click build. We expect some errors during here but the preparation is complete if the build passes.
 
-## Connect with ECLWebRTC Server
+## Connect to the ECLWebRTC server
 {: #connect-server }
 
-### Declaration
+### Defining variables
 
 Add constants to MainActivity that are used in the program.
-For `API_KEY`, specify the API key that was generated on the Dashboard just before.
-For `DOMAIN`, specify one of the available domain names specified on the Dashboard just before.
+Set `API_KEY`, to the API key that was generated on the Dashboard earlier.
+For `DOMAIN`, specify one of the Available Domains you set in the Dashboard (e.g. "localhost").
 
 *Java*
 {: .lang}
@@ -159,7 +155,7 @@ private static final String DOMAIN = "domain";
 
 ```
 
-Add declaration of instance variables used in the program.
+Declare variables used in the program.
 
 - `_peer` : Peer Object
 - `_localStream` : Own MediaStream Object
@@ -184,9 +180,9 @@ private boolean			_bConnected;
 private Handler			_handler;
 ```
 
-### UI-Related Processing
+### UI
 
-At the beginning of onCreate method, add a process to hide the title of the main window and to generate a Handler for UI thread processing.
+At the beginning of onCreate method, hide the title of the main window and create a Handler for UI thread processing.
 
 *Java*
 {: .lang}
@@ -208,8 +204,9 @@ final Activity activity = this;
 
 ### Create Peer Object
 
-In succession, add a process to create a Peer object.
-For the Peer object, specify API key, domain name and debug level by using PeerOption class.
+Create a Peer object in the onCreate method.
+
+When creating the Peer object, specify the API key, domain name and debug level by using the PeerOption class.
 
 *Java*
 {: .lang}
@@ -225,18 +222,18 @@ option.debug = Peer.DebugLevelEnum.ALL_LOGS;
 _peer = new Peer(this, option);
 ```
 
-Please refer to [API Reference](./android-reference/) for other options that can be specified in Peer object.
+Refer to [API Reference](./android-reference/) for other options that can be specified in Peer object.
 
-##  Process When Connection is Succeeded, Failed, or Disconnected
+## Handling connection success, errors and disconnections
 {: #eventlistener }
 
-In succession, add an event callback required for Peer object.
+Add the appropriate event callbacks to handle each event.
 
 ### Open Event
 
-Connects with the signaling server of ECLWebRTC and ignites when ready to use. All processes of ECLWebRTC become available after this event ignition.
-A client identification ID called as PeerID is generated from the signaling server and can be obtained by callback event. PeerID can also be specified by the client side.
-In the following process, it displays PeerID to UI if the PeerID is generated.
+Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other methods on the Peer object.
+An ID which uniquely identifies the client, known as the PeerID, can be obtained from the callback function. The PeerID can be specified or randomly generated on the server if one isn't specified.
+This code displays the PeerID after the connection to the server is established.
 
 *Java*
 {: .lang}
@@ -255,19 +252,19 @@ _peer.on(Peer.PeerEventEnum.OPEN, new OnCallback() {
     _strOwnId = (String) object;
     TextView tvOwnId = (TextView) findViewById(R.id.tvOwnId);
     tvOwnId.setText(_strOwnId);
-    
+
     }
 });
 ```
 
-### Obtain Camera Image and Microphone Voice
+###  Obtaining video/audio streams from the camera/microphone
 
-In the callback of the open event, add a process to obtain camera images and microphone voices.
+In the callback of the OPEN event, add code to get media streams from the camera/microphone.
 
-#### Request for Administration(1)
+#### Requesting access to the camera/microphone 1
 
-It checks if an authority to access the camera and the microphone is given. If not, it demands the authority.
-If the authority is given, execute startLocalStream method to obtain camera image and microphone voice.
+Check if the app has permission to access the camera and microphone and request permission if the app doesn't.
+Once you have access, call `startLocalStream()`, which we will define later, to get a MediaStream.
 
 *Java*
 {: .lang}
@@ -286,9 +283,9 @@ else {
 }
 ```
 
-#### Request for Administration(2)
+#### Requesting access to the camera/microphone 2
 
-If the authority is obtained by requestPermissions method, execute startLocalStream method to obtain camera image and microphone voice.
+If permissions were not already granted and had to be obtained with `requestPermissions()`, call `startLocalStream()` in the `onRequestPermissionResult()` callback when permission is granted.
 
 *Java*
 {: .lang}
@@ -313,16 +310,18 @@ public void onRequestPermissionsResult(int requestCode, String permissions[], in
 }
 ```
 
-#### Option Setting
+#### Options
 
-Options on image and voice obtainment can be set by MediaConstraints class.
-Descriptions of items set here are as follows.
-- `maxWidth`: The upper limit of the horizontal size of captured image (unit: pixel)
-- `maxHeight`: The upper limit of the vertical size of captured image (unit: pixel)
-- `cameraPosition`: Selection of a camera to use (default is `FRONT`)
-- `FRONT` camera or `BACK` camera can be selected for the `cameraPosition`.
+Options for getting video/audio can be set by MediaConstraints class.
+Here is a simple summary of some of the options.
 
-Please refer to [API Reference](./android-reference/) for other items.
+- `maxWidth`: The upper limit in pixels of the horizontal size of the video
+- `maxHeight`: The upper limit in pixels of the vertical size of the video
+- `cameraPosition`: Select which device camera to use（defaults to front camera）
+  - set to `FRONT` to use the front camera
+  - set to `BACK` to use the back camera
+
+Refer to [API Reference](./android-reference/) for other options.
 
 *Java*
 {: .lang}
@@ -337,13 +336,14 @@ void startLocalStream() {
   constraints.maxHeight = 540;
   constraints.cameraPosition = MediaConstraints.CameraPositionEnum.FRONT;
 
+  // continued below ...
 }
 ```
 
-#### Obtainment and Playback
+#### Playing the MediaStream
 
-Initialize Navigator class, specify `constraints` to the parameter of getUserMedia method and execute it to obtain the own image (local stream).
-Use addVideoRenderer method to allocate video renderer (Canvas object for display) to the obtained MediaStream object.
+Initialize the Navigator class, specify the `constraints` for the getUserMedia method and execute it to obtain your local MediaStream (local stream).
+Use the addVideoRenderer method to allocate a video renderer (Canvas object) for the MediaStream object you got from getUserMedia.
 
 *Java*
 {: .lang}
@@ -354,7 +354,7 @@ Use addVideoRenderer method to allocate video renderer (Canvas object for displa
 //
 void startLocalStream() {
 
-  // 省略
+  // ... continued from above
 
   Navigator.initialize(_peer);
   _localStream = Navigator.getUserMedia(constraints);
@@ -366,7 +366,7 @@ void startLocalStream() {
 
 #### Error Event
 
-It ignites when any error occurs. Make it possible to show details of an error on the log if it occurs.
+Emitted when any error occurs. Makes it possible to determine the cause of the error and handle it appropriately (e.g. displaying the message in the log).
 
 *Java*
 {: .lang}
@@ -384,7 +384,7 @@ _peer.on(Peer.PeerEventEnum.ERROR, new OnCallback() {
 
 #### Close Event
 
-It ignites when connection with the Peer (partner) is broken. No specific process is applied in the tutorial.
+Emitted when the connection with another Peer is broken. We don't handle this event in this tutorial.
 
 *Java*
 {: .lang}
@@ -401,7 +401,7 @@ _peer.on(Peer.PeerEventEnum.CLOSE, new OnCallback()	{
 
 #### Disconnected Event
 
-It ignites when connection with the signaling server is broken. No specific process is applied in the tutorial.
+Emitted when the connection with the ECLWebRTC server is broken. We don't handle this event in this tutorial.
 
 *Java*
 {: .lang}
@@ -419,15 +419,13 @@ _peer.on(Peer.PeerEventEnum.DISCONNECTED, new OnCallback() {
 ### Calling/Disconnecting/Receiving Process
 {: #call-event }
 
-Add processes to call/disconnect/receive.
+#### Calling
 
-#### Calling Process
+Select the PeerID of the partner you want to call and call him/her.
 
-Select the PeerID of the partner and call him/her.
+##### Obtain the PeerID of your partner
 
-##### Obtain the PeerID of the Destination (1)
-
-Tap the Make Call button. Execute showPeerIDs method if not in connected status.
+Tap the Make Call button. If you aren't already connected to a peer, use the showPeerIDs method to obtain a list of all other user's PeerIDs.
 
 *Java*
 {: .lang}
@@ -455,9 +453,9 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### Obtain the PeerID of the Destination (2)
+##### Connecting to the partner
 
-In showPeerIDs method, listAllPeers method is used to obtain a list of PeerID of the connection destination. Delete your own ID from the obtained list and show the list with `PeerListDialogFragment`.
+In the showPeerIDs method, use the `listAllPeers()` method to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListDialogFragment`.
 
 *Java*
 {: .lang}
@@ -527,7 +525,7 @@ void showPeerIDs() {
 
 ##### Calling
 
-If Peer ID is selected in `PeerListDialogFragment`, onPeerSelected method will be called. Set the PeerID of the partner and your own localStream to the parameter, and call.
+If a PeerID is selected in the `PeerListDialogFragment`, the `onPeerSelected()` method will be called. Call the `call()` method, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
 After calling, set up necessary event callbacks. Details of `setMediaCallbacks` will be explained later.
 
 *Java*
@@ -558,13 +556,13 @@ void onPeerSelected(String strPeerId) {
 }
 ```
 
-#### Disconnecting Process
+#### Disconnecting
 
-It disconnects the connection with the partner.
+Disconnect the connection with the partner.
 
-##### Disconnect MediaConnection
+##### Terminate MediaConnection
 
-Tap the actionButton (Make Call button). If the connection is alive, use Close method of MediaConnection object to disconnect the corresponding MediaConnection and perform necessary processing with `closeRemoteStream` which will be explained later.
+If the connection is alive when the actionButton (Make Call button) is tapped, use the `close()` method of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
 
 *Java*
 {: .lang}
@@ -598,7 +596,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 
 ##### Close MediaStream
 
-After Close method of MediaConnection object is executed, use removeVideoRenderer method to remove the video renderer assigned to the corresponding MediaStream.
+When the `close()` method of the MediaConnection object is called, use the `removeVideoRenderer()` method to remove the video renderer assigned to the MediaStream.
 
 *Java*
 {: .lang}
@@ -618,12 +616,12 @@ void closeRemoteStream(){
 }
 ```
 
-#### Receiving Process
+#### Receiving calls
 
-Responds when connection request is received from the partner.
-If connection request is received from the partner, `Peer.PeerEventEnum.CALL` will ignite. As you can obtain MediaConnection object to manage the connection with the partner as a parameter, execute answer method and respond to the connection request.
-If you set your own `_localStream` then, you will be able to send image and voice to your partner.
-In the same way as the calling process, execute `setMediaCallbacks` and set the event. Details will be explained later.
+Answer when a partner requests a connection.
+When someone is trying to establish a media connection with you, `Peer.PeerEventEnum.CALL` will fire. Call the `answer()` method on the MediaConnection object you get from the callback to accept the connection.
+If you set your own `_localStream`, you will be able to send video and voice to your partner.
+Use `setMediaCallbacks` to set event handlers like you did after `call`. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -649,11 +647,12 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 ```
 
 
-#### Event necessary for MediaConnection Object
+#### Event handlers on the MediaConnection object
 
-Event callback necessary for MediaConnection.
-`MediaConnection.MediaEventEnum.STREAM` will ignite when image and/or voice of the partner are received.
-In the callback, use update process of the connection status on UI and apply addVideoRenderer method to the obtained MediaStream object of the partner, in order to assign the video renderer.
+Here we set up the event handlers on the `MediaConnection` object we got above.
+`MediaConnection.MediaEventEnum.STREAM` will fire when a MediaStream is received from your partner.
+
+In the callback, update the connection status on the UI and use the `addVideoRenderer` method on the MediaStream object of the partner, to play the received stream.
 
 *Java*
 {: .lang}
@@ -673,11 +672,12 @@ void setMediaCallbacks() {
     }
   });
 
+  // continues below ...
 }
 ```
 
-`SKW_MEDIACONNECTION_EVENT_CLOSE` will ignite if the partner executes the disconnection process and if the connection is actually disconnected.
-In the callback, necessary disconnection processes will be executed. Details will be explained later.
+`MediaConnection.MediaEventEnum.CLOSE` will fire if the partner disconnects.
+The necessary steps to clean up will be run in the callback. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -688,7 +688,7 @@ In the callback, necessary disconnection processes will be executed. Details wil
 //
 void setMediaCallbacks() {
 
-  // 省略
+  // ... continued from above
 
   _mediaConnection.on(MediaConnection.MediaEventEnum.CLOSE, new OnCallback()	{
     @Override
@@ -699,10 +699,11 @@ void setMediaCallbacks() {
     }
   });
 
+  // continues below ...
 }
 ```
 
-`MediaConnection.MediaEventEnum.ERROR` will ignite when any error occurs. Make it possible to show details of an error on the log if it occurs.
+`MediaConnection.MediaEventEnum.ERROR` will fire when any error occurs. Makes it possible to determine the cause of the error and handle it appropriately (e.g. displaying the message in the log)
 
 *Java*
 {: .lang}
@@ -713,7 +714,7 @@ void setMediaCallbacks() {
 //
 void setMediaCallbacks() {
 
-  // 省略
+  // ... continued from above
 
   _mediaConnection.on(MediaConnection.MediaEventEnum.ERROR, new OnCallback()	{
     @Override
@@ -726,14 +727,12 @@ void setMediaCallbacks() {
 }
 ```
 
-### Process necessary for Activity Lifecycle
+### Activity Lifecycle Events
 
-Add processes to various methods of the Activity Lifecycle.
+#### Override Lifecycle methods
 
-#### Overrideメソッドの処理
-
-Ovverrideされたメソッドに必要な処理を追記してください。  
-In onDestory method, execute `destoryPeer` to destroy Peer objects. Details will be explained later.
+Override and add code to handle lifecycle changes.
+In the onDestroy method, call `destroyPeer()` to destroy the Peer object. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -783,15 +782,16 @@ protected void onDestroy() {
 }
 ```
 
-#### Process necessary for Destroy Peer Objects
+#### Cleaning up when destroying the Peer
+
 
 Add necessary processes at the timing when Activity is destroyed. An outline of the processes executed here is as follows.
 
-- Close remote/local mediastream
-- Release callback event of MediaConnection Object.(`unsetMediaCallbacks`)
-- Initialize Navigator Object
-- Release callback event of Peer Object.(`unsetPeerCallback`)
-- Disconnect with the signaling server
+- Close remote/local mediaStream
+- Release callback events set on the MediaConnection object.(`unsetMediaCallbacks`)
+- Reset the Navigator object
+- Release callback events set on the Peer object.(`unsetPeerCallback`)
+- Disconnect from the signaling server
 - Destroy Peer objects
 
 Details of `unsetMediaCallbacks` and `unsetPeerCallback` will be explained later.
@@ -837,9 +837,9 @@ private void destroyPeer() {
 ```
 
 
-#### コールバックイベントの開放処理
+#### Cleaning up the event handlers
 
-MediaConnectionオブジェクト、Peerオブジェクトに関するコールバックイベントの開放処理を追記してください。  
+Unset the event handlers on the MediaConnection and Peer objects.
 
 *Java*
 {: .lang}
@@ -878,8 +878,8 @@ void unsetMediaCallbacks() {
 ## Setup UI
 {: #setup-ui }
 
-Add necessary processes related with UI.
-As actionButton is used in toggle mode, change the label in accordance with the connection status. Add the contents of updateActionButtonTitle method.
+Add methods related to the UI.
+As actionButton is used in toggle mode, change the label depending on the connection status by implementing `updateActionButtonTitle()`.
 
 *Java*
 {: .lang}
@@ -905,11 +905,11 @@ void updateActionButtonTitle() {
 }
 ```
 
-## Switching Camera
+## Switching Cameras
 {: #switch-camera}
 
-In the last, add a process of switching camera.
-Using switchCamera method, switch the camera position used by the corresponding media stream between FRONT and BACK.
+Finally, we're going to add a way to switch between device cameras.
+Use the `switchCamera()` method on a MediaStream, to switch between the FRONT and BACK cameras.
 
 *Java*
 {: .lang}
@@ -936,7 +936,7 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-## Operation Check
+## Trying it out
 {: #testing }
 
-Build on a real machine and check the operation. Call a PeerID obtained by listAllPeers. If videochat is possible with the partner, the project is successful. If only one actual machine is available, you can check the operation by interconnecting with a Web application implemented by JavaScript SDK.
+Build and deploy to two devices. Call a PeerID obtained using listAllPeers. It should connect and a video chat between the two devices should start. If you only have one Android device, you can try connecting to a JavaScript web-app that uses the same API key.
