@@ -7,19 +7,19 @@ breadcrumb: [en/index.md, en/developer.md]
 
 # iOS SDK
 
-## Turorial
+## Tutorial
 
-By using basic functions of iOS SDK, we will create a simple one-to-one video conversation application to acquire deeper knowledge on how to use the iOS SDK.
-The application will have functions to display a list of users currently connected to the server, to select a conversation partner, to start and stop a one-to-one video conversation, and to accept the call.
+In the tutorial, you will create a one-on-one video chat app using the basic features of the iOS SDK.
+The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided as sample codes.
-If you want to try the completed application, [download the source codes](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and build in accordance with the build procedure of this tutorial.
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"}  provided in the samples.
+If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and and follow the tutorial to build.
 
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/sdk-tutorial-top-image.png"
-    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to perform signaling to interconnect terminals with videochat">
-  <figcaption class="figure-caption">Use ECLWebRTC to perform signaling to interconnect terminals with videochat</figcaption>
+    class="figure-img img-fluid rounded" alt="Use ECLWebRTC to start a video chat session between two devices">
+  <figcaption class="figure-caption">Use ECLWebRTC to start a video chat session between two devices</figcaption>
 </figure>
 
 <figure class="figure">
@@ -27,14 +27,14 @@ If you want to try the completed application, [download the source codes](https:
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
-[Continue the turorial](./ios-tutorial.html){: .btn .btn-primary }
+[Continue the tutorial](./ios-tutorial.html){: .btn .btn-primary }
 
-## Download SDK
+## Downloading the SDK
 {: #sdkdownload }
 
-### Case: Using CocoaPods
+### Downloading the SDK Using CocoaPods
 
-Add the contents to the Podfile.
+Add the the text below to your Podfile.
 
 *Podfile*
 {: .lang }
@@ -44,14 +44,14 @@ platform :ios, '8.0'
 pod 'SkyWay'
 ```
 
-You can install ECLWebRTC in your project.
+Install ECLWebRTC.
 
 ```sh
 $ pod setup
 $ pod install
 ```
 
-### Case: Downloading as file
+### Downloading the SDK as a file
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
@@ -62,7 +62,7 @@ $ pod install
   </div>
 </div>
 
-## Supported OS
+## Supported OS's
 
 iOS 8+
 
@@ -77,11 +77,9 @@ iOS 8+
   </div>
 </div>
 
-Provides difference information of API refference between ECLWebRTC and SkyWay on [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
+A list of changes between the old (SkyWay) SDK and the new ECLWebRTC SDK can be found on  [Github](https://github.com/nttcom/skyway-sdk-migration-docs/blob/master/android_sdk_next_version_api_diff.md){: _target="_blank" }.
 
 ## Sample Code
-
-Sample Code is open to public.
 
 <div class="row">
   <div class="col-md-9 col-lg-7 col-xl-6">
