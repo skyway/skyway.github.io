@@ -40,7 +40,7 @@ Application settings on the Dashboard are as follows.
 |Field|Explanation of Item|What to set it to for this tutorial|
 |:--|:--|:--|
 |Application Description|A short description of the application. This is only used when displaying applications on the Dashboard to help identify them. <br>Must be less than 128 characters.|ECLWebRTC Tutorial Application|
-|Available Domains|Domain names of the servers that will be serving the web-app. Multiple domains can be specified. <br>Example：foobar.com|`localhost`|
+|Available Domains|Domain names of the servers that will be serving the web-app. Multiple domains can be specified. <br>Example: foobar.com|`localhost`|
 |Enabled TURN|Allow users to use TURN (Traversal Using Relay around NAT) servers. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Enable SFU|Allow users to use SFU (Selective Forwarding Unit) server. SFU's allow sending/receiving video and voice through a central media relay server, avoiding many disadvantages of using multiple P2P connections. Please refer to the [SFU documentation](./sfu.html) for details.|ON|
 |Enabled listAllPeers API|Allow users to use the `listAllPeers API`, which gets a list of the PeerIDs of all connected users. Refer to [API Reference](./js-reference/Peer.html#listAllPeers) for details.|ON|

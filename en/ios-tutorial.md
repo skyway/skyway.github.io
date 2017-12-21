@@ -10,8 +10,8 @@ breadcrumb: [en/index.md, en/developer.md, en/ios-sdk.md]
 
 # iOS SDK Tutorial
 
-In the tutorial, you will create a one-on-one video chat web-app using the basic features of the iOS SDK.
-The web-app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
+In the tutorial, you will create a one-on-one video chat app using the basic features of the iOS SDK.
+The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
 The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided in the samples.
 If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and follow "build" section of this tutorial.
@@ -41,7 +41,7 @@ Application settings on the Dashboard are as follows.
 |Field|Explanation of Item|What to set it to for this tutorial|
 |:--|:--|:--|
 |Application Description|A short description of the application. This is only used when displaying applications on the Dashboard to help identify them. <br>Must be less than 128 characters.|ECLWebRTC Tutorial Application|
-|Available Domains|Domain names of the servers that will be serving the web-app. Multiple domains can be specified. <br>Example：foobar.com|`localhost`|
+|Available Domains|Domain names of the servers that will be serving the app. Multiple domains can be specified. <br>Example: foobar.com|`localhost`|
 |Enabled TURN|Allow users to use TURN (Traversal Using Relay around NAT) servers. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Enable SFU|Allow users to use SFU (Selective Forwarding Unit) server. SFU's allow sending/receiving video and voice through a central media relay server, avoiding many disadvantages of using multiple P2P connections. Please refer to the [SFU documentation](./sfu.html) for details.|ON|
 |Enabled listAllPeers API|Allow users to use the `listAllPeers API`, which gets a list of the PeerIDs of all connected users. Refer to [API Reference](./ios-reference/a00129.html#a87e4f8349efd2e9178af7e5a5b47708a) for details.|ON|
@@ -53,7 +53,7 @@ We have verified this tutorial with the following environment.
 
 - Xcode version 8.1
 - Verified device
-  - iPod nano(MKH22J/A)
+  - iPod touch (MKH22J/A)
 - iOS version
   - 10.3.2
 - Development language
@@ -70,7 +70,7 @@ Download the Xcode project used for this tutorial by cloning the repository belo
 
 ### Add the SDK to the project
 
-In this tutorial, we will use the method of manually downloading and adding the SDK.
+In this tutorial, we will manually download and add the SDK.
 
 1. Download the SDK [here](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)
 2. Unzip the file and move `SkyWay.framework` directly into the `skyway-ios-sdk-tutorial` directory.
@@ -111,7 +111,7 @@ Add the header file for the SDK to `ViewController.h`.
 2. Select account from Signing > Team used for Build.
 3. Connect the iOS device and select build.
 
-We expect some errors during here but the preparation is complete if the build passes and looks like the following image.
+We expect some errors during here but the preparation is complete if the build passes.
 
 <figure class="figure">
   <img src="{{ site.baseurl }}/images/ios-tutorial-splash-sc.png" class="figure-img img-fluid rounded" alt="The LaunchScreen is displayed on the device.">
@@ -239,7 +239,7 @@ Add the appropriate event callbacks to handle each event.
 
 ### Open Event
 
-Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other functions on the Peer object.
+Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other methods on the Peer object.
 An ID which uniquely identifies the client, known as the PeerID, can be obtained from the callback function. The PeerID can be specified or randomly generated on the server if one isn't specified.
 This code displays the PeerID after the connection to the server is established.
 
@@ -368,7 +368,7 @@ Select the PeerID of the partner you want to call and call him/her.
 
 #### Obtain the PeerID of your partner
 
-Tap the actionButton. If you aren't already connected to a peer, use the `listAllPeers()` function to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListViewController`.
+Tap the actionButton. If you aren't already connected to a peer, use the `listAllPeers()` method to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListViewController`.
 
 *Objective-C*
 {: .lang}
@@ -422,7 +422,7 @@ Tap the actionButton. If you aren't already connected to a peer, use the `listAl
 
 #### Connecting to the partner
 
-If a PeerID is selected in the `PeerListViewController`, the `didSelectPeer` method will be called. Call the `callWithId` function, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
+If a PeerID is selected in the `PeerListViewController`, the `didSelectPeer` method will be called. Call the `callWithId` method, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
 After calling, set up the necessary event callbacks.
 Details of `setMediaCallbacks` will be explained later.
 
@@ -447,7 +447,7 @@ Disconnect the connection with the partner.
 
 #### Terminate MediaConnection
 
-If the connection is alive when the actionButton is tapped, use the `close` function of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
+If the connection is alive when the actionButton is tapped, use the `close` method of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
 
 *Objective-C*
 {: .lang}
@@ -477,7 +477,7 @@ If the connection is alive when the actionButton is tapped, use the `close` func
 
 #### Close MediaStream
 
-When the `close` function of the MediaConnection object is called, use the `removeVideoRenderer` function to remove the video renderer assigned to the MediaStream.
+When the `close` method of the MediaConnection object is called, use the `removeVideoRenderer` method to remove the video renderer assigned to the MediaStream.
 
 *Objective-C*
 {: .lang}
@@ -502,7 +502,7 @@ When the `close` function of the MediaConnection object is called, use the `remo
 
 #### Cleaning up
 
-You should unset the callback methods set above when the MediaConnection is disconnected.
+You should unset the callback functions set above when the MediaConnection is disconnected.
 
 In addition, `unsetPeerCallbacks` will be used when we destroy Peer objects. It will not be used in this tutorial because we will not destroy any Peer objects.
 
@@ -665,7 +665,7 @@ The necessary steps to clean up will be run in the callback. Details will be exp
 ## Setup UI
 {: #setup-ui }
 
-Add functions related to the UI.
+Add methods related to the UI.
 As actionButton is used in toggle mode, change the label depending on the connection status.
 
 *Objective-C*
@@ -706,7 +706,7 @@ As actionButton is used in toggle mode, change the label depending on the connec
 {: #switch-camera}
 
 Finally, we're going to add a way to switch between device cameras.
-Use the `getCameraPosition` function to obtain the camera position used by the specified media stream. Then, set to the other setting to toggle cameras.
+Use the `getCameraPosition` method to obtain the camera position used by the specified media stream. Then, set to the other setting to toggle cameras.
 
 *Objective-C*
 {: .lang}
@@ -738,4 +738,4 @@ Use the `getCameraPosition` function to obtain the camera position used by the s
 ## Trying it out
 {: #testing }
 
-Build and deploy to two devices. Call a PeerID obtained using listAllPeers. It should connect and a video chat between the two windows should start. If you only have one iOS device, you can try connecting to a JavaScript web-app that uses the same API key.
+Build and deploy to two devices. Call a PeerID obtained using listAllPeers. It should connect and a video chat between the two devices should start. If you only have one iOS device, you can try connecting to a JavaScript web-app that uses the same API key.

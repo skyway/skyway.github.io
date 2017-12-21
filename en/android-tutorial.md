@@ -10,8 +10,8 @@ breadcrumb: [en/index.md, en/developer.md, en/android-sdk.md]
 
 # Android SDK tutorial
 
-In the tutorial, you will create a one-on-one video chat web-app using the basic features of the Android SDK.
-The web-app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
+In the tutorial, you will create a one-on-one video chat app using the basic features of the Android SDK.
+The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
 The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-android-sdk/tree/master/examples/p2p-videochat){:target="_blank"}  provided in the samples.
 If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-android-sdk/archive/master.zip) and follow "build" section of this tutorial.
@@ -41,7 +41,7 @@ Application settings on the Dashboard are as follows.
 |Field|Explanation of Item|What to set it to for this tutorial|
 |:--|:--|:--|
 |Application Description|A short description of the application. This is only used when displaying applications on the Dashboard to help identify them. <br>Must be less than 128 characters.|ECLWebRTC Tutorial Application|
-|Available Domains|Domain names of the servers that will be serving the web-app. Multiple domains can be specified. <br>Example：foobar.com|`localhost`|
+|Available Domains|Domain names of the servers that will be serving the app. Multiple domains can be specified. <br>Example: foobar.com|`localhost`|
 |Enabled TURN|Allow users to use TURN (Traversal Using Relay around NAT) servers. The TURN server makes communication possible by relaying media and data, even when P2P communication is not possible because the communication has to go through firewalls. The TURN server closest to the user will be selected automatically.|ON|
 |Enable SFU|Allow users to use SFU (Selective Forwarding Unit) server. SFU's allow sending/receiving video and voice through a central media relay server, avoiding many disadvantages of using multiple P2P connections. Please refer to the [SFU documentation](./sfu.html) for details.|ON|
 |Enabled listAllPeers API|Allow users to use the `listAllPeers API`, which gets a list of the PeerIDs of all connected users. Refer to [API Reference](./android-reference/) for details.|ON|
@@ -84,12 +84,12 @@ Here is an overview of each of the files contained in the project.
 - app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/MainActivity
   - Contains the main code for this app. You will be working with this file exclusively for this tutorial.
 - app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/PeerListDialogFragment
-  - Generates the ListDialog to display a list of PeerID..
-  - he completed version is included in the repository and will not be referenced in this tutorial.
+  - Generates the ListDialog to display a list of PeerIDs.
+  - The completed version is included in the repository and will not be referenced in this tutorial.
 - res/**
   - For resources and layout, the completed version are included in the repository and will not be referenced in this tutorial.
 
-## Import the library files
+## Import the classes
 
 *Java*
 {: .lang}
@@ -110,9 +110,9 @@ import io.skyway.Peer.PeerError;
 import io.skyway.Peer.PeerOption;
 ```
 
-## Add permissions to manifest file
+## Add features and permissions to manifest file
 
-Enable following permissions in the manifest file.
+Enable the following features and permissions in the manifest file.
 
 *Java*
 {: .lang}
@@ -132,7 +132,7 @@ Enable following permissions in the manifest file.
 
 ## Build
 
-Connect the device and click build. We expect some errors during here but the preparation is complete if the build passes and looks like the following image.
+Connect the device and click build. We expect some errors during here but the preparation is complete if the build passes.
 
 ## Connect to the ECLWebRTC server
 {: #connect-server }
@@ -204,7 +204,7 @@ final Activity activity = this;
 
 ### Create Peer Object
 
-Create a Peer object in the viewDidLoad method.
+Create a Peer object in the onCreate method.
 
 When creating the Peer object, specify the API key, domain name and debug level by using the PeerOption class.
 
@@ -231,7 +231,7 @@ Add the appropriate event callbacks to handle each event.
 
 ### Open Event
 
-Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other functions on the Peer object.
+Emitted when the connection to the ECLWebRTC server is ready to use. You should wait for this event before calling any other methods on the Peer object.
 An ID which uniquely identifies the client, known as the PeerID, can be obtained from the callback function. The PeerID can be specified or randomly generated on the server if one isn't specified.
 This code displays the PeerID after the connection to the server is established.
 
@@ -283,9 +283,9 @@ else {
 }
 ```
 
-####Requesting access to the camera/microphone 1
+#### Requesting access to the camera/microphone 2
 
-If permissions were not already granted and had to be obtained with `requestPermissions()`, call `startLocalStream()` in the when permission is granted.
+If permissions were not already granted and had to be obtained with `requestPermissions()`, call `startLocalStream()` in the `onRequestPermissionResult()` callback when permission is granted.
 
 *Java*
 {: .lang}
@@ -342,7 +342,7 @@ void startLocalStream() {
 
 #### Playing the MediaStream
 
-Initialize the Navigator class, specify the `constraints` for the getUserMedia function and execute it to obtain your local MediaStream (local stream).
+Initialize the Navigator class, specify the `constraints` for the getUserMedia method and execute it to obtain your local MediaStream (local stream).
 Use the addVideoRenderer method to allocate a video renderer (Canvas object) for the MediaStream object you got from getUserMedia.
 
 *Java*
@@ -455,7 +455,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 
 ##### Connecting to the partner
 
-In the showPeerIDs function, use the `listAllPeers()` function to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListDialogFragment`.
+In the showPeerIDs method, use the `listAllPeers()` method to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListDialogFragment`.
 
 *Java*
 {: .lang}
@@ -525,7 +525,7 @@ void showPeerIDs() {
 
 ##### Calling
 
-If a PeerID is selected in the `PeerListDialogFragment`, the `onPeerSelected()` function will be called. Call the `call()` function, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
+If a PeerID is selected in the `PeerListDialogFragment`, the `onPeerSelected()` method will be called. Call the `call()` method, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
 After calling, set up necessary event callbacks. Details of `setMediaCallbacks` will be explained later.
 
 *Java*
@@ -562,7 +562,7 @@ Disconnect the connection with the partner.
 
 ##### Terminate MediaConnection
 
-If the connection is alive when the actionButton (Make Call button) is tapped, use the `close()` function of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
+If the connection is alive when the actionButton (Make Call button) is tapped, use the `close()` method of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
 
 *Java*
 {: .lang}
@@ -596,7 +596,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 
 ##### Close MediaStream
 
-When the `close()` function of the MediaConnection object is called, use the `removeVideoRenderer()` function to remove the video renderer assigned to the MediaStream.
+When the `close()` method of the MediaConnection object is called, use the `removeVideoRenderer()` method to remove the video renderer assigned to the MediaStream.
 
 *Java*
 {: .lang}
@@ -619,9 +619,9 @@ void closeRemoteStream(){
 #### Receiving calls
 
 Answer when a partner requests a connection.
-When someone is trying to establish a media connection with you, `Peer.PeerEventEnum.CALL` will fire. Call the `answer()` function on the MediaConnection object you get from the callback to accept the connection.
+When someone is trying to establish a media connection with you, `Peer.PeerEventEnum.CALL` will fire. Call the `answer()` method on the MediaConnection object you get from the callback to accept the connection.
 If you set your own `_localStream`, you will be able to send video and voice to your partner.
-Use `setMediaCallbacks` to set event handlers like you did after `callWithId`. Details will be explained later.
+Use `setMediaCallbacks` to set event handlers like you did after `call`. Details will be explained later.
 
 *Java*
 {: .lang}
@@ -652,7 +652,7 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 Here we set up the event handlers on the `MediaConnection` object we got above.
 `MediaConnection.MediaEventEnum.STREAM` will fire when a MediaStream is received from your partner.
 
-In the callback, update the connection status on the UI and use the `addVideoRenderer` function on the MediaStream object of the partner, to play the received stream.
+In the callback, update the connection status on the UI and use the `addVideoRenderer` method on the MediaStream object of the partner, to play the received stream.
 
 *Java*
 {: .lang}
@@ -729,7 +729,7 @@ void setMediaCallbacks() {
 
 ### Activity Lifecycle Events
 
-#### Override Lifecycle functions
+#### Override Lifecycle methods
 
 Override and add code to handle lifecycle changes.
 In the onDestroy method, call `destroyPeer()` to destroy the Peer object. Details will be explained later.
@@ -878,7 +878,7 @@ void unsetMediaCallbacks() {
 ## Setup UI
 {: #setup-ui }
 
-Add functions related to the UI.
+Add methods related to the UI.
 As actionButton is used in toggle mode, change the label depending on the connection status by implementing `updateActionButtonTitle()`.
 
 *Java*
@@ -939,4 +939,4 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 ## Trying it out
 {: #testing }
 
-Build and deploy to two devices. Call a PeerID obtained using listAllPeers. It should connect and a video chat between the two windows should start. If you only have one Android device, you can try connecting to a JavaScript web-app that uses the same API key.
+Build and deploy to two devices. Call a PeerID obtained using listAllPeers. It should connect and a video chat between the two devices should start. If you only have one Android device, you can try connecting to a JavaScript web-app that uses the same API key.

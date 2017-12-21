@@ -26,6 +26,8 @@ If you want to try the finished app, [download the source code](https://github.c
   <figcaption class="figure-caption">Screenshot of video chat</figcaption>
 </figure>
 
+[Continue the tutorial](android-tutorial.html){: .btn .btn-primary }
+
 ##  Downloading the SDK
 {: #sdkdownload }
 
