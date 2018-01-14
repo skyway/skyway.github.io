@@ -2426,8 +2426,8 @@ a.text-dark:focus, a.text-dark:hover { color: #1d2124 !important; }
 
 .highlight { background-color: #f8f8f8; }
 
-@media (max-width: 575px) { body { margin-bottom: 766px; } }
-@media (min-width: 576px) and (max-width: 767px) { body { margin-bottom: 752px; } }
+@media (max-width: 575px) { body { margin-bottom: 781px; } }
+@media (min-width: 576px) and (max-width: 767px) { body { margin-bottom: 767px; } }
 @media (min-width: 768px) and (max-width: 991px) { body { margin-bottom: 426px; } }
 @media (min-width: 992px) { body { margin-bottom: 389px; } }
 
@@ -2439,8 +2439,8 @@ header .navbar-toggler-right { right: -1rem; }
 html { position: relative; min-height: 100%; }
 
 .site-footer { color: rgba(255, 255, 255, 0.8); padding-top: 20px; bottom: 0; width: 100%; position: absolute; }
-@media (max-width: 575px) { .site-footer { height: 726px; } }
-@media (min-width: 576px) and (max-width: 767px) { .site-footer { height: 712px; }
+@media (max-width: 575px) { .site-footer { height: 741px; } }
+@media (min-width: 576px) and (max-width: 767px) { .site-footer { height: 727px; }
   .site-footer > .container { padding-right: 0; padding-left: 0; } }
 @media (min-width: 768px) and (max-width: 991px) { .site-footer { height: 386px; } }
 @media (min-width: 992px) { .site-footer { height: 349px; } }
