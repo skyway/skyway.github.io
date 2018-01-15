@@ -40,6 +40,14 @@ header {
     }
   }
 
+  // window width (768~991px)
+  @include media-breakpoint-only(md) {
+    .navbar-expand-md .navbar-nav .nav-link {
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
+    }
+  }
+
   .navbar-toggler-right {
     right: -1rem;
   }
