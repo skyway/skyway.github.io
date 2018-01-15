@@ -40,6 +40,16 @@
           </li>
           {% endif %}
 
+          {% if page.title == 'パートナー' %}
+          <li class="nav-item active">
+            <a class="nav-link" href="./partner.html">パートナー<span class="sr-only">(current)</span></a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="./partner.html">パートナー</a>
+          </li>
+          {% endif %}
+
           {% if page.title == 'サポート' %}
           <li class="nav-item active">
             <a class="nav-link" href="./support.html">サポート<span class="sr-only">(current)</span></a>

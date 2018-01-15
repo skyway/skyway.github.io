@@ -8,8 +8,8 @@
 
 $color-base: $blue;
 $color-sub: $gray-600;
-$footer-height-xs: 726px;
-$footer-height-sm: 712px;
+$footer-height-xs: 741px;
+$footer-height-sm: 727px;
 $footer-height-md: 386px;
 $footer-height-lg: 349px;
 
@@ -37,6 +37,14 @@ header {
   @include media-breakpoint-down(sm) {
     .navbar-collapse {
       padding-top: 4px;
+    }
+  }
+
+  // window width (768~991px)
+  @include media-breakpoint-only(md) {
+    .navbar-expand-md .navbar-nav .nav-link {
+      padding-left: 0.4rem;
+      padding-right: 0.4rem;
     }
   }
 
