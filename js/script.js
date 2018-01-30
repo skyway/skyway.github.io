@@ -50,6 +50,19 @@ $(function() {  // DOMが用意できてから実行
     history.replaceState(null, null, location.href.replace(search, ''));
   }
 
+  // 2018.3末までmigrationページのアコーディオンを出し分け
+  // 旧SkyWay→新SkyWay
+  var hash = location.hash;
+  var STRING_OF_NEWSDK = '#toECLWebRTC';
+  var STRING_OF_MIGRATION = '#toEnterprise';
+
+  if (hash && hash.split('?')[0].indexOf(STRING_OF_NEWSDK) !== -1) {
+    $('#toECLWebRTC').collapse();
+  }
+  if (hash && hash.split('?')[0].indexOf(STRING_OF_MIGRATION) !== -1) {
+    $('#toEnterprise').collapse();
+  }
+
   // <h2>~<h6>ホバー時にアンカーアイコンを表示
 
   var headers = '#main > h2, #main > h3, #main > h4, #main > h5, #main > h6';
