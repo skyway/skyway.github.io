@@ -74,8 +74,8 @@ const peer = new Peer({key: 'your-api-key'});
 
 ## 動作確認済みブラウザ
 
-- [Google Chrome](https://www.google.com/chrome){: target="_blank"} 最新安定版
-- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 最新安定版
+- [Google Chrome](https://www.google.com/chrome){: target="_blank"} 安定版の最新2バージョン
+- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 安定版の最新2バージョン
 
 ## APIリファレンス
 

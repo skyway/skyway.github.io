@@ -73,8 +73,8 @@ const peer = new Peer({key: 'your-api-key'});
 
 ##  Verified Browsers
 
-- [Google Chrome](https://www.google.com/chrome){: target="_blank"} the newest stable version
-- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} the newest stable version
+- [Google Chrome](https://www.google.com/chrome){: target="_blank"} latest two stable versions
+- [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} latest two stable versions
 
 ## API Reference
 
