@@ -123,7 +123,8 @@ breadcrumb: [index.md, developer.md]
         </p>
         <small class="text-muted">APIキーの移行には、APIキーとシークレットキーの情報が必要です。<br>
         Community EditionからEnterprise Editionへのみ移行可能で、Community Editionへと戻すことはできません。<br>
-        APIキーの移行は、即時反映され、移行後から利用料が発生します。</small>
+        APIキーの移行は、即時反映され、移行中にサービスが停止することはありません。<br>
+        Community Editionでの利用量は移行後も確認できますが、利用料は移行後からの利用に応じて発生します。</small>
       </div>
     </div>
   </div>
