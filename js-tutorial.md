@@ -413,7 +413,7 @@ PeerIDを元に削除します。
 
 ```js
 function removeVideo(peerId){
-    $('#'+peerId).remove();
+    $('#their-video').get(0).srcObject = undefined;
 }
 ```
 
