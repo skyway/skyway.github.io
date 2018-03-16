@@ -104,27 +104,20 @@ breadcrumb: [index.md, developer.md]
     <div id="toEnterprise" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
       <div class="card-body">
         <h2>Community EditionからEnterprise Editionへの切り替えについて</h2>
-        <p>
-          Community EditionからEnterprise Editionへ、サービスを停止させずにAPIキーを引き継ぐことが可能です。<br>
-          サービスの成長に合わせて、Enterprise Editionへの移行をご検討ください。
-        </p>
         <h3>1. Enterprise Editionへの申し込み</h3>
         <p><a href="./contactus.html">新規登録ページ</a>よりEnterprise Editionへの申し込みをお願いします。</p>
         <a href="./contactus.html" class="btn btn-primary">Enterprise Edition申し込み</a>
         <h3>2. 移行するCommunity EditionのAPIキー情報を確認する</h3>
         <p>
-          <a href="https://skyway.io/ds/">Community Editionのダッシュボード</a>で、移行するAPIキーとそのシークレットキーを確認してください。<br>
-          シークレットキーは、アプリケーション一覧の設定変更より確認できます。
+          Community EditionからEnterprise EditionへAPIキーを引継ぐ機能は、近日中に提供予定です。<br>
+          提供開始まではEnterprise Editionのダッシュボード画面にてAPIキーを新規発行し、差し替えをお願いします。
         </p>
-        <small class="text-muted">ステータスが「利用中」のAPIキーも移行可能です。</small>
-        <h3>3. APIキーをEnterprise Editionへ移行する</h3>
+        <h4>Enterprise Editionへの移行タイミングについて</h4>
         <p>
-          <a href="https://b-portal.ntt.com/">Enterprise Editionのダッシュボード</a>で、アプリケーション移行メニューよりAPIキーを移行してください。
+          Community Editionのダッシュボードにて月間利用量を確認できる機能を、近日中に提供予定です。<br>
+          また、利用量がCommunity Editionの利用制限に近い方には個別連絡を実施しております。<br>
+          サポート、SLAが必要ない場合は、まずはCommunity Editionの利用をご検討ください。
         </p>
-        <small class="text-muted">APIキーの移行には、APIキーとシークレットキーの情報が必要です。<br>
-        Community EditionからEnterprise Editionへのみ移行可能で、Community Editionへと戻すことはできません。<br>
-        APIキーの移行は、即時反映され、移行中にサービスが停止することはありません。<br>
-        Community Editionでの利用量は移行後も確認できますが、利用料は移行後からの利用に応じて発生します。</small>
       </div>
     </div>
   </div>
