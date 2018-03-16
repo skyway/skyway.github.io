@@ -45,12 +45,12 @@ breadcrumb: [index.md, developer.md]
         <p>
           トライアル提供していた旧SkyWayは2018年3月に提供を終了します。
           2017年9月6日以前にSkyWayに登録された方は、Community Editionへの新規登録と、新SDKへの移行をお願いします。
-          （参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較)</a><br>
+          （参考: <a href="https://support.skyway.io/hc/ja/articles/115012186787" target="_blank">新旧SkyWayの機能比較</a>）<br>
           <small class="text-muted"><a href="#moverio">EPSON MOVERIO向けアプリを開発される方へ</a></small>
         </p>
         <h3>1. Community Edition新規登録</h3>
         <p>
-          Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。
+          Community Editionヘの<a href="./signup.html">新規登録</a>をお願いします。<br>
           Community Editionは無料でご利用いただけます。詳細は<a href="./pricing.html">料金ページ</a>をご確認ください。<br>
           <a href="./contactus.html">Enterprise Editionに申し込み</a>いただく場合も、以下の手順は同じです。
         </p>
@@ -59,7 +59,7 @@ breadcrumb: [index.md, developer.md]
         </p>
         <h3>2. APIキー発行</h3>
         <p>
-          旧SkyWayのAPIキーは、新SDKで利用できません。
+          旧SkyWayのAPIキーは、新SDKで利用できません。<br>
           以下の手順を参考にして、ダッシュボードで新しいAPIキーを発行してください。
         </p>
         <ul>
@@ -107,15 +107,15 @@ breadcrumb: [index.md, developer.md]
         <h3>1. Enterprise Editionへの申し込み</h3>
         <p><a href="./contactus.html">新規登録ページ</a>よりEnterprise Editionへの申し込みをお願いします。</p>
         <a href="./contactus.html" class="btn btn-primary">Enterprise Edition申し込み</a>
-        <h3>2. Community Editionからの移行</h3>
+        <h3>2. 移行するCommunity EditionのAPIキー情報を確認する</h3>
         <p>
           Community EditionからEnterprise EditionへAPIキーを引継ぐ機能は、近日中に提供予定です。<br>
           提供開始まではEnterprise Editionのダッシュボード画面にてAPIキーを新規発行し、差し替えをお願いします。
         </p>
-        <h4>Enterprise editionへの移行タイミングについて</h4>
+        <h4>Enterprise Editionへの移行タイミングについて</h4>
         <p>
-          Community Editionのダッシュボードにて月間の利用量を確認できる機能を、近日中に提供予定です。<br>
-          SkyWayをご利用いただいていた方の中で、利用制限に達している方には個別連絡を実施しております。
+          Community Editionのダッシュボードにて月間利用量を確認できる機能を、近日中に提供予定です。<br>
+          また、利用量がCommunity Editionの利用制限に近い方には個別連絡を実施しております。<br>
           サポート、SLAが必要ない場合は、まずはCommunity Editionの利用をご検討ください。
         </p>
       </div>
