@@ -70,7 +70,7 @@ Download the Android Studio project used for this tutorial by cloning the reposi
 
 ## Add the SDK to the project
 
-1. Download the SDK [here](https://github.com/skyway/skyway-android-sdk/archive/master.zip)
+1. Download the SDK on [GitHub](https://github.com/skyway/skyway-android-sdk/releases/latest).
 2. Unzip the file and move `skyway.arr` directly into the `app/libs` directory.
 3. Open the development project with an IDE (e.g. Android Studio), and complete build tool (e.g. Gradle) settings.
 

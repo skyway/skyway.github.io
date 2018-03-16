@@ -33,10 +33,7 @@ If you want to try the finished app, [download the source code](https://github.c
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/skyway-android-sdk/archive/master.zip" class="btn btn-primary">Download as ZIP</a>
-  </div>
-  <div>
-    <a href="https://github.com/skyway/skyway-android-sdk" class="btn btn-outline-primary" target="_blank">Clone on GitHub</a><br>
+    <a href="https://github.com/skyway/skyway-android-sdk/releases/latest" class="btn btn-primary">Download skyway.aar</a>
   </div>
 </div>
 
