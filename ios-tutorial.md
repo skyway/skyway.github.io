@@ -77,7 +77,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 SDKのバイナリファイルを配置します。  
 今回のチュートリアルでは、ダウンロードしたファイルを手動でプロジェクトに組込む手順を紹介します。  
 
-1. SDKを[こちら](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)からダウンロード
+1. SDKを[GitHub](https://github.com/skyway/skyway-ios-sdk/releases/latest)からダウンロード
 2. ZIPファイルを解凍後、`SkyWay.framework`を、`skyway-ios-sdk-tutorial`ディレクトリ直下に配置
 3. `skyway-ios-sdk-tutorial.xcodeproj`をダブルクリックしプロジェクトを開く
 4. 左ペインのファイルツリー上で右クリックし`Add File to…`を選択し、先程配置した`SkyWay.framework`をファイルツリーに追加
