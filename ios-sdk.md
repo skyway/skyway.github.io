@@ -54,10 +54,7 @@ $ pod install
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/skyway-ios-sdk/archive/master.zip" class="btn btn-primary">ZIPでダウンロード</a>
-  </div>
-  <div>
-    <a href="https://github.com/skyway/skyway-ios-sdk" class="btn btn-secondary" target="_blank">GitHubでクローン</a><br>
+    <a href="https://github.com/skyway/skyway-ios-sdk/releases/latest" class="btn btn-primary">ZIPでダウンロード</a>
   </div>
 </div>
 
