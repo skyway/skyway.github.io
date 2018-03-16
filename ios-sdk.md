@@ -54,7 +54,7 @@ $ pod install
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/skyway-ios-sdk/releases/latest" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-ios-sdk/releases/latest" class="btn btn-primary">SkyWay.framework.zipをダウンロード</a>
   </div>
 </div>
 

@@ -33,7 +33,7 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 <div class="d-sm-flex">
   <div class="pr-1 pb-2">
-    <a href="https://github.com/skyway/skyway-android-sdk/releases/latest" class="btn btn-primary">ZIPでダウンロード</a>
+    <a href="https://github.com/skyway/skyway-android-sdk/releases/latest" class="btn btn-primary">skyway.aarをダウンロード</a>
   </div>
 </div>
 

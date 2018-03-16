@@ -72,7 +72,7 @@ Download the Xcode project used for this tutorial by cloning the repository belo
 
 In this tutorial, we will manually download and add the SDK.
 
-1. Download the SDK [here](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)
+1. Download the SDK on [GitHub](https://github.com/skyway/skyway-ios-sdk/releases/latest).
 2. Unzip the file and move `SkyWay.framework` directly into the `skyway-ios-sdk-tutorial` directory.
 3. Double click `skyway-ios-sdk-tutorial.xcodeproj` to open the project.
 4. Right-click on the file tree on the left panel and select [ **Add File to…** ] to add `SkyWay.framework`.
