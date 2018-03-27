@@ -32,8 +32,7 @@ breadcrumb: [index.md]
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">旧SkyWay</h3>
-        <p class="card-text">トライアル提供していた旧SkyWayは2018年3月をもってサービスを終了します。<a href="./migration.html">Community Editionへの移行</a>をお願いします</p>
-        <p><a href="https://skyway.io/ds/" class="btn btn-secondary">旧SkyWayにログイン</a></p>
+        <p class="card-text">トライアル版のSkyWayは2018年3月22日をもって提供を終了しました。無償でご利用いただけるCommunity Editionをご利用ください。</p>
       </div>
     </div>
   </div>
