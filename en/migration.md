@@ -70,16 +70,19 @@ breadcrumb: [en/index.md, en/developer.md]
       <div class="card-body">
         <h2>How to migrate from the Community Edition to the Enterprise Edition</h2>
         <h3>1. Registration Enterprise Edition</h3>
-        Please make a <a href="./contactus.html">registration</a> for the Enterprise Edition.
+        <p>Please make a <a href="./contactus.html">registration</a> for the Enterprise Edition.
         </p>
         <a href="./contactus.html" class="btn btn-primary">Registration Enterprise Edition</a>
         <h3>2. Migration from Community Edition</h3>
         <p>
-          Function to succeed APIKey from the Community Edition to the Enterprise Edition will be available soon. Until the function becomes available, please generate a new APIKey on the Dashboard screen and replace the APIKey.
+          On the Dashboard of Enterprise Edition, the APIKey of Community Edition can be migrated to Enterprise Edition.
         </p>
         <h4>Migration Timing to the Enterprise Edition</h4>
         <p>
-          A function to check monthly usage on the Dashboard of the Community Edition will be available soon. Among the customers who used SkyWay, those who reached the use limit are contacted separately. If you do not need supports or SLA, please consider the use of the Community Edition first.
+          A function to check monthly usage on the Dashboard of the Community Edition is available. If you reach the usage limit of the Community Edition, please <a href="./contactus.html">subscribe the Enterprise Edition.</a><br>
+          <small class="text-muted">
+            It will take about one week from application to create the account of Enterprise Edition. Just creating the account does not incur a cost.
+          </small>
         </p>
       </div>
     </div>
