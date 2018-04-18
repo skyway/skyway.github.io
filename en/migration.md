@@ -79,7 +79,10 @@ breadcrumb: [en/index.md, en/developer.md]
         </p>
         <h4>Migration Timing to the Enterprise Edition</h4>
         <p>
-          A function to check monthly usage on the Dashboard of the Community Edition is available. If you reach the usage limit of the Community Edition, please consider making a <a href="./contactus.html">registration for the Enterprise Edition.</a>
+          A function to check monthly usage on the Dashboard of the Community Edition is available. If you reach the usage limit of the Community Edition, please <a href="./contactus.html">subscribe the Enterprise Edition.</a><br>
+          <small class="text-muted">
+            It will take about one week from application to create the account of Enterprise Edition. Just creating the account does not incur a cost.
+          </small>
         </p>
       </div>
     </div>

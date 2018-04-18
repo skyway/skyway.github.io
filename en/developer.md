@@ -175,6 +175,16 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
 Documents useful for development.
 
 <div id="docs-div" class="row row-for-slim-card">
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">How to migrate to Enterprise Edition</h3>
+                <p class="card-text">It is possible to migrate the API key from the Community Edition to the Enterprise Edition without stopping the service.How to migrate from the Community Edition to the Enterprise Edition.</p>
+                <small class="text-muted">Apr 19th, 2018</small>
+                <a href="./migration.html#toEnterprise" class="btn btn-outline-primary">Migration to Enterprise Edition</a>
+            </div>
+        </div>
+    </div>
     <div class="col-12 col-md-6 col-lg-4">
         <div class="card">
             <div class="card-body">
@@ -182,16 +192,6 @@ Documents useful for development.
                 <p class="card-text">This article describes basic concept of ECLWebRTC. Recommended for developers interested in knowing about the communication model of ECLWebRTC.</p>
                 <small class="text-muted">Dec 8th, 2017</small>
                 <a href="./communication-model.html" class="btn btn-outline-primary">Communication Model</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">How to migrate to ECLWebRTC</h3>
-                <p class="card-text">SkyWay will be terminated as of March, 2018. Please migrate from SkyWay to ECLWebRTC using this document.</p>
-                <small class="text-muted">Sep 7th, 2017</small>
-                <a href="./migration.html" class="btn btn-outline-primary">Migration</a>
             </div>
         </div>
     </div>
