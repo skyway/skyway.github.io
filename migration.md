@@ -115,8 +115,11 @@ breadcrumb: [index.md, developer.md]
         <h4>Enterprise Editionへの移行タイミングについて</h4>
         <p>
           Community Editionのダッシュボードにて月間利用量を確認できます。<br>
-          また、利用量がCommunity Editionの利用制限に近い方には個別連絡を実施しております。<br>
-          サポート、SLAが必要ない場合は、まずはCommunity Editionの利用をご検討ください。
+          利用量がCommunity Editionの利用制限に近い方は、<a href="./contactus.html">Enterprise Editionへの申し込み</a>をご検討ください。<br>
+          <small class="text-muted">
+            Enterprise Editionの申し込みからアカウント作成まで1週間程度かかる場合があります。<br>
+            アカウント作成によって費用は発生しません。
+          </small>
         </p>
       </div>
     </div>

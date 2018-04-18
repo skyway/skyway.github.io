@@ -79,7 +79,7 @@ breadcrumb: [en/index.md, en/developer.md]
         </p>
         <h4>Migration Timing to the Enterprise Edition</h4>
         <p>
-          A function to check monthly usage on the Dashboard of the Community Edition is available. Among the customers who used SkyWay, those who reached the use limit are contacted separately. If you do not need supports or SLA, please consider the use of the Community Edition first.
+          A function to check monthly usage on the Dashboard of the Community Edition is available. If you reach the usage limit of the Community Edition, please consider making a <a href="./contactus.html">registration for the Enterprise Edition.</a>
         </p>
       </div>
     </div>
