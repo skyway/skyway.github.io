@@ -107,14 +107,14 @@ breadcrumb: [index.md, developer.md]
         <h3>1. Enterprise Editionへの申し込み</h3>
         <p><a href="./contactus.html">新規登録ページ</a>よりEnterprise Editionへの申し込みをお願いします。</p>
         <a href="./contactus.html" class="btn btn-primary">Enterprise Edition申し込み</a>
-        <h3>2. 移行するCommunity EditionのAPIキー情報を確認する</h3>
+        <h3>2. Community EditionからEnterprise EditionへのAPIキー移行</h3>
         <p>
-          Community EditionからEnterprise EditionへAPIキーを引継ぐ機能は、近日中に提供予定です。<br>
-          提供開始まではEnterprise Editionのダッシュボード画面にてAPIキーを新規発行し、差し替えをお願いします。
+          Enterprise Editionのダッシュボードより、<br>
+          Community EditionからEnterprise EditionへAPIキーを移行できます。
         </p>
         <h4>Enterprise Editionへの移行タイミングについて</h4>
         <p>
-          Community Editionのダッシュボードにて月間利用量を確認できる機能を、近日中に提供予定です。<br>
+          Community Editionのダッシュボードにて月間利用量を確認できます。<br>
           また、利用量がCommunity Editionの利用制限に近い方には個別連絡を実施しております。<br>
           サポート、SLAが必要ない場合は、まずはCommunity Editionの利用をご検討ください。
         </p>
