@@ -68,7 +68,7 @@ Download the Android Studio project used for this tutorial by cloning the reposi
 
 - [https://github.com/skyway/skyway-android-sdk-tutorial](https://github.com/skyway/skyway-android-sdk-tutorial)
 
-## Add the SDK to the project
+### Add the SDK to the project
 
 1. Download the SDK on [GitHub](https://github.com/skyway/skyway-android-sdk/releases/latest).
 2. Unzip the file and move `skyway.aar` directly into the `app/libs` directory.
@@ -89,7 +89,7 @@ Here is an overview of each of the files contained in the project.
 - res/**
   - For resources and layout, the completed version are included in the repository and will not be referenced in this tutorial.
 
-## Import the classes
+### Import the classes
 
 *Java*
 {: .lang}
@@ -110,7 +110,7 @@ import io.skyway.Peer.PeerError;
 import io.skyway.Peer.PeerOption;
 ```
 
-## Add features and permissions to manifest file
+### Add features and permissions to manifest file
 
 Enable the following features and permissions in the manifest file.
 
@@ -130,7 +130,7 @@ Enable the following features and permissions in the manifest file.
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 ```
 
-## Build
+### Build
 
 Connect the device and click build. We expect some errors during here but the preparation is complete if the build passes.
 
@@ -416,14 +416,14 @@ _peer.on(Peer.PeerEventEnum.DISCONNECTED, new OnCallback() {
 });
 ```
 
-### Calling/Disconnecting/Receiving Process
+## Calling/Disconnecting/Receiving Process
 {: #call-event }
 
-#### Calling
+### Calling
 
 Select the PeerID of the partner you want to call and call him/her.
 
-##### Obtain the PeerID of your partner
+#### Obtain the PeerID of your partner
 
 Tap the Make Call button. If you aren't already connected to a peer, use the showPeerIDs method to obtain a list of all other user's PeerIDs.
 
@@ -453,7 +453,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### Connecting to the partner
+#### Connecting to the partner
 
 In the showPeerIDs method, use the `listAllPeers()` method to obtain a list of all other user's PeerIDs. Delete your own ID from the obtained list and show the list with the `PeerListDialogFragment`.
 
@@ -523,7 +523,7 @@ void showPeerIDs() {
 }
 ```
 
-##### Calling
+#### Calling
 
 If a PeerID is selected in the `PeerListDialogFragment`, the `onPeerSelected()` method will be called. Call the `call()` method, passing the PeerID of the partner and your own localStream as arguments, to connect to the specified PeerID.
 After calling, set up necessary event callbacks. Details of `setMediaCallbacks` will be explained later.
@@ -556,11 +556,11 @@ void onPeerSelected(String strPeerId) {
 }
 ```
 
-#### Disconnecting
+### Disconnecting
 
 Disconnect the connection with the partner.
 
-##### Terminate MediaConnection
+#### Terminate MediaConnection
 
 If the connection is alive when the actionButton (Make Call button) is tapped, use the `close()` method of the MediaConnection object to disconnect the specified MediaConnection and clean up using `closeRemoteStream`, which will be explained later.
 
@@ -594,7 +594,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### Close MediaStream
+#### Close MediaStream
 
 When the `close()` method of the MediaConnection object is called, use the `removeVideoRenderer()` method to remove the video renderer assigned to the MediaStream.
 
@@ -616,7 +616,7 @@ void closeRemoteStream(){
 }
 ```
 
-#### Receiving calls
+### Receiving calls
 
 Answer when a partner requests a connection.
 When someone is trying to establish a media connection with you, `Peer.PeerEventEnum.CALL` will fire. Call the `answer()` method on the MediaConnection object you get from the callback to accept the connection.
@@ -647,7 +647,7 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 ```
 
 
-#### Event handlers on the MediaConnection object
+### Event handlers on the MediaConnection object
 
 Here we set up the event handlers on the `MediaConnection` object we got above.
 `MediaConnection.MediaEventEnum.STREAM` will fire when a MediaStream is received from your partner.
@@ -727,9 +727,9 @@ void setMediaCallbacks() {
 }
 ```
 
-### Activity Lifecycle Events
+## Activity Lifecycle Events
 
-#### Override Lifecycle methods
+### Override Lifecycle methods
 
 Override and add code to handle lifecycle changes.
 In the onDestroy method, call `destroyPeer()` to destroy the Peer object. Details will be explained later.
@@ -782,7 +782,7 @@ protected void onDestroy() {
 }
 ```
 
-#### Cleaning up when destroying the Peer
+### Cleaning up when destroying the Peer
 
 
 Add necessary processes at the timing when Activity is destroyed. An outline of the processes executed here is as follows.
@@ -837,7 +837,7 @@ private void destroyPeer() {
 ```
 
 
-#### Cleaning up the event handlers
+### Cleaning up the event handlers
 
 Unset the event handlers on the MediaConnection and Peer objects.
 
