@@ -71,7 +71,7 @@ Download the Android Studio project used for this tutorial by cloning the reposi
 ## Add the SDK to the project
 
 1. Download the SDK on [GitHub](https://github.com/skyway/skyway-android-sdk/releases/latest).
-2. Unzip the file and move `skyway.arr` directly into the `app/libs` directory.
+2. Unzip the file and move `skyway.aar` directly into the `app/libs` directory.
 3. Open the development project with an IDE (e.g. Android Studio), and complete build tool (e.g. Gradle) settings.
 
 <figure class="figure">
@@ -81,9 +81,9 @@ Download the Android Studio project used for this tutorial by cloning the reposi
 
 Here is an overview of each of the files contained in the project.
 
-- app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/MainActivity
+- app/src/main/java/com.ntt.ecl.webrtc.sample_p2p_videochat/MainActivity
   - Contains the main code for this app. You will be working with this file exclusively for this tutorial.
-- app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/PeerListDialogFragment
+- app/src/main/java/com.ntt.ecl.webrtc.sample_p2p_videochat/PeerListDialogFragment
   - Generates the ListDialog to display a list of PeerIDs.
   - The completed version is included in the repository and will not be referenced in this tutorial.
 - res/**
