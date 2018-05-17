@@ -72,12 +72,12 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 - [https://github.com/skyway/skyway-android-sdk-tutorial](https://github.com/skyway/skyway-android-sdk-tutorial)
 
-## SDKをプロジェクトに追加する
+### SDKをプロジェクトに追加する
 
 SDKのバイナリファイルを配置します。  
 
 1. SDKを[GitHub](https://github.com/skyway/skyway-android-sdk/releases/latest)からダウンロード
-2. ZIPファイルを解凍後、`skyway.arr`を、`app/libs`ディレクトリ直下に配置
+2. ZIPファイルを解凍後、`skyway.aar`を、`app/libs`ディレクトリ直下に配置
 3. 開発用プロジェクトをAndroid Studio等のIDEで開き、ビルドツールGradle等の設定を済ませる
 
 <figure class="figure">
@@ -88,15 +88,15 @@ SDKのバイナリファイルを配置します。
 
 プロジェクトに含まれる主要ファイルの説明は以下のとおりです。
 
-- app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/MainActivity
+- app/src/main/java/com.ntt.ecl.webrtc.sample_p2p_videochat/MainActivity
   - 今回のチュートリアルで主に必要なコードを追記していくコントローラー
-- app/src/main/java/com.ntt.ecl.webrtc.tutorial_sdk_android/PeerListDialogFragment
+- app/src/main/java/com.ntt.ecl.webrtc.sample_p2p_videochat/PeerListDialogFragment
   - PeerID一覧を表示するListDialogを生成するコントローラー
   - 完成版が同梱されており、今回のチュートリアルでは触れません
 - res/**
   - リソースやレイアウトについては完成版が同梱されており、今回のチュートリアルでは触れません
 
-## ヘッダーファイルインポート
+### ヘッダーファイルインポート
 
 チュートリアルでは既に記載済みですが、SDK用のimport文を追記します。
 
@@ -119,7 +119,7 @@ import io.skyway.Peer.PeerError;
 import io.skyway.Peer.PeerOption;
 ```
 
-## マニフェストファイルへの追加
+### マニフェストファイルへの追加
 
 SDKの機能を利用するために、内容をマニフェストファイルに追記してください。
 
@@ -139,7 +139,7 @@ SDKの機能を利用するために、内容をマニフェストファイル�
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 ```
 
-## ビルドする
+### ビルドする
 
 実機を接続しビルドします。実機での処理は途中で止まりますが、ビルドできることを確認してください。
 
@@ -422,16 +422,16 @@ _peer.on(Peer.PeerEventEnum.DISCONNECTED, new OnCallback() {
 });
 ```
 
-### 発信・切断・着信処理
+## 発信・切断・着信処理
 {: #call-event }
 
 発信、切断、着信をするための処理を追記してください。
 
-#### 発信処理
+### 発信処理
 
 相手のPeerIDを選択して発信します。
 
-##### 発信先のPeerIDを取得(1)
+#### 発信先のPeerIDを取得(1)
 
 Make Callボタンをタップし未接続状態であれば、showPeerIDsメソッドを実行します。
 
@@ -461,7 +461,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### 発信先のPeerIDを取得(2)
+#### 発信先のPeerIDを取得(2)
 
 showPeerIDsメソッドでは、listAllPeersメソッドを利用して、接続先のPeerID一覧を取得します。
 取得した一覧から自分自身のIDを削除し、`PeerListDialogFragment`で一覧表示します。
@@ -532,7 +532,7 @@ void showPeerIDs() {
 }
 ```
 
-##### 発信
+#### 発信
 
 `PeerListDialogFragment`でPeerIDが選択されたら、onPeerSelectedメソッドが呼ばれます。
 相手のPeerID、自分自身のlocalStreamを引数にセットし発信します。  
@@ -566,11 +566,11 @@ void onPeerSelected(String strPeerId) {
 }
 ```
 
-#### 切断処理
+### 切断処理
 
 相手との接続を切断します。
 
-##### MediaConnectionの切断
+#### MediaConnectionの切断
 
 actionButton（Make Callボタン）をタップし接続中であれば、MediaConnectionオブジェクトのCloseメソッドで該当するMediaConnectionを切断し、後ほど説明する`closeRemoteStream`で必要な処理を行います。
 
@@ -604,7 +604,7 @@ btnAction.setOnClickListener(new View.OnClickListener()	{
 });
 ```
 
-##### MediaStreamのクローズ
+#### MediaStreamのクローズ
 
 MediaConnectionオブジェクトのCloseメソッドが実行された後は、removeVideoRendererメソッドを利用して該当のMediaStreamに割り当てられた、ビデオレンダラーを取り外します。
 
@@ -626,7 +626,7 @@ void closeRemoteStream(){
 }
 ```
 
-#### 着信処理
+### 着信処理
 
 相手から接続要求がきた場合に応答します。   
 相手から接続要求が来た場合は`Peer.PeerEventEnum.CALL`が発火します。
@@ -658,7 +658,7 @@ _peer.on(Peer.PeerEventEnum.CALL, new OnCallback() {
 ```
 
 
-#### MediaConnectionオブジェクトに必要なイベント
+### MediaConnectionオブジェクトに必要なイベント
 
 MediaConnectionオブジェクトに必要なイベントコールバックです。  
 `MediaConnection.MediaEventEnum.STREAM`は相手のカメラ映像・マイク音声を受信した際に発火します。  
@@ -736,11 +736,11 @@ void setMediaCallbacks() {
 }
 ```
 
-### Activityライフサイクルに必要な処理
+## Activityライフサイクルに必要な処理
 
 Activityライフサイクルに必要な処理を追記してください。  
 
-#### Overrideメソッドの処理
+### Overrideメソッドの処理
 
 Ovverrideされたメソッドに必要な処理を追記してください。  
 onDestoryメソッド内では、Peerオブジェクトを破棄するために`destoryPeer`を実行します。中身については後ほど説明します。
@@ -793,7 +793,7 @@ protected void onDestroy() {
 }
 ```
 
-#### Activity破棄時の処理
+### Activity破棄時の処理
 
 Activityが破棄されるタイミングで必要な処理を追記してください。  
 ここで実行されている処理の概要は以下のとおりです。  
@@ -847,7 +847,7 @@ private void destroyPeer() {
 ```
 
 
-#### コールバックイベントの開放処理
+### コールバックイベントの開放処理
 
 MediaConnectionオブジェクト、Peerオブジェクトに関するコールバックイベントの開放処理を追記してください。  
 
@@ -885,7 +885,7 @@ void unsetMediaCallbacks() {
 }
 ```
 
-### UIのセットアップ
+## UIのセットアップ
 {: #setup-ui }
 
 UI関連の必要な処理を追記してください。  
@@ -915,7 +915,7 @@ void updateActionButtonTitle() {
 }
 ```
 
-### カメラの切り替え
+## カメラの切り替え
 {: #switch-camera}
 
 最後にカメラの切り替え処理を追記してください。  
@@ -946,7 +946,7 @@ switchCameraAction.setOnClickListener(new View.OnClickListener() {
 });
 ```
 
-### 動作確認
+## 動作確認
 {: #testing }
 
 実機でビルドし動作を確認してください。listAllPeersで取得したPeerIDに対して発信し、相手とビデオ通話ができれば成功です。
