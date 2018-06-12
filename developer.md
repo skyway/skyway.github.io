@@ -49,10 +49,10 @@ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 
 ## SDK
 
-Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDKを用意しています。
+Webブラウザ、iOS、Androidをカバーする3つのSDKを用意しています。
 
 <div id="sdk-div" class="row row-for-slim-card">
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <div class="list-group">
             <a href="./js-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-television fa-fw" aria-hidden="true"></i>
@@ -64,7 +64,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <div class="list-group">
             <a href="./ios-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i>
@@ -76,7 +76,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <div class="list-group">
             <a href="./android-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i>
@@ -88,22 +88,7 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
             <a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
-    <div class="col-6 col-md-3">
-        <div class="list-group">
-            <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="list-group-item active list-head">
-                <i class="fa fa-microchip fa-fw fa-3x" aria-hidden="true"></i>
-                <span>IoT SDK</span>
-                <small>β version</small>
-            </a>
-            <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_install.md" target="_blank" class="list-group-item list-group-item-action">インストール</a>
-            <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_use_sample_app.md" target="_blank" class="list-group-item list-group-item-action">利用手順</a>
-            <a href="https://github.com/nttcom/skyway-iot-sdk/tree/master/docs/apiref" target="_blank" class="list-group-item list-group-item-action">APIリファレンス</a>
-            <a href="https://github.com/nttcom/skyway-siru-sample" target="_blank" class="list-group-item list-group-item-action">サンプルコード</a>
-        </div>
-    </div>
 </div>
-
-
 
 ## すべての機能 
 
@@ -166,6 +151,31 @@ Webブラウザ、iOS、Android、IoTデバイスをカバーできる4つのSDK
                 <h3 class="card-title">画面共有</h3>
                 <p class="card-text">画面共有用ブラウザ拡張を簡単に実装するためのライブラリ、サンプルコードを提供</p>
                 <a href="https://github.com/skyway/skyway-screenshare" target="_blank" class="btn btn-outline-primary">利用方法(GitHub)</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+## Labs
+
+実験的な機能を公開しています。
+
+<div id="feature-div" class="row row-for-slim-card">
+    <div class="col-6 col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">WebRTC Gateway</h3>
+                <p class="card-text">Webブラウザ、iOS、Android以外でもWebRTCを利用可能</p>
+                <a href="https://github.com/skyway/skyway-webrtc-gateway" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">IoT SDK <small class="text-muted">非推奨</small></h3>
+                <p class="card-text">SkyWayと<a href="https://janus.conf.meetecho.com" target="_blank">Janus</a>を利用したLinux向けのサンプル実装</p>
+                <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="btn btn-outline-primary">GitHub</a>
             </div>
         </div>
     </div>
