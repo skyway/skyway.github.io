@@ -48,10 +48,10 @@ This article describes basic concept of ECLWebRTC. Recommended for developers in
 
 ## SDK
 
-There are SDKs for Web browsers, iOS, Android and IoT devices.
+There are SDKs for Web browsers, iOS and Android.
 
 <div id="sdk-div" class="row row-for-slim-card">
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <div class="list-group">
             <a href="./js-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-television fa-fw" aria-hidden="true"></i>
@@ -63,7 +63,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <div class="list-group">
             <a href="./ios-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i>
@@ -75,7 +75,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <div class="list-group">
             <a href="./android-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i>
@@ -87,22 +87,7 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
             <a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples/" class="list-group-item list-group-item-action" target="_blank">Sample Code</a>
         </div>
     </div>
-    <div class="col-6 col-md-3">
-        <div class="list-group">
-            <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="list-group-item active list-head">
-                <i class="fa fa-microchip fa-fw fa-3x" aria-hidden="true"></i>
-                <span>IoT SDK</span>
-                <small>β version</small>
-            </a>
-            <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_install.md" target="_blank" class="list-group-item list-group-item-action">Install</a>
-            <a href="https://github.com/nttcom/skyway-iot-sdk/blob/master/docs/how_to_use_sample_app.md" target="_blank" class="list-group-item list-group-item-action">Use Procedure</a>
-            <a href="https://github.com/nttcom/skyway-iot-sdk/tree/master/docs/apiref" target="_blank" class="list-group-item list-group-item-action">API Reference</a>
-            <a href="https://github.com/nttcom/skyway-siru-sample" target="_blank" class="list-group-item list-group-item-action">Sample Code</a>
-        </div>
-    </div>
 </div>
-
-
 
 ## All Features
 
@@ -170,6 +155,32 @@ There are SDKs for Web browsers, iOS, Android and IoT devices.
     </div>
 </div>
 
+## Labs
+
+Experimental features.
+
+<div id="feature-div" class="row row-for-slim-card">
+    <div class="col-6 col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">WebRTC Gateway</h3>
+                <p class="card-text">Provides WebRTC functions to devices other than Web browser, iOS and Android</p>
+                <a href="https://github.com/skyway/skyway-webrtc-gateway" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">IoT SDK <span style="font-size: 1rem; vertical-align: middle;"><span class="badge badge-secondary">Deprecated</span></span></h3>
+                <p class="card-text">Imprementation using SkyWay and <a href="https://janus.conf.meetecho.com" target="_blank">Janus</a><br>
+                <small class="text-muted">We've stopped to develop and are migrating to WebRTC Gateway</small></p>
+                <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="btn btn-outline-primary">GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 ## Document
 
 Documents useful for development.
@@ -179,7 +190,7 @@ Documents useful for development.
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">How to migrate to Enterprise Edition</h3>
-                <p class="card-text">It is possible to migrate the API key from the Community Edition to the Enterprise Edition without stopping the service.How to migrate from the Community Edition to the Enterprise Edition.</p>
+                <p class="card-text">It is possible to migrate the API key from the Community Edition to the Enterprise Edition without stopping the service. How to migrate from the Community Edition to the Enterprise Edition.</p>
                 <small class="text-muted">Apr 19th, 2018</small>
                 <a href="./migration.html#toEnterprise" class="btn btn-outline-primary">Migration to Enterprise Edition</a>
             </div>
