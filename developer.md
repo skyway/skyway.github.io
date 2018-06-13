@@ -173,8 +173,9 @@ Webブラウザ、iOS、Androidをカバーする3つのSDKを用意していま
     <div class="col-6 col-sm-4">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">IoT SDK <small class="text-muted">非推奨</small></h3>
-                <p class="card-text">SkyWayと<a href="https://janus.conf.meetecho.com" target="_blank">Janus</a>を利用したLinux向けのサンプル実装</p>
+                <h3 class="card-title">IoT SDK <span style="font-size: 1rem; vertical-align: middle;"><span class="badge badge-secondary">開発終了</span></span></h3>
+                <p class="card-text">SkyWayと<a href="https://janus.conf.meetecho.com" target="_blank">Janus</a>を利用したサンプル実装<br>
+                <small class="text-muted">開発を終了し、WebRTC Gatewayに移行します</small></p>
                 <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="btn btn-outline-primary">GitHub</a>
             </div>
         </div>
