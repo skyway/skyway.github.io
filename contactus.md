@@ -15,7 +15,7 @@ Community EditionからEnterprise Editionへの移行や、申し込みに関す
       <div class="card-body">
         <h3 class="card-title">契約に関するお問い合わせ</h3>
         <p class="card-text">Webフォームまたは、電話で受け付けています</p>
-        <a href="https://dm.ntt.com/jp_inq_1050_01reg" class="btn btn-primary">資料請求・お問い合わせフォーム</a>
+        <a href="https://dm.ntt.com/jp_inq_1050_01reg" class="btn btn-primary" onclick="ga('send', 'event', 'btn', 'click', 'ee-contact');">資料請求・お問い合わせフォーム</a>
         <a href="tel:0120106107"><img src="{{ site.baseurl }}/images/freedial.png"></a><br>
         <small class="text-muted">※受付時間：9:30〜17:00（土日祝日を除く）</small>
       </div>
