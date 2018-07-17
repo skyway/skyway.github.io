@@ -85,7 +85,7 @@ iOS 8+
 
 ## サンプルコード
 
-サンプルコードを公開しています。
+Objective-Cのサンプルコードを公開しています。
 
 <div class="row">
   <div class="col-md-9 col-lg-7 col-xl-6">
@@ -105,6 +105,22 @@ iOS 8+
           <th scope="row">多人数、SFU</th>
           <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/sfu-videochat" target="_blank">ビデオ通話</a></td>
           <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/sfu-textchat" target="_blank">テキストチャット</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+Swiftサンプルコードを公開しています。
+
+<div class="row">
+  <div class="col-md-9 col-lg-7 col-xl-6">
+    <table class="table">
+      <tbody align="right">
+        <tr>
+          <th scope="row">1対1、P2P</th>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/swift" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/swift" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>
