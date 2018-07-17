@@ -12,7 +12,7 @@ breadcrumb: [index.md, developer.md]
 iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話アプリを作成することで、iOS SDKの使い方について理解を深めます。
 現在サーバに接続されているユーザーの一覧を表示し、通話相手を選び、1対1のビデオ通話を開始し、終了する機能、また着信を受け付ける機能を実装していきます。
 
-このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"}と同じものになります。
+このチュートリアルで作成するアプリは、サンプルコードとして提供している[1対1のビデオ通話](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-videochat){:target="_blank"}と同じものになります。
 完成したアプリを試したい場合は、[ソースコードをダウンロード](https://github.com/skyway/skyway-ios-sdk/archive/master.zip)し、このチュートリアルのビルド手順に沿ってビルドししてください。
 
 <figure class="figure">
@@ -39,8 +39,16 @@ Podfileに以下を追記し、
 {: .lang }
 
 ```
-platform :ios, '8.0'
-pod 'SkyWay'
+platform :ios,'8.0'
+use_frameworks!
+
+def install_pods
+  pod 'SkyWay'
+end
+
+target 'source code directory(rewrite)' do
+  install_pods
+end
 ```
 
 インストールする。
@@ -85,18 +93,18 @@ iOS 8+
       <tbody align="right">
         <tr>
           <th scope="row">1対1、P2P</th>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、P2P</th>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/mesh-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/mesh-textchat" target="_blank">テキストチャット</a></td>
         </tr>
         <tr>
           <th scope="row">多人数、SFU</th>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/sfu-videochat" target="_blank">ビデオ通話</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/sfu-textchat" target="_blank">テキストチャット</a></td>
         </tr>
       </tbody>
     </table>

@@ -12,7 +12,7 @@ breadcrumb: [en/index.md, en/developer.md]
 In the tutorial, you will create a one-on-one video chat app using the basic features of the iOS SDK.
 The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"}  provided in the samples.
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-videochat){:target="_blank"}  provided in the samples.
 If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and and follow the tutorial to build.
 
 
@@ -40,8 +40,16 @@ Add the the text below to your Podfile.
 {: .lang }
 
 ```
-platform :ios, '8.0'
-pod 'SkyWay'
+platform :ios,'8.0'
+use_frameworks!
+
+def install_pods
+  pod 'SkyWay'
+end
+
+target 'source code directory path(rewrite)' do
+  install_pods
+end
 ```
 
 Install ECLWebRTC.
@@ -84,18 +92,18 @@ A list of changes between the old (SkyWay) SDK and the new ECLWebRTC SDK can be 
       <tbody align="right">
         <tr>
           <th scope="row">One-on-One, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/mesh-textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/mesh-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/mesh-textchat" target="_blank">text chat</a></td>
         </tr>
         <tr>
           <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/sfu-textchat" target="_blank">text chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/sfu-videochat" target="_blank">video chat</a></td>
+          <td><a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/sfu-textchat" target="_blank">text chat</a></td>
         </tr>
       </tbody>
     </table>
