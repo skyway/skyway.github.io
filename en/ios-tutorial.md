@@ -13,7 +13,7 @@ breadcrumb: [en/index.md, en/developer.md, en/ios-sdk.md]
 In the tutorial, you will create a one-on-one video chat app using the basic features of the iOS SDK.
 The app will have the ability to display a list of users currently connected to the server, select which user to call, call, answer and hang up a one-to-one video conversation.
 
-The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/p2p-videochat){:target="_blank"} provided in the samples.
+The application to be created in this tutorial will be the same as [one-to-one video chat](https://github.com/skyway/skyway-ios-sdk/tree/master/examples/objective-c/p2p-videochat){:target="_blank"} provided in the samples.
 If you want to try the finished app, [download the source code](https://github.com/skyway/skyway-ios-sdk/archive/master.zip) and follow "build" section of this tutorial.
 
 
