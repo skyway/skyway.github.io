@@ -57,7 +57,7 @@ iOS SDKの基本機能を利用して、1:1のシンプルなビデオ通話ア�
 
 - Xcode Version 8.1
 - 動作確認端末
-  - iPod nano(MKH22J/A)
+  - iPod touch(MKH22J/A)
 - iOS バージョン
   - 10.3.2
 - 開発言語
