@@ -190,6 +190,20 @@ Webブラウザ、iOS、Androidをカバーする3つのSDKを用意していま
     <div class="col-12 col-sm-6 col-lg-4">
         <div class="card">
             <div class="card-body">
+                <h3 class="card-title">ECL APIチュートリアル</h3>
+                <p>
+                    <span class="badge badge-enterprise">enterprise</span>
+                </p>
+                <p class="card-text">SkyWayのリソースを管理するためのAPIを提供しています。その利用方法をご紹介します。</p>
+                <small class="text-muted">2018年7月18日</small>
+                <a href="/ecl-api-tutorial.html" class="btn btn-outline-primary">チュートリアル</a>
+                <a href="/ecl-api.html" class="btn btn-outline-primary">APIリファレンス</a>
+            </div>
+        </div>
+    </div>    
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="card-body">
                 <h3 class="card-title">Enterprise Editionへの移行</h3>
                 <p class="card-text">Community EditionからEnterprise Editionへサービスを停止せずにAPIキーを引き継ぐことが可能です。APIキーの移行方法をご紹介します。</p>
                 <small class="text-muted">2018年4月19日</small>

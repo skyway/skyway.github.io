@@ -1,8 +1,8 @@
 ---
 layout: rightnav
-title: ECL API チュートリアル
-lang: ja
-breadcrumb: [index.md, developer.md]
+title: ECL API tutorial
+lang: en
+breadcrumb: [en/index.md, en/developer.md]
 ---
 
 - TOC
