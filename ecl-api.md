@@ -360,7 +360,7 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 ```json
 {
   "id": "{app_id}",
-  "apikey": "{apikey_id}"
+  "apikey": "{apikey_id}",
   "description": "<description>",
   "domains": ["<domain1>", "<domain2>"],
   "permissions": ["<permission>"],
