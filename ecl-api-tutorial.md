@@ -10,15 +10,13 @@ breadcrumb: [index.md, developer.md]
 
 # ECL API チュートリアル
 
-Enterprise Editionをご利用の方は、Enterprise Cloud 2.0 API（以下、ECL API）を利用して、ダッシュボードの操作が可能です。このチュートリアルでは、ECL APIを利用したアプリケーション作成と利用データ量取得を例に、ECL APIの使い方について理解を深めます。
+Enterprise Editionをご利用の方は、Enterprise Cloud 2.0 API（以下、ECL API）を利用して、ダッシュボードで実施しているリソース管理が可能です。このチュートリアルでは、ECL APIを利用したアプリケーション作成と利用量取得を例に、ECL APIの使い方について理解を深めます。
 
 このチュートリアルで紹介していないECL APIの情報は、[ECL API リファレンス（英語のみ）](./ecl-api.html)をご覧ください。
 
 
 ## 利用前の準備
 {: #preparation }
-
-### 情報収集
 
 ECL APIの利用に必要な情報を収集します。
 
@@ -27,23 +25,24 @@ ECL APIの利用に必要な情報を収集します。
 |テナントID|Enterprise Editionのコントロールパネルを利用する際に作成したテナントのIDです。|[各種情報の確認 - テナントIDの確認](https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/user_parameter.html#how-to-check-tenantid){:target="_blank"}|
 |API鍵|ECL APIにアクセスするためのAPI鍵情報です。SkyWayのAPIキーとは異なります。|[各種情報の確認 - ユーザー情報の確認](https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/user_parameter.html#how-to-check-userid){:target="_blank"}|
 |API秘密鍵|ECL APIにアクセスするためのAPI秘密鍵情報です。SkyWayのシークレットキーとは異なります。|[各種情報の確認 - ユーザー情報の確認](https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/user_parameter.html#how-to-check-userid){:target="_blank"}|
-|KeystoneエンドポイントURL|ECL APIにアクセスするために必要な認証Tokenを取得するためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>2018/07現在の選択可能リージョン: jp1, jp2, jp5, us1, uk1, de1, sg1, hk1, au1<br>jp2の場合: [https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens](https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}<br>sg1の場合: [https://keystone-sg1-ecl.api.ntt.com/v3/auth/tokens](https://keystone-sg1-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
-|WebRTCエンドポイントURL|SkyWayが提供するECL APIにアクセスするためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>2018/07現在の選択可能リージョン: jp1, jp2, jp5, us1, uk1, de1, sg1, hk1, au1<br> jp2の場合: [https://webrtc-jp2-ecl.api.ntt.com](https://webrtc-jp2-ecl.api.ntt.com){:target="_blank"}<br> sg1の場合: [https://webrtc-sg1-ecl.api.ntt.com](https://webrtc-sg1-ecl.api.ntt.com){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
+|KeystoneエンドポイントURL|ECL APIにアクセスするために必要な認証Tokenを取得するためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>2018/07現在の選択可能リージョン: jp1, jp2, jp5, us1, uk1, de1, sg1, hk1, au1<br>（例）jp2の場合: [https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens](https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}<br>（例）sg1の場合: [https://keystone-sg1-ecl.api.ntt.com/v3/auth/tokens](https://keystone-sg1-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
+|WebRTCエンドポイントURL|SkyWayが提供するECL APIにアクセスするためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>2018/07現在の選択可能リージョン: jp1, jp2, jp5, us1, uk1, de1, sg1, hk1, au1<br>（例）jp2の場合: [https://webrtc-jp2-ecl.api.ntt.com](https://webrtc-jp2-ecl.api.ntt.com){:target="_blank"}<br>（例）sg1の場合: [https://webrtc-sg1-ecl.api.ntt.com](https://webrtc-sg1-ecl.api.ntt.com){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
 
 ## 認証Tokenの取得
 {: #get-auth-token }
 
-ECL APIにアクセスする際に必要な認証Tokenを取得します。
+利用前の準備で収集した情報を利用して、ECL APIの利用に必要な認証Tokenを取得します。
 
 ### リクエスト
 
-curlでリクエストを送る例場合は以下のようにします。
+`テナントID`、`API鍵`、`API秘密鍵`はリクエストボディに記載し、`KeystoneエンドポイントURL`に対してリクエストを行います。curlでリクエストを送る場合は、以下のようにします。
 
 *curlで認証Tokenを取得（jp2リージョンの場合）*
 {: .lang }
 
 ```sh
-curl -s -i -H "Content-Type: application/json" -d '{  
+curl -s -X POST -i \
+  -H "Content-Type: application/json" -d '{  
   "auth": {
       "identity": {
           "methods": [
@@ -80,7 +79,7 @@ curl -s -i -H "Content-Type: application/json" -d '{
 91e2b4d9f3e641b397db7053903c490f
 ```
 
-認証トークンの有効期限は発行から1時間です。レスポンスのボディにも記載されています。
+認証トークンの有効期限は発行から1時間です。レスポンスボディにも記載されています。
 
 *有効期限（例）*
 {: .lang }
@@ -92,9 +91,11 @@ curl -s -i -H "Content-Type: application/json" -d '{
 ## アプリケーションの作成
 {: #create-app }
 
+取得した認証Tokenを利用してアプリケーションを作成します。
+
 ### リクエスト
 
-認証Tokenを利用してアプリケーションを作成します。認証Tokenは`X-Auth-Token`ヘッダとして記述します。また、アプリケーション作成時のパラメーターは以下の通りとし、Contetnt-Typeヘッダとして記述します。
+認証Tokenは`X-Auth-Token`ヘッダに記述します。また、アプリケーション作成時のパラメーターは以下の通りとし、JSON形式でリクエストボディに記述します。
 
 |アプリケーション作成時のパラメーター|値 (補足説明)|
 |:--|:--|
@@ -103,11 +104,11 @@ curl -s -i -H "Content-Type: application/json" -d '{
 |permissions|TURN (TURNを利用する)<BR>SFU (SFUを利用する)<BR>USER_LIST (listAllPeers APIを利用する)|
 |status|active (利用する)|
 
-リクエストURLには先程確認したテナントIDを含める必要があります。
+リクエストURLにはテナントIDを含める必要があります。
 
 `https://webrtc-jp2-ecl.api.ntt.com/tenants/テナントID/apps`
 
-curlでリクエストを行います。
+curlでリクエストを送る場合は、以下のようにします。
 
 *curlでアプリケーションの作成（jp2リージョンの場合）*
 {: .lang }
@@ -125,7 +126,7 @@ curl -s -X POST -i \
 
 ### レスポンス
 
-リクエストが成功するとアプリケーションが作成され、アプリケーションの情報がレスポンスボディで返却されます。`id`(アプリケーションID)はこれ以降、ECL APIを利用する際に、アプリケーションを特定するためのIDになります。
+リクエストが成功するとアプリケーションが作成され、アプリケーションの情報がレスポンスボディで返却されます。`id`(以後、アプリケーションID)はこれ以降、ECL APIを利用する際に、アプリケーションを特定するためのIDになります。
 
 *レスポンス（例）*
 {: .lang }
@@ -158,15 +159,17 @@ Set-Cookie: TS0183560f=0197064f7905adc51ea1141b1117dba60240c3fe410ef17ff45192e5b
 ## 利用量の取得
 {: #get-usage }
 
+作成したアプリケーションの利用量を取得します。
+
 ### リクエスト
 
-次に、アプリケーションの利用量を取得します。取得した認証Tokenは先程と同じく、`X-Auth-Token`ヘッダとして記述します。
+取得した認証Tokenは`X-Auth-Token`ヘッダに記述します。リクエストURLにはテナントIDと対象のアプリケーションIDを含める必要があります。
 
-リクエストURLには先程確認したテナントIDと対象のアプリケーションID（アプリケーション作成のレスポンスボディで返却されるid）を含める必要があります。
+`https://webrtc-us1-ecl.api.ntt.com/tenants/テナントID/apps/アプリケーションID`
 
-`https://webrtc-us1-ecl.api.ntt.com/tenants/テナントIDapps/アプリケーションID`
+アプリケーションIDは、アプリケーション作成のレスポンスボディで返却されるidの他に、[Get apps list API](/ecl-api.html#get-apps-list)で作成済みアプリケーション一覧を取得した際にも入手できます。
 
-curlでリクエストを行います。
+curlでリクエストを送る場合は、以下のようにします。
 
 *curlで利用データ量の取得（jp2リージョンの場合）*
 {: .lang }
@@ -179,7 +182,7 @@ curl -s -i \
 
 ### レスポンス
 
-リクエストが成功すると、アプリケーション作成時と同じく、アプリケーションの情報がレスポンスボディで返却されます。
+リクエストが成功すると、アプリケーションの情報がレスポンスボディで返却されます。
 
 *レスポンス（例）*
 {: .lang }
