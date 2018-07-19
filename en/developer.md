@@ -195,7 +195,6 @@ Documents useful for development.
                 </p>
                 <p class="card-text">Provide API for your SkyWay resource management. How to using it.</p>
                 <small class="text-muted">July, 19th, 2018</small>
-                <a href="/ecl-api-tutorial.html" class="btn btn-outline-primary">Tutorial</a>
                 <a href="/ecl-api.html" class="btn btn-outline-primary">API Reference</a>
             </div>
         </div>
