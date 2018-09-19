@@ -195,7 +195,7 @@ Webブラウザ、iOS、Androidをカバーする3つのSDKを用意していま
                     <span class="badge badge-enterprise">enterprise</span>
                 </p>
                 <p class="card-text">SkyWayのリソースを管理するためのAPIを提供しています。その利用方法をご紹介します。</p>
-                <small class="text-muted">2018年7月19日</small>
+                <small class="text-muted">2018年9月20日</small>
                 <a href="/ecl-api-tutorial.html" class="btn btn-outline-primary">チュートリアル</a>
                 <a href="/ecl-api.html" class="btn btn-outline-primary">APIリファレンス</a>
             </div>
