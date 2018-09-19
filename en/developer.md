@@ -193,7 +193,7 @@ Documents useful for development.
                 <p>
                     <span class="badge badge-enterprise">enterprise</span>
                 </p>
-                <p class="card-text">Provide API for your SkyWay resource management. How to using it.</p>
+                <p class="card-text">Provide API for your SkyWay resource management.</p>
                 <small class="text-muted">July, 19th, 2018</small>
                 <a href="/ecl-api.html" class="btn btn-outline-primary">API Reference</a>
             </div>
