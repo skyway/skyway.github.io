@@ -25,8 +25,8 @@ ECL APIの利用に必要な情報を収集します。
 |テナントID|Enterprise Editionのコントロールパネルを利用する際に作成したテナントのIDです。|[各種情報の確認 - テナントIDの確認](https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/user_parameter.html#how-to-check-tenantid){:target="_blank"}|
 |API鍵|ECL APIにアクセスするためのAPI鍵情報です。SkyWayのAPIキーとは異なります。|[各種情報の確認 - ユーザー情報の確認](https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/user_parameter.html#how-to-check-userid){:target="_blank"}|
 |API秘密鍵|ECL APIにアクセスするためのAPI秘密鍵情報です。SkyWayのシークレットキーとは異なります。|[各種情報の確認 - ユーザー情報の確認](https://ecl.ntt.com/documents/tutorials/rsts/CustomerPortal/user_parameter.html#how-to-check-userid){:target="_blank"}|
-|KeystoneエンドポイントURL|ECL APIにアクセスするために必要な認証Tokenを取得するためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>2018/07現在の選択可能リージョン: jp1, jp2, jp5, us1, uk1, de1, sg1, hk1, au1<br>（例）jp2の場合: [https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens](https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}<br>（例）sg1の場合: [https://keystone-sg1-ecl.api.ntt.com/v3/auth/tokens](https://keystone-sg1-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
-|WebRTCエンドポイントURL|SkyWayが提供するECL APIにアクセスするためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>2018/07現在の選択可能リージョン: jp1, jp2, jp5, us1, uk1, de1, sg1, hk1, au1<br>（例）jp2の場合: [https://webrtc-jp2-ecl.api.ntt.com](https://webrtc-jp2-ecl.api.ntt.com){:target="_blank"}<br>（例）sg1の場合: [https://webrtc-sg1-ecl.api.ntt.com](https://webrtc-sg1-ecl.api.ntt.com){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
+|KeystoneエンドポイントURL|ECL APIにアクセスするために必要な認証Tokenを取得するためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>例: jp2の場合: [https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens](https://keystone-jp2-ecl.api.ntt.com/v3/auth/tokens){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
+|WebRTCエンドポイントURL|SkyWayが提供するECL APIにアクセスするためのエンドポイントURLです。テナント作成時に選択したリージョン毎にURLが異なります。<br><br>例: jp2の場合: [https://webrtc-jp2-ecl.api.ntt.com](https://webrtc-jp2-ecl.api.ntt.com){:target="_blank"}|[APIリファレンス - エンドポイントの一覧](https://ecl.ntt.com/documents/api-references/)|
 
 ## 認証Tokenの取得
 {: #get-auth-token }
@@ -53,7 +53,7 @@ curl -s -X POST -i \
                   "domain": {
                       "id": "default"
                   },
-                  "name": "API密鍵",
+                  "name": "API鍵",
                   "password": "API秘密鍵"
               }
           }
@@ -220,6 +220,6 @@ Set-Cookie: TS0183560f=0197064f79dba6bcb0497434a01913f150960a937360eea49aa428a54
         "sfu":0
 ```
 
-この利用量を使えば、毎月一定量を超えると通知を出す等の運用ツールが簡単に開発できます。
+この利用量情報を使えば、毎月一定量を超えると通知を出す等の運用ツールが簡単に開発できます。
 
 このチュートリアルで紹介していないECL APIの情報は、[ECL API リファレンス(英語のみ)](./ecl-api.html)をご覧ください。
