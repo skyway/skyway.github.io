@@ -165,7 +165,7 @@ Set-Cookie: TS0183560f=0197064f7905adc51ea1141b1117dba60240c3fe410ef17ff45192e5b
 
 取得した認証Tokenは`X-Auth-Token`ヘッダに記述します。リクエストURLにはテナントIDと対象のアプリケーションIDを含める必要があります。
 
-`https://webrtc-us1-ecl.api.ntt.com/tenants/テナントID/apps/アプリケーションID`
+`https://webrtc-jp2-ecl.api.ntt.com/tenants/テナントID/apps/アプリケーションID`
 
 アプリケーションIDは、アプリケーション作成のレスポンスボディで返却されるidの他に、[Get apps list API](/ecl-api.html#get-apps-list)で作成済みアプリケーション一覧を取得した際にも入手できます。
 
