@@ -74,21 +74,45 @@ With expandApps set.
 ```json
 [
   {
-    "id": "{tenant_id}",
+    "id": "{app_id}",
     "apikey": "{apikey_id}",
     "description": "<description>",
     "domains": [],
     "permissions": [],
+    "usage_summary": {
+      "2018/06": {
+        "signaling":0,
+        "turn":0,
+        "sfu":0
+      },
+      "2018/07": {
+        "signaling":0,
+        "turn":0,
+        "sfu":0
+      }
+    },
     "status": "<status>",
     "created_at": "2016-12-09T21:50:21Z",
     "updated_at": "2016-12-09T21:50:21Z"
   },
   {
-    "id": "{tenant_id}",
+    "id": "{app_id}",
     "apikey": "{apikey_id}",
     "description": "<description>",
     "domains": ["<domain1>", "<domain2>"],
     "permissions": ["<permission>"],
+    "usage_summary": {
+      "2018/06": {
+        "signaling":0,
+        "turn":0,
+        "sfu":0
+      },
+      "2018/07": {
+        "signaling":0,
+        "turn":0,
+        "sfu":0
+      }
+    },
     "status": "<status>",
     "created_at": "2016-12-09T22:50:21Z",
     "updated_at": "2016-12-10T23:50:21Z"
@@ -101,14 +125,13 @@ Without expandApps set.
 ```json
 [
   {
-    "id": "{tenant_id}",
-    "apikey": "{apikey_id}",
-    "description": "<description>"
+  "id": "{app_id}",
+  "apikey": "{apikey_id}",
+  "description": "<description>"
   },
-  {
-    "id": "{tenant_id}",
-    "apikey": "{apikey_id}",
-    "description": "<description>"
+  {"id": "{app_id}",
+  "apikey": "{apikey_id}",
+  "description": "<description>"
   }
 ]
 ```
@@ -172,11 +195,23 @@ POST /tenants/{tenant_id}/apps
 
 ```json
 {
-  "id": "{tenant_id}",
+  "id": "{app_id}",
   "apikey": "{apikey_id}",
   "description": "<description>",
   "domains": [],
   "permissions": [],
+  "usage_summary": {
+    "2018/06": {
+      "signaling":0,
+      "turn":0,
+      "sfu":0
+    },
+    "2018/07": {
+      "signaling":0,
+      "turn":0,
+      "sfu":0
+    }
+  },
   "status": "active",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T21:50:21Z"
@@ -229,11 +264,23 @@ None
 
 ```json
 {
-  "id": "{tenant_id}",
+  "id": "{app_id}",
   "apikey": "{apikey_id}",
   "description": "<description>",
   "domains": ["<domain1>", "<domain2>"],
   "permissions": ["<permission>"],
+  "usage_summary": {
+    "2018/06": {
+      "signaling":0,
+      "turn":0,
+      "sfu":0
+    },
+    "2018/07": {
+      "signaling":0,
+      "turn":0,
+      "sfu":0
+    }
+  },
   "status": "<status>",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T21:50:21Z"
@@ -343,11 +390,23 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 
 ```json
 {
-  "id": "{tenant_id}",
-  "apikey": "{apikey_id}"
+  "id": "{app_id}",
+  "apikey": "{apikey_id}",
   "description": "<description>",
   "domains": ["<domain1>", "<domain2>"],
   "permissions": ["<permission>"],
+  "usage_summary": {
+    "2018/06": {
+      "signaling":0,
+      "turn":0,
+      "sfu":0
+    },
+    "2018/07": {
+      "signaling":0,
+      "turn":0,
+      "sfu":0
+    }
+  },
   "status": "<status>",
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T23:20:21Z"
