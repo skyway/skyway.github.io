@@ -159,27 +159,7 @@ There are SDKs for Web browsers, iOS and Android.
 
 Experimental features.
 
-<div id="feature-div" class="row row-for-slim-card">
-    <div class="col-6 col-sm-4">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">WebRTC Gateway</h3>
-                <p class="card-text">Provides WebRTC functions to devices other than Web browser, iOS and Android</p>
-                <a href="https://github.com/skyway/skyway-webrtc-gateway" target="_blank" class="btn btn-outline-primary">GitHub</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-6 col-sm-4">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">IoT SDK <span style="font-size: 1rem; vertical-align: middle;"><span class="badge badge-secondary">Deprecated</span></span></h3>
-                <p class="card-text">Imprementation using SkyWay and <a href="https://janus.conf.meetecho.com" target="_blank">Janus</a><br>
-                <small class="text-muted">We've stopped to develop and are migrating to WebRTC Gateway</small></p>
-                <a href="https://github.com/nttcom/skyway-iot-sdk" target="_blank" class="btn btn-outline-primary">GitHub</a>
-            </div>
-        </div>
-    </div>
-</div>
+{% include labs-cards.html %}
 
 ## Document
 

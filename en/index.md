@@ -193,8 +193,13 @@ Please refer to [Pricing](pricing.md) for pricing details and refer to [Service 
   </div>
 </div>
 
-
 [See other examples](https://webrtc.ecl.ntt.com/usecase/)
+
+## Labs
+
+Experimental features.
+
+{% include labs-cards.html %}
 
 <script>
 $(function() {
