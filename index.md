@@ -196,8 +196,13 @@ Enterprise Editionは商用サービスや大規模サービスに安心して�
   </div>
 </div>
 
-
 [その他の事例はこちら](https://webrtc.ecl.ntt.com/usecase/)
+
+## Labs
+
+実験的な機能を公開しています。
+
+{% include labs-cards.html %}
 
 <script>
 $(function() {
