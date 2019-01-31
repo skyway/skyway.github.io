@@ -96,28 +96,11 @@ const peer = new Peer({key: 'your-api-key'});
 
 <div class="row">
   <div class="col-lg-9 col-xl-8">
-    <table class="table">
-      <tbody align="right">
-        <tr>
-          <th scope="row">1対1、P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-videochat" target="_blank">ビデオ通話</a></td>
-          <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-textchat" target="_blank">テキストチャット</a></td>
-        </tr>
-        <tr>
-          <th scope="row">多人数、P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">ビデオ通話</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">1:多のビデオ配信</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">テキストチャット</a></td>
-        </tr>
-        <tr>
-          <th scope="row">多人数、SFU</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-videochat" target="_blank">ビデオ通話</a></td>
-          <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-textchat" target="_blank">テキストチャット</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <ul class="list-group">
+      <li class="list-group-item"><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-media" target="_blank">1対1、P2P ビデオ通話</a></li>
+      <li class="list-group-item"><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-data" target="_blank">1対1、P2P テキストチャット</a></li>
+      <li class="list-group-item"><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/room" target="_blank">多人数 ビデオ通話/テキストチャット</a></li>
+    </ul>
   </div>
 </div>
 
