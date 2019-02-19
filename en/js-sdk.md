@@ -93,28 +93,11 @@ A list of changes between the old (SkyWay) SDK and the new ECLWebRTC SDK can be 
 
 <div class="row">
   <div class="col-md-9 col-lg-7 col-xl-6">
-    <table class="table">
-      <tbody align="right">
-        <tr>
-          <th scope="row">One-on-One, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-videochat" target="_blank">video chat</a></td>
-          <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-textchat" target="_blank">text chat</a></td>
-        </tr>
-        <tr>
-          <th scope="row">Multi-party, P2P</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-videochat" target="_blank">video chat</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-broadcast" target="_blank">video distribution</a></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/fullmesh-textchat" target="_blank">text chat</a></td>
-        </tr>
-        <tr>
-          <th scope="row">Multi-party, SFU</th>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-videochat" target="_blank">video chat</a></td>
-          <td></td>
-          <td><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/sfu-textchat" target="_blank">text chat</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <ul class="list-group">
+      <li class="list-group-item"><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-media" target="_blank">One-on-One P2P video chat</a></li>
+      <li class="list-group-item"><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/p2p-data" target="_blank">One-on-One P2P text chat</a></li>
+      <li class="list-group-item"><a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples/room" target="_blank">Multi-party video/text chat</a></li>
+    </ul>
   </div>
 </div>
 
