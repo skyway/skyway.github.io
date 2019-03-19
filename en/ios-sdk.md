@@ -69,7 +69,7 @@ $ pod install
 
 ## Supported OS's
 
-iOS 8+
+iOS 9+
 
 ## API Reference
 
