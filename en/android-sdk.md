@@ -39,7 +39,7 @@ If you want to try the finished app, [download the source code](https://github.c
 
 ## Compatible OS's
 
-Android 4.2+ (API Level 17+)
+Android 5.0+ (API Level 21+)
 
 ## API Reference
 
