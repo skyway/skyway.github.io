@@ -39,7 +39,7 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 ## 対応OS
 
-Android 4.2+ (API Level 17+)
+Android 5.0+ (API Level 21+)
 
 ## APIリファレンス
 
