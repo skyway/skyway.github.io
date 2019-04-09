@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sdkversion',['sdkVersion',['../a00129.html#a772946645d3f0c1ea943c7c565ba7421',1,'SKWPeer']]],
   ['secure',['secure',['../a00141.html#a097c1469affdf530dbfc58dbf31da49a',1,'SKWPeerOption']]],
   ['send_3a',['send:',['../a00101.html#af9bf835fd52fe3f96d11b7540d78f706',1,'SKWDataConnection::send:()'],['../a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557',1,'SKWRoom::send:()']]],
   ['serialization',['serialization',['../a00089.html#a0b7bdf26379f10707245a254b77d2ba3',1,'SKWConnection::serialization()'],['../a00093.html#a2de8a0148927dbb3948d5d877e426b51',1,'SKWConnectOption::serialization()']]],
