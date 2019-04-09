@@ -75,7 +75,7 @@ const peer = new Peer({key: 'your-api-key'});
 
 - [Google Chrome](https://www.google.com/chrome){: target="_blank"} latest two stable versions
 - [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} latest two stable versions
-- [Safari](https://www.apple.com/safari/){: target="_blank"} latest stable versions
+- [Safari](https://www.apple.com/safari/){: target="_blank"} latest stable version
 
 ## API Reference
 
