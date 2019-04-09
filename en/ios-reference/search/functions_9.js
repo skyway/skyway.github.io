@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sdkversion',['sdkVersion',['../a00129.html#a772946645d3f0c1ea943c7c565ba7421',1,'SKWPeer']]],
   ['send_3a',['send:',['../a00101.html#af9bf835fd52fe3f96d11b7540d78f706',1,'SKWDataConnection::send:()'],['../a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557',1,'SKWRoom::send:()']]],
   ['setcameraposition_3a',['setCameraPosition:',['../a00117.html#a4f3eeac8c31c114d419e205a87ad237f',1,'SKWMediaStream']]],
   ['setdidchangevideosizecallback_3a',['setDidChangeVideoSizeCallback:',['../a00161.html#a7bf796f00b62aa0fd2e1cd6fb602a48f',1,'SKWVideo']]],

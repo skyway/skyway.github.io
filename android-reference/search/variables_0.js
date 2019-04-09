@@ -7,5 +7,6 @@ var searchData=
   ['audiocodec',['audioCodec',['../classio_1_1skyway_1_1_peer_1_1_answer_option.html#a33192316af874869edfb278cfc6b4a13',1,'io.skyway.Peer.AnswerOption.audioCodec()'],['../classio_1_1skyway_1_1_peer_1_1_call_option.html#a7cb909f6b56d7b835f71fe676d5cf4e0',1,'io.skyway.Peer.CallOption.audioCodec()'],['../classio_1_1skyway_1_1_peer_1_1_room_option.html#aefaf75d4f260d2e240008411be449991',1,'io.skyway.Peer.RoomOption.audioCodec()']]],
   ['audioflag',['audioFlag',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_constraints.html#a7b0a6c9462c09fe339f13e04ae7662a2',1,'io::skyway::Peer::Browser::MediaConstraints']]],
   ['auth_5fexpires_5fin',['AUTH_EXPIRES_IN',['../enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#af9a86e5579af2fc2a7a0b5bef67ecf24',1,'io::skyway::Peer::Peer::PeerEventEnum']]],
+  ['authentication',['AUTHENTICATION',['../enumio_1_1skyway_1_1_peer_1_1_peer_error_1_1_peer_error_enum.html#a406acc1dee2ce674e76eb69c082846ee',1,'io::skyway::Peer::PeerError::PeerErrorEnum']]],
   ['authtoken',['authToken',['../classio_1_1skyway_1_1_peer_1_1_peer_credential.html#aec6932d00b5a4b89bbafbb5229f9d5bb',1,'io::skyway::Peer::PeerCredential']]]
 ];

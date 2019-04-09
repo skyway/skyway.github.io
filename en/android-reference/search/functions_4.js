@@ -11,6 +11,7 @@ var searchData=
   ['getpeerid',['getPeerId',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ac0a5cb7591d3222c4ea3bab32a8e40f9',1,'io::skyway::Peer::Browser::MediaStream']]],
   ['getprovider',['getProvider',['../classio_1_1skyway_1_1_peer_1_1_room.html#a9465bd1f76a3db42c77da1c93c75e8ae',1,'io::skyway::Peer::Room']]],
   ['getroomname',['getRoomName',['../classio_1_1skyway_1_1_peer_1_1_room.html#afc131feec4332602d1cd5fdf7ca7d24f',1,'io::skyway::Peer::Room']]],
+  ['getsdkversion',['getSdkVersion',['../classio_1_1skyway_1_1_peer_1_1_peer.html#ae4cd8605c9ccd6cddad6b24ae5d788ee',1,'io::skyway::Peer::Peer']]],
   ['getusermedia',['getUserMedia',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_navigator.html#a96e06a486b035a7fbd75f31dc6874877',1,'io::skyway::Peer::Browser::Navigator']]],
   ['getvideotracks',['getVideoTracks',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a6f94b0aab765f206bc2c444a1cb13232',1,'io::skyway::Peer::Browser::MediaStream']]]
 ];
