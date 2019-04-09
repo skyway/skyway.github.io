@@ -83,6 +83,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
 <a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
 <a href="#pub-attribs">公開変数類</a> &#124;
 <a href="classio_1_1skyway_1_1_peer_1_1_peer-members.html">全メンバ一覧</a>  </div>
   <div class="headertitle">
@@ -163,18 +164,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
 <tr class="memitem:a680150cf61a45d749b683cd847bb7609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a680150cf61a45d749b683cd847bb7609">updateCredential</a> (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_credential.html">PeerCredential</a> newCredential)</td></tr>
 <tr class="memdesc:a680150cf61a45d749b683cd847bb7609"><td class="mdescLeft">&#160;</td><td class="mdescRight">認証情報を更新します。  <a href="#a680150cf61a45d749b683cd847bb7609">[詳解]</a><br /></td></tr>
 <tr class="separator:a680150cf61a45d749b683cd847bb7609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041de5af42e82402c281aefb314daf82"><td class="memItemLeft" align="right" valign="top"><a id="a041de5af42e82402c281aefb314daf82"></a>
-EglBase&#160;</td><td class="memItemRight" valign="bottom"><b>getRootEglBase</b> ()</td></tr>
-<tr class="separator:a041de5af42e82402c281aefb314daf82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0c21c919dab203a7b169c9725051a62"><td class="memItemLeft" align="right" valign="top"><a id="ac0c21c919dab203a7b169c9725051a62"></a>
-EglBase&#160;</td><td class="memItemRight" valign="bottom"><b>getLocalEglBase</b> ()</td></tr>
-<tr class="separator:ac0c21c919dab203a7b169c9725051a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2524af436486541335ee4cff86f859ef"><td class="memItemLeft" align="right" valign="top"><a id="a2524af436486541335ee4cff86f859ef"></a>
-EglBase&#160;</td><td class="memItemRight" valign="bottom"><b>getRemoteEglbase</b> ()</td></tr>
-<tr class="separator:a2524af436486541335ee4cff86f859ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f0ad924a6ad54ccaa454c494a1f863"><td class="memItemLeft" align="right" valign="top"><a id="a57f0ad924a6ad54ccaa454c494a1f863"></a>
+EglBase.Context&#160;</td><td class="memItemRight" valign="bottom"><b>getEglBaseSharedContext</b> ()</td></tr>
+<tr class="separator:a57f0ad924a6ad54ccaa454c494a1f863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7a66a9f20cda1f3018aad2d0cc58239"><td class="memItemLeft" align="right" valign="top"><a id="ad7a66a9f20cda1f3018aad2d0cc58239"></a>
 <a class="el" href="classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html">MediaStream</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getUserMedia</b> (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_constraints.html">MediaConstraints</a> constraints)</td></tr>
 <tr class="separator:ad7a66a9f20cda1f3018aad2d0cc58239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae4cd8605c9ccd6cddad6b24ae5d788ee"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html#ae4cd8605c9ccd6cddad6b24ae5d788ee">getSdkVersion</a> ()</td></tr>
+<tr class="memdesc:ae4cd8605c9ccd6cddad6b24ae5d788ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の SDK のバージョンを取得します。  <a href="#ae4cd8605c9ccd6cddad6b24ae5d788ee">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4cd8605c9ccd6cddad6b24ae5d788ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -491,6 +492,34 @@ final Map&lt; String, ArrayList&lt; BaseConnection &gt; &gt;&#160;</td><td class
 
 <p>現在のデバッグレベルを取得します </p>
 <dl class="section return"><dt>戻り値</dt><dd>デバッグレベル </dd></dl>
+
+</div>
+</div>
+<a id="ae4cd8605c9ccd6cddad6b24ae5d788ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cd8605c9ccd6cddad6b24ae5d788ee">&#9670;&nbsp;</a></span>getSdkVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static String io.skyway.Peer.Peer.getSdkVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>現在の SDK のバージョンを取得します。 </p>
+<dl class="section return"><dt>戻り値</dt><dd>バージョン番号 </dd></dl>
 
 </div>
 </div>
