@@ -8,5 +8,6 @@ var searchData=
   ['skwpeereventenum',['SKWPeerEventEnum',['../a00044.html#aa7658d160dedabbeb6a3124f9045efaa',1,'SKWPeer.h']]],
   ['skwroomeventenum',['SKWRoomEventEnum',['../a00059.html#ab942cfc1af01e86c6b48786724c40fa8',1,'SKWRoom.h']]],
   ['skwroommodeenum',['SKWRoomModeEnum',['../a00065.html#add44df679352d7b87a4c0b02f4c91d2c',1,'SKWRoomOption.h']]],
-  ['skwserializationenum',['SKWSerializationEnum',['../a00011.html#a00fbc6e508f97288693e36591a0d72de',1,'SKWConnection.h']]]
+  ['skwserializationenum',['SKWSerializationEnum',['../a00011.html#a00fbc6e508f97288693e36591a0d72de',1,'SKWConnection.h']]],
+  ['skwvideoscalingenum',['SKWVideoScalingEnum',['../a00071.html#a0d2f28a53f1cf4649041c103fb9d647d',1,'SKWVideo.h']]]
 ];

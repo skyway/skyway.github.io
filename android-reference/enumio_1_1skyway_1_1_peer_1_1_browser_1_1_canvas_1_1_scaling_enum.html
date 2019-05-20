@@ -88,27 +88,44 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>スケーリングタイプ列挙子  
+<p>映像スケーリングタイプ列挙子  
  <a href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#details">[詳解]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
 <tr class="memitem:a5dfb681a134e4b1d1e0ae6b19ccaa9af"><td class="memItemLeft" align="right" valign="top"><a id="a5dfb681a134e4b1d1e0ae6b19ccaa9af"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#a5dfb681a134e4b1d1e0ae6b19ccaa9af">ASPECT_FIT</a></td></tr>
-<tr class="memdesc:a5dfb681a134e4b1d1e0ae6b19ccaa9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video keep aspect and fit to view <br /></td></tr>
+<tr class="memdesc:a5dfb681a134e4b1d1e0ae6b19ccaa9af"><td class="mdescLeft">&#160;</td><td class="mdescRight">アスペクト比を維持したまま映像全体が収まるようにスケーリングします。(ビューと映像のアスペクト比が異なる場合は空白が生まれます) <br /></td></tr>
 <tr class="separator:a5dfb681a134e4b1d1e0ae6b19ccaa9af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a361a1644e6788fe6d4975a9bef13b753"><td class="memItemLeft" align="right" valign="top"><a id="a361a1644e6788fe6d4975a9bef13b753"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#a361a1644e6788fe6d4975a9bef13b753">ASPECT_FILL</a></td></tr>
-<tr class="memdesc:a361a1644e6788fe6d4975a9bef13b753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video keep aspect and fill to view <br /></td></tr>
+<tr class="memdesc:a361a1644e6788fe6d4975a9bef13b753"><td class="mdescLeft">&#160;</td><td class="mdescRight">アスペクト比を維持したまま空白が生まれないようにスケーリングします。(ビューと映像のアスペクト比が異なる場合はクリッピングされます) <br /></td></tr>
 <tr class="separator:a361a1644e6788fe6d4975a9bef13b753"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afea3dd36821ee2e781b6ab0f46eaac3b"><td class="memItemLeft" align="right" valign="top"><a id="afea3dd36821ee2e781b6ab0f46eaac3b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#afea3dd36821ee2e781b6ab0f46eaac3b">FILL</a></td></tr>
-<tr class="memdesc:afea3dd36821ee2e781b6ab0f46eaac3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video stretch fill to view <br /></td></tr>
+<tr class="memitem:afea3dd36821ee2e781b6ab0f46eaac3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#afea3dd36821ee2e781b6ab0f46eaac3b">FILL</a></td></tr>
+<tr class="memdesc:afea3dd36821ee2e781b6ab0f46eaac3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">バージョン 1.1.2 からは <a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#a5dfb681a134e4b1d1e0ae6b19ccaa9af" title="アスペクト比を維持したまま映像全体が収まるようにスケーリングします。(ビューと映像のアスペクト比が異な...">ScalingEnum::ASPECT_FIT</a> または <a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#a361a1644e6788fe6d4975a9bef13b753" title="アスペクト比を維持したまま空白が生まれないようにスケーリングします。(ビューと映像のアスペクト比が異な...">ScalingEnum::ASPECT_FILL</a> に置き換えてください。  <a href="#afea3dd36821ee2e781b6ab0f46eaac3b">[詳解]</a><br /></td></tr>
 <tr class="separator:afea3dd36821ee2e781b6ab0f46eaac3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
-<div class="textblock"><p>スケーリングタイプ列挙子 </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>映像スケーリングタイプ列挙子 </p>
+</div><h2 class="groupheader">メンバ詳解</h2>
+<a id="afea3dd36821ee2e781b6ab0f46eaac3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea3dd36821ee2e781b6ab0f46eaac3b">&#9670;&nbsp;</a></span>FILL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">io.skyway.Peer.Browser.Canvas.ScalingEnum.FILL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>バージョン 1.1.2 からは <a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#a5dfb681a134e4b1d1e0ae6b19ccaa9af" title="アスペクト比を維持したまま映像全体が収まるようにスケーリングします。(ビューと映像のアスペクト比が異な...">ScalingEnum::ASPECT_FIT</a> または <a class="el" href="enumio_1_1skyway_1_1_peer_1_1_browser_1_1_canvas_1_1_scaling_enum.html#a361a1644e6788fe6d4975a9bef13b753" title="アスペクト比を維持したまま空白が生まれないようにスケーリングします。(ビューと映像のアスペクト比が異な...">ScalingEnum::ASPECT_FILL</a> に置き換えてください。 </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">非推奨:</a></b></dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
