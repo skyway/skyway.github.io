@@ -28,5 +28,7 @@ var searchData=
   ['skw_5fserialization_5fbinary',['SKW_SERIALIZATION_BINARY',['../a00011.html#a00fbc6e508f97288693e36591a0d72dea65fbda083031c0bd3f48ab3d29225a7c',1,'SKWConnection.h']]],
   ['skw_5fserialization_5fbinary_5futf8',['SKW_SERIALIZATION_BINARY_UTF8',['../a00011.html#a00fbc6e508f97288693e36591a0d72dea85ced3895dd5c3ec75a2f8afa72c84c9',1,'SKWConnection.h']]],
   ['skw_5fserialization_5fjson',['SKW_SERIALIZATION_JSON',['../a00011.html#a00fbc6e508f97288693e36591a0d72deadc6ba432abab2840f46a9e8c6b6c6fce',1,'SKWConnection.h']]],
-  ['skw_5fserialization_5fnone',['SKW_SERIALIZATION_NONE',['../a00011.html#a00fbc6e508f97288693e36591a0d72deab8fe3e5dda8ccd3a61d56e208d1ca34b',1,'SKWConnection.h']]]
+  ['skw_5fserialization_5fnone',['SKW_SERIALIZATION_NONE',['../a00011.html#a00fbc6e508f97288693e36591a0d72deab8fe3e5dda8ccd3a61d56e208d1ca34b',1,'SKWConnection.h']]],
+  ['skw_5fvideo_5fscaling_5faspect_5ffill',['SKW_VIDEO_SCALING_ASPECT_FILL',['../a00071.html#a0d2f28a53f1cf4649041c103fb9d647daac75114e10fd94924bc4a029669b305d',1,'SKWVideo.h']]],
+  ['skw_5fvideo_5fscaling_5faspect_5ffit',['SKW_VIDEO_SCALING_ASPECT_FIT',['../a00071.html#a0d2f28a53f1cf4649041c103fb9d647daacdba1fa917a8b0a1fd8e14b05aff02a',1,'SKWVideo.h']]]
 ];

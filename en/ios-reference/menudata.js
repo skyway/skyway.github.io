@@ -61,4 +61,5 @@ var menudata={children:[
 {text:"s",url:"globals.html#index_s"}]},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
-{text:"Enumerator",url:"globals_eval.html"}]}]}]}
+{text:"Enumerator",url:"globals_eval.html",children:[
+{text:"s",url:"globals_eval.html#index_s"}]}]}]}]}
