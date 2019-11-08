@@ -56,11 +56,11 @@ Android SDKの基本機能を利用して、1:1のシンプルなビデオ通話
 
 このチュートリアルでは以下の環境を前提に開発を進めます。
 
-- Androdi Studio 2.3.3
+- Androdi Studio 3.5.2
 - 動作確認端末
-  - Nexus6
+  - Google Pixel 3a
 - OSバージョン
-  - 7.1
+  - 9
 - 開発言語
   - Java
 - 認証機能
