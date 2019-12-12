@@ -8,10 +8,10 @@
 
 $color-base: $blue;
 $color-sub: $gray-600;
-$footer-height-xs: 741px;
-$footer-height-sm: 727px;
-$footer-height-md: 386px;
-$footer-height-lg: 349px;
+$footer-height-xs: 775px;
+$footer-height-sm: 761px;
+$footer-height-md: 420px;
+$footer-height-lg: 383px;
 
 body {
   // window width (~575px)
@@ -428,6 +428,14 @@ html {
     .list-group-item {
       padding: 0.75rem;
       font-size: 1rem;
+      // window width (768~991px)
+      @include media-breakpoint-only(md) {
+        font-size: $font-size-sm;
+      }
+      // window width (992~1200px)
+      @include media-breakpoint-only(lg) {
+        font-size: $font-size-sm;
+      }
     }
     .list-head {
       height: 70px;
@@ -458,12 +466,12 @@ html {
     span {
       align-items: center;
       padding: 0 5px;
-      // window width (~575px)
-      @include media-breakpoint-down(xs) {
-        font-size: $font-size-sm;
-      }
       // window width (768~991px)
       @include media-breakpoint-only(md) {
+        font-size: $font-size-sm;
+      }
+      // window width (992~1200px)
+      @include media-breakpoint-only(lg) {
         font-size: $font-size-sm;
       }
     }

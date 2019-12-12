@@ -47,12 +47,12 @@ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 
 [SkyWayの通信モデル](./communication-model.html){: .btn .btn-primary }
 
-## SDK
+## SDK・ツール
 
-Webブラウザ、iOS、Androidをカバーする3つのSDKを用意しています。
+Webブラウザ、iOS、Androidをカバーする3つのSDK、組み込み機器などで動作するツールを用意しています。
 
 <div id="sdk-div" class="row row-for-slim-card">
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-md-3">
         <div class="list-group">
             <a href="./js-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-television fa-fw" aria-hidden="true"></i>
@@ -64,7 +64,7 @@ Webブラウザ、iOS、Androidをカバーする3つのSDKを用意していま
             <a href="https://github.com/skyway/skyway-js-sdk/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-md-3">
         <div class="list-group">
             <a href="./ios-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-apple fa-fw fa-3x" aria-hidden="true"></i>
@@ -76,7 +76,7 @@ Webブラウザ、iOS、Androidをカバーする3つのSDKを用意していま
             <a href="https://github.com/skyway/skyway-ios-sdk/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
-    <div class="col-6 col-md-4">
+    <div class="col-6 col-md-3">
         <div class="list-group">
             <a href="./android-sdk.html" class="list-group-item active list-head">
                 <i class="fa fa-android fa-fw fa-3x" aria-hidden="true"></i>
@@ -86,6 +86,18 @@ Webブラウザ、iOS、Androidをカバーする3つのSDKを用意していま
             <a href="./android-sdk.html#sdkdownload" class="list-group-item list-group-item-action">SDKダウンロード</a>
             <a href="./android-reference/" class="list-group-item list-group-item-action">APIリファレンス</a>
             <a href="https://github.com/skyway/skyway-android-sdk/tree/master/examples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
+        </div>
+    </div>
+    <div class="col-6 col-md-3">
+        <div class="list-group">
+            <a href="https://github.com/skyway/skyway-webrtc-gateway/" class="list-group-item active list-head" target="_blank">
+                <i class="fa fa-microchip fa-fw fa-3x" aria-hidden="true"></i>
+                <span>WebRTC Gateway</span>
+            </a>
+            <a href="https://github.com/skyway/skyway-webrtc-gateway/blob/master/README.md" class="list-group-item list-group-item-action" target="_blank">ツールの説明</a>
+            <a href="https://github.com/skyway/skyway-webrtc-gateway/releases/latest" class="list-group-item list-group-item-action" target="_blank">ツールダウンロード</a>
+            <a href="http://35.200.46.204/" class="list-group-item list-group-item-action" target="_blank">APIリファレンス</a>
+            <a href="https://github.com/skyway/skyway-webrtc-gateway/tree/master/samples" class="list-group-item list-group-item-action" target="_blank">サンプルコード</a>
         </div>
     </div>
 </div>
