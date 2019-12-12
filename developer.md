@@ -49,7 +49,7 @@ $ echo "window.__SKYWAY_KEY__ = '<YOUR_KEY_HERE>';" > ./key.js
 
 ## SDK・ツール
 
-Webブラウザ、iOS、Androidをカバーする3つのSDK、様々なデバイスで動作するツールを用意しています。
+Webブラウザ、iOS、Androidをカバーする3つのSDK、組み込み機器などで動作するツールを用意しています。
 
 <div id="sdk-div" class="row row-for-slim-card">
     <div class="col-6 col-md-3">

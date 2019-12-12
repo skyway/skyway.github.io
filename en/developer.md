@@ -48,7 +48,7 @@ This article describes basic concept of ECLWebRTC. Recommended for developers in
 
 ## SDK and Tools
 
-There are SDKs for Web browsers, iOS and Android, and tools that work on various devices.
+There are SDKs for Web browsers, iOS and Android, and tools that work on the embedded devices.
 
 <div id="sdk-div" class="row row-for-slim-card">
     <div class="col-6 col-md-3">
