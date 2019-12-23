@@ -24,7 +24,6 @@ _site/*/*
 .idea
 
 # gem
-Gemfile.lock
 vendor
 .bundle
 
