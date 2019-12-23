@@ -197,7 +197,7 @@ Documents useful for development.
                 <h3 class="card-title">How to migrate to Enterprise Edition</h3>
                 <p class="card-text">It is possible to migrate the API key from the Community Edition to the Enterprise Edition without stopping the service. How to migrate from the Community Edition to the Enterprise Edition.</p>
                 <small class="text-muted">Apr 19th, 2018</small>
-                <a href="./migration.html#toEnterprise" class="btn btn-outline-primary">Migration to Enterprise Edition</a>
+                <a href="./migration.html" class="btn btn-outline-primary">Migration to Enterprise Edition</a>
             </div>
         </div>
     </div>
