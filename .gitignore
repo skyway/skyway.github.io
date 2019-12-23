@@ -4,11 +4,13 @@
 # Jekyll
 _site/*.*
 _site/Gemfile
+_site/CNAME
 _site/*/*
 .sass-cache/
 .jekyll-metadata
 
-# Dashboard
+# Manage some built files with Git,
+# so we can easily find the diffs when reflecting on skyWay-dashboard
 !_site/header-footer.*.html
 !_site/assets/main.css
 !_site/css/main.css
