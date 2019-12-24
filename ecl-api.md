@@ -185,8 +185,8 @@ POST /tenants/{tenant_id}/apps
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
 |status|string|The status of the app|
-|recording.status|string|The status of the recording permission|
-|recording.bucket_name|string|The Google Cloud Storage bucket name to save recorded data|
+|recording.status|string|The status of the recording permission. One of `"active"` or `"unavailable"`|
+|recording.bucket_name|string|The Google Cloud Storage bucket name to save recorded data.|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
@@ -264,8 +264,8 @@ None
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
 |status|string|The status of the app|
-|recording.status|string|The status of the recording permission|
-|recording.bucket_name|string|The Google Cloud Storage bucket name to save recorded data|
+|recording.status|string|The status of the recording permission. One of `"active"` or `"unavailable"`|
+|recording.bucket_name|string|The Google Cloud Storage bucket name to save recorded data.|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
@@ -396,8 +396,8 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 |domains|Array\<string>|A list of domains this app is permitted on.|
 |permissions|Array\<string>|An list of permissions this app has.|
 |status|string|The status of the app.|
-|recording.status|string|The status of the recording permission|
-|recording.bucket_name|string|The Google Cloud Storage bucket name to save recorded data|
+|recording.status|string|The status of the recording permission. One of `"active"` or `"unavailable"`|
+|recording.bucket_name|string|The Google Cloud Storage bucket name to save recorded data.|
 |created_at|string|When this app was created.|
 |updated_at|string|When this app was last updated.|
 
