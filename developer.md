@@ -199,7 +199,7 @@ Webブラウザ、iOS、Androidをカバーする3つのSDK、組み込み機器
                 <h3 class="card-title">Enterprise Editionへの移行</h3>
                 <p class="card-text">Community EditionからEnterprise Editionへサービスを停止せずにAPIキーを引き継ぐことが可能です。APIキーの移行方法をご紹介します。</p>
                 <small class="text-muted">2018年4月19日</small>
-                <a href="./migration.html#toEnterprise" class="btn btn-outline-primary">APIキーの移行</a>
+                <a href="./migration.html" class="btn btn-outline-primary">APIキーの移行</a>
             </div>
         </div>
     </div>
@@ -210,17 +210,6 @@ Webブラウザ、iOS、Androidをカバーする3つのSDK、組み込み機器
                 <p class="card-text">各SDKを利用する際に役立つ、共通の概念や通信モデルについて、ドキュメントを公開しています。</p>
                 <small class="text-muted">2017年12月4日</small>
                 <a href="./communication-model.html" class="btn btn-outline-primary">SkyWayの通信モデル</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">新SDKへの移行方法</h3>
-                <p class="card-text">トライアル版のSkyWayは2018年3月をもって提供を終了します。
-                  2017年9月7日に提供を開始した新バージョンのSDKへの移行をお願いします。</p>
-                <small class="text-muted">2017年9月5日</small>
-                <a href="./migration.html#toECLWebRTC" class="btn btn-outline-primary">マイグレーション</a>
             </div>
         </div>
     </div>
