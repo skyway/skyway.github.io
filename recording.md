@@ -20,6 +20,6 @@ breadcrumb: [index.md, developer.md]
 ## 利用方法
 
 録音機能はRecorder SDKから利用可能です。SDKはJavaScriptのみ対応しています。SDKの入手方法は[こちら](https://github.com/skyway/skyway-recorder-sdk/blob/master/README.md){:target="_blank"}をご覧ください。  
-詳しい利用方法は、[チュートリアル]()と[APIリファレンス](https://github.com/skyway/skyway-recorder-sdk/blob/master/API.md){:target="_blank"}をご覧ください。
+詳しい利用方法は、[チュートリアル](./recording-tutorial.html)と[APIリファレンス](https://github.com/skyway/skyway-recorder-sdk/blob/master/API.md){:target="_blank"}をご覧ください。
 
 
