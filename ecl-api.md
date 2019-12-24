@@ -376,7 +376,9 @@ PUT /tenants/{tenant_id}/apps/{app_id}
 {
   "description": "<description>",
   "status": "<status>",
-  "permissions": ["SFU"],
+  "permissions": ["RECORDING"],
+  "recording_bucket_name": "<recording_bucket_name>",
+  "recording_service_account_key": "<recording_service_account_key>",
   "domains": ["<domain1>", "<domain2>"]
 }
 ```
