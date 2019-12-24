@@ -9,7 +9,7 @@ breadcrumb: [en/index.md, en/developer.md]
 
 この機能は、Recorder SDKを利用して開発された録音アプリの音声を、WebRTCで録音サーバに転送し、音声ファイルとしてお客様のクラウドストレージにアップロードするものです。  
 利用するためには、Enterprise Editionのご契約が必要となります。
-対応するクラウドストレージは**[Google Cloud Strage](https://cloud.google.com/storage/){:target="_blank"}**のみとなります。
+対応するクラウドストレージは**[Google Cloud Strage](https://cloud.google.com/storage/){:target="_blank"}**のみとなります。  
 この機能は当面無料で利用可能ですが、将来、提供料金が変更になる可能性があります。その際は、事前に当サイトにてお知らせ致します。
 
 <figure class="figure">
