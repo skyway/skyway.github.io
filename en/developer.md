@@ -165,6 +165,18 @@ There are SDKs for Web browsers, iOS and Android, and tools that work on the emb
             </div>
         </div>
     </div>
+    <div class="col-6 col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Recording</h3>
+                <p>
+                    <span class="badge badge-enterprise">enterprise</span>
+                </p>
+                <p class="card-text">Provides audio recording function. Also the recorded file is uploaded to Cloud Storage.</p>
+                <a href="./recording.html" class="btn btn-outline-primary">Details of Recording(Written in Japanese)</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 ## Labs

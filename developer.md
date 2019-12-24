@@ -166,6 +166,18 @@ Webブラウザ、iOS、Androidをカバーする3つのSDK、組み込み機器
             </div>
         </div>
     </div>
+    <div class="col-6 col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">録音</h3>
+                <p>
+                    <span class="badge badge-enterprise">enterprise</span>
+                </p>
+                <p class="card-text">音声を録音し、クラウドストレージにアップロードする機能を提供</p>
+                <a href="./recording.html" class="btn btn-outline-primary">録音の説明</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 ## Labs
