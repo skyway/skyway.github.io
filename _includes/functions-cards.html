@@ -1,0 +1,5 @@
+{% if page.lang %}
+{% include {{page.lang}}/functions-cards.html %}
+{% else %}
+{% include ja/function-cards.html %}
+{% endif %}
