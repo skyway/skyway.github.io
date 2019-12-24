@@ -659,6 +659,18 @@ html {
     }
   }
 
+  .tutorial-image {
+    &.figure {
+      display: block;
+      margin: 30px;
+      text-align: center;
+
+      img {
+        border: 1px solid #aaaaaa;
+      }
+    }
+  }
+
   // Anchor
   .header-link {
     position: absolute;
