@@ -92,6 +92,10 @@ With expandApps set.
       }
     },
     "status": "<status>",
+    "recording": {
+      "status": "<recording_status>",
+      "bucket_name": "<recording_bucket_name>"
+    },
     "created_at": "2016-12-09T21:50:21Z",
     "updated_at": "2016-12-09T21:50:21Z"
   },
@@ -115,8 +119,8 @@ With expandApps set.
     },
     "status": "<status>",
     "recording": {
-      "status": "active",
-      "bucket_name": "recording-test-bucket-name"
+      "status": "<recording_status>",
+      "bucket_name": "<recording_bucket_name>"
     },
     "created_at": "2016-12-09T22:50:21Z",
     "updated_at": "2016-12-10T23:50:21Z"
@@ -159,7 +163,7 @@ POST /tenants/{tenant_id}/apps
 |permissions|Array\<string>|Optional. The permissions enabled for the app. "TURN", "SFU", "USER_LIST", "PEER_AUTHENTICATION", and "RECORDING" can be set.|
 |status|string|Optional. The app status. One of `"active"` or `"suspended"`.|
 |recording_bucket_name|string|Optional. The Google Cloud Storage bucket name to save recorded data|
-|recording_service_account_key|Optional. string|The service account key to save recorded data|
+|recording_service_account_key|string|Optional. The service account key to save recorded data|
 
 #### Request Format
 
@@ -222,8 +226,8 @@ POST /tenants/{tenant_id}/apps
   },
   "status": "active",
   "recording": {
-    "status": "active",
-    "bucket_name": "recording-test-bucket-name"
+    "status": "<recording_status>",
+    "bucket_name": "<recording_bucket_name>"
   },
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T21:50:21Z"
@@ -297,8 +301,8 @@ None
   },
   "status": "<status>",
   "recording": {
-    "status": "active",
-    "bucket_name": "recording-test-bucket-name"
+    "status": "<recording_status>",
+    "bucket_name": "<recording_bucket_name>"
   },
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T21:50:21Z"
@@ -432,8 +436,8 @@ PUT /tenants/{tenant_id}/apps/{app_id}
   },
   "status": "<status>",
   "recording": {
-    "status": "active",
-    "bucket_name": "recording-test-bucket-name"
+    "status": "<recording_status>",
+    "bucket_name": "<recording_bucket_name>"
   },
   "created_at": "2016-12-09T21:50:21Z",
   "updated_at": "2016-12-09T23:20:21Z"
