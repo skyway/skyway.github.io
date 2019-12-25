@@ -2756,6 +2756,8 @@ html { position: relative; min-height: 100%; }
   #main .pricing-table tbody td { margin-left: 20px; padding: 0; }
   #main .pricing-table tbody .td-header { font-weight: bold; margin-left: 0; }
   #main .pricing-table tbody .td-badge .badge { display: inline-block; width: 77px; } }
+#main .tutorial-image.figure { display: block; margin: 30px; text-align: center; }
+#main .tutorial-image.figure img { border: 1px solid #aaaaaa; }
 #main .header-link { position: absolute; padding-right: .5em; margin-left: -1em; color: inherit !important; text-decoration: none !important; opacity: 0; }
 #main .header-link .fa { font-size: 66%; vertical-align: .1em; }
 @media (max-width: 767px) { #main .header-link { display: none !important; } }
