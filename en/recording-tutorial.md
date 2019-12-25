@@ -23,7 +23,7 @@ breadcrumb: [en/index.md, en/developer.md]
 Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSのページ](https://console.cloud.google.com/storage/browser)からバケットを作成してください。（GCPダッシュボードにおける左メニューの「Storage」→ 「ブラウザ」と遷移しても開くことが出来ます)
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/gcs-list.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/gcs-list.png"
     class="figure-img img-fluid rounded" alt="GCS バケット一覧画面">
   <figcaption class="figure-caption">GCS バケット一覧画面</figcaption>
 </figure>
@@ -32,7 +32,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 また、このあとバケット名を利用する手順があるのでバケット名は控えておいてください。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/gcs-add.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/gcs-add.png"
     class="figure-img img-fluid rounded" alt="GCS バケット作成画面">
   <figcaption class="figure-caption">GCS バケット作成画面</figcaption>
 </figure>
@@ -45,7 +45,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 ここで作成したサービスアカウントは後の手順にて先ほどのバケットへの書き込み権限を付与します。その後、SkyWayのDashboardに認証情報を渡すことで、SkyWayの録音サーバがお客様のバケットにファイルを保存できるようになります。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/service-account-list.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/service-account-list.png"
     class="figure-img img-fluid rounded" alt="GCP サービスアカウント一覧画面">
   <figcaption class="figure-caption">GCP サービスアカウント一覧画面</figcaption>
 </figure>
@@ -55,7 +55,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 任意のサービスアカウント名とサービスアカウントID、説明を入力して「作成」ボタンを押します。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/service-account-create.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/service-account-create.png"
     class="figure-img img-fluid rounded" alt="GCP サービスアカウント作成画面 - 1">
   <figcaption class="figure-caption">GCP サービスアカウント作成画面 - 1</figcaption>
 </figure>
@@ -63,7 +63,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 バケットの権限設定はここでは行わないので、権限は何も付与する必要はありません。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/service-account-create-2.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/service-account-create-2.png"
     class="figure-img img-fluid rounded" alt="GCP サービスアカウント作成画面 - 2">
   <figcaption class="figure-caption">GCP サービスアカウント作成画面 - 2</figcaption>
 </figure>
@@ -73,7 +73,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 「キーを作成」ボタンを押してください。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/service-account-create-3.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/service-account-create-3.png"
     class="figure-img img-fluid rounded" alt="GCP サービスアカウント作成画面 - 3">
   <figcaption class="figure-caption">GCP サービスアカウント作成画面 - 3</figcaption>
 </figure>
@@ -84,7 +84,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 その後、元の画面で「完了」を押し、サービスアカウントの作成を完了させてください。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/service-account-create-4.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/service-account-create-4.png"
     class="figure-img img-fluid rounded" alt="GCP サービスアカウント作成画面 - 4">
   <figcaption class="figure-caption">GCP サービスアカウント作成画面 - 4</figcaption>
 </figure>
@@ -96,7 +96,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 先程作成したバケットのページに移動します。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/gcs.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/gcs.png"
     class="figure-img img-fluid rounded" alt="GCS バケット詳細画面">
   <figcaption class="figure-caption">GCS バケット詳細画面</figcaption>
 </figure>
@@ -104,7 +104,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 上部にある「権限」タブを押して、権限ページに遷移します。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/gcs-permission.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/gcs-permission.png"
     class="figure-img img-fluid rounded" alt="GCS バケット権限画面">
   <figcaption class="figure-caption">GCS バケット権限画面</figcaption>
 </figure>
@@ -115,7 +115,7 @@ Google Cloud Platform(GCP)のダッシュボードにログインし、[GCSの�
 権限の欄で「ストレージ」の**「ストレージオブジェクト作成者」**を選択し、保存します。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/gcs-permission-add.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/gcs-permission-add.png"
     class="figure-img img-fluid rounded" alt="GCS バケット権限追加画面">
   <figcaption class="figure-caption">GCS バケット権限追加画面</figcaption>
 </figure>
@@ -131,7 +131,7 @@ SkyWayのDashboardにログインし、新しいアプリケーションを作�
 次に、権限セクションにおいて「録音機能を利用する」にチェックを入れて、その下の録音セクションにおいて「Google Cloud Storage バケット名」と、「サービスアカウントキー」に先程ダウンロードしたJSONファイルを指定してください。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/skyway-app.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/skyway-app.png"
     class="figure-img img-fluid rounded" alt="SkyWayアプリケーション作成画面">
   <figcaption class="figure-caption">SkyWayアプリケーション作成画面</figcaption>
 </figure>
@@ -142,7 +142,7 @@ SkyWayのDashboardにログインし、新しいアプリケーションを作�
 サービス運用中にこの値が「利用停止中。GCSの権限を確認し再設定してください」となっている場合、バケットが存在しないか、バケットに書き込む権限がない可能性があるため確認してください。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/skyway-app-created.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/skyway-app-created.png"
     class="figure-img img-fluid rounded" alt="SkyWayアプリケーション一覧画面">
   <figcaption class="figure-caption">SkyWayアプリケーション一覧画面</figcaption>
 </figure>
@@ -276,7 +276,7 @@ $ php -S localhost:8080
 サーバを起動したら `index.html` をブラウザで開いてください。
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/tutorial-app.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/tutorial-app.png"
     class="figure-img img-fluid rounded" alt="チュートリアルアプリ画面">
   <figcaption class="figure-caption">チュートリアルアプリ画面</figcaption>
 </figure>
@@ -301,7 +301,7 @@ root
 ```
 
 <figure class="figure tutorial-image">
-  <img src="{{ site.baseurl }}/images/recorder-tutorial/gcs-uploaded.png"
+  <img src="{{ site.baseurl }}/images/recording-tutorial/gcs-uploaded.png"
     class="figure-img img-fluid rounded" alt="GCS 録音フォルダ画面">
   <figcaption class="figure-caption">GCS 録音フォルダ画面</figcaption>
 </figure>
