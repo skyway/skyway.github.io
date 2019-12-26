@@ -2733,6 +2733,7 @@ html { position: relative; min-height: 100%; }
 @media (max-width: 575px) { #main .tab-pane .rows { height: auto; } }
 #main .tab-pane .mini-headline-text { line-height: 1.2; margin-bottom: 1rem; }
 #main .tab-pane .allnewslink { position: absolute; text-align: center; width: 100%; bottom: 0; }
+#main .details-image.figure { display: block; margin: 30px; text-align: center; }
 #main .badge-community, #main .badge-enterprise { width: 85px; display: inline-block; }
 #main .badge-community { color: #fff; background-color: #1983ec; }
 #main .badge-community[href]:focus, #main .badge-community[href]:hover { color: #fff; text-decoration: none; background-color: #1069c3; }

@@ -557,6 +557,15 @@ html {
     }
   }
 
+  // recording.html
+  .details-image {
+    &.figure {
+      display: block;
+      margin: 30px;
+      text-align: center;
+    }
+  }
+
   // support.html, priceing.html
   .badge-community, .badge-enterprise {
     width: 85px;
