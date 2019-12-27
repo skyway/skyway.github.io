@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SKWCallOption.h ソースファイル - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -47,18 +47,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.13 -->
+<!-- 構築: Doxygen 1.8.16 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -84,21 +87,42 @@ $(function() {
 <div class="title">SKWCallOption.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00005.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// SKWCallOption.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SkyWay SDK</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@interface </span><a class="code" href="a00085.html">SKWCallOption</a> : NSObject &lt; NSCopying &gt;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00085.html#a4de3456245b31e34a25228cba599fe7d">   23</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#a4de3456245b31e34a25228cba599fe7d">metadata</a>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00085.html#aa94c30dd45205d4d12beb06dac050c2b">   28</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#aa94c30dd45205d4d12beb06dac050c2b">connectionId</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00085.html#aab1e3b7174ba5ba902719f3d1beaf495">   33</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#aab1e3b7174ba5ba902719f3d1beaf495">label</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00085.html#aa6b39fcf5e1174eb82607de9945faf5d">   38</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSUInteger <a class="code" href="a00085.html#aa6b39fcf5e1174eb82607de9945faf5d">videoBandwidth</a>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00085.html#ad19c51ca906eed8a5b3a0b216b6b70e5">   43</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSUInteger <a class="code" href="a00085.html#ad19c51ca906eed8a5b3a0b216b6b70e5">audioBandwidth</a>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a00085.html#a1f6cf075721944d27aa76e1af077a82d">   48</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#a1f6cf075721944d27aa76e1af077a82d">videoCodec</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00085.html#a409d3e88cd00518bcb5c709f7fa61f69">   53</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#a409d3e88cd00518bcb5c709f7fa61f69">audioCodec</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="a00085_html_aa94c30dd45205d4d12beb06dac050c2b"><div class="ttname"><a href="a00085.html#aa94c30dd45205d4d12beb06dac050c2b">SKWCallOption::connectionId</a></div><div class="ttdeci">NSString *__nullable connectionId</div><div class="ttdoc">コネクション ID を指定します </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:28</div></div>
-<div class="ttc" id="a00085_html_ad19c51ca906eed8a5b3a0b216b6b70e5"><div class="ttname"><a href="a00085.html#ad19c51ca906eed8a5b3a0b216b6b70e5">SKWCallOption::audioBandwidth</a></div><div class="ttdeci">NSUInteger audioBandwidth</div><div class="ttdoc">音声の最大バンド幅を kbps で指定します。 </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:43</div></div>
-<div class="ttc" id="a00085_html_a1f6cf075721944d27aa76e1af077a82d"><div class="ttname"><a href="a00085.html#a1f6cf075721944d27aa76e1af077a82d">SKWCallOption::videoCodec</a></div><div class="ttdeci">NSString *__nullable videoCodec</div><div class="ttdoc">映像コーデックを明示的に指定します。 (例:H264) </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:48</div></div>
-<div class="ttc" id="a00085_html_aa6b39fcf5e1174eb82607de9945faf5d"><div class="ttname"><a href="a00085.html#aa6b39fcf5e1174eb82607de9945faf5d">SKWCallOption::videoBandwidth</a></div><div class="ttdeci">NSUInteger videoBandwidth</div><div class="ttdoc">映像の最大バンド幅を kbps で指定します。 </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:38</div></div>
-<div class="ttc" id="a00085_html_a4de3456245b31e34a25228cba599fe7d"><div class="ttname"><a href="a00085.html#a4de3456245b31e34a25228cba599fe7d">SKWCallOption::metadata</a></div><div class="ttdeci">NSString *__nullable metadata</div><div class="ttdoc">メタデータを指定します コネクションに関連付けされるメタデータで、コネクションを開始したpeerに渡されま...</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:23</div></div>
-<div class="ttc" id="a00085_html_aab1e3b7174ba5ba902719f3d1beaf495"><div class="ttname"><a href="a00085.html#aab1e3b7174ba5ba902719f3d1beaf495">SKWCallOption::label</a></div><div class="ttdeci">NSString *__nullable label</div><div class="ttdoc">接続先の Peer ID を識別するのに利用するラベルを指定します。 </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:33</div></div>
-<div class="ttc" id="a00085_html_a409d3e88cd00518bcb5c709f7fa61f69"><div class="ttname"><a href="a00085.html#a409d3e88cd00518bcb5c709f7fa61f69">SKWCallOption::audioCodec</a></div><div class="ttdeci">NSString *__nullable audioCodec</div><div class="ttdoc">音声コーデックを明示的に指定します。 (例:PCMU) </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:53</div></div>
-<div class="ttc" id="a00085_html"><div class="ttname"><a href="a00085.html">SKWCallOption</a></div><div class="ttdoc">SKWPeer call オプション </div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:14</div></div>
+<a href="a00005.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// SKWCallOption.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SkyWay SDK</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@interface </span><a class="code" href="a00085.html">SKWCallOption</a> : NSObject &lt; NSCopying &gt;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="a00085.html#a4de3456245b31e34a25228cba599fe7d">   23</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#a4de3456245b31e34a25228cba599fe7d">metadata</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="a00085.html#aa94c30dd45205d4d12beb06dac050c2b">   28</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#aa94c30dd45205d4d12beb06dac050c2b">connectionId</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="a00085.html#aab1e3b7174ba5ba902719f3d1beaf495">   33</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#aab1e3b7174ba5ba902719f3d1beaf495">label</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="a00085.html#aa6b39fcf5e1174eb82607de9945faf5d">   38</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSUInteger <a class="code" href="a00085.html#aa6b39fcf5e1174eb82607de9945faf5d">videoBandwidth</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="a00085.html#ad19c51ca906eed8a5b3a0b216b6b70e5">   43</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSUInteger <a class="code" href="a00085.html#ad19c51ca906eed8a5b3a0b216b6b70e5">audioBandwidth</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="a00085.html#a1f6cf075721944d27aa76e1af077a82d">   48</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#a1f6cf075721944d27aa76e1af077a82d">videoCodec</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="a00085.html#a409d3e88cd00518bcb5c709f7fa61f69">   53</a></span>&#160;<span class="keyword">@property</span> (nonatomic) NSString* __nullable <a class="code" href="a00085.html#a409d3e88cd00518bcb5c709f7fa61f69">audioCodec</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aa00085_html_aa6b39fcf5e1174eb82607de9945faf5d"><div class="ttname"><a href="a00085.html#aa6b39fcf5e1174eb82607de9945faf5d">SKWCallOption::videoBandwidth</a></div><div class="ttdeci">NSUInteger videoBandwidth</div><div class="ttdoc">映像の最大バンド幅を kbps で指定します。</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:38</div></div>
+<div class="ttc" id="aa00085_html_a4de3456245b31e34a25228cba599fe7d"><div class="ttname"><a href="a00085.html#a4de3456245b31e34a25228cba599fe7d">SKWCallOption::metadata</a></div><div class="ttdeci">NSString *__nullable metadata</div><div class="ttdoc">メタデータを指定します コネクションに関連付けされるメタデータで、コネクションを開始したpeerに渡されます。</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:23</div></div>
+<div class="ttc" id="aa00085_html_aab1e3b7174ba5ba902719f3d1beaf495"><div class="ttname"><a href="a00085.html#aab1e3b7174ba5ba902719f3d1beaf495">SKWCallOption::label</a></div><div class="ttdeci">NSString *__nullable label</div><div class="ttdoc">接続先の Peer ID を識別するのに利用するラベルを指定します。</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:33</div></div>
+<div class="ttc" id="aa00085_html_ad19c51ca906eed8a5b3a0b216b6b70e5"><div class="ttname"><a href="a00085.html#ad19c51ca906eed8a5b3a0b216b6b70e5">SKWCallOption::audioBandwidth</a></div><div class="ttdeci">NSUInteger audioBandwidth</div><div class="ttdoc">音声の最大バンド幅を kbps で指定します。</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:43</div></div>
+<div class="ttc" id="aa00085_html"><div class="ttname"><a href="a00085.html">SKWCallOption</a></div><div class="ttdoc">SKWPeer call オプション</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:14</div></div>
+<div class="ttc" id="aa00085_html_aa94c30dd45205d4d12beb06dac050c2b"><div class="ttname"><a href="a00085.html#aa94c30dd45205d4d12beb06dac050c2b">SKWCallOption::connectionId</a></div><div class="ttdeci">NSString *__nullable connectionId</div><div class="ttdoc">コネクション ID を指定します</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:28</div></div>
+<div class="ttc" id="aa00085_html_a1f6cf075721944d27aa76e1af077a82d"><div class="ttname"><a href="a00085.html#a1f6cf075721944d27aa76e1af077a82d">SKWCallOption::videoCodec</a></div><div class="ttdeci">NSString *__nullable videoCodec</div><div class="ttdoc">映像コーデックを明示的に指定します。 (例:H264)</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:48</div></div>
+<div class="ttc" id="aa00085_html_a409d3e88cd00518bcb5c709f7fa61f69"><div class="ttname"><a href="a00085.html#a409d3e88cd00518bcb5c709f7fa61f69">SKWCallOption::audioCodec</a></div><div class="ttdeci">NSString *__nullable audioCodec</div><div class="ttdoc">音声コーデックを明示的に指定します。 (例:PCMU)</div><div class="ttdef"><b>Definition:</b> SKWCallOption.h:53</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
+</a> 1.8.16
 </small></address>
 <p class="footer">© NTT Communications Corporation All Rights Reserved.</p>
 </body>

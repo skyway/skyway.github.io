@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SKWNavigator.h ソースファイル - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -47,18 +47,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.13 -->
+<!-- 構築: Doxygen 1.8.16 -->
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','検索');
   $(document).ready(function() { init_search(); });
 });
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -84,18 +87,35 @@ $(function() {
 <div class="title">SKWNavigator.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="a00041.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// SKWNavigator.h</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SkyWay SDK</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00113.html">SKWMediaConstraints</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00117.html">SKWMediaStream</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00129.html">SKWPeer</a>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00125.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="a00125.html">SKWNavigator</a> : NSObject</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;+ (void)initialize:(<a class="code" href="a00129.html">SKWPeer</a>* __nonnull)peer;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;+ (void)<a class="code" href="a00125.html#acca6f7033ca548283994392cee3b4c72">terminate</a>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;+ (<a class="code" href="a00117.html">SKWMediaStream</a>* __nullable)getUserMedia:(<a class="code" href="a00113.html">SKWMediaConstraints</a>* __nonnull)constraints;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">@end</span></div><div class="ttc" id="a00125_html_acca6f7033ca548283994392cee3b4c72"><div class="ttname"><a href="a00125.html#acca6f7033ca548283994392cee3b4c72">+[SKWNavigator terminate]</a></div><div class="ttdeci">void terminate()</div><div class="ttdoc">ローカルメディアストリームを取得します。 </div></div>
-<div class="ttc" id="a00129_html"><div class="ttname"><a href="a00129.html">SKWPeer</a></div><div class="ttdoc">ピアクラス </div><div class="ttdef"><b>Definition:</b> SKWPeer.h:98</div></div>
-<div class="ttc" id="a00117_html"><div class="ttname"><a href="a00117.html">SKWMediaStream</a></div><div class="ttdoc">メディアストリーム </div><div class="ttdef"><b>Definition:</b> SKWMediaStream.h:18</div></div>
-<div class="ttc" id="a00125_html"><div class="ttname"><a href="a00125.html">SKWNavigator</a></div><div class="ttdoc">Web ブラウザの navigator 相当のクラスになります。 </div><div class="ttdef"><b>Definition:</b> SKWNavigator.h:18</div></div>
-<div class="ttc" id="a00113_html"><div class="ttname"><a href="a00113.html">SKWMediaConstraints</a></div><div class="ttdoc">SKWNavigator の getUserMedia 実行時のオプション設定クラスです。 </div><div class="ttdef"><b>Definition:</b> SKWMediaConstraints.h:49</div></div>
+<a href="a00041.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// SKWNavigator.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SkyWay SDK</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span><span class="preprocessor">#import &lt;Foundation/Foundation.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00113.html">SKWMediaConstraints</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00117.html">SKWMediaStream</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">@class</span> <a class="code" href="a00129.html">SKWPeer</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a00125.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="a00125.html">SKWNavigator</a> : NSObject</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;+ (void)initialize:(<a class="code" href="a00129.html">SKWPeer</a>* __nonnull)peer;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;+ (void)<a class="code" href="a00125.html#acca6f7033ca548283994392cee3b4c72">terminate</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;+ (<a class="code" href="a00117.html">SKWMediaStream</a>* __nullable)getUserMedia:(<a class="code" href="a00113.html">SKWMediaConstraints</a>* __nonnull)constraints;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aa00129_html"><div class="ttname"><a href="a00129.html">SKWPeer</a></div><div class="ttdoc">ピアクラス</div><div class="ttdef"><b>Definition:</b> SKWPeer.h:98</div></div>
+<div class="ttc" id="aa00117_html"><div class="ttname"><a href="a00117.html">SKWMediaStream</a></div><div class="ttdoc">メディアストリーム</div><div class="ttdef"><b>Definition:</b> SKWMediaStream.h:18</div></div>
+<div class="ttc" id="aa00125_html"><div class="ttname"><a href="a00125.html">SKWNavigator</a></div><div class="ttdoc">Web ブラウザの navigator 相当のクラスになります。</div><div class="ttdef"><b>Definition:</b> SKWNavigator.h:18</div></div>
+<div class="ttc" id="aa00113_html"><div class="ttname"><a href="a00113.html">SKWMediaConstraints</a></div><div class="ttdoc">SKWNavigator の getUserMedia 実行時のオプション設定クラスです。</div><div class="ttdef"><b>Definition:</b> SKWMediaConstraints.h:49</div></div>
+<div class="ttc" id="aa00125_html_acca6f7033ca548283994392cee3b4c72"><div class="ttname"><a href="a00125.html#acca6f7033ca548283994392cee3b4c72">+[SKWNavigator terminate]</a></div><div class="ttdeci">void terminate()</div><div class="ttdoc">ナビゲータを破棄します。</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
+</a> 1.8.16
 </small></address>
 <p class="footer">© NTT Communications Corporation All Rights Reserved.</p>
 </body>
