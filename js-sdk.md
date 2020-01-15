@@ -77,6 +77,7 @@ const peer = new Peer({key: 'your-api-key'});
 - [Google Chrome](https://www.google.com/chrome){: target="_blank"} 安定版の最新2バージョン
 - [Firefox](https://www.mozilla.org/firefox/){: target="_blank"} 安定版の最新2バージョン
 - [Safari](https://www.apple.com/jp/safari/){: target="_blank"} 安定版の最新バージョン
+- [Microsoft Edge](https://www.microsoft.com/ja-jp/windows/microsoft-edge){: target="_blank"} 安定版の最新バージョン
 
 ## APIリファレンス
 
