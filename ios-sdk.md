@@ -68,7 +68,8 @@ $ pod install
 
 ## 対応OS
 
-iOS 9.0+
+iOS 9.0+  
+iPadOS 13.1+
 
 ## APIリファレンス
 
