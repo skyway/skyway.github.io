@@ -69,7 +69,8 @@ $ pod install
 
 ## Supported OS's
 
-iOS 9+
+iOS 9+  
+iPadOS 13+
 
 ## API Reference
 
