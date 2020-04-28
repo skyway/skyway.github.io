@@ -5,6 +5,7 @@ var searchData=
   ['getenableaudiotrack_3a_28',['getEnableAudioTrack:',['../a00117.html#a52dadb97beb5e2230074fdc674ada744',1,'SKWMediaStream']]],
   ['getenablevideotrack_3a_29',['getEnableVideoTrack:',['../a00117.html#a3eceb27d658acc48ad967583fec9c665',1,'SKWMediaStream']]],
   ['getlog_30',['getLog',['../a00145.html#a09c2d417cd302156884525b9cc1123ef',1,'SKWRoom']]],
-  ['getusermedia_3a_31',['getUserMedia:',['../a00125.html#aff7dda671294a1f8d8c2cbf554f9a5ed',1,'SKWNavigator']]],
-  ['getvideotracks_32',['getVideoTracks',['../a00117.html#a45c5bcfea64e5a273c779f4ab8b891bf',1,'SKWMediaStream']]]
+  ['getstats_3a_31',['getStats:',['../a00089.html#a5fe3660017948441e7e5928df7adf168',1,'SKWConnection']]],
+  ['getusermedia_3a_32',['getUserMedia:',['../a00125.html#aff7dda671294a1f8d8c2cbf554f9a5ed',1,'SKWNavigator']]],
+  ['getvideotracks_33',['getVideoTracks',['../a00117.html#a45c5bcfea64e5a273c779f4ab8b891bf',1,'SKWMediaStream']]]
 ];

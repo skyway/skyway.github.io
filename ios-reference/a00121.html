@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SKWMeshRoom クラス - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -47,7 +47,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.16 -->
+<!-- 構築: Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -112,7 +112,7 @@ SKWMeshRoom の継承関係図</div>
 <tr class="memdesc:a47de89cc50489724bcfc824f1c41b2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信しているメディアストリームを更新します。 受信のみモードから双方向に切り替えることもできます。  <a href="a00121.html#a47de89cc50489724bcfc824f1c41b2f9">[詳解]</a><br /></td></tr>
 <tr class="separator:a47de89cc50489724bcfc824f1c41b2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">send:</a></td></tr>
-<tr class="memdesc:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のルームに入室中のピアにデータを送信します。NSString* または NSData* を送信できます。  <a href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">[詳解]</a><br /></td></tr>
+<tr class="memdesc:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のルームに入室中のピアにデータを送信します。NSString* または NSData* を送信できます。送信するデータサイズの上限は20MBです。  <a href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">[詳解]</a><br /></td></tr>
 <tr class="separator:ad9b3a18bf1156b08b8ef4986a0c7d557"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29a99ee54145db5e7bcec22ebfe2c579"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="a00145.html#a29a99ee54145db5e7bcec22ebfe2c579">on:callback:</a></td></tr>
 <tr class="memdesc:a29a99ee54145db5e7bcec22ebfe2c579"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00145.html" title="SKWMeshRoom / SKWSFURoom の基底クラスです。">SKWRoom</a> のイベントコールバック block を設定します。  <a href="a00145.html#a29a99ee54145db5e7bcec22ebfe2c579">[詳解]</a><br /></td></tr>
@@ -136,7 +136,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>メッシュ接続でのルームを管理するクラスです。 </p>
 </div><h2 class="groupheader">メソッド詳解</h2>
 <a id="a09c2d417cd302156884525b9cc1123ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09c2d417cd302156884525b9cc1123ef">&#9670;&nbsp;</a></span>getLog()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a09c2d417cd302156884525b9cc1123ef">&#9670;&nbsp;</a></span>getLog</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +173,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div>
 </div>
 <a id="a5f02542e9d2a7be9f5194fe0e147942b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f02542e9d2a7be9f5194fe0e147942b">&#9670;&nbsp;</a></span>offAll()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f02542e9d2a7be9f5194fe0e147942b">&#9670;&nbsp;</a></span>offAll</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +194,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div>
 </div>
 <a id="a29a99ee54145db5e7bcec22ebfe2c579"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29a99ee54145db5e7bcec22ebfe2c579">&#9670;&nbsp;</a></span>on:callback:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a29a99ee54145db5e7bcec22ebfe2c579">&#9670;&nbsp;</a></span>on:callback:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,7 +274,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div>
 </div>
 <a id="a47de89cc50489724bcfc824f1c41b2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47de89cc50489724bcfc824f1c41b2f9">&#9670;&nbsp;</a></span>replaceStream:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47de89cc50489724bcfc824f1c41b2f9">&#9670;&nbsp;</a></span>replaceStream:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,7 +304,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div>
 </div>
 <a id="ad9b3a18bf1156b08b8ef4986a0c7d557"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9b3a18bf1156b08b8ef4986a0c7d557">&#9670;&nbsp;</a></span>send:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b3a18bf1156b08b8ef4986a0c7d557">&#9670;&nbsp;</a></span>send:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +319,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
       </table>
 </div><div class="memdoc">
 
-<p>現在のルームに入室中のピアにデータを送信します。NSString* または NSData* を送信できます。 </p>
+<p>現在のルームに入室中のピアにデータを送信します。NSString* または NSData* を送信できます。送信するデータサイズの上限は20MBです。 </p>
 <div class="fragment"><div class="line"><a class="code" href="a00145.html">SKWRoom</a>* room;</div>
 <div class="line">[room <a class="code" href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">send</a>:@&quot;Hello.&quot;];</div>
 </div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
@@ -333,7 +333,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aa00145_html_ad9b3a18bf1156b08b8ef4986a0c7d557"><div class="ttname"><a href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">-[SKWRoom send:]</a></div><div class="ttdeci">BOOL send:(NSObject *__nonnull data)</div><div class="ttdoc">現在のルームに入室中のピアにデータを送信します。NSString* または NSData* を送信できます。</div></div>
+<div class="ttc" id="aa00145_html_ad9b3a18bf1156b08b8ef4986a0c7d557"><div class="ttname"><a href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">-[SKWRoom send:]</a></div><div class="ttdeci">BOOL send:(NSObject *__nonnull data)</div><div class="ttdoc">現在のルームに入室中のピアにデータを送信します。NSString* または NSData* を送信できます。送信するデータサイズの上限は20MBです。</div></div>
 <div class="ttc" id="aa00137_html"><div class="ttname"><a href="a00137.html">SKWPeerError</a></div><div class="ttdoc">エラー情報クラス</div><div class="ttdef"><b>Definition:</b> SKWPeerError.h:55</div></div>
 <div class="ttc" id="aa00145_html_a29a99ee54145db5e7bcec22ebfe2c579"><div class="ttname"><a href="a00145.html#a29a99ee54145db5e7bcec22ebfe2c579">-[SKWRoom on:callback:]</a></div><div class="ttdeci">void on:callback:(SKWRoomEventEnum event,[callback] SKWRoomEventCallback __nullable callback)</div><div class="ttdoc">SKWRoom のイベントコールバック block を設定します。</div></div>
 <div class="ttc" id="aa00145_html_a5f02542e9d2a7be9f5194fe0e147942b"><div class="ttname"><a href="a00145.html#a5f02542e9d2a7be9f5194fe0e147942b">-[SKWRoom offAll]</a></div><div class="ttdeci">void offAll()</div><div class="ttdoc">SKWRoom の設定済みイベントコールバック block を解除します。</div></div>
@@ -347,7 +347,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.16
+</a> 1.8.17
 </small></address>
 <p class="footer">© NTT Communications Corporation All Rights Reserved.</p>
 </body>

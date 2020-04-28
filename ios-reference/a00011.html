@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SKWConnection.h ファイル - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -47,7 +47,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.16 -->
+<!-- 構築: Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -85,6 +85,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">クラス</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
 <a href="#enum-members">列挙型</a>  </div>
   <div class="headertitle">
 <div class="title">SKWConnection.h ファイル</div>  </div>
@@ -101,6 +102,12 @@ $(function() {
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00101.html" title="DataConnection 相当のクラスです。">SKWDataConnection</a> / <a class="el" href="a00109.html" title="MediaConnection 相当のクラスです。">SKWMediaConnection</a> の基底クラスです。  <a href="a00089.html#details">[詳解]</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ab10da56ccc774f2a8c151922f725d7d0"><td class="memItemLeft" align="right" valign="top">typedef void(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#ab10da56ccc774f2a8c151922f725d7d0">SKWConnectionGetStatsCallback</a>) (NSArray *__nullable stats)</td></tr>
+<tr class="memdesc:ab10da56ccc774f2a8c151922f725d7d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">統計情報取得コールバックシグネチャ  <a href="a00011.html#ab10da56ccc774f2a8c151922f725d7d0">[詳解]</a><br /></td></tr>
+<tr class="separator:ab10da56ccc774f2a8c151922f725d7d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 列挙型</h2></td></tr>
 <tr class="memitem:a00fbc6e508f97288693e36591a0d72de"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00011.html#a00fbc6e508f97288693e36591a0d72de">SKWSerializationEnum</a> { <a class="el" href="a00011.html#a00fbc6e508f97288693e36591a0d72dea65fbda083031c0bd3f48ab3d29225a7c">SKW_SERIALIZATION_BINARY</a> = 0, 
@@ -111,6 +118,26 @@ $(function() {
 <tr class="memdesc:a00fbc6e508f97288693e36591a0d72de"><td class="mdescLeft">&#160;</td><td class="mdescRight">シリアライズ種別  <a href="a00011.html#a00fbc6e508f97288693e36591a0d72de">[詳解]</a><br /></td></tr>
 <tr class="separator:a00fbc6e508f97288693e36591a0d72de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ab10da56ccc774f2a8c151922f725d7d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab10da56ccc774f2a8c151922f725d7d0">&#9670;&nbsp;</a></span>SKWConnectionGetStatsCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(^ SKWConnectionGetStatsCallback) (NSArray *__nullable stats)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>統計情報取得コールバックシグネチャ </p>
+<p>statsは<code>RTCStats Dictionary</code>に準拠したオブジェクトの配列(NSArray)です。 <a href="https://www.w3.org/TR/webrtc/#rtcstats-dictionary">https://www.w3.org/TR/webrtc/#rtcstats-dictionary</a></p>
+<p>こちらに含まれる<code>type</code>キーに関しては、<code>RTCStatsType enum</code>を参照してください。 <a href="https://www.w3.org/TR/webrtc-stats/#rtcstatstype-str">https://www.w3.org/TR/webrtc-stats/#rtcstatstype-str</a>*</p>
+<p>取得できる統計情報は<code>Stats Dictionary</code>を参照してください。 <a href="https://www.w3.org/TR/webrtc-stats/#stats-dictionaries">https://www.w3.org/TR/webrtc-stats/#stats-dictionaries</a> </p>
+
+</div>
+</div>
 <h2 class="groupheader">列挙型詳解</h2>
 <a id="a00fbc6e508f97288693e36591a0d72de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a00fbc6e508f97288693e36591a0d72de">&#9670;&nbsp;</a></span>SKWSerializationEnum</h2>
@@ -144,7 +171,7 @@ $(function() {
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.16
+</a> 1.8.17
 </small></address>
 <p class="footer">© NTT Communications Corporation All Rights Reserved.</p>
 </body>

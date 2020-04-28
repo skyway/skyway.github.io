@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>SKWMediaConnection クラス - iOS SDK APIリファレンス - SkyWay - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -47,7 +47,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- 構築: Doxygen 1.8.16 -->
+<!-- 構築: Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'検索');
@@ -122,6 +122,9 @@ SKWMediaConnection の継承関係図</div>
 <tr class="memitem:a58bbb16cb1df6e038e5b0155ec56fc3d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="a00109.html#a58bbb16cb1df6e038e5b0155ec56fc3d">replaceStream:</a></td></tr>
 <tr class="memdesc:a58bbb16cb1df6e038e5b0155ec56fc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信しているメディアストリームを更新します。 受信のみモードから双方向に切り替えることもできます。  <a href="a00109.html#a58bbb16cb1df6e038e5b0155ec56fc3d">[詳解]</a><br /></td></tr>
 <tr class="separator:a58bbb16cb1df6e038e5b0155ec56fc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fe3660017948441e7e5928df7adf168"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="a00089.html#a5fe3660017948441e7e5928df7adf168">getStats:</a></td></tr>
+<tr class="memdesc:a5fe3660017948441e7e5928df7adf168"><td class="mdescLeft">&#160;</td><td class="mdescRight">コネクションの統計情報を取得します  <a href="a00089.html#a5fe3660017948441e7e5928df7adf168">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fe3660017948441e7e5928df7adf168"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 プロパティ</h2></td></tr>
@@ -167,7 +170,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 <p>このオブジェクトを取得するには、SKWPeer の callWithId メソッドを使用するか、 SKW_PEER_EVENT_CALL イベント発生時に渡されるオブジェクトを使用してください。 </p>
 </div><h2 class="groupheader">メソッド詳解</h2>
 <a id="a3f8f54430664494adc2e77639703134d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f8f54430664494adc2e77639703134d">&#9670;&nbsp;</a></span>answer()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f8f54430664494adc2e77639703134d">&#9670;&nbsp;</a></span>answer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +195,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </div>
 </div>
 <a id="a1836dc4872cbcf085c852b0c021e88c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1836dc4872cbcf085c852b0c021e88c5">&#9670;&nbsp;</a></span>answer:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1836dc4872cbcf085c852b0c021e88c5">&#9670;&nbsp;</a></span>answer:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,7 +233,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </div>
 </div>
 <a id="a07a6588bb04e1537e2380658abf29381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07a6588bb04e1537e2380658abf29381">&#9670;&nbsp;</a></span>answer:options:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a6588bb04e1537e2380658abf29381">&#9670;&nbsp;</a></span>answer:options:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +285,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </div>
 </div>
 <a id="adaacf69ecc3e6780ab0002c7ae37c979"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaacf69ecc3e6780ab0002c7ae37c979">&#9670;&nbsp;</a></span>close()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adaacf69ecc3e6780ab0002c7ae37c979">&#9670;&nbsp;</a></span>close</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,8 +307,39 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </div><!-- fragment --> 
 </div>
 </div>
+<a id="a5fe3660017948441e7e5928df7adf168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe3660017948441e7e5928df7adf168">&#9670;&nbsp;</a></span>getStats:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) getStats: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="a00011.html#ab10da56ccc774f2a8c151922f725d7d0">SKWConnectionGetStatsCallback</a> __nullable)&#160;</td>
+          <td class="paramname"><em>callback</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コネクションの統計情報を取得します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>統計情報取得後のBlock を設定します。</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a class="code" href="a00109.html">SKWMediaConnection</a> *connection;</div>
+<div class="line"> </div>
+<div class="line">[connection <a class="code" href="a00089.html#a5fe3660017948441e7e5928df7adf168">getStats</a>:^(NSArray * _Nullable stats) {</div>
+<div class="line">       <span class="comment">// Do something</span></div>
+<div class="line">}];</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="adee4e5e17d264627c932c51b302c18aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee4e5e17d264627c932c51b302c18aa">&#9670;&nbsp;</a></span>on:callback:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adee4e5e17d264627c932c51b302c18aa">&#9670;&nbsp;</a></span>on:callback:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,7 +394,7 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 </div>
 </div>
 <a id="a58bbb16cb1df6e038e5b0155ec56fc3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58bbb16cb1df6e038e5b0155ec56fc3d">&#9670;&nbsp;</a></span>replaceStream:()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a58bbb16cb1df6e038e5b0155ec56fc3d">&#9670;&nbsp;</a></span>replaceStream:</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,14 +436,15 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a000
 <div class="ttc" id="aa00081_html"><div class="ttname"><a href="a00081.html">SKWAnswerOption</a></div><div class="ttdoc">SKWMediaConnection answer オプション</div><div class="ttdef"><b>Definition:</b> SKWAnswerOption.h:14</div></div>
 <div class="ttc" id="aa00109_html_adaacf69ecc3e6780ab0002c7ae37c979"><div class="ttname"><a href="a00109.html#adaacf69ecc3e6780ab0002c7ae37c979">-[SKWMediaConnection close]</a></div><div class="ttdeci">void close()</div><div class="ttdoc">SKWMediaConnection を閉じます。</div></div>
 <div class="ttc" id="aa00109_html_adee4e5e17d264627c932c51b302c18aa"><div class="ttname"><a href="a00109.html#adee4e5e17d264627c932c51b302c18aa">-[SKWMediaConnection on:callback:]</a></div><div class="ttdeci">void on:callback:(SKWMediaConnectionEventEnum event,[callback] SKWMediaConnectionEventCallback __nullable callback)</div><div class="ttdoc">SKWMediaConnection のイベントコールバック Block を設定します。</div></div>
-<div class="ttc" id="aa00089_html_ac813d72bc5bbe0b0b40143ec814d9411"><div class="ttname"><a href="a00089.html#ac813d72bc5bbe0b0b40143ec814d9411">SKWConnection::peer</a></div><div class="ttdeci">NSString *__nullable peer</div><div class="ttdoc">リモートピア ID</div><div class="ttdef"><b>Definition:</b> SKWConnection.h:62</div></div>
+<div class="ttc" id="aa00089_html_ac813d72bc5bbe0b0b40143ec814d9411"><div class="ttname"><a href="a00089.html#ac813d72bc5bbe0b0b40143ec814d9411">SKWConnection::peer</a></div><div class="ttdeci">NSString *__nullable peer</div><div class="ttdoc">リモートピア ID</div><div class="ttdef"><b>Definition:</b> SKWConnection.h:87</div></div>
 <div class="ttc" id="aa00125_html_aff7dda671294a1f8d8c2cbf554f9a5ed"><div class="ttname"><a href="a00125.html#aff7dda671294a1f8d8c2cbf554f9a5ed">+[SKWNavigator getUserMedia:]</a></div><div class="ttdeci">SKWMediaStream *__nullable getUserMedia:(SKWMediaConstraints *__nonnull constraints)</div></div>
+<div class="ttc" id="aa00089_html_a5fe3660017948441e7e5928df7adf168"><div class="ttname"><a href="a00089.html#a5fe3660017948441e7e5928df7adf168">-[SKWConnection getStats:]</a></div><div class="ttdeci">void getStats:(SKWConnectionGetStatsCallback __nullable callback)</div><div class="ttdoc">コネクションの統計情報を取得します</div></div>
 <!-- HTML footer for doxygen 1.8.13-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 構築: &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.16
+</a> 1.8.17
 </small></address>
 <p class="footer">© NTT Communications Corporation All Rights Reserved.</p>
 </body>
