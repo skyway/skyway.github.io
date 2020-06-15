@@ -117,6 +117,13 @@ io.skyway.Peer.PeerError の継承関係図</div>
 <tr class="memitem:a8476e23910382c39cecd153d137590b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#a8476e23910382c39cecd153d137590b3">PeerError</a> (String <a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#a7d0d5df30c4d57f676296c72d5e05dc2">type</a>, String error)</td></tr>
 <tr class="memdesc:a8476e23910382c39cecd153d137590b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <a href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#a8476e23910382c39cecd153d137590b3">[詳解]</a><br /></td></tr>
 <tr class="separator:a8476e23910382c39cecd153d137590b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaadb83d34cf11c2b3f3ebbcf33235f1"><td class="memItemLeft" align="right" valign="top"><a id="abaadb83d34cf11c2b3f3ebbcf33235f1"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#abaadb83d34cf11c2b3f3ebbcf33235f1">getMessage</a> ()</td></tr>
+<tr class="memdesc:abaadb83d34cf11c2b3f3ebbcf33235f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーメッセージを取得します。 <br /></td></tr>
+<tr class="separator:abaadb83d34cf11c2b3f3ebbcf33235f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81129e6a669443d19ced9086f294271"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#af81129e6a669443d19ced9086f294271">setMessage</a> (String error)</td></tr>
+<tr class="memdesc:af81129e6a669443d19ced9086f294271"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーメッセージを設定します。  <a href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#af81129e6a669443d19ced9086f294271">[詳解]</a><br /></td></tr>
+<tr class="separator:af81129e6a669443d19ced9086f294271"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 公開変数類</h2></td></tr>
@@ -128,10 +135,6 @@ io.skyway.Peer.PeerError の継承関係図</div>
 String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#ad385b233ed8f503759a74069722c995e">typeString</a></td></tr>
 <tr class="memdesc:ad385b233ed8f503759a74069722c995e"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラー種別文字列 <br /></td></tr>
 <tr class="separator:ad385b233ed8f503759a74069722c995e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a251ca49e9b61efda3daa2bbe8d8d54b2"><td class="memItemLeft" align="right" valign="top"><a id="a251ca49e9b61efda3daa2bbe8d8d54b2"></a>
-String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html#a251ca49e9b61efda3daa2bbe8d8d54b2">message</a></td></tr>
-<tr class="memdesc:a251ca49e9b61efda3daa2bbe8d8d54b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">エラーメッセージ <br /></td></tr>
-<tr class="separator:a251ca49e9b61efda3daa2bbe8d8d54b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa20769a7324a36e6c664ab098160542a"><td class="memItemLeft" align="right" valign="top"><a id="aa20769a7324a36e6c664ab098160542a"></a>
 Exception&#160;</td><td class="memItemRight" valign="bottom"><b>exception</b></td></tr>
 <tr class="separator:aa20769a7324a36e6c664ab098160542a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,6 +172,33 @@ Exception&#160;</td><td class="memItemRight" valign="bottom"><b>exception</b></t
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">type</td><td>エラー種別文字列</td></tr>
+    <tr><td class="paramname">error</td><td>エラーメッセージ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="af81129e6a669443d19ced9086f294271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81129e6a669443d19ced9086f294271">&#9670;&nbsp;</a></span>setMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void io.skyway.Peer.PeerError.setMessage </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>エラーメッセージを設定します。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
     <tr><td class="paramname">error</td><td>エラーメッセージ </td></tr>
   </table>
   </dd>

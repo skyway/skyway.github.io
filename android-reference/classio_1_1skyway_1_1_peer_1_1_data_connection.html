@@ -111,10 +111,13 @@ $(function() {
 <tr class="memdesc:a70398b03888890e79d1daa7fb3285f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信待ちデータ数を取得します。  <a href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#a70398b03888890e79d1daa7fb3285f19">[詳解]</a><br /></td></tr>
 <tr class="separator:a70398b03888890e79d1daa7fb3285f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e1c4312591c4be7db2c596830baea6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#a52e1c4312591c4be7db2c596830baea6">on</a> (<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html">DataEventEnum</a> event, <a class="el" href="interfaceio_1_1skyway_1_1_peer_1_1_on_callback.html">OnCallback</a> callback)</td></tr>
+<tr class="memdesc:a52e1c4312591c4be7db2c596830baea6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a> のイベントコールバックを設定します。  <a href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#a52e1c4312591c4be7db2c596830baea6">[詳解]</a><br /></td></tr>
 <tr class="separator:a52e1c4312591c4be7db2c596830baea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3899b66eba989ef9ec41322a75504925"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#a3899b66eba989ef9ec41322a75504925">send</a> (Object data)</td></tr>
+<tr class="memdesc:a3899b66eba989ef9ec41322a75504925"><td class="mdescLeft">&#160;</td><td class="mdescRight">接続中のリモートピアに送信します。  <a href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#a3899b66eba989ef9ec41322a75504925">[詳解]</a><br /></td></tr>
 <tr class="separator:a3899b66eba989ef9ec41322a75504925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada56516343288868252da8daf578c8f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#ada56516343288868252da8daf578c8f8">close</a> ()</td></tr>
+<tr class="memdesc:ada56516343288868252da8daf578c8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ通信接続の切断と解放をおこないます。  <a href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#ada56516343288868252da8daf578c8f8">[詳解]</a><br /></td></tr>
 <tr class="separator:ada56516343288868252da8daf578c8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac077ad98f91c9e7da151f6b4ca7ec60b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#ac077ad98f91c9e7da151f6b4ca7ec60b">getStats</a> (<a class="el" href="interfaceio_1_1skyway_1_1_peer_1_1_stats_collector_callback.html">StatsCollectorCallback</a> callback)</td></tr>
 <tr class="memdesc:ac077ad98f91c9e7da151f6b4ca7ec60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">コネクションの統計情報を取得します。  <a href="classio_1_1skyway_1_1_peer_1_1_data_connection.html#ac077ad98f91c9e7da151f6b4ca7ec60b">[詳解]</a><br /></td></tr>
@@ -252,14 +255,13 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIAL
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  データ通信接続の切断と解放をおこないます。
-\~english Closes the data connection gracefully, cleaning up underlying DataChannels and PeerConnections.
-\~
 
-\code{.java}
-</pre><p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a> data;</p>
-<p>data.close(); data = null; </p><pre class="fragment">\endcode
-</pre> 
+<p>データ通信接続の切断と解放をおこないます。 </p>
+<div class="fragment"><div class="line">DataConnection data;</div>
+<div class="line"> </div>
+<div class="line">data.close();</div>
+<div class="line">data = <span class="keyword">null</span>;</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a2a258b2765e67895610cf6c71de6b02c"></a>
@@ -506,17 +508,38 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIAL
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  DataConnection のイベントコールバックを設定します。
-\~english Set callbacks for data connection events.
-\~
 
-\code{.java}
-</pre><p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a> data;</p>
-<p>data.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#af107c5dcceb7d8521954bb4a41d0de7b" title="データ接続が利用可能となった場合に発生します。">DataConnection.DataEventEnum.OPEN</a>, new OnCallback() { @Override public void onCallback(Object object) { // オープンしたときの処理等を記述 } });</p>
-<p>data.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#a2bb545262be6a7bee2d6ae8a6bc2114e" title="リモートからデータ受信した場合に発生します。">DataConnection.DataEventEnum.DATA</a>, new OnCallback() { @Override public void onCallback(Object object) { // 処理を記述 } });</p>
-<p>data.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#a4d49420f99c0cd8febec6ed7a4df3835" title="リモートがデータ接続を閉じた場合に発生します。">DataConnection.DataEventEnum.CLOSE</a>, new OnCallback() { @Override public void onCallback(Object object) { // 処理を記述 } });</p>
-<p>data.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_data_connection_1_1_data_event_enum.html#ad96ba5943cba60c977b8137e57b93e81" title="エラー時に発生します。">DataConnection.DataEventEnum.ERROR</a>, new OnCallback() { @Override public void onCallback(Object object) { // 処理を記述 } }); </p><pre class="fragment">\endcode
-</pre><dl class="params"><dt>引数</dt><dd>
+<p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a> のイベントコールバックを設定します。 </p>
+<div class="fragment"><div class="line">DataConnection data;</div>
+<div class="line"> </div>
+<div class="line">data.on(DataConnection.DataEventEnum.OPEN, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="comment">// オープンしたときの処理等を記述</span></div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">data.on(DataConnection.DataEventEnum.DATA, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="comment">// 処理を記述</span></div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">data.on(DataConnection.DataEventEnum.CLOSE, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="comment">// 処理を記述</span></div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">data.on(DataConnection.DataEventEnum.ERROR, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="comment">// 処理を記述</span></div>
+<div class="line">    }</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>設定するイベント種別を指定します。</td></tr>
     <tr><td class="paramname">callback</td><td>イベント発生時に実行するコールバックを設定します。 </td></tr>
@@ -635,24 +658,23 @@ static final String&#160;</td><td class="memItemRight" valign="bottom"><b>SERIAL
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  接続中のリモートピアに送信します。
 
-プロパティ serialization の値によって送信処理が変わります。
-
-binary / binary-utf8 の場合、js-binarypack 相当のシリアライズを送信処理をおこないます。
-送信先がブラウザーの場合に有用です。
-
-json の場合、Array, Map などを JSON 文字列にしてバイナリ送受信します。
-
-none の場合、String はテキスト送受信、それ以外は ByteBuffer に変換できる物をバイナリ送受信します。
-\~english  Data is sent to the remote peer.
-\~
-
-\code{.java}
-</pre><p>DataConnection* data;</p>
-<p>String message = "Send data.";</p>
-<p>boolean bResult = data.send(message); if (bResult) { // successful. } else { // failure. } </p><pre class="fragment">\endcode
-</pre><dl class="params"><dt>引数</dt><dd>
+<p>接続中のリモートピアに送信します。 </p>
+<p>プロパティ serialization の値によって送信処理が変わります。</p>
+<p>binary / binary-utf8 の場合、js-binarypack 相当のシリアライズを送信処理をおこないます。 送信先がブラウザーの場合に有用です。</p>
+<p>json の場合、Array, Map などを JSON 文字列にしてバイナリ送受信します。</p>
+<p>none の場合、String はテキスト送受信、それ以外は ByteBuffer に変換できる物をバイナリ送受信します。</p>
+<div class="fragment"><div class="line">DataConnection* data;</div>
+<div class="line"> </div>
+<div class="line">String message = <span class="stringliteral">&quot;Send data.&quot;</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">boolean</span> bResult = data.send(message);</div>
+<div class="line"><span class="keywordflow">if</span> (bResult) {</div>
+<div class="line">    <span class="comment">// successful.</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// failure.</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>送信するオブジェクトを設定します。</td></tr>
   </table>

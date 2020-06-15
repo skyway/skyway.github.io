@@ -113,11 +113,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:afbd4648acbd63aaa104b77091d1c033d"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信している MediaStream を更新します。受信のみモードから双方向に切り替えることもできます。  <a href="classio_1_1skyway_1_1_peer_1_1_s_f_u_room.html#afbd4648acbd63aaa104b77091d1c033d">[詳解]</a><br /></td></tr>
 <tr class="separator:afbd4648acbd63aaa104b77091d1c033d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc87abbe83dff60e6fa322064eff7e48"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html#adc87abbe83dff60e6fa322064eff7e48">send</a> (Object data)  throws IllegalArgumentException     </td></tr>
-<tr class="memdesc:adc87abbe83dff60e6fa322064eff7e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のルームに入室中のピアにデータを送信します。<code>String</code> または <code>byte</code>[] を送信できます。送信するデータサイズの上限は20MBです。  <a href="classio_1_1skyway_1_1_peer_1_1_room.html#adc87abbe83dff60e6fa322064eff7e48">[詳解]</a><br /></td></tr>
+<tr class="memdesc:adc87abbe83dff60e6fa322064eff7e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のルームに入室中のピアにデータを送信します。<code>String</code> または <code>byte</code>[] を送信できます。送信するデータサイズの上限は20MBです。送信頻度は100msecに1回に制限されています。送信頻度の制限を超えた送信データはキューに入り、100msec毎に順次送信されます。  <a href="classio_1_1skyway_1_1_peer_1_1_room.html#adc87abbe83dff60e6fa322064eff7e48">[詳解]</a><br /></td></tr>
 <tr class="separator:adc87abbe83dff60e6fa322064eff7e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53a0c2d8d8aede9c26c53768cba70e38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html#a53a0c2d8d8aede9c26c53768cba70e38">on</a> (<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html">RoomEventEnum</a> event, <a class="el" href="interfaceio_1_1skyway_1_1_peer_1_1_on_callback.html">OnCallback</a> callback)  throws IllegalArgumentException     </td></tr>
+<tr class="memdesc:a53a0c2d8d8aede9c26c53768cba70e38"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html" title="MeshRoom / SFURoom の基底クラスです。">Room</a> のイベントコールバック Block を設定します。  <a href="classio_1_1skyway_1_1_peer_1_1_room.html#a53a0c2d8d8aede9c26c53768cba70e38">[詳解]</a><br /></td></tr>
 <tr class="separator:a53a0c2d8d8aede9c26c53768cba70e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b674cc8cd42ef89405ca591ff5b29cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html#a6b674cc8cd42ef89405ca591ff5b29cf">getLog</a> ()</td></tr>
+<tr class="memdesc:a6b674cc8cd42ef89405ca591ff5b29cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のルームのログ情報を取得します。結果は LOG イベントで返されます。  <a href="classio_1_1skyway_1_1_peer_1_1_room.html#a6b674cc8cd42ef89405ca591ff5b29cf">[詳解]</a><br /></td></tr>
 <tr class="separator:a6b674cc8cd42ef89405ca591ff5b29cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc131feec4332602d1cd5fdf7ca7d24f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html#afc131feec4332602d1cd5fdf7ca7d24f">getRoomName</a> ()</td></tr>
 <tr class="memdesc:afc131feec4332602d1cd5fdf7ca7d24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ルーム名を取得します。  <a href="classio_1_1skyway_1_1_peer_1_1_room.html#afc131feec4332602d1cd5fdf7ca7d24f">[詳解]</a><br /></td></tr>
@@ -155,16 +157,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  現在のルームのログ情報を取得します。結果は LOG イベントで返されます。
-\~english
-Send data to all participants in the room with WebSocket.
-The result is returned in the LOG event.
-\~
 
-\code{.java}
-</pre><p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html" title="MeshRoom / SFURoom の基底クラスです。">Room</a> room;</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a2bc6a94ac631525184ae7e4b5fef72f6" title="ルームのログを受信したときに発生します。">Room.RoomEventEnum.LOG</a>, new OnCallback() { @Override public void onCallback(Object object) { if (!(object instanceof String[])) return; String[] logs = (String[])object; for (String log : logs) { try { JSONObject jsonLog = new JSONObject(log); } catch (JSONException e) { } } } }); </p><pre class="fragment">\endcode
-</pre> 
+<p>現在のルームのログ情報を取得します。結果は LOG イベントで返されます。 </p>
+<div class="fragment"><div class="line">Room room;</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.LOG, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!(<span class="keywordtype">object</span> instanceof String[])) <span class="keywordflow">return</span>;</div>
+<div class="line">        String[] logs = (String[])<span class="keywordtype">object</span>;</div>
+<div class="line">        <span class="keywordflow">for</span> (String log : logs) {</div>
+<div class="line">            <span class="keywordflow">try</span> {</div>
+<div class="line">                JSONObject jsonLog = <span class="keyword">new</span> JSONObject(log);</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">catch</span> (JSONException e) { }</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a9465bd1f76a3db42c77da1c93c75e8ae"></a>
@@ -256,21 +266,72 @@ The result is returned in the LOG event.
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  Room のイベントコールバック Block を設定します。
-\~english Set blocks for Room events.
-\~
 
-\code{.java}
-</pre><p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html" title="MeshRoom / SFURoom の基底クラスです。">Room</a> room;</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#afe87dd77a8b5b1e89b485fd26b70f6d1" title="ユーザーがルームへ入室したときに発生します。">Room.RoomEventEnum.OPEN</a>, new OnCallback() { @Override public void onCallback(Object object) { if (!(object instanceof String)) return; String roomName = (String)object; } });</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a671507330dcc58db17e14d3f3f7b08e8" title="ルームをcloseしたときに発生します。">Room.RoomEventEnum.CLOSE</a>, new OnCallback() { @Override public void onCallback(Object object) { if (!(object instanceof String)) return; String roomName = (String)object; } });</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#aef4603cd47879d5a26d08e0ee226f255" title="エラーが起きた時に発生します。">Room.RoomEventEnum.ERROR</a>, new OnCallback() { @Override public void onCallback(Object object) { } });</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#ae04a76ddfab0c30cd742ddacbdca904a" title="ルームに新しいユーザーが参加したときに発生します。">Room.RoomEventEnum.PEER_JOIN</a>, new OnCallback() { @Override public void onCallback(Object object) { if (!(object instanceof String)) return; String peerId = (String)object; } });</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a360fdee6418dabf5ff0f59130d875900" title="あるユーザーがルームを退出したときに発生します。">Room.RoomEventEnum.PEER_LEAVE</a>, new OnCallback() { @Override public void onCallback(Object object) { if (!(object instanceof String)) return; String peerId = (String)object; } });</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a21b92a8d617f742b4612373efab8b527" title="他のユーザーから送信されたデータを受信した時に発生します。">Room.RoomEventEnum.DATA</a>, new OnCallback2() { @Override public void onCallback(Object object) { }</p>
-<p>@Override public void onCallback(final Object object1, final Object object2) { String peerId = (String)object1; if (object2 instanceof String) { String message = (String)object2; } else if (object2 instanceof byte[]) { byte[] array = (byte[])object2; } } });</p>
-<p>room.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_room_1_1_room_event_enum.html#a2bc6a94ac631525184ae7e4b5fef72f6" title="ルームのログを受信したときに発生します。">Room.RoomEventEnum.LOG</a>, new OnCallback() { @Override public void onCallback(Object object) { if (!(object instanceof String[])) return; String[] logs = (String[])object; } }); </p><pre class="fragment">\endcode
-</pre><dl class="params"><dt>引数</dt><dd>
+<p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_room.html" title="MeshRoom / SFURoom の基底クラスです。">Room</a> のイベントコールバック Block を設定します。 </p>
+<div class="fragment"><div class="line">Room room;</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.OPEN, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!(<span class="keywordtype">object</span> instanceof String)) <span class="keywordflow">return</span>;</div>
+<div class="line">        String roomName = (String)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.CLOSE, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!(<span class="keywordtype">object</span> instanceof String)) <span class="keywordflow">return</span>;</div>
+<div class="line">        String roomName = (String)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.ERROR, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.PEER_JOIN, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!(<span class="keywordtype">object</span> instanceof String)) <span class="keywordflow">return</span>;</div>
+<div class="line">        String peerId = (String)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.PEER_LEAVE, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!(<span class="keywordtype">object</span> instanceof String)) <span class="keywordflow">return</span>;</div>
+<div class="line">        String peerId = (String)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.DATA, <span class="keyword">new</span> OnCallback2() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {  }</div>
+<div class="line"> </div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(<span class="keyword">final</span> Object object1, <span class="keyword">final</span> Object object2) {</div>
+<div class="line">        String peerId = (String)object1;</div>
+<div class="line">        <span class="keywordflow">if</span> (object2 instanceof String) {</div>
+<div class="line">            String message = (String)object2;</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (object2 instanceof <span class="keywordtype">byte</span>[]) {</div>
+<div class="line">            <span class="keywordtype">byte</span>[] array = (<span class="keywordtype">byte</span>[])object2;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">room.on(Room.RoomEventEnum.LOG, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="keywordflow">if</span> (!(<span class="keywordtype">object</span> instanceof String[])) <span class="keywordflow">return</span>;</div>
+<div class="line">        String[] logs = (String[])<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>設定するイベント種別を指定します。</td></tr>
     <tr><td class="paramname">callback</td><td>イベント発生時に実行するコールバックオブジェクトを設定します。DATA イベントは <em>OnCallback2</em> を指定する必要があります。</td></tr>
@@ -340,7 +401,7 @@ The result is returned in the LOG event.
 </table>
 </div><div class="memdoc">
 
-<p>現在のルームに入室中のピアにデータを送信します。<code>String</code> または <code>byte</code>[] を送信できます。送信するデータサイズの上限は20MBです。 </p>
+<p>現在のルームに入室中のピアにデータを送信します。<code>String</code> または <code>byte</code>[] を送信できます。送信するデータサイズの上限は20MBです。送信頻度は100msecに1回に制限されています。送信頻度の制限を超えた送信データはキューに入り、100msec毎に順次送信されます。 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>送信データ</td></tr>

@@ -8,12 +8,13 @@ var searchData=
   ['getenablevideotrack_49',['getEnableVideoTrack',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ac20b123b7abf66565903fd12a2b65cad',1,'io::skyway::Peer::Browser::MediaStream']]],
   ['getlabel_50',['getLabel',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ae3c629c25458288cad886a7ed81850d7',1,'io::skyway::Peer::Browser::MediaStream']]],
   ['getlog_51',['getLog',['../classio_1_1skyway_1_1_peer_1_1_room.html#a6b674cc8cd42ef89405ca591ff5b29cf',1,'io::skyway::Peer::Room']]],
-  ['getpeerconnectionstate_52',['getPeerConnectionState',['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#a4810e649e6e52fcfc23994b866d57c30',1,'io::skyway::Peer::DataConnection']]],
-  ['getpeerid_53',['getPeerId',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ac0a5cb7591d3222c4ea3bab32a8e40f9',1,'io::skyway::Peer::Browser::MediaStream']]],
-  ['getprovider_54',['getProvider',['../classio_1_1skyway_1_1_peer_1_1_room.html#a9465bd1f76a3db42c77da1c93c75e8ae',1,'io::skyway::Peer::Room']]],
-  ['getroomname_55',['getRoomName',['../classio_1_1skyway_1_1_peer_1_1_room.html#afc131feec4332602d1cd5fdf7ca7d24f',1,'io::skyway::Peer::Room']]],
-  ['getsdkversion_56',['getSdkVersion',['../classio_1_1skyway_1_1_peer_1_1_peer.html#ae4cd8605c9ccd6cddad6b24ae5d788ee',1,'io::skyway::Peer::Peer']]],
-  ['getstats_57',['getStats',['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#ac077ad98f91c9e7da151f6b4ca7ec60b',1,'io.skyway.Peer.DataConnection.getStats()'],['../classio_1_1skyway_1_1_peer_1_1_media_connection.html#a56d6c3be9a95806d5e6d2122d11e827b',1,'io.skyway.Peer.MediaConnection.getStats()']]],
-  ['getusermedia_58',['getUserMedia',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_navigator.html#a96e06a486b035a7fbd75f31dc6874877',1,'io::skyway::Peer::Browser::Navigator']]],
-  ['getvideotracks_59',['getVideoTracks',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a6f94b0aab765f206bc2c444a1cb13232',1,'io::skyway::Peer::Browser::MediaStream']]]
+  ['getmessage_52',['getMessage',['../classio_1_1skyway_1_1_peer_1_1_peer_error.html#abaadb83d34cf11c2b3f3ebbcf33235f1',1,'io::skyway::Peer::PeerError']]],
+  ['getpeerconnectionstate_53',['getPeerConnectionState',['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#a4810e649e6e52fcfc23994b866d57c30',1,'io::skyway::Peer::DataConnection']]],
+  ['getpeerid_54',['getPeerId',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#ac0a5cb7591d3222c4ea3bab32a8e40f9',1,'io::skyway::Peer::Browser::MediaStream']]],
+  ['getprovider_55',['getProvider',['../classio_1_1skyway_1_1_peer_1_1_room.html#a9465bd1f76a3db42c77da1c93c75e8ae',1,'io::skyway::Peer::Room']]],
+  ['getroomname_56',['getRoomName',['../classio_1_1skyway_1_1_peer_1_1_room.html#afc131feec4332602d1cd5fdf7ca7d24f',1,'io::skyway::Peer::Room']]],
+  ['getsdkversion_57',['getSdkVersion',['../classio_1_1skyway_1_1_peer_1_1_peer.html#ae4cd8605c9ccd6cddad6b24ae5d788ee',1,'io::skyway::Peer::Peer']]],
+  ['getstats_58',['getStats',['../classio_1_1skyway_1_1_peer_1_1_data_connection.html#ac077ad98f91c9e7da151f6b4ca7ec60b',1,'io.skyway.Peer.DataConnection.getStats()'],['../classio_1_1skyway_1_1_peer_1_1_media_connection.html#a56d6c3be9a95806d5e6d2122d11e827b',1,'io.skyway.Peer.MediaConnection.getStats()']]],
+  ['getusermedia_59',['getUserMedia',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_navigator.html#a96e06a486b035a7fbd75f31dc6874877',1,'io::skyway::Peer::Browser::Navigator']]],
+  ['getvideotracks_60',['getVideoTracks',['../classio_1_1skyway_1_1_peer_1_1_browser_1_1_media_stream.html#a6f94b0aab765f206bc2c444a1cb13232',1,'io::skyway::Peer::Browser::MediaStream']]]
 ];

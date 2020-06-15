@@ -135,6 +135,7 @@ $(function() {
 void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td></tr>
 <tr class="separator:a5618c502aa1ee2d9c5f8390d2837b083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a063db606e3f0fc5264a7f109980947aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a063db606e3f0fc5264a7f109980947aa">on</a> (<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html">PeerEventEnum</a> event, <a class="el" href="interfaceio_1_1skyway_1_1_peer_1_1_on_callback.html">OnCallback</a> callback)</td></tr>
+<tr class="memdesc:a063db606e3f0fc5264a7f109980947aa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="ピアクラス">Peer</a> のイベントコールバック Block を設定します。  <a href="classio_1_1skyway_1_1_peer_1_1_peer.html#a063db606e3f0fc5264a7f109980947aa">[詳解]</a><br /></td></tr>
 <tr class="separator:a063db606e3f0fc5264a7f109980947aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb2ca21f9ec0466935ea091c2441c5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html#aecb2ca21f9ec0466935ea091c2441c5f">disconnect</a> ()</td></tr>
 <tr class="memdesc:aecb2ca21f9ec0466935ea091c2441c5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">シグナリングサーバとの接続を切断します。接続済みのリモートピアとのコネクション接続は継続されます。  <a href="classio_1_1skyway_1_1_peer_1_1_peer.html#aecb2ca21f9ec0466935ea091c2441c5f">[詳解]</a><br /></td></tr>
@@ -146,6 +147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>finalize</b> ()</td><
 <tr class="memdesc:a5a154fe1d5c39db97b1974301d5919c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">peer オブジェクトを破棄状態にします。接続済みのリモートピアとのコネクション接続は切断されます。  <a href="classio_1_1skyway_1_1_peer_1_1_peer.html#a5a154fe1d5c39db97b1974301d5919c5">[詳解]</a><br /></td></tr>
 <tr class="separator:a5a154fe1d5c39db97b1974301d5919c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7305e3fa5f05bebc58067a6caf8c9596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a7305e3fa5f05bebc58067a6caf8c9596">listAllPeers</a> (<a class="el" href="interfaceio_1_1skyway_1_1_peer_1_1_on_callback.html">OnCallback</a> callback)</td></tr>
+<tr class="memdesc:a7305e3fa5f05bebc58067a6caf8c9596"><td class="mdescLeft">&#160;</td><td class="mdescRight">SkyWay シグナリングサーバから接続可能な ピア ID の一覧を取得します。String の ArrayList が渡されます。  <a href="classio_1_1skyway_1_1_peer_1_1_peer.html#a7305e3fa5f05bebc58067a6caf8c9596">[詳解]</a><br /></td></tr>
 <tr class="separator:a7305e3fa5f05bebc58067a6caf8c9596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeaeb6a78cb1e7feef40599a8e16fc05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html">DataConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html#adeaeb6a78cb1e7feef40599a8e16fc05">connect</a> (String peerId)</td></tr>
 <tr class="memdesc:adeaeb6a78cb1e7feef40599a8e16fc05"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定されたリモートへデータ接続を行い、<em><a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a></em> を返します。失敗した場合には error イベントが呼び出されます。デフォルトの設定にて接続をおこないます。  <a href="classio_1_1skyway_1_1_peer_1_1_peer.html#adeaeb6a78cb1e7feef40599a8e16fc05">[詳解]</a><br /></td></tr>
@@ -734,14 +736,16 @@ final Map&lt; String, ArrayList&lt; BaseConnection &gt; &gt;&#160;</td><td class
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  SkyWay シグナリングサーバから接続可能な ピア ID の一覧を取得します。String の ArrayList が渡されます。
-\~english
-\~
 
-\code{.java}
-</pre><p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="ピアクラス">Peer</a> peer;</p>
-<p>peer.listAllPeers(new OnCallback() { @Override public void onCallback(Object object) { ArrayList&lt;String&gt; list = (ArrayList&lt;String&gt;)object; } }); </p><pre class="fragment">\endcode
-</pre><dl class="params"><dt>引数</dt><dd>
+<p>SkyWay シグナリングサーバから接続可能な ピア ID の一覧を取得します。String の ArrayList が渡されます。 </p>
+<div class="fragment"><div class="line"><a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a> peer;</div>
+<div class="line"> </div>
+<div class="line">peer.listAllPeers(<span class="keyword">new</span> OnCallback() {</div>
+<div class="line">   @Override <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">       ArrayList&lt;String&gt; list = (ArrayList&lt;String&gt;)<span class="keywordtype">object</span>;</div>
+<div class="line">   }</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">callback</td><td>リスト取得完了時に実行するコールバックオブジェクトを設定します。 </td></tr>
   </table>
@@ -775,19 +779,52 @@ final Map&lt; String, ArrayList&lt; BaseConnection &gt; &gt;&#160;</td><td class
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">\~japanese  Peer のイベントコールバック Block を設定します。
-\~english
-\~
 
-\code{.java}
-</pre><p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="ピアクラス">Peer</a> peer;</p>
-<p>peer.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#a5378f84ac555ea2c7d5818577116db60" title="シグナリングサーバへの接続が確立すると発生します。">Peer.PeerEventEnum.OPEN</a>, new OnCallback() { @Override public void onCallback(Object object) { String ownId = (String)object; } });</p>
-<p>peer.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#a60da63309a28b7aced8eb63c821eee49" title="リモートと新しいデータ接続を確立したときに発生します。">Peer.PeerEventEnum.CONNECTION</a>, new OnCallback() { @Override public void onCallback(Object object) { <a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a> data = (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_data_connection.html" title="DataConnection 相当のクラスです。">DataConnection</a>)object; } });</p>
-<p>peer.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#acdedadbdef0b317f8e8267d11b86a425" title="リモートからメディア接続要求してきた時に発生します。">Peer.PeerEventEnum.CALL</a>, new OnCallback() { @Override public void onCallback(Object object) { <a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html" title="MediaConnection 相当のクラスです。">MediaConnection</a> media = (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_media_connection.html" title="MediaConnection 相当のクラスです。">MediaConnection</a>)object; } });</p>
-<p>peer.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#ac66de650cd2b27832f04b30be7dd4416" title="シグナリングサーバとの接続が閉じられた時に発生します。">Peer.PeerEventEnum.CLOSE</a>, new OnCallback() { @Override public void onCallback(Object object) { // 処理を記述 } });</p>
-<p>peer.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#a4c5eb48c431ebe7bb00750f6bd6c1b71" title="シグナリングサーバとの接続が切断された時に発生します。">Peer.PeerEventEnum.DISCONNECTED</a>, new OnCallback() { @Override public void onCallback(Object object) { // 処理を記述 } });</p>
-<p>peer.on(<a class="el" href="enumio_1_1skyway_1_1_peer_1_1_peer_1_1_peer_event_enum.html#a1ecc7b8764e9ded013a766c713c24133" title="エラー時に発生します。">Peer.PeerEventEnum.ERROR</a>, new OnCallback() { @Override public void onCallback(Object object) { <a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html" title="error イベント時に取得できるクラスです。">PeerError</a> error = (<a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer_error.html" title="error イベント時に取得できるクラスです。">PeerError</a>)object; } }); </p><pre class="fragment">\endcode
-</pre><dl class="params"><dt>引数</dt><dd>
+<p><a class="el" href="classio_1_1skyway_1_1_peer_1_1_peer.html" title="ピアクラス">Peer</a> のイベントコールバック Block を設定します。 </p>
+<div class="fragment"><div class="line"><a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a> peer;</div>
+<div class="line"> </div>
+<div class="line">peer.on(<a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a>.PeerEventEnum.OPEN, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        String ownId = (String)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">peer.on(<a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a>.PeerEventEnum.CONNECTION, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        DataConnection data = (DataConnection)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">peer.on(<a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a>.PeerEventEnum.CALL, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        MediaConnection media = (MediaConnection)<span class="keywordtype">object</span>;</div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">peer.on(<a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a>.PeerEventEnum.CLOSE, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">    @Override</div>
+<div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">        <span class="comment">// 処理を記述</span></div>
+<div class="line">    }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">peer.on(<a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a>.PeerEventEnum.DISCONNECTED, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">   @Override</div>
+<div class="line">   <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">       <span class="comment">// 処理を記述</span></div>
+<div class="line">   }</div>
+<div class="line">});</div>
+<div class="line"> </div>
+<div class="line">peer.on(<a class="code" href="classio_1_1skyway_1_1_peer_1_1_peer.html#a8a80db717997626ed01827d792a25702">Peer</a>.PeerEventEnum.ERROR, <span class="keyword">new</span> OnCallback() {</div>
+<div class="line">   @Override</div>
+<div class="line">   <span class="keyword">public</span> <span class="keywordtype">void</span> onCallback(Object <span class="keywordtype">object</span>) {</div>
+<div class="line">       PeerError error = (PeerError)<span class="keywordtype">object</span>;</div>
+<div class="line">   }</div>
+<div class="line">});</div>
+</div><!-- fragment --><dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>設定するイベント種別を指定します。</td></tr>
     <tr><td class="paramname">callback</td><td>イベント発生時に実行するコールバックオブジェクトを設定します。 </td></tr>
