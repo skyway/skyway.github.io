@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="refresh" content="0;https://webrtc.ecl.ntt.com/en/ios-reference/">
 <title>SKWRoom Class Reference - iOS SDK API Reference - ECLWebRTC - Enterprise Cloud WebRTC Platform</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -32,9 +33,7 @@
     <p>
      <a href="../">ECLWebRTC</a>
      /
-     <a href="../developer.html">Developer</a>
-     /
-     <a href="../ios-sdk.html">iOS SDK</a>
+     <a href="../skyway/function.html">Developer</a>
      /
      <a href="./">API Reference</a>
      /
@@ -284,7 +283,7 @@ NSString *__nullable&#160;</td><td class="memItemRight" valign="bottom"><a class
 </div><div class="memdoc">
 
 <p>Send data to all participants in the room with WebSocket. </p>
-<p>It emits broadcast event. The max size of data that can be sent is 20MB.</p>
+<p>It emits broadcast event. The max size of data that can be sent is 20MB. The frequent of consecutive send is limited to once every 100 msec. Outgoing data that exceeds the sending frequency limit is queued and sent sequentially every 100 msec.</p>
 <div class="fragment"><div class="line"><a class="code" href="a00145.html">SKWRoom</a>* room;</div>
 <div class="line">[room <a class="code" href="a00145.html#ad9b3a18bf1156b08b8ef4986a0c7d557">send</a>:@&quot;Hello.&quot;];</div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
