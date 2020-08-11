@@ -3,8 +3,6 @@
 // Constants
 
 (function() { // 即時実行
-  window.location.href = "https://webrtc.ecl.ntt.com/";
-
   // 言語判定（英語ページの場合は英語の情報を取得するため）
   var lang = '';
   switch (CONST.LANG) {
